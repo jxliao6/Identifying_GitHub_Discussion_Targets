@@ -1,0 +1,680 @@
+issue_num,datetime,body,login,close_date
+55,2017-03-09 12:55:23,The opencv face detector creates quite a bit of trouble. It might be possible to create or port a better solution based on histograms of oriented gradients and support vector machines.,jwagner,
+54,2017-01-24 14:30:09,I ported to [Java](https://github.com/QuadFlask/smartcrop-java) and [Android](https://github.com/QuadFlask/smartcrop-android),QuadFlask,2017-02-19 16:21:55
+54,2017-02-19 16:21:55,"Cool, I added it to the README to make it easier for people to find! :)",jwagner,2017-02-19 16:21:55
+53,2016-12-23 23:33:21,Great Library! Does anyone know already a PHP port or has a desire to develop? GD or Imagick.,FlipZoomMedia,2017-03-19 21:19:27
+53,2017-03-19 21:19:27,"https://github.com/xymak/php-smartcrop-extension seems to be one, and another one from the same author https://github.com/xymak/smartcrop.php",jwagner,2017-03-19 21:19:27
+52,2016-11-08 09:01:45,"Hello
+
+Thank you for your great component
+how is it possible to record the picture cropped to a folder
+
+Meric in advance for your help",xavierlille,2016-11-11 21:42:28
+52,2016-11-11 21:42:28,"Please have a look at https://github.com/jwagner/smartcrop-cli
+",jwagner,2016-11-11 21:42:28
+51,2016-10-24 00:13:54,"Hello,
+
+From the README:
+
+> <S_CODE_TOKEN>
+> 
+> Output:
+> 
+> <S_CODE_TOKEN>
+
+In terms of documentation and the above example, I think it would be nice to have a little explanation as to why the output's width/height values (200x200) are larger than the desired input's width/hieght (100x100 values).
+
+Here's an example of desired input widths and heights and smartcrop's output widths and heights:
+
+| User-specified input WxH | Smartcrop output WxH | Output scaled to input width |
+| :-: | :-: | :-: |
+| 2622x2660 | 1528x1550 | 2622x2660 |
+| 2622x2660 | 1986x2014 | 2622x2659 |
+| 2622x2660 | 2022x2051 | 2622x2660 |
+| 2622x2660 | 2525x2561 | 2622x2659 |
+| 2622x2660 | 3026x3072 | 2622x2662 |
+| 2622x2660 | 3405x3454 | 2622x2660 |
+
+I guess it just took me some exploration time to discover the correlation between the input and output dimensions. Clearly, and correct me if I am wrong, smartcrop is saying:
+
+> Based on your input image size, and desired crop area, the resulting **relative** crop area is (width) and (height) at coordinates (x) and (y). You must crop your image using smartcrop's output width, height, x, y, and then scale up or down to your desired width and height (using tool of choice, like ImageMagick or GraphicsMagick).
+
+With that said, one issue I am running into is that the output numbers are not exact (as you can see above); maybe it should also be mentioned in the docs that if one wants an exact crop, they will have to account for rounding errors and use something like [ImageMagick's `^`](http://www.imagemagick.org/Usage/resize/#fill):
+
+<S_CODE_TOKEN>
+",mhulse,
+51,2016-11-11 21:44:55,"> Based on your input image size, and desired crop area, the resulting relative crop area is (width) and (height) at coordinates (x) and (y). You must crop your image using smartcrop's output width, height, x, y, and then scale up or down to your desired width and height (using tool of choice, like ImageMagick or GraphicsMagick).
+
+This is correct. It seemed obvious to me but I guess it's not. I'll try to add some clarification in the next release. Thanks for sharing this.
+",jwagner,
+50,2016-10-10 15:45:56,"Hi,
+
+Thank you for your great component, but i need to do it in server side, and server side technology is asp.net MVC,  i wonder is there any solution for it ?
+",elhampour,2016-11-11 21:46:11
+50,2016-11-11 21:46:11,"I haven't done .net in many years so I can't tell you. The easiest solution is probably to just launch smartcrop-cli in a sub process but there might be fancier ways of integrating node.js and .net as well.
+",jwagner,2016-11-11 21:46:11
+49,2016-09-17 04:48:48,"https://docs.npmjs.com/files/package.json#files
+",bfred-it,2016-09-17 08:49:00
+49,2016-09-17 08:48:05,"Cool, didn't know about that, but it looks like it's been there since a long time. :+1: Thank you!
+",jwagner,2016-09-17 08:49:00
+48,2016-09-16 17:20:19,"While [the main smartcrop.js file](https://github.com/jwagner/smartcrop.js/blob/master/smartcrop.js) itself is only 15.7 KB, a local install of `smartcrop` consumes 31MB of disk space, as can be confirmed by running.
+
+<S_CODE_TOKEN>
+
+outputs
+
+<S_CODE_TOKEN>
+
+This is due to several inclusions which probably don't need to be shipped to npm, including:
+
+| directory | size |
+| --- | --- |
+| /dist | 25 MB |
+| /release | 3.9 MB |
+| /.git_ | 1.9 MB |
+
+Any chance you could pull some of these out?
+",jed,2016-09-16 19:49:25
+48,2016-09-16 19:49:25,"That's both scary and messy. I switched to white listing files in .npmignore and released, 1.1.1. 44k looks a lot better than 31M. Thanks a lot for letting me know.
+",jwagner,2016-09-16 19:49:25
+48,2016-09-16 19:52:27,":bow:
+",jed,2016-09-16 19:49:25
+47,2016-08-23 04:49:57,"Could you add canvas as a peer dependency (as described here: https://docs.npmjs.com/files/package.json#peerdependencies ). If you do so, then it will work on tonic (https://tonicdev.com/npm/smartcrop-node) automatically.
+
+Thanks!
+
+Francisco
+",tolmasky,2016-08-23 15:02:46
+47,2016-08-23 10:52:00,"Why should I add a dependency to this module it doesn't depend on because some module built on top of it requires it?
+
+IMO if you want to use smartcrop with node you should use either [smartcrop-sharp](https://github.com/jwagner/smartcrop-sharp) or [smartcrop-gm](https://github.com/jwagner/smartcrop-gm).
+Node-canvas has been a pain to build & deploy (at least for my setups). 
+
+Cheers,
+Jonas
+",jwagner,2016-08-23 15:02:46
+47,2016-08-23 15:02:46,"Hi @jwagner, I apologize, I did mean to file this on smartcrop-node and instead filed it here. Oops!
+",tolmasky,2016-08-23 15:02:46
+46,2016-08-20 21:49:38,"I am generating a square crop (500x500) for a large image (about 3000x3000px). When minScale is at 1 this process is done in a second or two (max) on my machine - when decreasing minScale to 0.7 it takes a good few seconds longer and when decreasing minScale to 0.5 it takes almost a minute (similar results when running on Heroku)!
+
+Is there something I am doing wrong or some way around this?
+",abagshaw,
+46,2016-08-21 04:03:21,"I've been doing a little more tinkering and it appears that the two main ways to speed things up are changing `scoreDownSample` to a larger value and  `step` to a larger value. Just wondering, is there a reason why these values are not relative to the size of the image? Just an idea - but I think it would make much more sense to make them relative (or at least have an option to make them relative) to the size of the image so a small image will take around the same time to process as a massive image.
+",abagshaw,
+46,2016-08-21 11:13:58,"> Is there something I am doing wrong or some way around this?
+
+No, this sounds roughly right. The reason for this is in short, that I haven't used smartcrop that way and therefore haven't optimized it for this. There are some fairly obvious examples to speed this up one is using a summed area table for calculating the the integrals & using stochastic gradient descent for finding the optimal crop. That should easily make your slow cases 100x faster. 
+
+> Just an idea - but I think it would make much more sense to make them relative (or at least have an option to make them relative) to the size of the image so a small image will take around the same time to process as a massive image.
+
+This is already the case. The image is [prescaled](https://github.com/jwagner/smartcrop.js/blob/master/smartcrop.js#L102) depending on the size of the output crop. If I recall correctly the idea was that the size of the features to consider depend on the size of the thumbnail. But thinking about it again you are likely right and I should have just picked one 'right' size for the analysis. 
+
+I won't work on this right now, but I'll leave the issue open in case someone else wants to work on it. 
+",jwagner,
+46,2016-08-21 15:01:19,"Thanks for the quick response. 
+
+> There are some fairly obvious examples to speed this up one is using a summed area table for calculating the the integrals & using stochastic gradient descent for finding the optimal crop. That should easily make your slow cases 100x faster.
+
+Wouldn't it make much more sense to use the method you are describing here in all case scenarios rather than the somewhat brute-force method currently employed (even if we are talking about small square crops of small images)? Just wondering. I may have some time to tinker around with this to see if I can get that working.
+
+Thanks!
+",abagshaw,
+46,2016-08-21 19:41:02,"At very least the summed area tables, yes. I'm surprised I didn't use them to begin with. They are such a simple, elegant and obvious solution. And I even had them coded up when I played with face detection & multi scale approaches to this problem.
+
+If you have some time to play I'd say give the summed area tables a shot. They should just transparently make everything much faster with marginal additional complexity. :)
+",jwagner,
+46,2016-08-22 22:56:56,"I now remember why I didn't use summed area tables for the integration step. It's because of the weighting function. So I guess this needs another trick to be made more fast. Damn. :(
+",jwagner,
+46,2016-08-25 05:24:15,"Sorry for the slow response on this. I spent some time thinking about this problem and ways to improve the current algorithm. I decided to have a shot at implementing a new approach from the ground up.
+
+I built a ""smart-cropping"" tool around the fast feature detector from tracking.js. Add on some outlier removal, dbscan clustering and a method for scoring/prioritizing certain clusters and I'm getting some pretty cool results. When running in node its achieving about anywhere from 2-6x+ faster processing time than smartcrop on all image sizes - haven't really done any benchmarking in the browser so I don't know if the performance improvement would persist there. Going for a clustered feature detection based system opens up some neat possibilities too (like intelligently switching between objects when a crop isn't big enough to comfortably fit both).
+
+Probably will open source this some time in the future when I get the code cleaned up. It's not exactly the smallest library when everything is compiled down so for client side, small image cropping I have a feeling smartcrop would still have the edge (assuming minScale is at 1).
+",abagshaw,
+46,2016-09-23 23:28:46,"I investigated this a bit more and tried out both prescaling to a fixed size and the summed area tables approach in [this branch](https://github.com/jwagner/smartcrop.js/tree/integral-image). The prescaling seems to work nicely, it might even give more consistent results. The unoptimized summed area table/integral image approach I used made things slower in addition to being less flexible. I'm sure it could be tweaked but I'm no longer convinced it would be worth it.
+
+Cheers,
+Jonas 
+",jwagner,
+45,2016-08-14 22:44:17,"Is it possible just to return a focal point (rather than getting crop info) upon which a library like https://github.com/jonom/jquery-focuspoint can then reposition an image around when used in a re-sizing window?
+",abagshaw,2016-08-20 21:43:40
+45,2016-08-16 07:28:48,"No, this library does not produce a (focal) point, it evaluates different crops (rectangles) against the image and picks the best one.
+
+What I have done in the past is that if there is a manually defined focal point: I'd use that one for cropping, otherwise I use smartcrop to produce a good crop. With that said I do the cropping on the servers and not on the client. It's of little use to send the entire image to the client if only a bit of it is going to be used. 
+
+You could try to get smartcrop to find a smallish rectangle (by setting min & max scale) and then take the center of that as a center point.
+
+IFF you really want a focal point you are probably better off using face detection (for what it's worth) and some simple edge detection + blob detection for finding a center point in other cases.
+
+But it is, at least in my opinion, a harder problem to find a 'focal point' than to find a good crop. For the good crop you can try to include all the things that appear to be important (in focus, contrasty, faces etc.) and even arrange them in a pleasing way, for the focal point you have to pick one point and hope you got it really rong.
+
+This answer is already to long but long story short:
+Smartcrop finds good crops, not (focal) points. I think that's the better problem to solve for a computer. I think focal points are useful as a quick way & easy for humans to annotate what is important in an image. A better system is IMO to allow them to just draw an importance map (highlight the important bits with a marker) and then again let the computer find a nice crop containing those.
+
+Cheers,
+Jonas
+",jwagner,2016-08-20 21:43:40
+44,2016-07-19 08:08:02,"Hi, is this library useable as common.js module,
+
+as i tried to use it within appcelerator as common.js module but i got error ""can't find document"". 
+As document is only available within browser how we can use this library as common.js module?
+",haroonabbasi,2016-07-30 14:35:01
+44,2016-07-19 16:50:32,"Sort of. Common.js is just a module format, it does not come with any API for tasks such as image decoding. So you will need an adapter for the platform you are running on. I provide two adapters for node [smartcrop-sharp](https://github.com/jwagner/smartcrop-sharp) and [smartcrop-gm](https://github.com/jwagner/smartcrop-gm). You will need to develop an adapter like these for the appcelerator platform.
+",jwagner,2016-07-30 14:35:01
+43,2016-07-08 15:40:26,"Thanks for this great job.
+I am not a big fan of using \* or commit reference into my bower.json.
+Could you please create a release?
+",persea-pro,2016-07-12 08:20:44
+43,2016-07-09 12:55:53,"I neglected to whole bower publishing thing a bit because I don't use it myself. I'll need to create or add a script for creating github releases. I'll do so when I find some time. 
+",jwagner,2016-07-12 08:20:44
+43,2016-07-11 21:00:36,"It should be fixed now. I forgot to remove the deprecated version.js field in bower.json will do that in the next release. :)
+",jwagner,2016-07-12 08:20:44
+43,2016-07-12 08:20:39,"I've tested the release this morning, that's work great.
+Thank you for helping me to clean my bower.json file ;-)
+",persea-pro,2016-07-12 08:20:44
+42,2016-07-04 09:21:41,"Some image processors need to know the type of the image in order to open them as a buffer. This is the case with [lwip](https://github.com/EyalAr/lwip#open-an-image).
+
+To make this possible, we could pass the filename (or just the extension) to `smartcrop` as part of the `options` object, and then make it available to `iop.open` as a second argument. That way, the `iop` can decide how best to open the image when `open()` is called.
+
+(Does this make sense? 😅 )
+",eduardoboucas,2016-07-08 08:39:46
+42,2016-07-04 10:15:44,"For reference, here's a first version of the [adapter module for lwip](https://github.com/eduardoboucas/smartcrop-lwip/blob/master/index.js). At the moment I'm hardcoding `""jpg""` as the image type, but this PR would make it possible to always use the correct type.
+",eduardoboucas,2016-07-08 08:39:46
+42,2016-07-05 16:38:36,"Hello Eduardo,
+
+Thanks for your PR. What you are proposing sounds good. I suggest two changes to your PR:
+- Pass options.input to iop.open rather than all of options. That will make things a bit more contained
+- Add a test for it
+",jwagner,2016-07-08 08:39:46
+42,2016-07-05 23:09:08,"Sure, that makes sense.
+
+I pushed another commit where I'm passing `options_` instead of `options` to `iop.open` (I'm assuming this is what you meant with `options.input`?)
+
+I don't see any tests involving the iop adapters, so not sure how you want to approach this. Happy to put together a test if you point me in the direction you want to go.
+
+Thanks!
+",eduardoboucas,2016-07-08 08:39:46
+42,2016-07-07 21:00:41,"I actually meant pass options.input with pass options.input. See the commit.
+I really don't like having another way for passing in images.
+Just handle this use case in your iop.open by checking if it already is and image and then returning that.
+
+I implemented this feature in 1376a54b3262188020b44359a5ff4b78b262281e.Passing the whole options object is IMO a violation of separation of concern. Can you let me know if this solves your use case?
+",jwagner,2016-07-08 08:39:46
+42,2016-07-08 08:39:46,"Understood.
+
+I believe that commit does what I need. Thank you.
+
+Closing.
+",eduardoboucas,2016-07-08 08:39:46
+41,2016-06-28 02:55:48,"Hi !
+This is first time I used smartcrop.js. Here is my code:
+
+<S_CODE_TOKEN>
+
+But when I run, It throw an error:
+![image](https://cloud.githubusercontent.com/assets/15722352/16402394/74c167fe-3d16-11e6-8806-3ea570784f74.png)
+",trannamit95,2016-06-28 09:44:07
+41,2016-06-28 09:02:35,"Nice to see you trying out smartcrop.
+
+Quoting from the README:
+
+> # Node
+> 
+> You can use smartcrop from nodejs via either [smartcrop-gm](https://github.com/jwagner/smartcrop-gm) (which is using image magick via gm) or [smartcrop-sharp](https://github.com/jwagner/smartcrop-sharp) (which is using libvips via sharp).
+> The [smartcrop-cli](https://github.com/jwagner/smartcrop-cli) can be used as an example of using smartcrop from node.
+
+I guess I should add some clarification. Smartcrop.js is the base library, it only works in the browser out of the box. If you want to use it in node you will need to choose either smartcrop-gm or smartcrop-sharp.
+You will also need to make sure that you can get the respective modules to work on your system (might or might not be hard on windows).
+",jwagner,2016-06-28 09:44:07
+41,2016-06-28 09:42:53,"OH. Thank you @jwagner 
+",trannamit95,2016-06-28 09:44:07
+40,2016-06-03 12:53:59,"- **Breaking API Changes** (SmartCrop -> smartcrop, and more)
+- Some basic cleanup & refactoring
+- Using promises & returning
+- Introduced pluggable 'image operations' to get rid of the canvas dependency in node
+- Introduced boost option to allow for integration of face detection
+",jwagner,2016-06-25 14:56:29
+39,2016-06-02 05:30:37,"Taking a photo on Samsun s6 portrait mode ( worldstar mode )
+Upload it to smartcrop > testbed
+
+The upload shows up sideways, For some reason.
+
+<img width=""753"" alt=""screen shot 2016-06-02 at 5 30 06 pm"" src=""https://cloud.githubusercontent.com/assets/5580680/15734851/b04e131e-28e7-11e6-8d20-a00b30e5ab18.png"">
+",sahanDissanayake,2016-06-03 11:08:01
+39,2016-06-03 11:07:52,"Yes, because it doesn't take into account [exif orientation](http://jpegclub.org/exif_orientation.html). I have no plans of supporting this for the testbed.
+",jwagner,2016-06-03 11:08:01
+38,2016-05-02 18:55:51,"When moving the slider on the [testbed](https://29a.ch/sandbox/2014/smartcrop/examples/testbed.html) it looks nicer and it's easier to specify a specific value 👍 
+
+![smartcop](https://cloud.githubusercontent.com/assets/1312687/14964396/8ef80130-106d-11e6-938a-22c82507d055.gif)
+",acrogenesis,2016-05-03 18:00:37
+38,2016-05-03 18:00:32,"I agree, thanks for the PR! :)
+",jwagner,2016-05-03 18:00:37
+37,2016-04-13 05:23:32,"this in firefox chrome not cause this error, the cropping not working but if i chooesed the imagee twice no problem happen 
+",amsfci,2016-04-23 13:31:22
+37,2016-04-13 17:18:47,"Please provide a test case and an accurate description of the problem.
+",jwagner,2016-04-23 13:31:22
+36,2016-04-05 11:09:44,"Hi,
+
+My app is related to garments and when trying with the test bed, the cropping was not proper. The cropping happens in different places.
+
+Is it possible to crop only the surrounding empty areas around the main object.
+",Purus,2016-04-13 17:19:38
+36,2016-04-05 18:26:06,"I'm not not sure I understand what you mean. Can you post an example?
+",jwagner,2016-04-13 17:19:38
+36,2016-04-13 17:19:33,"No answer for over a week -> closing.
+",jwagner,2016-04-13 17:19:38
+35,2016-03-31 18:39:43,"Add configuration options (or document ways) to disable saturation and skin detection, among other features that take up time and may not be desirable.
+
+I've noticed that smartcrop can be very time intensive in the client browser if there are many images that need to be processed. It can block the browser when the image gets very large. It would be nice to document ways to reduce the intelligence, and time taken in smartcrop in certain use cases.
+
+The best approach is obviously to create a NodeJS image processor, but some websites don't have that luxury and we could help by not blocking the browser as much.
+",ajbogh,2016-04-13 17:19:49
+35,2016-04-04 22:03:39,"Disabling one feature or another won't change much. 15% faster than slow is still slow. It would probably be possible to run a decent part of the algorithm in a worker but I'm not convinced that's worth the effort either. If possible I'd strongly suggest to run smartcrop as part of authoring a page ahead of time. As you stated it is too slow to run on multiple or large images on page load.
+",jwagner,2016-04-13 17:19:49
+35,2016-04-13 17:19:49,"No answer for over a week -> closing.
+",jwagner,2016-04-13 17:19:49
+34,2016-03-10 19:12:44,"For using this with a Typescript app, it'd be awesome to have a Typescript definitions file (smartcrop.d.ts) for type checking.
+",dag10,2016-03-11 22:16:00
+34,2016-03-11 22:16:00,"I don't use or care about typescript so I don't have any interest in adding and or maintaining typescript definitions. If you want to have them create them and upload them to a separate repo like DefinitelyTyped. 
+
+Cheers,
+Jonas
+",jwagner,2016-03-11 22:16:00
+33,2016-02-13 07:30:53,"Whereto from here? Are there any efforts to make it smarter and get more accurate? It's already pretty good so far for 80% of the cases, but I would like it to reach a higher level of accuracy.
+",Charuru,2016-06-25 14:56:48
+33,2016-02-13 11:51:37,"Tweaking the coefficients based on machine learning and a big dataset (http://saliency.mit.edu/ for instance) would be one way ahead.
+
+I also have plans to integrate it with face detection in the future (for usage on the server/with node).
+
+Another thing worth trying is different windowing functions for scoring the image based on the salience/interestingness. I highly doubt the current rule of thirds functions is optimal. ;)
+",jwagner,2016-06-25 14:56:48
+33,2016-02-21 11:11:39,"@jwagner To integrate face detection in smartcrop.js, you can refer to this js lib:https://trackingjs.com/ ,maybe it can help you
+",shinebay,2016-06-25 14:56:48
+33,2016-03-02 17:59:27,"Hey @shinebay tracking.js looks pretty cool. My current plan is to make smartcrop.js expandable and then create a face detection plugin. 
+",jwagner,2016-06-25 14:56:48
+33,2016-05-02 05:10:53,"I'd also like to suggest intelligent zooming similar to the [effects that Cloudinary offers](http://cloudinary.com/blog/beyond_face_detection_smart_cropping_in_the_cloud_using_imagga_and_cloudinary).
+",ajbogh,2016-06-25 14:56:48
+33,2016-05-03 08:55:20,"@ajbogh it can already do that by setting minScale.
+",jwagner,2016-06-25 14:56:48
+33,2016-05-03 13:55:07,"@jwagner thanks! I'll check it out.
+",ajbogh,2016-06-25 14:56:48
+33,2016-06-25 10:35:46,"I have integrated support for facedetection (via 'boosting areas in the image) into the [1.0 branch](https://github.com/jwagner/smartcrop.js/pull/40). The testbed currently includes trackingjs and jquery.facedetection for face detection. smartcrop-cli supports using opencv via node-opencv for facedetection. I plan to release soon all of these soon. :)
+",jwagner,2016-06-25 14:56:48
+33,2016-06-25 14:56:48,"I merged 1.0 so I close this issue.
+",jwagner,2016-06-25 14:56:48
+33,2016-06-25 15:08:58,"Is the demo up with this yet?
+",Charuru,2016-06-25 14:56:48
+33,2016-06-25 15:46:05,"Yes the demo has been updated: https://29a.ch/sandbox/2014/smartcrop/examples/testbed.html
+",jwagner,2016-06-25 14:56:48
+33,2016-06-25 20:49:22,"You might want to change the image to a person. I found jquery.facedetection was pretty bad with animal faces. The best type of picture for this would be one where the person's face is not normally the area of interest when selecting a certain image dimension. With the jquery.facedetection it should ignore that area and highlight the face instead. I just think it would be nice to see the difference in a more complex image.
+",ajbogh,2016-06-25 14:56:48
+33,2016-06-25 22:20:52,"@ajbogh I might change that image if I find something fitting with a permissive license. Most of my people photography is personal and constantly using [pictures of myself](https://29a.ch/2016/06/25/smartcrop-1) gets old too. :)
+
+In a way I even find it good to start with an example that displays the weakness of these face detection libraries. It seems that they have been trained on mugshots rather than actual photographs of people. :)
+",jwagner,2016-06-25 14:56:48
+32,2016-02-09 16:37:03,"By any chance are there plans to add smart rotate? lol
+
+I've noticed that some users are not rotating their images when uploading them.
+",roblav96,2016-02-12 18:42:53
+32,2016-02-11 08:19:37,"It's probably doable but:
+- It's risky turning a correctly oriented image on it's head is IMO worse than selecting a bad crop.
+- It probably requires a lot of machine learning/training data otherwise the woman in the sky blue dress might get turned on her head.
+
+Do you properly handle exif orientation? That seems to be the mean cause for incorrectly rotated images in my experience.
+",jwagner,2016-02-12 18:42:53
+32,2016-02-11 15:39:27,"> Do you properly handle exif orientation?
+
+I do believe so. I'm using the cordova camera plugin with
+
+<S_CODE_TOKEN>
+
+I'm not too sure if that handles the exif properly or not.
+
+That's pretty funny about the blue dress girl. haha 
+",roblav96,2016-02-12 18:42:53
+32,2016-02-12 18:42:53,"If you are running inside of cordova you should definitely try to get the orientation right in there and not afterwards by invoking black magic. :)
+",jwagner,2016-02-12 18:42:53
+31,2016-02-08 04:17:02,"www.wallpaperpcmobile.com uses smartcrop.js to itelligently crop wallpaper, a very good demo site of smartcrop.js
+orginal wallpaper:http://www.wallpaperpcmobile.com/wallpaper/bird-on-a-branch-163656
+cropped to 480*800 resolution:
+http://www.wallpaperpcmobile.com/wallpaper/bird-on-a-branch-163656/download-480x800
+",shinebay,
+30,2016-01-25 22:59:49,"SecurityError: The operation is insecure.
+var input = ctx.getImageData(0, 0, canvas.width, canvas.height),
+",dertin,2016-02-02 22:13:02
+30,2016-01-26 09:42:19,"This is most likely because of user error. You get this error when you run SmartCrop on an image from another domain which you do not have permission to access:
+
+image: anything ctx.drawImage() accepts, usually HTMLImageElement, HTMLCanvasElement or HTMLVideoElement. **Keep in mind that origin policies apply to the image source, and you may not use cross-domain images without CORS.**
+
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS
+",jwagner,2016-02-02 22:13:02
+29,2016-01-18 10:41:39,"Just wanted to provide you with some images that are not so well working with your algorithm.
+
+https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Giraffa_camelopardalis_angolensis.jpg/675px-Giraffa_camelopardalis_angolensis.jpg
+
+https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Berlin_-_Siegess%C3%A4ule_Gro%C3%9Fer_Tiergarten_2012.jpg/600px-Berlin_-_Siegess%C3%A4ule_Gro%C3%9Fer_Tiergarten_2012.jpg
+
+https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Cheetah_Feb09_02.jpg/900px-Cheetah_Feb09_02.jpg
+
+https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Ursus_arctos_-_Norway.jpg/600px-Ursus_arctos_-_Norway.jpg
+",JonasKress,2016-01-19 19:58:50
+29,2016-01-19 19:58:50,"Hey, other Jonas :)
+
+Thanks for the examples. These cases are problematic for the smartcrop algorithm indeed.
+Adding a bias to prefer the upper part of images in portrait might help with these and some others. But in the end a simple algorithm like smartcrop will always be limited.
+
+I won't add them to the test suite as I want to keep the images in there random. But I'll keep them in mind for future hackery. Maybe I'll create a edge cases collection or something along those lines.
+
+Thanks again.
+
+Cheers,
+Jonas
+",jwagner,2016-01-19 19:58:50
+28,2016-01-16 11:18:15,"Hi. I'm trying to implement a batch process to crop large series of images with smartcrop in windows nodejs 0.10.
+In the test I'm using 1000x1500px png images (I couldn't use .jpg files because libjpeg-turbo is not working in my W7 machine : ( )
+
+here is the code:
+
+<S_CODE_TOKEN>
+
+Seems to SmartCrop create three Canvas instances in each processed image but dont free resources so, after exactly 24 files, recurse process stops silently without throw any error.
+
+Is there a way to clean Canvas resources in node-canvas? or, is it a bug in nodejs, or...
+",albertomoral,2016-01-29 19:51:09
+28,2016-01-19 20:02:02,"I'm not sure what you mean with 'clean canvas resources' or recursion in that context. Afaik the canvas should be picked up by the garbage collector like any other javascript object. What your script does looks like iteration and not recursion to me. Please use a debugger and let me know where the script exactly hangs.
+
+Cheers,
+Jonas
+",jwagner,2016-01-29 19:51:09
+27,2015-12-25 21:09:07,"That happend in Firefox and Safari, in Chrome is working properly for me
+",rcanessa89,2016-01-05 18:09:31
+27,2015-12-26 13:24:22,"Please provide a link to a page that allows me to reproduce this issue.
+",jwagner,2016-01-05 18:09:31
+27,2016-01-05 18:09:31,"No answer -> closing the issue.
+",jwagner,2016-01-05 18:09:31
+26,2015-12-06 05:31:30,"# A great plugin tho, well done!
+
+I just have a question please, does it work with cross origin images request ?
+
+For example, lets say I load my images from Amazon service, would form any issue ?
+",OmarZeidan,2015-12-06 13:56:35
+26,2015-12-06 13:56:35,"The images need cors clearance, if the appropriate headers are set (http://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html) then yes it will work otherwise it will fail because reading an image without cors clearance is a security violation. I hope that helps.
+
+Cheers,
+Jonas
+",jwagner,2015-12-06 13:56:35
+25,2015-11-29 17:24:39,"Hola! @sabinmarcu has created a [ZenHub](http://www.zenhub.io) account for the **jwagner** organization. ZenHub is the leading team collaboration and project management solution built for GitHub.
+
+---
+#### How do I use ZenHub?
+
+To get set up with ZenHub, all you have to do is **[download the browser extension](http://www.zenhub.io)** and log in with your GitHub account. Once you do, you’ll get access to ZenHub’s complete feature-set immediately.
+#### What can ZenHub do?
+
+ZenHub adds a series of enhancements directly inside the GitHub UI:
+- Real-time, customizable task boards for GitHub issues;
+- Burndown charts, estimates, and velocity tracking based on GitHub Milestones;
+- Personal to-do lists and task prioritization;
+- “+1” button for GitHub issues and comments;
+- Drag-and-drop file sharing;
+- Time-saving shortcuts like a quick repo switcher.
+### [Add ZenHub to GitHub](https://www.zenhub.io)
+
+_Still curious? See [more ZenHub features](http://www.zenhub.io/features) or read [user reviews](https://chrome.google.com/webstore/detail/zenhub-for-github/ogcgkffhplmphkaahpmffcafajaocjbd/reviews). This issue was written by your friendly ZenHub bot, posted by request from @sabinmarcu._
+
+![ZenHub Board](https://cloud.githubusercontent.com/assets/8771909/11153956/233ac4a8-89f1-11e5-94b1-1569d3f38b4d.png)
+",sabinmarcu,2015-11-29 21:18:13
+25,2015-11-29 21:18:13,"Spam spam spam.
+",jwagner,2015-11-29 21:18:13
+24,2015-11-11 22:13:31,"A possessive belonging to an ""it"" doesn't need an apostrophe. Don't believe me? Ask [the Oatmeal](http://theoatmeal.com/comics/apostrophe) (look for the velociraptor)!
+",curtisgibby,2015-11-13 19:26:50
+24,2015-11-13 19:26:46,"I absolutely do agree with you, that was an oversight. Thank you!
+",jwagner,2015-11-13 19:26:50
+23,2015-11-10 17:15:30,"In the signature `SmartCrop.crop(image, options, callback)`, the callback's signature is `function(result)`. But how do errors get discovered and handled. Shouldn't the signature be in the usual JS style like `function(error, result)`?
+
+Not only would that allow to handle errors but it would also allow smartcrop to be used with any of the promisify libraries (such as `pify`, `thenify`, etc) so that it can be used with Babel's ES7 async/await for a non-callback coding style.
+",rightaway,2015-11-10 21:09:33
+23,2015-11-10 21:09:33," What you call 'the usual JS style' is just a node convention.
+
+The next version will most likely use promises. I guess that would adresses your issue.
+",jwagner,2015-11-10 21:09:33
+22,2015-11-10 17:08:01,"The example in the README doesn't show how the `image` variable gets created. And the documentation says
+
+> image: anything ctx.drawImage() accepts, usually HTMLImageElement, HTMLCanvasElement or HTMLVideoElement
+
+Can it be changed to accept a string which is a path to an image file (for NodeJS)?
+",rightaway,2015-11-10 21:12:01
+22,2015-11-10 21:11:59,"No, I won't handle image decoding in smartcrop. The next version (living in the canvas independence branch) will allow plugin in different image processing libraries so it can be used with _gm_ for instance.
+",jwagner,2015-11-10 21:12:01
+21,2015-10-31 12:01:30,,dimitrovskif,2015-11-10 21:18:43
+21,2015-11-10 21:18:46,"Thank you!
+",jwagner,2015-11-10 21:18:43
+20,2015-10-30 13:08:40,"Dear Jonas,
+
+I am very impressed by your code, thanks a lot for that.
+Unfortunately I have no knowledge on javascript and I am a newbie in webpage creation. Consequently, I am totally lost with your slideshow example.
+
+Would it be possible to add a simple example (a single image with transition) on your repository?
+
+Regards,
+Bruno
+",bchate,2015-11-10 21:13:35
+20,2015-11-10 21:13:35,"This is a library for finding crops, not for doing slide shows. The slide show is just a random example of what this library could be used for. Please use a library that is made for creating transitions/slide shows.
+",jwagner,2015-11-10 21:13:35
+19,2015-10-27 05:30:59,,nmaxcom,2015-11-10 23:46:43
+19,2015-11-10 23:46:43,"Thanks for the PR but I don't want to change the coding style for this project at the moment. I realize that my style/use of whitespace is a bit nonstandard and in some cases messy. But if I switch to another style I want to make an educated decision - but that's not a priority right now.
+
+I hope you understand.
+",jwagner,2015-11-10 23:46:43
+19,2015-11-10 23:50:39,"It's an easy of a call as it gets: improves a much needed readability and costs literally 0, in a one-man devteam.
+
+But hey, it's your code.
+",nmaxcom,2015-11-10 23:46:43
+18,2015-10-23 22:51:48,"Change of wording, correction of typos and other random improvements.
+",IgorAntun,2016-07-11 03:59:14
+17,2015-10-23 15:32:34,"I have created a rails gem called smartcrop-rails, a wrapper of smartcrop.js for rails application.
+
+Here are the links:
+Github: https://github.com/sadiqmmm/smartcrop-rails
+Rubygems: https://rubygems.org/gems/smartcrop-rails
+
+Can you include in your readme / wiki / Docs / any.
+",sadiqmmm,2015-11-10 21:18:04
+17,2015-10-24 09:54:16,"A gem for a single js file without any actual rails integration seems like a lot of overhead..
+",koenpunt,2015-11-10 21:18:04
+17,2015-11-10 21:18:04,"I agree with you @koenpunt I don't like this wrapping javascript libraries in gems either. But if there are people who like that, who am I to judge. ;)
+
+Added it to the README, thanks!
+",jwagner,2015-11-10 21:18:04
+16,2015-10-20 11:01:25,"""a importance function"" :arrow_right: ""an importance function""
+",IonicaBizau,2015-10-20 17:28:18
+16,2015-10-20 11:10:29,"@imi40 Hmm, what? :thought_balloon: 
+",IonicaBizau,2015-10-20 17:28:18
+16,2015-10-20 17:28:12,"@IonicaBizau thanks for the fix. :)
+",jwagner,2015-10-20 17:28:18
+16,2015-10-20 17:58:25,"@jwagner You're welcome! Nice project!
+",IonicaBizau,2015-10-20 17:28:18
+15,2015-10-19 00:00:15,"Jonas,
+
+this module is fantastic! I loved it so much that decided to integrate it with connect.js/express.js middleware: https://github.com/inadarei/connect-thumbs in case somebody wants to easily use it on the server-side, in a Node environment. Hope that's helpful.
+
+Cheers!
+
+Irakli
+",inadarei,2015-10-20 17:37:03
+15,2015-10-20 17:37:03,"Cool, I added it to the readme! :)
+",jwagner,2015-10-20 17:37:03
+15,2015-10-21 00:23:40,"Thanks.
+",inadarei,2015-10-20 17:37:03
+14,2015-10-18 21:20:14,"…ut binary
+",Advil-Robin,2015-10-20 17:24:52
+14,2015-10-20 17:24:52,"I'm not exactly sure why you submit a pull request for my own branch but I don't want to merge because it's not an improvement.
+",jwagner,2015-10-20 17:24:52
+13,2015-10-17 03:31:57,":space_invader: :space_invader: :space_invader: 
+",lipis,2015-10-20 17:27:24
+13,2015-10-17 03:32:51,"If I missed something.. let me know :)
+",lipis,2015-10-20 17:27:24
+13,2015-10-20 17:27:22,"@lipis Thanks for the PR but I don't want to change the coding style for this project at the moment. I realize that my style/use of whitespace is a bit nonstandard and in some cases messy. But if I switch to another style I want to make an educated decision - but that's not a priority right now. 
+
+I hope you understand.
+",jwagner,2015-10-20 17:27:24
+13,2015-10-20 17:31:53,"Sure man.. I just saw that it wasn't consistent everywhere so that's what I went ahead with it.. but of course.. your decision :)
+",lipis,2015-10-20 17:27:24
+12,2015-10-16 22:29:36,"Would be nice if this library, instead of cropping, would simply set the cetral point for use in https://github.com/jonom/jquery-focuspoint
+",billymoon,2015-10-17 00:03:33
+12,2015-10-17 00:03:33,"Hey @billymoon,
+
+This library does not crop images or find focal points it just returns possible crops. So it is about areas not points.
+
+I'm not really convinced that the focus point approach is a good idea but I didn't look at it in too much detail. If you want to try to combine smartcrop with jquery-focuspoint you could just feed the centroid of the best crop returned from smartcrop into focuspoint. Something like:
+
+<S_CODE_TOKEN>
+
+I don't think this belongs into smartcrop itself, so I'm closing this issue. But if you have more questions feel free to ping me.
+",jwagner,2015-10-17 00:03:33
+11,2015-10-15 09:00:40,"It would be awesome if we could have this working as a gulp and/or grunt task.
+
+That way we could have it as a step in the build process and send the optimized images to the browser.
+
+For the width and height parameters I'm thinking we could have some configuration in a json file:
+
+<S_CODE_TOKEN>
+
+and for the output we could have something like filename-smartcorp-100-100.jpg so it can be easaly referenced in the templates.
+
+What do you think ? Any other ideas ?
+",ionutvmi,2015-10-15 09:30:21
+11,2015-10-15 09:30:07,"It would be easy to do, just take the code from https://github.com/jwagner/smartcrop-cli/blob/master/smartcrop-cli.js and wrap it in a grunt/gulp task. So if you want that feel free to do that.
+
+Is this how I _personally_ use smartcrop? No, I use it for preselecting crops which can then be changed by the user. Smartcrop makes a good guess. But sometimes it just gets it wrong and then you need a way to overwrite it's guess.
+",jwagner,2015-10-15 09:30:21
+10,2015-10-15 05:19:55,"Hi @jwagner , 
+
+Good work. I was trying on the test bed an image and it seems the cat is not detected.
+
+Attaching image for reference. What I was trying was reducing the width and height also, the cat's face was not detected.
+
+![cat](https://cloud.githubusercontent.com/assets/120454/10505379/5ed2cdd6-732a-11e5-8b7a-c0150d4421a0.jpeg)
+",harikt,2015-10-15 08:06:25
+10,2015-10-15 08:06:25,"Hey @harikt,
+
+Smartcrop.js does not detect faces, it detects human skin color. The cat is a bit too white for that.
+The other factors are the sharpness of the image regions and their saturation. The cat is quite low in these too. That's why it is 'not detected'/not always cropped nicely.
+
+Smartcrop.js is heuristic so it won't always work. This is one of these cases.
+
+Still, thanks for letting me know!
+",jwagner,2015-10-15 08:06:25
+10,2015-10-15 12:02:27,"Thank you @jwagner for the fast reply.
+
+Thanks for the explanations also.
+",harikt,2015-10-15 08:06:25
+9,2015-10-15 04:29:04,"Right now it seems that the skin color defaults to #C69170 and can only take one value.  It may be useful to have multiple default values (since not everyone is white) and check all of them in `skinDetect`.
+",mynameisfiber,2015-10-16 17:07:35
+9,2015-10-15 07:58:26,"The code certainly does not assume that everyone is white. The RGB values are normalized before looking at their difference:
+https://github.com/jwagner/smartcrop.js/blob/master/smartcrop.js#L267
+
+The brightness is then checked separately: 
+https://github.com/jwagner/smartcrop.js/blob/master/smartcrop.js#L170
+
+In my testing this has worked quite well for various skin colors. Expanding the skin color range further will increase the number of false positives quite a bit so care need to be taken.
+
+Do you have cases where it fails?
+",jwagner,2015-10-16 17:07:35
+9,2015-10-15 14:10:20,"I skip the edge and saturation detection and only do `skinDetect` to examine it's output over the image.  I picked one face as close to #C69170 as I could find and then one that wasn't.  The resulting scores looked like:
+
+![image](https://cloud.githubusercontent.com/assets/47370/10515796/1f48bae2-7323-11e5-9835-26f0de1afe04.png)
+
+That being said, with edge and saturation re-enabled, the scoring semes more equal over the faces but I'm assuming that because the skin weight is relatively low:
+
+![image](https://cloud.githubusercontent.com/assets/47370/10515638/59e1959e-7322-11e5-89b7-6e65204729ad.png)
+
+The test image I used was,
+
+![test](https://cloud.githubusercontent.com/assets/47370/10516158/e0f1db28-7324-11e5-89bf-c1168a53a48c.jpg)
+",mynameisfiber,2015-10-16 17:07:35
+9,2015-10-16 09:37:32,"Thanks for the example.
+
+Red is the skin color detector. So it outputs slightly higher values for the lady on the left than the gentleman on the right side. The reason why it selects the person to the right in the end is because there are more edges on his face (due to the wrinkles from age, the more prominent rim light, his beard, glasses, and possibly less makeup). The in the final scoring the contribution from skin color is skinColor_(detail+skinBias)_importance. 
+
+So as far as I'm concerned the algorithm works as intended. The skin color detection if anything prefers the darker skin in this case.
+",jwagner,2015-10-16 17:07:35
+9,2015-10-16 13:39:51,"So it prefers old wrinkly people? All I hear is move along smoothskin.
+",voronoipotato,2015-10-16 17:07:35
+9,2015-10-16 13:52:07,"@jwagner does that explanation still hold even though I disabled `edgeDetect` and `saturationDetect` for that first image?
+",mynameisfiber,2015-10-16 17:07:35
+9,2015-10-16 16:23:36,"@mynameisfiber I'm not quite sure what you did there and how you disabled it and arrived at that turquoise debug output. My guess is you just commented the function calls out. The score buffer starts out as a copy of the color buffer so you ended up with the actual rgb values in the 'score buffer', and in this case yes, you have successfully biased the algorithm towards people of a brighter skin complexion. But this is simply because your change did not do what you intended.
+
+If I set the edge and saturation values to zero and set the edge weight to zero (normally the algorithm avoids putting interesting features like skin at the edges, which in case of the woman would be the neck) it crops out the woman.
+
+So yes I think it stills holds.
+",jwagner,2015-10-16 17:07:35
+9,2015-10-16 16:36:02,"Good enough for me!  Thanks for being patient... I thought it was worthwhile to investigate this since this project has 4,117 stars and the potential for being biased.  Maybe a comment in the code where you select the skin color would be handy to help people select a color and understand where potential biases could?
+",mynameisfiber,2015-10-16 17:07:35
+9,2015-10-16 17:07:35,"I plan to add a FAQ entry or something as this is not the first time the subject has come up that explains how it works, that it tries to be fairly unbiased but also that it's clearly not perfect.
+",jwagner,2015-10-16 17:07:35
+8,2015-10-14 18:18:33,,adambarber,2015-10-15 07:50:23
+8,2015-10-15 07:50:20,"Thank you!
+",jwagner,2015-10-15 07:50:23
+7,2015-09-19 17:41:48,"Hi,
+
+For some images smartcrop rotates the image to fit it within the size constraints. That sometimes works but, especially with people, this makes the image look worse. Is there a way to disable that?
+",JZL,2015-09-29 17:42:21
+7,2015-09-21 08:11:01,"smartcrop does not rotate any images to fit any constraints. My guess is that you are running into issues with [exif orientation](http://keyj.emphy.de/exif-orientation-rant/). I'd recommend you to fix that before you apply smartcrop. [This is how I fixed exif orientation in my film emulator](https://github.com/jwagner/analog-film-emulator/blob/master/src/image-helpers.js#L55).
+",jwagner,2015-09-29 17:42:21
+7,2015-09-29 17:42:20,"As I didn't get any reply I assume that it was exif orientation and close the issue.
+",jwagner,2015-09-29 17:42:21
+6,2014-10-31 13:38:10,"Hi Jonas,
+
+Tiny change, I simplified two if statements. Lets keep your awesome code clean ;-)
+",pjackowski,2014-12-22 12:49:07
+6,2014-11-04 23:07:35,"Looks sensible at first sight. :) All have a more careful look when I have a little bit more time.
+",jwagner,2014-12-22 12:49:07
+6,2014-12-22 12:49:14,"Thanks!
+",jwagner,2014-12-22 12:49:07
+5,2014-09-28 17:21:46,"Hi there, afaics this works synchronously and therefore the callback shouldn't be required, so let's make it optional.
+
+Awesome work and concept on this lib, btw - congrats! :)
+
+Cheers.
+",diegocr,2014-09-29 08:09:29
+5,2014-09-29 08:09:29,"Actually the returned result is the optional (and undocumented) part. I don't want the API to be synchronous. It prevents future optimisation. It could also be desirable to break smartcrop down over multiple invocations of the event loop to prevent blocking the entire application (think nodejs).
+",jwagner,2014-09-29 08:09:29
+5,2014-09-29 15:31:49,"Okay, that's my bad habit of checking code before than documentation ;-)
+
+Well, then perhaps implementing it through a Worker or Promises should do what you want. However, keep in mind this could actually make it work slower.... you know, the overhead created by handling it that way, so i'd suggest providing the current synchronous method, and _additionally_ an async way.
+",diegocr,2014-09-29 08:09:29
+5,2014-09-29 22:07:42,"@diegocr Yeah, I wanted to return a promise, but I didn't want to include a particular promise library or force people to use one, so I went with a simple callback that the user can easily wrap in a promise if he desires to do so. Now with ES6 promises taking shape that could be an interesting API to support out of the box.
+
+There is an overhead which certainly can be a problem with workers. Just using the event loop to break the blocking sections apart in an optimized way does not have much of a performance impact at all in my experience.
+",jwagner,2014-09-29 08:09:29
+4,2014-06-16 23:29:45,"It's just too complicated. With all those umlauts. And without.
+",muesli,2014-06-20 15:47:22
+4,2014-06-20 15:47:19,"Sorry for that! 
+",jwagner,2014-06-20 15:47:22
+3,2014-06-01 06:48:23,"When I use firefox, I got the following error:
+
+SecurityError: The operation is insecure.
+
+var input = ctx.getImageData(0, 0, canvas.width, canvas.height),
+
+at smartcrop.js（283)
+",daniel-huang,2014-06-20 15:47:36
+3,2014-06-11 20:23:44,"Is it possible that you are loading a cross origin image without having set crossorigin=anonymous on it?
+If that's not the case please post a link that reproduces the problem.
+",jwagner,2014-06-20 15:47:36
+2,2014-04-08 07:56:57,"...mostly by avoiding doing the same calculations over and over again.
+",muesli,2014-04-10 14:15:49
+2,2014-04-09 20:44:36,"There is still a lot to optimize but I don't want to go over board so early.
+I'll have a look at your changes and their effect tomorrow. Thanks!
+",jwagner,2014-04-10 14:15:49
+2,2014-04-10 14:15:49,"I evaluated the changes, I like the 'Precalculate g's value.'. It didn't do much but when renaming g to detail I think it makes to code more readable. The change in the loop had an adverse effect on performance. Could be because it's casted to float later on anyway, could be that the dom access on width is more expensive than the multiplications/adds. As it this doesn't improve readability (imo) and was even a bit slower in my (to be honest still not very accurate) benchmarks I discarded that change.
+
+Thank you for your contribution!
+",jwagner,2014-04-10 14:15:49
+1,2014-04-03 21:46:07,"Please add a license, to let me know if I can use it. Thanks, this project looks promising!
+",sigurdga,2014-04-03 23:30:48
+1,2014-04-03 21:47:58,"Oh. I see you have MIT in your package.json. I still hope you can make that clearer in README or LICENSE files. I'm happy that I now can use it.
+",sigurdga,2014-04-03 23:30:48
+1,2014-04-03 23:30:48,"It's also in the smartcrop.js file itself. But I'll add the file just to be clear.
+",jwagner,2014-04-03 23:30:48

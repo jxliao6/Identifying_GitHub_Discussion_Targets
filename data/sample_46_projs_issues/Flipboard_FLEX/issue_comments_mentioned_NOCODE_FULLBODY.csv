@@ -1,0 +1,465 @@
+issue_num,datetime,body,login,mention_login
+164,2016-12-26 18:24:30,"@levi very cool!  This could be useful to thousands of developers :).  If it gets merged, let's feature it on asyncdisplaykit.org and in the Slack channel.
+
+Could you share some screenshots of what it looks like for an end user?",appleguy,levi
+164,2017-01-07 01:44:10,"@ryanolsonk I love the idea of extending the `FLEXHierarchyItem` to be a protocol, such that any framework can support hierarchy inspection. There is a caveat, however, where I've extended FLEX to jump between view and node hierarchies based on some heuristic rules for the entire picture to be visible in the explorer. If FLEX were to be opened up to support multiple frameworks, we'd have to figure out how to support custom traces of the hierarchy in a meaningful way — likely just push that responsibility down to the individual framework implementing support.
+
+I haven't had much time to look at this since I've put it up, but happy to continue the dialog with you to figure out where to take this. In the meantime, we've started using my branch internally at Pinterest and it's working great. Excited to provide the support to others in the near future.
+
+Also, screenshots soon.",levi,ryanolsonk
+164,2017-01-18 19:44:07,"Thanks for the review, @ryanolsonk. I'll take a look at fixing this up in the next week and will get back to you.",levi,ryanolsonk
+164,2017-01-20 15:53:00,"Great, thanks @levi!",ryanolsonk,levi
+164,2017-02-08 23:58:48,@ryanolsonk finally found some time to fix up the issues in this diff. Going to do a test pass on my side this week to identify remaining issues. Is this something you'd like to land?,levi,ryanolsonk
+162,2017-02-19 18:28:01,@SimplGy did you figure it out? I have exactly the same problem!,victorfigol,SimplGy
+158,2016-10-21 04:20:39,"Hi @mitchellporter  
+
+So in that case if we running the app in debug build do we still need ATS compliance check, I mean at least by adding Exception keys.
+",pavm035,mitchellporter
+158,2016-10-21 16:09:08,"FLEX itself does not make any network requests. As @mitchellporter said, this is just a debugging tool. Including in release builds is also not officially supported by this project as there is private API use which goes against App Store guidelines.
+",ryanolsonk,mitchellporter
+146,2016-09-06 04:20:42,"But why? @mitchellporter 
+",CodeLife2012,mitchellporter
+119,2017-01-31 17:46:03,@ryanolsonk Did you or anyone ever implement the locking on `master`? Trying to see *Objects referencing this object* crashes 100% of the time in certain apps like Twitter,NSExceptional,ryanolsonk
+115,2016-03-17 06:53:12,"It works on my Xcode 7.2.1 and iPhone 6S simulator. Just like @ryanolsonk said, 
+
+For peeking,
+You need to move a bit of your mouse cursor to let it work while holding Shift + Command, **not** Command + Control + Shift.
+
+For Popping,
+While holding Shift + Command during peeking, press Control 3 times to pop out. I think 3 times means the hardest force applied, as the document stated, each key contributes 1/3 of maximum possible force.
+",felixwcf,ryanolsonk
+113,2016-02-28 15:36:44,"Thanks @ryanolsonk , that would be great.
+Went with the `[[FLEXManager sharedManager] setSimulatorShortcutsEnabled:NO];` fix in the meantime.
+",orenco82,ryanolsonk
+111,2016-02-23 05:16:25,"Hi @khoren93! I'm the one who filed the PR for Realm support! Glad to hear you've started using it!
+
+Oh dear! That was quick! While I tested the library on both a test Realm file, and a Realm file from one of my own apps, it sounds like it doesn't actually handle nullability properly. Sorry I missed that!
+
+It'll take me a while to set up some test Realm data and test this myself, so if you have access to the FLEX codebase, could you please try this code out for me?
+
+In the file `FLEX/GlobalStateExplorers/DatabaseBrowser/FLEXRealmDatabaseManager.m`, on line 104, can you please replace that with this?
+
+
+
+That should check to see if there's actually a value provided by that Realm property, and if there's not, insert an `NSNull` instance in its place to ensure that a `nil` value isn't applied to the `NSArray` there.
+
+Please let me know if that fixes it, and if it does, I'll file another PR. Thanks!
+",TimOliver,khoren93
+111,2016-02-23 13:31:24,"Hi @TimOliver! That fixes crash, thanks! :)
+",khoren93,TimOliver
+105,2016-02-14 23:27:27,"Great point @nin9tyfour. Making this fully dynamic will definitely make it messier, but I can see the advantage of making it work with realm independent of whether it's built with realm. There are other places in this codebase where I've taken _interesting_ approaches to support everything inside a dylib (e.g. the toolbar icons).
+
+I'll defer to what ever @TimOliver thinks is best here.
+",ryanolsonk,TimOliver
+105,2016-02-14 23:27:27,"Great point @nin9tyfour. Making this fully dynamic will definitely make it messier, but I can see the advantage of making it work with realm independent of whether it's built with realm. There are other places in this codebase where I've taken _interesting_ approaches to support everything inside a dylib (e.g. the toolbar icons).
+
+I'll defer to what ever @TimOliver thinks is best here.
+",ryanolsonk,nin9tyfour
+105,2016-02-16 11:32:33,"Thanks a lot for the feedback @ryanolsonk and sorry for the late reply!
+
+Yeah, I was originally hoping to do it like @nin9tyfour suggested. It would be very cool if the integration of Realm could be fully dynamic so that the functionality was available if Realm itself was detected at runtime.
+
+I initially had a very quick play with it, but I couldn't get it to compile. I've never really played with weak linking a framework to that degree before, so I wasn't sure how much extra work it would actually entail.
+
+I'm certainly happy to try and make it dynamic if you have any tips on how to go about doing it. I was wondering if it would have actually meant needing to import all of Realm's headers into the FLEX project.
+
+Also, yep! I can provide a demo Realm file and class if you'd like some test data for the example app!
+
+In any case, thanks for the feedback! I'll add those code changes and report back here. Time providing, I might also see about having another play with making Realm dynamic too!
+",TimOliver,ryanolsonk
+105,2016-02-16 11:32:33,"Thanks a lot for the feedback @ryanolsonk and sorry for the late reply!
+
+Yeah, I was originally hoping to do it like @nin9tyfour suggested. It would be very cool if the integration of Realm could be fully dynamic so that the functionality was available if Realm itself was detected at runtime.
+
+I initially had a very quick play with it, but I couldn't get it to compile. I've never really played with weak linking a framework to that degree before, so I wasn't sure how much extra work it would actually entail.
+
+I'm certainly happy to try and make it dynamic if you have any tips on how to go about doing it. I was wondering if it would have actually meant needing to import all of Realm's headers into the FLEX project.
+
+Also, yep! I can provide a demo Realm file and class if you'd like some test data for the example app!
+
+In any case, thanks for the feedback! I'll add those code changes and report back here. Time providing, I might also see about having another play with making Realm dynamic too!
+",TimOliver,nin9tyfour
+104,2016-01-30 23:13:35,"Thanks for making this more permissive, @dcreemer 
+",ryanolsonk,dcreemer
+100,2016-02-09 06:35:57,"Greetings everyone! Crazily enough, I actually had the same idea and came here to discover someone had already beaten me to suggesting it!
+
+This was something I also wanted to see in FLEX (I use it quite a lot to debug one of my side project apps), so I took the time last weekend to add Realm integration and just pushed it as a PR: https://github.com/Flipboard/FLEX/pull/105
+
+I was also very wary, as @nin9tyfour pointed out that requiring Realm as an explicitly-included dependency would be terrible. So the code is presented in an optional macro that is only included if the Realm framework is present in the project itself when FLEX is built.
+
+In any case, let me know if you have any queries about it.
+
+**Full Disclosure:** I am an employee of Realm (My main project is the Realm Browser), but as we are not presently in a position to offer official support for third party Realm integrations, I'm providing this as an unofficial project. I'm happy to assist with any queries in my spare time. :)
+",TimOliver,nin9tyfour
+100,2016-02-13 16:38:59,"@TimOliver That's great! Thanks for your work!
+",xilin,TimOliver
+100,2016-02-21 16:28:04,"@TimOliver Thanks:)
+",khoren93,TimOliver
+92,2015-12-02 03:10:08,"@ryanolsonk I notice that when present, the keyWindow changed. so I add a method `dismissPreviousPresentViewController` to solve this issue.
+",WangHengHeng,ryanolsonk
+91,2016-03-21 12:25:22,"Hi, privatly I implemented persistence of network history by using [PINCache](https://github.com/pinterest/PINCache). Moreover I implemented a whitelist which is an array of host that will be recorded.
+
+@ryanolsonk do you think this kind of solution with additional dependency is something acceptable by you? 
+",aleksandergrzyb,ryanolsonk
+91,2016-03-26 18:49:43,"@aleksandergrzyb awesome! I definitely would want to carefully evaluate taking on the dependency, but it's not something I'm necessarily opposed to. I think using something like PINCache makes a lot more sense then re-inventing a persistence layer ourselves.
+
+The things I would want to look into are:
+1. Is there a way we could use PINCache if it's available, but fall back to no persistence? This is similar to what we've done with Realm, and lets people opt-in to taking the dependency.
+2. If we were to take PINCache on as a full dependency, how would current users of FLEX feel about that?
+
+If anyone has thoughts here, please chime in!
+",ryanolsonk,aleksandergrzyb
+76,2015-09-03 21:49:38,"LGTM, thank you for doing this @ryanolsonk! Looking forward to eliminating these warnings in Flipboard.
+",timonus,ryanolsonk
+73,2015-09-04 20:52:55,"@ryanolsonk actually, I don't believe https://github.com/Flipboard/FLEX/pull/76 resolves this. I'm still seeing [this](https://github.com/Flipboard/FLEX/blob/master/Classes/Network/PonyDebugger/FLEXNetworkObserver.m#L870) unused `typedef` on master.
+",timonus,ryanolsonk
+70,2015-07-07 07:01:38,"@ryanolsonk I edited the title, it is C++ Exception breakpoint. But this is the first time I got this
+",onmyway133,ryanolsonk
+61,2015-05-07 06:44:30,"@mickeyreiss I'm trying to reproduce this to understand the issue a little better. Could you tell me what version of AFNetworking you were using and what iOS version you were on when the crash occurred?
+
+Thanks!
+",ryanolsonk,mickeyreiss
+61,2015-05-23 21:48:42,"I've finally gotten to the bottom of this one. It turns out it's unrelated to AFNetworking .
+
+The PayPal SDK is making it's own call to the `-connectionDidFinishLoading:` method. This was especially tricky to track down because it does it via a call to `performSelector:afterDelay:withObject:` in `-[PPSimpleURLConnection initWithRequest:connectionTimeout:]`. It seems to be passing nil in the object argument, too. I knew something wasn't right when I saw `__NSFireDelayedPerform` on the stack trace rather than what you'd expect from URL loading system.
+
+It's unfortunate that the PayPal SDK calls the delegate method itself, but we can avoid the crash by no-oping if the connection argument is nil. In the general case, if libraries are calling the `NSURLConnectionDelegate`  methods themselves, our request accounting will likely be inaccurate. It's worth noting that keeping a strong reference to the connection wouldn't've helped us here. 
+
+Here's the `performSelector:withObject:afterDelay` trace
+
+![screenshot 2015-05-23 14 17 55](https://cloud.githubusercontent.com/assets/1422245/7785842/abad3706-0159-11e5-970e-5157dc861d51.png)
+
+I'm working on a change to fix the crash and should have something up shortly. /cc @mickeyreiss @intelliot 
+",ryanolsonk,intelliot
+61,2015-05-23 21:48:42,"I've finally gotten to the bottom of this one. It turns out it's unrelated to AFNetworking .
+
+The PayPal SDK is making it's own call to the `-connectionDidFinishLoading:` method. This was especially tricky to track down because it does it via a call to `performSelector:afterDelay:withObject:` in `-[PPSimpleURLConnection initWithRequest:connectionTimeout:]`. It seems to be passing nil in the object argument, too. I knew something wasn't right when I saw `__NSFireDelayedPerform` on the stack trace rather than what you'd expect from URL loading system.
+
+It's unfortunate that the PayPal SDK calls the delegate method itself, but we can avoid the crash by no-oping if the connection argument is nil. In the general case, if libraries are calling the `NSURLConnectionDelegate`  methods themselves, our request accounting will likely be inaccurate. It's worth noting that keeping a strong reference to the connection wouldn't've helped us here. 
+
+Here's the `performSelector:withObject:afterDelay` trace
+
+![screenshot 2015-05-23 14 17 55](https://cloud.githubusercontent.com/assets/1422245/7785842/abad3706-0159-11e5-970e-5157dc861d51.png)
+
+I'm working on a change to fix the crash and should have something up shortly. /cc @mickeyreiss @intelliot 
+",ryanolsonk,mickeyreiss
+58,2015-04-13 22:45:14,"@ryanolsonk that correct, i'll like cocoalumberjack console output to be presented in Flex system log... i'll try your approach  
+",shams-ahmed,ryanolsonk
+52,2015-03-13 23:50:38,"Hey @DaidoujiChen 
+
+The `?` type encoding means ""unknown type"" (see https://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/ObjCRuntimeGuide/Articles/ocrtTypeEncodings.html)
+
+It looks like the the original type encoding in this case was `^?`, or pointer to unknown type. Have you seen this on any methods that exist in public headers? I'm guessing the parameter is some kind of block.
+",ryanolsonk,DaidoujiChen
+52,2015-03-14 01:55:16,"Hello @ryanolsonk,
+
+The original type encoding in this case is `@?` not `^?`.
+
+
+
+`@?` -> `(? *)` wrong!
+
+`@""UIView""` -> `(UIView *)` correct!
+
+Yes, `(? *)` also found in public method like `transitionFromView:toView:duration:options:completion:`
+![ios simulator screen shot 2015 3 14 9 44 52](https://cloud.githubusercontent.com/assets/670441/6649803/89a2e806-ca2f-11e4-97a7-ff8972b8f414.png)
+
+I refer to https://github.com/JaviSoto/iOS8-Runtime-Headers, it seems like declared `@?` to `id` type.
+",DaidoujiChen,ryanolsonk
+52,2015-03-26 06:17:48,"Finally made this change (48826e2160db73e8ad5b2a14d901293e1e55edeb). Thanks for finding it @DaidoujiChen.
+",ryanolsonk,DaidoujiChen
+52,2015-03-27 13:05:15,":+1:  thanks @ryanolsonk 
+",DaidoujiChen,ryanolsonk
+49,2015-03-19 03:30:42,"@nin9tyfour  great,It's a nice way to my problem,i'll try it
+",nonstriater,nin9tyfour
+48,2015-03-04 05:19:19,"Hey @DaidoujiChen,
+
+Seems like a nice improvement! I was a little concerned that checking `isValidJSONData:` would be slow, but I did some profiling and it looks fine. I left one comment about a check I think we should leave in, but otherwise it looks good!
+",ryanolsonk,DaidoujiChen
+48,2015-03-04 07:17:27,"Hello @ryanolsonk,
+
+I am rollback the method `prettyJSONStringFromData:`.
+",DaidoujiChen,ryanolsonk
+48,2015-03-04 17:34:38,":+1: thanks @DaidoujiChen !
+",ryanolsonk,DaidoujiChen
+42,2015-02-17 06:05:01,"@maniak-dobrii I left some feedback about a small change to the API. Let me know what you think. We also need you to fill out the contributor form prior to merging: https://docs.google.com/forms/d/1gh9y6_i8xFn6pA15PqFeye19VqasuI9-bGp_e0owy74/viewform
+
+Thanks!
+",ryanolsonk,maniak-dobrii
+42,2015-02-18 09:52:51,"@ryanolsonk Yeah, sounds great, I'll update my code. Already submitted contributor form.
+",maniak-dobrii,ryanolsonk
+34,2014-12-04 00:39:07,"@JosephDuffy This project should cover what you need: https://github.com/qiaoxueshi/FLEXLoader. Note that it is available in the Cydia store.
+
+@Legoless The format is just a byte array with the image data. You can open the images in a program that lets you see the raw data (i.e. [Hex Fiend](http://ridiculousfish.com/hexfiend/)). The FacebookSDK also has [this script](https://github.com/facebook/facebook-ios-sdk/blob/master/scripts/image_to_code.py) which could be helpful in automating the task. 
+",ryanolsonk,Legoless
+34,2014-12-04 00:39:07,"@JosephDuffy This project should cover what you need: https://github.com/qiaoxueshi/FLEXLoader. Note that it is available in the Cydia store.
+
+@Legoless The format is just a byte array with the image data. You can open the images in a program that lets you see the raw data (i.e. [Hex Fiend](http://ridiculousfish.com/hexfiend/)). The FacebookSDK also has [this script](https://github.com/facebook/facebook-ios-sdk/blob/master/scripts/image_to_code.py) which could be helpful in automating the task. 
+",ryanolsonk,JosephDuffy
+28,2014-12-15 04:16:14,"@Jeswang thanks for the suggestion. Added in 8f6b8b2dae9053b92c5a839eb9aa83ca204a43d0.
+",ryanolsonk,Jeswang
+24,2014-11-10 17:27:35,"Okay, cool. I'll add this to my fork and then we will see what can be done. Thanks for link @ryanolsonk.
+",Legoless,ryanolsonk
+24,2015-01-26 21:37:43,"@JaviSoto thanks!
+
+I hadn't actually tested it on iOS 7 until your comment. There was an interesting issue due to a mistake in the version of asl.h that comes with the iOS 8.1 SDK. It turned into a bit of a rabbit hole, but I think I've got everything worked out now. If you're curious, the commit is here: 063ffe97c1d256c341d522b9b9f95a6a7ee80e2c
+",ryanolsonk,JaviSoto
+19,2014-08-14 03:27:27,"Hello @studentdeng,
+
+nice to meet you. i learn squashing commits in FLEX this project too. if you use sourcetree, you can look this [post](https://answers.atlassian.com/questions/213902/in-sourcetree-how-do-i-squash-commits).
+
+first, you need to squash all the commits in your local branch.
+second, use `git push -f` to force write your remote branch, make it the same with the local one.
+
+wish it help you, thank you.
+
+soft remind, if you first try on this, remember to backup your branch. `git push -f` is strong but dangerous.
+",DaidoujiChen,studentdeng
+19,2014-08-14 05:21:06,"thank @DaidoujiChen . but I prefer to recreate it. I think I've already miss up it : (
+",studentdeng,DaidoujiChen
+17,2014-08-02 21:20:43,"Hey @DaidoujiChen,
+
+Thanks for looking at this one. I found a few other cases where the same issue could arise and addressed them all in one commit: f956f8519039fbd691ee8145ff8fee110458e826
+",ryanolsonk,DaidoujiChen
+16,2014-08-02 07:44:48,"Hello @docash59,
+
+i can reproduce those errors in some of my projects.
+actually, the correct class is `FLEXPropertyBox` in `self.filteredProperties`.
+would you please try to replace the code from
+
+
+
+to
+
+
+
+thank you.
+",DaidoujiChen,docash59
+15,2014-08-02 21:26:33,"Hey @DaidoujiChen 
+
+I want to spend some more time going over this before providing feedback. My initial impression is that the functionality is awesome, but it involves some added complexity. I'm hoping we can find some ways to simplify to make it easier to maintain. For example, I think it would be better if we could use the built-in sort rather than having a one-off implementation of quick sort. I will leave more detailed feedback when I have a chance to dig into the pull request further.
+",ryanolsonk,DaidoujiChen
+15,2014-08-04 03:16:00,"Hello @ryanolsonk,
+
+thanks for your reply. i will continue to think if there is a better way to design those methods.
+",DaidoujiChen,ryanolsonk
+15,2014-08-04 10:09:03,"Hello @ryanolsonk,
+
+sounds great! i have also thought about using `NSOperation`.
+if nothing goes wrong, i will try to redesign it using `NSOperation` tonight.
+thank you.
+",DaidoujiChen,ryanolsonk
+15,2014-08-04 15:11:38,"Hello @ryanolsonk,
+
+i am change to using `NSOperation`. and i have a question. why you use 
+
+
+
+at [here](https://github.com/Flipboard/FLEX/blob/master/Classes/Global%20State%20Explorers/FLEXFileBrowserTableViewController.m#L38) in the beginning, i replace it to 
+
+
+
+but not sure right or not. thank you.
+",DaidoujiChen,ryanolsonk
+15,2014-08-05 10:23:20,"Hello @ryanolsonk,
+
+the `NSOperation` become non-concurrent.
+
+update : remove gcd in `FLEXFileBrowserSearchOperation`.
+",DaidoujiChen,ryanolsonk
+15,2014-08-06 02:08:11,"Hello @ryanolsonk,
+
+i am fix category naming, remove cancel method / property in `FLEXFileBrowserSearchOperation`, and squished to one commit.
+thank you.
+",DaidoujiChen,ryanolsonk
+12,2014-08-01 02:40:55,"Hello @ryanolsonk,
+
+yes, it searches recursively down from the directory.
+i am working on modify sort and calculate search files.
+when everything is completed, i will send a pull request.
+thank you.
+",DaidoujiChen,ryanolsonk
+7,2014-07-28 04:32:48,"Hello @ryanolsonk,
+
+I've fixed my code.
+1. corrected those problems on ios7.
+2. alloc `FLEXArgumentInputFontsPickerView` directly, without go through `FLEXArgumentInputViewFactory`. 
+3. remove unused code.
+
+thank you.
+",DaidoujiChen,ryanolsonk
+7,2014-07-29 06:03:31,"Hello @ryanolsonk,
+
+i commit the little change and fill out the CLA. thank you.
+",DaidoujiChen,ryanolsonk
+5,2015-02-17 07:34:59,"I've pushed the progress on this to a branch: https://github.com/Flipboard/FLEX/tree/network-debugging
+Feedback is welcome! Here's a GIF of how things currently look:
+
+![requests](https://cloud.githubusercontent.com/assets/1422245/6224592/fef37e88-b632-11e4-9fd2-f788c1a76c07.gif)
+
+I've been using the PonyDebugger approach but I'm not totally satisfied with it. My main problem is that it misses requests made using `+[NSURLConnection sendAsynchronousRequest:...]` or the synchronous variant. I'm considering using an `NSURLProtocol` subclass which would get all requests (as @JaviSoto  suggested), but that comes with some drawbacks too. If we intercept requests with our own `NSURLProtocol`, the way we end up handling each request may be subtly different than it would've been otherwise.
+
+I think I'll take a crack at the `NSURLProtocol` approach since the implementation should be pretty straightforward. I could see offering both options, though it would probably be better if one emerged as the superior approach. If anyone has other ideas on how to hook into the foundation networking stack, I'd love to hear them. I've been digging around in CFNetwork's private headers, but I haven't found a good place to quietly observe request activity. The system `NSURLProtocol` subclasses (e.g. `_NSURLHTTPProtocol`) do nearly all their work outside of Objective-C land where we can't easily swizzle to observe. Hooking the C/C++ functions is probably out of the question for this library.
+
+Aside from that, here's my remaining task list for the feature:
+- [x] Settings menu for the network history list
+  - [x] Clear/trash button to dump recorded requests
+  - [x] Enable switch for request recording.
+  - [x] Slider for recorder cache size (value persisted in `NSUserDefaults`)
+- [x] Sticky header in network history list to indicate when network capture is turned off and how many requests are in the list/accumulated download size. 
+- [x] Test interaction with PonyDebugger
+- [x] Form upload data in request detail view
+- [x] Test in other apps
+
+And some nice to have tasks:
+- [ ] Sensitive field redacting
+- [ ] Find a way to determine loads from NSURLCache and indicate that in the interface
+- [ ] Copy/export option
+- [ ] Don’t block the main thread while prettifying responses to push into the response detail view (JSON, plist, etc.).
+",ryanolsonk,JaviSoto
+176,2017-03-09 19:11:24,"Adds a check for `respondsToSelector:@selector(compare:)` to prevent a crash if the property corresponding to a column represents something that doesn't respond to `compare:`, e.g. a RLMAccessor. See #175. ",NSIRLConnection,selector
+169,2017-02-22 01:45:35,"I do not. It was crashing in a third party app when scrolling through the properties.
+
+The only thing I can think of is that `NSGetSizeAndAlignment` is clobbering `bufferSize` before throwing an exception, which results in the code below the `@catch` being executed no matter what.
+
+AFAIK, it's actually bad practice to write code like this:
+
+
+
+It should instead be structured like this, because it's easier to read and you can be certain `foo()` will only execute if no exception was thrown:
+
+
+
+",NSExceptional,catch
+168,2017-01-30 02:47:56,"Relevant part of the crash log:
+
+    Last Exception Backtrace:
+    0  __exceptionPreprocess + 0x7c
+    1  objc_exception_throw + 0x38
+    2  -[NSInvocation getArgument:atIndex:] + 0x200
+    3  +[FLEXRuntimeUtility performSelector:onObject:withArguments:error:] + 0xae8
+    4  +[FLEXRuntimeUtility valueForProperty:onObject:] + 0x154
+    5  -[FLEXObjectExplorerViewController valueForPropertyAtIndex:] + 0x104
+    6  -[FLEXObjectExplorerViewController subtitleForRow:inExplorerSection:] + 0x120
+    7  -[FLEXObjectExplorerViewController tableView:cellForRowAtIndexPath:] + 0x474
+
+Relevant disassembly (`+[FLEXRuntimeUtility performSelector:onObject:withArguments:error:]` + `0xae8` = `0x6f500`):
+
+    0006f4e4    adrp       x8, #0xcb000      ; @selector(errorWithDomain:code:userInfo:)
+    0006f4e8    add        x8, x8, #0x880    ; @selector(getReturnValue:)
+    0006f4ec    ldur       x9, [x29, #-0xa0]
+    0006f4f0    ldr        x2, [sp, #0x100]
+    0006f4f4    ldr        x1, x8
+    0006f4f8    mov        x0, x9
+    0006f4fc    bl         imp___stubs__objc_msgSend
+    0006f500    adrp       x8, #0xc9000
+
+I'm not great at reverse engineering, but since `@selector(getReturnValue:)` is in `x1` before the `msgSend`, isn't it crashing in `-[NSInvocation getReturnValue:]`?
+
+I'm not sure what caused it but I've submitted a PR that fixes it somehow.",NSExceptional,selector
+152,2016-10-08 03:09:36,"Use `@selector(URLSession:dataTask:didBecomeDownloadTask:)` instead of `@selector(URLSession:dataTask:didBecomeDownloadTask:delegate:)` in method search.
+",rtyu128,selector
+150,2016-09-27 03:44:06,"Hi~ There is a little mistake in `FLEXNetworkObserver`.
+Method:injectIntoAllNSURLConnectionDelegateClasses line:175
+
+
+
+Although this makes no effect in most situation. 
+If some class implement `@selector(URLSession:dataTask:didBecomeDownloadTask:)` only, the method will not be swizzled.
+`FLEX` is a fantastic debugging tool helps me a lot, B&R~
+",rtyu128,selector
+125,2016-10-01 00:26:29,"@TimOliver do you have any insight here?
+",ryanolsonk,TimOliver
+119,2017-01-23 20:56:41,"Nice! I was discussing that API with @kastiglione recently. The one concern is that any allocations within the enumeration itself could lead to deadlock if they happen to be within the same zone. We should be able to avoid that by creating a side zone for memory used within the enumeration, but it will take a little more restructuring.
+
+All that said, I'm open to trying the simple lock/unlock mechanism with the existing implementation. It may not be totally safe, but neither is what we have now.",ryanolsonk,kastiglione
+112,2016-02-23 14:13:19,"Thanks a lot for write access @ryanolsonk! I hope doing this was okay! :)
+",TimOliver,ryanolsonk
+108,2016-02-21 17:41:49,"Thanks for the pull request! I think this is covered by the PR I just merged from @TimOliver, so I'm going to close this one out. 
+",ryanolsonk,TimOliver
+106,2016-02-11 23:46:44,"This pull requests corrects the spelling of **CocoaPods** 🤓
+https://github.com/CocoaPods/shared_resources/tree/master/media
+
+<blockquote class=""twitter-tweet"" data-lang=""en""><p lang=""en"" dir=""ltr"">One day I’ll make a bot that looks through the READMEs of all Pods, looks to see if it uses “Cocoapods” and PRs “CocoaPods” :D</p>&mdash; Ørta (@orta) <a href=""https://twitter.com/orta/status/697374357975388160"">February 10, 2016</a></blockquote>
+
+<script async src=""//platform.twitter.com/widgets.js"" charset=""utf-8""></script>
+",ReadmeCritic,orta
+104,2016-01-28 21:20:03,"move to more permissive contribution doc.
+@timonus @ryanolsonk 
+",dcreemer,timonus
+104,2016-01-28 21:20:03,"move to more permissive contribution doc.
+@timonus @ryanolsonk 
+",dcreemer,ryanolsonk
+95,2015-12-02 03:38:20,"It has been merged. 
+Thanks @ryanolsonk 
+",untouchable741,ryanolsonk
+81,2015-09-30 19:58:56,"@Flipboard, I've corrected a typographical error in the documentation of the [FLEX](https://github.com/Flipboard/FLEX) project. You should be able to merge this pull request automatically. However, if this was intentional or if you enjoy living in linguistic squalor, please let me know and [create an issue](https://github.com/thoppe/orthographic-pedant/issues/new) on my home repository.
+",orthographic-pedant,Flipboard
+76,2015-09-03 21:26:03,"Addresses #73 and #74.
+
+c250200 fixes the warning in Xcode 7 but introduces a warning in Xcode 6. I think that's livable given that the transition to Xcode 7 is imminent.
+
+@tijoinc for review
+",ryanolsonk,tijoinc
+76,2015-09-03 21:51:32,"Thanks for the quick review @tijoinc! Merging.
+",ryanolsonk,tijoinc
+56,2015-04-01 10:14:45,"FLEX is really helpful, thanks for your brilliant work!
+
+But I believe the `@YES` in following code should be `shouldEnableOnLaunch`, right?
+
+
+",coppercash,YES
+52,2015-03-13 15:38:26,"Hello @ryanolsonk,
+
+I found some type encoding is `@?`. Than the method `readableTypeForEncoding` in `FLEXRuntimeUtility.m` convert this to `(? *)` like
+![ios simulator screen shot 2015 3 13 11 31 35](https://cloud.githubusercontent.com/assets/670441/6641505/1df2f408-c9d9-11e4-98e6-0fc3fa5608b9.png)
+
+I am not sure but maybe all of them just `id` type?
+",DaidoujiChen,ryanolsonk
+48,2015-03-02 09:51:22,"Hello @ryanolsonk,
+
+in some of my case, server return the wrong mime type like ""text/html"" for json data. I think it will be better using a method `isValidJSONData:` to check it. `prettyJSONStringFromData:` handle only the real json data. how do you feel? thank you.
+",DaidoujiChen,ryanolsonk
+42,2015-02-10 17:15:08,"Nice! I like the added feature.
+
+@JaviSoto, do you have any thoughts on the change or the new API?
+",ryanolsonk,JaviSoto
+22,2014-08-14 03:12:12,"as #20,
+
+Hello @ryanolsonk,
+
+i found there are 5 search bars need to add, please help to confirm, thank you.
+",DaidoujiChen,ryanolsonk
+20,2014-08-11 08:54:36,"Hello @ryanolsonk,
+
+in common use FLEX scenario, i prefer press 'Search' button on the keyboard to finish search rather than scroll the tableview. if you also like it, i will send a pull request to you, thank you. 😊
+",DaidoujiChen,ryanolsonk
+17,2014-08-02 12:34:20,"Hello @ryanolsonk,
+
+the hotfix is for #16 issue, thanks.
+",DaidoujiChen,ryanolsonk
+12,2014-07-31 08:36:12,"Hello @ryanolsonk,
+
+i am implement this feature like this
+
+![image](https://s3-ap-northeast-1.amazonaws.com/daidoujiminecraft/Daidouji/FLEX_TEST20140731.gif)
+
+is it the same with you think about? or do you have any suggestion?
+thank you.
+",DaidoujiChen,ryanolsonk
+7,2014-07-27 11:42:09,"Hello @ryanolsonk,
+
+there are two changes i added for input behavior,
+1. use picker to select fonts. 
+
+![ios simulator screen shot 2014 7 27 7 20 31](https://cloud.githubusercontent.com/assets/670441/3713729/a45836ce-1580-11e4-99c5-3ec22962633f.png)
+1. add a ""done"" button for resign inputview.
+
+![ios simulator screen shot 2014 7 27 7 20 58](https://cloud.githubusercontent.com/assets/670441/3713746/1f6b8cf8-1581-11e4-815a-b9c39a7c30ff.png)
+
+thx.
+",DaidoujiChen,ryanolsonk
+4,2014-07-26 20:32:05,"[This post](http://petersteinberger.com/blog/2013/how-to-inspect-the-view-hierarchy-of-3rd-party-apps/) from @steipete on injecting Reveal into 3rd party apps will set you on the right track. There are also a lot of other jailbreak related resources online, so I suggest you just start searching around.
+
+FLEX is primarily intended to be a tool used in your own apps. I included the Springboard screenshots in the README to hint at what is possible, but I don't plan to add further instructions for that use case anywhere in the project. With a little searching, you should be able to find what you're looking for elsewhere. :wink:
+",ryanolsonk,steipete

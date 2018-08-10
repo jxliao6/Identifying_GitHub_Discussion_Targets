@@ -1,0 +1,1654 @@
+issue_num,datetime,body,login,close_date
+240,2017-03-20 15:26:07,Redo of #190 ,zuik,2017-03-26 19:27:50
+240,2017-03-26 19:27:47,Thank you for your contribution 👍 ,prakhar1989,2017-03-26 19:27:50
+239,2017-03-18 19:22:22,i fixed it,Hatsuney,2017-03-18 22:18:29
+239,2017-03-18 22:18:26,"Thanks a lot, Laura!",prakhar1989,2017-03-18 22:18:29
+238,2017-03-15 20:18:33,,yurovant,2017-03-18 16:54:50
+238,2017-03-18 16:54:47,Thanks for the update!,prakhar1989,2017-03-18 16:54:50
+237,2017-03-10 13:27:11,The assignment link was a 404,mquinson,2017-03-18 16:55:45
+237,2017-03-18 16:55:42,Thanks for the updating the link!,prakhar1989,2017-03-18 16:55:45
+236,2017-03-04 02:25:14,,cedarz,2017-03-05 18:09:17
+236,2017-03-05 18:09:14,Thanks @cedarz!,prakhar1989,2017-03-05 18:09:17
+235,2017-02-26 15:16:33,,Devinsuit,2017-02-26 16:10:34
+235,2017-02-26 16:10:32,Thanks for the update! 👍 ,prakhar1989,2017-02-26 16:10:34
+234,2017-02-19 04:34:42,,kmollee,2017-02-19 19:52:26
+234,2017-02-19 19:52:23,Thanks a lot for the fix! 👍 ,prakhar1989,2017-02-19 19:52:26
+233,2017-02-06 10:40:54,Updated the link to the new course web,joelowj,2017-02-07 15:45:33
+233,2017-02-07 15:45:30,Sweet! Thanks for sending in the fix!,prakhar1989,2017-02-07 15:45:33
+232,2017-02-06 01:09:17,"This is the link for convenience http://web.stanford.edu/class/cs108/
+
+They seem to be using a new platform called `canvas` which requires priviledges to access.",elvis-sik,2017-02-20 18:11:22
+232,2017-02-19 15:08:22,"Hi @prakhar1989  This issue has been resolve, I suggest this issue to be closed.
+Thanks a lot.",joelowj,2017-02-20 18:11:22
+232,2017-02-20 18:11:21,Thanks @joelowj 👍 ,prakhar1989,2017-02-20 18:11:22
+231,2017-02-02 05:56:12,"This is an introductory-level course in supervised learning, with a
+focus on regression and classification methods. The syllabus includes:
+linear and polynomial regression, logistic regression and linear
+discriminant analysis; cross-validation and the bootstrap, model
+selection and regularization methods (ridge and lasso); nonlinear
+models, splines and generalized additive models; tree-based methods,
+random forests and boosting; support-vector machines. Some unsupervised
+learning methods are discussed: principal components and clustering
+(k-means and hierarchical).",ababen,2017-03-18 16:57:29
+231,2017-02-02 06:06:11,"Thanks for contributing @ababen. Can you please add the requisite icons and add links to assignments so that it's easier for others to understand what this course has to offer?
+",prakhar1989,2017-03-18 16:57:29
+230,2017-01-23 11:10:06,,anancds,2017-01-23 11:58:38
+230,2017-01-23 11:58:56,Thanks for the contribution! 👍,prakhar1989,2017-01-23 11:58:38
+229,2017-01-14 19:57:24,,VipulSarin,2017-01-15 13:20:43
+229,2017-01-15 13:20:38,Thanks for the addition! 👍 ,prakhar1989,2017-01-15 13:20:43
+228,2017-01-12 20:11:56,,bawejakunal,2017-01-15 13:33:47
+228,2017-01-12 20:26:24,@prakhar1989 Are we still trying to keep these in alphabetical order?,awelch83,2017-01-15 13:33:47
+228,2017-01-15 13:35:05,"Thanks Kunal! 👍 
+
+@awelch83 - Hmm, I try to but I don't enforce this strongly in PRs.",prakhar1989,2017-01-15 13:33:47
+227,2017-01-02 12:11:19,"Browns University, very nice course",sjfricke,2017-01-03 01:49:03
+227,2017-01-02 14:00:33,"This course looks really really good. Thanks a lot for adding it. One small typo - once that is fixed, I'll merge.
+
+Oh and Happy New Year!",prakhar1989,2017-01-03 01:49:03
+227,2017-01-02 16:13:30,"Good Catch, fixed",sjfricke,2017-01-03 01:49:03
+226,2016-12-10 08:12:19,,Developer-Y,2016-12-10 13:45:07
+226,2016-12-10 13:45:02,Thanks!,prakhar1989,2016-12-10 13:45:07
+225,2016-12-08 07:22:34,Updated UIUC's CS241 awesome course & assignment webpages to 2016 spring semester.,erichoco,2016-12-08 07:23:49
+225,2016-12-08 07:23:45,Thanks 😊,prakhar1989,2016-12-08 07:23:49
+224,2016-12-07 10:52:34,"- Added link to the the latest offering (Spring 2016) which includes videos.
+- Added ""Videos"" icon",danoneata,2016-12-07 12:49:40
+224,2016-12-07 12:49:33,Thanks! ,prakhar1989,2016-12-07 12:49:40
+223,2016-11-30 02:10:49,so sorry for the format error,anancds,2016-11-30 03:41:52
+223,2016-11-30 03:41:50,No problem!,prakhar1989,2016-11-30 03:41:52
+222,2016-11-29 06:20:21,,light94,2016-11-29 14:57:52
+222,2016-11-29 14:58:04,Thanks!,prakhar1989,2016-11-29 14:57:52
+221,2016-11-29 02:39:11,,anancds,2016-11-29 14:58:38
+221,2016-11-29 14:58:44,Thanks!,prakhar1989,2016-11-29 14:58:38
+220,2016-11-18 09:27:45,This is a course that is being offered in MIT and could be useful for many students.,lambainsaan,2016-11-19 20:28:51
+220,2016-11-19 20:28:49,"Looks great! Thanks for sending the PR! 👍 
+",prakhar1989,2016-11-19 20:28:51
+219,2016-11-14 02:38:02,"Adding an awesome introductory course, http://cse1.net/lectures",Techfolio,2016-11-14 17:13:21
+219,2016-11-14 17:13:19,"This looks fantastic! Thanks a lot for contributing :+1: 
+",prakhar1989,2016-11-14 17:13:21
+218,2016-10-28 01:58:20,,ethanchewy,2017-03-19 20:47:02
+217,2016-10-24 16:52:55,"Links to updated Cornell's Computer System Organization lecture slides.
+[CS3410](http://www.cs.cornell.edu/courses/cs3410/2016fa/schedule/)
+",vharsh,2016-10-24 19:00:18
+217,2016-10-24 19:00:35,"Thanks!
+",prakhar1989,2016-10-24 19:00:18
+216,2016-10-22 18:39:09,"The link for 6.006 actually linked to 6.046
+",shauryab98,2016-10-22 19:23:43
+216,2016-10-22 19:23:40,"Thanks! 👍 
+",prakhar1989,2016-10-22 19:23:43
+215,2016-10-21 16:07:24,"UoUtah - Machine learning, Advanced Algorithms, Database systems
+CMU - 10-601 Spring 15 lectures and Statistics courses by Larry Wasserman.
+",yogeshpaul,2016-10-21 17:27:25
+214,2016-10-14 17:39:02,,awelch83,2016-10-15 00:36:12
+214,2016-10-15 00:36:10,"Thanks! 👍 
+",prakhar1989,2016-10-15 00:36:12
+213,2016-10-14 07:01:26,"The artificial intelligence - IIT delhi course links are broken
+",rajeshp,
+212,2016-10-05 06:12:39,"In a nutshell, what is the purpose of travis? Can it be of some benefit to this repository?
+",awelch83,
+212,2016-10-07 05:18:59,"Hi! Well, Travis is a CI tool and is usually used to run tests etc on every commit or a PR.
+So it _could_ be used to ensure that any pull-requests to this repo follow certain rules. One such example could be that whenever a new PR is submitted, Travis checks that the link is valid (doesn't 404). 
+
+I'd ideally like to have a way to make sure that contributors stick to the correct formatting / alphabetization etc. However, since we aren't quite dealing with structured text, it might be hard to implement this check.
+
+Hope that answers your question.
+",prakhar1989,
+212,2016-10-07 18:24:22,"Thanks for your reply, Prakhar! I'd like to try to implement this. I figure that I can start first with the 404-check, and then functionality can be expanded from there.
+
+I was also thinking that it might be nice to be able to set up an automated process that would scan all existing URLs at a set interval to check for broken links
+",awelch83,
+212,2016-10-07 18:59:53,"Sure! Thanks for taking this up! For the 404 checking, you can refer to [Awesome Bot](https://github.com/dkhamsing/awesome_bot). I'd also suggest taking a look at this [PR](https://github.com/prakhar1989/awesome-courses/pull/146) in order to understand the issue we had when we tried to implement it for this repo. I'm sure @awesome-bot would love to chip in.
+",prakhar1989,
+212,2016-10-10 13:45:39,"yeah the awesome-bot tool can help check for links
+there's another tool called danger that can enforce some other rules https://github.com/danger/danger
+",awesome-bot,
+211,2016-10-04 00:26:07,,awelch83,2016-10-04 13:39:02
+211,2016-10-04 13:39:06,"Thanks!
+",prakhar1989,2016-10-04 13:39:02
+210,2016-10-02 15:57:35,,sjfricke,2016-10-02 17:57:21
+210,2016-10-02 17:57:19,"Thanks! 👍 
+",prakhar1989,2016-10-02 17:57:21
+209,2016-10-02 00:34:44,"Added a great course on Computer Graphics offered by Carnegie Mellon
+University
+
+Matched documentation style also
+",sjfricke,2016-10-02 01:39:52
+209,2016-10-02 01:46:22,"Looks sweet! Thanks for contributing! 👍 
+",prakhar1989,2016-10-02 01:39:52
+208,2016-09-29 14:35:53,"Added
+CS 224: Advanced Algorithms(Harvard University)
+CS 229r: Algorithms for Big Data (Harvard University)
+CS 261 A second course in Algorithms - Stanford University
+
+Updated
+6.854 Advanced Algorithms MIT video lectures
+",yogeshpaul,2016-09-29 18:19:18
+207,2016-09-21 07:04:08,"CS 261: A second course in Algorithms - Stanford 
+https://www.youtube.com/playlist?list=PLEGCF-WLh2RJh2yDxlJJjnKswWdoO8gAc
+
+MIT 6.854 Advanced Algorithms videos link - Spring 2016 
+http://people.csail.mit.edu/moitra/854.html
+https://www.youtube.com/playlist?list=PL6ogFv-ieghdoGKGg2Bik3Gl1glBTEu8c
+",yogeshpaul,2016-09-29 14:38:17
+207,2016-09-29 14:38:17,"Added links via pull request.
+",yogeshpaul,2016-09-29 14:38:17
+206,2016-09-16 05:46:43,"Added some descriptions for CS61B which I am using right now. Really excellent lecture for java and data structure beginner. I love it and like to share it :-)
+
+And also this course contains all needed lecture notes, homeworks, projects and even exams. So I added other icon next to its title.
+",yangzgnay,2016-09-16 19:26:47
+206,2016-09-16 19:26:42,"Thanks for contributing! 👍 
+",prakhar1989,2016-09-16 19:26:47
+205,2016-09-15 20:19:59,"Added a link to lecture website of CS162 Spring 2015 lecture
+",yangzgnay,2016-09-16 02:05:27
+205,2016-09-16 02:05:24,"👍 
+",prakhar1989,2016-09-16 02:05:27
+205,2016-09-16 02:08:35,"Hi,
+
+I don't have the lecture slides.
+Kindly don't mail me again.
+
+Thank You
+
+On 16 Sep 2016 7:36 am, ""Prakhar Srivastav"" notifications@github.com
+wrote:
+
+> Merged #205 https://github.com/prakhar1989/awesome-courses/pull/205.
+> 
+> —
+> You are receiving this because you are subscribed to this thread.
+> Reply to this email directly, view it on GitHub
+> https://github.com/prakhar1989/awesome-courses/pull/205#event-791585702,
+> or mute the thread
+> https://github.com/notifications/unsubscribe-auth/AMiXLMUjW54rG5Z4OnE9W-Y23yiTogGnks5qqfmkgaJpZM4J-Tm9
+> .
+",shivamgupta-gupta,2016-09-16 02:05:27
+204,2016-09-15 10:56:43,"The site is down and anyone I would like to ask if anyone has a copy of the lecture/ slides?
+",Aiken00,2016-09-15 11:00:52
+204,2016-09-15 11:00:40,"I found the new version of course [here](http://am207.github.io/2016/index.html).
+",Aiken00,2016-09-15 11:00:52
+203,2016-08-31 05:26:50,"Link to video lecture has been updated from Fall 2014 to Spring 2015.
+",vivekpatle,2016-08-31 13:04:55
+203,2016-08-31 13:04:53,"Thank you 👍 
+",prakhar1989,2016-08-31 13:04:55
+202,2016-08-21 21:22:24,"Can you please please help with link for videos of CS 425 Distributed Systems
+",vipulg,2016-08-22 17:37:48
+202,2016-08-22 17:37:47,"It seems the university has put the videos behind a login. I'll update the readme to indicate that.
+",prakhar1989,2016-08-22 17:37:48
+202,2016-08-23 04:02:59,"any chance you have downloaded the videos?
+
+On Mon, Aug 22, 2016 at 11:08 PM, Prakhar Srivastav <
+notifications@github.com> wrote:
+
+> It seems the university has put the videos behind a login. I'll update the
+> readme to indicate that.
+> 
+> —
+> You are receiving this because you authored the thread.
+> Reply to this email directly, view it on GitHub
+> https://github.com/prakhar1989/awesome-courses/issues/202#issuecomment-241489820,
+> or mute the thread
+> https://github.com/notifications/unsubscribe-auth/AAqlkoHlR0K04foKPJraP8t6CVnRUkINks5qid6ugaJpZM4JpZIO
+> .
+",vipulg,2016-08-22 17:37:48
+202,2016-08-23 13:34:37,"Nope.
+
+On Tuesday, August 23, 2016, vipulg notifications@github.com wrote:
+
+> any chance you have downloaded the videos?
+> 
+> On Mon, Aug 22, 2016 at 11:08 PM, Prakhar Srivastav <
+> notifications@github.com
+> <javascript:_e(%7B%7D,'cvml','notifications@github.com');>> wrote:
+> 
+> > It seems the university has put the videos behind a login. I'll update
+> > the
+> > readme to indicate that.
+> > 
+> > —
+> > You are receiving this because you authored the thread.
+> > Reply to this email directly, view it on GitHub
+> > <https://github.com/prakhar1989/awesome-courses/issues/202#issuecomment-
+> > 241489820>,
+> > or mute the thread
+> > <https://github.com/notifications/unsubscribe-auth/
+> > AAqlkoHlR0K04foKPJraP8t6CVnRUkINks5qid6ugaJpZM4JpZIO>
+> > .
+> 
+> —
+> You are receiving this because you modified the open/close state.
+> Reply to this email directly, view it on GitHub
+> https://github.com/prakhar1989/awesome-courses/issues/202#issuecomment-241620847,
+> or mute the thread
+> https://github.com/notifications/unsubscribe-auth/AAnoIeUs-SAM0JC7PRSXe4O0C-CvMRA4ks5qinD8gaJpZM4JpZIO
+> .
+
+## 
+
+_Prakhar Srivastav_
+_http://prakhar.me/ http://prakhar.me/_
+",prakhar1989,2016-08-22 17:37:48
+201,2016-08-19 15:44:49,,sbarratt,2017-03-19 20:47:19
+200,2016-08-02 18:01:29,"Adding iTunes, URL for iOS 9 Swift free course from Stanford
+",JMatharu,2016-08-02 22:47:46
+200,2016-08-02 22:47:44,"Thanks a lot, 👍 
+",prakhar1989,2016-08-02 22:47:46
+199,2016-07-30 04:23:48,"But still available on his P4P github repo
+",mortonfox,2016-07-30 12:27:51
+199,2016-07-30 12:27:48,"Great find!
+",prakhar1989,2016-07-30 12:27:51
+198,2016-07-28 14:06:21,,awelch83,2016-07-28 14:12:26
+198,2016-07-28 14:12:24,"Thanks =)
+",prakhar1989,2016-07-28 14:12:26
+197,2016-07-21 17:45:29,,awelch83,
+196,2016-07-21 17:43:35,,awelch83,2016-07-21 17:55:28
+196,2016-07-21 17:51:35,"They changed the link - https://www.classes.cs.uchicago.edu/archive/2015/winter/22300-1/
+
+Can you please update it? I'll merge it in :)
+",prakhar1989,2016-07-21 17:55:28
+195,2016-07-21 15:58:10,,awelch83,2016-07-21 17:35:55
+194,2016-07-21 15:24:00,"@prakhar1989 
+
+<S_CODE_TOKEN>
+
+<S_CODE_TOKEN>
+",awelch83,2016-07-21 18:13:28
+194,2016-07-21 15:44:27,"Hi Aaron, 
+
+I'm not sure on how to decrypt this. Feel free to [email](mailto:prakhar@prakhar.me) me.
+",prakhar1989,2016-07-21 18:13:28
+194,2016-07-21 17:57:55,"Sorry about that, Prakhar. I encrypted the message using a public key that
+you created on August 27th, 2014
+
+On Thu, Jul 21, 2016 at 10:45 AM, Prakhar Srivastav <
+notifications@github.com> wrote:
+
+> Hi Aaron,
+> 
+> I'm not sure on how to decrypt this. Feel free to email
+> prakhar@prakhar.me me.
+> 
+> —
+> You are receiving this because you authored the thread.
+> Reply to this email directly, view it on GitHub
+> https://github.com/prakhar1989/awesome-courses/issues/194#issuecomment-234295014,
+> or mute the thread
+> https://github.com/notifications/unsubscribe-auth/AJ8Rk1CoB7Ui8b4fwqdtLsNxrG628-h5ks5qX5QRgaJpZM4JR6iv
+> .
+
+## 
+
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+mQINBFWEqXIBEADAZ6IYll3rfCXefv7x8zl3E8eN94ILjuIK4gxv0SLw109ntyVM
+RIhBAObrPzgVit6k+IT+BrJd5op23MmaDoaN6c7nIRqtSwMdEosNJY5RLD7V1/mv
++nsBkBnA3J8sDPAa/1Smfma/8bqvDOaK/lYTyDDUyJbEyCWmt/PeSyEJrKrg5Ihu
+wfc20OFRaeskTBLPxFDtmOWOSTMta/s7XCmZuL7SCEtzEMxDHX8twAHIwHqI/jor
+zl5C2kMb8DT5dUY2Z1AGhe0kRsQfHCuLLDw62yD+Jwclm73ZGKG6eF0Xhna5cwln
++uH0mlMqn+0PLl+Fih6gaUMUah1qb2N2yYil0p39F8sK5PHnMUf86wV/GE0auG0j
+FkyWL6b0/L2DzPFQUxafIajn5OW6ULPLlhpqk0irwz+jZnTwJibWZqrIR8hehEhZ
+GQhPBAD+xvlyCMCYRraj2NgvCMizMY50p/CqKI+IOBTamN965sSOfQlFWscjZZdR
+3qaFFoeeuoUyWF6SjpRXrxcdOpNrro9Ghx1m816ibi7RhMZz7lmPO1kbQS4RliMu
+VTYMXJ9rlzmFQ/a+1qERcs2zSgOxKYvvJIXBB2QRJUyohivcJu5/OHrQvjMQkHcl
+sJxFJevPVO9ePUtz3OZfu0prODTPl4dqQs692q1pzRi1WRIInMZEd5zTUwARAQAB
+tCZBYXJvbiBDLiBXZWxjaCA8c2VuZHMyYWFyb25AZ21haWwuY29tPokCPQQTAQoA
+JwUCVYSpcgIbAwUJB4YfgAULCQgHAwUVCgkICwUWAgMBAAIeAQIXgAAKCRCfZkwd
+I4s54ge8EACP96E72flh6ehpzaWxvVlN69EbLf9ZjDoIQz82yxmS397tg7ZZfzan
++W2X0w9YBSS7DOaznF4uqQKmchwBdrCes4ukGh9WA04OnppibHi7RBUEhYgk46Zq
+zwhThOCk1Fr/83KZa/n5iYMpRtSqyDYYjBnL6NqoZkaaXtaTG8UnY1SehC0DtDlU
+4AhmKqAWt5iUXG6V9ZPvJu7Iw9iZApanELtcqOAHnBY6MCJgyLcdVyNWCe5LF6t8
+qbAeVdoJVfJcCOhMJrkr1rOLFzfNJfIpGS8Pyj6/FwiAPRJvlffnCrWm54h8kx1j
+Y/w6tHnQrKDZ19Eo/ZPuhL21r0uJXcczT9wU70DMS/ji52UxhxFkP8hEJdIXsSeo
+Azfs0UOfziu7+swvuGl5oGyxeb2556xl++2MuBTAuPhFi34CJ4d1j9TsgIENFLxb
+LMy2a3iIRZcCXzCLd6cJUtgUajxYEfe2fxDwgRkmUmcKj5ePs04yNAIaB6aBc9CP
+8SxXKHixEFpLVCzrGk+AhxetrGN1Vm+KVak2HVvpB1jXxOBIpMCKGRmcujFkVgQV
+IKwmsrJA1Xg0ynUKmX2ZomftWv/h+Q3IOdyvigXfwffFJbj5A/hUj615H53Lp4u3
+jbaM8iGPZeT1BJM78a+yVLOOM9ZsEU5blZa4s2YSTRXSgzVVKgsYJrkCDQRVhKly
+ARAA4lEjCFqEKP1xpR5Ij2+Ho1Z/IktTgHSff26IBAsSDmHcpGVHyFnADl3imAzL
+KrmWaI3eNCB5QQrif4+yyT4OAUxOYMberCAP4YA16Idy0vuhx1sVeDBHXNcdslCm
+Isjehvf8j8WqxFMJ+2oLQ5Bpy8g3d8p3qkKZFNkeG4eqWiI5XfZKTApdun1sfbcp
+qCu7J44mMVV5erKXm/0HGLJWbbhKoKjJ5wwZJPXXj19QescbDUluDad1hYvHhK5+
+AY2FnN9nwbnxmNh/ptgS9JkyZjZgRuvCDin6RPAIMI3zAfJ/8MZdrzgssqek8gXm
+jO3g6tyhH1CM2OsXCXu5+Lbddw8E92zCuMTOn0fSJT9Xp0FlCtqznrZXFrXMTDU6
+23MwzCVae+hUqmtYRxZLiBUcdRwpEgk7X7X6OZJcV5b1FIeUxC0cb+H3sfqIqZL/
+35mjCEm/9R/MplL92nIoycHZnwPPdq9HA095ryS98HmB3z4vLw4zgcylAbp4rgFk
+OkYGvhmk3x7+xkPSH803DfxCufSo+z57vIMqHDP5WgUYW55lkDkijFx6AxQjbGxn
+ZyC9O3caBSgTsjWlKA3hRyyVnPhiftEvlMAtPEQ3CbAttCasjcGHB4327n6GF4g2
+FgHnxogN5bN8Czh9wRCEgKVkqOwjq++gFsIfnJekUZhGjMUAEQEAAYkCJQQYAQoA
+DwUCVYSpcgIbDAUJB4YfgAAKCRCfZkwdI4s54vdZD/0RdZZMVv10BBXMzReb3/rO
+xXumG7uFXBIARKuUKj4pG/GpWhbfj5UTvAiB22RGvuAIwuPwjDsnnIBJom/WWc8B
+nKNOpPWkif92kSXtjDyXeGNznkSV72xVzkAM6n3DRssGLyyLcLH8YxdF+w3f65Dg
+74WSakuNIsbV5HLRgiO0YzU0hFxWmraQjqFNgo26fUsax2XtJCe7vAORjPuPdJ3E
+dH3y7dYYKqxTBGLtXqDS+lFFETuS26te06XJJJ7yuLjH0yJbocc+R+Zvy77a1dgU
+cwHvXa/Kd7KrD97umhc9ByFxGuY3xpy4dCD7c+GmQz9IvFPgqG9DlxII5jX7OOkv
+365mNm3gLw8o5OjFkd+PhJLMaQsP3lczkxywWciT6oTRHGWvy/j5m6d1ZFfnnR25
+qn//hxk+NAS9lsY2ORZWBXHiGx1tlTJit3466aqIGS0S4O2LS5Ot2YcZYe/HZnOP
+ovbYWI8M+o0SiUPaj5g3iCoupXALTwvrA2QBvnmAascq38P6WEiYH3naLgV7ZNXB
+BudO+AC2fnJntXkPnblShQC6OXGoQxD+Jx+IPJMkfD/5GphYq2BgtSCV8RgbEhji
+hiR2bvECoAEZ2qPAbSdD7Oupgw0AWsqN3lHrbU1HCUY++JQomZzfYMdl+qdZgVna
+sR+RsK43UVuEVsaIWvIHgw==
+=YvCU
+
+-----END PGP PUBLIC KEY BLOCK-----
+",awelch83,2016-07-21 18:13:28
+194,2016-07-21 18:03:28,"Oh, I did?! Haha! Can you point me where I can see it? I can update it so that I don't confuse others about the same.
+",prakhar1989,2016-07-21 18:13:28
+194,2016-07-21 18:10:51,"I found your key by searching the keyserver using an app on my Mac called GPGtools, but you can also see them listed here:
+
+[https://pgp.mit.edu/pks/lookup?search=prakhar&op=index](url)
+
+There's no way to update, but you can always upload a new one if you want.
+",awelch83,2016-07-21 18:13:28
+194,2016-07-21 18:13:22,"Wow okay! Thanks for letting me know about that. I had no clue about it. I'll update my key to a new one. Thanks!
+",prakhar1989,2016-07-21 18:13:28
+193,2016-07-21 04:01:09,"update home page for course cs186 
+",macwu1992,2016-07-21 12:46:03
+193,2016-07-21 12:46:00,"Thanks! 👍 
+",prakhar1989,2016-07-21 12:46:03
+192,2016-07-20 16:53:07,"This video would be very helpful Prakhar. Please review.
+",yogeshdarji99,2017-03-19 20:48:15
+192,2016-07-20 16:58:39,"It's ""Stanford"".
+",awelch83,2017-03-19 20:48:15
+192,2016-07-20 17:01:35,"Sorry for Typo. Thanks @awelch83 
+",yogeshdarji99,2017-03-19 20:48:15
+192,2016-08-02 23:19:25,"MIT algorithms are already in list, 
+search for ""6.006 Introduction to Algorithms MIT "" in Readme.md
+",JMatharu,2017-03-19 20:48:15
+191,2016-07-03 09:05:10,"6.046J / 18.410J is an advanced algorithms design course. Topics are
+very important in algorithms design, like divide-and-conquer,
+randomization, complexity, and also cryptography. And much much more.
+",n3xtInc,2016-07-03 14:25:42
+191,2016-07-03 12:49:21,"Can non MIT students have access to the materials? I can see that it says ""register on NB"" to get access.
+",prakhar1989,2016-07-03 14:25:42
+191,2016-07-03 14:23:44,"I can access to each links I have tried. [ocw.mit.edu](http://ocw.mit.edu) platform has only open courses.
+
+Do you have a link that does not work? I can remove parts which require to be a MIT student.
+",n3xtInc,2016-07-03 14:25:42
+191,2016-07-03 14:25:36,"Oh right.. I guess I was looking at the wrong link. Thanks for the addition! 👍 
+",prakhar1989,2016-07-03 14:25:42
+190,2016-06-15 03:16:04,,zuik,2017-03-20 00:37:38
+190,2017-03-19 20:48:06,"Hi, can you please resolve the merge conflicts and update the PR?",prakhar1989,2017-03-20 00:37:38
+190,2017-03-19 21:48:42,Done,zuik,2017-03-20 00:37:38
+190,2017-03-19 22:45:53,"@zuik - the formatting in your README is totally off! I'd suggest you close this PR, pull from this repo, make the change and re-submit the PR.",prakhar1989,2017-03-20 00:37:38
+189,2016-06-09 02:46:50,,regenhans,2016-06-14 12:29:02
+188,2016-06-02 14:09:57,"Created with https://github.com/dkhamsing/frankenstein
+### HTTPS Corrected URLs
+
+| Was | Now |
+| --- | --- |
+| http://en.wikipedia.org/wiki/Manuel_Blum | https://en.wikipedia.org/wiki/Manuel_Blum |
+| http://philipmjohnson.org/ | https://philipmjohnson.org/ |
+| http://philipmjohnson.org/2013/12/16/athletic-software-engineering-education-initial-results/ | https://philipmjohnson.org/2013/12/16/athletic-software-engineering-education-initial-results/ |
+| http://see.stanford.edu/materials/icspacs106b/ProgrammingAbstractionsAllMaterials.zip | https://see.stanford.edu/materials/icspacs106b/ProgrammingAbstractionsAllMaterials.zip |
+| http://see.stanford.edu/materials/icspmcs106a/ProgrammingMethodologyAllMaterials.zip | https://see.stanford.edu/materials/icspmcs106a/ProgrammingMethodologyAllMaterials.zip |
+| http://see.stanford.edu/see/courseinfo.aspx?coll=86cc8662-f6e4-43c3-a1be-b30d1d179743 | https://see.stanford.edu/see/courseinfo.aspx?coll=86cc8662-f6e4-43c3-a1be-b30d1d179743 |
+| http://see.stanford.edu/see/lecturelist.aspx?coll=11f4f422-5670-4b4c-889c-008262e09e4e | https://see.stanford.edu/see/lecturelist.aspx?coll=11f4f422-5670-4b4c-889c-008262e09e4e |
+| http://see.stanford.edu/see/lecturelist.aspx?coll=2d712634-2bf1-4b55-9a3a-ca9d470755ee | https://see.stanford.edu/see/lecturelist.aspx?coll=2d712634-2bf1-4b55-9a3a-ca9d470755ee |
+| http://see.stanford.edu/see/lecturelist.aspx?coll=824a47e1-135f-4508-a5aa-866adcae1111 | https://see.stanford.edu/see/lecturelist.aspx?coll=824a47e1-135f-4508-a5aa-866adcae1111 |
+| http://see.stanford.edu/see/lecturelist.aspx?coll=86cc8662-f6e4-43c3-a1be-b30d1d179743 | https://see.stanford.edu/see/lecturelist.aspx?coll=86cc8662-f6e4-43c3-a1be-b30d1d179743 |
+| http://see.stanford.edu/see/materials/aiircs223a/assignments.aspx | https://see.stanford.edu/see/materials/aiircs223a/assignments.aspx |
+| http://see.stanford.edu/see/materials/icspacs106b/assignments.aspx | https://see.stanford.edu/see/materials/icspacs106b/assignments.aspx |
+| http://see.stanford.edu/see/materials/icspmcs106a/assignments.aspx | https://see.stanford.edu/see/materials/icspmcs106a/assignments.aspx |
+| http://see.stanford.edu/see/materials/icsppcs107/assignments.aspx | https://see.stanford.edu/see/materials/icsppcs107/assignments.aspx |
+| http://users.ece.cmu.edu/~omutlu/ | https://users.ece.cmu.edu/~omutlu/ |
+| http://web.stanford.edu/class/cs107/assignments.html | https://web.stanford.edu/class/cs107/assignments.html |
+| http://www.cs.hmc.edu/csforall/ | https://www.cs.hmc.edu/csforall/ |
+| http://www.youtube.com/watch?v=frxF7Vs96YU&list=PLMM0a7ZGnITrgfhOxMNP7bpP4hhhKNY9s | https://www.youtube.com/watch?v=frxF7Vs96YU&list=PLMM0a7ZGnITrgfhOxMNP7bpP4hhhKNY9s |
+### Other Corrected URLs
+
+| Was | Now |
+| --- | --- |
+| http://crcv.ucf.edu/videos/Lecture_Videos/ | http://crcv.ucf.edu/videos/lectures |
+| http://stanford.edu/class/ee103/julia_files | http://stanford.edu/class/ee103/julia_files/ |
+| http://www-scf.usc.edu/~csci104/20142/labs | http://www-scf.usc.edu/~csci104/20142/labs/ |
+| http://www-scf.usc.edu/~csci104/20142/lectures | http://www-scf.usc.edu/~csci104/20142/lectures/ |
+| http://www.cs.sunysb.edu/~algorith/video-lectures/ | http://www.cs.stonybrook.edu/~algorith/video-lectures/ |
+| http://www.neilvandyke.org/racket-sicp/ | http://www.neilvandyke.org/racket/sicp/ |
+| http://www.nr.com/CS395T/ | http://numerical.recipes/CS395T/ |
+| https://class.stanford.edu/courses/Engineering/CVX101/Winter2014/courseware/7206c57866504e83821d00b5d3f80793/ | https://lagunita.stanford.edu/courses/Engineering/CVX101/Winter2014/courseware/7206c57866504e83821d00b5d3f80793/ |
+| https://class.stanford.edu/courses/Engineering/CVX101/Winter2014/info | https://lagunita.stanford.edu/courses/Engineering/CVX101/Winter2014/info |
+",ReadmeCritic,
+187,2016-05-29 01:28:12,,AhmedElsiddieg,
+187,2016-10-11 18:35:37,"Control theory?
+",awelch83,
+186,2016-05-27 13:13:44,"Also I noticed that CS107's lecture videos link is wrong, I'm not sure whether just delete it or not,  so i decide to leave it to you.
+",goalong,2016-05-27 13:18:44
+186,2016-05-27 13:18:41,"Awesome thanks!
+",prakhar1989,2016-05-27 13:18:44
+185,2016-05-27 08:07:11,"I added it to your repo. 
+",VoLuong,2016-05-27 13:18:04
+185,2016-05-27 16:51:04,"Thank you. 
+",VoLuong,2016-05-27 13:18:04
+184,2016-05-24 21:19:55,,seanli310,2016-05-24 21:43:43
+184,2016-05-24 21:43:39,"Thanks so much!
+",prakhar1989,2016-05-24 21:43:43
+183,2016-05-24 12:42:40,,KBoyarchuk,2016-05-24 13:28:07
+182,2016-05-23 23:03:42,,seanli310,2016-05-23 23:48:19
+181,2016-04-19 20:58:10,"This new website is basically more convenient with lots of tutorials and videos neatly organized.
+",tuvttran,2016-04-19 21:00:43
+181,2016-04-19 21:00:40,"Looks neat! Thanks!
+",prakhar1989,2016-04-19 21:00:43
+180,2016-04-12 13:57:00,,liquidmetal,2016-04-12 14:11:04
+179,2016-04-12 13:46:04,,liquidmetal,2016-04-12 13:54:20
+179,2016-04-12 13:47:46,"Instead of adding in the `misc` section, add this to ML section? What do you think?
+",prakhar1989,2016-04-12 13:54:20
+178,2016-03-24 18:45:55,"There have been (at least) two different offerings of CS164 at Berkeley, by Ras Bodik and by Paul Hilfinger. The old playlist was for Hilfinger's version. The updated playlist link now matches the provided course website and projects repo.
+",koksal,2016-03-24 20:07:20
+177,2016-03-23 07:19:13,"This course discusses about multiple Unix advanced concepts, especially
+about how to store data. And more.
+",n3xtInc,2016-03-23 07:21:29
+177,2016-03-23 07:21:21,"A course taught by Eric Brewer! Wow! :D
+",prakhar1989,2016-03-23 07:21:29
+176,2016-03-19 04:45:04,,jeremieSimon,2016-03-19 17:46:09
+175,2016-03-17 04:22:36,,fordaz,2016-03-17 19:26:53
+174,2016-03-14 06:42:04,"CS143 is a Stanford's course in the practical and theoretical aspects
+of compiler construction.
+",n3xtInc,2016-03-14 14:29:19
+173,2016-03-13 16:00:32,"This AI course is taught at IIT Delhi.
+",ivmarkp,2016-04-12 13:15:24
+173,2016-04-12 08:23:51,"@prakhar1989 Is there anything I need to change/add in this PR so it can get merged upstream? Please let me know.
+",ivmarkp,2016-04-12 13:15:24
+172,2016-03-13 15:53:56,"This course on AI is taught at IIT Delhi.
+",ivmarkp,2016-03-13 15:58:15
+172,2016-03-13 15:59:10,"It had a little mistake with links. I'm opening another PR with correct links.
+",ivmarkp,2016-03-13 15:58:15
+171,2016-03-13 07:02:59,"Add NYU OS course, which is a fundamental, hands-on course of OS.
+",mrmiywj,2016-03-13 15:40:57
+170,2016-03-12 06:51:57,"#168
+",ivmarkp,2016-03-12 07:55:24
+169,2016-03-11 17:02:13,"#168 Relevant courses added into the section.
+",ivmarkp,2016-03-11 17:09:43
+168,2016-03-11 14:36:53,"Hi,  there are currently 4 courses on Artificial Intelligence here. I feel the need to make a new section for it because personally, to find the related courses I had to search for each course individually and also other topics included in AI could also be put into this new section. Also, it will help contributors to add new AI courses quickly. What do you think? 
+
+I've committed the required changes to the forked repo. I can send a pull request if it's not a bad idea. 
+",ivmarkp,2016-04-12 08:24:27
+168,2016-03-11 16:03:25,"Sure .. sounds like a good idea. Send in a PR!
+",prakhar1989,2016-04-12 08:24:27
+168,2016-03-11 17:00:42,"Yes. Although, I think we can may be do the same thing for other sections as well such as Computer graphics(included with Computer vision courses too?), Computer Networks, Software Engineering etc. In fact, lot of courses in Misc section should be put into their appropriate sections if at least 3-4 courses belong to same section.  
+",ivmarkp,2016-04-12 08:24:27
+168,2016-03-11 17:02:57,"Right. I think if there are >= 4 courses, we can assign a standalone section to it. If you're up to the task of doing the segregation and send in a PR, I'll be happy to merge those changes in :grinning: 
+",prakhar1989,2016-04-12 08:24:27
+168,2016-03-11 17:10:57,"Sure. I'll do it for all the courses I am familiar with. :)
+",ivmarkp,2016-04-12 08:24:27
+167,2016-02-24 06:57:16,"Add a course in Machine Learning section.
+""Learning from Data"" taught by Caltech Professor Yaser Abu-Mostafa.
+",ivmarkp,2016-02-24 14:35:39
+167,2016-02-24 14:35:37,"Thanks!
+",prakhar1989,2016-02-24 14:35:39
+166,2016-02-23 02:30:44,,mrdrozdov,2016-02-23 06:40:26
+166,2016-02-23 06:40:22,"Thanks @mrdrozdov! Looks like a useful course.
+",prakhar1989,2016-02-23 06:40:26
+165,2016-02-19 21:06:01,"Add a course under Security.
+""Introduction to Computer Security"" from Purdue University.
+I learned a lot from this course. Hope you like it!
+",BBQyuki,
+164,2016-02-19 10:29:26,"Hi, I can't find lecture video in cs108's course page: http://web.stanford.edu/class/cs108/. But there is a video icon in awesome-courses. Does I miss something?
+",zhongweiy,2016-03-28 14:26:46
+164,2016-02-19 16:32:20,"You're right. The videos for CS108 are not online. Thanks for letting me know - I'll update the readme file.
+",prakhar1989,2016-03-28 14:26:46
+164,2016-03-10 06:23:18,"Was anyone able to find the lecture videos? Maybe an archive somewhere?
+",raosid,2016-03-28 14:26:46
+164,2016-03-28 14:10:31,"Hi, prakhar1989. Can you update the file? It took me so long and I didn't find any video...
+",kunge12345,2016-03-28 14:26:46
+164,2016-03-28 14:26:46,"Hi, sorry for the confusion. I've removed the misleading video icon from CS 108. Thanks!
+",prakhar1989,2016-03-28 14:26:46
+163,2016-02-18 03:13:05,,aniruddh-a,2016-02-18 05:15:25
+163,2016-02-18 05:15:22,"Wow! This looks fantastic. Many thanks for sharing. :beers: 
+",prakhar1989,2016-02-18 05:15:25
+162,2016-02-16 15:49:24,"I've added the link.
+",koallen,2016-02-17 20:00:46
+162,2016-02-17 20:00:47,"Thanks! :+1: 
+",prakhar1989,2016-02-17 20:00:46
+161,2016-02-16 15:30:07,"in misc. This is an awesome course using java. It involves multi-thread programming/Web Dev/OOP...
+Video/Homework code/Lecture Notes are all in the homepage.
+",harryge00,2016-02-17 20:01:20
+161,2016-02-16 15:34:32,"Nice! The homepage looks great but the videos you've linked to seem to be for another course (as it covers C). Please update the PR and I'll be happy to merge!
+
+Thanks!
+",prakhar1989,2016-02-17 20:01:20
+160,2016-02-16 15:25:16,"The videos are available online on YouTube. The link is [here](https://www.youtube.com/channel/UCPk8m_r6fkUSYmvgCBwq-sw/videos).
+
+I think the course is not finished yet so new videos are keeping uploaded. Maybe you want to add the videos later when the course ends.
+",koallen,2016-02-16 15:50:05
+160,2016-02-16 15:26:55,"This looks neat! You mind sending a pull request for this? Thanks =)
+",prakhar1989,2016-02-16 15:50:05
+160,2016-02-16 15:49:56,"Just created the pull request!
+",koallen,2016-02-16 15:50:05
+159,2016-02-13 05:04:35,"CMU hybrid systems course link that links to verifiablerobotics.com have 404'd.
+Please replace.
+",PadmabushanReddy,2016-03-31 13:40:01
+159,2016-02-13 05:05:25,"Can you please send in a PR with the correct links? Thanks!
+",prakhar1989,2016-03-31 13:40:01
+158,2016-01-28 21:20:57,,ee08b397,2016-01-30 00:35:20
+158,2016-01-30 00:35:18,"Thanks!
+",prakhar1989,2016-01-30 00:35:20
+157,2016-01-28 21:08:51,,ee08b397,2016-01-28 21:09:56
+157,2016-01-28 21:09:55,"Thanks! :+1: 
+",prakhar1989,2016-01-28 21:09:56
+156,2016-01-26 08:14:41,"Fix a typographic mistake.
+Add ‘The Society of Mind’ course.
+
+This course is about general AI, and is a good introduction about how
+computers can learn and think like us.
+",n3xtInc,2016-01-26 13:28:55
+156,2016-01-26 13:28:50,"Thanks for Minsky's course! :+1: 
+",prakhar1989,2016-01-26 13:28:55
+155,2016-01-20 13:23:44,,pathway27,2016-01-20 13:55:57
+155,2016-01-20 13:55:55,"Thanks!
+",prakhar1989,2016-01-20 13:55:57
+154,2016-01-20 03:48:33,"The URL current links to the course page for [15-441](http://www.cs.cmu.edu/~prs/15-441-F13/). It should instead point to [14-740](http://ini740.com/F15/), which is the course that the name and description of this entry refer to.
+",logandaniels,2016-01-20 13:45:22
+154,2016-01-20 13:45:20,"Thanks for the fix! :+1: 
+",prakhar1989,2016-01-20 13:45:22
+153,2016-01-19 20:27:31,,awelch83,2016-01-19 22:12:41
+153,2016-01-19 22:12:37,"Thanks for cleaning this up, Aaron! Appreciate it :smiley: 
+",prakhar1989,2016-01-19 22:12:41
+152,2016-01-17 21:38:04,,S-Kantor,2017-03-19 20:49:42
+152,2016-01-30 23:44:50,"You have merge conflicts 
+",robbyoconnor,2017-03-19 20:49:42
+151,2016-01-14 19:49:30,"Add Malware Analysis - CSCI 4976, from Rensselaer Polytechnic Institute.
+",n3xtInc,2016-01-14 19:51:46
+151,2016-01-14 19:51:44,"A course created by students?! Awesome! Looks great @n3xtInc. Thanks for the PR!
+",prakhar1989,2016-01-14 19:51:46
+151,2016-01-14 20:00:37,"Yes, it looks like.
+The learning paradigm is moving, thank to your project and a lot of other contributions! Thank you!
+",n3xtInc,2016-01-14 19:51:46
+151,2016-01-14 20:01:43,"Sure @n3xtInc! Happy learning! :grinning: 
+",prakhar1989,2016-01-14 19:51:46
+150,2016-01-14 02:29:26,"I see two cs107 of stanford, but it have not slide. I was searched with google and still not found. So every body can find it and update
+",thelordofthetimes,
+150,2016-07-09 06:51:34,"A newer version of the course is [here](https://web.stanford.edu/class/cs107/syllabus.html) though there are no accessible video of this version, there are slides. 
+",zuik,
+149,2016-01-12 21:27:42,,bhalothia,2016-01-13 01:12:17
+149,2016-01-13 01:12:17,"Haha! I'm not sure if this is a joke but my last [commit](https://github.com/prakhar1989/awesome-courses/commit/5bf33c3324733df24b12e52b65e030c337f1902d) on this repo was deleting the .travis.yml. Please follow the discussion with @awesome-bot in the commit above to see why I'm postponing this change. Thanks anyways =)
+",prakhar1989,2016-01-13 01:12:17
+149,2016-01-13 01:17:51,"@prakhar1989 Sorry, I didn't check that. No, really. :) 
+
+I just happened to see your repo and checked the build failures on travis so thought it would be nice to have a build status button. :)
+
+Let me know if you need help maintaining it. 
+",bhalothia,2016-01-13 01:12:17
+149,2016-01-13 01:19:07,"@bhalothia No problem at all man! I do this all the time! Thanks for offering to help - I will reach out soon enough :+1: 
+",prakhar1989,2016-01-13 01:12:17
+148,2016-01-11 07:39:59,"Added 2015 link for [CS 109 Data Science](http://cs109.github.io/2015/) by Harvard University and another link of edX where CS50 can be taken as a MOOC.
+",PiyushDeshmukh,2016-01-11 07:43:02
+148,2016-01-11 07:43:00,"Thanks for the update, Piyush! :+1: 
+",prakhar1989,2016-01-11 07:43:02
+147,2016-01-11 07:36:00,"Seems like a relatively trivial change, but this is the most up to date version of the course that I took which improves upon the Fall 2013 course by:
+- Converting legacy C++ projects into relatively easier to understand Python.
+- Provides a Linux VM containing necessary dependencies which makes assignments easier to install.
+- Adds lectures on convolutional neural networks which are the bomb.com in image recognition now
+
+I can add a link to the VM directly if you would like (it's kind of buried in the first assignment page), but I figured it might break the pattern you have going on here so I left it out of this initial commit.
+",sup,2016-01-11 07:41:11
+147,2016-01-11 07:41:09,"As a true C++ noob, I really welcome this change. CVNN are also the bomb.com in ML / Deep Learning so it's nice to see the course keeping up with the trends in CS!
+
+Really appreciate you sending in this update!  :beers: 
+",prakhar1989,2016-01-11 07:41:11
+147,2016-01-11 07:44:03,":+1: :+1: 
+",sup,2016-01-11 07:41:11
+146,2015-12-18 18:11:28,"Added duplicate 
+",awesome-bot,2015-12-18 18:59:34
+146,2015-12-18 18:14:21,"Ok so there are a few issues, I will try to fix them by updating the `travis.yml` config
+",awesome-bot,2015-12-18 18:59:34
+146,2015-12-18 18:14:59,"Sure! Appreciate it! 
+",prakhar1989,2015-12-18 18:59:34
+146,2015-12-18 18:24:19,"Redirects have been allowed, they do not show as issues
+",awesome-bot,2015-12-18 18:59:34
+146,2015-12-18 18:24:53,"Looks like `courseware.stanford.edu` does not work well with awesome_bot, it has been white listed
+Those links are currently valid
+1.  https://courseware.stanford.edu/pg/courses/349991/cs155-spring-2013 
+2.  https://courseware.stanford.edu/pg/courses/331628/cs259-winter-2013 
+3.  https://courseware.stanford.edu/pg/courses/334553/18636-spring-2013 
+4.  https://courseware.stanford.edu/pg/courses/lectures/371747 
+",awesome-bot,2015-12-18 18:59:34
+146,2015-12-18 18:27:44,"Got it. So I should merge your changes? In that case, you'll need to remove the changes to `README.md`
+",prakhar1989,2015-12-18 18:59:34
+146,2015-12-18 18:29:00,"@prakhar1989 still workin on it, will let you know when ready :smile: 
+",awesome-bot,2015-12-18 18:59:34
+146,2015-12-18 18:43:28,"@prakhar1989 
+Looks like there are now some real issues
+
+The following links are no longer valid
+
+> Links 
+> 1. 404 http://patricklam.ca/p4p/notes/
+> 2. 404 http://verifiablerobotics.com/courses/mae6740.html
+> 3. 404 https://www.classes.cs.uchicago.edu/current/22300-1/Home.html
+> 4. 404 https://www.classes.cs.uchicago.edu/current/22300-1/Schedule.html
+> 5. 404 https://pl.barzilay.org/homeworks.html
+> 6. 404 http://cs61a.org/resources.html
+> 7. 404 http://cs61a.org/by_topic.html
+> 8. 404 http://cs61a.org/problems/
+> 9. 404 http://cs61a.org/by_type.html
+> 10. 404 http://www.csce.uark.edu/~jgauch/2014/S14/handouts/syllabus.html
+> 11. 404 http://www.csce.uark.edu/~jgauch/2014/S14/index.html
+> 12. 404 http://research.microsoft.com/en-us/people/mickens/
+> 13. http://am207.org/ getaddrinfo: Temporary failure in name resolution
+
+Should they be removed?
+
+And there are a bunch that are duplicated.. we can either
+1. white list each of them
+2. allow duplicates..
+
+Let me know if you'd like me to help correct or if you want to do it yourself
+",awesome-bot,2015-12-18 18:59:34
+146,2015-12-18 18:47:08,"Thanks! I'll check these out and let you know. Really appreciate your help!
+",prakhar1989,2015-12-18 18:59:34
+146,2015-12-18 18:55:54,"NP
+If you want to handle those yourself, this pull request can be merged
+",awesome-bot,2015-12-18 18:59:34
+146,2015-12-18 18:59:30,"Remember Travis just displays results, merging or not merging is unaffected.. i.e. you can merge in changes that look good, and fix Travis issue yourself separately
+",awesome-bot,2015-12-18 18:59:34
+146,2015-12-19 07:20:40,"Hi @awesome-bot, you are bot??
+",NamPNQ,2015-12-18 18:59:34
+146,2015-12-19 07:33:10,"Haha not really
+",awesome-bot,2015-12-18 18:59:34
+146,2016-02-14 00:59:56,"@awesome-bot, you're awesome and I love you 
+",robbyoconnor,2015-12-18 18:59:34
+146,2016-02-14 03:58:42,":beers: 
+",awesome-bot,2015-12-18 18:59:34
+146,2016-02-14 06:13:50,"Anybody here picturing @awesome-bot as Bender right now? 
+",robbyoconnor,2015-12-18 18:59:34
+145,2015-12-18 18:00:23,"Hello, I wrote a tool that can validate README links (valid URLs, not duplicate). It can be run when someone submits a pull request. 
+
+ It is currently being used by 
+- https://github.com/vsouza/awesome-ios 
+- https://github.com/matteocrippa/awesome-swift 
+- https://github.com/dkhamsing/open-source-ios-apps 
+
+Examples 
+- https://travis-ci.org/matteocrippa/awesome-swift/builds/96526196 ok ✅
+- https://travis-ci.org/matteocrippa/awesome-swift/builds/96722421 link redirected / rename 🔴
+- https://travis-ci.org/dkhamsing/open-source-ios-apps/builds/96763135 bad link / project deleted 🔴
+- https://travis-ci.org/dkhamsing/open-source-ios-apps/builds/95754715 dupe 🔴
+
+If you are interested, connect this repo to https://travis-ci.org/ and add a [`.travis.yml`](https://github.com/dkhamsing/open-source-ios-apps/blob/master/.travis.yml) file to the project. 
+
+See https://github.com/dkhamsing/awesome_bot for options, more information 
+Feel free to leave a comment :smile:
+",awesome-bot,2015-12-18 18:04:57
+145,2015-12-18 18:04:44,"Awesome! Just did the needful. :+1: 
+",prakhar1989,2015-12-18 18:04:57
+145,2015-12-18 18:08:08,"@prakhar1989 remember to connect the repo to https://travis-ci.org/
+Let me know if you need any help
+",awesome-bot,2015-12-18 18:04:57
+145,2015-12-18 18:08:58,"Yup! I have - https://travis-ci.org/prakhar1989/awesome-courses. You wanna raise a PR and give it a shot? :grinning: 
+",prakhar1989,2015-12-18 18:04:57
+145,2015-12-18 18:11:49,"Ok https://github.com/prakhar1989/awesome-courses/pull/146
+",awesome-bot,2015-12-18 18:04:57
+144,2015-12-16 23:02:08,"Update
+",positiveintent,2015-12-16 23:19:50
+143,2015-12-04 20:42:39,,caioteixeira,2017-03-19 20:49:34
+142,2015-11-17 21:42:40,"**The last awesome course's link break, so i add one which I think is pretty good.**
+**The network course of UC Berkeley should be highly recommended and be listed as awesome one as well**
+",baochenhu,2015-11-18 03:34:13
+142,2015-11-18 03:34:10,"Thanks! :+1: 
+",prakhar1989,2015-11-18 03:34:13
+141,2015-11-05 17:22:26,,ngzhian,2015-11-05 17:42:35
+141,2015-11-05 17:29:35,"Thanks @ngzhian for the PR! This is a cool course, but I'm afraid its very similar to the [compilers](https://www.coursera.org/course/compilers) course on Coursera. Can you point out a few differences between the two? If both are similar, I'd prefer not to add this course to the list (for reasons, read [here](https://github.com/prakhar1989/awesome-courses/blob/master/CONTRIBUTING.md)).  
+",prakhar1989,2015-11-05 17:42:35
+141,2015-11-05 17:42:35,"I think they are identical, except that the resources are also available on the linked website, so you could take it without signing up for Coursera. Thanks for pointing out the reasons, they make sense, I'll close this PR then!
+",ngzhian,2015-11-05 17:42:35
+141,2015-11-05 17:47:07,"Thanks :+1: 
+",prakhar1989,2015-11-05 17:42:35
+140,2015-11-01 05:50:24,,royels,2015-11-01 13:00:16
+140,2015-11-01 13:00:14,"Another course by Dan Grossman? This has to be awesome! Thanks for the PR! :+1: 
+",prakhar1989,2015-11-01 13:00:16
+140,2015-11-01 17:32:43,":smile: 
+",royels,2015-11-01 13:00:16
+139,2015-10-28 05:29:40,,imjching,2015-10-28 14:07:50
+139,2015-10-28 14:07:48,"Thanks :+1: 
+",prakhar1989,2015-10-28 14:07:50
+138,2015-10-25 18:02:51,"Added courses from Berkeley, Stanford; fixed icon src
+",lingawakad,2015-10-25 19:52:56
+138,2015-10-25 19:52:54,"Thanks :+1: 
+",prakhar1989,2015-10-25 19:52:56
+137,2015-10-14 12:20:25,"Courses were removed after #136 
+",tokeryberg,2015-10-14 13:34:30
+137,2015-10-14 13:34:25,"Thanks for catching this! :+1: 
+",prakhar1989,2015-10-14 13:34:30
+136,2015-10-08 02:53:19,"Last pull request was sloppy, creating a new one
+Added Security section, added course and rearranged existing courses
+",lingawakad,2015-10-08 02:56:54
+136,2015-10-08 02:56:51,"Thanks Noah! Merging now. :+1: 
+",prakhar1989,2015-10-08 02:56:54
+135,2015-10-07 00:38:46,"sectioned out security, and added a course from MIT
+",lingawakad,2015-10-08 02:51:35
+135,2015-10-07 21:03:50,"Thanks for the PR! For some reason, all the icons / images in the readme are pointing to a wrong link and hence showing a broken image thumbnail. Can you please check this and update the PR?
+",prakhar1989,2015-10-08 02:51:35
+135,2015-10-08 01:51:29,"Sorry, still learning GH! I believe it's fixed now
+",lingawakad,2015-10-08 02:51:35
+135,2015-10-08 02:10:24,"No problem! This looks good. One small thing though - do you mind [squashing](http://gitready.com/advanced/2009/02/10/squashing-commits-with-rebase.html) your commits into one? Keeps the commit history clean.
+",prakhar1989,2015-10-08 02:51:35
+134,2015-10-06 18:24:20,"Practical Concurrent and Parallel Programming
+",tokeryberg,2015-10-06 18:35:31
+134,2015-10-06 18:35:29,"I've seen Java in courses similar to this before but teaching students Erlang and Akka is damn cool. Thanks a lot for sending the PR! :+1: 
+",prakhar1989,2015-10-06 18:35:31
+133,2015-10-04 11:34:56,,vshan,2015-10-04 11:52:48
+133,2015-10-04 11:52:47,"Thanks for the PR! :+1: 
+",prakhar1989,2015-10-04 11:52:48
+132,2015-09-20 07:19:01,,CruiseDevice,2015-10-17 05:18:58
+132,2015-09-20 13:04:52,"Hi @CruiseDevice 
+
+Thanks for the PR! Two quick things - 
+1. Please add links to programming assignments, lecture notes etc in the correct format. You can checkout how it is done with other courses.
+2. Squash all your commits into one so that the git history looks clean.
+
+Let me know if you have any queries.
+",prakhar1989,2015-10-17 05:18:58
+131,2015-08-30 11:02:03,"Courses offered by University of Washington are now made private & hence can't be viewed publicly. Same is the thing with UIUC video for lectures.
+",solveris,2015-09-03 14:22:05
+131,2015-09-03 14:22:22,"Issue is solved
+",solveris,2015-09-03 14:22:05
+130,2015-08-26 09:33:17,"The course link is http://www.cs.cmu.edu/~epxing/Class/10708/lecture.html.
+
+Lecture videos of PGM (Spring 2014) can be found [here](https://mediatech-stream.andrew.cmu.edu/Mediasite/Catalog/Full/33ec284c7d3b42bdaa51dd42deacb1e621).
+",mingloo,2016-07-21 15:18:27
+130,2016-04-12 14:17:32,"Merged in #180 
+",liquidmetal,2016-07-21 15:18:27
+130,2016-04-12 14:18:55,"@mingloo did you already work through the assignments? Want to form a study group?
+",liquidmetal,2016-07-21 15:18:27
+130,2016-07-21 15:14:29,"Should this issue be marked ""closed""?
+",awelch83,2016-07-21 15:18:27
+130,2016-07-21 15:18:26,"Closing this now. Thanks @awelch83!
+",prakhar1989,2016-07-21 15:18:27
+129,2015-08-25 17:22:54,"IIRC this is one of the earliest attempts at an online university:
+http://aduni.org/
+
+The CS Theory course and the algorithms course led by Shai Simmons are particularly good:
+http://aduni.org/courses/theory/
+http://aduni.org/courses/algorithms/
+
+I used these to prepare for the Subject GRE CS exam and they paid off pretty well for my graduate degree program later on.
+",itissid,
+128,2015-08-23 06:50:53,"Hi Guys,
+
+I'm looking for a self-paced static analysis course. If anyone knows about it, please add in the course list.
+
+Thanks in advance!
+",sajid-dsi,2015-10-17 05:19:08
+127,2015-08-10 23:50:14,"Thank you for creating this great list. I believe that the CS107 ""Computer Organization & Systems"" Lecture Videos link to CS107 ""Programming Paradigms"" which is an older version of the course that contains substantially different content.
+",mrcoder16,
+127,2015-08-11 04:53:55,"You are right. The course website for [CS107](https://see.stanford.edu/Course/CS107/) is much different. I guess it needs to be renamed to Programming Paradigms and the link should be updated to this one. 
+",prakhar1989,
+126,2015-08-08 15:28:44,"http://www.ini740.com/F14/index.html is not accessible  - the correct link should be http://www.ini740.com/F15/index.html
+",bhalothia,2015-08-08 15:30:57
+126,2015-08-08 15:31:19,"Fixed. Thanks :+1: 
+",prakhar1989,2015-08-08 15:30:57
+126,2015-08-08 15:32:46,"Oh I was about to send you a pull request. ;) Thanks!
+",bhalothia,2015-08-08 15:30:57
+126,2015-08-08 15:33:42,"Haha! Next time you can beat me to it :wink: 
+",prakhar1989,2015-08-08 15:30:57
+125,2015-07-21 18:44:08,,sumitbhanushali,2015-07-21 18:47:13
+125,2015-07-21 18:47:11,"Appreciated! :beers: 
+",prakhar1989,2015-07-21 18:47:13
+124,2015-07-17 06:38:24,"Another course from Berkeley that has nice public lecture notes and assignments!
+",cyshih,2015-07-17 06:45:35
+124,2015-07-17 06:45:28,"Thanks! :+1: 
+",prakhar1989,2015-07-17 06:45:35
+123,2015-07-15 10:05:07,"The website is somewhat new and contains a bunch of information on the actual UC Berkeley on-campus offering of CS188 Artificial Intelligence, including lecture videos, projects and exams. 
+
+This is quite different from the edX offering CS188.1x in that this site contains public comprehensive materials of the whole course whereas CS188.1x only offers half of the topics that is taught in the on-campus offering. 
+",cyshih,2015-07-17 06:12:56
+123,2015-07-15 10:25:09,"Looks great! Before I merge though, can you please [squash](http://stackoverflow.com/questions/5189560/squash-my-last-x-commits-together-using-git) the commits into one and re-send the PR? Thanks! :+1: 
+",prakhar1989,2015-07-17 06:12:56
+123,2015-07-17 01:23:23,"Completed. Thanks!
+",cyshih,2015-07-17 06:12:56
+122,2015-06-30 13:29:58,"The link is dead. :skull: 
+",aaronwinter,2015-07-08 19:34:23
+122,2015-07-01 01:02:04,"Then remove it and submit a pull request
+
+Sent from my iPhone
+
+On Jun 30, 2015, at 8:30, Aaron notifications@github.com wrote:
+
+The link is dead. 
+
+—
+Reply to this email directly or view it on GitHub.
+",awelch83,2015-07-08 19:34:23
+122,2015-07-08 18:44:23,"https://courseware.stanford.edu/pg/courses/lectures/371747
+",solveris,2015-07-08 19:34:23
+122,2015-07-08 19:34:23,"@solveris Updated the link. Thanks! :+1: 
+",prakhar1989,2015-07-08 19:34:23
+121,2015-06-29 07:56:37,"Programming Practice Using Scala
+",laituan245,2015-06-29 12:55:05
+121,2015-06-29 12:55:03,"Thanks!
+",prakhar1989,2015-06-29 12:55:05
+120,2015-06-23 15:18:43,"Added a link to the 2011 videos page for MIT 6.828 Operating Systems Course
+",woodstok,2015-06-23 16:27:33
+120,2015-06-23 16:27:28,"Thanks! 
+",prakhar1989,2015-06-23 16:27:33
+119,2015-06-19 05:45:36,,praveenvvstgy,2015-06-19 12:15:02
+119,2015-06-19 12:15:02,"@praveenvvstgy An older installment of this course (2011) is already there by the name of 15-781. I have updated the old course by the new one myself. Thanks for the PR, though :+1: 
+",prakhar1989,2015-06-19 12:15:02
+119,2015-06-19 13:27:46,"@prakhar1989 there is a difference between 15-781 (also called 10-701) and 10-601, I think we should retain both the courses. Here is a [quora answer](https://www.quora.com/Which-is-better-at-CMU-10-601-or-10-701) which briefly states the difference between the two courses.
+",praveenvvstgy,2015-06-19 12:15:02
+118,2015-06-05 12:26:53,"I took this course via coursera, but found that most of the materials are available on the course webpage as well.
+
+http://www.stanford.edu/class/cs143/
+",ngzhian,2015-11-05 17:22:46
+118,2015-11-05 15:38:32,"You should probably issue a Pull Request rather than opening an issue.
+",tombusby,2015-11-05 17:22:46
+118,2015-11-05 17:22:46,"Good point, made a PR #141 
+",ngzhian,2015-11-05 17:22:46
+117,2015-06-04 08:29:33,"Part of CSC 253: Dynamic Languages and Software Development at the University of Rochester. [Recommended via twitter from Python Language BDFL Guido Van Rossum](https://twitter.com/gvanrossum/status/605529111512023040)
+",quobit,2015-06-04 08:48:40
+117,2015-06-04 08:48:37,"Thanks! :+1: 
+",prakhar1989,2015-06-04 08:48:40
+117,2015-06-04 09:43:44,"You're welcome! :smile:
+",quobit,2015-06-04 08:48:40
+116,2015-06-02 10:08:04,"Updating
+",diddierh,2015-07-16 15:55:09
+116,2015-06-02 10:08:33,".
+",diddierh,2015-07-16 15:55:09
+116,2015-06-02 10:08:41,"oikk
+",diddierh,2015-07-16 15:55:09
+115,2015-05-25 17:53:29,"Purely functional data structures and functional reactive programming
+",soupi,2015-05-25 17:56:33
+115,2015-05-25 17:56:28,"A course that teach FP with Elm? Wow, that's absolutely cutting edge! :grinning: 
+
+Thanks for the PR :+1: 
+",prakhar1989,2015-05-25 17:56:33
+115,2015-05-25 18:08:45,"Gladly, Thanks for the repo! it's really great!
+",soupi,2015-05-25 17:56:33
+115,2015-05-25 18:10:31,"Haha! No need to thank me - a ton of awesome contributors added these cool courses. I'm glad you find it helpful.
+",prakhar1989,2015-05-25 17:56:33
+114,2015-05-22 07:59:40,,arne-cl,2015-05-22 09:06:28
+114,2015-05-22 09:06:26,"Thanks :+1: 
+",prakhar1989,2015-05-22 09:06:28
+113,2015-05-19 05:00:52,"cs241 video lectures no longer available i just removed the icon
+",diddierh,2015-05-19 05:39:03
+113,2015-05-19 05:39:00,"Thanks for the update :+1: 
+",prakhar1989,2015-05-19 05:39:03
+112,2015-05-16 08:51:59,,arne-cl,2015-05-16 10:38:12
+111,2015-05-15 21:08:15,,arne-cl,2015-05-16 10:37:03
+111,2015-05-16 10:37:00,"Looks like a great course. Thanks for the addition! :+1: 
+",prakhar1989,2015-05-16 10:37:03
+110,2015-05-09 00:53:12,"Awesome course from stanford about a very hot topic in CS research. Lecture videos, assignments and notes inclusive!
+",daviddao,2015-05-09 05:41:22
+110,2015-05-09 05:41:19,"This couldn't have come at a better time. I'm sure this is going to super useful to me as grad student. Thanks a lot, David!
+",prakhar1989,2015-05-09 05:41:22
+109,2015-05-08 09:00:54,"Structure and Interpretation of Computer Programs
+",robbyoconnor,2015-10-17 05:18:58
+109,2015-05-08 09:54:32,"@robbyoconnor: Hey Robby, MIT 6.001 is a popular course which is based on the same book - SICP. The version on OCW even has videos by authors themselves - http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-001-structure-and-interpretation-of-computer-programs-spring-2005/video-lectures/. I feel the OCW course is more comprehensive than this one.  Let me know what you think.
+",prakhar1989,2015-10-17 05:18:58
+109,2015-05-09 03:53:37,"I'd be more than happy to close this but I also have this bias that there should be more variety...I wouldn't be offended if you closed this -- it's your call. 
+",robbyoconnor,2015-10-17 05:18:58
+109,2015-10-17 05:26:44,"No issues :) 
+",robbyoconnor,2015-10-17 05:18:58
+109,2015-10-17 05:27:38,":)
+On Oct 17, 2015 1:26 AM, ""robbyoconnor"" notifications@github.com wrote:
+
+> No issues :)
+> 
+> —
+> Reply to this email directly or view it on GitHub
+> https://github.com/prakhar1989/awesome-courses/pull/109#issuecomment-148886908
+> .
+",prakhar1989,2015-10-17 05:18:58
+108,2015-04-12 22:40:00,"Changed ""explainations"" to ""explanations""
+
+BEFORE:
+Mostly Racket and C, and a bit of Java, with explainations on how high level functional programming concepts relate to the design of OOP programs.
+
+AFTER:
+Mostly Racket and C, and a bit of Java, with explanations on how high level functional programming concepts relate to the design of OOP programs.
+",rockytang,2015-04-13 04:07:33
+108,2015-04-13 04:07:30,"Thanks! :+1: 
+",prakhar1989,2015-04-13 04:07:33
+107,2015-04-07 01:54:25,"Scott Aaronsons' really awesome 'Great Ideas in Theoretical Computer Science'
+",matt-auld,2015-04-07 03:42:22
+107,2015-04-07 03:42:20,"Thanks! :+1: 
+",prakhar1989,2015-04-07 03:42:22
+106,2015-03-18 17:26:11,"Add Great Ideas in Computer Architecture (Machine Structures). Spring 2015, UC Berkeley
+",robbyoconnor,2015-03-23 09:02:56
+106,2015-03-23 09:02:52,"Sorry for falling behind on these PRs, people. Will start merging soon. Thanks again :+1: 
+",prakhar1989,2015-03-23 09:02:56
+105,2015-03-15 14:34:55,,dorafmon,2015-03-23 09:06:33
+105,2015-03-23 09:06:33,"Hi @dorafmon, since there are already a couple of FP / Ocaml courses with more content than this course, I'll be closing this PR for now.
+
+Thanks!
+",prakhar1989,2015-03-23 09:06:33
+104,2015-03-14 14:16:53,,praveenvvstgy,2015-03-23 09:03:28
+104,2015-03-23 09:03:27,"Thanks! :+1: 
+",prakhar1989,2015-03-23 09:03:28
+103,2015-03-14 00:10:10,"add 15-410, 15-210, 15-251 from CMU
+",haochuan,2015-10-17 05:18:58
+103,2015-04-16 04:31:51,"You might want to resolve merge conflicts. 
+",robbyoconnor,2015-10-17 05:18:58
+102,2015-03-12 18:07:08,"add 15-213: Intro to Computer System from CMU
+",haochuan,2015-03-13 04:28:38
+102,2015-03-13 03:05:32,"awesome:)
+",detailyang,2015-03-13 04:28:38
+102,2015-03-13 03:15:29,"Great list man! I will add more soon.
+
+Best
+
+Haochuan
+
+On Thu, Mar 12, 2015 at 8:06 PM, detailyang notifications@github.com
+wrote:
+
+> ## awesome:)
+> 
+> Reply to this email directly or view it on GitHub:
+> https://github.com/prakhar1989/awesome-courses/pull/102#issuecomment-78768179
+",haochuan,2015-03-13 04:28:38
+101,2015-03-08 14:11:17,,samyak-268,2015-03-23 09:08:12
+101,2015-03-23 09:08:10,"The videos look great. Thanks for the addition!
+",prakhar1989,2015-03-23 09:08:12
+101,2015-03-23 09:16:14,":+1: 
+",samyak-268,2015-03-23 09:08:12
+100,2015-03-08 01:47:08,"https://cseweb.ucsd.edu/classes/wi12/cse230-a/
+",dimitar9,2015-04-16 05:50:19
+100,2015-03-23 08:59:31,"Add it yourself and make a Pull request! 
+",robbyoconnor,2015-04-16 05:50:19
+100,2015-04-16 05:49:30,"Can we close this?
+",anubiann00b,2015-04-16 05:50:19
+100,2015-04-16 05:50:19,"Your wish is my command :grinning: 
+",prakhar1989,2015-04-16 05:50:19
+99,2015-03-04 10:41:08,"Add .DS_Store to .gitignore -- this prevents it from ever happening again.
+",robbyoconnor,2015-03-23 09:06:41
+99,2015-04-07 08:22:28,"thx.
+",detailyang,2015-03-23 09:06:41
+98,2015-03-02 05:51:27,"Add Programming Languages course at Northeastern University
+",robbyoconnor,2015-04-16 05:42:49
+98,2015-04-16 04:31:31,"poke 
+",robbyoconnor,2015-04-16 05:42:49
+98,2015-04-16 04:44:10,"Oops! Somehow this fell through my queue. I'm on the road right now. I'll
+get soon on a comp and merge this. Sorry!
+On Apr 16, 2015 7:31 AM, ""robbyoconnor"" notifications@github.com wrote:
+
+> poke
+> 
+> —
+> Reply to this email directly or view it on GitHub
+> https://github.com/prakhar1989/awesome-courses/pull/98#issuecomment-93637101
+> .
+",prakhar1989,2015-04-16 05:42:49
+97,2015-03-01 12:24:27,"Add CS61A from UC Berkeley; also tweak the name of the school for CS 61B from Berkeley -> UC Berkeley 
+",robbyoconnor,2015-03-01 14:12:57
+97,2015-03-01 14:12:55,"Thanks! :+1: 
+",prakhar1989,2015-03-01 14:12:57
+96,2015-02-25 16:32:27,,smihir,2015-02-25 16:34:56
+96,2015-02-25 16:34:42,"Looks like a great course (although I wish the lecture videos didn't require silverlight!). Thanks :+1: 
+",prakhar1989,2015-02-25 16:34:56
+96,2015-02-25 16:45:36,"The silverlight thing is a turnoff :(, I  don't know how it fares on Linux...
+",smihir,2015-02-25 16:34:56
+95,2015-02-16 23:34:56,"Compilers course with full video lectures.
+",mx,2015-02-17 04:05:55
+95,2015-02-17 04:05:53,"Thanks! :+1: 
+",prakhar1989,2015-02-17 04:05:55
+94,2015-02-10 15:29:11,"@prakhar1989 To answer your concerns from #93, I agree that courses which offer assignments and lectures, in addition to readings, are more useful. I still think, however, that CS 6650 serves a purpose, because this subject matter isn't currently addressed by any other course listed in the readme. In the future, if someone finds a course on this subject that does have assignments to go with it, they will hopefully delete my entry and replace it with their own. Aside from that, I also got rid of the extra bullet point that I somehow created at line 615, in pr #93.
+
+@robbyoconnor I deleted .DS_Store, as you mentioned. I'm not sure why, or how, that file somehow finds its way into my commits from time to time.
+",awelch83,2015-02-11 15:57:49
+94,2015-02-11 12:43:04,"@awelch83  .DS_Store ""(short for Desktop Services Store)[1] is a hidden file with a proprietary format created by OS X to store custom attributes of a folder such as the position of icons or the choice of a background image""  [Wikipedia](https://en.wikipedia.org/wiki/.DS_Store)
+
+Bottomline, they will keep coming back because they are generated automatically by the OS. To avoid that, you should use  `gitignore` files. This [link](http://git-scm.com/docs/gitignore) will help you overcome this issue.
+",ahmadassaf,2015-02-11 15:57:49
+94,2015-02-11 15:38:11,"@prakhar1989 Problem fixed. There was no duplicate of CSCI 104, but I did find a duplicated of CS 4820, which I removed.
+",awelch83,2015-02-11 15:57:49
+94,2015-02-11 15:38:53,"Thanks @ahmadassaf. I'm going to read about gitignore later today.
+",awelch83,2015-02-11 15:57:49
+94,2015-02-11 15:57:46,"Thanks! Merging this now :grinning: 
+",prakhar1989,2015-02-11 15:57:49
+93,2015-02-09 15:38:59,"With this pull request, I'm submitting numerous additional courses from Cornell University.
+",awelch83,2015-02-10 14:54:41
+93,2015-02-10 15:30:24,"@prakhar1989 and @robbyoconnor - I created a new pull request, addressing these issues.
+",awelch83,2015-02-10 14:54:41
+92,2015-02-07 16:23:26,,arne-cl,2015-02-08 05:01:15
+92,2015-02-08 05:01:13,"Thanks! :sparkles: 
+",prakhar1989,2015-02-08 05:01:15
+91,2015-02-07 13:42:38,,arne-cl,2015-02-07 13:48:30
+91,2015-02-07 13:48:24,"Thanks :+1: 
+",prakhar1989,2015-02-07 13:48:30
+90,2015-02-05 12:25:19,"to keep consistency and prevent `trim_trailing_whitespace`
+",marcobiedermann,2015-10-17 05:18:33
+89,2015-02-05 12:24:35,,marcobiedermann,2015-10-17 05:18:33
+88,2015-02-02 07:08:25,"Couldn't find any course code, so named it ""VU: Distributed Systems"" with video screencasts
+",souptikji,2015-02-02 10:36:04
+88,2015-02-02 10:36:01,"Thanks!
+",prakhar1989,2015-02-02 10:36:04
+87,2015-01-31 19:23:19,,tanwanirahul,2015-02-01 07:56:29
+87,2015-02-01 07:56:25,"This looks fantastic! Thanks for the addition! :+1: 
+",prakhar1989,2015-02-01 07:56:29
+86,2015-01-31 16:36:10,,BhavdeepSethi,2015-02-01 16:17:41
+86,2015-02-01 08:02:41,"Thanks for the PR, Bhavdeep. Can you kindly fix the merge conflicts so that I can merge? 
+",prakhar1989,2015-02-01 16:17:41
+86,2015-02-01 14:48:54,"Updated the request. 
+",BhavdeepSethi,2015-02-01 16:17:41
+86,2015-02-01 16:17:37,"Thanks :+1: 
+",prakhar1989,2015-02-01 16:17:41
+85,2015-01-30 00:51:27,,themattchan,2015-02-02 13:07:35
+85,2015-02-01 08:04:07,"Thanks for the PR, Matt. Could you please add links to assignments and lectures notes below the course description?  
+",prakhar1989,2015-02-02 13:07:35
+85,2015-02-02 12:56:27,"Done!
+",themattchan,2015-02-02 13:07:35
+85,2015-02-02 12:57:06,"Idk if this should be under programming languages or intro though... it's a bit of both, but more intro
+",themattchan,2015-02-02 13:07:35
+85,2015-02-02 12:58:50,"Looks better in intro, IMO. Btw, do we need two links if they are some or would one do?
+",prakhar1989,2015-02-02 13:07:35
+85,2015-02-02 13:05:21,"Moved from PL -> intro
+",themattchan,2015-02-02 13:07:35
+85,2015-02-02 13:06:41,"They're two courses meant to be taken in succession, so I think two links would be better. (Also they're two different pages)
+",themattchan,2015-02-02 13:07:35
+85,2015-02-02 13:07:32,"Oh my bad! Thanks, Matt. I'll merge this right away :sparkles: 
+",prakhar1989,2015-02-02 13:07:35
+84,2015-01-30 00:36:33,"Add University of Southern California CSCI 104 class.
+",robbyoconnor,2015-02-02 04:29:23
+84,2015-01-30 06:55:55,"Thanks for the PR Robby. Can you please send this as one commit instead of four? Thanks!
+",prakhar1989,2015-02-02 04:29:23
+84,2015-01-30 14:23:44,"@robbyoconnor Check out [this link](http://bit.ly/1qW0nJ7)
+",awelch83,2015-02-02 04:29:23
+84,2015-02-02 01:00:00,"@awelch83, thank you <3 
+@prakhar1989  Fixed :) 
+",robbyoconnor,2015-02-02 04:29:23
+84,2015-02-02 04:29:20,"Thanks! 
+",prakhar1989,2015-02-02 04:29:23
+83,2015-01-29 19:42:59,"The icon tooltips will make it so that readers won't have to scroll back up to the top of the document to view the legend (hover over an icon to see the effect).
+
+In CONTRIBUTING.md, I added a section titled ""Things To Keep In Mind"" - figuring that that's a list that can be added to as time goes on.
+",awelch83,2015-01-29 22:42:39
+83,2015-01-29 22:42:25,"Thanks for the effort, Aaron! :+1:
+",prakhar1989,2015-01-29 22:42:39
+83,2015-01-29 22:53:17,"No worries - I enjoy contributing. I've got a separate branch that I'm working on adding a ton of courses to right now. I'll probably be done with that in a week or so
+",awelch83,2015-01-29 22:42:39
+82,2015-01-27 01:56:40,"How should I merge in the new CS 193p course from stanford that deals with ios8/swift development if last year's CS 193p course on ios7/objective-c development is still very relevant?
+
+EDIT: I see that prakhar1989 already put in a link as part of the original course. closing.
+",rajohns08,2015-01-27 01:58:35
+81,2015-01-26 07:42:57,,praveenvvstgy,2015-01-26 10:20:53
+81,2015-01-26 10:20:49,"Looks great! Thanks
+",prakhar1989,2015-01-26 10:20:53
+80,2015-01-23 05:23:15,,manojpandey,2015-01-23 08:18:17
+80,2015-01-23 08:18:17,"Hi Manoj, I'm afraid I can't merge this as this course is identical to Prof Roughgarden's [course](https://www.coursera.org/course/algo) on Coursera. You can refer to the [contribution guidelines](https://github.com/prakhar1989/awesome-courses/blob/master/CONTRIBUTING.md) to know more.
+",prakhar1989,2015-01-23 08:18:17
+79,2015-01-21 21:04:10,,rajohns08,2015-01-22 08:48:46
+79,2015-01-22 08:48:42,"Thanks! :+1:
+",prakhar1989,2015-01-22 08:48:46
+78,2015-01-21 20:57:18,,rajohns08,2015-01-21 20:59:15
+78,2015-01-21 20:59:15,"closing pull request - not alphabetized
+",rajohns08,2015-01-21 20:59:15
+77,2015-01-20 01:08:39,,ChristosChristofidis,2015-01-20 08:32:21
+77,2015-01-20 08:32:19,"Thanks!
+",prakhar1989,2015-01-20 08:32:21
+76,2015-01-19 00:36:30,,ChristosChristofidis,2015-01-20 08:32:57
+76,2015-01-19 04:09:55,"Thanks for the PR Christos. Do you mind sending the PR as one commit rather than several? You all need to add `-` before each line to make it a bullet. Thanks!
+",prakhar1989,2015-01-20 08:32:57
+76,2015-01-20 01:09:29,"Ok, done.
+",ChristosChristofidis,2015-01-20 08:32:57
+75,2015-01-18 14:28:14,,tartakynov,2015-01-18 16:34:00
+75,2015-01-18 14:52:45,"+1
+",JaredCubilla,2015-01-18 16:34:00
+75,2015-01-18 16:24:20,"Yea I Think So too
+",theo4u,2015-01-18 16:34:00
+75,2015-01-18 16:33:57,"Makes sense. Merged!
+",prakhar1989,2015-01-18 16:34:00
+74,2015-01-17 12:28:45,,sairampola,2015-01-18 07:26:09
+73,2015-01-15 23:47:50,,janusmalone,2015-01-16 04:10:33
+72,2015-01-15 23:47:46,,janusmalone,2015-01-16 04:10:23
+71,2015-01-15 23:31:37,"added software architecture design course by Bedir Tekinerdoğan
+",szdmr,2015-01-18 07:30:15
+71,2015-01-16 06:57:32,"now it should be ok
+",szdmr,2015-01-18 07:30:15
+71,2015-01-18 07:30:20,"Thanks!
+",prakhar1989,2015-01-18 07:30:15
+70,2015-01-14 15:01:06,,awelch83,2015-01-14 15:34:17
+70,2015-01-14 15:34:14,"Thanks Aaron!
+",prakhar1989,2015-01-14 15:34:17
+70,2015-01-14 15:39:30,"No problem :)
+
+I'm still kind of new to github. If I'm making several changes to a file, as was the case here, is it better to roll them all into a single commit, or to make separate commits for spacing, alphabetization, etc, and then send them in a single pull request?
+",awelch83,2015-01-14 15:34:17
+70,2015-01-14 16:29:45,"There are no hard and fast rules, but typically logically related set of changes can (and should) be bundled in one commit. The (slight) problem in the above PR was that my earlier merge commits were sent again. Ideally, to get the latest set of changes from upstream, try doing `git pull --rebase` instead of a `git pull`. That would have just been one commit instead of 5 which it is showing now.
+",prakhar1989,2015-01-14 15:34:17
+70,2015-01-14 16:38:35,"Thanks - that was another question that I had - about those 4 other commits. I just wasn't sure how to ask it. I'm using a program called Tower 2 for mac right now, but maybe it'd be better to do what I need to do via the command line instead
+",awelch83,2015-01-14 15:34:17
+69,2015-01-14 04:10:56,"Images+sorted
+",samarjeet,2015-01-14 04:12:21
+69,2015-01-14 04:12:18,"Thanks!
+",prakhar1989,2015-01-14 04:12:21
+68,2015-01-13 15:56:12,"Adjunct professor Richard Schneemam has open sourced his Ruby on Rails course that he teaches at The University of Texas. He hosts it on his site. This is more of an elective than a core class.
+",tgaeta,2015-01-13 16:00:09
+68,2015-01-13 16:00:07,"Looks great! Appreciate the PR :+1: 
+",prakhar1989,2015-01-13 16:00:09
+68,2015-01-13 16:59:52,"Happy to help :)
+",tgaeta,2015-01-13 16:00:09
+67,2015-01-12 08:02:31,,haseebr,2015-01-13 16:04:34
+67,2015-01-13 16:04:34,"Hi @HaseebR thanks for the PR. Unfortunately, I can't merge this as this course is identical to Prof Andrew Ng's [course](https://www.coursera.org/course/ml) on Coursera. You can refer to this [section](https://github.com/prakhar1989/awesome-courses#contributing) for the contribution guidelines.
+",prakhar1989,2015-01-13 16:04:34
+67,2015-01-15 06:09:12,"The course on coursera is a stripped down version of the course on Stanford's website. It's a tad more rigorous compared to it's coursera version.
+",haseebr,2015-01-13 16:04:34
+66,2015-01-12 06:55:41,,zhongweiy,2015-01-13 16:01:14
+66,2015-01-12 07:44:13,"@awelch83 thanks, it is updated now.
+",zhongweiy,2015-01-13 16:01:14
+66,2015-01-13 16:01:13,"Thanks!
+",prakhar1989,2015-01-13 16:01:14
+65,2015-01-12 05:24:46,,bcbcb,2015-01-12 05:26:03
+65,2015-01-12 05:26:00,"Thanks :+1: 
+",prakhar1989,2015-01-12 05:26:03
+64,2015-01-12 02:23:50,"I alphabetized the lists of courses under each category, and added four new courses from the University of Arkansas. This is my first time trying to contribute to github, so if I've made any mistakes I apologize and look forward to learning from them.
+",awelch83,2015-01-12 04:12:50
+64,2015-01-12 04:12:47,"Really appreciate the effort Aaron! This looks much better now! Thanks again :)
+
+PS: Congrats for your first merged Pull Request :dancers: 
+",prakhar1989,2015-01-12 04:12:50
+63,2015-01-11 23:25:24,,awelch83,2015-01-12 00:06:34
+62,2015-01-09 21:49:55,"Fixed CS241 MPs link, added term (Fall 2014) to course titles.
+",qwdfbn,2015-01-09 21:56:24
+62,2015-01-09 21:56:21,"Thanks!
+",prakhar1989,2015-01-09 21:56:24
+61,2015-01-09 20:53:52,"To aid usability (refer: #29) , emojis have been added to indicate the type of materials available for each course. The [Systems](https://github.com/prakhar1989/awesome-courses#systems) section has been completed but I need help in completing other sections. Since Github doesn't render emojis for large markdown files, we have to resort to copy-pasting the HTML for each emojis. Please limit the emoji usage to the legend below. 
+##### Legend
+
+Lecture Videos :video_camera: 
+
+<S_CODE_TOKEN>
+
+Lecture Notes :memo: 
+
+<S_CODE_TOKEN>
+
+Assignments / Labs :computer: 
+
+<S_CODE_TOKEN>
+
+Readings :books: 
+
+<S_CODE_TOKEN>
+
+Any help is gladly appreciated! 
+### Status
+- [x] Systems
+- [x] Programming Languages 
+- [x] Algorithms
+- [x] CS Theory
+- [x] Misc
+- [x] Intro to CS
+",prakhar1989,2015-01-11 18:47:04
+60,2015-01-09 20:38:06,,prakhar1989,2015-01-09 20:38:24
+59,2015-01-09 20:19:13,,xvedejas,2015-01-18 07:29:35
+59,2015-01-11 13:27:30,"Hi! Can you please resolve the merge conflicts and update the pull request? Thanks!
+",prakhar1989,2015-01-18 07:29:35
+59,2015-01-14 08:33:08,"Tnx
+",bonog,2015-01-18 07:29:35
+59,2015-01-15 20:33:31,"What
+",ramdenrentz112,2015-01-18 07:29:35
+58,2015-01-09 18:34:59,"I could not see in any courses in the list covering the field of nature inspired computation so I have added a course that I have found useful that has it's resources available on-line.
+
+I have conformed to the format adopted by other entries in the list.
+",GordyD,2015-01-09 18:45:09
+58,2015-01-09 18:45:04,"Wow! This looks like a really interesting course. There's also a popular book - [Nature of Code](http://natureofcode.com/) which I'm sure will go great with this course. Thanks for sending the PR! :+1: 
+",prakhar1989,2015-01-09 18:45:09
+57,2015-01-09 15:28:46,"I wish there was a way to extract these courses into curriculum. That wouldn't be in this repo I assume, but if some smart minds collaborated and created 4 year collegiate tracks for different focuses (systems oriented, etc) then that would be super useful for people who want to go through the track entirely on their own.
+",dansackett,
+57,2015-01-09 15:29:39,"+1
+On Jan 9, 2015 9:29 AM, ""Dan Sackett"" notifications@github.com wrote:
+
+> I wish there was a way to extract these courses into curriculum. That
+> wouldn't be in this repo I assume, but if some smart minds collaborated and
+> created 4 year collegiate tracks for different focuses (systems oriented,
+> etc) then that would be super useful for people who want to go through the
+> track entirely on their own.
+> 
+> —
+> Reply to this email directly or view it on GitHub
+> https://github.com/prakhar1989/awesome-courses/issues/57.
+",ecancino,
+57,2015-01-09 20:59:01,"Coursetalk is doing something similar (they're calling it **pathways**) with MOOCs and other paid courses - http://www.coursetalk.com/pathways
+",prakhar1989,
+57,2015-01-10 01:52:03,"+1
+",JaredCubilla,
+57,2015-01-10 03:17:33,"@prakhar1989 that looks cool I'll have to give it a look. Still, with all of these great classes I'd love to find a way to build some structures around them. I'm just afraid I'm not the guy to know the hierarchy for these. Maybe someone else will.
+",dansackett,
+57,2015-04-08 18:41:47,"This seems close to what you suggested - http://blog.agupieware.com/2014/05/online-learning-bachelors-level.html.
+",tayllan,
+57,2015-04-27 22:33:03,"This might work: https://docs.google.com/spreadsheets/d/1_kdHrT8izbROJNaxGflpcZm2ivsjRGF8j1hMzl3b8O0/htmlview
+",cassidoo,
+57,2016-07-29 18:21:56,"This might also help. 
+https://github.com/open-source-society/computer-science
+",lambainsaan,
+57,2016-11-29 01:23:56,+1,anancds,
+56,2015-01-09 15:22:33,"It will be great to tag any session available in audio.
+",Aakhroot,2015-01-14 03:42:11
+56,2015-01-11 18:48:27,"I've added emojis to indicate the video recordings of the courses (those that are available). Let me know if this helps! 
+",prakhar1989,2015-01-14 03:42:11
+55,2015-01-09 11:25:06,"Old ones are not found.
+",rabas,2015-01-09 12:02:03
+55,2015-01-09 12:02:01,"Thanks :+1: 
+",prakhar1989,2015-01-09 12:02:03
+54,2015-01-09 11:24:31,"Added CS374@UIUC
+",qwdfbn,2015-01-09 18:24:04
+54,2015-01-09 12:05:48,"Can you kindly add links to lecture videos, lecture notes and assignments like the other courses in this list? Thanks for the PR :+1: 
+",prakhar1989,2015-01-09 18:24:04
+54,2015-01-09 18:22:53,"Added!
+",qwdfbn,2015-01-09 18:24:04
+54,2015-01-09 18:24:02,"Great! Merged :dancer: 
+",prakhar1989,2015-01-09 18:24:04
+53,2015-01-09 10:46:33,"Fix typo.
+",schmich,2015-01-09 11:01:15
+53,2015-01-09 11:01:13,":+1: 
+",prakhar1989,2015-01-09 11:01:15
+52,2015-01-09 02:25:08,"Typo 1: changed ""interterview"" to ""interview"" on Line 127
+- Before: This course taught in the MIT Independent Activities Period in 2009 goes over common solution to common interterview questions
+- After: This course taught in the MIT Independent Activities Period in 2009 goes over common solution to common interview questions
+
+Typo 2: changed ""tken"" to ""taken"" on Line 175
+- Before: It assumes an undergrad course has already been tken
+- After: It assumes an undergrad course has already been taken
+",shinsaku417,2015-01-09 04:53:19
+52,2015-01-09 04:53:15,"Thanks! :+1: 
+",prakhar1989,2015-01-09 04:53:19
+51,2015-01-08 14:40:38,"Updated repository with information about the Design and Analysis of Algorithms Course from the Stanford University.
+",akshitjain,2015-01-11 13:34:38
+51,2015-01-11 13:34:38,"Hi Akshit, I'm afraid I can't merge this as this course is identical to Prof Roughgarden's [course](https://www.coursera.org/course/algo) on Coursera. You can refer to [this section](https://github.com/prakhar1989/awesome-courses#contributing) for the contribution guidelines. 
+",prakhar1989,2015-01-11 13:34:38
+51,2015-01-11 17:16:57,"Yuppies too.
+
+On Sunday, January 11, 2015, Prakhar Srivastav notifications@github.com
+wrote:
+
+> Closed #51 https://github.com/prakhar1989/awesome-courses/pull/51.
+> 
+> —
+> Reply to this email directly or view it on GitHub
+> https://github.com/prakhar1989/awesome-courses/pull/51#event-217082950.
+
+## 
+
+Sent from Gmail Mobile
+",Gjina,2015-01-11 13:34:38
+51,2015-01-11 17:17:27,"Upyours too.
+
+On Sunday, January 11, 2015, Abalajen Gina ghina.101.ag@gmail.com wrote:
+
+> Yuppies too.
+> 
+> On Sunday, January 11, 2015, Prakhar Srivastav <notifications@github.com
+> <javascript:_e(%7B%7D,'cvml','notifications@github.com');>> wrote:
+> 
+> > Closed #51 https://github.com/prakhar1989/awesome-courses/pull/51.
+> > 
+> > —
+> > Reply to this email directly or view it on GitHub
+> > https://github.com/prakhar1989/awesome-courses/pull/51#event-217082950.
+> 
+> ## 
+> 
+> Sent from Gmail Mobile
+
+## 
+
+Sent from Gmail Mobile
+",Gjina,2015-01-11 13:34:38
+50,2015-01-07 14:48:51,"Updated repository with information about the Offensive Computer Security Course from the Florida State University.
+",mikeliturbe,2015-01-08 10:51:48
+50,2015-01-08 10:51:44,"Looks great! Thanks :+1: 
+",prakhar1989,2015-01-08 10:51:48
+49,2015-01-06 17:28:48,"I took CS10 at University of California, Berkeley during Fall 2013 and I feel like provided description does not fully emphasize the importance of this course. Hence, I suggested this update. Please accept this.
+",MicBrain,2015-01-06 18:18:52
+49,2015-01-06 18:18:48,"Thanks for the clarification @MicBrain :+1: 
+",prakhar1989,2015-01-06 18:18:52
+48,2015-01-05 09:58:54,"UCB website links will become active in a couple of days. Will update links to assignments and notes then.
+",samarjeet,2015-01-14 04:09:49
+48,2015-01-06 18:17:53,"Thanks Samarjeet! Let me know when this is ready to merge and I'll do the needful!
+",prakhar1989,2015-01-14 04:09:49
+48,2015-01-09 22:13:49,"I was going to make the same suggestion. I would actually highly recommended video lectures by Prof. John Kubiatowicz (https://www.youtube.com/watch?v=XgQo4JkN4Bw).
+",Sushant,2015-01-14 04:09:49
+48,2015-01-10 00:24:34,"Perhaps link to [this](http://inst.eecs.berkeley.edu/~cs162/sp14/) instead? 
+",robbyoconnor,2015-01-14 04:09:49
+48,2015-01-14 03:20:34,"The link is working now. Please accept my earlier pull request.
+",samarjeet,2015-01-14 04:09:49
+48,2015-01-14 03:40:06,"@samarjeet You need to resolve the merge conflict before I can merge. Also, please add links to assignments and emojis (refer exisiting courses). Lastly, @awelch83 spent a lot of effort in ordering courses under each section, so please make sure you add CS162 at the right place i.e. before CS 186.
+
+Thanks!
+",prakhar1989,2015-01-14 04:09:49
+47,2015-01-04 17:05:40,"This is a great course to learn python.I myself had learned programming and python from here.
+",akshitjain,2015-01-06 18:21:52
+47,2015-01-06 18:21:52,"Zed Shaw's books on Learn X the hard way are awesome resources for any programmer. Having said that, I feel they don't quite fit in this list as they do not conform to a typical structure of a university course (ie. lectures / assignments/ exams).  Hope that makes sense.
+",prakhar1989,2015-01-06 18:21:52
+46,2015-01-03 14:20:13,"What do you think of adding the teaching of Jeff Erickson in the algorithms section?
+
+http://web.engr.illinois.edu/~jeffe/teaching/algorithms/
+
+I think there is pretty awesome!
+",yvan-sraka,2015-01-03 17:21:14
+46,2015-01-03 15:24:40,"It sure is! That's why it's already a part of the list :grinning:  Check for CS473 by UIUC.
+",prakhar1989,2015-01-03 17:21:14
+46,2015-01-03 17:21:14,"Oops, sorry.
+
+Thanks!
+",yvan-sraka,2015-01-03 17:21:14
+45,2015-01-02 02:00:03,"I added this course MIT ran for three weeks in their Independent Activities Period on 'hacking a google interview'. There aren't lectures but there are well written handouts that people can read through and sample questions.
+",cdipaolo,2015-01-03 04:34:16
+45,2015-01-02 04:50:12,"I've used these before and these are great! However, does it make more sense to add this as a supplemental material under any of the existing Algorithm courses? What do you think?
+",prakhar1989,2015-01-03 04:34:16
+45,2015-01-02 06:03:50,"Yeah, it seems more relevant to the algorithms section. That said, if you put it under only one of the courses, people would probably miss it easier. You'd have to put it as like a sub-header or something under algorithms (like **Applications of Algorithms** or something), or have it as just like the first course in the algorithms section. Which do you think is best? I can just move it, close this pull request, and open a new one.
+",cdipaolo,2015-01-03 04:34:16
+45,2015-01-02 06:46:31,"Makes sense. How about you move it as a course under the algorithms section
+and I'll merge it?
+ On Jan 2, 2015 9:03 AM, ""Conner DiPaolo"" notifications@github.com wrote:
+
+> Yeah, it seems more relevant to the algorithms section. That said, if you
+> put it under only one of the courses, people would probably miss it easier.
+> You'd have to put it as like a sub-header or something under algorithms
+> (like _Applications of Algorithms_ or something), or have it as just like
+> the first course in the algorithms section. Which do you think is best? I
+> can just move it, close this pull request, and open a new one.
+> 
+> —
+> Reply to this email directly or view it on GitHub
+> https://github.com/prakhar1989/awesome-courses/pull/45#issuecomment-68510166
+> .
+",prakhar1989,2015-01-03 04:34:16
+45,2015-01-02 17:37:39,"Ok, done! I have it moved on my fork so you can merge.
+",cdipaolo,2015-01-03 04:34:16
+45,2015-01-03 04:34:13,"Done!
+",prakhar1989,2015-01-03 04:34:16
+44,2015-01-01 07:20:50,"_Structure and Interpretation of Computer Programs_ is the single most valuable resource I have personally found in learning how to program and synthesize programming knowledge. I think it would be a fantastic resource to add to your list, given the book is [widely](http://www.amazon.com/Structure-Interpretation-Computer-Programs-Engineering/dp/0262510871#customerReviews) [praised](http://www.cs.berkeley.edu/~bh/sicp.html), though the recorded lecture series remains a bit unknown.
+
+Happy new year!
+",sch,2015-01-01 07:26:10
+44,2015-01-01 07:25:52,"Thanks for adding this classic! Appreciate the PR :+1: 
+",prakhar1989,2015-01-01 07:26:10
+43,2014-12-31 20:33:03,"I added three courses. Two are algorithms courses from UC Davis, one undergraduate, and one graduate which assumes one undergrad course had already been taken. I also added a game design course from Tufts University which covers PyGame in Python as well as other topics. 
+",cdipaolo,2014-12-31 21:18:13
+43,2014-12-31 21:18:09,"Great courses! Thanks for adding :+1:  Happy New Year, Connor! :fireworks: 
+",prakhar1989,2014-12-31 21:18:13
+43,2014-12-31 21:19:37,"Yeah no problem man. Happy New Year!
+",cdipaolo,2014-12-31 21:18:13
+42,2014-12-31 14:40:26,,robbyoconnor,2014-12-31 14:41:25
+41,2014-12-31 14:16:28,"added the introduction to Linux course
+",m13m,2014-12-31 16:45:08
+41,2014-12-31 16:45:08,"Thanks for PR! Sorry to disappoint you on New Years Eve but I'm not keen on adding any MOOCs to this list. Do read the [contributing](https://github.com/prakhar1989/awesome-courses#contributing) guidelines for more info.
+
+Happy New Year :sparkles: :fireworks: 
+",prakhar1989,2014-12-31 16:45:08
+41,2014-12-31 17:02:19,"oh sorry And Happy New year
+",m13m,2014-12-31 16:45:08
+39,2014-12-30 16:25:20,,frankjwu,2014-12-30 17:46:20
+39,2014-12-30 17:46:07,"Heard a lot of great things about this course and [xv6](http://pdos.csail.mit.edu/6.828/2014/overview.html). Thanks for adding!
+",prakhar1989,2014-12-30 17:46:20
+38,2014-12-30 15:41:08,,jwworth,2014-12-30 15:42:23
+38,2014-12-30 15:42:21,"Appreciate it :+1: 
+",prakhar1989,2014-12-30 15:42:23
+38,2014-12-30 16:20:20,"What's u
+",Renea-Parker,2014-12-30 15:42:23
+38,2014-12-31 17:35:19,"Awesome project; keep it up!
+",jwworth,2014-12-30 15:42:23
+38,2014-12-31 17:44:16,"Thanks Jake! Wishing you a happy new year!
+On Dec 31, 2014 8:35 PM, ""Jake Worth"" notifications@github.com wrote:
+
+> Awesome project; keep it up!
+> 
+> —
+> Reply to this email directly or view it on GitHub
+> https://github.com/prakhar1989/awesome-courses/pull/38#issuecomment-68456588
+> .
+",prakhar1989,2014-12-30 15:42:23
+38,2014-12-31 17:50:48,"Definitely awesome !! Happy 🍀NEW YEAR🍀 
+",Renea-Parker,2014-12-30 15:42:23
+37,2014-12-30 10:12:52,,samarjeet,2014-12-30 10:15:12
+36,2014-12-30 07:30:47,,BhavdeepSethi,2014-12-30 07:36:32
+36,2014-12-30 07:36:29,"Thanks for the PR! :+1: 
+",prakhar1989,2014-12-30 07:36:32
+35,2014-12-30 06:46:40,"- Introduction to CS / Introduction to Computer Science and Programming Using Python / MIT
+- Misc / Introduction to Linux / Linux FoundationX
+",ghost,2014-12-30 06:53:01
+35,2014-12-30 06:53:01,"Thanks for PR! Unfortunately, I'm not keen on adding any MOOCs to this list. Please refer to #26 and #20 for the rationale. 
+",prakhar1989,2014-12-30 06:53:01
+35,2014-12-30 07:37:46,"Sorry for the issue, I didn't realized before.
+",ghost,2014-12-30 06:53:01
+35,2014-12-30 07:39:25,"No worries at all. I should have clarified it in the README earlier. Have updated it with a [section](https://github.com/prakhar1989/awesome-courses/blob/master/README.md#contributing) now. Thanks again!
+",prakhar1989,2014-12-30 06:53:01
+34,2014-12-30 03:57:03,"Deleted apostrophe.
+",Techfolio,2014-12-30 03:58:11
+34,2014-12-30 03:58:08,":grinning: 
+",prakhar1989,2014-12-30 03:58:11
+33,2014-12-30 00:33:43,"The link currently points to `https://github.com/prakhar1989/awesome-courses/blob/master/www.cs.virginia.edu/~weimer/4610`
+
+Standardized it by adding `http://` 
+",roger-kang-mo,2014-12-30 03:52:45
+33,2014-12-30 03:52:37,"Much thanks :+1:  
+",prakhar1989,2014-12-30 03:52:45
+32,2014-12-29 22:18:08,"For your consideration, ICS 314, Software Engineering, University of Hawaii. Illustrates the athletic software engineering pedagogy and the [Morea Framework](http://morea-framework.github.io/) to publish course structure.
+",philipmjohnson,2014-12-30 03:55:37
+32,2014-12-30 03:55:33,"The course looks great! Thanks for adding it Professor! :+1: 
+",prakhar1989,2014-12-30 03:55:37
+31,2014-12-29 18:27:19,"...youtube playlist
+",nonis3,2014-12-29 18:28:37
+31,2014-12-29 18:28:32,"Thanks for fixing the blunder! :dancer: 
+",prakhar1989,2014-12-29 18:28:37
+30,2014-12-29 16:34:04,,mrdrozdov,2014-12-29 16:50:30
+30,2014-12-29 16:50:23,"The readings section looks extremely comprehensive. Thanks!
+",prakhar1989,2014-12-29 16:50:30
+29,2014-12-29 16:30:37,"Would be nice to point out which courses have videos and which ones don't from usability point of view. It's tedious to filter out the ones with video lectures.
+",ahmetb,2015-01-14 03:42:23
+29,2014-12-29 16:32:17,":+1:
+
+Adding the label :cinema: could be a quick win.  I would be happy to help with a PR.
+
+_edited_ after an exchange with @ahmetalpbalkan on twitter.
+",banderson623,2015-01-14 03:42:23
+29,2014-12-29 16:33:20,"+1
+",chirag04,2015-01-14 03:42:23
+29,2014-12-29 16:55:58,"The idea of using icons sounds good! Will get around to it soon. 
+",prakhar1989,2015-01-14 03:42:23
+29,2014-12-29 17:36:20,"Okay, this is wierd. I've tried adding a few emojis at the bottom of the page but for some reason it's not showing correctly (shows up in raw form). Anyone got a clue why? 
+",prakhar1989,2015-01-14 03:42:23
+29,2014-12-29 17:41:57,"@prakhar1989 weird. I've had a lot of success using the github / markdown's `:+1:` syntax. I just [changed](https://github.com/banderson623/banderson623.github.com/commit/dc57916e1aa4d6610bd04fa5e340053498b00a84) this [readme](https://github.com/banderson623/banderson623.github.com/blob/master/README.markdown) and it looks to work.
+
+the ""movie camera"" emoji is `:cinema:`
+",banderson623,2015-01-14 03:42:23
+29,2014-12-29 17:45:03,"@banderson623 I tried the same. As soon as I paste the content of this readme, all emoji's turn to raw text. 
+
+![img](http://api.drp.io/files/54a1932e75cbb.png)
+",prakhar1989,2015-01-14 03:42:23
+29,2014-12-29 17:51:15,"That is odd, I forked it and found the same behavior :|
+",banderson623,2015-01-14 03:42:23
+29,2014-12-29 17:54:22,"I also tried adding the emoji character directly :( ![](https://dl.dropbox.com/s/vuo2nwpha3h6tb0/2014-12-29_11-12_banderson623awesome-courses_ad9jx.jpg?dl=0)
+",banderson623,2015-01-14 03:42:23
+29,2014-12-29 17:56:40,"Haha! Tried that myself :stuck_out_tongue: 
+
+Have a look at [this](https://github.com/prakhar1989/markdown-emoji/blob/master/README.md) readme. From what I can see, there's something wrong with the section Algos / PL / Intro to CS. Without these sections, it works fine.
+",prakhar1989,2015-01-14 03:42:23
+29,2014-12-30 18:31:28,"Hi All! Just released an update from Github stating the below -
+
+> We have temporarily disabled Emoji rendering in overly large documents because of performance issues. This is a temporary measure while we work on improving the performance of our rendering pipeline. We will restore this functionality as soon as possible. Apologies for the inconvenience!
+
+As soon they get around to fixing the issue, I'll add the emojis so that it gets easier for everyone to identify available material in courses. Thanks for the suggestions!
+",prakhar1989,2015-01-14 03:42:23
+29,2014-12-30 18:33:12,"That is interesting, without their help I wouldn't have guessed it was document-size related.
+",banderson623,2015-01-14 03:42:23
+29,2015-01-02 15:29:09,"啥东东
+",webfreee,2015-01-14 03:42:23
+29,2015-01-04 10:48:01,"+1
+",xu6148152,2015-01-14 03:42:23
+29,2015-01-04 18:53:31,"You could place an image in your repo and reference it like this  `![alt tag](https://raw.github.com/raymondware/awesome-courses/master/video-em.png)` I have forked your repo and placed an example there(https://github.com/raymondware/awesome-courses). Hope this helps!
+",raymondware,2015-01-14 03:42:23
+29,2015-01-04 19:21:42,"Or you could just do this...
+
+`<img src=""https://assets-cdn.github.com/images/icons/emoji/unicode/1f3a6.png"" width=""20"" height=""20"" />`
+",raymondware,2015-01-14 03:42:23
+29,2015-01-05 00:25:10,":+1: this is a good solution!
+",banderson623,2015-01-14 03:42:23
+29,2015-01-07 03:15:27,"Great idea! I'm travelling right now and I'll get to this in a couple of days. Thanks for tip :+1: 
+",prakhar1989,2015-01-14 03:42:23
+29,2015-01-08 15:03:22,"As per @raymondware's suggestion, I've added emojis under the systems section in the [emoji](https://github.com/prakhar1989/awesome-courses/tree/emoji#systems) branch (alongwith a [legend](https://github.com/prakhar1989/awesome-courses/tree/emoji#legend)). 
+
+It would be great if you all could  have a look and suggest improvements (if any). If this looks good, I'll go ahead and do the needful for other sections as well. Thanks! :grinning: 
+",prakhar1989,2015-01-14 03:42:23
+28,2014-12-29 15:35:31,"Add 2 courses from UVA
+",mrecachinas,2014-12-29 16:36:08
+28,2014-12-29 16:36:05,"This looks great! Thanks :+1: 
+",prakhar1989,2014-12-29 16:36:08
+27,2014-12-29 15:06:41,"Great class, with well produced lecture videos on Coursera, and content on the course homepage.
+",chmullig,2014-12-30 06:55:18
+27,2014-12-30 06:55:18,"Thanks for PR Chris. Prof Collins' NLP class is awesome. Unfortunately, I'm not keen on adding any MOOCs to this list (read about it in #26 and #20). Thanks!
+",prakhar1989,2014-12-30 06:55:18
+26,2014-12-29 10:26:37,"there is also wonderful Moocs there ,it's great if we can see them organized . 
+",Kiloreux,2014-12-29 10:32:16
+26,2014-12-29 10:29:51,"Lets not add the Coursera/Udacity courses here. They are pretty well organized on ClassCentral and their respective websites. 
+This repository should help us use the unorganized university lectures (which I find to be much more comprehensive than the MOOCs).
+",samarjeet,2014-12-29 10:32:16
+26,2014-12-29 10:32:16,"@abdelhadikhiati: [Class-central](https://www.class-central.com/) is a great MOOC aggregator. 
+As @samarjeet rightly said, this repo is for relatively unpopular university courses that make their content available online for free.
+",prakhar1989,2014-12-29 10:32:16
+25,2014-12-29 08:37:22,"Dear prakhar1989:
+
+Thank you for gather all the good courses. As I am browsing it, I noticed that you have used the wrong link for CS107 -- instead of the link fixed, you used lectures on Youtube for course [Introduction To Computer Science Programming Paradigms](http://see.stanford.edu/see/courseinfo.aspx?coll=2d712634-2bf1-4b55-9a3a-ca9d470755ee). I have fixed that by the right link.
+
+Shawn
+Best
+",shawnLeeZX,2014-12-29 08:38:57
+25,2014-12-29 08:38:29,"Thank you Shawn! :grinning: 
+",prakhar1989,2014-12-29 08:38:57
+24,2014-12-29 07:25:50,"Contains comprehensive notes and is one of the more in depth algo courses on the list.
+",jonchu,2014-12-29 07:37:19
+24,2014-12-29 07:37:15,"Looks great! Thanks :+1: 
+",prakhar1989,2014-12-29 07:37:19
+23,2014-12-29 07:10:54,"Its not so useful when its just a list of things which may-or-may-not be accessible, sometimes dependent on the time of year if materials are made available over the course's time
+
+And it would be nice to know which are able to be taken completely online (become an official student of, etc), without clicking and going though each one (if there are any that fit such a description)
+
+---
+
+If little of this is relevant (due to criteria already existing that forces only certain types of lectures to be listed), it would be nice for the criteria to be noted at the top of the list (both to make it easier for contributors ( to avoid such things as PR #20 ) and for potential users (to see if the list would fulfill what they are looking for)
+",Socialery,2015-01-14 03:42:03
+23,2014-12-30 07:10:57,"As you rightly requested, I've added [guidelines](https://github.com/prakhar1989/awesome-courses/blob/master/README.md#contributing) for contributing. 
+",prakhar1989,2015-01-14 03:42:03
+22,2014-12-29 06:16:47,,samarjeet,2014-12-29 10:32:46
+21,2014-12-29 05:26:47,"Wasn't able to fix the previous one. New PR
+",samarjeet,2014-12-29 05:27:52
+21,2014-12-29 05:27:49,"Thanks! :dancer: 
+",prakhar1989,2014-12-29 05:27:52
+20,2014-12-29 04:15:14,"Add famous Udacity courses.
+",monicaphalswal,2014-12-29 04:22:16
+20,2014-12-29 04:22:16,"My main aim with this list was to have a collection of lesser known courses that make their material online available for free. That's one reason why I stayed away from adding MIT's OCW or a MOOC (Coursera, Udacity etc) on the list. Should have made this clear somewhere. 
+
+Sorry to see your effort in the PR go waste. :disappointed: 
+",prakhar1989,2014-12-29 04:22:16
+19,2014-12-29 04:01:10,"Updated ToC, added more TCS.
+",Pratyush,2014-12-29 04:03:22
+19,2014-12-29 04:03:18,"Appreciate the PR :+1: 
+",prakhar1989,2014-12-29 04:03:22
+18,2014-12-29 03:36:34,"Added an advanced algorithms course from MIT professor Dr. David Karger
+",samarjeet,2014-12-29 05:22:36
+18,2014-12-29 04:18:31,"At first look it seems that all lectures and assignments are behind a NB login, but as I found out anyone can [register](http://nb.mit.edu/subscribe?key=D3a8CYpoO2VcR1ZcfaxmR5KbyjCGXd3INNXvL3mxEakYJ7qGJw) and access the material. Can you kindly make this clear in the course description so that its more helpful to others?
+
+Thanks for PR! Please fix the merge conflicts so that I can merge this. 
+",prakhar1989,2014-12-29 05:22:36
+18,2014-12-29 04:40:17,"Done!
+",samarjeet,2014-12-29 05:22:36
+18,2014-12-29 04:41:11,"Still getting merge conflicts :disappointed: 
+",prakhar1989,2014-12-29 05:22:36
+18,2014-12-29 05:20:30,"not able to fix this. Sent a new PR
+",samarjeet,2014-12-29 05:22:36
+18,2014-12-29 05:22:36,"You can send a new PR only when I close this.
+",prakhar1989,2014-12-29 05:22:36
+17,2014-12-29 03:32:25,,colegleason,2014-12-29 17:27:41
+17,2014-12-29 04:25:41,"The book looks awesome! Thanks for adding :grinning: . Also, there exists a CS theory section where this course would be a good fit so a new section is not required. Please fix the merge conflicts and I'll merge your changes :+1: 
+",prakhar1989,2014-12-29 17:27:41
+17,2014-12-29 17:27:41,"Don't bother with PR. I've added the course to the list. Thanks again :grinning:  :+1: 
+",prakhar1989,2014-12-29 17:27:41
+16,2014-12-29 03:19:28,,colegleason,2014-12-29 03:22:40
+16,2014-12-29 03:22:37,"More OCaml! Yay! :grinning: 
+",prakhar1989,2014-12-29 03:22:40
+15,2014-12-29 01:54:04,"Yaaay Snap! :-)
+",Hardmath123,2014-12-29 03:07:57
+15,2014-12-29 03:07:53,"Thanks for the PR! :+1: 
+",prakhar1989,2014-12-29 03:07:57
+14,2014-12-29 01:11:07,,swong15,2014-12-29 04:06:34
+14,2014-12-29 04:06:26,"Don't know how I missed adding this course! I've used Prof Erickson's notes more often than I can count. Thanks a lot for adding this :+1: 
+",prakhar1989,2014-12-29 04:06:34
+13,2014-12-29 00:49:13,"Namely, I'm adding CIS 581 (computer vision) and CIS 500 (software foundations) to the list.
+
+There was a complaint on the [HN thread](https://news.ycombinator.com/item?id=8806910) that this page didn't have enough theoretical CS courses listed, so I decided to start one with CIS 500. It doesn't really belong in the Algorithms section, and, in my opinion, doesn't really fit nicely with the rest of the courses under Misc.
+",DanGe42,2014-12-29 03:13:53
+13,2014-12-29 03:13:27,"Wow! Both of these courses look fantastic. Thanks for the PR! :+1: 
+",prakhar1989,2014-12-29 03:13:53
+12,2014-12-28 21:23:45,,VictorVation,2014-12-29 03:21:15
+12,2014-12-29 03:21:11,"Great additions to the list! Thanks! :+1: 
+",prakhar1989,2014-12-29 03:21:15
+11,2014-12-28 20:10:06,,aaronwinter,2014-12-30 06:56:01
+11,2014-12-28 20:15:54,"Thanks for the PR, Aaron! 
+
+Looks like a great course, but sadly, from what I could see all assignments and lectures are behind a UWaterloo login. I'd love to add this course but can you please find links to course material that is available in the open? 
+
+Happy Holidays :christmas_tree: 
+",prakhar1989,2014-12-30 06:56:01
+11,2014-12-29 06:00:48,"Yeah my bad, I assumed it was open for everybody. I will talk to the prof to see if it's possible.
+",aaronwinter,2014-12-30 06:56:01
+11,2014-12-29 06:05:15,"Sure! It would be great to have all this material available.
+",prakhar1989,2014-12-30 06:56:01
+11,2014-12-30 06:56:01,"Closing this for now. Feel free to reopen when you have an update :smile: 
+",prakhar1989,2014-12-30 06:56:01
+10,2014-12-28 18:34:07,,liam-middlebrook,2014-12-28 18:40:45
+10,2014-12-28 18:40:41,"Quite different from the other courses in this list, interesting nevertheless. Thanks for the PR! :+1: 
+",prakhar1989,2014-12-28 18:40:45
+9,2014-12-27 11:22:35,"Add one more course from Stewart Weiss at Hunter College
+",robbyoconnor,2014-12-30 06:58:03
+9,2014-12-30 06:58:03,"I think we already have quite a few courses from Prof Weiss in this list. Links to this course are available from other course pages. Hope it makes sense. Cheers!
+",prakhar1989,2014-12-30 06:58:03
+9,2014-12-31 14:45:30,"I know -- this is a guy I find so much value in his course notes-- sorry for bombarding! 
+
+You saw the notes, they're something I'd pay money for! 
+",robbyoconnor,2014-12-30 06:58:03
+9,2014-12-31 17:13:22,"I think it'd be good to have this here as well. I think this list is a good reference to quickly find courses. But chancing upon them through others kind of goes against that.
+
+It sounds like this PR will preclude adding other courses from Prof. Weiss. However, If you're a newcomer and want to know about operating systems--which I came here looking for--you'd not find Prof. Weiss' courses in this list, and just assume there hadn't been any added. I know I was disappointed to only find the MIT OS course. But now I see Prof. Weiss' OS course that I found only because of this PR.
+",joneshf,2014-12-30 06:58:03
+9,2015-01-02 18:07:57,"Prof. Weiss' OS course website isn't as good...i think this PR should remain in the state it's in...
+
+Stewart Weiss is a great guy who knows his stuff but his teaching...not so great. 
+",robbyoconnor,2014-12-30 06:58:03
+8,2014-12-26 09:03:18,,ArthurMG,2014-12-26 09:05:08
+8,2014-12-26 09:05:05,"Thanks!
+",prakhar1989,2014-12-26 09:05:08
+7,2014-12-25 23:38:00,"The web programming might be a bit off from the general theme of the repo, but it's a fairly popular class over here.
+",royels,2014-12-26 07:04:25
+7,2014-12-26 05:53:14,"Great! Thanks for the PR. I believe CSE341 is more or less identical to the [coursera course](https://www.coursera.org/course/proglang) by Dan Grossman from UWash - which is fairly popular by itself. My idea was to keep this repo exclusive to courses which are not popular as a MOOC. What do you think?
+",prakhar1989,2014-12-26 07:04:25
+7,2014-12-26 06:32:26,"Hmm, this is true. I was debating including it, but went for it because I figured you'd let me know if that was the case :D . That being said, can you still access the course if you weren't in it to begin with? I know some coursera courses turn off non-enrolled students' access a bit after the course has ended. I can't tell if that's the case with 341 (because I was in it) , but if it is it might be worth adding to the repo. 
+
+EDIT: Additionally, I'd suggest making it clearer that any pull requests should be made with directly university-offered courses, not MOOC's off edX or Coursera. I think most people would figure that out anyway, but it doesn't hurt to clarify :smile: 
+
+2nd EDIT: just discovered these icons, woahhh!
+",royels,2014-12-26 07:04:25
+7,2014-12-26 07:02:34,"> That being said, can you still access the course if you weren't in it to begin with?
+
+Good point. Plus the fact that the exams are available online might make it useful to some. Merging! 
+
+Here's a [link](http://www.emoji-cheat-sheet.com/) to emoji cheat sheet. Knock yourself out :dancer: 
+",prakhar1989,2014-12-26 07:04:25
+6,2014-12-25 21:45:38,,materechm,2014-12-26 05:55:26
+6,2014-12-26 05:55:21,"Looking good :+1: . Thank you and Happy Holidays :santa: 
+",prakhar1989,2014-12-26 05:55:26
+5,2014-12-25 18:24:12,"Added our first programming course as well...this guy's notes are worth money!
+",robbyoconnor,2014-12-26 06:08:43
+5,2014-12-26 06:08:40,":+1: 
+",prakhar1989,2014-12-26 06:08:43
+4,2014-12-25 16:40:44,"Add Some course notes from Professor Stewart Weiss at Hunter College
+",robbyoconnor,2014-12-25 17:50:04
+4,2014-12-25 17:46:45,"Nice
+",kennyledet,2014-12-25 17:50:04
+4,2014-12-25 17:49:57,"Glad that you made the courses more descriptive. :+1: Thanks!
+",prakhar1989,2014-12-25 17:50:04
+3,2014-12-25 15:13:36,"Added UC Berkeley CS61B Data Structures course based on Java :)
+
+Happy Holidays!!
+",kennyledet,2014-12-25 15:21:02
+3,2014-12-25 15:20:59,"Merry Christmas :santa: to you Kendrick! Appreciate the PR! :+1: 
+",prakhar1989,2014-12-25 15:21:02
+3,2014-12-25 16:01:26,"No problem, Merry Christmas
+",kennyledet,2014-12-25 15:21:02
+2,2014-12-24 05:58:09,"Lab and lecture materials for the course are publicly available via GitHub
+",crongray,2014-12-24 06:08:29
+2,2014-12-24 06:08:34,"Thanks for the PR :+1: 
+",prakhar1989,2014-12-24 06:08:29
+1,2014-12-23 15:24:16,"Liked your curated list here. Thought I'd add a course I've worked through (online) and can vouch for. There's a lot of good material and interesting exercices, especially considering the two semesters (previous and now).
+",giraj,2014-12-23 16:26:15
+1,2014-12-23 16:26:13,"Appreciate the PR :+1: 
+",prakhar1989,2014-12-23 16:26:15

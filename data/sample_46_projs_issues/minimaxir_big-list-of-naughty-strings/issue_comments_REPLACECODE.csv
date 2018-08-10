@@ -1,0 +1,1262 @@
+issue_num,datetime,body,login,close_date
+148,2017-03-22 15:51:13,"The link provided in the README is broken; it seems that the destination site has removed all traces of '.aspx', and is blaming others for having outdated links. :(",sbuller,
+147,2017-03-20 20:35:17,"Many programs incorrectly accept filepaths or filenames and a path entered as an argument can break things. I added a path to calc.exe on windows, and python 2.7 on *nix, which exists almost everywhere",LivingInSyn,
+146,2017-02-20 09:58:32,"Unicode has special rules about lowercasing characters http://www.unicode.org/Public/UNIDATA/SpecialCasing.txt and this can result in a string growing. When doing the reverse the strings don't appear to shrink (Java/Python). You can see python 3 growing the strings when lowercasing:
+
+    >>> len(""İ"")
+    1
+    >>> len(""İ"".lower())
+    2",buckett,
+146,2017-02-20 10:00:02,Shout out to @davbo for starting this with #127,buckett,
+145,2017-02-17 13:20:51,"…Scunthorpe Problem words (Nwankwo Kanu, former soccer player for Arsenal, planet Uranus and Scottish village Twatt)",PaulWaltersDev,
+144,2017-02-15 20:00:37,,Phineas,
+144,2017-02-16 08:42:38,Should it not be `2015-2017`?,ChipWolf,
+144,2017-02-16 10:34:39,"@ChipWolf To be honest, we shouldn't need the copyright date in the first place since it's not bound to US law in any states if @minimaxir is American, so we could just remove it all together",Phineas,
+143,2017-02-09 13:29:58,"Added a string which identifies a remote code execution vulnerability when the string is exported for Excel.
+(Opens the calculator if vulnerable)",Echo1337,
+142,2017-02-08 16:10:22,"I was working on my report [Information Dynamics on the GitHub Network](http://pravj.github.io/blog/information-dynamics-on-github/), using this repository as a (sample) popular GitHub repository, and found that the date of its [first Hacker News submission](https://github.com/minimaxir/big-list-of-naughty-strings#social-media-discussions) is wrong. It should be [Aug. 10, 2015](http://hn.algolia.com/api/v1/items/10035008).",pravj,
+141,2017-02-06 17:09:42,,gswalden,
+141,2017-02-14 17:51:24,"PR should be titled ""Readme.md walks into a bar""",widget-,
+140,2017-02-03 02:36:01,"The ""On Testing"" link in the first paragraph of the README doesn't
+work, because the owner of that web page has moved it to a different
+URL without the file extension, without setting up a redirect.
+
+This commit fixes the URL so it goes to the page for which it is
+intended.",zuzak,
+139,2017-02-01 10:11:18,"#Looks like we're getting an ever growing list of strings which are carefully crafted injections.
+I believe this is entirely outside of the scope of this project.
+
+Lines 195 to 434, for example, are complex strings which are designed to work in specific scenarios and would be used for fuzzing inputs. We should leave those kinds of strings to https://github.com/fuzzdb-project/fuzzdb and keep doing what the purpose of this project was to begin with.
+
+If we were to merge everything from fuzzdb into the blns, it would become a mass of crap.
+Yet, we appear to be maintaining (most of which between lines 195 to 434) various fuzzing strings; an incomplete collection of such.
+
+Let me know what you all think about this proposition.
+
+",ChipWolf,
+139,2017-02-01 10:13:31,"What we have right now, is a list of strings with a confused personality. We need to either divide them or keep to scope.",ChipWolf,
+139,2017-02-01 11:46:49,"I think part of the problem is that a lot of people (myself included) were unaware of FuzzDB.
+
+The README should probably have a ""related projects"" section.",ssokolow,
+138,2017-02-01 09:25:26,"[this attack](https://gist.github.com/balupton/3cb9a0e066ebb899d2be) on webct has two different forms, one of them is a multiline string:
+
+<S_CODE_TOKEN>
+
+With the newline break of the `javascript` word being part of it. Here is the simplified version:
+
+<S_CODE_TOKEN>
+
+However it seems `blns.txt` won't support it.",balupton,
+138,2017-02-01 10:05:53,Probably more suitable in https://github.com/fuzzdb-project/fuzzdb,ChipWolf,
+137,2017-01-29 03:10:47,"https://github.com/minimaxir/big-list-of-naughty-strings/blob/8a115584931e0aef2965d8f2b6ab212a08a93a4c/blns.txt#L572
+http://ruby-doc.org/core-2.4.0/Kernel.html#method-i-system",sshaw,
+137,2017-01-29 03:14:01,"Also, not sure if this was intentional but `%x('ls -al /')` should be `%x(ls -al /)` (no quotes). 
+",sshaw,
+137,2017-01-30 08:58:57,PR?,ChipWolf,
+136,2017-01-25 21:05:05,I'd like to test that a round-trip for my JSON library does not produce any deviation. I have a pretty printer where I can adjust the indention. The problem I have comparing the result of the round-trip with the original `blns.json` is the trailing spaces at the end of (almost) each line. I don't think they serve any purpose and it would make it easier for me and hopefully others as well if they could be removed.,d-frey,
+135,2017-01-25 15:35:07,,Luke-Diamond,
+134,2017-01-25 14:30:37,"- fopen Injection String
+- Unix Shell Shock String
+- SSH Escape Sequence",Luke-Diamond,2017-01-25 15:34:41
+134,2017-01-25 14:42:58,Your change request includes some backup files (filenames ending with ~). Such files shouldn't be part of a git repository.,janfri,2017-01-25 15:34:41
+134,2017-01-25 15:16:39,I will edit the request.,Luke-Diamond,2017-01-25 15:34:41
+133,2017-01-25 09:39:21,"EICAR does not harm _manual usability_ of the file; it does its job, as intended.",ChipWolf,
+132,2017-01-22 13:32:25,Everything,oster866,
+131,2017-01-22 13:02:36,Added 1.0000e+27,sanchitamishra,
+130,2017-01-21 23:06:16,"Really liked this project, I created an NodeJS module for checking naughty strings 😄 
+You can see the module here: https://gautamkrishnar.github.io/naughtychecker.js
+
+Any suggestions?
+
+PS: You can close this issue. I created it just to inform you...
+",gautamkrishnar,
+129,2017-01-19 22:32:52,"Added a string that crashes iOS when sent via text:
+https://www.youtube.com/watch?v=G0iPhSuiMpk",Plazmaz,2017-01-20 06:41:17
+129,2017-01-20 04:56:59,@jude1924 what?,Plazmaz,2017-01-20 06:41:17
+129,2017-01-20 05:00:28,@jude1924 why would I give you bitcoin?,Plazmaz,2017-01-20 06:41:17
+128,2017-01-19 17:48:48,,Luke-Diamond,2017-01-20 06:41:30
+127,2017-01-19 15:10:00,"These two characters change byte length when lowercased which is quite
+unique behavior. This can potentially cause issues where assumptions
+about input length == length after processing.
+
+Credit: https://twitter.com/jifa/status/625776454479970304",davbo,2017-01-20 06:43:57
+127,2017-01-19 21:57:10,"It may also be useful to add their lowercased versions, which one would presume (but one does not know) would shrink when uppercased?",ansell,2017-01-20 06:43:57
+127,2017-01-19 23:10:11,"Agreed. What if some kind of parsing code took an index into the string before lower/uppercasing it on the assumption that the length would remain unchanged?
+
+Adding a test for only one direction could avoid triggering the behaviour altogether during testing.",ssokolow,2017-01-20 06:43:57
+126,2017-01-19 14:25:40,Please provide a basic usage guide on how to feed this list to Selenium and verify the results. Thank you.,niutech,
+126,2017-02-03 22:27:45,You might want to ask that question on either Stackoverflow or the Selenium forum/mail-list...,Potherca,
+125,2017-01-19 13:42:57,"New strings containing
+
+ * all non-whitespace C0 controls
+ * all non-whitespace C1 controls
+ * all whitespace that can be expressed (U+0000, U+000A, and U+000D are omitted)
+ * all characters in Unicode category Cf
+ * byte order marks (U+FEFF and U+FFFE).
+
+This pull request supersedes #93.
+
+Github is showing blank lines in the diff; `git log -p` should be more informative.  Regeneration of the derived files is in a separate commit to make it easier to see what's going on.
+",zackw,2017-01-20 06:45:10
+123,2017-01-17 17:56:01,"While looking at the .txt file I found this one:
+#	Human injection
+#
+#	Strings which may cause human to reinterpret worldview
+
+If you're reading this, you've been in a coma for almost 20 years now. We're trying a new technique. We don't know where this message will end up in your dream, but we hope it works. Please wake up, we miss you.
+
+Although I found it humourous I don't think it's testing any actual bug, maybe you should consider to remove it. Or maybe just leave it as an easter egg, I just wanted to point it to you.",GTP95,2017-01-18 04:02:06
+123,2017-01-17 18:09:39,> [I'm ok with *some* 4th wall breaks (e.g. the reinterpret wordview string) but I don't want to fill it up with all the memes.](https://github.com/minimaxir/big-list-of-naughty-strings/pull/120#issuecomment-272997602),nabijaczleweli,2017-01-18 04:02:06
+123,2017-01-17 21:13:35,"It also serves as a control. (Something that should present no trouble to any test and, if it does, it's not the naughtiness of the string that's causing the problem.)",ssokolow,2017-01-18 04:02:06
+123,2017-01-18 04:02:06,Closing since other comments cover the issue adequately.,minimaxir,2017-01-18 04:02:06
+123,2017-01-20 15:47:27,It is there because it is true. We're trying to communicate with you @GTP95,ChipWolf,2017-01-18 04:02:06
+122,2017-01-17 08:12:07,,dleavitt,
+122,2017-01-22 00:45:33,Please what do you want to fix all and track person involed,mccugh,
+122,2017-01-22 01:33:22,Pull now please and how do I prosecute ,mccugh,
+121,2017-01-17 00:34:37,A very serious omission.,mgiuffrida,2017-01-17 01:18:53
+121,2017-01-17 01:06:50,Do we really want to start piling exploits into the list which can only be detected as noteworthy if your system is capable of Natural Language Processing **and** evaluating the resulting higher-level meaning?,ssokolow,2017-01-17 01:18:53
+121,2017-01-17 01:18:53,See comment in https://github.com/minimaxir/big-list-of-naughty-strings/pull/120,minimaxir,2017-01-17 01:18:53
+120,2017-01-17 00:34:02,,mgiuffrida,2017-01-17 01:18:36
+120,2017-01-17 01:04:32,"I'd argue that this is way outside the bounds of this list, since the ""wetware exploit"" aspect can't be meaningfully mitigated by careful UI/UX design.",ssokolow,2017-01-17 01:18:36
+120,2017-01-17 01:18:36,I'm ok with _some_ 4th wall breaks (e.g. the reinterpret wordview string) but I don't want to fill it up with all the memes.,minimaxir,2017-01-17 01:18:36
+120,2017-01-17 01:22:00,"No problem, just playing off a Reddit request :-)",mgiuffrida,2017-01-17 01:18:36
+119,2017-01-16 21:33:04,,topaz,2017-01-16 21:35:35
+118,2017-01-16 18:12:16,"In the past I've encountered problems when converting the string 'NaN' coming from a backend scripting language importing into JSON, so this might be a useful addition!",dom111,2017-01-17 01:19:31
+118,2017-01-16 22:51:14,"Already present here,
+https://github.com/minimaxir/big-list-of-naughty-strings/blob/master/blns.txt#L68",noslowerdna,2017-01-17 01:19:31
+118,2017-01-17 01:19:31,Closing due to redundancy.,minimaxir,2017-01-17 01:19:31
+117,2017-01-16 16:34:28,"Making note to add date/time strings which can trick up naive date/time parsers:
+
+* non-US date/time formats (e.g. 2017.01.16)
+* Illegal dates/times (e.g. 2017-01-32 26:00)
+* Leap Day on non-leap year (e.g. 2017-02-29)
+* Timezones/illegal timezones
+
+Reference: [Wikipedia](https://en.wikipedia.org/wiki/ISO_8601), [xkcd](https://xkcd.com/1179/)",minimaxir,
+117,2017-01-16 17:16:46,"Leap seconds, like 31/12/16 23:59:60 (also another non-US date format).
+",Y-Less,
+117,2017-01-16 17:29:51,"I think I've seen ""0/0/1900"" used as a null date, and Google says that ""1/0/1900"" is how Excel displays 0 as a date.",mjustin,
+117,2017-01-16 22:14:09,"Does this make https://github.com/minimaxir/big-list-of-naughty-strings/issues/55 obsolete?  Or at least the answer to it ""yes?""=)",joedragons,
+117,2017-01-17 05:15:07,Not every divisible by 4 year is a leap year. 2100 will not be and 1900 wasn't. It might help to include corresponding dates.,designgrill,
+117,2017-01-17 10:50:15,"sorry，i've learn java for a short time,so i don't know what's the mean about it, I think I need a teachers ",ColorXJH,
+117,2017-02-27 08:36:32,"Also:
+
+- Dates that are valid in DD/MM/YYYY format but invalid in MM/DD/YYYY format, to catch any naive programmers who assumed that the rest of the world functions just like the US. E.g., `25/12/2000`.
+- Dates that catch people who thought the Julian calendar system was still in effect. E.g., `1900-02-29`.
+
+And if you want to get ESPECIALLY tricky:
+
+- Dates that really WERE valid in one specific country, but would be totally invalid normally. E.g., `1712-02-30`. See http://nodatime.org/1.3.x/userguide/trivia and https://www.timeanddate.com/date/february-30.html for more details.",rmunn,
+117,2017-02-27 08:43:11,thanks so much,ColorXJH,
+117,2017-02-27 08:44:48,"thank you so much
+------------------ 原始邮件 ------------------
+发件人: ""Robin Munn"";<notifications@github.com>;
+发送时间: 2017年2月27日(星期一) 下午4:36
+收件人: ""minimaxir/big-list-of-naughty-strings""<big-list-of-naughty-strings@noreply.github.com>; 
+抄送: ""夏金辉""<1204332316@qq.com>; ""Comment""<comment@noreply.github.com>; 
+主题: Re: [minimaxir/big-list-of-naughty-strings] Date/Time Strings (#117)
+
+
+
+
+Also:
+  
+Dates that are valid in DD/MM/YYYY format but invalid in MM/DD/YYYY format, to catch any naive programmers who assumed that the rest of the world functions just like the US. E.g., 25/12/2000.
+ 
+Dates that catch people who thought the Julian calendar system was still in effect. E.g., 1900-02-29.
+  
+And if you want to get ESPECIALLY tricky:
+  
+Dates that really WERE valid in one specific country, but would be totally invalid normally. E.g., 1712-02-30. See http://nodatime.org/1.3.x/userguide/trivia and https://www.timeanddate.com/date/february-30.html for more details.
+  
+—
+You are receiving this because you commented.
+Reply to this email directly, view it on GitHub, or mute the thread.",ColorXJH,
+117,2017-02-27 08:54:37,"may i make friends with u? i think  u are pretty good and i want learn to u. 
+
+
+
+
+------------------ 原始邮件 ------------------
+发件人: ""Robin Munn"";<notifications@github.com>;
+发送时间: 2017年2月27日(星期一) 下午4:36
+收件人: ""minimaxir/big-list-of-naughty-strings""<big-list-of-naughty-strings@noreply.github.com>; 
+抄送: ""夏金辉""<1204332316@qq.com>; ""Comment""<comment@noreply.github.com>; 
+主题: Re: [minimaxir/big-list-of-naughty-strings] Date/Time Strings (#117)
+
+
+
+
+Also:
+  
+Dates that are valid in DD/MM/YYYY format but invalid in MM/DD/YYYY format, to catch any naive programmers who assumed that the rest of the world functions just like the US. E.g., 25/12/2000.
+ 
+Dates that catch people who thought the Julian calendar system was still in effect. E.g., 1900-02-29.
+  
+And if you want to get ESPECIALLY tricky:
+  
+Dates that really WERE valid in one specific country, but would be totally invalid normally. E.g., 1712-02-30. See http://nodatime.org/1.3.x/userguide/trivia and https://www.timeanddate.com/date/february-30.html for more details.
+  
+—
+You are receiving this because you commented.
+Reply to this email directly, view it on GitHub, or mute the thread.",ColorXJH,
+117,2017-02-28 12:27:08,"How high are you
+",grandpabop,
+117,2017-02-28 12:36:00,"I'm just a vegetable...maybe even more ,but how I talk with u? I just a Chinese boy ,have u used QQ?
+
+发自我的 iPhone
+
+> 在 2017年2月28日，20:27，grandpabop <notifications@github.com> 写道：
+> 
+> How high are you
+> —
+> You are receiving this because you commented.
+> Reply to this email directly, view it on GitHub, or mute the thread.
+> 
+",ColorXJH,
+117,2017-02-28 12:51:03,"@ColorXJH This is not an appropriate type of conversation for this thread. In fact, attempting personal conversations and asking to move to QQ is so off-topic for a GitHub Issues thread that many projects will ban you.
+
+I suggest you explore the world of programming-related [IRC](https://en.wikipedia.org/wiki/IRC) channels instead. (And be sure to read any rules listed or linked in each channel's topic line.)",ssokolow,
+117,2017-02-28 13:32:01,@ssokolow thank you very much,ColorXJH,
+116,2017-01-16 16:09:53,"Add the famous ""Dick Van Dyke"", https://en.wikipedia.org/wiki/Dick_Van_Dyke
+Since profanity filters have apparently occasionally changed his name to the definitely less rude ""Penis Van Lesbian""",AnthonySteele,2017-01-16 16:19:59
+115,2017-01-16 15:53:23,This causes an HTML textarea that is filled with unescaped input to break and execute a simple JavaScript.,hjkuijf,2017-01-16 15:56:24
+114,2017-01-16 15:49:50,"Maybe add the shell shock bash code injection string:
+
+    () { :;}; echo vulnerable
+
+There might be a lot of more such strings for many different languages/environments.",panzi,
+113,2017-01-16 15:46:55,"Passing the values `CONIN$` and `CONOUT$` to `fopen` etc. on Windows return handles to `stdin` and `stdout` respectively.  Probably rarely tested against to prevent unwanted access.  See:
+
+https://msdn.microsoft.com/en-us/library/windows/desktop/ms682075%28v=vs.85%29.aspx
+",Y-Less,
+112,2017-01-16 14:28:27,"The .txt file comments say they are 2 byte characters. Quick checking with C's strlen would also implicate Korean hangul are 3 bytes as well.
+
+> #	Two-Byte Characters
+> #
+> #	Strings which contain two-byte characters: can cause rendering issues or character-length issues
+> 田中さんにあげて下さい
+> ...",Tietun,
+111,2017-01-16 14:04:00,"https://en.wikipedia.org/wiki/EICAR_test_file
+
+standard string that is interpreted as virus by anti-virus software:
+
+    X5O!P%@AP[4\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*
+",jachymb,
+111,2017-01-16 16:35:48,"This is explicitly called out in the README as a string that should not be included in the list:
+
+> Likewise, please do not send pull requests which compromise manual usability of the file. This includes the EICAR test string, which can cause the file to be flagged by antivirus scanners, and files which alter the encoding of blns.txt.
+
+That said, I wonder if there is a different mechanism for including strings like this, perhaps in a different file, so that the main file's usability won't be affected.",mjustin,
+111,2017-01-24 16:51:51,"It shouldn't matter keeping the string in the file, it qualifies as a 'naughty string' as far as I'm concerned. If it's flagged by A/V, then so be it; that's what it's designed to do.
+A separate file for strings that can be tagged as malicious only **reduces** usability as you'd have to combine the files in order to run a full test.",ChipWolf,
+111,2017-02-27 08:28:54,"The EICAR [intended use page](http://www.eicar.org/86-0-intended-use.html) states, ""Any anti-virus product that supports the EICAR test file should detect it in any file providing that the file starts with the following 68 characters, and is exactly 68 bytes long:"" (and the EICAR test string follows immediately after that text).
+
+So if including the EICAR test string causes the blns.txt file to be detected by anti-virus software, then that software is **NOT** complying with the EICAR recommendations (which say, in essence, ""Only detect this string if it's the only thing in the file"").
+
+However, I wouldn't be at all surprised to find that there DOES exist quite a bit of anti-virus software that isn't behaving correctly, and flags a file containing the EICAR string *plus other content before and after it* as being a virus. If that's the case, then I'm :-1: on @ChipWolf's suggestion to include it.",rmunn,
+111,2017-02-27 08:37:03,"Wouldn't that be like :-1:-ing a test for ""UTF-8 file containing BOM in a position other than the first two bytes"" because some badly-written text-processing utilities can't handle it?
+
+I don't **want** to forget to feed embedded EICAR strings through my functional tests because it might catch a case where all it takes to DoS a site is for some troll to post the EICAR string in a comment, setting off some non-compliant traffic scanner appliance.
+
+(eg. The troll posts it from home and then everyone visiting the site from work or other more heavily managed networks gets blocked. It's bad enough that there was so much trouble using custom fonts (eg. icon fonts) because network security appliances tended to strip the CORS headers needed for cross-domain `@font-face`.)
+
+Until it showed up here, it never even occurred to me that something like the EICAR string might exist. Imagine how many other developers like me will continue to show up after this discussion has faded from memory.",ssokolow,
+111,2017-02-27 10:55:34,"I am still of the opinion the EICAR test string **is** a naughty string, well within the scope of this project.
+We do not meet the EICAR test string's detection requirements because it is not the only string in the file, but it still remains useful for testing.",ChipWolf,
+111,2017-02-27 12:16:16,"@ChipWolf - This is the second time you've stated that the EICAR test string is (already?) in the blns. (Once here, and once in PR #133). Where is it? I don't see it anywhere in [blns.txt](https://github.com/minimaxir/big-list-of-naughty-strings/blob/8a115584931e0aef2965d8f2b6ab212a08a93a4c/blns.txt) or [blns.json](https://github.com/minimaxir/big-list-of-naughty-strings/blob/8a115584931e0aef2965d8f2b6ab212a08a93a4c/blns.json).",rmunn,
+111,2017-02-27 17:36:41,"@rmunn I must have been mistaken. Removed those comments
+It's either that or someone rebased it out",ChipWolf,
+110,2017-01-16 13:46:21,"This string can cause some modems to disconnect.  Years ago, I triggered
+this behavior accidentally when, for an unrelated reason, my email
+signature contained the string.  Mail sent to a mailing list caused some
+subscribers' modems to disconnect.
+
+Explained here, in the final paragraph under **Hayes' Solution**:
+https://en.wikipedia.org/wiki/Hayes_command_set",sharpjs,2017-01-16 15:41:09
+109,2017-01-16 11:29:03,"Great project! Thanks for this.
+
+While looking through it I noticed that you've updated the copyright year to 2017 but actually, the aim of the year in a copyright notice is to indicate when the work was originally published, in case of any dispute. So I thought I'd raise a PR.
+
+You're not in the UK but this, from the UK's copyright service is useful: http://www.copyrightservice.co.uk/copyright/p03_copyright_notices, item 4, and the rules will be the same in the US.",annashipman,2017-01-16 15:37:37
+109,2017-01-16 11:31:19,"Actually, it should be a range (`2015-2017`), since each change is potentially significant enough to qualify for copyright.
+
+...or, if it doesn't get updated within a given year, something more complex like `2015-2017, 2019`.",ssokolow,2017-01-16 15:37:37
+109,2017-01-16 11:35:46,👍 ,annashipman,2017-01-16 15:37:37
+109,2017-01-16 15:37:31,"Per a [SO answer](http://softwareengineering.stackexchange.com/a/210491):
+
+> if you made changes that year, do include the year in a comma-separated list in your copyright notice.
+>  if did not make copyrightable changes that year, do not include that year in your copyright notice.
+
+Seems fair.
+
+",minimaxir,2017-01-16 15:37:37
+108,2017-01-16 09:40:58,Apparently also update blns.json,Aeolun,2017-01-16 15:36:36
+107,2017-01-16 08:19:34,"The below 2 strings should be removed from the list, it is normal Arabic strings that used frequently. There is no risk with them:
+
+""﷽"", 
+  ""ﷺ"",
+
+You can check below the Arabic Unicode scripts:
+https://en.wikipedia.org/wiki/Arabic_script_in_Unicode",hazemsq,
+107,2017-01-16 08:23:59,"Where in [`blns.txt`](https://github.com/minimaxir/big-list-of-naughty-strings/blob/master/blns.txt) do they appear?
+
+Each section has a header explaining the purpose and most of them contain ""ordinary stuff used by people every day which tends to break sites only tested against U.S. English"".",ssokolow,
+107,2017-01-16 08:28:32,"in blns.txt: line 209 & 210
+in blns.json: line 148 & 149",hazemsq,
+107,2017-01-16 08:32:06,Don't agree they should be removed. The header is clear on the purpose of those strings. It's for testing if you app recognizes it as an rtl string.,boyd91,
+107,2017-01-16 08:32:44,"They're ""naughty"" by definition because too many applications are coded on the assumption that, if your language isn't written left-to-right, your language itself is inherently ""naughty"".",ssokolow,
+107,2017-01-16 12:48:53,"I think OP's point is that those two examples are single codepoints, thus there is nothing to be ordered RTL or LTF.
+
+﷽ = U+FDFD
+ﷺ = U+FDFA
+
+Therefore, I agree with the OP that these two examples should be removed. They are the QA equivalent of ""security theater"": while they make look impressive to casual observers, they do not actually test anything.
+
+...
+
+OTOH, if your tests are also intended to check for problems in naughty GUI layout engines displaying words and phrases in wrong order, not just the usual Bobby Tables, then you also need to contruct some tests to see what happens when RTL and LTR text is interwoven, e.g. several Arabic phrases embedded within a larger English sentence with English text at start, end, and inbetween; and vice versa. (I can vouch for getting layout of mixed paragraphs being a giant PITA, especially when one is not able to read both languages, making incorrect ordering of the RTL and LTR chunks VERY easy to miss.)
+
+For example, if a layout engine by default reads LTR and encounters an English word at the start of a paragraph, it will infer that the rest of that paragraph is English too, and any Arabic chunks will be ordered LTR within the larger English text:
+
+    E1 1A E2 2A E3.
+
+Likewise if the layout strictly observes the user's default LTR/RTL preferences:
+
+    1A E1 2A E2 3A E3 4A.
+
+Conversely, if the layout engine can infer (or your own preferences dictate) that the overall paragraph should be laid out as RTL text, the English chunks will be laid out from RTL within the larger Arabic text:
+
+    .4A E3 3A E2 2A E1 1A.
+
+           .E3 2A E2 1A E1
+
+...
+
+Needless to say, if the layout engine or user guess wrong, and lay out primarily Arabic text for the benefit of an English reader, that is going to cause its intended Arabic readers much upset. (Or lay out a paragraph for English readers with the start of the sentence at the top-right and end of sentence at top-left, though given the current bias towards LTR languages that is the less common case.)
+
+Also be prepared for the final end-of-sentence punctuation characters to appear at the wrong end of the line, so that even in a completely Arabic paragraph (RTL) the final period (.) displays at the RHS of the paragraph's final line instead of its LHS:
+
+    cibarA ,cibarA cibarA cibarA
+                  cibarA cibarA.
+
+instead of:
+
+    
+    cibarA ,cibarA cibarA cibarA
+                  .cibarA cibarA
+
+ Don't have any actual example text here, unfortunately (least, not that I'm able to share). However, perhaps OP would like to create a couple of variations on,say, the following paragraph:
+
+*We would like to welcome Sir Isaac Newton, our good friend Dr. Grace D. N. Smith, M.D., and the very special Ms. Lisa Z. Johnson-Smythe to our latest gathering.*
+
+In one example, replace all the English names with equally complex Arabic/Persian names (e.g. ""ابو سعيد الضرير الجرجاني"" instead of Sir Isaac Newton), and in another replacing all the other words. That'll give you one English paragraph containing Arabic chunks, and an Arabic paragraph containing English chunks. Then make screenshots of how the text _should_ correctly be laid out in each case for reference.
+
+...
+
+This is partly a technology problem: even in an ""intelligent"" ""fully Unicode-aware"" layout engine that knows something about human language rules and the larger context and meaning of a given text, accurately inferencing the overall layout of a mixed paragraph to be RTL or LTR is tricky and ambiguous, and quickly devolves into hard AI problem since the paragraph's rendering hinges on whether it is an English text with Arabic phrases to be read by English readers, or an Arabic text containing English phrases to be read by Arabic readers.
+
+However, it is also very much a developer (and user) lack-of-awareness problem. Monolingual Western software developers with no experience of RLT  scripts naturally assume that a ""Unicode Aware"" text layout engine will not only put all the Arabic words RTL on screen, but will also automatically resolve all the other ordering issues too: automatically right-aligning the paragraph, displaying the end-of-parargraph punctuation at the left end of the last line, arranging a mixture of English-phrases-in-Arabic-paragraph so that the entire text reads correctly to Arabic readers.) But just because all the bytes in a Unicode string are all in right order doesn't mean the glyphs on screen will appear in the correct positions too. And if you can't read both scripts yourself then you won't be able to tell for yourself if mixed content is displaying correctly or not, until users, on seeing their text displayed on screen/in print, scream that you've completely mangled their work.
+
+As I say, you will also have to provide visual screenshots of right (and ideally also wrong) text layout examples, since even the standard text rendering engines on your PC do all sorts of weird and wonderful things so even they can't be trusted to display correctly. (e.g. I note with amusement that TextEdit displays ""مُنَاقَشَةُ سُبُلِ اِسْتِخْدَامِ اللُّغَةِ فِي النُّظُمِ الْقَائِمَةِ وَفِيم يَخُصَّ التَّطْبِيقَاتُ الْحاسُوبِيَّةُ، "" with the punctuation character at the left, which Firefox and Safari put it at the right.)
+
+Perhaps OP (hazemsq), who I'm presuming is fluent in both English and Arabic, might be able to assist you formulate a comprehensive set of test strings and screenshots, or else direct you to others who can. (There are commercial translation agencies too who are experts in both converting text and already knowing all the exciting and obvious/arcane ways in which different apps and OSes manage to mangle its content and/or display, but those'll cost you.)
+...
+
+OTOH, if your test strings are ONLY intended to check for Bobby Tables cockups, and on-screen display is Not Your Problem, then you need to make this absolutely clear too, so that users understand that your sample strings are _only a partial test_ designed to check for string handling bugs, not text display problems.
+
+-----
+
+p.s. You should also try strings containing mixtures of ligatures and non-ligature characters, since both Western scripts, e.g. ""ffi""/""ﬃ"", and Arabic scripts support ligatures (in the latter case, they're required for proper as-written display). Unicode rules for Arabic even have to dictate how each character must use one of three different glyphs depending on whether it is at the start, middle, or ending of a word. 
+
+p.p.s. Oh, and don't even start me on fonts that support contextual alternates, especially when the alternate glyphs for existing characters do not have a codepoint associated at all, which means some APIs will substitute the dread Unicode Placeholder character instead of the original standard character when you try to get a string back out. (e.g. I recently had ""fun"" with GelatoScript, for instance, which supplied alternate ""swooshier""—and codepoint-less!—glyphs for A-Z characters in addition to its standard glyphs so that graphic designers can select whichever one looks best on their artwork.)
+
+p.p.p.s. Good work and best of luck. We all live in a global, not ASCII, world now (not to mention a shamelessy insecure one too), and desperately need more robust education and tooling like this.",hhas,
+106,2017-01-16 00:55:08,"Allowed for instance in IEEE 754 floating point numbers.
+
+https://en.wikipedia.org/wiki/Signed_zero",RomainGehrig,2017-01-16 15:35:59
+105,2017-01-15 23:17:22,"The sequence `\n~.` will cause default-configured ssh sessions to terminate when passed as input.
+I realise it's horrifying but I have in fact seen this crop up in the wild where user data was transferred between machines via `tar c ... | ssh other tar x` (for anyone who finds this from google, the correct fix (besides ""don't do that"") is `ssh -e none`)",ekimekim,
+104,2017-01-15 22:10:35,"Even having been keeping an eye on this repo, I was surprised at how much I didn't know to test for when a recent post in /r/rust/ linked back to Eevee's ""[Dark corners of Unicode](https://eev.ee/blog/2015/09/12/dark-corners-of-unicode/)"".
+
+Currently, I think the BLNS suffers from a situation similar to ""100% branch coverage gives a false sense of security"" because it shares the same ""If you're not `assert`ing the right things..."" problem.
+
+Here are the things from that blog post (beyond the famous [""Turkish I"" problem](http://www.i18nguy.com/unicode/turkish-i18n.html)) which I think should be covered in a supplementary ""how to use the BLNS"" document:
+
+* Test anything which involves sorting, case conversion, case-insensitive matching, date-handling, or working with decimals under the Turkish locale (It's [not](http://www.moserware.com/2008/02/does-your-code-pass-turkey-test.html) just the case-correpondence and [sorting](https://blogs.msdn.microsoft.com/anutthara/2005/12/05/avoiding-the-turkish-i-issue/) rules which differ)
+* Test your equality-testing and upper/lower-case conversion code against things like `ß` vs `ss`, `ae` vs `æ`, `...` vs `…`, and the NFC (normal form composed) vs. NFD (normal form decomposed) forms of characters like `é` which have both a combining-character representation and a precomposed representation for round-trip compatibility with legacy systems.
+* Test your normalization code against Japanese text, where stripping diacritics can result in significant changes in pronunciation and meaning. (On the order of confusing unvoiced and voiced versions of the same consonant, like ""kook"" (strange/eccentric/crazy person) and ""gook"" (a racial slur)).
+* Test that your code which slices or normalizes strings doesn't split apart flag emoji. (The underlying regional indicator symbol pairs are not declared as combining characters)
+* Test that your code doesn't break up emoji defined using `U+200D ZERO WIDTH JOINER`.
+* If you're not simply relying on a browser for text rendering, make sure that both normal forms of Hangul (the primary Korean writing system) render equivalently and properly.
+* If you're rendering your own character-cell graphics, make sure double-width characters added in newer versions of the Unicode spec, like 🎁 don't overdraw the character which follows them, get cut off, or throw off the column alignment.
+* Make sure your system displays characters from recent Unicode specs, given a suitable font. (WeeChat silently ignores emoji because it relies on a ""how wide is this character"" function which reports 0 for stuff that's too new for the bundled copy of the Unicode database)
+* Audit whether there's anywhere accepting the Ogham space character would be a ""wetware exploit"" (something where it's valid... but not what the human expects). For example, this this Javascript produces 42 as its output: `alert(2+ 40);`
+* Audit whether you're handling `U+2800 BRAILLE PATTERN BLANK` (looks like a space in most fonts, but isn't) appropriately.
+* Make sure everything in your stack handles emoji outside the Basic Multilingual Plane properly. (eg. MySQL's `utf8` encoding is limited to three bytes per character, which doesn't cover all of the supplementary character planes, so you have to `ALTER TABLE` it to `utf8mb4`)
+* Make sure your system doesn't assume Apple's specific emoji font. They're unicode characters like anything else.
+* The unicode directionality characters in the BLNS are for testing to make sure your website is wrapping each piece of user-provided text in `<bdi></bdi>` (bidirectional isolation) elements so it can't alter the directionality of the rest of the content.
+
+**EDIT:** (In hindsight, that list would be much more clear if I formatted it as a table with each row representing a type of input to test (eg. doesn't break up emoji defined using `U+200D ZERO WIDTH JOINER`) and each column representing where in your program would be potentially vulnerable (eg. string slicing/replacement/etc.).",ssokolow,
+103,2017-01-15 21:12:12,Since the npm is hosted on GitHub we can use the shorthand syntax.,vinkla,2017-01-15 21:14:46
+102,2016-12-19 14:27:32,Adding string containing three ด้้้้้็็็็็้้้้้็็็็็้้้้้้้้็็็็็้้้้้็็็็็้้้้้้้้็็็็็้้้้้็็็็็้้้้้้้้็็็็็้้้้้็็็็ characters that often causes rendering issues.,greenjoe,2017-01-15 20:49:17
+101,2016-11-21 22:56:00,"Since javascript becomes so popular it's not uncommon for developers to use plain object initializers in the language (i.e. `var hash = {}`). 
+
+Asking objects whether key is in the hash is often done via 
+
+<S_CODE_TOKEN>
+
+Which gives false-positives for words `constructor` and `__proto__`. This is a source of bugs that are hard to find. But maybe by adding these two words to your list, more people will test their code against this bug :).",anvaka,
+100,2016-11-06 15:38:09,"Now that we have a list of potential naughty strings, what do you do with it to protect yourself properly? What's the best way to use this list to protect your backend where user input is required?
+
+I'll be using this list in a nodejs based app with a mongo db, is it ""enough"" to test if the user input .contains() a line from the list? What would be a better way to protect yourself, rather than just looping over the list and checking for something that's equal (or at least contains in the user input)?
+
+",jyounus,
+100,2016-11-06 16:46:54,"This isn't an exhaustive list of all bad strings, it's a list of examples.
+
+What you do is you test your code with each of these to try to shake out bugs and, once you identify the bugs, you write a properly comprehensive fix.
+
+(eg. If `Æ` was included in the list as  an example of a unicode character and your program didn't support Unicode, Checking `.contains()` for `Æ` wouldn't solve your problem for other 128,000+ unicode characters. The proper solution would depend on how you were using the text.)
+",ssokolow,
+100,2016-11-07 18:01:22,"Yeah, that's what I was thinking with the example you provided and looking for something more generic. 
+
+I'm sure this is a huge and common thing that needs to be implemented in different systems, aren't there like well established libraries available that help you out with this sort of thing? Maybe I'm thinking of something different here (input sanitisation? input validation?)
+",jyounus,
+100,2016-11-07 20:14:54,"The BLNS is for testing your input sanitization.
+
+Unfortunately, I don't code web apps in NodeJS (Python, PHP, and various other languages), so I can't suggest an input sanitization library/framework off the top of my head.
+",ssokolow,
+100,2016-11-08 02:45:02,"This list is useful for automated testing, not for runtime input validation/sanitization. Here's an example: https://github.com/parshap/node-sanitize-filename/blob/ef1e8ad58e95eb90f8a01f209edf55cd4176e9c8/test.js#L259-L262
+",parshap,
+100,2016-11-08 08:00:30,"One of the issues with automating this kind of thing is that it lets the number of test cases explode.
+
+Let's say you have a hundred bad strings, that's a hundred test cases, right? Well, no... the only way to make sure that your input doesn't break anything is to make sure all inputs on all parameters for a form/API call are tested.
+
+That means your number of test cases is (number of bad strings)^(number of string parameters) for each such form/API call.
+
+Very few people take the time to test through that, even if the test cases can be generated automatically from some kind of spec.
+
+That said, yes, it would be nice to see something like this, right?
+",jfinkhaeuser,
+100,2017-01-16 09:14:13,I woner how to protect myself from the human injection ,Euphe,
+100,2017-01-16 09:19:41,@Euphe Careful UI design. It really depends on the specific case.,ssokolow,
+100,2017-01-17 14:48:31,"Testing frameworks such as PHPUnit can use this list as a ""data provider"". Here's some code for PHPUnit:
+
+<S_CODE_TOKEN>
+
+When you have a specific function that should accept user input and not break somehow, you can do this (again, in PHPUnit):
+
+<S_CODE_TOKEN>
+
+This test is called 400+ times with a different string from the naughty list, automatically.
+
+It is worth to know however, that this specific test (depending on how you set it up) would only test if your application accepts these strings. Which it might as well do, because many of the strings in the naughty list aren't very naughty per se, they're just inconvenient to read. If a user wants to give a description that's emoticons only, wel sure. That's not a problem per se.
+
+My test case is just an example to show you how you _could_ use this list. It's by no means the only way.",JC5,
+100,2017-01-17 15:30:13,I suggest including the type of string (reason for error) beside each value,ChipWolf,
+100,2017-01-17 21:17:21,"@JC5 
+
+You'd be surprised. For example, Fanfiction.net's got this stupid overzealous string sanitization which silently strips all percent signs from input, so a chapter containing ""I'm 100% woman"" would become ""I'm 100 woman"" without a single warning.
+
+The punctuation used in ""plaintext"" emotes has its own [scunthorpe problem](https://en.wikipedia.org/wiki/Scunthorpe_problem).",ssokolow,
+99,2016-11-02 09:01:30,"Hello.
+
+I assume double curly brackets used in AngularJS for data binding are worth adding to that list. If not escaped properly string like `{{ blablabla }}` may crash AngularJS app.
+
+More on AngularJS syntax: https://docs.angularjs.org/guide/introduction",herroffizier,
+99,2017-01-16 09:02:25,"and maybe something like that : 
+`{{x = {'y':''.constructor.prototype}; x['y'].charAt=[].join;$eval('x=alert(1)');}}`
+
+cf : https://finnwea.com/blog/stealing-passwords-from-mcdonalds-users",xavhan,
+98,2016-06-27 13:13:08,"$ENV{HOME} without any 'quotes' around HOME might get interpolated by perl code.
+
+NB I've not updated the base64-encoded versions because the script seemed to update WAY more than just the one line I added.
+",DrHyde,
+97,2016-06-16 12:27:16,"Reading the discussion about removing ""DROP"" statement from BLNS, I thought that is my be a good idea to separate potentially dangerous strings (as DROP statement, XML fork bomb, etc.) to a separate file different than blns.txt to make sure that testing will be done with no potential data-loss.
+
+This change will be particularly useful for testing in a production environment (I'm sure that some of the users using BLNS test directly in a production environment).
+",NedkoHristov,
+97,2016-06-20 14:38:14,"> This change will be particularly useful for testing in a production environment (I'm sure that some of the users using BLNS test directly in a production environment).
+
+What? No, don't do that!
+
+The whole idea of this is to have a list of dangerous strings. That's what BLNS _is_. There already is a list of problematic strings in an extracted file: `blns.txt`.
+",mattgrande,
+96,2016-06-02 18:35:06,"Fixes issue #91 
+",06b,2017-01-20 17:14:47
+96,2017-01-20 17:14:47,Closing due to #128 being merged,06b,2017-01-20 17:14:47
+95,2016-04-19 03:39:09,"For other programming languages that use capitalized versions of the booleans
+",eedrah,2016-04-20 05:45:29
+94,2016-02-11 09:43:08,"Without this, all base64 strings will get a trailing \n in their encoded form
+
+ref #86
+
+Does _not_ update the `blns.base64.txt` file
+",romuald,2016-02-11 15:04:01
+94,2016-05-01 15:57:15,"Hola
+",Luisphoenix11,2016-02-11 15:04:01
+93,2016-02-10 13:42:07,"This character is outside of the valid characters for XML (and rejected by some parsers)
+
+See https://www.w3.org/TR/REC-xml/#charsets
+",romuald,2017-01-20 06:45:10
+93,2016-02-10 15:07:34,"Where in the linked article does it discuss \u0007? I did a brief search (it's a long article) and did not see mention to that specific character.
+",minimaxir,2017-01-20 06:45:10
+93,2016-02-10 17:01:16,"The doc sates valid characters are `#x9 | #xA | #xD | [#x20-#xD7FF] | [#xE000-#xFFFD] | [#x10000-#x10FFFF]`
+
+So any character bellow \x09 isn't in the range
+",romuald,2017-01-20 06:45:10
+93,2016-02-13 01:35:46,"All of the C0 and C1 controls should really be represented in this file somewhere.  (It's unfortunate that the file is newline-separated, because U+000A itself can be very, very naughty; for instance, it's significantly harder to make shell scripts cope with newlines in filenames than other kinds of white space.)
+",zackw,2017-01-20 06:45:10
+93,2016-03-16 09:31:38,"Definitely needs some character outside of valid XML characters.
+
+These can be met in wild, e.g. when pasting from some old word document.
+",severak,2017-01-20 06:45:10
+93,2017-01-17 03:05:32,"Note that the Bell character (^G) is already included [at the end of the file](https://github.com/minimaxir/big-list-of-naughty-strings/blob/673da19/blns.txt#L646):
+<S_CODE_TOKEN>",rohieb,2017-01-20 06:45:10
+93,2017-01-17 03:10:47,"> The doc sates valid characters are #x9 | #xA | #xD | [#x20-#xD7FF] | [#xE000-#xFFFD] | [#x10000-#x10FFFF]
+> 
+> So any character bellow \x09 isn't in the range
+
+I prefer to use `#xB` (vertical tab) and `#xC` (form feed)  since, not only are they outside the valid ranges, they've got C escapes (`\v` and `\f`) which most common languages copied, so it's easy to mistakenly conclude that they *should* be valid and easy for someone to include them in something you may encounter.
+
+For example, to quote Eevee:
+>All the way back in humble ASCII, U+000C FORM FEED can be used to encode a page break in plain text. veekun’s database uses form feeds to mark where the Pokédex flavor text in Gold, Silver, and Crystal breaks across two pages.
+> -- https://eev.ee/blog/2015/09/12/dark-corners-of-unicode/",ssokolow,2017-01-20 06:45:10
+93,2017-01-18 14:04:05,OK.... I need to follow this up. Many thanks,micheal3466,2017-01-20 06:45:10
+93,2017-01-18 14:06:52,Ok,micheal3466,2017-01-20 06:45:10
+93,2017-01-19 04:27:55,"It looks like someone was stupid enough to think that hooking their spambot up to a GitHub account would be useful somehow.
+
+It also posted an issue (#124), and posted this same garbage in issues #122, #98, #96, and #119 as of the time I'm typing this.",ssokolow,2017-01-20 06:45:10
+93,2017-01-19 04:32:32,Issue fixed. (TIL how blocking on GitHub works),minimaxir,2017-01-20 06:45:10
+92,2016-02-10 04:58:07,"It’s common in JavaScript to use input as a key in an object and check for the existence of keys using `obj.hasOwnProperty(key)` instead of `Object.prototype.hasOwnProperty.call(obj, key)`.
+",charmander,2016-02-10 05:19:59
+91,2016-02-09 18:21:54,"You have the string that crashed iOS, but not the string that crashed OS X, `File:///`. See http://thenextweb.com/shareables/2013/02/02/typing-these-eight-characters-will-crash-almost-any-application-on-your-mac/
+",asmeurer,2017-02-10 16:16:42
+91,2017-02-10 16:16:42,https://github.com/minimaxir/big-list-of-naughty-strings/pull/128 was merged. ,asmeurer,2017-02-10 16:16:42
+90,2016-02-09 17:50:04,"http://arresteddevelopment.wikia.com/wiki/Motherboy_XXX
+",denizdogan,2016-02-09 18:26:27
+90,2016-02-09 18:26:27,"Sorta redundant with Super Bowl XXX.
+",minimaxir,2016-02-09 18:26:27
+89,2016-01-11 01:45:34,"This made some versions of norton freak out and kill the IRC client.
+",Xe,2016-02-09 18:25:15
+89,2016-01-12 02:23:08,"+1
+",AppleDash,2016-02-09 18:25:15
+88,2015-12-31 03:43:08,"didn't notice these, but it happens when you do things like use regular expressions for search.
+",xenoterracide,
+88,2016-02-09 15:50:20,"The most common input to achieve a ReDos is:
+
+<S_CODE_TOKEN>
+
+But needs to have a vulnerable or evil pattern.
+",kinduff,
+87,2015-12-31 03:16:35,"I like this project, and am likely to pull it's strings into a java project I'm working on, however that means extracting and making compatible with Java. It'd be nice to have a file that's parseable by other languages.
+",xenoterracide,2015-12-31 03:25:35
+87,2015-12-31 03:20:33,"It's already offered in JSON.
+
+I'll give you the benefit of the doubt and assume that you just didn't notice, since I _know_ not even the Java ecosystem is backwards enough to not have realized the benefits of JSON over XML in situations where XML would be horrendously over-engineered.
+",ssokolow,2015-12-31 03:25:35
+87,2015-12-31 03:22:48,"I realized right after this was posted that there was that stuff in the / of the repository, I navigated in too deep.
+",xenoterracide,2015-12-31 03:25:35
+87,2015-12-31 03:23:58,"As far as JSON vs XML, not really a debate worth having. I generally pick JSON for API's and avoid XML like the plague.
+",xenoterracide,2015-12-31 03:25:35
+87,2015-12-31 03:24:29,"But JSON isn't really extensible unless you use it in a way that makes it harder to hand-edit than XML. They both have their place.
+",ssokolow,2015-12-31 03:25:35
+87,2015-12-31 03:25:35,"I'm working on a testing library that builds random garbage data, but one of the thing I wanted to be able to do with it is provide random garbage attack data. So these lists will work nicely.
+",xenoterracide,2015-12-31 03:25:35
+87,2015-12-31 03:27:29,"yes there are benefits and pitfalls of both JSON and XML. XML is nicest when it has an XSD, personally I think XSD based API's surpass the simplicity of JSON. Like all things, Java grossly abused XML to do everything. Some Java (Spring) has gotten away from that.
+",xenoterracide,2015-12-31 03:25:35
+86,2015-12-03 22:14:51,"All base64 strings¹ end with a newline character, eg.:
+
+<S_CODE_TOKEN>
+
+Is this on purpose? That newline character seems pretty useless.
+If not, [that line](https://github.com/minimaxir/big-list-of-naughty-strings/blob/master/scripts/texttobase64.sh#L5) should probably read `echo -n`.
+
+---
+
+1: all but the empty string itself, which makes it even more annoying because it makes two cases to handle.
+",mcarton,
+86,2016-02-10 13:43:27,"The newline character is added by the python decode method. This is not a problem with the base64 itself
+
+<S_CODE_TOKEN>
+",romuald,
+86,2016-02-10 21:18:02,"@romuald: No, it isn’t.
+
+<S_CODE_TOKEN>
+",charmander,
+86,2016-02-10 22:22:51,"Oops, sorry. You're right, confounded the decode and encode behaviors …
+",romuald,
+85,2015-11-17 09:17:09,,amaboura,2015-11-18 03:17:29
+84,2015-11-02 20:36:06,"Recently got a bug bounty based off of this, requires some user interaction but still is XSS
+",clickthisnick,2015-11-03 06:50:48
+84,2015-11-02 21:58:16,"I think that this is perfectly reasonable. 
+",Luke-Diamond,2015-11-03 06:50:48
+83,2015-10-31 07:44:13,"[Regional indicators](https://en.wikipedia.org/wiki/Regional_Indicator_Symbol) seem to be very problematic for text editing programs to display and interact with.
+
+The strings I've added, respectively:
+- shows strange behavior when deleting the 5th regional indicator symbol in Xcode 7.1
+- produces incorrect cursor movement in Xcode 7.1
+- [is a valid `Character` in Swift](http://oleb.net/blog/2014/07/swift-strings/)
+
+None of them display correctly in OS X Terminal. 
+",benpious,2015-10-31 17:09:29
+83,2015-10-31 17:09:33,"Works for me. :P
+",minimaxir,2015-10-31 17:09:29
+82,2015-10-29 07:21:51,,matrixik,2015-11-06 03:27:22
+82,2015-11-06 11:41:23,"Thank you
+",matrixik,2015-11-06 03:27:22
+81,2015-10-26 21:10:28,"The naughtystrings directory is now a Go package and can be imported by Go.
+",willfaught,2015-10-29 03:50:03
+81,2015-10-27 19:04:18,"Thanks for the feedback, @matrixik!
+",willfaught,2015-10-29 03:50:03
+81,2015-10-27 19:22:36,"Does the diff need to be fixed? I can accept the pull after that.
+",minimaxir,2015-10-29 03:50:03
+81,2015-10-27 22:59:06,"@minimaxlr I'm waiting for @matrixik to reply.
+",willfaught,2015-10-29 03:50:03
+81,2015-10-28 23:23:20,"Addressed @matrixik's feedback.
+",willfaught,2015-10-29 03:50:03
+81,2015-10-29 03:50:25,"Merging PR.  Thanks!
+",minimaxir,2015-10-29 03:50:03
+81,2015-10-29 06:00:24,"@minimaxir Note that when the list changes, cd to naughtystrings and run ""go generate"", then commit the changes to the generated file in naughtystrings/internal. (Must have go installed to use ""go generate"" unfortunately; hopefully that won't be much of a burden. Or I guess Go users can periodically run it for you and send a PR; in that case, it would be good to add a note in the README about it.
+",willfaught,2015-10-29 03:50:03
+81,2015-10-29 07:18:00,"Thank you for fixes @willfaught and for creating this Go package.
+",matrixik,2015-10-29 03:50:03
+81,2015-10-29 07:30:59,"My pleasure! Thanks again for the feedback @matrixik.
+",willfaught,2015-10-29 03:50:03
+81,2015-10-29 07:46:28,"@minimaxir I should also add that the generate command at the top of naughtystrings/naughtystrings.go is this: `go-bindata -ignore \.git\S* -ignore LICENSE -ignore README\.md -ignore blns\.base64\.txt -ignore blns\.txt -ignore package\.json -o internal/resource.go -nocompress -pkg internal ..`. Note that the command has to explicitly list all the files you _don't_ want added as a resource to the binary from the big-list-of-naughty-strings directory. If you add any new files to the big-list-of-naughty-strings directory (that's the `..` part), you'll have to exclude them in that command too. It's very unfortunate, but the `go-bindata` command only supports exclusion right now. Hopefully I or someone else can add inclusion flags to it some time so the generate command doesn't have to be as brittle as this.
+",willfaught,2015-10-29 03:50:03
+81,2015-10-31 17:35:19,"I'll likely be doing a full update pass for the README to note the auto-gen scripts. Thanks for the note! :)
+",minimaxir,2015-10-29 03:50:03
+80,2015-10-26 10:07:20,"> If you're reading this, you've been in a coma for almost 20 years now. We're trying a new technique. We don't know where this message will end up in your dream, but we hope it works. Please wake up, we miss you.
+
+World view changed. How can I contact outside world? How do I wake up from coma?
+",tianshuo,2015-11-29 03:21:42
+80,2015-10-26 15:58:57,"Functionality expected to be implemented before heat death of the universe.
+",minimaxir,2015-11-29 03:21:42
+79,2015-10-19 21:54:13,"Is the owner open to adding a .go file to make this repo importable as a Golang package? I can do a PR if so.
+",willfaught,2015-10-29 03:51:11
+79,2015-10-24 23:26:24,"Sure, just send a PR. (as I know nothing about Golang packages)
+",minimaxir,2015-10-29 03:51:11
+79,2015-10-29 03:51:11,"Added in https://github.com/minimaxir/big-list-of-naughty-strings/commit/066caafe87f9c1d92318f272bce6ea8643088b24
+",minimaxir,2015-10-29 03:51:11
+78,2015-09-29 08:02:39,,ThePilgrim,2015-10-24 23:26:00
+78,2015-10-24 23:26:00,"Rejecting, as ""any string with nonalphanumeric characters"" is too broad for a category.
+
+wrt the readme, I can't enforce that the .json is regenerated.
+",minimaxir,2015-10-24 23:26:00
+77,2015-09-29 08:01:23,,ThePilgrim,2015-09-29 08:01:46
+76,2015-09-21 13:09:51,"more about this vulnerability here: https://code.google.com/p/chromium/issues/detail?id=533361
+",xyclos,2015-09-21 14:25:16
+76,2015-09-21 14:25:16,"Dupe of #75 
+",minimaxir,2015-09-21 14:25:16
+75,2015-09-19 23:21:40,"The following string without the space has been found to crash currently released Chrome Browsers
+http: //a/%%30%30
+",curlymon,2015-09-20 00:07:53
+75,2015-09-19 23:38:05,"Yup, [found the bug](https://code.google.com/p/chromium/issues/detail?can=2&q=533361&colspec=ID%20Pri%20M%20Stars%20ReleaseBlock%20Cr%20Status%20Owner%20Summary%20OS%20Modified&id=533361) in the Chromium issue tracker. (sounds like a pesky null character.)
+
+Will definitely add.
+",minimaxir,2015-09-20 00:07:53
+75,2015-09-20 00:07:53,"What happens is:
+
+%30 is decoded to ""0""
+%30 is decoded to ""0""
+The new ""%00"" is decoded to the lovely null character. Boom.
+
+String added in https://github.com/minimaxir/big-list-of-naughty-strings/commit/7a9b797500364dc771067dd21988ffddca21159f
+",minimaxir,2015-09-20 00:07:53
+74,2015-09-18 10:11:39,"Keep fork up to date
+",ThePilgrim,2015-09-18 10:13:49
+73,2015-09-11 11:05:25,,joshuaduffy,2015-09-11 14:09:37
+72,2015-09-09 16:54:24,"found on twitter [ https://twitter.com/irongeek_adc ]: Nͣͥͬͩͣ̂̂̂̂̂̂̂̂̂̂̂̂̂̂
+",libwtf,2015-09-18 04:24:05
+72,2015-09-18 04:24:05,"This is the same trick used for the Zalgo text so it may be redundant. (also overkill for readability)
+",minimaxir,2015-09-18 04:24:05
+71,2015-09-09 15:03:58,"ba**semen**t
+",Technoguyfication,2015-09-09 15:25:34
+70,2015-09-08 17:11:50,"@minimaxir I saw that there is a `package.json`, but there isn't actually a NPM package attached to it. Would you mind publishing it to NPM?
+",DaAwesomeP,2015-09-18 04:16:18
+70,2015-09-09 15:26:21,"I'm not a Node developer (at the moment) so I'm not sure how that process works. I'll look into it.
+",minimaxir,2015-09-18 04:16:18
+70,2015-09-10 13:54:56,"I came here to say the same thing.
+
+@minimaxir It's quite easy:
+
+<S_CODE_TOKEN>
+",eins78,2015-09-18 04:16:18
+70,2015-09-18 04:16:18,"Looks like I have everything working: https://www.npmjs.com/package/big-list-of-naughty-strings
+
+I'll try to keep it updated.
+",minimaxir,2015-09-18 04:16:18
+69,2015-09-04 12:18:05,"those two strings is naughty if you want to prepare javascript in jsp
+",adamborowski,2015-09-06 01:52:45
+68,2015-08-31 02:20:26,"Not sure the best way to do this. Figure it is useful to have both versions. 
+",ejcx,2015-08-31 03:36:52
+68,2015-08-31 03:37:54,"Good job! :)
+
+Although, I'm not sure how enforceable the ""update all files"" note added in the README is, however.
+",minimaxir,2015-08-31 03:36:52
+67,2015-08-25 12:59:27,"I suggest adding the following:
+# Whether ""Infinity"" is the stringification, and whether Infinity is the the numification,
+# depends on the C library.
+
+INF
+# Win32 (Visual C, really) variants of the infinity and nan
+# (see http://blogs.msdn.com/b/oldnewthing/archive/2013/02/21/10395734.aspx)
+# Yes, the # really is part of the stringification.
+# The 1#IND is a type of quiet nan.
+
+1#INF
+-1#IND
+1#QNAN
+1#SNAN
+1#IND
+",jhi,2015-09-20 00:11:13
+67,2015-09-20 00:11:13,"Added in https://github.com/minimaxir/big-list-of-naughty-strings/commit/99cb86c7f877104b8dec6387c7fe16a3f8b93eea
+",minimaxir,2015-09-20 00:11:13
+66,2015-08-24 23:19:54,"Some software filters by keyword. Check SQL keywords and phrases to make sure they are dealt with appropriately.
+",rogercookepiq,2015-08-30 17:35:36
+66,2015-08-30 17:35:36,"Closing this PR because the SQL keywords alone aren't naughty (they are dictionary words), and there's already a section for naughty SQL.
+",minimaxir,2015-08-30 17:35:36
+65,2015-08-24 16:59:56,,prschmid,2015-08-25 14:19:34
+65,2015-08-24 17:13:39,"Probably should put this in the docstring, but usage is just:
+
+<S_CODE_TOKEN>
+",prschmid,2015-08-25 14:19:34
+64,2015-08-24 15:04:49,,Luke-Diamond,2015-08-24 15:41:05
+63,2015-08-21 16:16:00,"`<plaintext>` tag is really naughty, as it is imposible to close it in any way using just HTML. [Example at codepen](http://codepen.io/kizu/pen/zGVmKb?editors=100).
+
+Actually, in most cases even just `<plaintext` string in HTML context would be enough to break stuff.
+",kizu,2015-08-31 04:54:32
+63,2015-08-23 22:15:23,"Oh my... This could be catastrophic... I support this issue.
+",Luke-Diamond,2015-08-31 04:54:32
+63,2015-08-31 04:54:32,"Added in #64 
+",minimaxir,2015-08-31 04:54:32
+62,2015-08-21 14:31:32,"A Not-So-Hypothetical situation:
+- Your customer walks into a bar.  
+- Your customer orders up some XML.  Yum!
+- The customer isn't satisfied, so they edit the XML by hand.  In Microsoft Word.
+- Suddenly, your customer's XML is filled with smart quotes.  
+
+What's a poor parser to do?
+
+<S_CODE_TOKEN>
+
+---
+
+I'm not sure how much of a problem that this actually is, so feel free to close this if it's a little too far-fetched.
+
+It's one of those things that's technically-not-exactly-wrong, but also almost-definitely-not-right.   
+",schmod,2015-11-29 03:21:58
+62,2015-08-29 06:09:18,"Well it's not really a big problem, but this isn't the big list of problematic strings, just a list of naughty strings, and those stupid smart quotes are very naughty **THANK YOU VERY MUCH WORDPRESS**.
+",ecnepsnai,2015-11-29 03:21:58
+62,2015-09-08 19:06:27,"<S_CODE_TOKEN>
+",bbarry,2015-11-29 03:21:58
+62,2015-09-08 22:55:44,"foo val=`bar' looks like a LaTeX one.
+",0joshuaolson1,2015-11-29 03:21:58
+62,2015-09-09 06:45:12,"GNU command line arguments documentation, rather.
+",jfinkhaeuser,2015-11-29 03:21:58
+61,2015-08-20 23:39:33,"﷽
+U+FDFD
+ARABIC LIGATURE BISMILLAH AR-RAHMAN AR-RAHEEM
+Note: This single character is incredibly wide because it’s a ligature of 19 printable characters.
+
+ﷺ
+U+FDFA
+ARABIC LIGATURE SALLALLAHOU ALAYHE WASALLAM
+Note: Although this character isn’t as wide as the one above, it decomposes to 18 characters using Unicode normalization form NFKD or NFKD, while the character above remains 1 character.
+
+Thanks to @yipe for the idea:
+https://twitter.com/yipe/status/634082978868690944
+",patch,2015-08-21 02:45:38
+60,2015-08-19 19:28:07,"https://en.wikipedia.org/wiki/Bush_hid_the_facts
+",stuartpb,2015-08-19 20:12:54
+60,2015-08-19 20:12:53,"Per the Wiki aritcle, these strings would not be applicable if the file is encoded in UTF-8.
+",minimaxir,2015-08-19 20:12:54
+60,2015-08-19 20:17:43,"> These strings would not be applicable if the file is encoded in UTF-8.
+
+That's assuming an implementation never internally round-trips its encoding, which happens all the time. Encoding ""this app can break"" as standard UTF-8 is still going to be misdetected by XP's IsTextUnicode. From the article:
+
+> UTF-8 without the byte order mark would still trigger the bug, as this sequence is represented identically in UTF-8 as in ASCII.
+",stuartpb,2015-08-19 20:12:54
+59,2015-08-19 19:08:14,"六四事件 法轮功 纳米比亚 威视 is from @cirosantilli's Stack Overflow profile (his GitHub profile appears to be broken again).
+
+Bernie Sanders, Democratic Socialist is from https://www.reddit.com/r/SandersForPresident/comments/3gl7uc/the_mobile_app_yikyak_automatically_downvotes/ctz5p7o?context=2
+
+All others are from https://en.wikipedia.org/wiki/Scunthorpe_problem
+",stuartpb,2015-08-20 05:10:55
+59,2015-08-19 22:32:12,"If you want bad things for the commies, see: https://github.com/cirosantilli/china-dictatorship#words-%E4%B9%A6%E7%B1%8D
+
+My profile is broken since the Longest streak fun: http://stackoverflow.com/questions/20099235/who-is-the-user-with-the-longest-streak-on-github I think GH let is as it was because I said I'd like that as a ""trophy"" (they haven't confirmed this, I'm guessing). So it is unlikely related to my username :-)
+",cirosantilli,2015-08-20 05:10:55
+59,2015-08-19 22:39:29,"Yeah, actually no offense to @cirosantilli but, especially knowing there's [already a separate file for this](https://github.com/cirosantilli/china-dictatorship#words-%E4%B9%A6%E7%B1%8D), I'm going to take that line out - the point of the Scunthorpe problem is supposed to be the inadvertent impact of things you _didn't mean_ to censor, not the impact of being _subjected_ to censorship.
+",stuartpb,2015-08-20 05:10:55
+59,2015-08-19 22:44:51,"> My profile is broken since the Longest streak fun: http://stackoverflow.com/questions/20099235/who-is-the-user-with-the-longest-streak-on-github I think GH let is as it was because I said I'd like that as a ""trophy"" (they haven't confirmed this, I'm guessing). So it is unlikely related to my username :-)
+
+Yeah, I remember that thread (and the corresponding https://github.com/isaacs/github issue around it) - I thought it'd been fixed when we were experimenting with interactions when cloning repos to other accounts or something like that. They can't just give you a special icon on your profile page like the ""Developer Program Member"" badge? Having your profile broken like that hurts discoverability (specifically around finding projects like the one you linked above).
+",stuartpb,2015-08-20 05:10:55
+59,2015-08-20 05:16:57,"I removed the Bernie Sanders one because that is pretty edgy, per the discussion in the link, and doesn't represent the Scunthorpe problem.
+",minimaxir,2015-08-20 05:10:55
+59,2015-08-20 07:26:21,"@stuartpb I though it over, but I'd rather have the 502 which has greater impact because:
+- Google `cirosantilli` leads directly to my website page which contains all my projects
+- the front page is notoriously useless, with only 5 projects
+",cirosantilli,2015-08-20 05:10:55
+58,2015-08-19 16:23:47,"Example here: https://en.wikipedia.org/wiki/Billion_laughs
+",zach-taylor,
+58,2015-08-20 17:16:56,"That seems more like a specific script than a set of strings.
+",minimaxir,
+58,2015-08-20 18:21:07,"It's basically the XML equivalent of a forkbomb and it's part of a set of XML vulnerabilities which are very common because so many XML parsers don't include protection by default. (eg. the Python standard library is vulnerable and the docs say to use the `defusedxml` package from PyPI if you're parsing untrusted XML.)
+
+https://docs.python.org/2/library/xml.html#xml-vulnerabilities
+",ssokolow,
+58,2015-08-20 18:34:41,"Indeed! Microsoft Word (at least on Mac) crashes upon pasting the above example as plaintext.
+",zach-taylor,
+58,2015-08-20 18:39:14,"A Word crash makes sense since the modern versions are XML-based.
+
+Rethinking this.
+",minimaxir,
+57,2015-08-19 15:24:19,,dehrgg,2015-08-19 15:31:33
+56,2015-08-19 07:57:04,"In SQL you only need one `=` to check equality, and I added an extra character after the `--` part, because you need a space after that to make it work, but `trim` is usually used, so it is more robust this way.
+",ghost,2015-08-19 14:02:57
+55,2015-08-19 06:51:02,"Would a section for Date/Time values be a productive idea? To my knowledge, systems don't parse raw DateTime strings unless you explicitly say if it's a DateTime parser, and DateTime parsers don't take in raw DateTime strings, opting instead to use some sort of Date/Time selector widget on the client and doing the calculation on server.
+",minimaxir,2017-01-18 04:02:46
+55,2015-08-19 07:55:04,"Invalid dates like 2015-02-30 are also common source for hickups.
+",StephanErb,2017-01-18 04:02:46
+55,2015-08-21 21:08:34,"February 29th, 1900 is still a valid date in Excel but does not really exist.
+",andrew-hoffman,2017-01-18 04:02:46
+55,2015-12-03 19:54:48,":+1: 
+
+Additional dates to consider: [end of unix time](https://en.wikipedia.org/wiki/Unix_time#Representing_the_number), very distant future (e.g. 42424242-01-01), [leap seconds](https://en.wikipedia.org/wiki/Leap_second), and basically everything else in the [Time formatting and storage bugs](https://en.wikipedia.org/wiki/Time_formatting_and_storage_bugs) wikipedia entry.
+",breadtk,2017-01-18 04:02:46
+55,2017-01-18 04:02:46,Closing since accidentally made a dupe (https://github.com/minimaxir/big-list-of-naughty-strings/issues/117) which is cooler.,minimaxir,2017-01-18 04:02:46
+54,2015-08-19 02:18:44,"or other true/false checks that aren't sanitized.
+",pgrochowski,2015-08-19 03:36:40
+53,2015-08-18 16:23:08,"This is from a list of 666 XSS vectors that I collated at http://pastebin.com/48WdZR6L and some of them were relevant to this file.
+",sempf,2015-08-18 16:38:55
+53,2015-08-18 16:39:57,"Some of those XSS strings may be redundant with existing strings; although, XSS is a use case where it's better to be overkill.
+
+Also, thanks again for the blog post which helped inspire this list! :)
+",minimaxir,2015-08-18 16:38:55
+52,2015-08-18 16:13:38,"Sometimes you find python escape characters are accepted (and decoded) where they shouldn't be. E.g. something that only accepts alphanumerics goes on to accept
+\60
+because unescaped it turns into the character '0' but after validation is passed it gets stored as ""\60"", thus coming back to bite you when it's read back and not unescaped.
+",sitsofe,
+51,2015-08-18 14:52:43,"In reference to issue #48  
+Added different common decimal & thousands separators to Numeric Strings
+",Towerful,2015-08-18 14:58:58
+51,2015-08-18 14:53:16,"ps, not great at PR, so sorry if I got this wrong...
+",Towerful,2015-08-18 14:58:58
+51,2015-08-18 14:59:07,"Looks good to me. :)
+",minimaxir,2015-08-18 14:58:58
+50,2015-08-18 14:34:43,,intolerable,2015-08-18 14:43:07
+50,2015-08-18 14:44:03,"Note that this change will be broken the next time the JSON generating script is run. I'll add a manual change to the script.
+",minimaxir,2015-08-18 14:43:07
+50,2015-08-18 14:47:59,"ah, that makes sense
+
+in retrospect i should've checked to make sure it wasn't automated first
+",intolerable,2015-08-18 14:43:07
+49,2015-08-18 12:46:01,,radare,2015-08-18 13:40:24
+48,2015-08-18 10:17:08,"Many languages use the comma `,` to denote decimals, and the period `.` to denote thousands separation.  https://en.wikipedia.org/wiki/Decimal_mark  
+Is it worth, in the numeric section, having a variety of these:
+
+<S_CODE_TOKEN>
+
+whilst perhaps not naughty strings, a coder that is used to comma-denoted-decimal may be caught out.
+",Towerful,2015-08-18 15:01:01
+48,2015-08-18 13:03:31,":+1:
+",Rychard,2015-08-18 15:01:01
+48,2015-08-18 13:33:48,"Yep, sounds good to me. LOC testing is always good. :)
+",minimaxir,2015-08-18 15:01:01
+48,2015-08-18 13:59:09,"don't forget switzerland ;) :
+<code>1'000.00</code>
+<code>1'000'000.00</code>
+
+and additional to those at the top :
+<code>1.000.000,00</code>
+<code>1,000,000.00</code>
+",libwtf,2015-08-18 15:01:01
+48,2015-08-18 14:20:48,"There's also
+
+`1 000 000,00`
+
+and 
+
+`1 000 000.0`
+",Haroenv,2015-08-18 15:01:01
+47,2015-08-18 07:56:37,"|_(°͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌°͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌_°͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌°͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌)_|
+",A-t48,2015-08-18 13:36:46
+47,2015-08-18 13:36:46,"Although funny, I'm closing this one since a) it's affecting human usability and b) the excessive diacritics case is covered by the Zalgo Text
+",minimaxir,2015-08-18 13:36:46
+47,2016-05-05 03:33:05,"Hilarious X-D
+",aaronblenkush,2015-08-18 13:36:46
+46,2015-08-18 07:51:21," I apologize if it this doesn't count but one of my favorite/least favorite bugs is having random utf-8 byte order marker(BOM) mid file.  This is often caused by naively concatenating files together.
+",AndrewKL,
+46,2015-08-19 19:34:55,"[The presence of a BOM _anywhere_ in UTF-8 is a bug.](https://en.wikipedia.org/wiki/Byte_order_mark#UTF-8)
+",stuartpb,
+46,2015-08-19 19:37:07,"@stuartpb To quote the link you just cited (emphasis mine):
+
+> **The Unicode Standard permits the BOM in UTF-8**,[2] but does not require or recommend its use.[3] Byte order has no meaning in UTF-8,[4] so its only use in UTF-8 is to signal at the start that the text stream is encoded in UTF-8. **The BOM may also appear when UTF-8 data is converted from other encodings that use a BOM. The standard also does not recommend removing a BOM when it is there**, so that round-tripping between encodings does not lose information, and so that code that relies on it continues to work.[5][6]
+",ssokolow,
+46,2015-08-19 20:08:37,"@ssokolow Sure, I'm not saying it shouldn't be included in the corpus - just that it shouldn't be treated as a bug that occurs ""by naively concatenating files together"" (or that it shouldn't be stripped by anything that isn't expected to round-trip its exact input between encodings). Its root cause is software that adds a BOM to UTF-8, at _any_ point. See the text immediately following your excerpt:
+
+> The IETF recommends that if a protocol either (a) always uses UTF-8, or (b) has some other way to indicate what encoding is being used, then it ""SHOULD forbid use of U+FEFF as a signature.""[7]
+",stuartpb,
+46,2015-08-19 20:16:46,"@stuartpb However, that does not apply to many web applications because they accept ""plaintext"" generated by Microsoft applications or Google Docs.
+
+> Even so, Microsoft compilers[9] and interpreters, and many pieces of software on Microsoft Windows such as Notepad will not correctly read UTF-8 text unless it has only ASCII characters or it starts with the BOM, and will add a BOM to the start when saving text as UTF-8. Google Docs will add a BOM when a Microsoft Word document is downloaded as a plain text file.
+",ssokolow,
+46,2015-08-19 20:27:52,"@ssokolow Sure - we're talking about two different parts of the RFC, which apply to two different scenarios. If your data round-trips encodings without metadata, stripping the BOM is a bug; if it doesn't, _keeping_ it is a bug.
+",stuartpb,
+46,2015-08-19 20:35:15,"@stuartpb My point was that, ""The presence of a BOM anywhere in UTF-8 is a bug."" sounded like you might have been misinterpreting the way this case should be tested and, when you clarified, it still felt like you might have been misinterpreting... just in how the standard applied to the applications in question rather than what the standard said... something I no longer think.
+",ssokolow,
+45,2015-08-18 05:07:41,"Added ~ as it was absent in original file.
+
+Added INT_MIN/-1 and LONG_MIN/-1
+They cause SIGFPE due to overflow 
+",Maykeye,2015-08-18 06:30:11
+44,2015-08-17 18:59:12,"I am suggesting the creation of a library (JavaScript, Python, Java, C/C++, etc.) for sanitizing strings using the JSON file blns.json.
+",Luke-Diamond,2015-08-17 21:53:00
+44,2015-08-17 19:35:36,"It's not that simple. Often, problems arise after the sanitization/validation stage based on how the components of the systems interact and, if you just strip characters like that, you wind up with Fanfiction.net converting `100%` to `100` in posted chapters or various sites converting `O'Henry` to `OHenry` in form fields.
+
+Languages already have libraries for sanitizing stuff that's truly problematic and, for the rest, you really need functional tests which feed the data through the entire process to verify that it produced the proper effects. (And `blns.json` is specifically intended as easy-to-use input for those case-specific tests once you've written them.)
+
+However, what _would_ help is harnesses like the one I wrote for testing the heuristics in https://github.com/ssokolow/game_launcher where it's one test which, on failure, prints out a chart of all of the inputs which didn't produce the expected outputs.
+",ssokolow,2015-08-17 21:53:00
+44,2015-08-17 19:40:27,"Good point... I may fork the repo and try some tests regarding this (In javascript), but I had an idea of a more or less customizable library, that can selectively filter out the categories stored in the BLNS files (e.g. Reserved Words, Numeric, etc.) so it can be customized for each use.
+",Luke-Diamond,2015-08-17 21:53:00
+43,2015-08-17 14:41:41,,Luke-Diamond,2015-08-17 14:42:59
+42,2015-08-17 13:35:16,,LYF610400210,2015-08-17 14:06:13
+41,2015-08-17 11:32:03,,dushmis,2015-08-17 14:05:20
+40,2015-08-17 00:21:10,"For the 'Reserved Strings' category, can be used in string interpretation to wreak havoc, such as invalid escape character usage. Overall dangerous.
+",Luke-Diamond,2015-08-17 14:43:45
+40,2015-08-17 14:43:45,"Merge accepted in https://github.com/minimaxir/big-list-of-naughty-strings/commit/bdbcb6c4f12950ce2caa50865c8ae2a48572fcb4
+",minimaxir,2015-08-17 14:43:45
+39,2015-08-13 23:37:39,"https://en.wikipedia.org/wiki/Zero-marking_in_English#Zero_article
+
+Yet another reason why sentiment analysis is probably nightmarishly complicated.  Natural languages are the worst.
+",Gadal,2015-08-14 02:07:21
+37,2015-08-13 07:11:02,,kAworu,2015-08-13 07:16:47
+36,2015-08-13 01:27:16,"Some character encoding (euc-kr or ks_c_5601-1987) can't support this sentence.
+",hooriza,2015-08-13 02:34:08
+35,2015-08-12 15:57:14,,jlennox,2015-08-12 16:33:08
+34,2015-08-12 08:19:20,"Ref: #33
+",lazreg87,2015-08-12 14:03:12
+33,2015-08-12 07:48:26,"Add package.json so that repository can be added as dependency
+",lazreg87,2015-08-13 06:30:42
+33,2015-08-12 14:03:34,"Looks good to me. :)
+",minimaxir,2015-08-13 06:30:42
+33,2015-08-13 06:30:42,"Thank you
+",lazreg87,2015-08-13 06:30:42
+32,2015-08-12 06:39:56,"XXE attack. This particular string was written for OWASP (https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Processing)
+",rschoultz,2015-08-12 06:41:13
+31,2015-08-12 04:23:36,"As pointed out by this tweet - https://twitter.com/ThiceNL/status/623147453177589760
+",06b,2015-08-12 04:26:51
+30,2015-08-11 23:06:10,"Just a couple more XSS injection strings. 
+",ddworken,2015-08-12 04:05:27
+30,2015-08-12 04:05:27,"Added in https://github.com/minimaxir/big-list-of-naughty-strings/commit/409a74e2226d0162a08d3a773679014384c788fc
+
+Closing.
+",minimaxir,2015-08-12 04:05:27
+29,2015-08-11 22:54:33,,codeFi,2015-08-12 04:01:57
+29,2015-08-12 04:01:57,"Added in https://github.com/minimaxir/big-list-of-naughty-strings/commit/896a6faf4fe0c55d3a90e339e29ee1b36d30d7bf
+
+Note that the string shouldn't cause issues when displayed in iOS 8.3 and earlier. If there are usability issues, I will revert.
+",minimaxir,2015-08-12 04:01:57
+29,2015-08-12 17:41:50,"There are usability issues when the affected apps receive it. I believe it's helpful to test against it.
+",codeFi,2015-08-12 04:01:57
+29,2015-08-18 09:53:00,"What changed in the Hebrew? I can't spot it. Also, the bug in iOS is specifically when it's in a couple special types of text fields, IIRC those that resize for the text or something like that. Notifications being the prime example. Not just display, unlike some previous text display bugs (the older malformed Arabic thing, File:///, etc)
+",Michagogo,2015-08-12 04:01:57
+28,2015-08-11 20:53:37,"I have no idea why this keeps happening.
+
+I can't auto accept any files that show this because it might corrupt readability on the web. I can try to merge the PRs; worst case, I'll add the strings manually to my own copy and close the PRs.
+",minimaxir,2015-08-12 05:13:20
+28,2015-08-11 20:59:04,"Ah, it appears to be my fault: I broke it at https://github.com/minimaxir/big-list-of-naughty-strings/commit/b518990120a10f0555fdad23444f1ebecbbd6968
+
+I guess those strings were naughty indeed. I'll see if I can isolate. 
+",minimaxir,2015-08-12 05:13:20
+28,2015-08-12 02:19:59,"Per [Stack](http://stackoverflow.com/questions/6855712/why-does-git-treat-this-text-file-as-a-binary-file) [Overflow](http://stackoverflow.com/questions/777949/can-i-make-git-recognize-a-utf-16-file-as-text), the fix is to use a `.gitattributes` file. Commiting that now.
+
+Of note:
+
+> Git will even determine that it is binary if you have one super-long line in your text file. I made a long String span several source code lines, and suddenly the file went from being 'binary' to a text file that I could see (in SmartGit).
+",minimaxir,2015-08-12 05:13:20
+28,2015-08-12 02:59:51,"Unfortunately this means I have to invalidate some of the pull-requests made since then.
+",minimaxir,2015-08-12 05:13:20
+28,2015-08-12 03:46:09,"So the _actual_ cause was the presence of a null character (U+0000), as noted [in this Stack Overflow answer](http://stackoverflow.com/a/28145968):
+
+> ""Why is Git marking my file as binary?"" The answer is because it's seeing a NUL (0) byte somewhere within the first 8000 characters of the file.
+
+This is fixed with https://github.com/minimaxir/big-list-of-naughty-strings/commit/62066882b590d6acdfa1c3695eb38018d900c7b2 which looks like it did the trick.
+",minimaxir,2015-08-12 05:13:20
+27,2015-08-11 20:50:05,,bhberson,2015-08-12 03:57:27
+27,2015-08-12 03:57:22,"Added in https://github.com/minimaxir/big-list-of-naughty-strings/commit/4f0ad734237821a1a3723d798b2ec6c61820706f
+
+Closing.
+",minimaxir,2015-08-12 03:57:27
+26,2015-08-11 20:21:30,"Covering some basics of shell, Perl and printf(3), assorted strings
+that might be treated specially if a receiving program passes them to
+the wrong level of the API.
+",sgtatham,2015-08-12 03:55:00
+26,2015-08-12 03:55:00,"Added in https://github.com/minimaxir/big-list-of-naughty-strings/commit/26585a7641f09d97a58aacf3dd4602a24b02310a
+
+No, I can't count.
+",minimaxir,2015-08-12 03:55:00
+25,2015-08-11 18:28:49,"... single blank or trailing/leading blanks are missing, especilly "" "". Also ""%"" and ""_"" (SQL escapes)
+",ecki,2015-09-20 00:20:15
+25,2015-08-19 19:38:42,"Trailing blanks compromise manual usability of the file (they conflict with sensible text editor defaults). [See the ""Contributions"" section of the README.](https://github.com/minimaxir/big-list-of-naughty-strings#contributions)
+",stuartpb,2015-09-20 00:20:15
+25,2015-08-19 21:53:46,"No problem for the JSon file. You can even hex encode them.
+",ecki,2015-09-20 00:20:15
+25,2015-09-20 00:20:15,"Added in https://github.com/minimaxir/big-list-of-naughty-strings/commit/4fdd7318621f53e23030dd738687836ab91457f1
+",minimaxir,2015-09-20 00:20:15
+24,2015-08-11 18:17:25,"@0xabad1dea is known to break things with her name.
+",06b,2015-08-12 03:51:22
+24,2015-08-11 18:29:37,"Hmm, why is the diff file appearing as binary., like with #21 ?
+
+I may have to manually merge these PRs.
+",minimaxir,2015-08-12 03:51:22
+24,2015-08-11 18:44:24,"I don't know why github changed it to binary :/ 
+",06b,2015-08-12 03:51:22
+24,2015-08-11 20:39:45,"_sound of being unable to make this up_
+",0xabad1dea,2015-08-12 03:51:22
+24,2015-08-12 03:51:22,"Added in https://github.com/minimaxir/big-list-of-naughty-strings/commit/b021962ef57466cf741a35080167d9b1199cb889
+
+Closing.
+",minimaxir,2015-08-12 03:51:22
+23,2015-08-11 17:11:01,,sartak,2015-08-11 17:29:02
+22,2015-08-11 15:42:33,,JuanitoFatas,2015-08-11 16:28:19
+21,2015-08-11 09:13:01,,rickardnorlander,2015-08-12 03:27:50
+21,2015-08-11 14:02:05,"GitHub is telling me that there's zero line change in the diff, yet the lines are clearly different. Does this break the file?
+",minimaxir,2015-08-12 03:27:50
+21,2015-08-11 14:58:05,"According to Github, this commit turns the file into a ""binary file"" that the web interface refuses to display.
+",Michagogo,2015-08-12 03:27:50
+21,2015-08-12 03:27:50,"Strings added in referenced commits.
+",minimaxir,2015-08-12 03:27:50
+21,2015-08-12 10:55:48,"I guess git auto detected the file as binary because there were too many unprintables.
+",rickardnorlander,2015-08-12 03:27:50
+21,2015-08-12 14:13:15,"It was because I added a null string in https://github.com/minimaxir/big-list-of-naughty-strings/commit/b518990120a10f0555fdad23444f1ebecbbd6968 (see #28 )
+",minimaxir,2015-08-12 03:27:50
+20,2015-08-11 08:01:43,"One of my favourite naughty strings is invalid utf-8 - for example, a bare `\xff`.
+It's quite common to get 500s,etc on these as no-one ever bothers to check for unicode decoding errors.
+However, because JSON requires all strings to be valid utf-8, this example is only able to be included in the txt file.
+
+Would this be something worth including and adding a special case in the script to omit from the json?
+Or is it too naughty for blns?
+
+EDIT: This HN comment (https://news.ycombinator.com/item?id=10035738) suggested having the JSON file be of b64 encoded strings. This is a good suggestion, and allows arbitrary naughty bytes to be used, at the cost of readability.
+",ekimekim,
+20,2015-08-11 14:54:10,"I am open to a seperate .json file for b64 strings. I'll look into it today.
+",minimaxir,
+20,2015-08-18 17:16:51,"Bear in mind that base 64 represents _bytes_, not _strings_, and that strings always have an encoding. 
+
+[""It does not make sense to have a string without knowing what encoding it uses.""](http://www.joelonsoftware.com/articles/Unicode.html)
+
+There is no such thing as an invalid byte sequence; however, that sequence may or may not properly conform to an encoding. If you go the route of encoding the strings as base 64, you may need to consider encoding the string in a few different ways; say, ASCII if applicable, UTF8, and UTF16 (maybe ISO 8859-1 (Latin 1), Windows 1252 (Western European)?).
+",floyd-may,
+20,2015-08-18 17:21:01,"Yes, that's my point. Many systems assume all input is in a particular encoding (commonly utf-8) and may break if that is not the case. However, JSON cannot represent arbitrary byte content without some other form of encoding such as base64.
+I'll leave the bytes/strings distinction aside as it is an entirely semantic argument.
+",ekimekim,
+20,2015-08-18 19:22:45,"I disagree that the bytes/strings distinction is entirely semantic. Passing invalidly-encoded bytes versus pathological (but valid) cases that should be handled properly should behave differently in most systems. My vote would be to have each ~~string~~sample decorated in some way with its encoding (or null if it isn't valid). That way, invalid data (versus unusual data) can easily be identified. For example:
+
+<S_CODE_TOKEN>
+",floyd-may,
+20,2016-01-02 16:58:39,"I don't see the problem with JSON being limited to only valid text, when the text file is already only valid text... I mean, a byte equal to 0 is already forbidden, let alone nice combinations of broken UTF-8 or UTF-16 that would be interesting to have.
+
+Of course that would require to introduce some sort of escaping, which would require adjusting the file to the new format. I guess that if Max didn't introduce the list with that format there are other considerations I didn't realize, right?
+",suy,
+20,2016-01-02 17:19:30,"It's always possible to have two lists with the legacy-compatible subset being merged into the machine-readable version of the full list by the build process.
+",ssokolow,
+20,2016-01-02 17:42:24,"Just so that's clear, JSON does not require UTF-8 any longer, but valid unicode. The UTF-8 requirement is from an older version of JSON. 
+
+Doesn't change much about this topic, but it's worth noting. 
+",jfinkhaeuser,
+19,2015-08-11 07:48:53,"Signed-off-by: Chris Lamb chris@chris-lamb.co.uk
+",lamby,2015-08-11 14:51:57
+19,2015-08-11 14:51:57,"For usability, we can't use the antivirus strings. I've added a note to the README reflecting this.
+",minimaxir,2015-08-11 14:51:57
+19,2015-08-11 15:07:04,"Why not? Having the strings in the middle of the file shouldn't cause detection, as far as I know. Unless I'm misremembering, the EICAR test is defined as a file with the specific contents, not just a string.
+",Michagogo,2015-08-11 14:51:57
+19,2015-08-11 15:11:30,".. and GTUBE?
+",lamby,2015-08-11 14:51:57
+19,2015-08-11 15:14:51,"Not sure. Not very familiar with it. Also, may want to test with VirusTotal
+or something, since I'm not sure if it's actually implemented properly
+everywhere.
+
+On Tuesday, August 11, 2015, Chris Lamb notifications@github.com wrote:
+
+> .. and GTUBE?
+> 
+> —
+> Reply to this email directly or view it on GitHub
+> https://github.com/minimaxir/big-list-of-naughty-strings/pull/19#issuecomment-129924199
+> .
+",Michagogo,2015-08-11 14:51:57
+19,2015-08-11 15:32:56,"Since this project is so new, I am taking a more conservative approach toward potentially-breaking additions.
+
+Both EICAR and GTUBE would need multiplatform testing to make sure `blns.txt` doesn't flag antivirus software. If they pass testing, they can be added, but that'll take time.
+",minimaxir,2015-08-11 14:51:57
+18,2015-08-11 04:17:34,"Add EICAR test virus. Could set off AV scanners.
+https://en.m.wikipedia.org/wiki/EICAR_test_file
+",operator-DD3,2015-08-11 04:39:05
+18,2015-08-11 04:39:05,"For usability reasons, we probably shouldn't set off AV scanners.
+
+The [Hacker News Thread](https://news.ycombinator.com/item?id=10036744) implies that it sets off Windows Defender.
+",minimaxir,2015-08-11 04:39:05
+17,2015-08-11 01:46:54,"See https://docs.djangoproject.com/en/1.8/ref/utils/#django.utils.html.remove_tags
+",ataylor32,2015-08-11 01:52:17
+16,2015-08-11 01:45:58,"""DROP TABLE users"" should be replaced to avoid potential data loss.
+",ro31337,
+16,2015-08-11 08:13:22,"I don't get it - isn't that the whole point? User-given data should never be able to trigger a complete data loss
+",PhilLab,
+16,2015-08-11 08:56:36,"I would hope that with testing using these strings, the data and environment are expected to be expendable.
+",carbontwelve,
+16,2015-08-11 14:08:00,"Is there a better SQL command to indicate that something has happened server-size? UPDATE would lead to data loss as well.
+
+Maybe CREATE blns; ?
+",minimaxir,
+16,2015-08-11 18:38:45,"What if you are using blns to test a project which you don't have access to the database? For example, some companies have third party QA testers that might not have access to the database - so creating a table wouldn't allow them to verify if it was successful or not due to the fact they are testing the project as if it was a black-box. 
+
+However some sort of destructive action (so update or drop) could allow that QA tester to verify that it was successful. Updating another person's username, or completely removing them from a system that would show them in the UI would be a way for them to do so.
+
+I do agree with @carbontwelve on that testing using these strings should be done in the testing environment.
+",06b,
+16,2015-08-11 20:01:54,"Dropping a table is like checking a gun without bullets. It should not work, but just don't put it against your head while testing.
+
+ALTER TABLE users RENAME TO users_blns;
+
+should work in this case. Moreover, if you have foreign key constraints (usually you do), the table won't be dropped. If you renaming a table, you can rename it with existing foreign key constraints. We can leave drop syntax, but we should put ALTER TABLE above that.
+",ro31337,
+16,2015-08-12 08:16:28,"> Dropping a table is like checking a gun without bullets. It should not work, but just don't put it against your head while testing.
+
+Well that was much more eloquent than my comment. I agree with @ro31337 that there are additional SQL strings that belong in this list; due to there there being many SQL injection attack vectors.
+",carbontwelve,
+16,2015-08-19 08:34:57,"There are some more sql related issues that can be tested. like the % wildcard and the -- comment and the single and double quotes. 
+
+--edit found them sorry :+1: 
+",spidfire,
+16,2015-08-19 19:43:45,"I agree that another SQL injection should be included - not because the vulnerabilities exposed by this file should be tempered (as that would only be to assist a dangerous confusion of responsible practices), but because ""DROP TABLES"" is such a cliche in infosec that it's prone to be caught by extremely crude filters, naive to the degree that it's _the only class of SQL injection they know to avoid_.
+",stuartpb,
+16,2015-12-31 15:40:15,"there should be a test of DDL but also a test of mutation such as update or delete, since it's possible to deny DDL (via grant, and you should why should the app be able to do this at all?) usually but still be vulnerable to injection.
+",xenoterracide,
+16,2015-12-31 15:43:56,"> ALTER TABLE users RENAME TO users_blns;
+
+I'm not sure this will actually work in all SQL engines... DDL is actually fairly proprietary and not fully standard. That said, if it blows up you've still caught the bug
+",xenoterracide,
+16,2016-02-12 06:20:00,"I suggest leaving in meaningful SQL characters, but not inserting useful syntax and/or syntax that makes persistent changes.
+
+The following tests should break an application that fails to sanitize queries properly and may throw an SQL exception, which should be a good indication for any QA test without being potentially destructive. These also has the advantage of being engine and schema agnostic.
+
+<S_CODE_TOKEN>
+
+Along the same lines, security tests for SQL injection have some useful patterns as well, even though they aren't the same for all engines. The following strings should create an unusual delay in application response times if the application improperly sanitizes SQL queries.
+
+It should be noted that while most delay-based test vectors are innocuous, high CPU is a small risk if a function is called numerous times to create the delay, such as Benchmark().
+
+<S_CODE_TOKEN>
+",ryanohoro,
+16,2016-02-12 14:33:49,"side note, we should be sure to have a string with `--` I recently found a bug in our app where that's causing an exception because of lucene.
+",xenoterracide,
+16,2016-02-13 11:45:41,"I +1 this. I looked forward using this for pentesting, but having a DROP TABLE statement is not acceptable. We sometimes have to test production environments and it's common practice to check for interesting but non-destructive behaviors.
+",arisada,
+16,2016-02-16 16:38:47,"The strings are _supposed_ to be naughty and flush out errors. If you must run potentially dangerous strings against production systems, why not fork the project and create **big-list-of-naughty-but-basically-safe-strings**? I'm quite serious. Limiting the standard test suite everyone else can use simply because you're testing production and don't want to fully test it just doesn't make sense. (Perhaps I'm missing something?)
+",rmohns,
+16,2016-02-16 16:45:07,"Just to reiterate, my test vectors generate errors and out-of-tolerance conditions without making permanent changes.
+",ryanohoro,
+16,2016-02-16 17:10:14,"I don't see why your list has to contain dangerous strings, it makes it useless for real use, plus there are dozens alternatives that will catch the same mistakes without damaging anything. And I don't feel like forking it and following the main branch changes.
+",arisada,
+16,2016-02-16 17:49:35,"> I don't see why your list has to contain dangerous strings
+
+This repo is literally called ""Big List of Naughty Strings."" It should be expected that they are dangerous.
+
+I can't see why, under any circumstances, this would be pointed at a production environment.
+",mattgrande,
+16,2016-02-16 18:20:21,"Then expect a few merge requests with ""rm -fr /"" and ""reg delete /f SAM"" for completeness, I think ls'ing directories is too gentle.
+",arisada,
+16,2016-02-16 18:22:02,"@mattgrande To be fair, @arisada does have a point.
+
+Just because this shouldn't be used on production systems doesn't mean it should go out of its way to be harmful when there are more benign proof-of-concept cases available to choose from.
+",ssokolow,
+16,2016-02-16 19:44:03,"> there are dozens alternatives that will catch the same mistakes without damaging anything
+
+This is key. It's win-win. The goal is to reduce damages _in case_ something does go wrong, while not compromising the class of bugs you're testing for. Simply changing the table name from `users` to something like `__BLNS__TEST__TABLE__` should suffice.
+",parshap,
+16,2016-02-16 19:47:27,"CREATE TABLE pwned; would suffice
+",arisada,
+16,2016-02-16 19:59:13,"Huh, this blew up unexpectedly.
+
+Yes, I am in favor of replacing the DROP with a CREATE or something along those lines, and will merge a PR that does so.
+
+I'll note that the list is intended for QA and not pentesting, although there certainly is a lot of overlap. (E.g XSS)
+",minimaxir,
+16,2016-02-18 10:33:05,"This thread :+1: 
+",mikeres0,
+16,2017-01-15 21:08:13,"How about creating a new table with an identifier relating to the naughty string that created it, so that you notice the new table in the database and can specifically debug the issue with knowledge of which sets of characters probably caused it.",iitalics,
+16,2017-01-16 20:38:00,"Please stop the madness, you make Little Bobby Tables cry :/",pre,
+15,2015-08-11 00:56:02,"Browsers will ignore the ＜script＞, but if it's stored into a SQL varchar it get's converted into <
+",06b,2015-08-11 01:08:27
+14,2015-08-10 23:21:27,"I just made a connivence [module](https://github.com/hemanth/blns) and would like to add you as a maintainer on npm, if you could provide your npm ID that would be useful.
+",hemanth,
+13,2015-08-10 23:14:58,"https://code.google.com/p/fuzzdb/
+
+I'm not sure if it makes sense to effectively fork the project though.
+",untitaker,
+13,2015-08-11 02:09:06,"FuzzDB appears to have a very robust selection of injection strings. It makes sense to include a few of them (with proper citation)
+",minimaxir,
+12,2015-08-10 21:32:55,"- Negative number validation errors.
+- XSS attribute escapes without lt/gt/quote symbols.
+",jlennox,2015-08-10 21:37:45
+11,2015-08-10 21:18:43,,aesopwolf,2015-08-10 21:21:59
+10,2015-08-10 21:11:40,"Adds `nil` as a naughty string as well as the uppercased versions `NIL` and `NULL`.
+",mariusschulz,2015-08-10 21:17:39
+9,2015-08-10 21:07:56,,jwilkins,2015-08-12 02:58:30
+9,2015-08-11 08:53:48,":+1: 
+",carbontwelve,2015-08-12 02:58:30
+8,2015-08-10 20:51:41,"2 commits contain the follow additions:
+- Add numbers to detect poor decimal validation.
+- Add non-numeric Number types to detect poorly handled JavaScript validation.
+- Add backtick special character list because IE7 allows it as attribute quotes.
+- Add basic attribute escapes to XSS list.
+  *\* I used document.title to bypass the possibility of the single-quote being escaped. If we think this is a better testing method, we should adjust the existing XSS lines.
+",jlennox,2015-08-10 21:08:51
+7,2015-08-10 20:49:51,"Minor typo and grammar fixes to README
+",thebouv,2015-08-10 21:09:06
+6,2015-08-10 18:31:52,"These characters are 4 bytes when represented as UTF-8 and have caused me a world of hurt in a number of apps. 
+
+Sampling your existing other chinese it only appears to be 3 byte.
+",donatj,2015-08-10 18:43:01
+6,2015-08-10 18:33:33,"Interestingly even editing `𠜎𠜱𠝹𠱓𠱸𠲖𠳏` in githubs editor in Chrome was giving me trouble.
+",donatj,2015-08-10 18:43:01
+6,2015-08-10 19:45:06,"A great example where this causes pain is MySQL.
+
+MySQL can't handle 4-byte characters using `utf8` charset. You need to use `utf8mb4` instead.
+
+The [documentation](https://dev.mysql.com/doc/refman/5.7/en/charset-unicode-utf8.html) is really confusing, too:
+
+> It is implemented according to RFC 3629, which describes encoding sequences that take from **one to four bytes**.
+> [snip]
+>  A maximum of **three bytes** per multibyte character.
+
+So basically they're saying it's implemented according to RFC 3629, except that it's not.
+",jomo,2015-08-10 18:43:01
+6,2015-08-10 20:04:04,"@jomo Yep! For example trying to store most Emoji in MySQL will be a world of hurt too which I find really interesting.
+",donatj,2015-08-10 18:43:01
+5,2015-08-10 18:22:55,,foxdan,2015-08-10 18:43:12
+4,2015-08-10 17:50:02,"Start with shellshock
+",ejcx,2015-08-10 17:54:14
+3,2015-08-10 17:18:13,"Boolean keywords. Numeric constants in funny formats. More kinds of XSS. Malformed URIs. Very longs strings to overflow buffers. The empty string.
+",jimrandomh,2015-08-12 02:51:40
+3,2015-08-10 17:38:52,"Please remove the 1000+ character strings and I'll merge. 
+",minimaxir,2015-08-12 02:51:40
+3,2015-08-10 18:20:21,"Not having any long strings seems like a mistake; that is something that generally needs testing. What if the long strings were machine-generated from the txt_to_json.py, rather than inline in blns.txt?
+
+(The file is going to be hard to view no matter what. In fact, the first text editor I tried crashed on some of the unicode.)
+",jimrandomh,2015-08-12 02:51:40
+3,2015-08-10 18:46:02,"The intent of the list is to hit edge cases. Long text in itself is not an edge case.  (For smaller forms, like email and names, long text may be more of an issue; however, 100+ characters is more than enough to hit validation issues there. )
+",minimaxir,2015-08-12 02:51:40
+3,2015-08-10 19:30:33,"> The first text editor I tried crashed on some of the unicode
+
+Apparently the author is not testing against naughty strings :)
+",jomo,2015-08-12 02:51:40
+2,2015-08-10 17:13:21,"If we were using this in some kind of automation, the last thing I want is it to blow everything away by accident. Probably should fixup the sql injection one too...
+",abotsis,2015-08-10 17:39:16
+1,2015-08-10 16:19:54,"Add some common web stuff.
+",ejcx,2015-08-10 16:33:19

@@ -1,0 +1,2618 @@
+issue_num,datetime,body,login,mention_login
+2614,2017-03-16 13:03:57,"@alvarotrigo Thank you for the answer. But unfortunately it didn't work. I still can't scroll on ios devices. When i use destroy() it also removes the translate3d values, which i need in this moment (i just destroy when the footer is open, and rebuild after close, so the user dosent see any changes).
+
+Thanks. ",NONNNNN,alvarotrigo
+2599,2017-03-07 13:21:52,"@alvarotrigo Even in responsive mode?
+I agree that this behavior is normal in full screen mode.
+But when this mode is disabled to give way to the responsive mode. Ideally, the elements should respect their sizes and flows as a normal page. I guess ...",tmsilva,alvarotrigo
+2588,2017-03-01 16:28:38,@alvarotrigo - i am preparing a codepen here. since my site uses jquery and other common components are you are you saying you want me to copy and paste the entire source for jquery into the codepen? rather than just link to it?,propertunist,alvarotrigo
+2556,2017-02-10 15:07:25,"@alvarotrigo  
+Hello.
+
+ResponsiveSlides: false
+
+How do I not use responsive in sections like slides?
+I want to set the width / height to a fixed value.",l2zeo,alvarotrigo
+2552,2017-02-07 22:07:49,"@alvarotrigo I did it in another way. 
+
+    if (...) { 
+        $.fn.fullpage.setAllowScrolling(true); 
+    } else {
+        $.fn.fullpage.setAllowScrolling(true); 
+    };
+
+This way everything is working as expected on desktop and also on mobile emulators (for example from Chrome Dev. Tools), but on real device (android or iOS phone) I am still not able to scroll content inside of that div.
+
+Any suggestions?",munjiza,alvarotrigo
+2539,2017-02-02 17:47:35,"HI @alvarotrigo 
+
+1.You are right - its not relevant to the page header.
+2. steps to reproduce : just enter the input data and use TAB to navigate to the next section.
+   the content is not position properly
+3. I just re-checked now in another computer using  [the demo](http://codepen.io/anon/pen/qRozaN)  in chrome and FF 
+  Chrome 51 - position is in the middle / centered + no way to use mouse scroll to go to upper section
+  FF 47- position is in the lower section of the page +  no way to use mouse scroll to go to upper section
+
+
+best,
+elad
+",eladh,alvarotrigo
+2533,2017-02-01 18:38:09,"@alvarotrigo none of your examples or documentation have any mention of executing `$.fn.fullpage(...)` directly rather than calling it on an element such as `$(""#someid"").fullpage(...)` unless it's hidden somewhere i haven't searched yet, I know you have other methods on `$.fn.fullpage` , such as `$.fn.fullpage.whatever()`, but that's not what he's doing in his code.",tentonaxe,alvarotrigo
+2533,2017-02-01 18:47:07,"Mr. @alvarotrigo ,
+Would you prefer to upload it as subdomain(of my personal page) and see that from there? 
+1) It is easiest for me,
+2) It is complicate app and jsfiddle didn't support it or something did wrong.
+3) Codepen need money.
+https://jsfiddle.net/weblaravel/1nqzx3nc/
+this is my example
+Is my version old? Ok I will update it.",webspecialist,alvarotrigo
+2533,2017-02-01 20:24:29,"With the latest version the problem fixed!!!!
+
+Ιf you're curious about ... my page is http://onroad.vtsoulis.gr/all-categories-demo
+Is not completed yet... but thank you @alvarotrigo my part of my page will be awesome thanks to fullpage.js and you!!!!
+I am an unemployed web designer / developer ... I wish to had money to donate to your awesome work!!!
+Now the case is closed!",webspecialist,alvarotrigo
+2517,2017-03-15 12:55:11,"@alvarotrigo I have the same question. So I wan't to use Fullpage.js on mobile but disable it on screens wider than 800 pixels. 
+
+The docs only speak about disabling Fullpage on mobile, not the other way around. I can manually trigger the responsive mode with the `setResponsive` method but this seems weird.
+
+Is there another way I can achieve the desired effect? Thanks!",daviddelusenet,alvarotrigo
+2506,2017-01-17 05:58:26,"@alvarotrigo You're the best. Thank you for the immediately fixed. It works perfectly now. 
+
+p.s. there is another tiny problem(I'm not sure if other users report this problem, or just happen to me )  => when I set $.fn.fullpage.setAllowScrolling(false) or $.fn.fullpage.setAllowScrolling(false,'all')=>the pages still can move, when I set $.fn.fullpage.setAllowScrolling(false,'up,down') =>it works fine.",reinchang,alvarotrigo
+2499,2017-01-10 17:00:15,"@alvarotrigo - thanks so much. It certainly only makes sense when using Scroll Horizontally. I appreciate you considering it.
+
+Also I realized last night that if I really want this ""true narrative"" behavior, maybe I could just put my content into many slides within a single section, rather than multiple sections with several slides. There's something very nice, however, about having ""chapters"" of content.",etlingfs,alvarotrigo
+2496,2017-01-09 22:14:07,"No worries. I'll figure something out! Thanks @alvarotrigo !
+
+",yesiamben,alvarotrigo
+2494,2017-01-19 09:56:38,"@alvarotrigo, before I forget, I suggest that you should reconsider to create `scrollDelay` extensions, so each section can have any timing set before jump to prev/next section. Maybe something like this, `scrollDelayDown: """", ""1000"", ""4000"", ""2000""` to scroll down, and `scrollDelayUp: ""2000"", ""4000"", ""1000"", """"` to scroll up. 
+
+And with this, can reduce production timeline for animators as well. Just my 2cent. 
+
+Peace.",faliqaiman,alvarotrigo
+2482,2017-01-03 11:37:36,"@thisisfed you didn't mention anything about this extension before. 
+That's a totally different issue. In fact, I would say it is not possible at the moment.
+
+The [drag and move demo page](http://alvarotrigo.com/fullPage/extensions/drag-and-move.html) states that sections with scrollOverflow won't be scrolled by dragging. 
+And I would say neither any other `overflow:scroll` element. I'll add it into the demo whenever I can.
+
+[Contact me](http://alvarotrigo.com/#contact) if you want a refund. ",alvarotrigo,thisisfed
+2477,2016-12-29 19:32:34,"@alvarotrigo Cool thanks for the quick reply! I'll try that. Can you have navigation on the side, but not have anchor links in the url?
+",JeffAspen,alvarotrigo
+2477,2017-01-10 16:38:24,"@alvarotrigo Can you have navigation on the side, but not have anchor links in the url?",JeffAspen,alvarotrigo
+2455,2016-12-13 11:35:33,"@alvarotrigo sorry, edited, but still no luck with getting this to work...",niccolomineo,alvarotrigo
+2450,2016-12-08 15:58:30,"Hi @alvarotrigo, sorry, totally right, I have isolated the problem on this codepen, you can check the console log.
+
+http://codepen.io/adrianperez/pen/ObEQJE
+
+",a-p-co,alvarotrigo
+2450,2016-12-08 16:11:09,"Hi @alvarotrigo, I didn't need to change the original example, just added the onSlideLeave event to console the nextSlideIndex, if you saw the console you will see the undefined value.
+
+You need to go to the slider in order to have the error.",a-p-co,alvarotrigo
+2450,2016-12-08 16:21:31,"Ok @alvarotrigo! I will do that, thanks.",a-p-co,alvarotrigo
+2442,2016-12-07 11:01:54,"hi @alvarotrigo, I'm sorry but I don't understand what you expect of me. ",brokleen,alvarotrigo
+2408,2016-11-15 20:16:20,"Thanks @alvarotrigo it worked!
+",nikssardana,alvarotrigo
+2402,2016-11-15 22:20:41,"@meceware @alvarotrigo No it's not the same problem. I'm talking about the `video` element which is not `iframe` so that problem does not apply here.
+",jagi,alvarotrigo
+2402,2016-11-15 22:27:48,"@alvarotrigo thanks
+",jagi,alvarotrigo
+2402,2016-11-17 11:32:47,"@alvarotrigo yes seems to be a bug in Chrome. I will test if that's happening when I remove controls what was suggested in this discussion. But I will do it later today.
+",jagi,alvarotrigo
+2387,2016-11-08 16:23:07,"@thisisfed wrong file order. first jquery, after fullPage.js.
+look: http://jsfiddle.net/97tbk/1543/
+",kukac7,thisisfed
+2385,2016-11-08 12:37:33,"ok thanks @alvarotrigo  , its working 
+
+but i have one more doubt, shall we use same concept in scroll overflow sections, while bottom to top scroll its can always go to top of the section ?..
+",cvaraj,alvarotrigo
+2385,2016-11-08 12:41:03,"oh ok thank you @alvarotrigo  for supporting 
+",cvaraj,alvarotrigo
+2385,2016-11-08 12:53:02,"ok @alvarotrigo  i need it 
+",cvaraj,alvarotrigo
+2381,2016-11-17 11:15:54,"@thisisfed that sounds like a possible solution yeah. Although it wouldn't scroll within the scrollable element if you move the mouse away from it (although I can be ""focused"" after clicking in it).
+
+Also, I guess it would be better to make it optional. Some people might use `normalScrollElements` for elements without scroll bar, just as a way to prevent fullPage.js scroll with the mouse wheel and perform other actions (canvas, flash, their own javascript mouse wheel events...) but they might want to be able to scroll using the keyboard. 
+",alvarotrigo,thisisfed
+2375,2016-11-04 05:59:26,"Yes, I can confirm it works on ver. 2.8.6.  As for the inner scroll, I guess there's no other choice but use separate iScroll to init it manually. :) 
+
+Thank you for the help @alvarotrigo and also for making this awesome plugin!
+",fartymonk,alvarotrigo
+2372,2016-11-16 16:35:36,"@thisisfed sounds like a possible solution! Thanks for it I'll take a look at it for the next release.
+",alvarotrigo,thisisfed
+2371,2016-11-08 14:26:31,"I didn't try @jackmu95's demo, but I did notice a discrepancy in the original poster's code and the proposed solutions of #2129.
+
+> Now in my JS code I try different versions...
+> 
+> 
+
+According to [this comment](https://github.com/alvarotrigo/fullPage.js/issues/2129#issuecomment-244349467) in #2129, `jquery.fullpage.js` should be camelCase: `jquery.fullPage.js`
+
+So you end up with:
+
+
+
+Just swinging in the dark... maybe it helps.
+",jlmakes,jackmu95
+2371,2016-11-08 14:35:55,"@jlmakes I've tried it already and it didn't make any difference.
+@jackmu95 it's strange because exactly the same code does not work in my project. But when I've cloned your repository it actually works. I will try to investigate this problem later today.
+",jagi,jackmu95
+2355,2016-10-24 16:25:46,"@alvarotrigo because the browser immediately looks for the best fitting image (in the srcset) and loads it, ignoring the data-src attribute and the lazy load technique in the script and creates an own src attribute. The lazy loading has NO effect. It's even bad, because the image, which was chosen by the browser, got overwritten with the one defined in data-src. It's a problem with img and picture/source element as well.
+",EarlofArgyle,alvarotrigo
+2338,2016-10-20 14:42:02,"Hi @alvarotrigo,
+I encountered the same problem when I insert a link only with plain text, in desktop works correctly, but mobile, the links are not touchable.
+The strange thing is that I insert the link in image form, everything works perfect.
+Do you have any idea what is this bug?
+
+P.S.  I`m using dev branch
+",mktweb,alvarotrigo
+2320,2016-10-13 15:18:16,"Hi @alvarotrigo, the conflicts are resolved. Thanks for accepting the pull request!
+",publicJorn,alvarotrigo
+2314,2016-10-07 11:06:25,"@alvarotrigo  please tell some solution for that ..
+",cvaraj,alvarotrigo
+2301,2016-10-03 09:07:09,"@alvarotrigo thanks for answer this issue is closed, i know i was forcing fullpage.js philosophy and it's not designed to do this :)
+
+Thanks anyway for answers :) have nice day!
+",salvatorecriscioneweb,alvarotrigo
+2288,2016-09-28 23:24:02,"No problems @alvarotrigo, thanks for the quick response. Awesome plugin btw.
+
+The thread is here:
+https://github.com/vimeo/player.js/issues/34
+
+Basically this replaced froogaloop: https://github.com/vimeo/player.js
+",LetterAfterZ,alvarotrigo
+2285,2016-09-26 10:44:59,"Hi @alvarotrigo the config is the config:
+
+
+
+There's a possible relation with this?  http://stackoverflow.com/questions/37808180/disable-viewport-zooming-ios-10-safari
+",giacomoalonzi,alvarotrigo
+2285,2016-09-26 11:03:33,"@alvarotrigo if I remove thats options, the results is the same.
+",giacomoalonzi,alvarotrigo
+2285,2016-09-26 11:07:54,"@alvarotrigo i'm using ""fullpage.js"": ""^2.8.6"" installed with bower. 
+",giacomoalonzi,alvarotrigo
+2285,2016-09-30 11:19:18,"Hi @alvarotrigo thank you for your time. 
+The problem for me is still here. On iOS 10. Can I send you a private link of the project?
+
+Thank you.
+",giacomoalonzi,alvarotrigo
+2284,2016-09-23 16:52:34,"@alvarotrigo, yes.
+
+I've done a fix in the code, do you think it's appropriated to create a Pull Request?
+",jonatasoliveira,alvarotrigo
+2284,2016-09-29 15:44:41,"Sorry for the delay. @alvarotrigo I saw that you fixed with a different approach, thank for that!
+",jonatasoliveira,alvarotrigo
+2265,2016-09-16 15:36:45,"@alvarotrigo my bad. Don't know what got in my head, but I wasn't meaning to say 'iOS'. As you can tell, I've mentioned 'mouse' scroll multiple times.
+
+Check it in Safari on desktop please.
+
+Thanks!
+
+UPD: It seems to work in Browserstack, Safari 9.x on El Capitan. 
+
+But it doesn't work for a lot of people, on actual devices (MBPs, iMacs).
+",sergeitatarinov,alvarotrigo
+2244,2016-09-05 10:40:05,"Thanks a lot for it @faisalhmohd !
+Merged!
+",alvarotrigo,faisalhmohd
+2228,2016-08-27 23:59:54,"Thanks for the answer! @alvarotrigo 
+",pedroroccon,alvarotrigo
+2207,2016-08-17 20:31:14,"Thanks for it @sagech !
+",alvarotrigo,sagech
+2203,2016-08-16 23:49:22,"Thanks for it @ironprogrammer ! 
+",alvarotrigo,ironprogrammer
+2192,2016-08-24 14:06:53,"@alvarotrigo That's what I told myself afterwards.
+I'll look at that, thanks! :)
+",meneldil,alvarotrigo
+2164,2016-07-21 15:19:12,"@alvarotrigo hmm, like this? http://codepen.io/xadi/pen/wWmmZj 
+",arjamizo,alvarotrigo
+2156,2017-01-09 20:42:14,"@alvarotrigo - yes! I am using it currently. It is perfect, except for the above scenario, where I am using multiple sections, with slides in each section, and I want to be able to scroll from Section B, Slide 1, back up to to Section A, Slide 5, without a bunch of extra animations. Let me know if there is a better way of properly describing my desired behavior, I think I'm having a hard time putting it into words.",etlingfs,alvarotrigo
+2156,2017-01-09 21:30:08,"@alvarotrigo - OK, will do, thanks. I will upload an example as well. ",etlingfs,alvarotrigo
+2156,2017-01-09 21:48:30,@alvarotrigo - description of desired behavior is here: https://github.com/alvarotrigo/fullPage.js/issues/2499,etlingfs,alvarotrigo
+2149,2016-07-14 12:11:20,"This is a great piece of code. Nice one @alvarotrigo . I too am having a fix to top issue. If the content within the section is too big and i scroll up it fixes to the bottom of the section not the top which makes more sense to a reader. Please assist.
+",dilbot,alvarotrigo
+2149,2016-07-14 12:20:35,"Thx @alvarotrigo I found a solution on one of your old comments from NiklasLazinbee on Feb 25, but your bigSectionsDestination option aslo works :) Keep up the good work man. D
+",dilbot,alvarotrigo
+2118,2016-07-05 10:31:05,"so what should i do if i just want to scroll to one direction, i noticed onLeave method, but return false doesn't work ethier @alvarotrigo 
+",vincentism,alvarotrigo
+2118,2016-07-05 10:37:24,"I mean if,  on section 2, disable slide down, you can slide up, on the other sections, u can slide both up and down, how to realize it @alvarotrigo 
+",vincentism,alvarotrigo
+2117,2016-07-18 04:49:43,"@alvarotrigo, looks like this issue still happened on normal form elements, 
+
+for example:
+<input type=""submit"" name=""sendbutton"" id=""sendbutton"" class=""sendbutton"" value=""Submit"">
+
+in this case, the button still can not clickable.
+
+plz advise, thx!
+",jackyon,alvarotrigo
+2112,2016-06-23 14:30:53,"@alvarotrigo I think I posted my amended comment above literally as you closed this.
+
+Anyhow, that was the reason I destroyed it using matchMedia, all of the height and table-cell stuff was being imposed which was a little frustrating. I've just overriden it with CSS as necessary.
+
+Would that be your recommended approach or is there an option I am missing?
+",RealMakAttak,alvarotrigo
+2107,2016-06-20 09:47:23,"Hi @alvarotrigo,
+
+Thank you. I figured it out with your help, again. I know I'm not the most experienced coder in the world, that's why I so much appreciate your help and fast replies.
+
+I wish you all the best,
+Chris
+",chrisamsterdam1986,alvarotrigo
+2077,2016-06-07 21:16:48,"@alvarotrigo thank you very much for your quick response. Is there any demo for that which to refer ?
+",athimannil,alvarotrigo
+2071,2016-06-12 20:00:10,"@alvarotrigo here it is http://jsbin.com/conasaxuho/edit?html,js,output, but weird enough as it is, I can't seem to reproduce it. It's only happening on my end so I'll assume it has to do with my code in particular.
+
+I'm sorry, unless someone else can say this happens on their end too, forget what I reported.
+",NicolasJEngler,alvarotrigo
+2071,2016-06-15 18:27:36,"Hi,
+
+@NicolasJEngler  which link you provide its not working on mobile devices properly. 
+
+@alvarotrigo is there any way to disable  `scrollOverflow: true`   on mobile devices? 
+
+Let me know. 
+
+Thanks
+",sifulbd,alvarotrigo
+2071,2016-06-16 16:32:30,"@alvarotrigo Any update or salutation? 
+",sifulbd,alvarotrigo
+2035,2016-10-31 16:04:47,"Hi @alvarotrigo ,
+
+I have a similar problem on my site, where when I view it on my mobile I cannot click the links on the middle of the page, well, basically the links don't work. I have - scrollOverflow set to false.
+
+Using fullpage.js 2.8.7, tried using 2.8.8 and it didn't work. 
+
+
+
+For some reason, this link won't work.
+
+Here is the link to the page I am referring to: [http://stevenprinsloo.co.za/portfolio2/#secondPage](url) 
+",stevenprinsloo,alvarotrigo
+2032,2016-07-25 12:03:36,"@alvarotrigo Any chances to add this in the near future?
+",MaciejJanyska,alvarotrigo
+2020,2016-05-23 09:25:48,"@alvarotrigo okay, I can take a look at this issue and try to fix
+",Invizible,alvarotrigo
+2015,2016-05-19 18:32:29,"Thanks again, @alvarotrigo for your help :)
+
+Still wondering if there's a way to disable or hide the URL hash changes...?
+
+I'll just add a summary of my solution...  (and here is the page, if anyone is interested in seeing:  http://www.coffeerepublic.com.au/products/cafina/  -  just click on any of the ""Enquire"" buttons to see the anchor working)
+
+Basically, I needed to go through the loop of my ""product detail"" sections that appear above the ""Enquiry"" form section.  While the loop is going, I needed to add an incrementing ""data-anchor"" property to each section.  Once that was incrementing and adding a ""data-anchor=""product-detail-x"" to each one, then I could effectively link to the ""enquiry"" section (data-anchor=""enquiry"").  There was no need for an array of anchors in the ""anchors"" property of the fullpage.js function.
+
+So then because of my floating sticky header, (and the fact that fullpage.js wants to scroll so that the bottom of the anchored section hits the bottom of the viewport) - I needed to add a custom function in the ""afterLoad"" callback:
+
+
+
+The enquire section needed a unique ID different than the (data-anchor=""enquiry"") on that section in order for me to run a scrollTop on it.
+Also, ""headerHeight"" is obviously a variable that is set higher up - which basically takes a reading on how tall the header is.
+
+I don't know if that will help anyone, but that's what I had to do to get it to work.
+",JoshCarey,alvarotrigo
+1984,2016-04-26 16:10:58,"@alvarotrigo right, thanks.
+",pabloworks,alvarotrigo
+1964,2016-04-15 07:58:21,"Thank you for your attention. @alvarotrigo 
+
+Yes, you are right.
+The iframe I have put inside my web page is not full screen. And, I load the fullpage.js inside the iframe.
+Value of the _""display""_ property of the iframe is _""none""_ when the page is loading.
+I want to show the iframe after the web page has been loaded.
+
+However, when the page is loaded, the problem appeared：
+**1. there is no animation any more**
+**2. the ""#fp-nav"" does not appear**
+
+The _firebug_ shows that the program has been blocked at _line_ **2334** in file _jquery.fullPage.js_
+
+See my **live example** at codepen [fullPageBug](http://codepen.io/2016-liyi/pen/Wwzqvw).
+",ly2015,alvarotrigo
+1963,2016-04-16 02:31:46,"Hey @alvarotrigo just tried to implement that iscrollHandler... and now I cannot scroll at all. It scrolls o the next section everytime. Is there something I'm missing?
+",sogeniusio,alvarotrigo
+1926,2016-04-18 17:43:51,"@xho I had a look at your draft and wanted to comment on it regardless of your request, I hope you don't mind and most of all I hope you, @alvarotrigo don't mind.
+
+I think it would be better from a user experience point of view to have the controls for scrolling the sections up or down **not** to scroll with the sections.
+
+Meaning the controls should stay fixed at the top or bottom, left or right, while the section changes.
+
+I was trying to do just that and use a fixed element for navigation while not hiding content under that fixed element that is taken from the document flow through its fixed property. So I have come up with [a solution](https://jsfiddle.net/gvsasrnw/), though it is just a draft really, nothing more, you could surly improve on it. But it shows you what I mean regarding having the gallery controls (arrows in your case) at a fixed place.
+",monolux,alvarotrigo
+1918,2016-03-21 12:59:13,"Thanks @alvarotrigo, but I tried it and has the same problem. The example made by the author works even worst, cause the url doesn't change on section change. You can test it here: [example of Angular full-page](http://hellsan631.github.io/angular-fullpage.js/#/main)
+",mmautomatizacion,alvarotrigo
+1877,2016-03-09 11:59:31,"Hello @alvarotrigo   i have  change in 
+jquery.fullpage.js
+
+in function =createSlimScrolling(element)
+following value i have changed
+ element.find(SCROLLABLE_SEL).slimScroll({
+                        allowPageScroll: true,
+                        height: scrollHeight + 'px',
+                        size: '10px',
+                        alwaysVisible: true,
+                        wheelStep :5,   //this varible make scroll soomth
+                        touchScrollStep:8
+                    });
+
+thank for your support
+
+Now it working fine for me.
+",sagarjethi,alvarotrigo
+1854,2016-06-22 10:21:08,"Thank you so much @alvarotrigo  , that is a relief. Thanks again :)  
+",sohrabzia,alvarotrigo
+1854,2017-01-18 13:43:00,"I meet the same problem with sohrabzia. I have spend about 5 hours on it. If the problem is not solved, i will work night shift. Fortunately the answer of setting `fitToSection: false` works for me. I am really grateful now. @alvarotrigo  @sohrabzia ",SweetyBrittany,alvarotrigo
+1835,2016-03-04 11:37:56,"Hi @alvarotrigo. I've fixed this in my dev branch [here](https://github.com/nhylated/fullPage.js/commit/f715d9c49c433f12199f82e056276fff95765b99). Can I create a pull request?
+",nhylated,alvarotrigo
+1835,2016-03-08 09:49:58,"@alvarotrigo Done - #1885 
+
+Thanks!
+",nhylated,alvarotrigo
+1812,2016-02-05 12:21:38,"@alvarotrigo You were right. The problem was with that external JS was loaded and executed twice. Silly me.
+Have you been thinking about making some safeguards against such cases?
+Could be something like simple check if fullscreen has been already initialised and if so, just leave message in console log. We have destroy and rebuild functions at hand after all, don't we?
+",moffbot,alvarotrigo
+1809,2016-02-16 17:04:09,"@alvarotrigo, any ideas on this? Did some more test and didn't get any good results.
+",rodopoulos,alvarotrigo
+1809,2016-02-17 18:52:45,"@alvarotrigo Sorry about that, forgot to edit the locations. It's there now.
+",rodopoulos,alvarotrigo
+1804,2017-02-02 23:35:05,"In order to change the color of navigation dot, I overwrite css, but it doesn't work. Is that correct? How can I check why the color doesn't change.Thanks.
+`#fp-nav ul li a span, .fp-slidesNav ul li a span{
+	background: #fff;
+}` @alvarotrigo ",YvonneD,alvarotrigo
+1797,2016-01-31 13:45:51,"@alvarotrigo -- look here: [link removed because it was temporary]
+
+When you scroll down, every slide stops at the top of the slide - which is the intended outcome. When you are at the bottom, and you slide back up again, each slide stops at the ""bottom"" of the slide. Do you see what I mean?
+",Taapo,alvarotrigo
+1781,2016-01-21 21:31:56,"Hey, @alvarotrigo, so I think I _finally_ have a solution for this. The problem is I don't know why it works. Would you mind explaining why this works. Here's what I have:
+
+$(document).ready(function() {
+    $('#fullpage').fullpage({
+            fitToSection: true,
+
+
+
+});
+
+I know that ""return false;"" cancels scrolling. It's the only way I could get the fp-auto-height section to not scroll to the bottom. I thought for sure the following would work:
+                if(nextIndex == 5 && direction == 'down'){
+                                        $.fn.fullpage.setFitToSection(false);
+
+but it doesn't.
+",dsiglin,alvarotrigo
+1759,2016-01-11 10:32:24,"hello @alvarotrigo  can we use this  : https://www.npmjs.com/package/angular-fullpage.js ?? 
+",sagarjethi,alvarotrigo
+1753,2016-01-06 13:13:26,"@alvarotrigo sorry i was trying out the responsive option. Can you try now. 
+
+Any idea how to solve the issue of not able to see what am typing?
+",harshamv,alvarotrigo
+1752,2016-01-06 10:38:36,"Thanks for it @hang-qi! 
+I'll take a look at it. 
+
+fullpage.js didn't permit the use of bigger sections than the viewport in the past, so that's why this problem was there.
+",alvarotrigo,hang-qi
+1690,2015-12-02 17:22:53,"I've updated the demo with the new changes, looks good now :dancers: 
+
+Have you had a chance to look at it @alvarotrigo ?
+",rodriguez-alex,alvarotrigo
+1690,2016-02-17 21:21:44,"Hey @alvarotrigo any updates on this? Do we see a merge anytime soon? Thanks in advance.
+",rodriguez-alex,alvarotrigo
+1660,2015-11-20 16:36:15,"Hey @alvarotrigo, the reason you see the scrollbar come up is because you are swiping up rather quickly (we've done this test multiple times). If you scroll up slowly, then you will see that it stays disappeared. Us developers have gotten used to just rolling through things, ha!
+
+If you scroll down a little, then scroll up slowly, say if a user is reading or is trying to see details of something, OR if they scroll down a bit and notice they don't like the content and scroll back up then the bar will stay hidden.
+
+I recommend we also implement a check when the user switches between slides to verify the fp-section is the same as the innerHeight. As of now, we've manually added this into the afterLoad callback. This should be baked into the plugin. I'll add it into the develop pull request. Apologies on adding it to master here, first time doing a pull request :) Will update in an hour or two.
+",rodriguez-alex,alvarotrigo
+1655,2016-10-28 05:51:10,"@alvarotrigo i recently experienced the same issue on a recent project, but found a solution on stack overflow
+
+Issue: Upon scrolling vertically and horizontally on safari iOS, the content would appear only after 1 - 1.5 seconds. 
+
+Solution: added -webkit-transform: translate3d(0,0,0) to each fullpage section
+
+Solution Reference:  http://stackoverflow.com/questions/9807620/ipad-safari-scrolling-causes-html-elements-to-disappear-and-reappear-with-a-delay
+
+Hope this helps someone :)
+
+also @alvarotrigo is it possible for you to update the section class with fix?
+",daltonpereira,alvarotrigo
+1654,2015-12-14 08:34:30,"@alvarotrigo I have written [lethargy](https://github.com/d4nyll/lethargy), which detects 'scroll intents'. So scroll events fired by inertial / kinectic can be ignored. It's 612b minified, so if you'd like to integrate into fullPage.js, I'd be happy to help.
+
+@dsiglin @sv3k If you guys still have this problem, feel free to integrate [lethargy](https://github.com/d4nyll/lethargy) into your code. Just pass each scroll events into `lethargy.check`. [Demo](http://d4nyll.github.io/lethargy/).
+
+
+",d4nyll,alvarotrigo
+1654,2016-02-16 21:15:54,"@alvarotrigo did you ever integrate @d4nyll plugin to the fullpage - Currently have a big site in production but its only flaw is on macbook the freescroll areas is just wayyyy too sensitive.
+",REPTILEHAUS,alvarotrigo
+1633,2015-11-05 13:29:13,"Thanks @alvarotrigo - alas, no dice as I think it fires before the inertia has stopped:
+http://codepen.io/iamkeir/pen/xwaVeX
+
+I'm just having a look at ways to detect when scrolling has finished, but it all feels rather hacky:
+http://james.padolsey.com/javascript/special-scroll-events-for-jquery/
+http://stackoverflow.com/questions/4339196/how-to-detect-disable-inertial-scrolling-in-mac-safari
+",iamkeir,alvarotrigo
+1575,2015-11-21 14:20:45,"Just came across this problem and found this solution. Phew!
+
+Thanks for the suggestion @alvarotrigo 
+",xavianaxw,alvarotrigo
+1570,2015-10-04 20:02:31,"Thanks for it @d13! Looks good!
+Although, not sure why you made that many changes in the CSS file. It seems like you changed the order. Why? Oh, and the indentation as well. 
+
+I saw you also changed the absolute links to relative ones in the documentation such as this one:
+
+
+
+Could you revert those changes as well? Keeping them absolute helps in case some sites copy the readme content into theirs or even for sites such as [npmjs](https://www.npmjs.com/package/fullpage.js) which extracts the docs from github. I prefer them to always link to the github docs.
+
+If you revert those last changes and the CSS ones I'll merge it.  Feel free to create a new pull request for clarify. 
+",alvarotrigo,d13
+1570,2015-10-06 14:57:17,"@d13 I'm not used to work with sass or scss but there's something wrong on the gulp file.
+
+You said in the read me
+
+> // Only compile the SCSS
+> gulp scss
+
+But `gulp sass` is what its required instead.
+Not quite sure what are you doing there though. 
+",alvarotrigo,d13
+1570,2015-10-06 16:47:09,"@d13 what are you really doing with the SCSS file? Compiling it to `.css`?
+
+In that case we should better get rid of it, as I usually work directly on the CSS file. I have the SCSS for other developers who might be interested in playing with it. 
+",alvarotrigo,d13
+1570,2015-10-06 18:07:54,"@alvarotrigo - Yes, the `sass` task compiles the SCSS to `.css`. If you're providing a SCSS file, you should provide the means to build it in the way you expect the final CSS to look. 
+
+What I suggest as a middle ground is to remove it from the `default` task and just have the developer run the sass task manually before running the compression tasks.
+",d13,alvarotrigo
+1569,2015-10-03 08:56:58,"@alvarotrigo ok thank you, i will try the options you suggested. 
+",arj-196,alvarotrigo
+1548,2015-09-26 20:04:51,"@alvarotrigo is such behavior documented anywhere?
+",Hast,alvarotrigo
+1543,2015-09-26 15:48:04,"Thanks for it @rmarscher  I'll take a look whenever I find some time for it.
+",alvarotrigo,rmarscher
+1543,2015-10-09 22:57:15,"@rmarscher don't you need `mouseWheel: true` for your [iScroll gist](https://gist.github.com/rmarscher/5f3a62b960f5f903a6af#file-iscrollhandler-js-L50)? 
+
+Check out [this demo](http://jsfiddle.net/Lehqx9ne/5/) I made. It won't scroll unless you turn it on. 
+
+But if you turn it on, then [fullpage.js doesn't catch the mouse wheel events](https://github.com/cubiq/iscroll/issues/980).
+",alvarotrigo,rmarscher
+1543,2015-10-10 02:36:19,"@alvarotrigo If I recall from the project that used this, I had `overflow-y: scroll; -webkit-overflow-scrolling: touch;` on the #wrapper here and only used iScroll for touch handling.
+",rmarscher,alvarotrigo
+1543,2015-10-13 10:26:55,"@rmarscher  Yeah, that will show a default scroll bar. Which looks ok for Mac, but not for Widows. 
+In any case, it might be nice to provide iScroll as an option in case someone is interested I guess. 
+",alvarotrigo,rmarscher
+1543,2015-10-26 15:59:02,"iScroll project doesn't seem very active anymore either. I got no response on [the topic I opened](https://github.com/cubiq/iscroll/issues/980) and it seems the only way of adding it to fullpage.js would be to use a normal scroll bar for windows devices.
+
+You can use the GIST that @rmarscher provided and make use of the `dev` version of fullpage.js where the pull request was merged. 
+",alvarotrigo,rmarscher
+1530,2015-09-21 15:10:34,"As mentioned in #1499, I temporary big use `fitToSectionDelay`. 
+
+But sections are still cropped (when they are bigger than the viewportY) and it didn't change anything. How can I disable it?
+
+Thanks @alvarotrigo.
+",archasek,alvarotrigo
+1522,2015-09-21 07:51:17,"@kaiserhase How are you loading content into your app? Are the slides initializing with ng-repeat? I [made an angular directive](https://github.com/hellsan631/angular-fullpage.js) that might interest you, and should cover most basic support for using fullpage with angular. I've been able to solve some issues, but the one I have trouble with is dynamic DOM changes and how to react to them.
+
+Angular can dynamically change the DOM based on what ever events the developer wants. In order to react to these changes, I currently have to [destroy and re-initialize](https://github.com/hellsan631/angular-fullpage.js/blob/master/angular-fullpage.js#L25) the entire plugin. I've looked at the docs for `$.fn.fullpage.reBuild()` and I would imagine this might work, but I haven't had any luck with it actually updating the DOM structure. 
+
+Example: I want to bind a click event to a button that adds a slide dynamically on page. In order for fullPage.js to recognize that this new slide (added to the DOM after a click event) exists, my thoughts are that I should be calling `$.fn.fullpage.reBuild()` instead of `destroy('all')`, correct?
+
+Yet when I do this, nothing happens. Currently, I am using a work around that tracks the current page/slide and after a destroy/build cycle, it will move to the last page/slide, but this takes up several plugin functions and the animations still happen (even though i'm using a silent move-to for some reason). 
+
+An example of this can be [found here](http://hellsan631.github.io/angular-fullpage.js/), under second slide.
+
+Any insights into this, @alvarotrigo?
+",hellsan631,alvarotrigo
+1499,2015-09-15 14:35:02,"@adammcarth I'm not sure what are you talking about :) 
+",alvarotrigo,adammcarth
+1499,2015-09-15 14:39:05,"Thanks for thinking of me though @alvarotrigo. Good work people. That's some fine issue solving.
+",adammcarth,alvarotrigo
+1498,2015-09-09 22:16:51,"Thanks, @alvarotrigo! I'm sure maintaining this library is a lot of work. I hope this helps.
+",rmarscher,alvarotrigo
+1498,2015-09-18 09:25:09,"Hi @rmarscher, can you please create a new branch with it? 
+I'll merge it there to keep working on other features for the next release. 
+",alvarotrigo,rmarscher
+1498,2015-09-21 22:06:29,"Hi @alvarotrigo - sorry it took me a few days to respond. I removed the .editorconfig file from the project. But I would recommend adding it as it helps contributors preserve your line endings and indent-style.
+
+I don't think I have permission to create a new branch in this repo. I think you would need to create and push the branch. Then I can close this pull request and submit a new one against that branch. Let me know once that has been done. Thanks!
+",rmarscher,alvarotrigo
+1497,2015-10-22 18:00:13,"@alvarotrigo the project is a bit too big for me to do that, also - lazy. What I did was remove the map and it doesn't scroll to the next segment, although if you scroll on the map then it scrolls.
+",vectorman1,alvarotrigo
+1491,2016-06-29 14:29:24,"@alvarotrigo 
+Hello.
+use **lockAnchors: true** if you are using data-anchor and want to hide #code from url.
+Thank You so much its saves my time.
+",krishna-shah,alvarotrigo
+1491,2016-06-30 10:37:40,"@alvarotrigo 
+
+Hello,
+
+http://dev.saucacollection.com/#collection 
+**and I want** http://dev.saucacollection.com
+
+I was using data-anchor that's why when page scroll down URL will be change with # code and I don't want # code display in URL.
+
+**lockAnchors: true**  this argument remove #code from the url.
+
+so my issue is short out now.
+",krishna-shah,alvarotrigo
+1491,2016-07-02 00:09:41,"hi !   @alvarotrigo alvarotrigo ,  i have ...
+
+
+",apositivo,alvarotrigo
+1474,2015-08-27 20:29:44,"
+
+@alvarotrigo 
+",misterzik,alvarotrigo
+1473,2016-08-17 22:19:41,"@alvarotrigo Thanks for the response.
+",timgaines,alvarotrigo
+1471,2016-02-25 16:23:05,"@alvarotrigo I still seem to have the issue described above. As soon as I scroll, either by clicking an anchor link or by using the scroll wheel, the anchor links become unclick-able until I reload the page.
+",mhoffmann98,alvarotrigo
+1464,2017-02-16 17:04:15,@alvarotrigo This partial first section design can now be implemented with the Offset Sections extension right? ,brianecook,alvarotrigo
+1454,2015-08-23 16:36:46,"@alvarotrigo I'm sorry, I wasn't clear enough.
+
+I needed stop scrolling the sections at 60px from the top, but changing the css to do that also affects the bottom, overflowing in 60px because the wrapper has 100% of the viewport.
+
+So I change the code adding the ""offset"" option with value 0 by default.
+
+Then I change this:
+ var windowsHeight = $window.height();
+
+To this:
+ var windowsHeight = $window.height() - options.offset;
+
+and in the function ""init()"" I added:
+if (options.offset) {
+    container.css(""top"", options.offset);
+    container.height(container.height() - options.offset);
+}
+
+This solved my needs.
+
+Cheers,
+Alexandre.
+",alexandretperez,alvarotrigo
+1444,2015-08-14 10:10:35,"Thanks for the direction @alvarotrigo 
+",Valentine-Mick,alvarotrigo
+1431,2015-08-10 16:38:08,"Thanks @alvarotrigo, by removing the anchors array completely, it no longer works (I have updated) am I missing something?
+",richgcook,alvarotrigo
+1422,2015-08-06 20:47:43,"@alvarotrigo Thank you for the reply, and for maintaining this project. I'll try digging into slimScroll. 
+",eystein,alvarotrigo
+1413,2015-08-03 20:23:42,"thanks @alvarotrigo , that works.
+",kylerbeetun,alvarotrigo
+1401,2015-08-03 16:54:49,"@alvarotrigo - Thank you!!
+",jephjohnson,alvarotrigo
+1396,2016-01-12 13:24:00,"@alvarotrigo sorry, it is a bit strange, because, if you will load your script synchronously at the html body i guess this condition will always return true (document.readyState != ""complete""). But if you require(fullpage.js) asynchronously it is mean that sometimes, fullpage.js might be required after LOAD event fired.
+",spalax,alvarotrigo
+1394,2015-08-07 18:11:09,"@alvarotrigo we're referring to @imoses offering to share his simple fix for this problem if anyone was interested
+
+""I couldn't figure from the original issue if it has been solved or simply closed. If anyone needs a solution please contact me, I've create a really simple solution locally and I'm willing to share :)""
+",tulsadome,alvarotrigo
+1389,2015-08-12 11:14:59,"Thanks @alvarotrigo for the help.
+",richgcook,alvarotrigo
+1389,2015-08-12 12:12:07,"so weird, it only became an issue when I updated O.o
+
+Thanks @alvarotrigo 
+",larrybotha,alvarotrigo
+1389,2015-08-17 10:52:48,"thanks for taking care @alvarotrigo !
+",gerhard-boden,alvarotrigo
+1389,2015-08-24 17:39:25,"Hey @alvarotrigo , the fix is great! However, it now breaks silentMoveTo functionality. It always scrolls. It's in the demo provided in the documentation as well.
+",rodriguez-alex,alvarotrigo
+1389,2015-10-11 18:05:56,"@alvarotrigo I have downloaded the latest release yesterday, i.e on 10/10/2015 and the gif is from the latest version.
+",acachary,alvarotrigo
+1389,2015-10-11 18:37:08,"@alvarotrigo with both, a few sections and a couple of slides. http://ananyaacharya.com
+",acachary,alvarotrigo
+1389,2015-10-12 17:35:26,"Thank you @alvarotrigo for the help, but I have the latest script of fullpage.js and I have tested www.ananyaacharya.com on four other machines with Chrome v45 and I'm seeing the same issue.
+",acachary,alvarotrigo
+1385,2015-07-23 10:52:30,"@alvarotrigo ended up creating my own :-) its a css snap point polyfill (internal)
+",darkyen,alvarotrigo
+1375,2015-07-19 11:08:12,"Sorry @alvarotrigo , I think that's my minification settings ripping all comments out - certainly not deliberate.
+
+Anyway, it appears that it was a conflict from another plugin causing it (jquery lightbox). I've corrected the code and also reinstated the licencing :+1: 
+",robhadfield,alvarotrigo
+1319,2015-06-23 08:54:46,"Thx for the advice @alvarotrigo, but the page I'm building actually requires `verticalCentered` to be set on true, as I want my content to be in the middle of the page. The `paddingTop` option seems to have the vertically centred div compensate for the offset, while with just using a CSS class it doesn't compensate.
+
+I ended up using a padding-top on the body (to solve another issue specific to my layout as well). You can see it here: http://maximum.com/offices/shanghai/virtual-tour 
+",jonasva,alvarotrigo
+1268,2015-06-02 02:55:05,"@alvarotrigo  
+Hi. I really love your art. this should be called as an art. .. I'm not at all related to this field, by which I meant codings, programmings. I'm not even a designer, I 'm just a painter. 
+
+I love your script, and used it for my website. with pagepiling.js, but since it doesn't support for the mobile to scroll on long section i was looking for a solution. and then, now I found this fullpage.js that has the scrollable feature working perfectly.
+
+## 
+
+I found that, that pinch thing works totally fine on ""normal scroll demo"". 
+and I found fullpage's feature that automatically moves the section to fit on the screen after a few seconds. 
+
+So I think , if I could setup that 'a few seconds' like 0.1 millie secs, and then make that 'fitting-to-the screen-feature' to active immediately after touch fingers are off the screen. 
+
+I imagine this would, work pretty much like non-normal-scroll-demo pages, but I can still use the pinch zoom, and double finger events... 
+
+ (hope what I'm saying is understandable. english is as hard as html things.) 
+",junghoon-lee,alvarotrigo
+1268,2015-06-29 23:05:10,"@alvarotrigo Maybe if scale > 1 just turn swipe off? Because you can zoom by double tap, but then can't comfortably view the slide.
+",f0rmat1k,alvarotrigo
+1268,2016-12-20 21:37:40,@alvarotrigo did you ever try this?,waissbluth,alvarotrigo
+1244,2015-05-22 16:50:03,"@alvarotrigo Sure, there you go: https://github.com/alvarotrigo/fullPage.js/pull/1246
+
+I actually didn't do it before for the shame. ;)
+",gyopiazza,alvarotrigo
+1237,2017-02-02 17:59:09,"Hi @alvarotrigo 
+
+Just to make sure - if i want to use fullPage.js section that contain a Form and my users need a Keyboard Accessibility support to navigate from section to section -> this is not an option ? 
+
+also i added the scrollBar:true and still using the tab still got this issue",eladh,alvarotrigo
+1221,2015-05-17 07:11:22,"@alvarotrigo I emailed you a (private) link to the page you can test it at. Please check your inbox at alvaro@alvarotrigo.com.
+
+I don't have this bug at the demo page.
+",Markovnin,alvarotrigo
+1221,2015-06-18 15:22:49,"Hi, just stumbled upon this.
+
+@alvarotrigo If you add the variable 'scrollindSpeed' to the jsfiddle you provided, for example 300, it shows what goes wrong. I'm having this issue as well.
+",iamswain,alvarotrigo
+1221,2015-06-18 17:26:34,"@alvarotrigo All good, removed the scrollingSpeed due to the fact it wasn't necessary. Just thought I'd point it out. ;)
+",iamswain,alvarotrigo
+1194,2016-04-21 16:38:46,"@alvarotrigo, i never said it was a fullpage.js issue :)
+Just trying to find a way to trigger the scroll when i want. 
+Anyways, thanks for this library !
+",ludovicpages,alvarotrigo
+1194,2016-04-21 17:09:02,"@alvarotrigo Awesome.
+Actually, this is is the kind of logic i was working on afetr reading your previous comment.
+There is a typo, you're setting animationIsFinish = true, but the var is animationIsFinished
+Thanks a lot @alvarotrigo , it works great !
+",ludovicpages,alvarotrigo
+1194,2016-05-10 05:43:17,"@alvarotrigo I tried using `onLeave` and yet still the delay is not working. Your answer at [stackoverflow](http://stackoverflow.com/questions/36176677/fullpage-js-adding-a-scroll-delay/36182162#36182162) helped but it just happen one time only.
+
+And also I create a reproduction for my issue, and I've add fancybox plugins to see how it work. I've come out with [jsfiddle](https://jsfiddle.net/t3yzu3gs/3/) and also in [codepen](http://codepen.io/anon/pen/vGbqVG), but it show two different output. There's something worng with codepen, I guess, or Im doing it in a wrong way haha..
+
+In jsfiddle, I structured by referring all your tips and trick from fullpage and stackoverflow. But in first section, I supposed when scroll down to next section, should wait the fancybox popup finished the effects but it just directly go to next slide while the effects is still running. Plus when I try on localhost version, everything is not like what I did in jsfiddle. Can you show the tricks for this one. Thanks.
+",faliqaiman,alvarotrigo
+1194,2016-05-10 09:42:12,"ok noted @alvarotrigo 
+",faliqaiman,alvarotrigo
+1168,2015-04-23 11:17:52,"@alvarotrigo Is not already registered is also of the same name? Please try to here as a reference. https://quickleft.com/blog/creating-and-publishing-a-node-js-module/
+",sugarshin,alvarotrigo
+1166,2015-04-22 14:30:30,"Thanks for it @d13 ! I'll review it whenever I have time!
+Could you please commit again the changes in the CSS file again? Right now it seems indentation got changed or something similar and I can not clearly see the changes because all lines are reported as new.
+",alvarotrigo,d13
+1142,2015-09-23 06:48:05,"Excellent **@alvarotrigo** ... It works like a charm...
+",areddyprasad,alvarotrigo
+1107,2015-03-24 20:37:39,"@alvarotrigo Is there some alternative that I can do? Can you do me a custom job?
+",magentapose,alvarotrigo
+1104,2015-03-24 15:24:15,"@alvarotrigo Thanks a lot - but what will that last setScrollilngSpeed do? I understand the first one, but why the second one?
+",magentapose,alvarotrigo
+1096,2016-09-07 10:59:32,"@tomByrer  jsdeliver still sin version 2.5.9 when the current one is 2.8.6. (which is almost 30 releases old)
+No idea why this is happening. I am already providing the `dist` folder with the minified CSS file.
+",alvarotrigo,tomByrer
+1095,2015-03-21 22:34:36,"@tomByrer yeah, but that is not showing older versions of other browsers such as Opera 12 and so on. 
+I guess, that the best thing is to keep them just in case, as they wont harm anybody :)
+",alvarotrigo,tomByrer
+1076,2015-03-13 13:01:14,"@alvarotrigo im´m testing on this page www.boostyourknowledge.com.br/mnb2015 and you can see the script at  www.boostyourknowledge.com.br/mnb2015/js/custom.js
+",olavocarvlho,alvarotrigo
+1070,2015-03-11 16:14:18,"@alvarotrigo Thanks, that seems to make it work better on Mac trackpad. Oddly though I am noticing it will most of the time scroll twice JUST on the first scroll. 
+",louiswalch,alvarotrigo
+1070,2015-03-14 15:50:08,"Thanks @alvarotrigo, slowing down the speed seems to have made the problem go away.
+",louiswalch,alvarotrigo
+1066,2015-03-09 15:32:54,"@alvarotrigo Definitely agree with combining the constants rather than having combined constants, unless the combination really defines something that should be uniquely addressable (and used repeatedly).
+",eamodio,alvarotrigo
+1066,2015-03-09 16:28:10,"@alvarotrigo @eamodio - agree with individual constant variables and also separating combo selectors where used sparingly.
+
+For selectors like 'body' and 'html, body', I think those should just be declared once and as jQuery objects since those shouldn't need to be re-looked up in the DOM.
+",d13,alvarotrigo
+1066,2015-03-09 22:17:15,"Yeah, sounds reasonable. 
+I would prefer to use a single word for selectors, as they are used more in the code, but I think that adding the SEL prefix or postfix will be better in terms of readability. So I agree with you.
+
+@d13 if you can update to the latest versoin 2.6.0 and make another pull request based on this comments I'll merge it.
+And It would be great if you could create another PR for [the pure javascript version of fullpage.js](https://github.com/alvarotrigo/fullPage.js/tree/master/pure%20javascript%20%28Alpha%29)! :)
+",alvarotrigo,d13
+1066,2015-03-10 12:07:16,"@alvarotrigo this should be good to go
+",d13,alvarotrigo
+1035,2015-02-19 21:20:22,"@alvarotrigo, basicly, it's proof-of-concept implementation of mentioned problem. Of course it should be better-written by you.
+",ivankravchenko,alvarotrigo
+1031,2015-02-19 21:03:54,"Thanks @alvarotrigo.
+",josiahwiebe,alvarotrigo
+1029,2015-05-19 19:56:52,"Hi Simon, 
+
+Did you do anything else to js? I still cannot get it to work for two. 
+
+@simonschaufi @alvarotrigo 
+",thekennysong,alvarotrigo
+1010,2015-02-27 11:18:15,"@alvarotrigo Not that helpful, I want to know how he solved the 'mousewheel' being disabled on resize. And what he did to solve the 'Uncaught TypeError: Cannot read property 'top' of undefined'  error.
+",richgcook,alvarotrigo
+1010,2015-02-27 11:22:40,"@alvarotrigo This wasn't necessarily about your answer or plugin, I was asking him directly how he solved this specific part.
+",richgcook,alvarotrigo
+1010,2015-02-27 11:25:35,"@alvarotrigo And I was asking him directly if he solved it? Can't you let me be?
+",richgcook,alvarotrigo
+1010,2015-02-27 14:28:56,"@richgcook the issue was my js was firing destroy too much, which resulted in the 'Uncaught TypeError'. I resolved it by setting a conditional to check if waypoints had been initialized before firing the destroy function.
+
+As @alvarotrigo said the destroy on resize was resolved in the latest version update. 
+",peterph-am,alvarotrigo
+1002,2015-02-12 16:26:30,"Hi @rzamoramty , I've tested your form on mobile and it works pretty well now ... may you tell me how you figured it out ? Or maybe @alvarotrigo you can do something for me ?
+I've been trying to find a solution but couldn't find it...
+
+Here's my website www.premium-conciergerie.com/pro (check the ""Contact"" section on mobile)
+
+Thank you in advance
+Rom
+",rorodezign,alvarotrigo
+962,2015-03-17 12:27:49,"@Jhony0311 there was some changes in the CSS regarding the navigation bullets.
+If you update your SCSS I'll merge it.
+",alvarotrigo,Jhony0311
+962,2015-03-20 04:04:49,"Hey @alvarotrigo I have updated the stylesheet
+",Jhony0311,alvarotrigo
+962,2015-03-20 09:59:37,"@Jhony0311 Thank you! I think you should not prefix given, the preprocessor (or autoprefixer) do anyway.
+",kukac7,Jhony0311
+962,2015-03-20 11:01:24,"@Jhony0311 any comments on that?
+",alvarotrigo,Jhony0311
+962,2015-03-20 14:28:50,"Well that's something I was thinking. If @alvarotrigo will use sass as development it will be useful to set a gruntfile with task to compile and autoprefix this automatically, also we can include variables and some mixins to make it more useful to the developers who decide to use the sass stylesheet in their projects.
+",Jhony0311,alvarotrigo
+962,2015-03-30 09:24:10,"@Jhony0311 please look at https://github.com/alvarotrigo/fullPage.js/issues/1113 it seems the SCSS version is missing things.
+Seems like the whole styles for `#fp-nav ul li, .fp-slidesNav ul li` are missing:
+
+
+",alvarotrigo,Jhony0311
+958,2015-02-22 11:19:32,"@alvarotrigo @spindiesel Any news on this?
+",richgcook,alvarotrigo
+958,2015-02-22 14:57:50,"@alvarotrigo Any way to get this now?
+",richgcook,alvarotrigo
+958,2015-02-22 15:15:32,"@alvarotrigo I'm the guy who emailed you... thanks.
+",richgcook,alvarotrigo
+958,2016-09-29 10:38:22,"@GustavSt nop.
+",alvarotrigo,GustavSt
+950,2015-04-27 22:59:04,"@alvarotrigo – I also just ran into this problem mentioned by the thread opener. I am not 100% sure (as I wasn't able to test with all possible hardware and input devices) but I think I fixed it by fiddling around in the jquery.fullpage.js file. Actually it's just 2 additional lines of code. Hopefully it doesn't break any other functionality though - but so far it works… Would be interested to hear what you think about this. :)
+
+This is my modified hashChangeHandler function:
+
+
+
+And I added the first line in setUrlHash function like this:
+
+
+",Canubiz,alvarotrigo
+941,2015-05-18 03:37:15,"@elahmo @alvarotrigo – I added some additional checks to the scrolling() function in my local version of fullpage.js to solve this issue in a project I am working on right now. Basically I am requiring users of my website to first scroll down to the bottom of a scrollable section, then stop there and wait for 750ms before scrolling again to move on to next section. Up until now, this seems like the most natural and intuitive behavior of visitors who want to read content at the bottom of a section. If you're interested, here is my modified scrolling() function (see //EXTRA CHECK… comments for my additions):
+
+
+
+What do you think? Does this also work for you? Is this a change that could make it into the next release of fullpage.js?
+",Canubiz,alvarotrigo
+941,2015-05-18 15:24:47,"@alvarotrigo Thanks for your feedback. I developed this modification on a MacBook Air esp. testing its trackpad control and it seems to work exactly the way I'd expect to. I believe it's exactly the way scrolling on a fullpage website, including more content on a single section than it can fit, should behave: not scroll over that content at the bottom of a section, but stop there and require another, separate scroll attempt (detected but a short amount of time without any scroll events recognized) to move on to the next section.
+The value of 750ms is for sure something open for debate and fine tuning. I also tried with much lower values like 250ms and it still works very well, maybe even better…? So maybe, with a lower value we can still reach the purpose to stop over-scrolling scrollable section content but still serve visitors well who want to quickly jump to the next section.
+Note: this modification does not influence scrolling behavior of sections without scrollable content inside them. So in conclusion, if one does not have scrollable sections, this should change nothing in user experience. On the other hand, if one uses scrollable sections, user experience dramatically improves, at least from my point of view, as users cannot easily over scroll any content they wanted to go to and read.
+I will do some more testing with the separate Apple Magic Trackpad and the Magic Mouse as well as trackpads on some other Mac models from friends and family and will come back with results, if you're interested. :)
+",Canubiz,alvarotrigo
+941,2015-06-04 00:05:20,"@Canubiz yes, my bad, I was talking about 'overflow: auto', in fact your example is exactly what I meant. I believe mobile devices do use the 'momentum' with the CSS mentioned, and I know for sure that Windows Phone 8 uses that (along with iOS and the -webkit- prefix).
+
+Not sure about Android, but I think it goes the same way. So maybe a solution would be to check if there's 'movement' on the scrolling (swipe), say check for X milliseconds if the scrollTop changes. If it doesn't change then we reached the end of that DIV with overflow and now we call the method to advance to the next slide (up or down).
+
+@alvarotrigo I did use iScroll on some projects and it behaves bad on some Windows Phones, so I had to change my mind about presenting cool scrollbars to the user OR presenting them a better scrolling experience. Turns out I had to switch off iScroll on this case and only use it on other devices. As for the scrolling itself, it worked without problems with just the 'overflow:auto' CSS for the Windows phones.
+
+In my opinion, the user, on a mobile device, rarely, and I mean RARELY uses scrollbars to navigate up and down / left and right on web pages and/or apps. The scrollbars don't even show up on some devices, so why should I bother? :)
+",MuTLY,alvarotrigo
+941,2015-11-11 08:18:47,"@alvarotrigo have you considered using a different plugin instead of sclimscroll? Maybe [jQuery custom content scroller](http://manos.malihu.gr/jquery-custom-content-scroller/) or [TinyScrollbar](http://manos.malihu.gr/jquery-custom-content-scroller/)?
+",reddo,alvarotrigo
+941,2015-11-20 07:29:15,"@pinipints I've just followed @alvarotrigo's instructions 3 posts up. I did have to make some small edits to the linked gist code though. I'de be more than glad to share that code, if you want.
+
+Basically I downloaded the fullpage.js from the dev branch linked, included the _modified_ code from the gist and it just worked.
+",reddo,alvarotrigo
+941,2015-11-20 10:36:06,"@alvarotrigo I still had to change bits of the gist code, specifically lines 36 and 37 have some variables defined with `let`, I had to change those to `var` otherwise my uglify task threw an error.
+",reddo,alvarotrigo
+941,2015-11-20 13:56:59,"@reddo i get errors on safari and firefox due to the variables defined with `let` while on google chrome it loads fine.
+@alvarotrigo thanks for having that demo page with iscroll. changing the `let` with `var` may help making it compatible with all browsers
+i will give it a try today, thanks once again
+",pinipints,alvarotrigo
+941,2016-10-04 13:03:16,"I've updated the gist to account for scrolling direction ad increased the timeout a bit and added some comments: [(see gist)](https://gist.github.com/reddo/d7ab532e03ffb41b3fa9870aab0a1d09). 
+
+@alvarotrigo It really is working good, even using my trackpad (MacBook Pro Retina, 13-inch, Early 2015; with latest OsX and Chrome). 
+
+I don't clear the timeout because I want the page to scroll to the next section if the user keeps scrolling. I'm not saying this is the best solution, but I just wanted to share in case I can help someone else.
+",reddo,alvarotrigo
+941,2016-10-26 12:52:13,"@reddo really interesting conversation, I too am requiring a solution to this scrolling issue. I'd like to test the gist you've amended. Could you advise on usage as i'm not proficient in js - am I supposed to copy the gist and replace the corresponding section in the jquery.fullPage.js file??
+
+... I have tried this but it kills the scrolling completely except when using the nav buttons... 
+
+@alvarotrigo are you in support of the gist or are you still seeing potential issues?
+
+Thanks,
+",db-24,alvarotrigo
+941,2016-10-26 13:47:18,"@db-24: I'm using it successfully in a project without any issues. Let me see if it's the latest version, but I haven't had any problems with it so far whenever I updated the fullpage.js (I'm currently using the dev version). You just have to replace the function in the fullpage.js with the same name (currently from here: https://github.com/alvarotrigo/fullPage.js/blob/master/jquery.fullPage.js#L1068 to line 1086)
+
+@alvarotrigo: That is how I intended it. It should keep scrolling after the 500ms; I added that timeout just so I stop accidental scrolling, I still want to be able to scroll to the whole page if I want to, I don't want to have to stop after each section and start scrolling again, but I already explained this. Maybe someone needs it different, but right now it suits my needs perfectly.
+",reddo,alvarotrigo
+941,2017-01-01 09:36:55,"Thanks for fullPage.js, it's a awesome plugin. I also get the problem when use it.
+
+And I try to improve the case, now I get a effect than which I need, and I wanner contribute it to help others.
+
+So I wanner start a Pull Request. Before I do that, I found the issue about the problem, and I realized it have another problem with trackpad and Magic Mouse.
+
+I have not found a perfect way to solve this, but in my way, it can set the `delay` attribute to weaken the problem with Mac trackpad and Magic Mouse I guess.
+
+I have got a good effect on my PC (Windows7) and mobilephone (Android 4.4), if someone have the MacBook and iPhone|iPad, please test it. On the demo, I introduced a infomation with the solution.
+
+https://lanbomo.github.io/fullPage.js/examples/scrollOverflowEndPrevent.html
+
+I put the demo on my github pages, someone can test it, if you wanner to use with your page, you can download the `jquery.fullPage.js` file on my fork repositorie with `dev` branch.
+
+https://github.com/lanbomo/fullPage.js/tree/dev
+
+@alvarotrigo If you think this is a well solution to the problem, please consider to merge it, and I will start a  Pull Request. Thanks for your works.",lanbomo,alvarotrigo
+941,2017-01-17 12:05:51,"@alvarotrigo Thanks for your works. When scroll bar reached the end and scroll consecutively it will work. I don't know how about Mac's trackpad, but I think the option `delay` could help developer to adjust to an expected effect.
+
+Finally, thanks for your works again.",lanbomo,alvarotrigo
+941,2017-02-26 04:37:34,"Hi, @alvarotrigo will you merge @lanbomo solution? Did you test it?",Pixelous,alvarotrigo
+900,2015-01-11 04:27:01,"@alvarotrigo I am always using the latest stable build. A side issue, we found that doing a ""huge"" scroll with the trackpad causes the page to scroll twice. But I'll probably only look into tomorrow or so. Maybe some sensitivity settings?
+",resting,alvarotrigo
+885,2014-12-29 04:54:11,"Hi @curvedb @alvarotrigo,
+
+`.fp-tableCell { height: 100% !important; }`
+
+Had to do the same. Setting responsive to 959px enables normal scrolling but it does not prevent the plugin from giving the sections a 100%.
+
+I hate using !important. Would be nice to avoid it.
+
+Also, I set `'responsive': 959` and for some reason it's not an exact value... That's kind of concerning when using CSS media queries, that are super precise.
+
+Anyways, hope this two issues have a solution or that you can help me find one.
+
+Thank you in advance guys!
+Kind regards.
+",SantzDesign,alvarotrigo
+885,2014-12-29 14:14:14,"@alvarotrigo, I understand... Although, once I'm back to normal scrolling, I don't longer need the full height sections.
+
+I actually understand why you didn't get me... I didn't use this: `.fp-tableCell { height: 100% !important; }`, I used this: `.fp-tableCell { height: auto !important; }`
+
+What I'm trying to say, is that once you enter responsive mode, you don't need the 100% height sections. And if maybe you do, the best workaround would be an option like _responsiveHeight_.
+
+And yep, the responsive: true is not exact. I don't know why. I'm using latest Chrome and the plugin never uses the same 959px value to enter responsive mode and to get out. Should I open a new issue with this?
+
+Kind regards!
+",SantzDesign,alvarotrigo
+885,2014-12-29 16:41:31,"@alvarotrigo, great.
+
+About the responsive thing, I'll make a new demo and see if it works. Right now, I'm having issues, I ignore what's causing the problem. I will open an issue if it's a plugin thing and not an issue with my current development (I cannot post the landing page, it's private. Maybe I can show it to you if you're curious).
+
+Thanks!
+",SantzDesign,alvarotrigo
+885,2014-12-29 16:55:17,"@alvarotrigo, hey check it... Apparently it's a normal thing. Resize: http://jsfiddle.net/97tbk/419/
+
+Anyways, it's quite inconvenient. 
+",SantzDesign,alvarotrigo
+885,2014-12-29 17:14:13,"I understand, and you are probably right. I was thinking about using the `<html>` width since that's not a very common element to set a specific width more than 100%. I am using the `.fp-responsive` for now.
+
+Thanks @alvarotrigo!
+",SantzDesign,alvarotrigo
+860,2014-11-24 07:50:57,"@alvarotrigo Hmm, and if you test this in IE9 but with 100px padding top.
+http://jsfiddle.net/97tbk/383/
+",jefsnare,alvarotrigo
+858,2014-11-21 08:59:18,"Thanks @alvarotrigo for your reaction, indeed this solve the problem only for mouse wheels but with this option I can tweak the wheelStep for touch devices specifically.
+
+Maybe a good alternative would be ScrollMagic: http://janpaepke.github.io/ScrollMagic/
+",jefsnare,alvarotrigo
+857,2014-11-20 23:23:57,"@tsnyder91 Thanks for your input! I appreciate it! I have no access to any touch windows device and couldn't debug it properly.
+
+I'll try to figure out why the condition is needed, but I'll probably merge it soon! 
+",alvarotrigo,tsnyder91
+857,2014-11-23 13:22:40,"@tsnyder91 the `event.preventDefault();` was creating [this issue](https://github.com/alvarotrigo/fullPage.js/issues/861) so I reverted that change.
+
+Can you confirm it is broken again for Windows Phone 8.1 IE 11?
+",alvarotrigo,tsnyder91
+853,2015-01-21 19:55:09,"Love the .js @alvarotrigo 
+
+I know this has nothing to do with the js but in Firefox Mac & PC, the video doesn't fill the full screen. There are black bars to the left and right of the screen. Would you happen to know how to fix this?
+
+I'm working a site that has the same issue as your demo. http://dim.lamp.utoronto.ca/introducing/
+",awlyng,alvarotrigo
+826,2014-11-11 18:03:29,"@alvarotrigo no, that demo shows how to set up the page with sections, anchor and a menu. (the fix)
+The docs are very thorough but this is a good example of how most people will use this plugin, no?
+",sidonaldson,alvarotrigo
+820,2014-11-12 10:33:51,"@jackmu95 if you read my last reply [in this topic](https://github.com/alvarotrigo/fullPage.js/pull/817#issuecomment-62159280) you will see that I agreed to commit only the changes I mentioned, but then you did more by your own without asking first.
+
+Pull requests are reviewed and commented before being commited.
+
+Some of your changes don't make sense in fullpage.js.
+For example, you removed the jQuery fadeIn from the navigation tooltips and you changed it for a CSS3 transition. But you didn't take into account that this plugin provides compatibility with IE 8 and [transitions are not working there](http://caniuse.com/#search=transition)...
+",alvarotrigo,jackmu95
+820,2014-11-12 11:09:48,"@alvarotrigo I know that it wasn't the best way to make 'so much' changes at one time and I know that you try to make this as much IE8 compatible as possible but [W3C recommends using HTML5](http://www.w3.org/blog/news/archives/4167) and IE8 is simply not fully compatible with HTML5 at all... 
+
+What I mean with that is that IMHO the focus should always be to get the best performance and also usability (for visitors and developers) for modern browsers and only make a website generally working on older browsers like IE8. When someone uses browsers like that he is self responsible that he doesn't get some nice transitions for the tooltips. I believe the most people notice the (0.2s) transition at all.
+
+The problems that I see behind the current tooltip implementation are:
+    - The tooltips are created on the 'mouseenter' and removed on the 'mouseleave' event of the menu item which is in terms of performance not that efficient and makes them impossible to debug with a developer console  
+    - The content of the tooltips has to be stored in the data of the corresponding menu item
+    - The showing/hiding depends on jQuery
+
+All this points are improved in my pull request and you just close it...
+Even if IE8 support is a must-have, it would be possible with some quite simple fallback code.
+",jackmu95,alvarotrigo
+819,2014-11-08 14:11:59,"Thanks for answering @alvarotrigo.
+
+That would be a good way to handle it, and possibly and I will be doing.
+
+However, this could be used as a possible improvement for fullPage.js, something like a property that user fills with an element, that keeps listenning to when visitor reaches the bottom of it it does slide to the next page.
+
+Thanks!
+",IvoPereira,alvarotrigo
+814,2014-11-07 12:21:20,"@jackmu95 the idea still being the same. It can be achieved easily by just using the methods fullpage.js provides and some basic CSS. 
+
+I don't see it as something essential in the plugin. Also, considering than most developers / designers would like to change the style of those arrows, the work for them is almost gonna be exactly the same. 
+",alvarotrigo,jackmu95
+814,2014-11-07 12:52:48,"@jackmu95: I think you worked on our ""vision"" about a navigation ""help"", see https://github.com/alvarotrigo/fullPage.js/issues/806
+
+Sorry but is there a way to see your work live somewhere?
+",metaxos,jackmu95
+806,2014-11-12 01:35:59,"@metaxos notes in his suggestion, ""Of course the arrows should only be displayed when there are more sections.""  Implemented up/down arrows (stemming from your notes in #814 @alvarotrigo); however, they arrows appear on all sections regardless of whether or not additional sections exist before or after the viewed section.
+Is it possible to cause the horizontal arrows to be displayed only when there are more sections adjacent to the current section - much the same as the horizontal arrows for slides only appearing when slides are present?  
+",crickw,alvarotrigo
+806,2014-11-12 17:03:03,"Thanks for replying @alvarotrigo.  I knew what I wrote to be possible when I wrote the question - it was a poor attempt at suggestion of inclusion into the 'section' class just as you had done with the 'slide' class.  I applaud your diligence at holding the line on bloating fuillPage.js with the many folks' helpful questions and suggestions herein (including mine) and thank you for this awesome work.  (best of all, thank you also for taking the time to reply!)
+",crickw,alvarotrigo
+803,2014-10-28 10:37:26,"Hey  @alvarotrigo, thank you for replying.
+
+---
+
+> It seems like a problem in Firefox with the mousewheel event as you can see here.
+
+The suggested solution won't work because the iframe is cross-origin. Here's what Chrome says:
+
+> Blocked a frame with origin ""http://localhost:3000"" from accessing a frame with origin ""http://player.vimeo.com"". Protocols, domains, and ports must match.
+
+---
+
+> A workaround, kind of like a hack, would be to cover all the video except the center (because of the play button) with an invisible layer.
+
+I've already implemented the hole-in-the-center workaround, but it's hacky as hell. :(
+
+---
+
+> Or cover it all and autoplay the video.
+
+It is impossible to autoplay videos on mobile:
+
+> Uncaught Error: The viewer must initiate playback first. 
+
+---
+
+Please reopen.
+",lolmaus,alvarotrigo
+799,2014-11-12 18:13:42,"@alvarotrigo That seems to be the case - viewport meta on my website matches the one you quoted. 
+
+On the other hand `initial-scale` causes a ""zoom bug"" on iOS < 6 (fix: https://github.com/sergiolopes/ios-zoom-bug-fix) but I think it can be neglected at this point as it's an old issue.
+",malydok,alvarotrigo
+799,2014-11-13 09:13:24,"@alvarotrigo I'm using `autoScrolling:false` for both desktop and mobile versions.
+",ffiona,alvarotrigo
+799,2014-11-13 09:14:42,"@alvarotrigo Thanks!
+",ffiona,alvarotrigo
+799,2014-11-21 08:40:01,"Tested it in andoroid and in ios, everything works. Thank you @alvarotrigo !
+",ffiona,alvarotrigo
+798,2014-10-27 04:39:08,"@alvarotrigo cool. thanks for the heads up! Does this mean bower is behind?
+",sidonaldson,alvarotrigo
+798,2014-11-11 17:28:53,"@alvarotrigo pretty please could you update bower again? :)
+",sidonaldson,alvarotrigo
+728,2015-03-17 17:24:32,"@alvarotrigo Haha. Sorry my apologies. I did get you mixed up with someone else with the similar plugin. http://www.smashingmagazine.com/2014/08/25/how-i-built-the-one-page-scroll-plugin/
+The other one is built with the same concept but the possibilities and functionality is just not the same. 
+Thanks for the amazing work again.
+",SucInnoPeneur,alvarotrigo
+728,2015-03-19 02:08:06,"@alvarotrigo Haha. That's what I thought. Since your plugin would be the main layout for the whole page ... it's best to place it in the head and load as early as possible to reduce the FOUC on a webpage. Thanks for the support so far.
+",SucInnoPeneur,alvarotrigo
+699,2014-09-12 09:27:12,"@alvarotrigo  thank you so much, i will check it
+",zousandian,alvarotrigo
+699,2014-09-13 15:46:36,"@alvarotrigo Hi Alvaro, Can i ask you a question about <a href=""http://jsfiddle.net/97tbk/270/"">the fiddle</a>?
+When i on the fourth page and click the button , it will back to the second page, but it only fire the onLeave event one time. i expected it will fire the onLeave event two times.
+How can I fire the onLeave event as much as the pages scrolled?
+
+Many thanks
+Best wishes
+",zousandian,alvarotrigo
+693,2014-09-10 13:55:17,"Hello there,
+
+Chrome Inspector works fine for me. Please check it @alvarotrigo, and let me know.
+
+I would be happy with that :)
+",anishjajodia,alvarotrigo
+689,2014-09-10 09:32:44,"Thanks @Glaived 
+",alvarotrigo,Glaived
+682,2014-09-03 11:57:30,"@nivv thanks for it! 
+",alvarotrigo,nivv
+674,2014-09-01 14:41:03,"Hi, @alvarotrigo  
+the default value of overflow should be ""visible"".   http://www.w3schools.com/cssref/pr_pos_overflow.asp 
+
+In the test example, what I want is the blue div shows completely. However, with overflow:auto, the overflow part will be hidden.
+",KynoYang,alvarotrigo
+674,2014-09-01 14:52:01,"@alvarotrigo  Pretty good! Then, I'll wait for updating. 
+BTW, fullpage is quite awesome. Thank you!
+",KynoYang,alvarotrigo
+674,2014-09-04 01:02:23,"@alvarotrigo thanks for telling me.
+",KynoYang,alvarotrigo
+670,2014-11-26 12:21:18,"@thunderapps @tsnyder91 @baikon can you guys confirm this bug has been solved in the latest version 2.5.0?
+
+You can test if it now works on IE11 on Windows 7 tablet by accessing [the demo page](http://alvarotrigo.com/fullPage/). 
+",alvarotrigo,tsnyder91
+670,2014-11-27 13:38:23,"I won't be able to test win 7 or win 8.1 tablets till next week due to the Thanksgiving holiday but I'm pretty sure that latest patch will work on those devices. 
+
+-----Original Message-----
+From: ""alvarotrigo"" notifications@github.com
+Sent: ‎11/‎26/‎2014 6:21 AM
+To: ""alvarotrigo/fullPage.js"" fullPage.js@noreply.github.com
+Cc: ""tsnyder91"" tsnyder91@gmail.com
+Subject: Re: [fullPage.js] Touch slide action do not work in IE11 on Windows 7tablet (#670)
+
+@thunderapps @tsnyder91 @baikon can you guys confirm this bug has been solved in the latest version 2.4.9?
+You can test if it now works on IE11 on Windows 7 tablet by accessing the demo page. 
+—
+Reply to this email directly or view it on GitHub.=
+",tsnyder91,tsnyder91
+663,2014-08-28 10:09:33,"@alvarotrigo, first of all we need 2.0.8 release for the real `jQuery` issue fix.
+
+And about lower-camel case issue - I'm pretty sure bower packages should stick to lowercase, so it is possible to unregister camelCased package, tho it would break support for people who already installed it, even if its not hard to update bower.json for lowercase. Guess its up to you, prolly it should be left the way it is now untill version 3, where you could possibly make new repo.
+",mrpavlikov,alvarotrigo
+652,2014-08-21 18:16:03,"@alvarotrigo There is a mobile version for chrome on iOS. But I suppose you are aware of this.
+",ben-joostens,alvarotrigo
+652,2014-08-22 11:46:17,"@alvarotrigo yep, i'm talking about andoid. If you scroll down the chrome adress bar is hiding.
+",dreszczyk,alvarotrigo
+652,2014-08-22 12:02:02,"@alvarotrigo I did, still after scrolling down (adress bar hides) and then scrolling up a little (adress bar appears) website is going up, and down because of recalculating height. I know it's because of the Chrome Mobile.
+",dreszczyk,alvarotrigo
+652,2014-08-22 12:05:23,"@alvarotrigo I changed `scrollingSpeed` to `0`, so the user would not need to wait.
+",dreszczyk,alvarotrigo
+647,2014-08-21 16:28:40,"+1 @okbk @alvarotrigo 
+That would be an amazing feature
+",sambecker,alvarotrigo
+637,2014-08-16 20:43:34,"As @tomByrer says, fullpage.js resizes the text when using fullpage with default settings.
+
+To solve it, use the option `resize:false` when initializing the plugin. Its usage is documented in the docs.
+",alvarotrigo,tomByrer
+631,2014-08-12 08:31:19,"@alvarotrigo Please see this example: http://jsfiddle.net/tyrann0us/pveqn0gd/6/embedded/result/
+Without regard to the fact that the sections aren't full page it demonstrates how fullPages.js first scrolls up to the section rendered on top.
+Even if not for SEO reasons there might be situations where people (like me) want to use `order` on their projects. Supporting it would be really great.
+",tyrann0us,alvarotrigo
+628,2016-03-24 15:17:57,"@alvarotrigo The fiddle is great for people that like to have other use cases of fullPage. Thank you Álvaro.
+",monolux,alvarotrigo
+628,2016-03-24 15:40:14,"@alvarotrigo Thank you! If you are interested why I find this good here is the use case I am trying to get working and I think I am nearly finished.
+
+I have a fixed top div that is the navigation, a navbar. This navbar uses flowType to have the nabar menu links change font size according to viewport width and height. Naturally each of the menu items is a div (with the menu link inside) and these divs change height according to the font size of the menu link. This leads to the entire navbar changing height dynamically.
+
+[Here](http://stackoverflow.com/questions/35584337/fullpagejs-fixed-header-z-index-hides-sections-content) I have found a similar question but see now that just dynamically adding a padding-top value to the `fp-tableCell` class like outlined does not always work.
+
+Instead I think I will either try to add this dynamically changing padding-top value from the changing navbar's height to each of the sections so that the fixed navbar does not hide part of the section content or I will simply add a buffer/placeholder div with the height of the current navbar height to the top of each section, again to not have section content hidden by the navbar.
+
+This I guess would have to be done with `afterRender` and `afterResize`, while having `scrollOverflow:true`, as, especially on PDAs things get wonky. Testing a few things and might make a fiddle with the solution.
+
+Unfortunately `fixedElements:'#navbar'` removes the navbar from the entire site, so I am not exactly sure how to use or work with that just jet, but I am digging.
+
+Related: slimscrollJS has quite static/slow scrolling on PDAs I discovered, will have to see how to tune slimsscrollJS settings to resemble the scrolling more like on a native device.
+",monolux,alvarotrigo
+614,2016-01-07 19:21:45,":+1: You're right, @alvarotrigo I was looking for this functionality for the footer and `fp-auto-height` achieves this. Better experience than switching to normal scroll just for the footer. 
+",rahulmax,alvarotrigo
+614,2016-02-18 00:26:30,"@alvarotrigo right now i found a way around, not perfect but for now it works,
+i set 
+
+
+
+and nothing add to the footer, ofcourse the autoscroll doesnt work but maybe that would help u with ur debug, thanx again
+",ctf0,alvarotrigo
+614,2016-10-25 15:21:57,"Hi @alvarotrigo,
+
+Firstly, great job with all of the functionality that you have added into this, I love using it!
+Today I went into one problem, I am using the `fp-normal-scroll` class for few sections but so far I can't make it work on mobile and unfortunately I need it to be working there as well, right now it seems to be ignoring the class entirely, I checked the unminified version but I am not really sure why this is happening. Any advices?
+
+Thanks!
+",KokoDonchev,alvarotrigo
+606,2014-07-31 16:14:28,"Thanks @JayBizzle !
+",alvarotrigo,JayBizzle
+604,2014-10-28 22:22:30,"@alvarotrigo was spot on for me - I did a quick search of my project for all uses of "".fullpage"" and immediately found the problem. 
+
+I.e. Make sure it is not being initialised twice somewhere else/undesirable. 
+",bencoullie,alvarotrigo
+585,2014-07-19 15:32:33,"@tomByrer If I do that, the onLeave callback doesn't trigger it all
+",ccruz2886,tomByrer
+583,2015-07-03 10:15:59,"Just wanted to say cheers for 'flagging' that. Was struggling with it, but managed to get the final pieces of my puzzle using @byzanth's jsfiddle :) Also cheers to @alvarotrigo for helping me understand why I needed to do it haha
+",porridj,alvarotrigo
+583,2015-07-03 10:28:48,"@porridj haha! @alvarotrigo is a kind and patient guy
+",mnotw,alvarotrigo
+581,2016-07-07 21:50:27,"@alvarotrigo Sorry, me just being careless. Working fine now. Many thanks and what incredible plugin you have built. 
+",rohanchambers,alvarotrigo
+573,2014-07-16 11:43:35,"Hi, I solved the issue. The problem was I'm using boostrap's carousel and it has a class named 'slide', that generates conflict with fullPage's slide class. To resolve this, I used the option slideSelector: '.page' and rename the new fullPage's class to 'page'. 
+
+Thank you, @alvarotrigo  for your quick answer 
+",davidrh90,alvarotrigo
+569,2014-11-11 16:48:40,"@tomByrer reading [this post in your blog](http://blog.jsdelivr.com/2014/06/public-cdn-auto-updated.html) I though it would automatically update the CDN when a new release is publishes but I found out the current version in the jsDelivr CDN is 2.4.1 instead of 2.4.3 which is the latest release. 
+
+Why is this not happening?
+
+I would like to provide the CDN in the documentation but it doesn't seem to be reliable yet.
+",alvarotrigo,tomByrer
+556,2014-07-11 02:23:55,"@alvarotrigo yes, please post the unminified version.
+",eamodio,alvarotrigo
+556,2014-09-01 09:07:35,"@tomByrer I don't have the unminified version. But you can get it by just downloading the latest 1.3.2 version of slimScroll.js from [their repository](https://github.com/rochal/jQuery-slimScroll) and then making the changes I detail [in my last comment here](https://github.com/rochal/jQuery-slimScroll/issues/133#issuecomment-45075705).
+
+> I ended up deleting the if (!isOverPanel) { return; } from the _onWheel function. Not quite sure why is it there...
+",alvarotrigo,tomByrer
+555,2014-07-09 16:09:08,"@alvarotrigo  thank you for the fast modification, it seems the animateAnchor problem solved but if ""navigation: true""  the dots are not updated. if we add to my previous example the navigation: true  then we scrolled to 3rd page, then if we copy the link and go to new page and go to /examples/normalScroll.html#3rdPage   you will notice that the 3rd page is the active pgae but the first circle is activated, i think the circles need to be updated also to reflect the change. 
+",sh30,alvarotrigo
+555,2014-07-09 16:48:46,"@alvarotrigo  ok i will, thanks again.
+",sh30,alvarotrigo
+555,2014-07-09 17:21:17,"@alvarotrigo it does on yours but couldnt figure out why not on mine. sections work (fullPage/#3rdPage ) but slides not (fullPage/#3rdPage/1 )
+
+here is a link for you to look at http://batescreativegroup.com/clients/YMCA/ym/
+
+thanks man
+",zenics,alvarotrigo
+548,2014-07-05 20:06:38,"@alvarotrigo 
+
+The code below is what you have suggested that makes the video play in the section.
+
+Where does it go. Does it go in the examples.js / jquery.fullPage.js / or in the HTML. 
+
+And where exactly within one of the selections.
+What do I change to make the video play on load as you open the page.
+Thanks
+
+$.fn.fullpage({
+    scrollOverflow: false,
+    afterRender: function(){
+        $('#video')[0].play();  
+    }
+});
+
+
+",zakbenjamin,alvarotrigo
+548,2014-07-05 20:39:14,"@alvarotrigo could you write that out for me. I'm not sure what you mean. And where does this JavaScript go? Which file 
+",zakbenjamin,alvarotrigo
+548,2014-07-05 20:49:49,"@alvarotrigo I'm not very experienced in developing at all. Would it hurt to ask if you could paste exactly what I need to put in the fullpage.js  with all the relevant changes that makes the video play automatically please
+",zakbenjamin,alvarotrigo
+548,2014-07-05 21:21:14,"@alvarotrigo what's the initialisation section? Would you be able to help me out? 
+",zakbenjamin,alvarotrigo
+548,2014-07-06 09:45:01,"@alvarotrigo it's still not working. I'm not sure what you mean by ""Just add the play event in the afterRender callback"" I also don't know where exactly to put the afterRender callback. Is there a jsfiddle example with the slowscrolling example and a video?
+",zakbenjamin,alvarotrigo
+504,2014-06-13 11:32:19,"@alvarotrigo Thanks. Ended up doing this only.
+
+
+",nikhilvij,alvarotrigo
+504,2014-08-13 06:12:22,"Thanks @alvarotrigo for writing the destroy function 
+That helped remove some hacky code.
+",nikhilvij,alvarotrigo
+489,2014-06-03 13:44:30,"@Ouadie, @zerodburn  could you confirm what @marcobuettner  is saying?
+",alvarotrigo,marcobuettner
+489,2014-06-03 13:55:08,"@alvarotrigo sorry I only have a Windows 8.1 Touchscreen Laptop to test on and FullPage.js has never worked on that. It's an Acer Aspire S7 FYI
+",zerodburn,alvarotrigo
+489,2014-06-17 08:57:25,"@marcobuettner thanks, we will appreciate it!
+",alvarotrigo,marcobuettner
+489,2014-06-18 10:14:29,"It should be working on IE 10 as well. I've committed the changes and I proceed to close the issue.
+Thanks to @Ouadie and  @zerodburn for the feeback and to @marcobuettner for reporting the issue.
+",alvarotrigo,marcobuettner
+477,2015-02-25 12:41:22,"@alvarotrigo Hmm.. it seems to me, that you are not using bower locally, are you? Otherwise the  ""bower_components"" directory would have been in your repo. I'd suggest to leave it in .gitignore (although others add their bower dependencies into the repo - this is because some library maintainers are lazy sometimes and change already published modules [like it happened with jQuery!]). 
+
+Nonetheless - it is useful if you are thinking about adding tests and/or let a ci-server build your script.
+",theborakompanioni,alvarotrigo
+477,2015-02-25 13:20:14,"@alvarotrigo Having tests in place will strengthen the confidence in the changes committed to the repo - I certainly do not want to develop without them anymore.
+
+It is sometimes relatively tricky to test libraries which heavily manipulate the DOM. I'll happily invite you to take a look at [VisSense.js](https://github.com/vissense/vissense) which runs test with [Jasmine](https://jasmine.github.io/) and [Karma](http://karma-runner.github.io) - it has a coverage of 100% (although not all conditional branches) and it will not build if the coverage falls below 95%!
+
+Of course there are other great javascript testing frameworks out there.
+",theborakompanioni,alvarotrigo
+473,2014-05-25 22:13:29,"@milesmatthias I haven't tested it, but @adrien-gueret seems to be adding more changes besides the destroy function...
+",alvarotrigo,milesmatthias
+473,2014-05-26 06:56:58,"@alvarotrigo What do you mean? I've just moved the events listeners from nameless closures to named functions, so that we can now ""off"" them. Simply check the changes ( https://github.com/alvarotrigo/fullPage.js/pull/473/files ) to be sure that it is not a big deal.
+",adrien-gueret,alvarotrigo
+426,2014-06-05 12:07:35,"@bittner shift+space ? I've never heard of it. It does nothing in any browser as far as I know.
+",alvarotrigo,bittner
+426,2014-06-05 13:15:58,"@bittner oh, you mean to scroll up... I see.
+
+I just see a problem on this, the need of adding more code to avoid problems with text inputs.
+",alvarotrigo,bittner
+426,2014-06-05 18:14:37,"@alvarotrigo Isn't that true for any key, including the arrow keys, for example? What needs to be done? Probably we can find a generic solution...
+",bittner,alvarotrigo
+426,2014-06-05 20:10:40,"@bittner but the space is a common character used in any input. Arrows are just control keys.
+",alvarotrigo,bittner
+417,2014-05-12 09:12:01,"@alvarotrigo, the solution you proposed is not optimal. In touch devices with big screens like iPad, I would like to use fullPage.js in portrait orientation and disable it in landscape orientation (where there is not enough vertical space for all the content without scrolling). The workaround I'm using now is to initialize fullPage.js only on big enough window size. The problem is that when the window is resized, there is no way to disable fullPage.js after it was initialized.
+For the above reason and a few more, I'd appreciate a destroy function. It will help achieve smoother, more complete user experience.
+Thank you!
+",tzachyrm,alvarotrigo
+417,2014-05-13 15:17:03,"Hi @alvarotrigo. First of all thanks for great plugin!
+I have the same problem with destroy. 
+I have some different pages with fullpage and different count of sections. 
+One page have 5 section and second have 2 sections. When I jump pages with ajax and trying to slide in page with 5 sections it slides me to last and to first sections only, but it works on touch devices. Are there any solution to fix it?
+",DariusNorv,alvarotrigo
+417,2014-05-14 14:11:16,"@alvarotrigo great news, many thanx!
+",DariusNorv,alvarotrigo
+408,2016-01-05 15:18:22,"OMG I figured it out. @mattyfew I hope this helps you!! 
+
+You use Responsive:624, but you HAVE to remove the `<div class=""slide""></div>` that's in the examples!!! Once I did that, mobile scrolled fine without a limiting height. 
+
+It was driving me crazy and I had a deadline to meet. So relieved.
+
+When @alvarotrigo  said it should work and that something else was wrong with your code I was like OK so I started looking at the code that displays my slide and played with it.
+
+Thanks @alvarotrigo for this amazing project.
+",omarel1,alvarotrigo
+408,2016-11-16 18:38:51,"Hi Alvaro ( @alvarotrigo ) ,
+
+My site is completed, but when on mobile my anchors which are inside images do not work, neither does scroll on mobile. I am using bootstrap with fullpage js. My code for the fullpage js looks like this:
+
+$(document).ready(function() {
+            $('#fullpage').fullpage({
+                // anchors: ['landingSec', 'bioSec', 'portfolioSec', 'contactSec'],
+                // // sectionsColor: ['#DAC500', '#1BBC9B', '#7E8F7C'],
+                // menu: '#menu',
+                // navigation: false,
+                // navigationPosition: 'right',
+                // navigationTooltips: ['Home', 'About', 'Portfolio' , 'Contact'],
+                responsiveWidth: 1100
+                });
+        });
+
+and the code for my anchors look like this:
+
+
+
+May I have some input on what you think the problem could be. The anchors work on everything but mobile. 
+
+Thank you for all your help.
+
+-Nick
+",NicholasCK,alvarotrigo
+403,2014-07-03 08:52:50,"@d13 not quite sure what you mean. Adding two more files to support SASS and LESS ? Can you provide some example?
+",alvarotrigo,d13
+403,2014-07-03 17:21:45,"@d13  Yeah I see what you mean but I believe it is not necessary. With the `fp-` prefix it should be enough and the code would be much more easy to read.
+",alvarotrigo,d13
+396,2014-08-21 15:04:49,"@alvarotrigo What do you mean? This last comment is about the <code>afterResize</code> callback being fired while scrolling on a touch device... I think you are referring to the <code>animateAnchor</code> issue #86 ?
+",AdmireNL,alvarotrigo
+392,2014-05-14 14:18:49,"@alvarotrigo great ... just tried it :)
+",zeroxme,alvarotrigo
+385,2015-03-09 15:01:13,"@kylerberry yep, we can. 
+Probably it would be much easier now, you probably would only need to deal with CSS now, as the tooltip content is static at the moment. 
+
+Well, a condition would be needed in the javascript side :) 
+",alvarotrigo,kylerberry
+385,2015-03-09 15:29:57,"@alvarotrigo Thanks, I'll make a PR soon
+",kylerberry,alvarotrigo
+385,2015-03-13 19:26:46,"@alvarotrigo Closing this for a fresh PR since this is so old. See new PR: https://github.com/alvarotrigo/fullPage.js/pull/1081
+",kylerberry,alvarotrigo
+364,2015-07-23 08:19:48,"@alvarotrigo 
+Hi,
+I also tried (from your snippet above):
+
+
+
+and worked as expected, but only for click event (I have to do the same for key move).
+But with onSlideLeave + moveSectionDown it's simpler and works perfectly (although I wrongly thought it would have moved the section down!).
+Thanks!!
+",dademaru,alvarotrigo
+316,2014-05-15 09:26:37,"hello @alvarotrigo thank you for your plugin.
+
+are you still thinking about this option? it would be nice to have it :)
+
+thanks!
+",floriangeierde,alvarotrigo
+316,2014-05-16 09:42:34,"@alvarotrigo +1 for horizontal scrolling!
+",pashazel,alvarotrigo
+313,2015-07-01 22:58:48,"A little late to the game obviously so I'm not expecting a reply from OP but maybe @alvarotrigo can help shed some light. Also I hope my question falls within the scope of this topic enough in order for me to not start another discussion thread. Currently I'm using jQuery to dynamically add/delete sections to my site as it is resized and have used the above mentioned method: destroying FullPage, emptying the content of my div, adding some new content, and then reinitializing FullPage. This all works brilliantly except my one problem with what @alexcroox mentions above is that whenever the function is called (upon a resize) it brings me back to the first page/section. Any tips/advice on how to avoid this? I can throw everything into a codepen if you'd like. Hoping it's a simple fix though. Thanks in advance for any help on the problem!
+",wootencl,alvarotrigo
+313,2015-07-01 23:59:13,"@alvarotrigo You are AWESOME! Thanks for the swift reply and help. Two simple lines of jQuery and the problem is solved. For those interested I just selected the active class (before destroying) and added the active class back after adding my new HTML. Like so:
+
+
+
+Keep being amazing! 
+",wootencl,alvarotrigo
+310,2015-12-14 08:47:17,"@alvarotrigo I've done some [research](http://blog.danyll.com/lethargy-tackling-inertial-scroll/) on this and it's not because of ""jQuery believes the user still scrolling when they are not..."", it's because the trackpad and Apple Magic Mouse emits scroll events long after the user has finished scrolling.
+",d4nyll,alvarotrigo
+301,2014-03-19 14:07:07,"Thanks a lot. You're the fastest @alvarotrigo! 
+",Worstkaes,alvarotrigo
+287,2015-08-21 15:07:14,"@alvarotrigo what implication does this have to print? as I guess the data-src won't be updated until the image is viewed so print will miss these images?
+",latwelve,alvarotrigo
+287,2015-08-25 14:37:38,"@alvarotrigo ok sounds good. no thanks, it would be nice but it's not an urgent request :) Thanks!
+",davidhellmann,alvarotrigo
+277,2014-03-03 12:16:53,"I couldn't be able to reproduce it. It doesn't specify very well on the documentation for which users it won't work:
+
+>  Do not use it on production sites facing the Web: it will not work for every user. 
+
+Anyway, hopefully now it will work for everyone :) 
+Thanks a lot @filipminev !
+",alvarotrigo,filipminev
+248,2014-06-25 10:25:48,"@Jhony0311, @DevinWalker I'm not planning to solve it as I can not test it in any of the problematic devices and therefore I can not find out the problem/bug or the solution for it.
+
+Many people is requesting this feature, but **unless somebody take a look at the code by their own I believe it will still unfixed.**
+Make some tests in your devices if you want to help me with it.
+
+The problem seems to be in the [`reBuild` function](https://github.com/alvarotrigo/fullPage.js/blob/master/jquery.fullPage.js#L1041), it seems the `height` and `width` of the screen is not restrieved correctly.
+
+Just add something like this after `windowsHeight = $(window).height();`
+
+
+
+Like so:
+
+
+
+That will show you on the top left corner of your site the `height` and `width` values for your screen. Take a look at them and see if they make sense for you when rotating the device. 
+",alvarotrigo,Jhony0311
+248,2014-06-27 17:18:01,"I'm having this issue on a Nexus 7. @mlilley's idea of re-initializing is interesting since there's now a destroy method: #473.
+
+I'll let you know how I fix this..
+
+**Update**: verified that upgrading from 2.0.7 to 2.1.4 didn't fix this issue on a Nexus 7.
+**Update**: the following fixed the issue for me:
+
+
+
+If I have a few minutes I'd like to fix the issue more specifically instead of this hacky way. I'll update you if I get a second. Thanks @alvarotrigo and @mlilley.
+
+**Update**: Logging the width and height of the window on a Nexus 7 and they appear reversed in the `reBuild` function. Surely someone else recognized this and has a polyfill or something...
+
+**Update**: Changing the `reBuild` function to fire on only the `resize` event instead of `orientationchange` event fixed this issue on the Nexus 7. There have been [some reports](http://davidwalsh.name/orientation-change#comment-31322) that the `orientationchange` event fires prematurely, which is why the values are reversed. @alvarotrigo any reason we can't just exclusively use the `resize` event?
+",milesmatthias,alvarotrigo
+248,2014-07-02 10:58:22,"@milesmatthias you didn't answer to [my previous post](https://github.com/alvarotrigo/fullPage.js/issues/248#issuecomment-47084186). 
+
+Could you do the modification and let me know if you get any value on re-sizing?
+Does it even enter in the `onorientationchange` event?
+
+You can test it modifying the plugin like so:
+
+
+",alvarotrigo,milesmatthias
+248,2014-07-02 11:31:12,"@milesmatthias resize event is already fired anyway in case it doesn't support orientation change as you can see here:
+
+
+
+So either the problem is that it doesn't enter in the `isTouchDevice` or that the `width` and `height` values are not updated in Android. I can not check it, but if you do what I suggested before I might have an idea.
+",alvarotrigo,milesmatthias
+248,2014-07-02 16:41:14,"@alvarotrigo sorry if I wasn't clear enough, but I did reply to your question. Performing your test above has results like this:
+1. Change device orientation
+2. `orientationchange` event is triggered on touch device
+3. `height` and `width` values are unchanged (don't take the orientation change into account)
+4. the `resize` event triggers next
+5. `height` and `width` values are now updated (taking into account the orientation change)
+
+this is what I meant by:
+
+
+
+on [my comment](https://github.com/alvarotrigo/fullPage.js/issues/248#issuecomment-47376221).
+",milesmatthias,alvarotrigo
+248,2014-07-02 17:00:46,"@milesmatthias ok, now I see what you mean. Then wen probably get rid of the `orientationchange` and use only the `resize` if we suppose it will fire in all touch devices and the values will get updated.
+",alvarotrigo,milesmatthias
+248,2014-07-02 17:16:52,"Yea, that's what I was trying to say. The `resize` event should always be
+fired and will have the correct height/width values (as opposed to
+`orientationchange` on android). I'll send you a PR.
+
+-- miles
+
+On Wed, Jul 2, 2014 at 11:00 AM, alvarotrigo notifications@github.com
+wrote:
+
+> @milesmatthias https://github.com/milesmatthias ok, now I see what you
+> mean. Then wen probably get rid of the orientationchange and use only the
+> resize if we suppose it will fire in all touch devices and the values
+> will get updated.
+> 
+> —
+> Reply to this email directly or view it on GitHub
+> https://github.com/alvarotrigo/fullPage.js/issues/248#issuecomment-47805265
+> .
+",milesmatthias,milesmatthias
+248,2014-07-02 17:48:16,"there you go @alvarotrigo :koala: 
+",milesmatthias,alvarotrigo
+248,2014-07-02 21:54:31,"Thanks @milesmatthias , but I was thinking... in case of using a touch device, we won't need the 500 milliseconds delay. We can do it automatically. 
+
+Have you tried it in your device? Can you notice the small delay on orientation change?
+",alvarotrigo,milesmatthias
+248,2014-07-02 22:02:31,"I do notice it, especially on older Android devices. On a new iPad it's
+hardly noticeable, but on older, less powerful androids I can see it being
+an issue.
+
+-- miles
+
+On Wed, Jul 2, 2014 at 3:54 PM, alvarotrigo notifications@github.com
+wrote:
+
+> Thanks @milesmatthias https://github.com/milesmatthias , but I was
+> thinking... in case of using a touch device, we won't need the 500
+> milliseconds delay. We can do it automatically.
+> 
+> Have you tried it in your device? Can you notice the small delay on
+> orientation change?
+> 
+> —
+> Reply to this email directly or view it on GitHub
+> https://github.com/alvarotrigo/fullPage.js/issues/248#issuecomment-47842102
+> .
+",milesmatthias,milesmatthias
+248,2014-07-02 22:04:36,"@milesmatthias then just add a condition. 
+
+if (is touch device) { code without delay}  otherwise {code with delay}
+",alvarotrigo,milesmatthias
+248,2014-07-02 22:19:24,"Okay @alvarotrigo, I just added that to PR #542 for you to review & merge.
+",milesmatthias,alvarotrigo
+248,2014-07-02 22:45:51,"Johnathon Ortega also commented reporting some similar testing results...
+(he deleted his comment I think but I got the email):
+
+
+
+so maybe we should leave the 500ms delay in there?
+
+Ultimately I think this is going to be _extremely_ difficult to get right
+on every device given that tablets have variable CPU/RAM speeds and tablet
+browsers (especially chrome) are attempting to behave more and more like
+desktop browsers instead of a ""mobile"" browser (since newer devices are
+just as powerful as some desktops).
+
+Like Johnathon said, I think 500ms is a good compromise. Developers can
+also find this ticket and adjust the waiting period if their application
+has specific device requirements.
+
+@alvarotrigo feel free to pop off the last commit on my PR.
+
+-- miles
+
+On Wed, Jul 2, 2014 at 4:35 PM, lemmyFromMotorhead <notifications@github.com
+
+> wrote:
+> 
+> The funny thing is: when I add this line:
+> 
+> if (isTouchDevice) {
+> alert(""Entered in Orientation change""); //added line
+> $.fn.fullpage.reBuild();
+> 
+> it resizes correctly when I click OK on the alert() box. But without the
+> alert, it doesn't resize at all (on NEXUS 10)
+> 
+> —
+> Reply to this email directly or view it on GitHub
+> https://github.com/alvarotrigo/fullPage.js/issues/248#issuecomment-47846161
+> .
+",milesmatthias,alvarotrigo
+248,2014-07-02 23:04:50,"Hey guys, I agree with @milesmatthias, according my test in most of cases this delay should work fine, I have no time now to do a PR but if you want to I can test in a lot of different android devices and give you my feedback about how it works with the fix that Miles propose 
+",Jhony0311,milesmatthias
+248,2014-07-03 02:28:02,"@alvarotrigo I agree with the statement  ""some reports that the orientationchange event fires prematurely, which is why the values are reversed."". In Android the orientationchange event does not give the right width and height. but in Android it still fire the resize event when rotating.  I try this it works in Android. Thanks for all the points.
+
+
+",channainfo,alvarotrigo
+248,2014-07-03 02:55:48,"@milesmatthias thanks for your PR. I think we better not omit isTouchDevice otherwise we might have 500ms delay to rebuild. touch device resize once so it should be called right away without using setTimeout.
+",channainfo,milesmatthias
+248,2014-07-03 04:03:58,"@channainfo I think everyone might be on different pages. According to @Jhony0311 and @lemmyFromMotorhead, various touch devices have various delays between the `resize` event firing and the updating of the `window.width` and `window.height` values.
+
+Everyone -- I just found a couple of great stack overflow answers that discuss this situation in great detail complete with testing:
+- http://stackoverflow.com/a/6603537/837042
+- http://stackoverflow.com/a/13805104/837042
+
+Going off of the second answer, we should try only listening to the `resize` event and using `window.innerHeight` and `window.innerWidth`.
+
+However, I'm not encouraged that there is a great way to have something that handles every single browser, considering this is in the jQuery documentation for the `.resize()` function:
+
+> Depending on implementation, resize events can be sent continuously as the resizing is in progress (the typical behavior in Internet Explorer and WebKit-based browsers such as Safari and Chrome), or only once at the end of the resize operation (the typical behavior in some other browsers such as Opera).
+",milesmatthias,Jhony0311
+248,2014-07-03 09:06:48,"@milesmatthias about the two links you posted, I can not test it, but it seems to me that nowadays mobile OS might react in the same way with the `resize` event, updating in all cases the values for `width` and `height`. (the problem might be in the `orientationchange`)
+
+> According to @Jhony0311 and @lemmyFromMotorhead, various touch devices have various delays between the resize event firing and the updating of the window.width and window.height values.
+
+I'm not quite sure about this. I can't find anything talking about that issue. 
+@lemmyFromMotorhead, you should give us more of your code. Are you placing it inside the `resize` event?
+And about @Jhony0311, he removed his comment and I'm sure there's a reason for it.
+",alvarotrigo,milesmatthias
+248,2014-07-03 09:06:48,"@milesmatthias about the two links you posted, I can not test it, but it seems to me that nowadays mobile OS might react in the same way with the `resize` event, updating in all cases the values for `width` and `height`. (the problem might be in the `orientationchange`)
+
+> According to @Jhony0311 and @lemmyFromMotorhead, various touch devices have various delays between the resize event firing and the updating of the window.width and window.height values.
+
+I'm not quite sure about this. I can't find anything talking about that issue. 
+@lemmyFromMotorhead, you should give us more of your code. Are you placing it inside the `resize` event?
+And about @Jhony0311, he removed his comment and I'm sure there's a reason for it.
+",alvarotrigo,Jhony0311
+248,2014-07-11 11:05:27,"@milesmatthias it seems the proposed solution causes other kind of problems in android devices.
+It fires the resize event when hiding or showing the address bar as detailed [in this open issue](https://github.com/alvarotrigo/fullPage.js/issues/565#issuecomment-48717764).
+",alvarotrigo,milesmatthias
+227,2015-07-17 09:52:17,"@alvarotrigo Thanks for the swift reply. 
+
+I hacked together my own fix relying on `moveTo` in addition to the regular `anchors` based on [this issue comment](https://github.com/BeSite/jQuery.mmenu/issues/340#issuecomment-95963694) at the mmenu.js repository. 
+
+After `$('#fullpage').fullpage({ ... });` I inserted:
+
+
+
+I don't understand why that makes any difference though. I tried to catch the click event from within `onclick`, but it didn't fire.
+
+
+
+Hopefully this helps anyone with the same problem.
+",eystein,alvarotrigo
+226,2016-06-24 03:46:13,"Dear @alvarotrigo, can you come out one reproduction for this `fullpage.js` and `fancybox.js` sample bcs Im having issue on IE's where when I close the `fancybox`, it's jump to others sections. But when open with Chrome or any modern browser it's 100% working. I try so many times and already asked at stackoverflow but not respon at all. 
+
+Any help would be really appreciated.
+
+Here's my previous reproduction. [jsfiddle](https://jsfiddle.net/1dw1ws1a/)
+",faliqaiman,alvarotrigo
+226,2016-06-25 08:21:10,"@alvarotrigo thanks, it works..
+",faliqaiman,alvarotrigo
+225,2014-05-03 16:11:43,"@bittner, your problem is belong the plugin. It is all about CSS styling. Nothing to do with the plugin itself.
+",alvarotrigo,bittner
+219,2016-11-04 08:37:12,"Hi @alvarotrigo, I'm seeing this issue again. Same repro, in fullPage 2.8.8
+",maddles,alvarotrigo
+208,2015-09-15 11:10:04,"@alvarotrigo css3: false drastically decreases performance (mobile and desktop) and having to use it because one wants a single section background attachment as fixed is just sad. Sure it's a Chrome bug. And it's been there for quite some time without indication it'll get fixed any time soon. Meanwhile it's one of the most used browsers. I'd still prefer to have the control; I'd pick translate over jquery.animate() any day. Also that'd enable me to trigger GPU acceleration for specific sections as I see fit, either by calling translateZ(0) or translate3d() both of which should work.
+
+Using jQuery as the fallback if ""all else fails"" is a good enough fallback and it should remain as such.
+
+More options for zeh ppl! :)
+
+edit: the difference is 10fps vs. 60fps at the moment
+",Quaked,alvarotrigo
+188,2014-01-27 14:07:20,"Any thoughts on the latest solution @alvarotrigo ?
+",gavsim,alvarotrigo
+183,2016-06-01 11:01:28,"I have the same problem. Could not fix it with any ""z-index"" settings, but @alvarotrigo is right - setting `css3: false` is a workaround.
+
+Now - video stays at background, although - Chrome now works notably slower with scroll and video playback.
+
+This problem is visible also on Fullpage.js Example page http://alvarotrigo.com/fullPage/examples/videoBackground.html 
+- open page
+- scroll down,
+- scroll back to 1st section - You will see, that Text is not visible at first moment, because Video has come to the very Front. 
+  And only after full load, text appears.
+
+Is it configurable, to keep `css3: true` but fix the scrolling with video background?
+",arnisjuraga,alvarotrigo
+176,2015-06-03 09:49:40,"@alvarotrigo I just changed the code and have it working.
+I cloned the project, created a (obviously local) branch and wanted to create a pull request, but can't.
+Can you help out here? Code didn't change much but it is working for me ;)
+",Bart-Holland,alvarotrigo
+176,2016-03-18 09:07:37,"I made a for in which I added these things:
+https://github.com/Bart-Holland/fullPage.js
+
+If you would be so kind to test it @tschortsch22 
+then I can add a pull request for @alvarotrigo 
+",Bart-Holland,alvarotrigo
+175,2014-05-22 21:50:01,"Maybe this is a little different than what you're talking about @Ouadie, but I've noticed that the hash isn't updated on the scroll event, although fullPage will recognize the scroll event and move to the new page.
+
+This prevents deep linking when you scroll (as opposed to clicking a link with a target href).
+
+I've tried manually unbinding the 'hashchange' event, updating the hash, and then re-binding the 'hashchange' event, but that doesn't play nicely with fullPage.
+
+Is there an option for this @alvarotrigo or do I need to open a new issue for this discussion?
+",milesmatthias,alvarotrigo
+162,2014-05-07 11:00:44,"@alvarotrigo  sory, i realy have problemes to write and read english :$
+I made the modification for replace the doneResizing
+but the bug still exist
+there is the code http://pastebin.com/5PbD71X7
+
+when i load a slide the url look like : wwww.web.ext/pages/anchor/id
+",jarodxxx,alvarotrigo
+160,2014-01-15 14:28:11,"Getting confused here, I thought the issue was that it doesn't properly work on **Windows 8 touch devices**? Why are you disabling the scroll functionality on devices lower than IE9? Those can't be even found on Windows 8 touchscreen devices.
+
+And like @alvarotrigo says, the plugin works just fine in IE8.
+
+Setting autoscroll to false for just Windows 8 Touch devices _should_ be as simple as targeting the UA-string that comes with the `Touch` part.
+
+IE has come a long way, but weird to see it's still trying to be the odd man out in your case. Not sure why it wouldn't adhere to the convential scrolling/touch listeners.
+",guywithabeard,alvarotrigo
+160,2014-03-04 15:50:52,"@alvarotrigo, Is not only IE problem (but I agree with you)))), touch scroll not working on any browser at windows 8 with touchscreen. But on all other websites touch scroll works just fine. If you need any help with testing, I may do it. 
+",romapad,alvarotrigo
+160,2014-03-04 17:42:54,"@alvarotrigo Just to confirm, the touchscreen problem on Windows 8 touchscreens is not only limited to IE. I can't use my touchscreen with fullPage.js on any browser. Weirdly, I have no idea why, but in Firefox if I use two fingers on my touchscreen I can scroll up/down a page.
+",zerodburn,alvarotrigo
+160,2014-06-18 10:21:41,"@alvarotrigo I'll try it at lunch on my acer, I think it will be pretty much the same as the Yoga 2.
+",zerodburn,alvarotrigo
+160,2014-06-18 21:48:19,"Thanks @alvarotrigo - I will try to update to the latest version to see if it makes a difference.
+",RobFanDistro,alvarotrigo
+160,2015-06-28 22:32:42,"@alvarotrigo sorry that I haven't done it earlier, but the output you asked for is as follows:
+
+
+
+I had no easy way to copy the output, so I retyped user agents. Might be a missing space somewhere, but other than that they should be precise.
+",kamilgrymuza,alvarotrigo
+160,2015-06-29 07:01:38,"@alvarotrigo 
+i've changed the condition like you mentioned above – it works on IE11.
+",Peckoman,alvarotrigo
+160,2015-07-10 17:00:08,"Hey @alvarotrigo - the problem is gone, the scrolling works well now (just tested on both devices)! Thanks for fixing it (and sorry for slow response times) :+1: 
+",kamilgrymuza,alvarotrigo
+158,2014-01-10 05:51:58,"Hi @alvarotrigo, thanks for the quick reply.
+
+so, can  i use the afterRender callback to remove the height setting by the plugin?
+what about resizing window, how can i stop the plugin there from setting height to each section?
+
+idanb11
+",idanb11,alvarotrigo
+153,2014-11-21 07:46:08,"Hi @Janosch7384 
+
+Your solution works (that's awesome), but somehow it effects the scrollOverflow option. It's just like as if I set the scrollOverflow 'false'.
+
+Any idea? @alvarotrigo maybe? :)
+
+Here's the code:
+
+
+",nugjagoan,alvarotrigo
+153,2014-11-21 10:32:38,"Thanks for fast reply @alvarotrigo :)
+
+Solution #1: I'm sorry I don't understand, you mean I have to apply the width and height for each img?
+
+I have uploaded my work, please kindly take a look it here: http://tokobayifika.com/test/index.htm
+I can't scroll the section that have along content. But strangely, if I inspect element in Chrome (the inspect element's window goes up), then I can scroll the long page on a section.
+
+Thank you very much :)
+",nugjagoan,alvarotrigo
+148,2014-01-10 12:25:41,"@karlcarstensen I make use of tabulation instead. If I want to change something in those files in the future, I will still use tabulation and we would have another conflict again. 
+
+Also, I tent not to separate `){` .
+
+Apart from that, I don't find it so important some minor changes or whitespaces (such as `h1,h2,h3{` vs `h1, h2, h3{`  or the space between the keyboards meta tag or `text-align:center;` vs `text-align: center;`).
+
+Having said that, it would be more than probable than in any modification I do of the plugin I will commit the same _""mistakes""_ again. 
+And well, you or someone else would have to change all of that again, and again... which doesn't make much sense.
+
+After all, those little changes don't change anything from the user perspective and functionality. (Well yes, they add some extra white spaces which will increase the size of the file a little bit :P )
+
+By the way, could I ask you why does it make it hard to work? (I'm just wondering as I didn't experiment any trouble with my tools)
+",alvarotrigo,karlcarstensen
+145,2015-05-08 01:24:01,"Do you want me to log a new issue @alvarotrigo ? :)
+",pzi,alvarotrigo
+145,2016-06-15 08:36:10,"So let me share some screenshots so I can describe myself better. 
+
+![img_7829](https://cloud.githubusercontent.com/assets/17320007/16073051/4deed1f2-32e4-11e6-8e39-3c629f084312.PNG)
+^ This is the standard view
+
+![img_7828](https://cloud.githubusercontent.com/assets/17320007/16073056/58879810-32e4-11e6-8927-9df722358550.PNG)
+^ And when you click on an input field, the keyboard falls over the input fields.
+
+For some kind of reason, it only happens on Chrome iOS. On Android Chrome it works fine, just like on Safari iOS.
+
+Do you have any ideas? You can visit the page here: http://www.happiness-design.com
+
+Thank you very much in advance,
+Chris
+
+P.S. @alvarotrigo your ideas are also very much welcome :-)
+",chrisamsterdam1986,alvarotrigo
+145,2016-06-15 09:28:35,"> P.S. @alvarotrigo your ideas are also very much welcome :-)
+
+Nop. Not easy to deal with these things as browsers do not provide us much information about when they open the keyboard or in which way they do it.
+",alvarotrigo,alvarotrigo
+145,2016-06-15 09:30:32,"@alvarotrigo - Thanks for your feedback. Too bad Chrome is being annoying here.
+",chrisamsterdam1986,alvarotrigo
+133,2013-12-18 21:59:07,"Thanks a lot @JustH! 
+",alvarotrigo,JustH
+129,2014-11-27 19:30:34,"Hi @alvarotrigo, I have been trying your plugin in order to design an online help web interface for an application that we are currently testing in our company.
+
+I've been reading these thread and try the implementation of the scrollSlider function, however it seems that when I'm on a section that has slides, then I navigate to several slides, go to another section and return back to the previous section, the previous section is still showing the current slide that I navigated before going to another section. It takes about milliseconds for the section to return to the frist slide.
+
+Is there a way to make that delay immediate?
+
+Thanks
+",jaadolio,alvarotrigo
+128,2013-12-17 12:14:32,"What @alvarotrigo said and also, you should de-queue or at least properly call jQuery. Right now it's being loaded twice (Wordpress loads it and you load it). Set the functions.php to deregister it and then register it once from inside the functions.
+",guywithabeard,alvarotrigo
+128,2013-12-17 15:46:31,"@alvarotrigo the site is responsive so if you just decrease the window size it will go into mobile view.
+
+@guywithabeard good catch I will de-queue it now.
+",adamhairfield,alvarotrigo
+124,2016-12-13 01:36:22,"`continuousHorizontal: true` doesn't work correct with extension ContinuousHorizontal. I was trying on [demo page](http://alvarotrigo.com/fullPage/extensions/continuousHorizontal.html#firstPage).
+Slider jumps to the first slide after reached last slide. @alvarotrigo could you check, please?",Splintex,alvarotrigo
+122,2015-11-23 15:49:29,"@alvarotrigo nice, it works. thank you
+",boutzamat,alvarotrigo
+115,2013-12-09 23:59:43,"@alvarotrigo I dont think its an issue of anybody, what I believe is that the plugin does not play nicely with apps that manage the content of the page dynamically. It works fine for normal pages, but when you have a MVP structure or something like turbolinks modifying the ""body"" with styles like ""overflow:hidden"" will affect other pages and prevent scrolling in other parts of the application, unless you reload. 
+",jseravalli,alvarotrigo
+106,2014-09-24 10:38:09,"Hi @alvarotrigo I was wondering if you are able to set the carousel to automatically scroll horizontally?
+
+Thanks, James
+",mrjamesgrundy,alvarotrigo
+106,2014-09-25 15:04:17,"Thanks, great help @alvarotrigo 
+",mrjamesgrundy,alvarotrigo
+102,2013-11-29 11:40:19,"@alvarotrigo works great, that was quick. Thanks ;)
+",tomaszbujnowicz,alvarotrigo
+82,2013-11-22 10:47:36,"@alvarotrigo does this work along side scrollOverflow:true? What's the name used to turn this to true I think it might be what i've been trying to setup on my own
+",criesner,alvarotrigo
+82,2013-11-23 20:34:56,"@alvarotrigo I get it now, you've added a swipe gesture for horizontal slides (might consider swipe trackpad/magic mouse to go along with that feature)
+
+What i'm trying to achieve is a bit unconventional. vertical swipes/mouse wheel snaps and horizontal drag/swipe is a horizontal free scroll (no snap).
+You can see it illustrated in this demo i made with onepagescroll.js and nicescroll.js http://chrisriesner.com/cnyn-webzine-experiments/snap-scroll-ONEPAGESCROLL-NICESCROLL-cnyn/snap-scroll-ONEPAGESCROLL-NICE-clean.html
+but the problem is that on trackpad horizontal swipes the page snap is triggered vertically.
+
+I wasn't able to see how it worked with fullpage.js because i was having trouble getting external plugins like nicescroll.js to work with fullpage.js even with adding a afterRender: function 
+http://chrisriesner.com/cnyn-webzine-experiments/snap-scroll-FULLPAGE-NICE-cnyn/snap-scroll-FULLPAGE-NICE-cnyn.html#secondPage
+
+
+",criesner,alvarotrigo
+65,2013-10-31 09:42:09,"Hi @alvarotrigo I drew up this fiddle.  http://jsfiddle.net/informa/K9uuM/11/
+
+The JS runs the first flexslider in the first section on load.
+Then loads the next flexslider after the next section is loaded. 
+
+Pretty sure the error is in conjunction with flexslider. It only seems to error on page refresh rather than re-running the fiddle.
+
+Let me know what you think.
+
+It doesn't happen on every refresh but it does seem to happen when clicking the flexslider navigation.
+
+Uncaught TypeError: Cannot read property 'top' of undefined
+",informa,alvarotrigo
+65,2013-10-31 22:11:15,"Thanks @alvarotrigo thats awesome. Glad you were able to solve it and fast with the feedback, thanks.
+",informa,alvarotrigo
+65,2014-02-20 11:30:53,"Hey @alvarotrigo, it's me again. 
+I got the same error from above, but in a different issue. Everytime I change the viewport size of my site and then scroll to another section, I get the error in Chrome: ""Uncaught TypeError: Cannot read property 'left' of undefined"".
+Do you got any experience with that? My Plugin configurations are the default ones. 
+",Worstkaes,alvarotrigo
+65,2014-02-26 14:57:03,"@alvarotrigo Laggy is not really the good word (sorry for my bad english)
+It works randomly and like @Worstkaes I need to scroll quickly up and down.. with all the examples I find even your live example
+",vincentdindon,alvarotrigo
+65,2014-03-06 15:28:18,"Oh yeah. It's working now in Firefox 27.0.1 and Mavericks. 
+Thanks for that @alvarotrigo. 
+",Worstkaes,alvarotrigo
+64,2014-03-14 20:42:55,"Hi! about the first point that @acturbo bring in this issue, I was wondering how did you take off the animation when the resize is complete on your demo? (http://alvarotrigo.com/fullPage/) or did you fix it and make the resize ajustement live? 
+keep up the good work @alvarotrigo 
+",m3nz,alvarotrigo
+64,2014-03-17 14:10:06,"@alvarotrigo yeah there's an animation but in your demo, it's a like a flash when it readjust your window! On my side, when i resize there'S an animation to top:0 or bottom:0 :-/
+",m3nz,alvarotrigo
+64,2014-03-17 14:31:56,"nevermind ^_^ I found out when you are on the first slide on your demo, there's no animation of the slide when you resize it. If you're on an other slide the animation is here. Is there a way to make it all like the first slide when you resize the page? @alvarotrigo 
+",m3nz,alvarotrigo
+64,2014-03-17 14:36:07,"ok I'll try this out! thanks a lot! :) @alvarotrigo 
+",m3nz,alvarotrigo
+64,2014-04-08 15:59:44,"It's working now. Thanks for your kind support @alvarotrigo. the other issue is user stuck on slide until the transition  completes. 
+",wpgeek922,alvarotrigo
+64,2014-04-24 11:20:52,"@alvarotrigo ok I think I get it. Thank you very much for your help. 
+",giulianovelli,alvarotrigo
+48,2013-10-24 22:58:28,"Thats awesome @alvarotrigo really good addition to the plugin I think.
+
+The project I am working (after talking to the client) didn't really work
+with a fixed header and footer unfortunately and so I had to add the header
+and footer into the first and last sections using the slimscroll
+functionality for the footer - which in the end doesn't work that bad,
+thanks.
+
+I have been working with flexslide in the sections and setting the carousel
+height to window height to get a full page background in on each carousel
+slide. This would be another great addition to your plugin as you already
+have a slider and are setting the window height, but I wanted the carousel
+page navigation as well as the directional navigation and a carousel load
+function.
+
+I did have bootstrap as a dependancy and adding one of the fullpage options
+adds a class called 'table' which conflicts with bootstrap. Might be worth
+changing this class name to a more unique class name for future releases
+maybe? table-js or fullpage-table.   (just a thought)
+
+Once done I'll send you a link to see what you think.
+
+Thanks again.
+
+On Thu, Oct 24, 2013 at 10:09 PM, alvarotrigo notifications@github.comwrote:
+
+> @informa https://github.com/informa Good news. I've implemented a
+> solution for it.
+> I added two options more:
+> - paddingTop
+> - paddingBottom
+> 
+> No px is needed, just a numerical value.
+> You can see it working here: http://jsfiddle.net/7PwsS/47/
+> 
+> Documentation will be ready soon.
+> 
+> —
+> Reply to this email directly or view it on GitHubhttps://github.com/alvarotrigo/fullPage.js/issues/48#issuecomment-26983593
+> .
+",informa,alvarotrigo
+48,2013-12-04 23:48:25,"Awesome @alvarotrigo I saw your apple demo -- looking great.
+Here is the site I was working on with your plugin https://www.xone.vodafone.com/ 
+I turned off your plugin in smaller browsers and worked with flexslider and backstretch to get the carousels/images in.
+",informa,alvarotrigo
+35,2014-02-21 18:43:11,"@alvarotrigo it worked for me. Thanks
+",thylo,alvarotrigo
+35,2014-07-05 11:31:57,"Hi @alvarotrigo. I'm trying to make the video fit the full screen dimensions in the first section along with the menu. I'm not sure where to put the javascript code exactly.
+
+This is what it looks like now when I put the html you listed in jsfiddle. Video doesn't play though.
+
+![screen shot 2014-07-05 at 12 26 33](https://cloud.githubusercontent.com/assets/5969321/3486432/e85b6cf6-0437-11e4-91bf-bf7fcc825724.png)
+
+This is what it looks like when I put the javascript in the jquery.fullPage.js. The video starts playing but its not full screen and the second section appears to be scrolled up.
+
+![screen shot 2014-07-05 at 12 30 03](https://cloud.githubusercontent.com/assets/5969321/3486434/f07e324c-0437-11e4-8024-a0401a52d135.png)
+
+Your help would be much appreciated 
+",zakbenjamin,alvarotrigo
+31,2013-10-10 13:33:47,"@alvarotrigo 
+
+I am planning to use this thing in production. But I found two issues that were possibly deal breaker. 
+- Complex anchoring mechanism
+- Ability to redirect when hash not found
+
+My initial thought was to rewrite the portions concerned with anchor mechanism but wisdom (or procrastination? :smiling_imp:  ) prevailed. 
+
+In my use case, only the homepage is ""full-paged-scrolled"", each section on the homepage represents one post/article (which itself is a share-able URI). But the homepage only shows 7-Recent featured articles.
+
+If the URI to an article which was featured in past is received, but not currently featured, I want some mechanism to be able to redirect it to the proper location rather than confusing the user by showing him the homepage only.
+
+As for committing to the last version: If you have a better strategy planned for managing anchors, you can simply ignore this one, else let me know if you plan to merge, I'll put in another pull request.
+",liquidscorpio,alvarotrigo
+30,2013-10-10 04:59:01,"@alvarotrigo +1
+",liquidscorpio,alvarotrigo
+22,2013-10-12 14:31:17,"Hi @alvarotrigo. Great Plugin and great slimscroll feature. But I've figured out that it adds slimscroll to overflowed areas automatically on page load but not on window resize.
+Is there an option to change that or is this feature not provided in full page?
+tanks
+",janizde,alvarotrigo
+12,2015-07-30 17:31:55,"Hi @alvarotrigo, I'm having the same Apple's Magic Mouse issue but only on Chrome [Version 44.0.2403.107 (64-bit)]. Firefox and IE are OK.
+
+Even your demo page behaves wierd. 
+
+Any idea of what could be wrong?
+
+Congrats for your work!
+",kikemx78,alvarotrigo
+12,2015-07-30 20:24:39,"@alvarotrigo it works for me!
+thnx mate!
+",kikemx78,alvarotrigo
+3,2014-04-16 15:21:36,"@JustH last version is 2.0.5. I hope it is working well. 
+",alvarotrigo,JustH
+1,2014-11-06 03:35:37,"@alvarotrigo thank you for the quick response. Would you mind taking a quick look at my code? http://direct.jubjub.com/clients/asceoc/newsletter-article-page.php I can't seem to get the scroll bar to show up and I'm not sure what I'm doing wrong.
+
+By the way, I'm using Bootstrap 3.3.0 framework
+
+Thank you
+",kingk1974,alvarotrigo
+2624,2017-03-21 09:00:04,@alvarotrigo Please help,shahjehanali1,alvarotrigo
+2613,2017-03-16 08:58:41,@alvarotrigo please Help me,shahjehanali1,alvarotrigo
+2545,2017-02-04 17:38:01,"hey @alvarotrigo . How can I integrate fullPage.js with material design lite. This combo will be awesome, I guess.",vikaskyadav,alvarotrigo
+2515,2017-01-19 06:14:57,"**Unlicensed fullPage.js extension** is still visible even when a license key for fading Effect is specified.  
+I am assuming that the key is assigned to a website during purchase, but **how do we move** the license to another one?  The key was bought in @alvarotrigo Gumroad page.",raymundbiddi,alvarotrigo
+2473,2016-12-23 11:11:25,"### Description
+
+Today, I using fullPage.js for my project.
+
+I need to add a video embed with Youtube iframe.
+
+But I can't scroll video in website.
+
+I read before issues, and I found @alvarotrigo was fixed at fullPage.js version 2.9.2.
+
+Note: My website needs to one scroll a page and not show scrollBar. So, I can't be setting like: `scrollBar:true`.
+
+I also found add: `&enablejsapi=1` after video embed but also not success.
+
+Must I add more setting in fullPage.js?
+
+I hope I will have received a solution to resolve that problem.
+
+Thanks!!!
+
+My problem very likely this example. At video `section3` when move mouse into the iframe. I can't move to next section.
+http://jsfiddle.net/q884Lv0a",vanloc0301,alvarotrigo
+2473,2016-12-24 17:12:51,Hi @alvarotrigo . Have you any method to resolve that problem? My website is production; I need to fix it. I found fullPage.js is greater another library. But I don't found any method to resolve my problem. Thanks.,vanloc0301,alvarotrigo
+2473,2016-12-29 18:24:03,"> and I found @alvarotrigo was fixed at fullPage.js version 2.9.2.
+
+I wonder where. Because the issue was never fixed.
+
+See [this issue](https://github.com/alvarotrigo/fullPage.js/issues/2229) which was marked as ""might not be possible"" and ""help needed"".
+It was never solved and I believe there's no proper solution to it besides using `scrollBar:true`,`autoScrolling:false` or using some kind of layout over the video.
+
+I'll close this issue as a duplicate of https://github.com/alvarotrigo/fullPage.js/issues/2229 ",alvarotrigo,alvarotrigo
+2456,2016-12-13 13:10:37,"- Fixed bug: setAutoScrolling was broken #2426 
+- Fixed bug: swiping slides on touch won't work when using autoScrolling:false #2447
+- Fixed bug: Keypress fires prematurely #2448
+- Fixed bug: some problems with subdomains and activation key for extensions 
+- Documentation: fixed typos thanks to @thisisfed  #2430
+- Documentation: improved docs for extensions
+- Improved: backgrounds video example.
+- Resource: adding new wordpress theme
+- Pure Javascript: added a new parameter `nextSlideIndex` to the callback `onSlideLeave` #2450",alvarotrigo,thisisfed
+2344,2016-10-20 19:43:01,"- Fixed bug: problem with click and touch events on touch devices #2338
+- Fixed bug: media elements didnt auto-pause on section leave when using Reset Sliders extension #2336
+- Fixed bug: autoScrolling:false not working on mobile #2335
+- Improved: continuousHorizontal set to false by default  #2344 thanks to @publicJorn
+- Improved: added option `lazyLoading` to allow compatibility with other lazy loading libraries #2344 thanks to @publicJorn
+- Improved: scroll overflow sections won't scroll until the section gets active #2290
+- Improved: 1st section didn't get active when using fp-auto-height for it and autoScrolling:false  #2267 
+",alvarotrigo,publicJorn
+2323,2016-10-12 12:10:48,"- Fixed bug: iOS 10 content was bouncing when swiping #2285
+- Fixed bug: Unknown URL anchors throwing a javascript error and stopping execution #2284
+- Fixed bug: on mobile chrome, trying to scroll up causes page reload #2277
+- Removed: `api=1` from videmo videos #2288 
+- Removed: use of extensions from unminified version of fullpage.js 
+- Removed: SCSS file  #2297
+- Documentation: callback `afterResponsive` documented #2296 
+- Documentation: support for section's attribute `data-tooltip` documented #2292 
+- Documentation: responsive option not supported in pure javascript version #2259 
+- Documentation: added `normalScrollElements` can not be used for section/slides #2301
+- Documentation: Corrected spacing and misc #2244 thanks to @faisalhmohd
+- Documentation: added details regarding extensions activation key
+- Resources: Added ember-cli fullpage.js addon
+- Resources: Added fullPage.js Rails Ruby gem  
+- Resources: added React implementation of fullPage.js
+- Improved: jshint validation
+",alvarotrigo,faisalhmohd
+2233,2016-08-30 15:25:20,"- Fixed bug introduced in 2.8.4 causing the break of fullpage.js on resize 
+- Fixed bug with caused autoplay of youtube videos without data-autoplay #2214
+- Fixed bug hiding slides navigation temporarily on scrolling
+- Fixed example trying to load slimScroll instead of scrolloverflow vendor file.
+- Improved commonJs detection logic thanks to @sagech #2176 
+- Added support for new extension: `reponsiveSlides` that turns slides into sections #1919 #2228
+- Documentation: added documentation for `responsiveSlides`.
+",alvarotrigo,sagech
+2205,2016-08-17 09:58:24,"- Fixed problem in IE  thanks to @ironprogrammer #2203
+",alvarotrigo,ironprogrammer
+2204,2016-08-16 23:51:24,"- Fixed problemin IE thanks to @ironprogrammer  #2203
+",alvarotrigo,ironprogrammer
+2142,2016-07-08 12:00:24,"- Fixed bug:links and scrolloverflow #2035
+- Fixed bug: scrolloverflow when resizing #2109
+- Fixed bug: scrollOverflow:true and margins #2071
+- Fixed bug: removing class `fp-responsive` from $body when using destroy('all') thanks to @setheid 
+- Added new option `bigSectionsDestination` to define the destination for big sections when using `fp-auto-height`
+- Added autoplay and autopause features when using scrollbar #2135
+- Improved bottom section detection when using `fp-auto-heigh` for it.
+- Improved destroy('all'). Now it will load all lazy load content #2110
+- Section and slides selectors will only be used within the library container #2104
+- Documentation: added`fp-auto-height-responsive` #2111 
+- Documentation: added `setResponsive` #2132
+- Documentation: improved scrolloverflow description thanks to @mortonfox
+- Documentation: added eDarling and Bugatti in the list of sites using fullpage.js
+- Documentation: added `fp-enabled` state class.
+",alvarotrigo,setheid
+2142,2016-07-08 12:00:24,"- Fixed bug:links and scrolloverflow #2035
+- Fixed bug: scrolloverflow when resizing #2109
+- Fixed bug: scrollOverflow:true and margins #2071
+- Fixed bug: removing class `fp-responsive` from $body when using destroy('all') thanks to @setheid 
+- Added new option `bigSectionsDestination` to define the destination for big sections when using `fp-auto-height`
+- Added autoplay and autopause features when using scrollbar #2135
+- Improved bottom section detection when using `fp-auto-heigh` for it.
+- Improved destroy('all'). Now it will load all lazy load content #2110
+- Section and slides selectors will only be used within the library container #2104
+- Documentation: added`fp-auto-height-responsive` #2111 
+- Documentation: added `setResponsive` #2132
+- Documentation: improved scrolloverflow description thanks to @mortonfox
+- Documentation: added eDarling and Bugatti in the list of sites using fullpage.js
+- Documentation: added `fp-enabled` state class.
+",alvarotrigo,mortonfox
+2133,2016-07-04 18:47:23,"hi !   @alvarotrigo alvarotrigo ,  excelent library fullpage.js ! 
+
+a question . . . .  i have ...
+
+
+
+in my URL i want ( if this is possible) 
+www.mydomain.com/#firstPage/Test1
+www.mydomain.com/#secondPage/Test2
+and 
+www.mydomain.com/#3rdPage/Test3
+
+what do you Think? ,    in this case (  is possible ),  what are the change  ?
+
+disable bodyclass() ?  delete the replace in  windows.location ...
+
+you can help me please ? , ,, , any ideas ?
+",apositivo,alvarotrigo
+2133,2016-07-05 06:01:20,"hi @vikaskyadav    hello, thanks for writing, hopefully the opinion of the creator of the plugin @alvarotrigo 
+",apositivo,alvarotrigo
+2068,2016-10-25 20:10:44,"@johanhermansson that's a [known and unresolved youtube bug](https://code.google.com/p/gdata-issues/issues/detail?id=7584&q=label%3AAPi-YouTube%20black&colspec=API%20ID%20Type%20Status%20Priority%20Stars%20Summary). Not a fullPage.js one.
+",alvarotrigo,johanhermansson
+2045,2016-05-31 10:13:21,"- Fixed bug causing broken links when using scrollOverflow:true #2035
+- Fixed bug causing fullpage.js to break in certain circumstances #2044
+- Added new resource: angular directive for fullpage.js #2038 thanks to @meiblorn 
+- Added support for unicode anchors (chinese etc) #2029 thanks to @yyken 
+- Dev: replaced gulp-minify-css for gulp-clean-css
+",alvarotrigo,yyken
+1995,2016-05-03 23:46:22,"@alvarotrigo Why Invalid?
+",Ravenna,alvarotrigo
+1871,2016-03-02 19:51:53,"@alvarotrigo can you please help.
+",RohitDeorey,alvarotrigo
+1866,2016-03-01 10:09:55,"I just want two slides auto change using ""$.fn.fullpage.moveSlideRight();"" . This method will cause the slide change faster and faster when I leave that slide and then back. I do not know what the problem is. Code like bellow:[https://jsfiddle.net/fiddleoutout/9z4yn9hb/12/](url)
+![1](https://cloud.githubusercontent.com/assets/2129521/13447948/3da2caec-e05a-11e5-8302-a572b0567a34.png)
+
+I defined four seconds to change slide,but it's not working when leave it and then back,it seems turn more faster. Like one second change one slide.
+
+@alvarotrigo
+",Kennersky,alvarotrigo
+1859,2016-02-28 17:19:39,"When you open a site directly in a section (as specified in the URL, e.g. #4thpage) then Fullpage scrolls to that section once the site is loaded.
+
+It waits until everything is loaded, including all elements and startup scripts, and then it scrolls to the right section.
+
+You can see this for example if you open a Fullpage site like this:
+http://alvarotrigo.com/fullPage/#4thpage
+As requested in the URL it needs to open in the fourth section (scroll to that section on site open).
+
+But when there is a delaying startup script in your document, you might want Fullpage to firstly scroll to the right section and then finish loading of the delaying script (such as a chat box that is starting up).
+
+For example in my case I have a chat box which is just an extra support feature to help people who have trouble on the site or who want to ask a question about what they see on the site. In that case it's more important that all main parts of the site are loaded and Fullpage has scrolled to the right section. After that I would like to startup my chat box script.
+
+If you could add a feature to specify a script or element so that Fullpage will not wait for it on startup, and scrolls to the section directly, that would be much appreciated. On that way these scripts or elements are not delaying the page anymore.
+
+As the maker of Fullpage.js (@alvarotrigo) explained [on another place](http://stackoverflow.com/a/35653296/1081396):
+
+> Probably what's taking time is the loading of the JS, CSS or SWF files required for that script to run. Fullpage.js waits until all elements from the site have loaded to scroll to the section. The reason to do this is due to the use of images in section when using scrollOverflow:true, as fullpage.js needs to determine if the section needs scroll bar or not depending on the size of the loaded image.
+",ModDM,alvarotrigo
+1857,2016-03-01 13:32:45,"@alvarotrigo do you have any idea what could cause this issue? This is really important. I can hack the navigation to show up by manually setting the z-index of the sections to -1 but this causes all sorts of other problems.
+",mhoffmann98,alvarotrigo
+1853,2016-02-25 06:40:56,"Hello @alvarotrigo 
+  I  have used slide  function in my  project .
+  In project  slide part there is  2 slide.
+`I am easily move  to particular using  $.fn.fullpage.moveSlideRight() and  $.fn.fullpage.moveSlideLeft`()       
+
+**But my  second slide dynamic question list. in that i have  next and previous button for move to  particular  question.    when click on that button page automatic scroll.**
+
+so ,In section slide  my  contain  only change.but page  scroll automatic.
+",sagarjethi,alvarotrigo
+1851,2016-02-24 14:16:02,"Hi,
+I have used Skrollr and Fullpage for animating the elements. Everything works perfect until on screen devices smaller than 768px.
+
+Either the buttons doesn't anchor to the correct section or the the scroll effect of the skrollr doesn't work.
+
+Please can you have a look at this @alvarotrigo 
+
+External Source - http://dwebsight.com/fullpage.html
+
+PS: Sorry about the last issue having a lot of code in it.
+",dkvellin,alvarotrigo
+1850,2016-02-24 13:23:56,"Everything seems to work absolutely fine until its on Ipad or Mobile. The anchor tags fail to move the body to the respective position on Ipad or mobile devices. Please can you let me know if I am doing something wrong from my end? @alvarotrigo 
+
+`<!DOCTYPE html>
+<html>
+<head>
+<meta name=""viewport"" content=""width=device-width,initial-scale=1"">
+    <title>SCube Digital Media</title>
+    <style type=""text/css"">
+    .scube-rocket {
+    max-width: 250px;
+    padding: 10%;
+    position: fixed;
+}
+# fullpage {
+
+
+
+}
+.smoke {
+    max-width: 46%;
+    padding: 10% 0% 10% 0%;
+    position: fixed;
+    display: none;
+    margin-left: -4%;
+}
+@media all and (max-width: 768px) {
+    #fullpage {
+        width: 100%;
+    }
+    .scube-rocket {
+    padding: 0 33.5%;
+    z-index: 9;
+    background: #fff;
+}
+.fp-tableCell {
+    padding-top: 25%;
+}
+}
+</style>
+    <link rel=""stylesheet"" type=""text/css"" href=""file:///Users/third/Desktop/skrollr-menu%20plugin_files/example3.css"">
+
+<style>
+        /* Sections
+         * --------------------------------------- */
+        #section0 img,
+        #section1 img{
+            margin: 20px 0 0 0;
+        }
+        #section2 img{
+            margin: 20px 0 0 52px;
+        }
+        #section3 img, #section4 img, #section5 img, #section6 img{
+            bottom: 0px;
+            position: absolute;
+            margin-left: -420px;
+        }
+        .intro p{
+            width: 50%;
+            margin: 0 auto;
+            font-size: 1.5em;
+        }
+        .twitter-share-button{
+            position: absolute;
+            z-index: 99;
+            right: 149px;
+            top: 9px;
+        }
+    </style>
+    
+</head>
+<body>
+<img class=""smoke"" src=""http://dev.thescube.com/wp-content/uploads/2016/02/animation1-1.gif"" data-0=""display:none;"" data-550p=""display:block;""/>
+<svg version=""1.1"" id=""Layer_1"" class=""scube-rocket"" xmlns=""http://www.w3.org/2000/svg"" xmlns:xlink=""http://www.w3.org/1999/xlink"" x=""0px"" y=""0px"" viewBox=""0 0 325.3 637.4"" style=""enable-background:new 0 0 325.3 637.4;"" xml:space=""preserve"" data-0p=""display:block;"" data-550p=""display:none;"">
+<style type=""text/css"">
+    .st0{fill:#E6E6E6;}
+    .st1{fill:#F2F2F2;}
+    .st2{fill:#00CCCC;}
+    .st3{fill:#00E5DF;}
+    .st4{fill:#1A1A1A;}
+    .st5{fill:#4D4D4D;}
+    .st6{fill:#333333;}
+    .st7{fill:#E5B12E;}
+    .st8{fill:#FFD62D;}
+    .st9{fill:#5BB24C;}
+    .st10{fill:#7AC943;}
+    .st11{fill:#FFFFFF;}
+    .st12{fill:#312F30;}
+    .st13{fill:#0F9CD8;}
+    .st14{fill:#43B7FF;}
+    .st15{fill:#3FA9F5;}
+    .st16{fill:#CCCCCC;}
+    .st17{fill:#9966CC;}
+    .st18{fill:#8D62BF;}
+    .st19{fill:#A976E5;}
+</style>
+
+<g>
+    <g>
+        <g data-0p=""transform:translate(0%, 0%);"" data-100p=""transform:translate(-500%, 500%);"" data-200p=""transform:translate(0%,0%)"";>
+            <rect x=""50.6"" y=""582.2"" class=""st0"" width=""58.3"" height=""15.6""/>
+            <path class=""st1"" d=""M119.2,569.9c0,8.9-7.3,16.2-16.2,16.2H42.1c-8.9,0-16.2-7.3-16.2-16.2l0,0c0-8.9,7.3-16.2,16.2-16.2H103
+                C112,553.7,119.2,561,119.2,569.9L119.2,569.9z""/>
+        </g>
+        <g data-0p=""transform:translate(0%, 0%);"" data-100p=""transform:translate(500%, 500%);"" data-200p=""transform:translate(0%,0%)"";>
+            <rect x=""217.8"" y=""582.2"" class=""st1"" width=""58.3"" height=""15.6""/>
+            <path class=""st0"" d=""M286.4,569.9c0,8.9-7.3,16.2-16.2,16.2h-60.9c-8.9,0-16.2-7.3-16.2-16.2l0,0c0-8.9,7.3-16.2,16.2-16.2h60.9
+                C279.2,553.7,286.4,561,286.4,569.9L286.4,569.9z""/>
+        </g>
+    </g>
+    <g>
+        <g>
+            <g data-0p=""transform:translate(0%, 0%);"" data-100p=""transform:translate(0%, -600%);"" data-500p=""transform:translate(0%, 0%);"">
+                <g>
+                    <path class=""st2"" d=""M162.9,0c-50.4,6-59.2,94-59.2,112v375.5l59.2,0V0z""/>
+                    <path class=""st3"" d=""M162.9,0c50.6,6.1,59.4,94.1,59.4,112.1v375.5h-59.4V0z""/>
+                </g>
+                <g>
+                    <rect x=""103.7"" y=""260.8"" class=""st4"" width=""59.4"" height=""6.9""/>
+                    <rect x=""162.9"" y=""260.8"" class=""st5"" width=""59.4"" height=""6.9""/>
+                </g>
+                <g>
+                    <rect x=""103.7"" y=""137.2"" class=""st4"" width=""59.4"" height=""6.9""/>
+                    <rect x=""162.9"" y=""137.2"" class=""st5"" width=""59.4"" height=""6.9""/>
+                </g>
+            </g>
+            <g data-0p=""transform:translate(0%, 0%) rotate(0deg);"" data-100p=""transform:translate(-3500%, 100%) rotate(-180deg);"" data-400p=""transform:translate(0%, 0%) rotate(0deg);"">
+                <g>
+                    <path class=""st6"" d=""M44.4,490.1h27.5V73.3C69,74,64,77.4,58.4,90.8C49.7,111.3,42.2,135,41,154.2c-5.5,87.1,0,335,0,335
+                        L44.4,490.1z""/>
+                    <path class=""st5"" d=""M99.3,490.1l3.4-0.8c0,0,5.5-248,0-335c-1.2-19.2-8.7-42.9-17.4-63.5C79.6,77.4,74.6,74,71.8,73.3v416.7
+                        H99.3z""/>
+                </g>`
+                <g>
+                    <path class=""st7"" d=""M71.8,362.5v-8.1h-33c0,2.7,0,5.4,0,8.1H71.8z""/>
+                    <path class=""st8"" d=""M104.9,362.5c0-2.7,0-5.4,0-8.1h-33v8.1H104.9z""/>
+                </g>
+                <g>
+                    <path class=""st7"" d=""M71.8,268.7v-8.1H38.5c0,2.7,0,5.4,0,8.1H71.8z""/>
+                    <path class=""st8"" d=""M105.2,268.7c0-2.7,0-5.4,0-8.1H71.8v8.1H105.2z""/>
+                </g>
+                <g>
+                    <path class=""st7"" d=""M71.8,171.9v-7.8l-31.7-0.1c-0.2,2.7-0.3,5.3-0.3,8H71.8z""/>
+                    <path class=""st8"" d=""M103.8,171.9c0-2.6-0.1-5.3-0.1-7.9l-31.9,0v7.8H103.8z""/>
+                </g>
+            </g>
+            <g data-0p=""transform:translate(0%, 0%) rotate(0deg);"" data-100p=""transform:translate(3500%, -100%) rotate(180deg);"" data-400p=""transform:translate(0%, 0%) rotate(0deg);"">
+                <g>
+                    <path class=""st6"" d=""M226.1,490.1h27.5V73.3c-2.8,0.7-7.8,4-13.5,17.4c-8.7,20.6-16.2,44.3-17.4,63.5c-5.5,87.1,0,335,0,335
+                        L226.1,490.1z""/>
+                    <path class=""st5"" d=""M281,490.1l3.4-0.8c0,0,5.5-248,0-335c-1.2-19.2-8.7-42.9-17.4-63.5c-5.7-13.4-10.7-16.7-13.5-17.4v416.7
+                        H281z""/>
+                </g>
+                <g>
+                    <path class=""st7"" d=""M253.6,362.5v-8.1h-33c0,2.7,0,5.4,0,8.1H253.6z""/>
+                    <path class=""st8"" d=""M286.6,362.5c0-2.7,0-5.4,0-8.1h-33v8.1H286.6z""/>
+                </g>
+                <g>
+                    <path class=""st7"" d=""M253.6,268.7v-8.1h-33.3c0,2.7,0,5.4,0,8.1H253.6z""/>
+                    <path class=""st8"" d=""M286.9,268.7c0-2.7,0-5.4,0-8.1h-33.3v8.1H286.9z""/>
+                </g>
+                <g>
+                    <path class=""st7"" d=""M253.6,171.9v-7.8l-31.7-0.1c-0.2,2.7-0.3,5.3-0.3,8H253.6z""/>
+                    <path class=""st8"" d=""M285.5,171.9c0-2.6-0.1-5.3-0.1-7.9l-31.9,0v7.8H285.5z""/>
+                </g>
+            </g>
+        </g>
+        <g>
+        <g class=""rocket-stem"" data-0p=""transform:translate(0%, 0%);"" data-100p=""transform:translate(0%, -100%);"" data-200p=""transform:translate(0%, 0%);"">
+                    <g>
+                <path class=""st0"" d=""M106.8,346.5c-11.3,74.8-59.4,114.6-84.2,134.9c-24.8,20.3-19.1,53.8-19.1,53.8H0v16.4l122.3,32V256v-3.9
+                    C118.8,271.6,106.8,346.5,106.8,346.5z""/>
+                <path class=""st9"" d=""M91.1,395c-14.5,28.3-38.6,58.5-63.5,79.3C-3.1,500.1,1.4,527,3.1,533.6h6C7.5,498.5,33.2,479,33.2,479
+                    C70,446.1,89.1,416.6,99,395H91.1z"" data-0p=""transform:translate(0%, 0%) rotate(0deg);"" data-100p=""transform:translate(-1250%, -150%) rotate(90deg);""data-300p=""transform:translate(0%,0%) rotate(0deg);""/>
+                <rect x=""57.3"" y=""509.4"" class=""st1"" width=""33.2"" height=""7.8""/>
+                <rect x=""48.1"" y=""519.6"" class=""st1"" width=""42.4"" height=""7.8""/>
+            </g>
+            <g>
+                <path class=""st1"" d=""M218.5,346.5c11.3,74.8,59.4,114.6,84.2,134.9c24.8,20.3,19.1,53.8,19.1,53.8h3.5v16.4l-122.3,32V256v-3.9
+                    C206.5,271.6,218.5,346.5,218.5,346.5z""/>
+                <path class=""st10"" d=""M297.8,474.4c-24.8-20.8-49-51-63.5-79.3h-7.9c9.9,21.5,28.9,51.1,65.8,84c0,0,25.8,19.4,24.1,54.6h6
+                    C324,527,328.5,500.1,297.8,474.4z"" data-0p=""transform:translate(0%, 0%) rotate(0deg);"" data-100p=""transform:translate(1250%, 150%) rotate(-90deg);"" data-300p=""transform:translate(0%, 0%) rotate(0deg);""/>
+                <rect x=""234.8"" y=""509.4"" class=""st0"" width=""33.2"" height=""7.8""/>
+                <rect x=""234.8"" y=""519.6"" class=""st0"" width=""42.4"" height=""7.8""/>
+            </g>
+            <g>
+                <path class=""st1"" d=""M141.4,136.5c-0.4,1.1-0.7,2.2-1.1,3.4c-22.6,70.7-19.8,145.5-19.8,145.5V589h42.4V136.5H141.4z""/>
+                <path class=""st11"" d=""M185.5,140c-0.4-1.2-0.8-2.4-1.2-3.6h-21.5v452.6h42.4V285.6C205.3,285.6,208.2,210.7,185.5,140z""/>
+            </g>
+            <g>
+                <path class=""st0"" d=""M162.9,239.7v-5.2h-40.6c-0.2,1.8-0.3,3.5-0.4,5.2H162.9z""/>
+                <path class=""st0"" d=""M203.9,239.7c-0.1-1.7-0.3-3.4-0.4-5.2h-40.6v5.2H203.9z""/>
+            </g>
+            <g>
+                <rect x=""120.4"" y=""305.2"" class=""st0"" width=""42.4"" height=""6.2""/>
+                <rect x=""162.9"" y=""305.2"" class=""st0"" width=""42.4"" height=""6.2""/>
+            </g>
+            <g>
+                <rect x=""120.4"" y=""376.2"" class=""st0"" width=""42.4"" height=""6.2""/>
+                <rect x=""162.9"" y=""376.2"" class=""st0"" width=""42.4"" height=""6.2""/>
+            </g>
+            <g>
+                <rect x=""120.4"" y=""447.2"" class=""st0"" width=""42.4"" height=""6.2""/>
+                <rect x=""162.9"" y=""447.2"" class=""st0"" width=""42.4"" height=""6.2""/>
+            </g>
+            <g>
+                <rect x=""120.4"" y=""518.3"" class=""st0"" width=""42.4"" height=""6.2""/>
+                <rect x=""162.9"" y=""518.3"" class=""st0"" width=""42.4"" height=""6.2""/>
+            </g>
+            <circle class=""st0"" cx=""251.4"" cy=""486.6"" r=""15.2""/>
+            <g>
+                <rect x=""158.7"" y=""234.6"" class=""st0"" width=""3.9"" height=""355""/>
+                <rect x=""162.6"" y=""234.6"" class=""st0"" width=""3.9"" height=""355.1""/>
+            </g>
+        </g>
+            <g data-0p=""transform:translate(0%, 0%);"" data-100p=""transform:translate(0%, -5000%);"" data-200p=""transform:translate(0%, 0%);"">
+                <path class=""st13"" d=""M162.9,204.3v-37.1c-16.7,0.3-22.1,6.7-24.5,13.2c-2.1,5.7-3.9,23.9-3.9,23.9H162.9z""/>
+                <path class=""st14"" d=""M191.3,204.3c0,0-1.9-17.1-3.8-22.5c-2.4-6.7-8.4-14.3-24.5-14.5v37H191.3z""/>
+            </g>
+            <g data-0p=""transform:translate(0%, 0%);"" data-100p=""transform:translate(0%, -5000%);"" data-200p=""transform:translate(0%, 0%);"">
+                <path class=""st15"" d=""M162.9,139.9v-34.3c-6.4,0-12.1,1.4-22.6,34.3H162.9z""/>
+                <path class=""st14"" d=""M162.9,139.9v-34.3c5.7-0.2,12.1,1.4,22.6,34.3H162.9z""/>
+            </g>
+
+
+
+</g>
+</svg>
+
+<ul id=""menu"">
+    <li data-menuanchor=""firstPage""><a href=""#firstPage"">All</a></li>
+    <li data-menuanchor=""secondPage""><a href=""#secondPage"">Graphic</a></li>
+    <li data-menuanchor=""3rdPage""><a href=""#3rdPage"">Web</a></li>
+    <li data-menuanchor=""4thpage""><a href=""#4thpage"">Marketing</a></li>
+    <li data-menuanchor=""5thpage""><a href=""#5thpage"">New Tech</a></li>
+    <li data-menuanchor=""6thpage""><a href=""#6thpage"">Consultation</a></li>
+    <li data-menuanchor=""7thpage""><a href=""#7thpage"">Take Off</a></li>
+</ul>
+
+
+<div id=""skrollr-body"">
+<div id=""fullpage"">
+    <div class=""section "" id=""section0"">
+        <h1>fullPage.js</h1>
+        <p>Create Beautiful Fullscreen Scrolling Websites</p>
+        <img src=""./imgs/fullPage.png"" alt=""fullPage"" />
+    </div>
+    <div class=""section"" id=""section1"">
+        <div class=""slide"">
+            <div class=""intro"">
+                <h1>Create Sliders</h1>
+                <p>Not only vertical scrolling but also horizontal scrolling. With fullPage.js you will be able to add horizontal sliders in the most simple way ever.</p>
+                <img src=""./imgs/slider.png"" alt=""slider"" />
+            </div>
+
+        </div>
+        <div class=""slide"">
+            <div class=""intro"">
+                <img src=""./imgs/1.png"" alt=""simple"" />
+                <h1>Simple</h1>
+                <p>Easy to use. Configurable and customizable.</p>
+            </div>
+        </div>
+        <div class=""slide"">
+            <div class=""intro"">
+                <img src=""./imgs/2.png"" alt=""Cool"" />
+                <h1>Cool</h1>
+                <p>It just looks cool. Impress everybody with a simple and modern web design!</p>
+            </div>
+        </div>
+        <div class=""slide"">
+            <div class=""intro"">
+                <img src=""./imgs/imgs/3.png"" alt=""Compatible"" />
+                <h1>Compatible</h1>
+                <p>Working in modern and old browsers too! IE 8 users don't have the fault of using that horrible browser! Lets give them a chance to see your site in a proper way!</p>
+            </div>
+        </div>
+    </div>
+    <div class=""section"" id=""section2"">
+        <div class=""intro"">
+            <h1>Example</h1>
+            <p>HTML markup example to define 4 sections.</p>
+            <img src=""file:///Users/third/Desktop/skrollr-menu%20plugin_files/imgs/example2.png"" alt=""example"" />
+        </div>
+    </div>
+    <div class=""section"" id=""section3"">
+        <div class=""intro"">
+            <h1>Working On Tablets</h1>
+            <p>
+                Designed to fit to different screen sizes as well as tablet and mobile devices.
+                <br /><br /><br /><br /><br /><br />
+            </p>
+        </div>
+        <img src=""file:///Users/third/Desktop/skrollr-menu%20plugin_files/imgs/tablets.png"" alt=""tablets"" />
+    </div>
+    <div class=""section"" id=""section4"">
+        <div class=""intro"">
+            <h1>Working On Tablets</h1>
+            <p>
+                Designed to fit to different screen sizes as well as tablet and mobile devices.
+                <br /><br /><br /><br /><br /><br />
+            </p>
+        </div>
+        <img src=""file:///Users/third/Desktop/skrollr-menu%20plugin_files/imgs/tablets.png"" alt=""tablets"" />
+    </div>
+    <div class=""section"" id=""section5"">
+        <div class=""intro"">
+            <h1>Working On Tablets</h1>
+            <p>
+                Designed to fit to different screen sizes as well as tablet and mobile devices.
+                <br /><br /><br /><br /><br /><br />
+            </p>
+        </div>
+        <img src=""file:///Users/third/Desktop/skrollr-menu%20plugin_files/imgs/tablets.png"" alt=""tablets"" />
+    </div>
+    <div class=""section"" id=""section5"">
+        <div class=""intro"">
+            <h1>Working On Tablets</h1>
+            <p>
+                Designed to fit to different screen sizes as well as tablet and mobile devices.
+                <br /><br /><br /><br /><br /><br />
+            </p>
+        </div>
+        <img src=""file:///Users/third/Desktop/skrollr-menu%20plugin_files/imgs/tablets.png"" alt=""tablets"" />
+    </div>
+</div>
+
+</div>
+<link rel=""stylesheet"" type=""text/css"" href=""https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.8/jquery.fullPage.min.css"" />
+
+<!--[if IE]>
+        <script type=""text/javascript"">
+             var console = { log: function() {} };
+        </script>
+    <![endif]-->
+
+
+
+<script src=""http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js""></script>
+
+
+<!-- This following line is optional. Only necessary if you use the option css3:false and you want to use other easing effects rather than ""linear"", ""swing"" or ""easeInOutCubic"". -->
+
+<script src=""https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.8/vendors/jquery.easings.min.js""></script>
+
+
+<!-- This following line is only necessary in the case of using the plugin option `scrollOverflow:true` -->
+
+<script type=""text/javascript"" src=""https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.8/vendors/jquery.slimscroll.min.js""></script>
+
+
+<script type=""text/javascript"" src=""https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.8/jquery.fullPage.min.js""></script>
+
+
+<!--Skrollr Script-->
+
+<script type=""text/javascript"" src=""file:///Users/third/Desktop/skrollr-master/dist/skrollr.min.js""></script>
+
+<script type=""text/javascript"" src=""https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js""></script>
+
+<script>
+      var s = skrollr.init();
+</script>
+
+
+</body>
+</html>`
+",dkvellin,alvarotrigo
+1847,2016-02-24 05:40:25,"Hello @alvarotrigo 
+I need to make functionality
+In First slide I have  **3 three button** .
+on click of each button click event  I want to open   specific  slide,
+where and how write code  that make this functionality working
+",sagarjethi,alvarotrigo
+1831,2016-02-15 09:21:29,"This is not really problem with fullPage.js (@alvarotrigo, I'm a fan of yours, you may close it)
+This is a problem with jquery, in case someone finds it that the fullPage is rendering the page really really long, with `windowsHeight = 1603px` or 50px I realized the issue was with Jquery's `$window.height();` This cannot work correctly if you don't have `<!DOCTYPE html>` in your html. Reference: http://viralpatel.net/blogs/jquery-window-height-incorrect/
+
+_Adding it here, thinking it might be useful for others._
+",anandchakru,alvarotrigo
+1803,2016-01-28 06:56:15,"Hey @alvarotrigo,
+
+I'm using your Pure Version and I saw that you probably forgot to add the method `setAllowScrolling` [setMouseWheelScrolling - L684](https://github.com/alvarotrigo/fullPage.js/blob/master/pure%20javascript%20%28Alpha%29/javascript.fullPage.js#L684) on your revealing module.
+
+This method is public on jQuery Version and works fine on Pure Version also.
+",willianjusten,alvarotrigo
+1802,2016-01-27 23:31:26,"Can't help you with it. The SASS file was added by @Jhony0311 time ago in [this pull request](https://github.com/alvarotrigo/fullPage.js/pull/962), but I'm not familiar with it.
+",alvarotrigo,Jhony0311
+1792,2016-01-25 02:47:57,"Hi @alvarotrigo, it's to complicated to implement the continuous mode on pure version? I tried to move the last item to the top, each time that I scroll, but because of use of translate, doesn't work properly.
+
+Do you know another way that I can do?
+",willianjusten,alvarotrigo
+1723,2015-12-18 10:26:28,"This is not an issue, I just wanted to say thanks @alvarotrigo . I tried implementing the full-page sections functionality myself, and it was horrible. I then tried fullPage.js, and it was a breeze. The library works well (so far, at least) with Foundation, is documented really well, and you seem pretty timely in responding to issues. We don't show our gratitude to open source developers nearly enough, and while I don't have much money at this point to donate, I thought I'd at least share my gratitude.
+",neil-s,alvarotrigo
+1563,2015-09-30 23:06:44,"First of all my sincere compliments to you for putting together this fantastic plugin!
+
+I am having problems in using the option animateAnchor. If I make use of animateAnchor:false I get stuck on the main page (1st section) and cannot scroll down. What can I do to overcome this?
+
+Can you refer to an implementation in which this option (animateAnchor) is working such that I can see the final result.
+
+Thank you @alvarotrigo 
+",GoncaloJsf,alvarotrigo
+1530,2015-09-21 14:43:06,"Hi.
+
+Even though I have disabled `fitToSection` and `verticalCentered`, the plugin forces it and it cuts my page (like it is setting section's height to viewportY and adding `overflow: hidden`). How to prevent this?
+
+This is my actual code:
+
+
+
+@alvarotrigo, any idea on this?
+",archasek,alvarotrigo
+1499,2015-09-15 14:30:12,"@adammcarth next version will solve it. 
+",alvarotrigo,adammcarth
+1340,2015-07-15 10:40:55,"Rebased on master.
+
+@alvarotrigo 
+What do you think about it?
+",blueyed,alvarotrigo
+1198,2015-05-03 15:29:40,"@weiliank why don't you just use fullPage.js without anchors?
+",alvarotrigo,weiliank
+1109,2015-03-25 15:17:12,"@marcobuettner using `background` to apply an inline color will cause troubles when trying to use any other background property by using CSS.
+
+Feel free to keep using your modification if you prefer it that way.
+",alvarotrigo,marcobuettner
+920,2014-12-18 04:33:24,"Hey @alvarotrigo,
+
+First off - amazing work here! I've used your script numerous times and it always wows the audience.
+
+Anyways, for a particular page that I'm building, I'm using fullpage.js to present 5 slides/sections. Once the 5 slides have been scrolled through, I'd like the rest of the site (let's call it Slide 6) to return to normal scrolling behavior.
+
+I know this is possible if using a single fullpage section, but what about numerous sections?
+
+Thanks in advance!
+- CH
+",chalavacs,alvarotrigo
+820,2014-11-12 10:15:25,"@alvarotrigo Have you already taken a look on this? :)
+Would be nice if you could merge it soon!
+",jackmu95,alvarotrigo
+818,2014-11-07 22:51:39,"@alvarotrigo First of all thanks for contributing such an awesome plugin.
+
+I am facing an issue wherein when using the Gradient Backgrounds as demonstrated in http://alvarotrigo.com/fullPage/examples/gradientBackgrounds.html the gradient style gets applied correctly to slides nested under a section, however the sections without any slides shows a white background.
+
+**Note: Using `fullPage 2.4.3`**
+
+Attaching here the screenshots showing the problem:
+
+**Gradient Colors Not Applied**
+![landing_page_section0](https://cloud.githubusercontent.com/assets/1212458/4961580/3ca4f386-66d0-11e4-9b34-afb9e4e40093.png)
+
+**Gradient Colors Applied**
+![scrolled_to_section_1_containing_slides](https://cloud.githubusercontent.com/assets/1212458/4961584/4314f66c-66d0-11e4-854c-ab3409cf7dfa.png)
+
+**Gradient Colors Not Applied**
+![scrolled_to_section_2](https://cloud.githubusercontent.com/assets/1212458/4961586/486b6966-66d0-11e4-958c-de2273f81f65.png)
+
+I tried debugging the source code for sometime but could not find the cause behind this problem.
+
+Below is the HTML code I have (sorry I don't have any live website which can help the debugging issue online)
+
+
+
+Thanks,
+Jignesh
+",jignesh-gohel,alvarotrigo
+771,2014-10-14 05:28:30,"In the previous version there was a check is first element defined or not.  @alvarotrigo noted (https://github.com/alvarotrigo/fullPage.js/pull/731#issuecomment-56633395) that checking array length looks like better solution and I agree :).
+
+fixes #731, #752
+",tkirill,alvarotrigo
+666,2016-05-10 13:32:00,"@jackmu95 provide an isolated reproduction of the issue in jsfiddle or codepen.
+",alvarotrigo,jackmu95
+548,2014-07-05 12:43:12,"Hi @alvarotrigo. I'm trying to make the video fit the full screen dimensions in the first section along with the menu. I'm not sure where to put the javascript code exactly.
+
+This is what it looks like now when I put the html you listed in jsfiddle. Video doesn't play though.
+
+![screen shot 2014-07-05 at 12 26 33](https://cloud.githubusercontent.com/assets/5969321/3486550/b6c840c4-0441-11e4-9976-2dde6970a6d3.png)
+
+This is what it looks like when I put the javascript in the jquery.fullPage.js. The video starts playing but its not full screen and the second section appears to be scrolled up.
+
+![screen shot 2014-07-05 at 12 30 03](https://cloud.githubusercontent.com/assets/5969321/3486553/c00ce8a6-0441-11e4-91fb-b216eae7b79f.png)
+
+I'm not exactly sure where to put the javascript to make the video play automatically and for it to be full sized and not have the second section overlap. 
+
+Your help would be much appreciated
+",zakbenjamin,alvarotrigo
+494,2014-06-05 22:18:21,"@alvarotrigo fullpage.js is great. Thank you for releasing and supporting it. One problem we are running into is the smoothness of the scroll between sections in IE8. It appears choppy as it moves through sections. Any ideas on how to fix this?
+
+Thanks,
+Jordan 
+",jda284,alvarotrigo
+473,2014-05-24 15:29:17,"@alvarotrigo any feedback on this if it's not good enough to merge?
+",milesmatthias,alvarotrigo
+388,2014-04-16 10:06:44,"Hey @alvarotrigo,
+
+is it possible to get the horizontally scrolling working by swiping under mobile devices?
+",Worstkaes,alvarotrigo
+387,2014-04-16 10:05:36,"Hey @alvarotrigo,
+
+I updated these days to your actual Version of Fullpage.js and then I got the bug that my controls for my horizontal scrolling didn't work anymore. Then I changed the following part:
+
+
+
+To your old Version of the click event and it works again:
+
+
+",Worstkaes,alvarotrigo
+385,2014-04-16 13:23:25,"Thanks @alvarotrigo I'll make these changes.
+
+Do I close this and make a new pull request when I'm finished?
+",kylerberry,alvarotrigo
+301,2014-03-17 13:29:22,"Hey @alvarotrigo,
+
+if someone is resizing my page, the onLeave and afterLoad event is firing from this section. Is it possible to deactivate this?
+I tried it on my own, but by firing both of them, it's difficult to find the right request. 
+",Worstkaes,alvarotrigo
+292,2014-03-10 13:58:30,"Hey @alvarotrigo,
+
+once I'm refreshing my site with the anchor-link for example http://mypage.net/#section2 it's not scrolling to the anchor. The site stays on the first section, although I have set the data-anchors and my navigation works fine with the anchors. 
+If I click the section in the navi, which is set in the url after the refresh, it's not scrolling to this particular section. If I click another section, it's working. 
+Did you ever got this problem?
+",Worstkaes,alvarotrigo
+256,2014-02-20 18:39:39,"Hey @alvarotrigo,
+
+is it possible to combine the onLeave and afterLoad firing? 
+Like on leaving section 1 ""down"" & after loading section 2 -> do something. 
+The problem is, that I need something on section 2 only after coming from section 1 and not scrolling from section 3 to 2. 
+",Worstkaes,alvarotrigo
+245,2014-02-15 17:56:00,"@alvarotrigo 
+
+Is there a way for me to know when the navigation has completed after the initial page load? I know there is the after afterRender() callback but that's triggered before the animation to the slide slide / section has completed.
+
+I'm looking for this I really need to fire some code off once the animation/navigation has completed after the initial visit / page load
+
+Thanks again
+",gavsim,alvarotrigo
+236,2014-02-12 12:20:17,"Thanks for the new addition of being able to ""jump"" without animating to the anchor in the URL when the page is loaded, I am finding a few issues and a couple of inconsistencies.
+
+In Firefox if I have multiple sections with sub scenes in my page and try to directly go to the 2nd sub scene in the 2nd section it ""jumps"" straight there (no animation) which is great. If I try to do the same but in say the 3rd section and going to the 2nd sub scene it jumps to the first scene in the 3rd section and then animates across...
+
+In other browsers IE/Chrome it always jumps to the first scene in the section and then animates across, is this the expected behaviour or would it be expected to jump directly (no scroll - preferred)
+
+I am looking into the code to try work out a fix, any help @alvarotrigo would be grealy appreciated.
+
+Thanks,
+",gavsim,alvarotrigo
+222,2014-02-07 10:11:02,"Hi,
+
+We are using this plugin, it's great! One of the requirements our customer has is to not scroll down to the initial section / slide on page load, so it would just ""jump"" straight to that section/slide and scroll as normal when they continued navigating.. 
+
+@alvarotrigo do you have any suggestions on how we might tackle this? I can see where the call to scrollToAnchor() is being made on page load, is there an option to disable the scrolling animation temporary perhaps? Any help is greatly appreciated.
+",gavsim,alvarotrigo
+182,2014-01-22 04:09:21,"Hi @alvarotrigo, is there a way to deactivate or remove the fullpage init if the browser resizes to a smaller size?  on window resize? 
+
+Love the new additions by the way.
+- backgrounds
+- tooltips
+- slider nav
+
+Awesome!
+",informa,alvarotrigo
+173,2014-01-23 17:22:17,"I thought this pull request is kind of good. But I haven't test it. Probably wait for comment from @alvarotrigo  before we close it? 
+",nicolaisi,alvarotrigo
+136,2013-12-20 20:53:09,"@alvarotrigo's reply:
+
+I wouldn't recommend it to you form the UX point of view, but if you still want to do it, I would create a public function inside the plugin with this content. Something like:
+
+
+
+And then, i would convert the current addScrollEvent to a public one:   $.fn.fullpage.addScrollEvent = function () { so you can call it from outside the plugin as you call any other method.
+
+Then you would just need to call this new two methods whenever you want.
+",adamhairfield,alvarotrigo
+136,2013-12-20 20:56:39,"This is great @alvarotrigo, I agree not a good option but it is what the client is looking for. I had one thought though, if I were to do this, on sub slides with longer content, would it remove the functionality to be able to scroll through that content?
+
+The reason we are running into this issue is that on slides with longer content when you get to the bottom it automatically scrolls to the next section once you get to the bottom of the content. (For example: http://trouve.thinkatmosphere.com/#blog).
+
+Is there a better work around for this?
+",adamhairfield,alvarotrigo
+75,2014-04-17 14:05:28,"The callback has been added in the last version thanks to @alex88.
+",alvarotrigo,alex88
+65,2013-10-29 00:15:30,"Hi, @alvarotrigo I am getting a script error with fullpage.js
+
+error: Unable to get value of the property 'left': object is null or undefined 
+
+For the most part this doesn't seem to affect anything.
+But in IE some times it gets stuck.
+
+Is there anything I need to do? in the init?
+",informa,alvarotrigo

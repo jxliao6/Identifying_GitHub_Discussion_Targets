@@ -1,0 +1,1475 @@
+issue_num,datetime,body,login,close_date
+138,2017-03-03 22:15:12,,alouanemed,
+137,2017-02-09 15:08:54,,egek92,2017-02-15 14:25:55
+137,2017-02-15 14:25:41,Thanks for the contribution.,peter-tackage,2017-02-15 14:25:55
+136,2017-01-22 02:33:50,"What is the best practice for in-app billing? Options:
+
+1. Tussle with IabHelper which Google recommends but not keen on maintaining it
+2. Use alternative libraries like `android-checkout` (https://github.com/serso/android-checkout)
+3. Roll out our own library
+
+We need community consensus on what is the best practice for this critical aspect.",rpattabi,
+135,2016-12-16 11:07:51,,xiongchenhong,
+134,2016-12-10 14:56:12,This template is out of date and more complete references can be found.,peter-tackage,2016-12-20 15:43:15
+133,2016-12-09 10:24:03,"In my current projects I always choose _by feature_ project structure grouping like
+
+- features
+- - home
+- - - HomeView
+- - - HomePresenter
+- - - HomeAdapter
+- - detail
+- - etc
+- utils
+
+But in your recommendation you only mention _by type_ and for clean code architectures is not clean at all, so I propose to add _by feature_ project structure recommendation
+This is specially useful for MV* projects",FireZenk,
+133,2016-12-10 14:30:42,"I was just thinking about how the documentation doesn't reflect my current approach. I'm definitely onboard with feature based structure. 
+
+With an app of any significant scale, having the Fragments, Activities and what-have-you for a feature distributed around the place makes for a very noisy crowded structure. 
+
+My revised approach is shown in Freesound: https://github.com/futurice/freesound-android/tree/master/app/src/main/java/com/futurice/freesound. There's still room for refinement in areas, but it's an improvement.",peter-tackage,
+132,2016-12-02 03:23:08,合并原作者更新,cnoldtree,2016-12-02 09:41:40
+131,2016-11-23 14:43:22,"While it's true that Genymotion offers more features than the stock Android emulator, it's no longer significantly faster. 
+
+If you can live without the extra Genymotion features, you don't need to pay the Genymotion subscription fee.",davidwhitman,
+131,2017-03-14 23:27:27,The stock emulator is even faster since SDK Tools 25.3.1. I don't see why Genymotion would still be necessary,gfreivasc,
+130,2016-11-15 23:20:25,,josejavier,2016-11-24 21:19:32
+130,2016-11-16 09:39:18,"Hi, I'm a native Spanish speaker, may I help?
+",AlejandroHCruz,2016-11-24 21:19:32
+130,2016-11-16 09:44:43,"@AlejandroHCruz Sure!
+",peter-tackage,2016-11-24 21:19:32
+130,2016-11-24 21:21:12,"@josejavier @pabloper @AlejandroHCruz In the interests of not leaving this in review for too long, I've just merged this - if there's any issues they can be reworked via PR.",peter-tackage,2016-11-24 21:19:32
+129,2016-11-06 18:13:15,@futurice Hey there! I have added best practices on asserting Android specific components in Android tests. Let me know what you like and your reasoning if you don't. Thanks!,KevinLeighCrain,2016-12-10 14:34:25
+129,2016-11-07 07:09:49,"I prefer AssertJ too~
+",Tony---Zhang,2016-12-10 14:34:25
+129,2016-11-07 13:08:20,"I'm also an AssertJ fan, I had it somewhere in my mind to include a reference to it in an updated testing section (that section is _really_ dated now). I'd be inclined to mention that the key point is that there are libraries out there to make more powerful assertions (also note: https://github.com/google/truth)
+",peter-tackage,2016-12-10 14:34:25
+129,2016-11-07 15:46:37,"@peter-tackage Thanks for the response, you are correct about Truth, and for me personally keeping your projects to use purely Google dependencies is a big yes. I have recently stumbled across Truth and found it very similar to using AssertJ (both using Hamcrest matchers). I have not noticed Truth power yet with Android, as I find AssertJ-Android is currently more geared towards Android. I would love to help adding Android specific extensions to Truth, it is however a big task and not a days work with my current schedule.
+
+Lastly please could you post back the link to the up to date testing section so I may familiarize myself with it. Much appreciated. 
+",KevinLeighCrain,2016-12-10 14:34:25
+129,2016-11-07 16:01:06,"I don't know if I'd go as far as advocating Google-only dependencies. Google can still be quite fickle with some of their non-official Android / Java libraries. Picking future trend or winners in libraries is a difficult task; having a big name backer is one dimension, but certainly no guarantee. Is anyone using Agera rather than RxJava?
+",peter-tackage,2016-12-10 14:34:25
+129,2016-11-07 16:40:09,"@peter-tackage It is definitely a difficult task picking libraries as there is so many out there mostly bad but a lot of good ones, and my reasoning behind pure Google dependencies is that Google is there to stay, I am however open minded to try anything new, going to look at Agera, and try it out definitely! Thanks for the mention!
+",KevinLeighCrain,2016-12-10 14:34:25
+128,2016-11-03 09:02:14,merge from base,foxsake,2016-11-03 09:02:38
+127,2016-10-27 01:20:53,,orange1988,
+126,2016-10-16 12:57:38,"I would like to add Vietnamese version to this awesome document. Thank you so much. 
+",quangctkm9207,2016-10-26 15:09:11
+126,2016-10-16 20:54:46,"Thanks, @quangctkm9207. I obviously can't comment too much on the accuracy of the translation, but we're happy to have it translated if someone thinks it will help out other developers and wants to invest the time.
+",peter-tackage,2016-10-26 15:09:11
+126,2016-10-16 23:16:59,"@khuongdv : Thank you for your comments. 
+1. In the translation, for common phrases or words, I have already left as the original version or give both Vietnamese and English phrases. For example, I have put the original sentence""best practices ... "" in brackets in addition to Vietnamese translation.
+2. I agree that is your personal feeling. However, this is really useful for many new developers in Vietnam. 
+@peter-tackage : Thank you for your feed back. Hope that it is helpful.
+",quangctkm9207,2016-10-26 15:09:11
+125,2016-10-09 21:40:09,"In [this fragment](https://github.com/futurice/android-best-practices/blob/master/templates/rx-architecture/app/src/main/java/com/futurice/project/fragments/BookFragment.java) I can't see how after adding all three subscriptions they are all started.
+
+I can see there `publish().refCount()` (which now can be switched to `share()`), but as far as I know, there should be `connect()` call to fire this (hot) obsevable.
+",janswist,
+125,2016-12-10 15:05:47,"From my quick reading of the code, it does seem to miss that call. If you are interested in a more complete working example of RxJava 2, I can refer you to this project of ours instead - https://github.com/futurice/freesound-android. 
+
+I've made a PR to remove the existing Rx template from this repo, because evidently it's dated and has its issues.",peter-tackage,
+124,2016-10-03 12:07:54,,peter-tackage,2016-10-16 21:22:37
+123,2016-09-17 15:58:20,"Sumsung -> Samsung
+",KawakawaRitsuki,2016-09-17 16:51:02
+123,2016-09-17 16:51:11,"Thanks!
+",peter-tackage,2016-09-17 16:51:02
+122,2016-09-09 22:07:16,"`Network` always is/was part of `util` or libraries.
+In MOST environments/languages/projects...
+",Yousha,2016-09-13 14:59:25
+121,2016-08-25 08:25:13,"removed are from..
+""A couple of problems may occur. You might experience performance problems, because there **are** is a complex UI tree that the processor needs to handle. Another more serious issue is a possibility of StackOverflowError.""
+",foxsake,2016-08-25 08:26:54
+121,2016-08-25 08:40:00,"👍 
+",peter-tackage,2016-08-25 08:26:54
+120,2016-08-02 12:36:15,"Hi all,
+
+I cloned the project, opened with Android Studio and that's the error.
+
+No other changes done.
+
+Any ideas?
+
+Thanks.
+",felipecaldas,2016-08-14 16:25:10
+120,2016-08-02 13:32:41,"Hi @felipecaldas. Thanks for the feedback. We're currently in the process creating a new demo project with more real-world requirements. I would consider the current version deprecated for now, given the number of Android Gradle plugin and Android Studio releases since it was originally created, this probably explains the breakage you have found.
+",peter-tackage,2016-08-14 16:25:10
+120,2016-08-02 13:40:00,"Thanks @peter-tackage  ! I will await for the new update then. Looking forward to it! Cheers.
+",felipecaldas,2016-08-14 16:25:10
+120,2016-08-02 13:50:25,"If you are interested in Android architecture and RxJava, then have a look at this library: https://github.com/reark/reark
+",peter-tackage,2016-08-14 16:25:10
+119,2016-07-20 12:49:02,"i run the demo and it crashed after a while, not pulling the data successfully. Connecting failed should be considered ..? Btw, i used android studio to import the demo project, i found that  using 'robolectric' may have some conflict with android studio test, i didn't build successfully until i remove the compile test part.
+",lonely917,2016-07-20 13:43:58
+119,2016-07-20 13:43:58,"Hi @lonely917. Thanks for the feedback. We're currently in the process of updating the demo project. I would consider it deprecated for now, given the number of Android Gradle plugin and Android Studio releases since it was originally created.
+",peter-tackage,2016-07-20 13:43:58
+118,2016-07-12 22:22:59,"changed the sentence
+
+---
+
+There are a couple of battle-proven solutions for performing requests to...
+
+`backend servers, which you should use perform considering`
+
+to 
+
+`backend servers that you should consider when`
+
+ implementing your own client.
+
+---
+
+Thank you!!
+",ryanwholey,
+118,2016-07-17 11:02:56,"Thanks, @ryanwholey. Could you please rebase your changes.
+",peter-tackage,
+118,2016-10-02 21:13:37,"@ryanwholey @rwholey-eb Your changes are fine, but this section has been updated in the other PRs, so there's a conflict to be resolved.
+",peter-tackage,
+117,2016-07-12 22:09:00,"Updates to advice for build system, IDE and simplification of the Retrolambda advice.
+
+I would like to eliminate references to Ant, the build system has been deprecated for use with Android for quite sometime that it's no longer worth mentioning. Similarly for Eclipse.
+
+The Retrolambda section had too much detail on how to configure your builds to use it, these types of instructions are better provided by the library's author as they can change overtime.
+",peter-tackage,2016-07-13 14:18:47
+116,2016-06-21 21:59:36,"Regarding #114, we have been using [RESTMock](https://github.com/andrzejchm/RESTMock) to mock Retrofit calls and it's working like a charm! It uses [OkHttp's MockWebServer](https://github.com/square/okhttp/tree/master/mockwebserver) and it allows to define mock responses for matchers. For instance:
+
+<S_CODE_TOKEN>
+
+It also permits to verify if the calls have been done.
+",bryant1410,
+116,2016-07-03 21:45:26,"interesting however there is WireMock : https://github.com/tomakehurst/wiremock,
+Which can do exactly this and bit more i think :
+
+<S_CODE_TOKEN>
+
+MockWebServer is also really cool and I use it allot but its power is in full and sequential control of the requests/responses
+",djodjoni,
+116,2016-10-02 21:18:26,"I've used Wiremock recently and found it be a decent tool. Although, I was using it a way that more resembled blackbox testing; arguably a special case (at least it seemed that way to me). I think that generally, people should see if MockWebServer is adequate for needs before using WireMock.
+",peter-tackage,
+116,2016-10-02 21:43:27,"@peter-tackage I agree. MockWebServer with its default dispatcher could be enough for most for the cases and makes you think more about the way/sequence you make network requests which may help in discovering some unexpected side effects.
+",djodjoni,
+115,2016-06-18 16:32:01,"I was in the Droidcon a couple of days ago and there was a talk about why not to use Roboelectric. Basically what he said is that it makes the tests slow and when you use it only for unit testing and not for views (what we recommend), doesn't provide anything you could not do yourself. 
+
+I don't have experience with Robolectric myself, I never needed it, if my class uses some Bundle or framework related stuff I just wrap it. 
+
+So my question: is really a good practice to use Robolectric when it makes your tests slow and it is possible to live without it? 
+",luciapayo,2016-12-10 15:06:04
+115,2016-06-18 17:59:06,"I too have not used Roboletric in any significant way, but at the moment I can't see a place for it; given the improvement in JVM testing tools for Android and patterns such as MVP/MVVM that separate logic from platform dependencies. 
+
+I can't comment on performance, but the real issue for me is that the tests run against an approximation of Android in code that you can't control. For all the boilerplate your get in wrapping, at least you control the contract. See #114 
+",peter-tackage,2016-12-10 15:06:04
+115,2016-06-19 16:12:44,"My biggest problem with using Roboletric is that it is provided by 3rd party company. So if you now have Android N then you still need to wait for their implementation, which can take time and might not behave as a real device. 
+
+The other thing is that you shouldn't use it for Unit Tests as those are not Unit Test if you rely on the whole 3rd party implementation framework. For Integration Tests using the real software seems like a better idea.s
+
+P.S. Making your own code independent from Android framework is also a good mental exercise.
+",jaggernod,2016-12-10 15:06:04
+115,2016-06-20 11:27:26,"This is a good point about Robolectric having to play catchup with APIs and implementation. 
+",peter-tackage,2016-12-10 15:06:04
+115,2016-07-03 07:52:04,"Roboelectric is not a good approach to unit testing. App should be design in such way that business logic can be tested with junit and only some mocks. Use dependency injection in your app design, don't mess entities and business logic with `android.*` package classes. 
+",samiuelson,2016-12-10 15:06:04
+115,2016-07-03 17:19:13,"Sounds like we are all in agreement on this one.
+",peter-tackage,2016-12-10 15:06:04
+115,2016-07-03 21:37:16,"First of all I am using Roboelectric and I hate it, but it is useful and I will share why :)
+
+there several statements here which are kind of too generic and not clear to me. 
+ @luciapayo roboelectric does not really make your tests that slow but probably the speed of development of those tests is slow, which is obvious. Also wrapping too much things will cost lots of time maintaining those wrappers.
+ @peter-tackage there is no excuse for boilerplate :) so better somebody else do it, I hope they respect the contract as I hope the millions version of Android does too :)
+@samiuelson dependency injection and mock should be used wisely and only if needed and too complicated other wise.
+
+There is not question about that Business logic should be done in a way that it has almost and preferably no external dependencies, however there is also Application Specific Business Logic, which needs to be tested as well.
+
+There is a bit confusion what is a Unit Test and the confusion is in 2 main points:
+1) the definition of a Unit. and and in OOP is should not strictly mean a single Class. This involeves tightly the granularity of writing tests, if you go too far you are probably coupling with implementations or some internal parts of your system that doesn't really need to be separately tested.
+2) the isolation of those tests. tests should be isolated in such a way that they do not interfere with each other. Isolating the Unit from its environment -> mocks -> (coupling with implementation , probability that it does not behave correctly in real environment). in other words we can still call them Unit tests without comlpete isolation.
+
+Having said that Unit Tests may involve some android components. 
+Some will say ""..well wrap those"", but this can be really costly for a line of code you may end up creating bunch of classes in different modules coupling with Android specifics anyway And still not covering the real UI test. What I learn from experience is that no-one care of your Unit Tests, they just want the app to run as in specs, its just you who needs to maintain those tests.
+
+So 'Unit Tests may involve some android components'. 
+
+Normally you should not mock 3rd party code(just the adapters connecting to it) as you don't know in detail how it works. Robolectric guys do exactly this and its pretty big one. They do an awesome job and yet I prefer test with a Real device using Espresso. The problem is using TDD and running tests constantly could be terribly slow so Roboelectric is of real help here. 
+
+So Roboelectric can be used for unit tests which involves android components and its way faster than Espresso (the fastest currently real UI framework)
+",djodjoni,2016-12-10 15:06:04
+115,2016-07-12 17:48:51,"What about Espresso and the new [Espresso Test Recorder in Android Studio 2.2](http://android-developers.blogspot.mx/2016/05/android-studio-22-preview-new-ui.html)?
+",AlejandroHCruz,2016-12-10 15:06:04
+115,2016-07-13 09:55:19,"i tried the recording  and i like it. its a bit slow but quite  helpful. however i believe espresso is already mentined in  #114
+",djodjoni,2016-12-10 15:06:04
+115,2016-07-15 02:42:52,"So can some explain when i should roboelectric and when i should espresso ? I'm confusing to choose the exactly testing tool.
+",rhonyabdullah,2016-12-10 15:06:04
+115,2016-07-15 16:17:51,"IMO use roboelectric when you want UI related tests to pass fast for example during TDD cycles. 
+Espresso you can use to run big set of integration tests overnight or limited set of acceptance tests for feature validation.
+
+Note that the main idea is to spend less time in code and tests but do more features (test covered of course) . So if using some framework is taking to much time  to set up and run and the tests are flaky then you probably do not use it right or the framework is not meant to be used this way. 
+",djodjoni,2016-12-10 15:06:04
+114,2016-06-18 12:17:04,"The testing section is out of date. 
+
+We should update it and address at least the following topics and tools:
+- Unit Testing using JUnit 4
+- Mocking, using Mockito
+- Assertions using AssertJ
+- Recommend not to use Roboletric for business logic testing
+- RxJava testing using `TestScheduler` and `TestSubscriber`
+- Patterns to improve testability
+- UI testings with Espresso
+- Unit testing structure best practices
+",peter-tackage,
+114,2016-06-23 19:46:19,"hey, I Also  recommend to using [hamcrest](http://hamcrest.org/JavaHamcrest/) along with [assertj android](https://github.com/square/assertj-android) for more readable unit and instrumented tests.  
+there should be a best practices on instrumented tests reviewing how to test activites, services and application context.  
+I'm not aware if I can suggest more improvements for testing section or you just mind futurice developer's opinion. So please mention me if you want to get some more hints. tnx.
+",mehrdaad,
+114,2016-06-24 12:32:29,"> there should be a best practices on instrumented tests reviewing how to test activites, services and application context.
+> +1
+",wviana,
+113,2016-06-16 21:32:44,"Thanks for providing this comprehensive guide.  
+I think that testing sections should go under a heavy reconsideration.  
+Android testing support library brings some testing frameworks (like espresso) which changes the way we develop our softwares.  
+Not to mention special Junit runner for android and Instrumented tests.
+Also I think Mockito and Hamcrest libraries should have been mentioned too.  
+Tnx.
+",mehrdaad,2016-06-18 12:18:24
+113,2016-06-18 12:18:24,"Definitely! We've had a few requests to update the testing section, so I'll close this issue and you can follow #114 
+",peter-tackage,2016-06-18 12:18:24
+112,2016-06-08 09:18:46,"I have translated all the post to turkish
+",msalihguler,2016-06-18 12:47:10
+112,2016-06-18 12:46:44,"Thanks!
+",peter-tackage,2016-06-18 12:47:10
+111,2016-05-13 12:56:11,"Hello,
+
+I would add in Proguard session that for Proguard  really optimize the code you should change the line 
+`proguardFiles getDefaultProguardFile('proguard-android.txt'),` to `proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'),` ( add `-optimize` into the file name), when added it, the release build will take longer bug you'll get a really reduced apk.
+
+Not sure, but looks like the need to add the `-optimize` ~point to optimize file~ begin in new version of android studio or Proguard. 
+
+I had problems my self checking that Proguard was not doing what I was expecting, so I've found it.
+",wviana,
+111,2016-10-02 22:35:33,"Most of the details of the Proguard files provided by the SDK and how they can be used via Gradle builds are covered in https://developer.android.com/studio/build/shrink-code.html. Rather than duplicating their specific detailed setup instructions, I think it would be better to provide that link along with any additional insights that we might have.
+",peter-tackage,
+111,2016-11-04 13:54:57,"@peter-tackage Do you think these -optimize thing could be one of these ""additional insights"" ?
+",wviana,
+110,2016-05-13 10:50:52,"Using `.` in string names results in `_` in `R` auto-generated class which then might trigger Lint warnings about string resource not being used.
+",jush,2016-06-20 12:23:01
+110,2016-06-20 12:23:11,"Good catch, thanks!
+",jonikarppinen,2016-06-20 12:23:01
+109,2016-05-04 10:55:49,,zlyang,2016-12-10 14:40:59
+108,2016-04-15 06:45:32,"Hi, can anyone advise on how to create a good data set to be passed in the **Adapter** for View creation, like **RecyclerView**?
+
+For instance, if we want to build a complex RecyclerView layout, how would the data set should look like in JSON. I know it is as simple as passing a Collection with multiple model classes and let the Adapter create the ViewType, but I'd like to know what are the best practices in doing this, scalability and performance wise.
+
+Also, is it a good practice to pass multiple data set into an Adapter?
+
+Thanks 
+",aimanbaharum,2016-10-02 21:32:03
+108,2016-10-02 21:31:56,"In terms of passing a dataset to an Adapter, you should not be concerned with how it looks in JSON. Best practices would involve decoupling the JSON representation from the model representation used elsewhere in the app. 
+
+Ideally, the model representation you give to the Adapter would require little to no additional manipulation before being applied to View. Any calculations or computation should be performed in a separate thread prior being supplied to the Adapter as a Collection (to avoid the datasetChanged overhead). Using ViewHolders (View recycling) is also an important part of creating a performant List UI - fortunately, this is what the RecyclerView was built for!
+",peter-tackage,2016-10-02 21:32:03
+107,2016-04-01 23:34:46,"Made a few small spelling and grammar fixes in the readme file. 
+",brendankirby,2016-04-04 05:40:08
+106,2016-03-23 02:41:28,"https://github.com/futurice/android-best-practices#gradle-configuration
+
+For this part, when our project needs to be running on Continuous Integration server, which is automatically pulling code from Github, we need to be able to get those `fake/dummy` credentials to run the tests.
+
+Is that better if you place all these credentials into `Environment Variables` list and export them accordingly when you're in your local machine or running them on CI servers.
+",toantran-ea,
+106,2016-10-02 22:19:58,"I'm quite open to suggestion on this matter. Personally, using non-CSV'd Gradle properties files to hold such sensitive keys seems adequate at best for development builds. If nothing else, at least it's platform independent. For CI systems, there's evidently a few options depending on the CI system being used (for e.g. Travis provides multiple options: https://docs.travis-ci.com/user/environment-variables/). 
+
+I would be interested to hear how other people are tackling this.
+",peter-tackage,
+106,2016-12-10 15:06:49,We use secret environment variables in Travis-CI to achieve this on https://github.com/futurice/freesound-android,peter-tackage,
+105,2016-03-08 12:19:11,,jp1017,2016-12-10 14:38:30
+104,2016-03-07 17:09:24,,iverc,2016-10-02 21:03:41
+104,2016-06-11 19:58:54,"PTAL
+",iverc,2016-10-02 21:03:41
+103,2016-02-25 20:28:39,"Added Glide library to 'Networking, caching, and images' section
+",mr-cpp,2016-10-02 21:04:48
+103,2016-10-02 21:04:48,"We now include a recommendation to use Glide, so closing.
+",peter-tackage,2016-10-02 21:04:48
+102,2016-02-23 18:02:38,,iverc,2016-04-10 09:40:12
+102,2016-02-29 11:29:34,"What's the benefit of having keys in the `build.gradle` file?
+
+Also, a problem that arises is that they will end up being versioned, which this is sometimes not desired.
+",bryant1410,2016-04-10 09:40:12
+102,2016-02-29 11:40:43,"Benefit is that you are able to define single constant with different values for release/debug/other build types and then easily access it  with BuildConfig.API_KEY when providing dagger dependencies.
+",iverc,2016-04-10 09:40:12
+102,2016-02-29 11:43:29,"You can use string resources for different flavors and release/debug too. What do you mean by ""easily access it when providing dagger dependencies""?
+",bryant1410,2016-04-10 09:40:12
+102,2016-02-29 11:44:37,"I mean access it from inside the module instead of passing it to module constructor
+",iverc,2016-04-10 09:40:12
+102,2016-02-29 11:47:09,"Do you mean Dagger 2 modules? I still don't see the point and what it has to do with defining constants.
+",bryant1410,2016-04-10 09:40:12
+102,2016-02-29 11:51:39,"Correct, Dagger 2
+",iverc,2016-04-10 09:40:12
+101,2016-02-23 11:51:23,"Add translations for Eclipse, Stetho and different app names depending on build type paragraphs. 
+Add anchors as link targets
+",iverc,2016-07-12 21:09:27
+101,2016-06-11 19:59:14,"PTAL
+",iverc,2016-07-12 21:09:27
+101,2016-06-18 13:01:51,"Thanks @tremerhl. Could you please make this just the Russian language changes (without the changes to the English language version).
+",peter-tackage,2016-07-12 21:09:27
+101,2016-07-12 12:59:10,"@peter-tackage Done, PTAL :)
+",iverc,2016-07-12 21:09:27
+100,2016-02-23 04:28:31,"I found the translation here is very old, so I re-translated it
+",santong,
+99,2016-02-11 23:48:24,"Would be nice to have a section with best practices for using unit testing frameworks (JUnit, Mockito)
+",dkhmelenko,2016-06-18 12:21:14
+99,2016-02-23 11:56:54,"Agreed @brave-warrior. This has been on my backlog for a while as the landscape has certainly changed since the initial version of this document.
+",peter-tackage,2016-06-18 12:21:14
+99,2016-02-23 12:13:20,"As a brief summary of my thoughts how to write tests:
+- Minimize explicit Android dependencies in your code through abstraction and separation of concerns. Android dependencies require you to use instrumentation tests, which are considerably slower than strictly Java (JVM) based tests.
+- Start with unit tests, driven by JUnit4.
+- Use Mockito for mock definitions
+- Use descriptive names for the unit test to aid in defining expected behavior.
+- Use good test structure: Arrange, Act, Assert.
+- Separate arrangement definitions into an ""arrange builder"" to improve test readability.
+- Use AssertJ for assertions.
+- Add integration and UI tests once their business value is justified.
+- Use PowerMock for mocking statics and final classes as a last resort.
+- Be aware that pure Java unit testing has its limits, and that writing specific Android tests still remains important in some cases - for example; database handling.
+
+@tomaszpolanski might have some input here too.
+",peter-tackage,2016-06-18 12:21:14
+99,2016-02-25 12:57:33,"When using Rx and ""scheduled"" observable, either inject schedulers or something that provides them.
+Then in test you can use TestScheduler to test timer related functionality.
+",tomaszpolanski,2016-06-18 12:21:14
+99,2016-02-25 20:40:04,"@peter-tackage agree with your points. But would extend the following items with the links to appropriate resources or detailed description:
+
+> - Use Mockito for mock definitions
+
+add link for Mockito; the recommendations how to mock objects and the check behaviour in the better/best way
+
+> - Use AssertJ for assertions.
+
+Link to AssertJ would be good and what are the advantages of that
+
+> - Add integration and UI tests once their business value is justified.
+
+not clear enough
+
+The other points are quite clear and could be added to the best practices.
+",dkhmelenko,2016-06-18 12:21:14
+99,2016-02-26 13:57:57,"@tomaszpolanski Agreed. Testing Rx is probably worth it's own section.
+",peter-tackage,2016-06-18 12:21:14
+99,2016-06-18 12:21:14,"@brave-warrior I'll be progressing the testing section update under #114 
+",peter-tackage,2016-06-18 12:21:14
+98,2016-01-30 12:11:17,"False friends:
+library = bibliothèque
+bookstore = librairie
+
+So libraries (en) != librairie (fr)
+",StephaneBg,2016-02-04 11:49:47
+97,2016-01-14 13:55:43,"1. Update Eclipse ADT link (the original link no longer said anything about Eclipse)
+2. Google now recommends against Eclipse in clear words; we should reflect that.
+
+I only wonder if we should (like Google) even more strictly discourage the use of Eclipse... (In that case we could make this shorter; just one or two sentences, with migration link, would suffice.)
+",jonikarppinen,2016-01-15 12:50:19
+96,2016-01-12 20:42:50,"How about links in TOC/summary for better navigability?
+
+(Had to add some custom anchors as link targets, due to lack of fine-grained subheadings.)
+",jonikarppinen,2016-01-19 17:52:31
+96,2016-01-13 15:06:29,"I reckon it would make sense to create the missing subheadings rather than just create random places in the text for the custom anchors.
+
+When I first found this article I thought the headings on top would be on the text, but there was no direct correspondence. I was a bit confused, I tried to find a specific top header on the text and couldn't. The anchors definitely help, but it still feels like ""where am I, is this the right header that I just clicked?""
+",luisramalho,2016-01-19 17:52:31
+96,2016-01-13 21:42:17,"Yeah, what I did is a minimal change, just getting rid of the need for manual search, without changing stylistic conventions.
+
+I did consider adding subheaders, and for some parts ([Use styles](https://github.com/jonikarppinen/android-best-practices/blob/toc-links/README.md#styles), [colors.xml](https://github.com/jonikarppinen/android-best-practices/blob/toc-links/README.md#colorsxml)) it would definitely work & improve the structure. But in a way I like how some of the linked items—[like this](https://github.com/jonikarppinen/android-best-practices/blob/toc-links/README.md#methodlimitation)—now look (readability-wise); not sure if those would be better if the bold first sentence was turned into a subheader.
+
+The anchors aren't exactly _random_ btw, any more than the summary & text themselves. ;)
+
+I'd go with this for now, later adding finer-grained headings if someone's up for it. @peter-tackage, @staltz, any opinion?
+",jonikarppinen,2016-01-19 17:52:31
+96,2016-01-14 09:05:53,"When I said random, I meant ""in between paragraphs"" :)
+
+I think your changes are definitely an improvement, but if we want to use the top headers as a kind of index we should create those same headers in the text. When I click an anchor like the [colors.xml](https://github.com/jonikarppinen/android-best-practices/blob/toc-links/README.md#colorsxml) I still feel lost, as in, _am I in the right place?_, because there's no visual confirmation. It makes me scroll up to look for the same header I've just clicked, and it's a bit confusing.
+
+Let me stress that this is just the cherry on top of the cake, it's much better with these anchors than without them.
+",luisramalho,2016-01-19 17:52:31
+96,2016-01-19 17:52:10,"@luisramalho, yes, fair points.
+
+I'm merging this version now, let's improve upon it later (when someone has the time and interest).
+",jonikarppinen,2016-01-19 17:52:31
+95,2016-01-12 16:48:02,"Use different package name for non-release builds
+- Example of using `applicationIdSuffix` to be able to have debug & release apks installed on the same device. Based on [my answer](http://stackoverflow.com/a/21006552/56285) in [this Stack Overflow question](http://stackoverflow.com/questions/18491649/how-to-change-the-android-app-package-name-when-assembling-with-gradle). (As shown in that question, this can also be achieved with product flavors, but if you don't otherwise need flavors, it's an overkill for this purpose.)
+",jonikarppinen,2016-01-14 13:26:01
+95,2016-01-13 10:13:03,"Thanks  ☺
+On 12 Jan 2016 19:48, ""Joni Karppinen"" notifications@github.com wrote:
+
+> ## Work in progress – don't merge yet!
+> 
+> You can view, comment on, or merge this pull request online at:
+> 
+>   https://github.com/futurice/android-best-practices/pull/95
+> Commit Summary
+> - Gradle: Use different package name for non-release builds
+> 
+> File Changes
+> - _M_ README.md
+>   https://github.com/futurice/android-best-practices/pull/95/files#diff-0
+>   (20)
+> 
+> Patch Links:
+> - https://github.com/futurice/android-best-practices/pull/95.patch
+> - https://github.com/futurice/android-best-practices/pull/95.diff
+> 
+> —
+> Reply to this email directly or view it on GitHub
+> https://github.com/futurice/android-best-practices/pull/95.
+",morris254,2016-01-14 13:26:01
+95,2016-01-14 13:25:35,"(Reviewed by Peter.)
+",jonikarppinen,2016-01-14 13:26:01
+94,2016-01-10 20:01:33,,fbergr,2016-01-12 16:53:07
+94,2016-01-12 16:53:20,"@fbergr: thanks!
+",jonikarppinen,2016-01-12 16:53:07
+93,2016-01-04 17:16:38,"Hello, I wrote a tool that can validate README links (valid URLs, not duplicate). It can be run when someone submits a pull request. 
+
+ It is currently being used by many projects including
+- https://github.com/vinta/awesome-python
+- https://github.com/prakhar1989/awesome-courses
+- https://github.com/ripienaar/free-for-dev
+- https://github.com/vsouza/awesome-ios
+- https://github.com/caesar0301/awesome-public-datasets
+
+Examples 
+- https://travis-ci.org/vinta/awesome-python/builds/98201707 ok ✅
+- https://travis-ci.org/matteocrippa/awesome-swift/builds/96722421 link redirected / rename 🔴
+- https://travis-ci.org/dkhamsing/open-source-ios-apps/builds/96763135 bad link / project deleted 🔴
+- https://travis-ci.org/dkhamsing/open-source-ios-apps/builds/95754715 dupe 🔴
+
+If you are interested, connect this repo to https://travis-ci.org/ and add a [`.travis.yml`](https://github.com/dkhamsing/open-source-ios-apps/blob/master/.travis.yml) file to the project. 
+
+See https://github.com/dkhamsing/awesome_bot for options, more information 
+Feel free to leave a comment :smile:
+",awesome-bot,2016-06-18 11:33:44
+92,2015-12-29 12:27:44,"I would not say using Proguard for your Android application is always a good thing. Main reason why people use Proguard is to strip unused code from your .class files. Why would you do this. Mainly because either 1) You have a bloated library or 2) you have unused code in your own application. Both are scenarios that should be avoided in general, which does not yield into a good reason to use Proguard. 
+
+Another reason to use Proguard is obfuscation. But why would use that? For good security you should rely on encryption anyway. 
+
+So what's the reasoning for avoiding Proguard? Well, you can spend excess amounts of time tweaking its configuration file when maybe you wouldn't actually need to. 
+",kypeli,
+92,2016-02-24 08:05:29,"Helps a lot.
+",DanteAndroid,
+92,2016-06-18 11:36:13,"@kypeli You make some good counterpoints. Do you want to write a PR for this?
+",peter-tackage,
+91,2015-12-29 12:19:38,,kypeli,2016-01-18 19:20:24
+91,2016-01-06 10:14:11,"Good stuff, @kypeli . What do you think about adding a sentence stating that you should only use it for debug build variants and not release?
+",peter-tackage,2016-01-18 19:20:24
+91,2016-01-07 07:49:00,"I think that's a good point. Will add. 
+",kypeli,2016-01-18 19:20:24
+90,2015-12-18 17:26:07,"I think there are missing folders eg assets, fonts.
+",AresM,2016-06-18 11:06:40
+90,2016-06-18 11:06:40,"Hey, thanks for getting in touch. Those folders are omitted because they are optional.
+",peter-tackage,2016-06-18 11:06:40
+89,2015-12-17 10:08:23,"Hi,
+
+I am a web MVC programmer and I developed several projects with Android and Android Studio, i consider the basic architecture as not MVC since Controllers and View are mixed. Separating layout in another file is not enough to make it MVC compliant, because you need some code processing this layout.
+This is why for some needs, i created another concept, the LayoutView, this is specific to one layout and allow developer to interact between the controller (Activity/Fragment) and the Template (layout.xml). The layout's LayoutView inherits from an interface (provided by the controller).
+
+This allow multiple layout for one controller depending on usage and allowing reusage through your different apps.
+Here is an example for a login form, the known layout are commonly, basic or featured:
+
+<S_CODE_TOKEN>
+
+getLayoutID() returns the layout ID \o/
+setUp() is called by onCreate() or onCreateView()
+reset() is called by onResume()
+getLoginForm() is called when clicking Login button, this method extract Credentials from form.
+Other method provide a way to show the state of the request to the user (here a Rest API request with Retrofit).
+
+The architecture is
+- controllers
+  - activities
+  - fragments
+  - adapters
+- views
+  - LoginView
+  - BasicLoginView
+  - FeaturedLoginView
+- models
+  - User
+
+This system is not yet mature.
+
+What do you think about it ?
+",Cartman34,
+89,2015-12-17 11:00:04,"Simple and interesting. Do you have a repo with a sample of this architecture? 
+",jonatasleon,
+89,2015-12-17 11:39:41,"Nope, sorry, i haven't any public repo to show this architecture, i am just starting with this architecture and i think it needs more experience before being mature and a public tool. ;-)
+This enables a true separation of rendering and functional code of the application.
+",Cartman34,
+89,2015-12-18 10:38:31,"You're the boss. But a repo would be helpful to:
+- You have help in order to mature it;
+- Dissemination
+  ;-)
+",jonatasleon,
+89,2015-12-18 13:45:53,"Okay okay, maybe you should see that
+https://github.com/Sowapps/android-mvc
+I am open to suggestions
+",Cartman34,
+89,2016-06-18 11:21:49,"We've found that separation of Android platform dependencies from business logic greatly improves testability, so your pattern certainly improves on the default Android solution in that regard. The MVP pattern is very popular in the Android dev community at the moment, but we've found that MVVM is often more flexible. See this [repo](https://github.com/florina-muntenescu/DroidconMVVM) for an explanation and example code. 
+",peter-tackage,
+89,2016-07-16 08:14:14,"you may want to take a look at this: https://github.com/googlesamples/android-architecture
+",djodjoni,
+88,2015-12-01 04:46:39,"在实际的项目开发中遇到过使用 x.x.+在编译的时候引入了最新版本。由于新版的改动，而导致项目一些方法调用返回非预期，或者方法被弃用，新版库换了新的实现等一系列的问题。所以后来统一使用指定版本，了解新版特性后在决定要不要升级类库。
+
+使用 Maven 依赖方案代替使用导入jar包方案 如果在你的项目中你明确使用率 jar文件，那么它们可能成为永久的版本，如2.1.1.下载jar包更新他们是很繁琐的， 这个问题Maven很好的解决了，这在Android Gradle构建中也是推荐的方法。你可 以指定版本的一个范围，如2.1.+,然后Maven会自动升级到制定的最新版本，例如：
+
+dependencies {
+    compile 'com.netflix.rxjava:rxjava-core:0.19.+'
+    compile 'com.netflix.rxjava:rxjava-android:0.19.+'
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.4.+'
+    compile 'com.fasterxml.jackson.core:jackson-core:2.4.+'
+    compile 'com.fasterxml.jackson.core:jackson-annotations:2.4.+'
+    compile 'com.squareup.okhttp:okhttp:2.0.+'
+    compile 'com.squareup.okhttp:okhttp-urlconnection:2.0.+'
+}
+",SadieYuCN,2016-06-18 11:01:22
+88,2016-01-18 17:11:07,"这里写了不推荐使用Maven自动引入新版本啊：
+
+**Avoid Maven dynamic dependency resolution** Avoid the use of dynamically versioned, such as 2.1.+ as this may result in different and unstable builds or subtle, untracked differences in behavior between builds. The use of static versions such as 2.1.1 helps create a more stable, predictable and repeatable development environment.
+",liutingdu,2016-06-18 11:01:22
+88,2016-01-19 01:57:18,"经过实践，我也认为使用固定的版本会更好，理由如下：
+一、动态版本有可能会引入未知的问题，虽然这个可能性很小
+二、由于在国内，如果使用动态版本的话，每次在gradle在解析依赖关系的时候都会花非常多的时间。虽然设置离线模式可以解决这个问题，但还不如就用固定版本。
+",edhub,2016-06-18 11:01:22
+88,2016-06-18 11:01:22,"I think we can close this now. Thanks for the discussion.
+",peter-tackage,2016-06-18 11:01:22
+87,2015-11-25 15:21:29,"Correct some translation errors of Chinese version
+",yansha87,
+86,2015-11-18 15:38:54,"Created with https://github.com/dkhamsing/frankenstein
+### Other Corrected URLs
+
+| Was | Now |
+| --- | --- |
+| http://blog.futurice.com/android-development-has-its-own-swift | http://futurice.com/blog/android-development-has-its-own-swift |
+| http://blog.futurice.com/tech-pick-of-the-week-rx-for-net-and-rxjava-for-android | http://futurice.com/blog/tech-pick-of-the-week-rx-for-net-and-rxjava-for-android |
+| http://blog.futurice.com/top-7-tips-for-rxjava-on-android | http://futurice.com/blog/top-7-tips-for-rxjava-on-android |
+| http://www.futurice.com | http://futurice.com/ |
+| http://www.genymotion.com/ | https://www.genymotion.com/ |
+| http://www.saikoa.com/dexguard | https://www.guardsquare.com/dexguard |
+| https://code.google.com/p/google-gson/ | https://github.com/google/gson |
+| https://code.google.com/p/robotium/ | https://github.com/robotiumtech/robotium |
+",ReadmeCritic,2016-06-18 13:35:14
+85,2015-11-15 11:41:52,"I found last commit of Chinese version about 7 month ago and English version update some places from then on.
+",yansha87,2015-12-15 05:19:52
+85,2015-11-16 03:17:29,"I have translated the new version. You can read it at http://santong.me/2015/11/12/Best-practices-in-Android-development/
+",santong,2015-12-15 05:19:52
+85,2015-11-16 03:35:45,"非常棒，你可以Pull Request最新的翻译
+",yansha87,2015-12-15 05:19:52
+84,2015-11-14 19:10:42,,auvipy,2016-10-02 21:32:28
+84,2016-06-18 10:57:13,"Despite its usefulness, I consider extensive use of RxAndroid (except for `AndroidSchedulers.mainThread()`). Still, I would recommend adding a note to the RxJava section at least mentioning RxAndroid.
+",peter-tackage,2016-10-02 21:32:28
+83,2015-11-10 03:33:27,"Hi, I'm a beginner of Android and translating the doc to Chinese for few days since I noticed that you updated it. 
+
+And I found a question when I translated this part https://github.com/futurice/android-best-practices#java-packages-architecture. 
+
+I read some articles about the architecture of Android and found that more and more people suggest to use MVP architecture. So I wonder know if the MVC is still the best choice now? 
+",santong,2015-11-15 14:08:22
+83,2015-11-10 08:14:44,"There is no clear MVC architecture in Android.
+",kaedea,2015-11-15 14:08:22
+83,2015-11-12 03:21:09,"Thanks for your answer.
+Does it mean there is no standard architecture in Android?
+",santong,2015-11-15 14:08:22
+83,2015-11-12 05:40:37,"Hello @santong !
+
+So far ""standard"" architecture may be called MVP(Model View\* Presenter). Where is View stands more for a combination of contract interfaces that are also known as View Interfaces. Summing up, in Android environment mentioned stack treated more as MViVP(Model View Interface View Presenter).
+
+For more details take a look at [nice article](http://blog.sqisland.com/2015/11/mvp-missing-link.html) of @chiuki 
+
+In her article, she mentioned [Android lab](http://www.code-labs.io/codelabs/android-testing/#4) which in some extent can be treated as suggested or, maybe, an official architecture for majority apps.
+",tomkoptel,2015-11-15 14:08:22
+83,2015-11-12 06:06:37,"@tomkoptel Thank you very much. It troubled me for a long time. 
+",santong,2015-11-15 14:08:22
+83,2015-11-14 11:05:37,"@tomkoptel Thanks for useful information!
+",johnwatsondev,2015-11-15 14:08:22
+82,2015-11-07 11:15:51,"Portuguese translation for the README.md
+",luisramalho,2015-11-16 12:09:00
+81,2015-10-24 10:11:16,"Thank you very much for the valuable information available here. I have one question thought. Do you know of an obfuscator software (preferably open source) that is able to obfuscate strings inside Android's app class files?
+
+I want to install an Android app on local devices and to write inside the code some credentials for Restful endpoint authentication. I want to make sure that the credentials won't be readable by reverse engineering. Any ideas? Thanks.
+",acrolink,2016-10-02 21:36:39
+81,2015-11-08 18:24:28,"Hello @acrolink ! 
+
+Sorry for not pinpointing to the conrete solution, but the issue you are tackling can be resolved through the usage of the native code. The idea is to bundle your credentials inside native code that will be bind by JNI. This way you will ensure that strings won't be easily reverse engineered, as soon as they are part of binary files. Though, such approach complicates application code and requires from your side to build code for different platforms.
+",tomkoptel,2016-10-02 21:36:39
+81,2016-06-18 11:32:23,"You should keep in mind that ultimately, any credentials that you distribute are vulnerable to reverse engineering. Proxy tools such as [Charles](charlesproxy.com) can do this for HTTPS web traffic. So obfuscation in the APK only provides limited benefit.
+",peter-tackage,2016-10-02 21:36:39
+80,2015-10-07 09:17:11,"> Don't write string values in all uppercase. Stick to normal text conventions (e.g., capitalize first character). If you need to display the string in all caps, then do that using for instance the attribute textAllCaps on a TextView.
+
+I strongly disagree with that. Some devices (e.g. Samsung Galaxy Note 3 SM-N7505) do not really respect `textAllCaps` property of `TextViews`. So in order to make your app look exactly the same on all devices you SHOULD use string values in all uppercase.
+",blipinsk,2016-06-18 10:37:37
+80,2015-10-13 01:24:13,"Hi @blipinsk, thanks for your input. 
+I would consider the disregarding of `textAllCaps` by the Note 3 as buggy behavior and I would prefer to not let one (or a few) buggy devices dictate the general approach. To better handle this, I would propose -
+- Use ""natural"" capitalization in the string resource definitions as described.
+- Abstract the `Resources#getString()` method behind an interface.
+- Inject an appropriate preprocessor into the implementations of the interface to modify capitalization depending on device (default is no-op). 
+
+This would allow you to throw away specific workarounds if the buggy devices ever were fixed or were no longer a target device of your app.
+
+""Don't let buggy devices dictate your general approach"" - is something we should add to the guide.
+",peter-tackage,2016-06-18 10:37:37
+80,2015-10-13 01:32:24,"I should also add that appropriate capitalization of words can be quite specific to the languages being used. Unless the app design dictates that all caps be used (!), it's best to use the most natural form of the words in the resources to avoid possible unnatural wordings. For example, in German ""GmbH"" as an abbreviation for ""Gesellschaft mit beschränkter Haftung"" could look slightly odd as ""GMBH"".
+",peter-tackage,2016-06-18 10:37:37
+80,2016-05-13 10:42:44,"Be careful with using `textAllCaps`, it calls `toString()` and you might lose any formatting you might have set.
+See [AllCapsTransformationMethod](https://github.com/android/platform_frameworks_base/blob/master/core/java/android/text/method/AllCapsTransformationMethod.java#L59) which is used by `TextView`
+",jush,2016-06-18 10:37:37
+79,2015-09-26 08:50:38,"Hi i review the translate ,and find the part of webview leak translation is confused ,so i correct it .
+",andyiac,
+78,2015-09-05 16:38:18,"Can you please explain me the following paragraph in ""Activities and Fragments"" best practices section:
+
+""Don't abuse Android-level APIs such as heavily relying on Intent for your app's internal workings. You could affect the Android OS or other applications, creating bugs or lag. For instance, it is known that if your app uses Intents for internal communication between your packages, you might incur multi-second lag on user experience if the app was opened just after OS boot.""
+
+Thank you in advance
+",simtokic,2016-06-18 11:10:13
+78,2016-06-18 11:10:13,"Thanks for the question, if I recall correctly, that comment was a result of specific observation in a project that was attempting to heavily use `Intent`s like an Event Bus. 
+
+Closing due to inactivity
+",peter-tackage,2016-06-18 11:10:13
+77,2015-09-04 12:38:56,"The new [getting started instructions for Robolectric](http://robolectric.org/getting-started/) have the details. The template project still uses the plugin.
+",ilkka,2016-06-18 12:21:59
+77,2015-09-07 13:39:18,"Hey, thanks for letting us know. 
+",peter-tackage,2016-06-18 12:21:59
+77,2016-06-18 11:04:33,"@ilkka I would just say that we remove Roboletric from the template project. I wouldn't consider it a best practice.
+",peter-tackage,2016-06-18 12:21:59
+77,2016-06-18 12:21:59,"Progressing under #114 
+",peter-tackage,2016-06-18 12:21:59
+76,2015-08-31 03:10:46,"看了这篇文章学到了新的知识，同时也把文字方面error的地方fix了一下~
+",icodeu,
+76,2015-08-31 09:48:23,"非常感谢你能帮个忙更新这篇文章，我其实是芬兰人所以我的中文可能会有一些错误，请理解。但是我有一个小的请求，你能不能把这错误，错别字和单词前后缩进分开给两个commit吗？因为现在我把这看完了有点糊涂了，有一些大一点的错误（比如那Android Studio的beta的问题），还有标点的问题（.和。)，然后大部分都是单词前后缩进。
+
+如果您觉得太麻烦的话也没关系，我们可以把这个merge完了然后我还要把这文章再看一遍修一下。但如果你还有时间把这东西分开好了你可以同时把那""Translated to Chinese by andyiac""改成""Translated to Chinese by andyiac with help from icodeu""。谢谢。
+",jvah,
+76,2015-08-31 13:12:44,"@jvah 您的中文还挺好的哈哈    我明晚按照您说的分成两个分别 commit ~
+",icodeu,
+75,2015-08-13 07:03:50,"Please include some best practices about naming conventions for `android:id` of components in XML layouts.
+",steelrooter,
+75,2016-02-28 20:25:02,"I would suggest the following:
+- id should contain the prefix of the layout in which it exists. For example, inside the layout _activity_auth.xml_ all ids of controls will start with _activity_auth_;
+- id should contain clear description of the control and what it does. Like _connect_options_, _user_name_ etc.;
+- each id should have a suffix which defines the type of the control. For example, _btn_ for the Button (like _activity_auth_connect_btn_). 
+
+Like in any framework some controls become deprecated, another controls are introduced. That's why there is a sense to define the following basic suffixes for the controls:
+- _btn_ - button control (Button, RadioButton, ImageButton, CheckBox, custom button)
+- _txt_ - TextView control
+- _input_ - EditText or any input related control
+- _list_ - for list control (ListView, GridView, RecyclerView)
+- _selector_ / _spinner_ - for Spinner control
+
+I use such naming rules for a while and think they are quite convenient. They give an opportunity not to intersect ids between different layout. Also it's much easier to find related control by id inside the layout.
+
+@peter-tackage What do you think?
+",dkhmelenko,
+74,2015-08-07 15:22:27,,iverc,2015-08-12 13:08:56
+74,2015-08-12 13:00:34,"We'll check this shortly! Thanks in advance.
+",phadej,2015-08-12 13:08:56
+74,2015-08-12 13:06:36,"looks good! thanks a lot! 
+",izrailit,2015-08-12 13:08:56
+73,2015-08-04 23:31:36,"General guidelines for choosing a data persistence strategy.
+
+resolves #72 
+",tehmou,2015-08-06 11:39:02
+73,2015-08-05 06:14:15,"Thanks :smile: 
+Between [Schematic](https://github.com/SimonVT/schematic) and [ProviGen](https://github.com/TimotheeJeannin/ProviGen), which one would you recommend?
+",aziflaj,2015-08-06 11:39:02
+73,2015-08-05 06:54:22,"Looks great to me
+",staltz,2015-08-06 11:39:02
+73,2015-08-05 07:51:41,"If you don't need anything complicated, [Simple Provider](https://github.com/Triple-T/simpleprovider) is a great choice. Gonna add this section to russian translation as well!
+",iverc,2015-08-06 11:39:02
+73,2015-08-05 11:03:47,"@aziflaj I have personally had good experiences with Schematic, hence mentioning it. I like that it is precompiled, as annotations are known to be slow on Dalvik. You can also easily inspect the resulting source code, which is just a typical ContentProvider. I did not try ProviGen yet, though it seems to be different in its approach of extending the library base classes.
+
+@tremerhl do you know how mature the Simple Provider is?
+",tehmou,2015-08-06 11:39:02
+73,2015-08-05 11:35:46,"@tehmou  SimpleProvider is pretty young library, it also uses annotations to create database, hence you need to add `-keep` to your ProGuard. I've had good experience using it to create and interact with one db table, can't say anything with respect to it's efficiency with really complex data. 
+",iverc,2015-08-06 11:39:02
+73,2015-08-05 15:38:28,"I like [ActiveAndroid](https://github.com/pardom/ActiveAndroid).
+It is easy to use.
+",SMontiel,2015-08-06 11:39:02
+72,2015-08-04 19:55:45,"I think it would be good if there were some information regarding to data storing, like:
+- best practices when writing Content Providers
+- when to use Shared Preferences
+- ORMs, do and don't 
+",aziflaj,2015-08-06 11:39:02
+71,2015-08-04 19:40:40,"Russian translation for android-best-practices README.md
+",iverc,2015-08-07 15:19:37
+71,2015-08-06 15:31:59,"Fixed errors and added  translation for persisting data section
+",iverc,2015-08-07 15:19:37
+71,2015-08-12 12:00:29,"@tremerhl We just reviewed your translation and liked it, can you put it back?
+",phadej,2015-08-07 15:19:37
+71,2015-08-12 12:51:37,"@phadej I created new pull request with translation for Data Storage section. If you want I can resume this request instead of the new one!
+",iverc,2015-08-07 15:19:37
+69,2015-07-23 11:01:05,"Hello. I just have some questions/remarks.
+
+> Use Gradle and its recommended project structure
+
+Why not Maven?
+
+> Don't write your own HTTP client, use Volley or OkHttp libraries
+
+Aquery, Android Asynchronous Http Client?
+
+> Use the Jackson library to parse JSON data
+
+Not GSON?
+
+> Do not make a deep hierarchy of ViewGroups
+
+Mb add some links, like [this](http://stackoverflow.com/a/9950339/1991579)
+
+> There are two popular options: the old Ant & Eclipse ADT project structure, and the new Gradle & Android Studio project structure.
+
+Maven & Eclipse?
+
+> Always use ProGuard or DexGuard
+
+Shrink? Penny-wise and pound-foolish. Obfuscate? Not sure. Is it always necessary?
+",Suvitruf,2015-08-18 14:04:09
+69,2015-07-23 12:37:07,"About JSON
+
+> [...] Gson is a popular choice for solving this problem, however we find Jackson to be more performant since it supports alternative ways of processing JSON: streaming, in-memory tree model, and traditional JSON-POJO data binding. Keep in mind, though, that Jackson is a larger library than GSON, so depending on your case, you might prefer GSON to avoid 65k methods limitation.
+",jonatasleon,2015-08-18 14:04:09
+69,2015-07-23 12:43:50,"GSON also support: streaming, JSON-POJO and tree model...
+",Suvitruf,2015-08-18 14:04:09
+69,2015-07-25 10:19:47,"IMHO Jackson is way too big for Android where GSON can do the same. (and performance nearly the same where GSON wins mostly)
+Actually Android have native support for tree model and streaming.
+For streaming native JsonReader
+For thee model one can use the native JSONObject and JSONArray. 
+Also for POJO there is a new kid in town which claims to be the fastest:
+https://github.com/bluelinelabs/LoganSquare
+",djodjoni,2015-08-18 14:04:09
+69,2015-08-07 03:20:04,"About Gradle and Maven
+
+> I I recommend reading the article from the Steve Ebersole. He is Hibernate Project Manager.  
+> [Gradle: why?](https://developer.jboss.org/wiki/Gradlewhy?_sscc=t)  
+
+Maybe this's the reason why android studio recommend using Gradle. 
+",castial,2015-08-18 14:04:09
+69,2015-08-15 09:34:41,"If you recomend use OkHttp, you already have Gson and this is not really good idea include Jakson in same project. 
+",31H0B1eV,2015-08-18 14:04:09
+69,2015-08-17 07:28:50,"@31H0B1eV OkHttp is a HTTP client, so it does not have any JSON (de)serialization responsibilities or a Gson dependency. You may be thinking of Retrofit, which is often used with OkHttp and a JSON library of your choosing.
+",peter-tackage,2015-08-18 14:04:09
+69,2015-08-17 07:36:58,"@peter-tackage [really?](https://github.com/square/okhttp/blob/master/pom.xml#L96)
+
+<S_CODE_TOKEN>
+",Suvitruf,2015-08-18 14:04:09
+69,2015-08-17 07:44:18,"I did a quick search for the usage of Gson in OkHttp and it appears that dependency is used for testing and samples, not the actual shipped artifact.
+",peter-tackage,2015-08-18 14:04:09
+69,2015-08-17 07:55:11,"Yep, sorry it's my mistake, i'm almost always use OkHttp with Retrofit, and was confused with it. But OkHttp + Retrofit is best way to make rest api calls and usually if you getting json, you working with rest. So i think that OkHttp + Retrofit must be a standart, and in this case gson is best choice, this what i mean. 
+",31H0B1eV,2015-08-18 14:04:09
+69,2015-08-17 09:42:46,"> Why not Maven?
+
+Gradle is the supported build system for Android, that alone is a very good reason to use it. The Android Gradle plugin is powerful and flexible with continual improvements with excellent IDE integration.  Although some have used Maven in the past, with Gradle now in the picture it arguably doesn't have much of a future on Android. That makes Gradle our recommended best practice.
+
+> Don't write your own HTTP client, use Volley or OkHttp libraries
+
+There are a lot of choices in this space, our recommendation to use Volley, OkHttp and Retrofit  based upon our own battle-harded use in apps. They are well designed, tested and proven libraries with great technical support and expertise in the wider Android community.
+
+> Use the Jackson library to parse JSON data
+
+Personally, I do use Gson as a part of the Retrofit + Gson + OkHttp stack. Ultimately, the advice to use Jackson should be read as ""use a JSON parsing library""; don't perform unnecessary manual JSON parsing.
+
+> Do not make a deep hierarchy of ViewGroups
+> Mb add some links, like this
+
+We link to some resources that provide some good info on the reasoning. In either case, I don't think too many people will disagree with this one.
+
+> Maven & Eclipse?
+
+Before the introduction of Android Studio and Gradle into the Android SDK environment we found using Eclipse and Maven a fairly frustrating experience. The new tooling makes for a much better, powerful experience that will continue to improve. Hopefully it's clear that no one should be using Eclipse anymore!
+
+> Always use ProGuard or DexGuard
+> Shrink? Penny-wise and pound-foolish. Obfuscate? Not sure. Is it always necessary?
+
+For reasons of APK size and footprint, shrinking your app with Proguard is a good practice. The important caveat being that Proguard should be introduced early in the project and its configuration regularly exercised and tested via builds. As suggested earlier, being selective in your library choices to minimize the possibility of using multiple libraries that provide similar functionality (e.g. Picasso and Glide) is also an important part of this.
+
+Obfuscation is not a silver bullet and some libraries make it hard to configure. Still, it's a reasonable first defense and can often be a customer expectation. Again, testing your configuration early and often is important.
+",peter-tackage,2015-08-18 14:04:09
+68,2015-07-22 14:48:35,"This translation aims to help French developers that are not too familiar with English to be able to apply  Android best practices as well.
+",GWillmann,2015-11-01 11:27:50
+68,2015-09-26 16:55:00,"Thanks for the translation @GWillmann! If you could fix the minor issues (mostly typos) I've noted, then squash the commits and then it will then be good to merge.
+cheers.
+",peter-tackage,2015-11-01 11:27:50
+68,2015-10-30 18:10:37,"Sorry for the delay @peter-tackage !
+I have fixed all the typos, it should be good to go.
+Cheers.
+",GWillmann,2015-11-01 11:27:50
+67,2015-07-16 01:30:04,"Currently I'm writing a translation of the README.md to portuguese. Could I create a pull request I when finish it?
+",jonatasleon,2015-08-17 15:10:55
+67,2015-07-17 07:29:45,"Hi @jonatasleon. New translations are most welcome! Just follow the structure of our other translations; https://github.com/futurice/android-best-practices/tree/master/translations and create a pull request so we can merge it once you are finished. Thanks for your interest!
+",peter-tackage,2015-08-17 15:10:55
+67,2015-08-03 19:22:17,"Currently I'm writing README.md for Russian. I can also make one for Ukrainian if needed. 
+",iverc,2015-08-17 15:10:55
+67,2015-08-03 19:24:18,"Spasibo:)
+",djkalmyk,2015-08-17 15:10:55
+67,2015-08-04 09:06:31,"Translation into Russian was published at habrahabr.ru at 23/07/2015: http://habrahabr.ru/post/262501
+",mike-stetsenko,2015-08-17 15:10:55
+67,2015-08-09 10:36:45,"Created pull request with complete translation to Russian, including data storage section.
+@mike-stetsenko Article on habrahabr.ru has several misleading/wrong translations.
+",iverc,2015-08-17 15:10:55
+67,2015-08-12 14:13:55,"@tremerhl Why don't you write the author about it? He'll be very pleased and fix mistakes at once.
+Instead of this, you used his text and didn't inform him. Very nice
+",mike-stetsenko,2015-08-17 15:10:55
+67,2015-08-12 14:36:23,"@mike-stetsenko  I didn't use that text to write my translation, but thank you for your advice. I will surely inform the author of article on habrahabr about his errors.
+",iverc,2015-08-17 15:10:55
+67,2015-08-12 15:18:20,"@tremerhl OK :thumbsup:
+",mike-stetsenko,2015-08-17 15:10:55
+67,2015-08-17 15:10:44,"Closing this off. New and updated translations can be submitted through PRs.
+",peter-tackage,2015-08-17 15:10:55
+66,2015-07-11 18:46:22,"Avoid time delays on UI thread, use a Runnable and Handler instead.
+",yatna,2015-11-07 11:47:45
+66,2015-11-07 11:47:45,"Thanks for the PR, but for this guide we are aiming to create a document with more unique insights. Using only primitive Runnable/Handler to the avoid blocking the UI thread is more of an entry level practice, we recommend using RxJava for concurrency.
+",peter-tackage,2015-11-07 11:47:45
+65,2015-07-10 02:41:08,,troyliu0105,
+64,2015-07-09 02:55:46,"I'm using [fastjson](https://github.com/alibaba/fastjson) in my project and it works well for no efficiency loss. 
+
+This is the [benchmark](https://github.com/eishay/jvm-serializers/wiki)
+",LyndonChin,2015-07-14 20:20:46
+64,2015-07-11 05:10:20,"What about [Logan Square](https://github.com/bluelinelabs/LoganSquare) ?
+
+This is the [benchmark](https://github.com/bluelinelabs/LoganSquare/blob/master/docs/benchmarks.jpg)
+",tomkoptel,2015-07-14 20:20:46
+64,2015-07-14 20:17:55,"There certainly is a lot of choice when it comes to JSON parsing/serialization for Java! I can also add Square's [Moshi](https://github.com/square/moshi) to the four others listed in our guide.
+
+The key message from our advice is ""avoiding reinventing the wheel"". Unless you have a particularly good reason, manual handling of JSON is unnecessary, so employ a library that works well for you. Perhaps we've now come to the point where we are spoiled for choice? In regards to those specific libraries that you mentioned, we don't have any particular experience with them and have found Jackson or Gson sufficient.
+",peter-tackage,2015-07-14 20:20:46
+63,2015-07-08 13:56:47,"Hello folks,
+
+I am wondering what is the best practice to handle auto incrementation approach for your builds?
+So far I am using approach of generating dynamic version names and code like this:
+
+<S_CODE_TOKEN>
+
+Inside project, I am storing `version.properties` file which is dynamically updated by script.
+It basically looks like this:
+
+<S_CODE_TOKEN>
+
+Basic implementation of calculate methods is following:
+
+<S_CODE_TOKEN>
+
+So if I need to increment build I can simply update my `version.properties` file. Though I do not feel like this is the right way to handle auto increment.
+
+Please, can you suggest me something elegant?
+
+Cheers, Tom.
+",tomkoptel,2016-10-02 21:36:09
+63,2016-06-18 12:34:21,"There's many different possibilities for version numbering and auto-incrementing. Recently in my current project we've been using the Git commit hash, a bit like described in this [article](http://ryanharter.com/blog/2013/07/30/automatic-versioning-with-git-and-gradle/). This has worked quite well and you get auto-incrementing builds versions for free. Hopefully that helps!
+",peter-tackage,2016-10-02 21:36:09
+63,2016-10-02 21:57:29,"While not strictly related to auto-increment, I should point out that Jake Wharton's [U2020 demo app](https://github.com/JakeWharton/u2020/blob/master/build.gradle) provides some useful utility Gradle methods related to git commits and hashes.
+",peter-tackage,2016-10-02 21:36:09
+62,2015-07-08 09:38:11,,Geno1024,
+61,2015-06-26 19:40:49,"Removed unneeded word and clarified sentence.
+",jkdf2,2016-07-16 11:18:11
+61,2016-06-18 13:29:33,"@jkdf2 Is this the single change to ""take"" vs ""make"" a decision? If so, rebase and I'll merge. 
+",peter-tackage,2016-07-16 11:18:11
+61,2016-07-16 01:48:56,"Sorry, I had the wrong email in my gitconfig but anyway... haha
+",jkdf2,2016-07-16 11:18:11
+60,2015-06-22 08:20:05,,minsoopark,2015-06-23 10:39:07
+59,2015-06-20 18:16:59,"Using the package structure outlined in the document, what would be the recommended location for services ?
+
+Its not really part of the view. 
+
+Create a pacakge under root called services ?
+",appsolutegeek,2015-06-23 10:54:40
+59,2015-06-23 10:43:40,"I agree, ""services"" at root level would be consistent with our recommendations. Of course, there's always an element of flexibility with the package naming conventions, depending on what best suits the app being developed and its architecture.
+",peter-tackage,2015-06-23 10:54:40
+59,2015-08-03 22:08:40,"Great, thanks for your comments.
+",appsolutegeek,2015-06-23 10:54:40
+58,2015-06-10 07:38:27,"This fixes potential nasty problems, such as ProGuard stripping `values()` method from enums, causing the app to crash: http://stackoverflow.com/a/20651744/56285
+",jonikarppinen,2015-06-10 07:39:15
+57,2015-04-29 15:21:56,"Gralde => Gradle
+",Peranikov,2015-04-29 18:43:19
+56,2015-04-16 18:46:40,"Hello
+
+Espresso (https://code.google.com/p/android-test-kit/) is not mentioned at all. Did you have any bad experience with it? 
+",logcat,2016-06-18 12:22:26
+56,2015-04-17 08:53:30,"Thanks for bringing this up! We were not so aware of Espresso before, but now that you mentioned it, looks very useful!
+",staltz,2016-06-18 12:22:26
+56,2015-04-23 18:45:11,"Unfortunately I did not use it heavily, so my opinions about it will be purely theorycraft. Espresso was discussed today at ADB podcast (there are also relevant links) http://androidbackstage.blogspot.fi/2015/04/episode-25-espresso.html 
+",logcat,2016-06-18 12:22:26
+56,2015-07-01 22:47:41,":+1: for Espresso.  Great for larger-scale integration tests.
+",benjamin-bader,2016-06-18 12:22:26
+56,2015-07-11 05:12:57,"Espresso is the great tool better than Robotium (IMHO). 
+
+By the way, there is exist interesting extension for espresso on the basis of RxJava - [RxPresso](https://github.com/novoda/rxpresso). 
+",tomkoptel,2016-06-18 12:22:26
+56,2016-06-18 12:22:26,"Progressing under #114 
+",peter-tackage,2016-06-18 12:22:26
+55,2015-04-16 15:06:23,"I made a correct in packages strutures, using android e java patterns, and formatter.
+",guimendes92,2016-06-18 13:53:14
+54,2015-04-16 03:51:42,,minsoopark,2015-04-16 07:16:26
+53,2015-04-10 16:29:41,,scarletsky,2015-04-10 16:54:12
+52,2015-04-02 10:38:24,,staltz,2015-04-21 11:38:47
+51,2015-03-13 11:55:45,,peter-tackage,2015-03-13 13:50:58
+51,2015-03-13 12:33:16,"[Btw, I think it's redundant to merge the branch to your local master first. Just create a branch on your fork, and then directly from that branch create PR against futurice:master (the default option). Just for future changes :) ]
+",jonikarppinen,2015-03-13 13:50:58
+51,2015-03-13 12:40:25,"Also, totally minor nitpick :) Your commit comment would have been better without the ""Update README.md"" in the beginning. That is kind of obvious when it's the only file you change + it hides the real beef of the commit message (in many places).
+",jonikarppinen,2015-03-13 13:50:58
+51,2015-03-13 13:40:46,"No worries. Minor nitpicks are important! This case, I foolish accepted the default commit comment that Github provides and I'll reduce the branching/merging noise next time.
+",peter-tackage,2015-03-13 13:50:58
+51,2015-03-13 13:50:53,"Looking good now!
+",jonikarppinen,2015-03-13 13:50:58
+51,2015-03-13 15:59:33,":+1: to this PR and discussion!
+",staltz,2015-03-13 13:50:58
+50,2015-03-13 11:30:21,"Switch to using explicit version numbers in build.gradle, as ""Using + in version numbers can lead to unpredictable and unrepeatable builds"". Also update to latest library versions & build tools.
+",jonikarppinen,2015-03-13 14:30:48
+50,2015-03-13 14:30:09,"Looks good to me. Project loads, compiles and tests pass.
+",peter-tackage,2015-03-13 14:30:48
+49,2015-03-13 10:57:04,"**Update**: this PR just replaces throwing an exception with printing a warning; see https://github.com/futurice/android-best-practices/pull/49#issuecomment-82822853
+
+---
+
+I had too much trouble opening newly cloned rx-architecture project in Android Studio; it failed with ""You should define KEYSTORE_PASSWORD and KEY_PASSWORD in gradle.properties."" Setting defaults in gradle.properties makes it easier for people to actually start using the template. 
+",jonikarppinen,2015-03-18 12:29:35
+49,2015-03-13 15:58:07," I have mixed feelings about this. On one hand it helps to avoid the gradle warning/exception, but on the other hand, it might be showing an example of how to use gradle.properties. And these values KEYSTORE_PASSWORD and KEY_PASSWORD should absolutely not be committed, these are sensitive data. Actually gradle.properties should be in .gitignore for that reason.
+How do you think we can make it easy to get started, while making it clear that passwords cannot be in git? The warning message is clear that you should define those manually instead of having them by default. 
+",staltz,2015-03-18 12:29:35
+49,2015-03-13 17:05:39,"I was thinking the same about tracking gradle.properties file, because there's a chance that people will just copy the project and then expose themselves to the risk of leaking sensitive information. Perhaps the assertion in the build.gradle should be commented out (with a clarifying comment) and the gradle.properties file removed from the version history?
+",peter-tackage,2015-03-18 12:29:35
+49,2015-03-13 17:32:39,"Here's some clarifications. What I'm _trying_  to do with this piece of code is to throw that exception WHEN the release signing configs are about to be used.
+
+<S_CODE_TOKEN>
+
+Here's what happens instead: the exception is thrown whenever Gradle does _anything_ with the build.gradle, even if it's unrelated to making a release build. So to make it more friendly, either make it a comment instead of an exception, or find a way to throw the exception only when the release build is attempted. Perhaps, for the latter, overriding the release tasks somehow?
+",staltz,2015-03-18 12:29:35
+49,2015-03-18 08:40:54,"Yep, it would be important that Gradle **only** fails the build due to missing KEYSTORE_PASSWORD & KEY_PASSWORD when trying to do a release build, not whenever touching the build file.
+
+As Andre wrote, and as we discussed yesterday offline, overriding the release task probably would be a way to do that. However, I think that would convolute the file unnecessarily. The result would not be a ""best practice"" (a build file that most developers should have) in my opinion. I would opt for a clear comment in this file.
+
+By the way, a nice thing about environment variables (`System.getenv(""KEY_PASSWORD"")` — my preferred approach to this) is that it only fails (if value not set) when actually trying to do the release build.
+",jonikarppinen,2015-03-18 12:29:35
+49,2015-03-18 08:43:49,"I updated this PR to solve the main problem while keeping the build file simple. It seems we can't avoid the try-catch, but we don't have to throw exception (break the build) in catch; we can also just print a message.
+
+What do you think? @staltz @peter-tackage Feel free to tweak any wordings etc.
+
+(Or if you prefer a new clean branch & PR for this approach, just let me know.)
+",jonikarppinen,2015-03-18 12:29:35
+49,2015-03-18 09:11:23,"I like the print replacing the throw. It's an obvious solution, but I hadn't thought about it before. Would be even better to make the print a warning instead of just a print.
+",staltz,2015-03-18 12:29:35
+49,2015-03-18 09:23:29,"I found it: https://gradle.org/docs/current/userguide/logging.html
+
+Replacing `println` with `logger.warning(""..."")` would make it perfect in my opinion.
+",staltz,2015-03-18 12:29:35
+49,2015-03-18 10:29:54,"@staltz Switched to `logger.warning()`.
+",jonikarppinen,2015-03-18 12:29:35
+49,2015-03-18 11:26:02,"@peter-tackage shall we merge?
+",staltz,2015-03-18 12:29:35
+49,2015-03-18 11:53:14,"Looks fine to me for now. Although perhaps we should investigate how to fail release builds at runtime, because it's pretty easy for warning to be accidentally missed.
+",peter-tackage,2015-03-18 12:29:35
+49,2015-03-18 12:13:47,"Yes I think the same, I suggested to Joni we could make a task that checks if those passwords are in gradle.properties and warns/fails if not, then make assembleRelease depend on that task.
+",staltz,2015-03-18 12:29:35
+48,2015-03-05 04:55:05,"Does reusing views/layouts a best practice? I've never done this before. Could anyone please advice on this matter?
+
+I'd love to learn how to reuse my views/layouts or maybe even adapters. For now, I only create new layout for any listviews, gridviews, etc. Just with different file names to distinguish it all.
+
+**Edit:** Just thought of this. Would it be possible if someone could give advice or tips on creating BaseActivity is a good practice or not, like what to put inside it? (navigation drawer in my mind right now). Perhaps, extending other activities to use this BaseActivity and reusing the same navigation drawer, or other business logic.
+",aimanbaharum,2015-07-14 20:21:25
+48,2015-03-05 08:16:37,"#################
+It's not regarding UI
+#################
+
+I am using Inheritance to release memory when my user leaves the UI. Here is what I am doing, you can hopefully get an idea of doing similar things with UI too. Please note that this approach can be drastically improved, waiting for some good suggestion :+1: 
+
+I have written an Interface in my AppContext that is Inherited from Application class.
+public class AppContext extends Application {
+private static List<IMemoryInfo> memInfoList = new ArrayList<AppContext.IMemoryInfo>();
+    public static abstract interface IMemoryInfo {
+        public void goodTimeToReleaseMemory();
+    }
+
+I have two static methods to register memory hungry activities.
+
+/**
+     \* 
+     \* @param implementor
+     \*            interested listening in memory events
+     */
+    public static void registerMemoryListener(IMemoryInfo implementor) {
+        memInfoList.add(implementor);
+    }
+
+<S_CODE_TOKEN>
+
+Then I have a method that is called when the user Leaves the UI, it's different than on Pause(  )
+
+@Override
+    public void onTrimMemory(int level) {
+        super.onTrimMemory(level);
+
+<S_CODE_TOKEN>
+
+Then I have an activity parent
+
+public class ActivityParent extends Activity implements AppContext.IMemoryInfo 
+protected ActivityParent child;
+
+@Override
+    public void goodTimeToReleaseMemory() {
+        Log.w(TAG, ""Low Memory, Relase Now !!!"");
+    }
+
+<S_CODE_TOKEN>
+
+These just some code snippets for grasping the concept, I have also code here to show and hide dialog, dialog creation is expensive operation so I just keep them when I create one.
+
+You might be interested in ""Fast Rendering News Feed on Android"" https://code.facebook.com/posts/879498888759525/fast-rendering-news-feed-on-android/
+",AizazAZ,2015-07-14 20:21:25
+48,2015-07-11 06:27:54,"@AizazAZ  Why so difficult setup for memory management? 
+
+So far there is no need to such complicated means. I suggest instead of your approach to track down memory leaks. Square has invented an excellent tool for this case. Take a look on this [leakcanary](https://github.com/square/leakcanary).
+",tomkoptel,2015-07-14 20:21:25
+48,2015-07-11 07:07:53,"IMO creating a BaseActivity is a good idea. At least for migrating your code base. For example, when you don't have your BaseActivity, and implement all your Activity classes extending (for Example) ActionBarActivity, it's a headache to migrate all of them to AppCompatActivity though.
+
+Well it's just a really sample stuff you may not mind to care. But in general, I think it's usual to have your Activity classes share some same feature (all create and setup a toolbar, etc.), so BaseActivity will be a good choice. Nevertheless, what your loss is only an extra file (if you well manage your app).
+",eneim,2015-07-14 20:21:25
+48,2015-07-14 15:19:03,"I also highly recommend the use of Leak Canary to track down memory leaks. Our best practices document doesn't reflect this yet, as the library is relatively new, but many of our projects already use it.
+
+As for BaseActivity, I would say that using them is inevitable when using multiple Activity app, whether it be for logging, dependency injection, session state checking, generic data subscription etc etc. Some good general advice is to use composition where possible rather than relying solely on inheritance. Encapsulate the behaviors you want into modularized classes (to faciliate testing) and then include them in the BaseActivity, rather than writing the behaviors entirely in the BaseActivity. This will make it easier to change your structure later if required. The deeper your Activity class hierarchy, the more difficult debugging and maintenance becomes.
+
+Reuse of view/layouts is encouraged - there will less XML to maintain. Refer to the official docs for instructions: http://developer.android.com/training/improving-layouts/reusing-layouts.html
+",peter-tackage,2015-07-14 20:21:25
+47,2015-03-02 06:44:52,"Hi I am a android developer from China ，this blog is awesome , so i translate it to Chinese.
+",andyiac,2015-03-02 14:14:49
+47,2015-03-02 07:59:17,"good job!
+",pcqpcq,2015-03-02 14:14:49
+47,2015-03-02 08:52:36,"nice
+",xu6148152,2015-03-02 14:14:49
+47,2015-03-02 14:14:47,"Thank you for translating!
+",staltz,2015-03-02 14:14:49
+46,2015-02-27 14:30:34,"Hi, anyone know if nested ViewPager can be a problem?
+I've implemented this on my app and I have a huge increment of performace and non blocking UI, Because it avoid replace or add fragment every time when I need change the content.
+I have created a NonSwipeableViewPager and added a normal ViewPager inside it. When the user select a item on NavigationDrawer, the NonSwipeableViewPager slide to position of the content.
+",ppamorim,2015-07-14 18:44:54
+46,2015-07-14 18:44:54,"To me, it sounds like a fairly unconventional approach. I can see a few downsides to it. Firstly, using a ViewPager then suppressing the primary elements of its behavior is probably wasteful and you may create bugs in doing so. Secondly, I can imagine that it could result in excess memory consumption, due to the ViewPager keeping Fragments/Views in memory (in +/- 1 positions) to support its typical paging behavior. The performance benefit observed may be a result of the ViewPager having already created the content before the request to display it is made.
+
+As you are probably aware, the same effect could be achieved by using a simple ViewGroup container and swapping in/out the content with the appropriate animation. That way you free yourself from having to maintain the ViewPager apparatus.
+
+Depending on your circumstances, you may regard the performance benefits you have observed as a worthwhile tradeoff for the memory consumption and possible maintenance complications. Personally, I'd use a more conventional approach and investigate the causes of the UI blocking.
+",peter-tackage,2015-07-14 18:44:54
+45,2015-02-23 08:44:48,,minsoopark,2015-02-23 08:46:02
+45,2015-02-23 08:45:59,"Thanks
+",staltz,2015-02-23 08:46:02
+44,2015-02-21 23:08:31,,staltz,2015-02-23 07:40:56
+43,2015-02-21 22:49:04,,techupper,2015-02-21 22:55:01
+42,2015-02-10 17:42:29,,minsoopark,2015-02-13 15:16:22
+42,2015-02-13 15:16:19,"Thanks @minsoopark !
+",staltz,2015-02-13 15:16:22
+41,2015-02-08 15:21:58,,ppamorim,2015-02-27 14:43:32
+40,2015-02-03 15:53:16,,amouly,2015-02-03 16:19:03
+39,2015-01-30 09:36:06,,jarnmo,2015-01-30 10:19:58
+38,2015-01-16 00:56:21,,ichigotake,2015-01-16 08:29:58
+37,2014-12-16 02:36:19,"I am wondering introducing `fragments` or `adapters` package might ask some classes or methods be unnecessarily public.  Could you tell me why you think this packaging is best?
+
+<S_CODE_TOKEN>
+
+For example, if FragmentA takes advantage of an AdapterA and no other fragments do not use the adapter, it might be better they both are in the same package and their methods or classes (if necessary) are declared as package scope.  However, if your package architecture is like above, they have to be public.
+
+Do you think there are more classes or methods which would be shared among all the fragments or adapters? Or do you have any other pros for the architecture?
+
+My current opinion is that it would be better to organize classes based on the screens they are related to.  Of course, some might be shared among screens (e.g. custom views) but I think there would be less dependencies.
+
+I have been bothering with Java packaging in Android development and I would appreciate if you could tell me some  backgrounds behind this best practice.
+
+Thank you.
+",hkurokawa,2015-01-16 08:31:01
+37,2014-12-16 08:11:44,"I usually separate packages per functionality, bootstrap, login, feed, details, settings and somethings like that. and later if the classes inside package exceeds more than 10 classes starting with sub-packages like ui, requests.... 
+
+just one `android` general package for all commons android stuff like BaseActivity and BaseFragment
+
+It's the best practice i found. that structure let me put a DI Module class on each one and keep relationship between packages clear
+",ffgiraldez,2015-01-16 08:31:01
+37,2014-12-17 13:32:42,"Hi @hkurokawa 
+
+> My current opinion is that it would be better to organize classes based on the screens they are related to.
+
+We have done both approaches: organizing classes by domain purpose, or organizing by type. We generally tend to organize by type (fragments together, adapters together), because it encourages us to write DRY code instead of just copy-pasting from one domain problem to another.
+",staltz,2015-01-16 08:31:01
+37,2014-12-18 03:33:49,"@staltz Thank you for your answer.  I see.  It is very likely that many fragment-specific or adapter-specific utils are created and I agree with you that it is better to put them into a package.  As I haven't yet met such problems so far, the knowledge was very helpful.
+
+Many thanks.
+",hkurokawa,2015-01-16 08:31:01
+36,2014-12-12 15:50:20,"Make text gender neutral
+",peter-tackage,2014-12-12 18:50:19
+35,2014-12-12 12:28:38,,omjokine,2014-12-12 12:34:48
+34,2014-12-11 11:23:26,,kgmyshin,2014-12-11 11:52:13
+33,2014-12-09 11:31:48,,staltz,2014-12-09 11:32:44
+32,2014-11-25 14:47:51,"Wiki from github should be more appropriate to structure your documentation of best practices.
+(btw it's help me alot :+1: )
+",CedrickFlocon,2016-06-18 10:47:57
+32,2016-06-18 10:47:57,"Thanks for the suggestion. We've been happy with the format for now, so closing this.
+",peter-tackage,2016-06-18 10:47:57
+31,2014-11-25 14:46:34,"You don't have any section speaking about DAO, ORM.
+Best Practices, Library (Cupboar/OrmLite/ActiveAndroid/greenDAO/Ollie),  ...
+",CedrickFlocon,2015-06-23 10:56:21
+31,2014-11-26 13:56:52,"What you think about performance in ORM? 
+",Pierry,2015-06-23 10:56:21
+31,2014-11-27 10:28:46,"We don't have that much extensive experience with ORMs in order to recommend some practice for it. The apps we make for our customers normally don't have (large) storage as a requirement.
+However, one of our senior developers has used ORMLite and was fairly satisfied with it, including its performance.
+
+We will update the docs once we have experienced this in a real project.
+",staltz,2015-06-23 10:56:21
+31,2014-11-27 10:54:42,"I think greenDao is a good choice
+",fairysword,2015-06-23 10:56:21
+30,2014-11-21 13:58:34,"Hi everyone.
+
+What do you thing about Android Annotations?
+It's a good practice? 
+
+https://github.com/excilys/androidannotations
+",Pierry,2015-06-23 10:54:57
+30,2014-11-23 10:29:17,"Yeah, definitely
+",Dwite,2015-06-23 10:54:57
+30,2015-01-04 12:18:03,"of course
+",xu6148152,2015-06-23 10:54:57
+30,2015-06-23 10:50:56,"I've never used it on a project, but typically I prefer using libraries with very specific, specialized aims as they often deliver better solutions.
+",peter-tackage,2015-06-23 10:54:57
+29,2014-11-18 19:49:13,"- added Support Library v21 dependency
+- changed BookFragment's base class
+- changed MainActivity's base class
+",jaggernod,2014-11-21 08:35:29
+28,2014-11-15 22:56:34,"The project template shows by way of the `SubscriptionUtils` class how one could bind data to a TextView. 
+
+I'm curious to see how you use this similar approach with list views, adapters and the view model. Do you use the subjects to publish results, and as the results are published, add them as single items to the list adapter?
+
+Alternatively, do you publish a chunk of results for the list, and just set the items on the adapter with one swoop?
+",kaushikgopal,2016-10-02 21:40:31
+28,2014-11-21 09:52:28,"Hi @kaushikgopal , yes you are right, and we were anyway thinking of doing a ListView (or RecyclerView) in the template. We also want to change the API resource, probably we will build something on the Wikipedia API which is quite good for demonstrations and templates.
+",staltz,2016-10-02 21:40:31
+28,2014-11-21 16:06:11,"Perfect ! best of both examples. 
+",kaushikgopal,2016-10-02 21:40:31
+28,2016-10-02 21:40:31,"RxJava patterns have been explored in-depth elsewhere since this issue was originally opened, but hopefully the RecyclerView and SearchView example in this project https://github.com/futurice/freesound-android provide sufficient examples of an approach that was worked well for us.
+",peter-tackage,2016-10-02 21:40:31
+27,2014-11-15 22:54:18,"The project template architecture is pretty nice in demonstrating a clean architecture pattern with RxJava.  
+
+It would be nice to see more real-world testing examples, as there seems to be a dearth of those. The ones included help ensuring the test framework works, but more flushed out examples would be nice.
+",kaushikgopal,2016-06-18 12:09:05
+27,2014-11-18 20:00:57,"So you would like to see WHAT we recommend to test or HOW do we test it with supplied frameworks?
+Or maybe both?
+",jaggernod,2016-06-18 12:09:05
+27,2014-11-18 21:10:24,"My initial question was the HOW, but now that you mention it, the WHAT would be super valuable info too.
+
+Essentially, I was curious to know how you test RxJava specifically. Do you use TestSchedulers, convert to blocking calls etc. 
+
+(By HOW I'm presuming you mean things like only testing the ViewModel input/output, avoiding implementation details etc. ?)
+",kaushikgopal,2016-06-18 12:09:05
+27,2016-06-18 12:09:05,"@kaushikgopal It's been a while, but to answer your questions. Yes, we would recommend using `TestScheduler` and also `TestSubscriber` when testing apps written with Rx.
+
+For example, when testing MVVM we do the following when unit testing the ViewModel:
+- Keep ViewModel free of Android dependencies.
+- Mock collaborators using Mockito.
+- Use `TestScheduler` instances.
+- Test the ViewModel public API using `TestScheduler`, avoiding testing internal implementations.
+
+Using Blocking Observable for testing is flawed because the time based operations can't be accelerated. The unit test below will take an hour to run, which not ideal!
+
+<S_CODE_TOKEN>
+
+I'm writing some articles at the moment that go into a bit more detail.
+",peter-tackage,2016-06-18 12:09:05
+27,2016-06-18 13:06:16,"See #114 
+",peter-tackage,2016-06-18 12:09:05
+27,2016-06-19 16:03:40,"@kaushikgopal another issue with ``toBlocking` except the one that @peter-tackage mentioned is that you are prohibiting yourself from using `TestSubscriber`. Of course, the verification part in cool but without `TestSubscriber` one cannot easily test for backpressure support of your Observables.
+",jaggernod,2016-06-18 12:09:05
+26,2014-11-15 12:04:53,"The guidelines say ""avoid using the Guava library, since it contains over 13k methods"", as part of the guidance for dealing with the dex method limitation.
+
+While avoiding the method limits is definitely a useful point, I'm pretty suspect of Guava as an issue itself.
+
+For starters, because it's so heavily used in the Android ecosystem already: http://www.appbrain.com/stats/libraries/details/guava/google-guava. It's in 6% of the 500 most downloaded apps, including Spotify, Tumblr, etc.
+
+On top of that, I think Proguard will strip out any methods you don't end up actually using there, so you won't get all 13K methods anyway.
+
+Is there something else I'm missing? It seems like largeish libraries (like Guava) shouldn't actually be an issue, it's more a problem you hit if your app itself grows too large.
+
+Oh, and top of that you should probably put in a note about multi-dex now (or the reasons not to use that I guess, I don't know): http://developer.android.com/tools/building/multidex.html. As of very recently, Google now support building apps with multiple dex files, to solve this issue entirely (and a support library too, to backport that)
+",pimterry,2016-06-18 10:46:52
+26,2014-11-15 12:24:38,"We don't see Guava as bringing enough value into the code base, so given its size, we prefer to avoid it.
+
+We'll write about multi-dexing soon in the future.
+",staltz,2016-06-18 10:46:52
+26,2014-11-18 19:53:34,"Multidexing on older platform is going to be quite slow. 
+We need to decide how fast should a debug build be. If we want to build multiple flavors of a big project then we might as well grab a coffee or rather 3 course dinner.
+
+But I agree that getting rid of a big utility library just due to 65k problem seems rather silly.
+",jaggernod,2016-06-18 10:46:52
+26,2015-06-16 15:24:27,"For what it's worth, admittedly there's no real consensus about Guava on Android among Futurice developers.
+
+I for one used Guava in one of our customer projects and was completely happy with that choice (in that case the app was not huge so we were not close to 65k limit).
+
+So I wouldn't use a statement as strong as ""avoid Guava"" myself, and _depending on the needs_, I'd consider using Guava also in the future, going multidex if necessary. (But if I'd be mostly using stuff like `Lists.newArrayList()`, that hardly justifies adding the lib. :-) )
+
+> On top of that, I think Proguard will strip out any methods you don't end up actually using there
+
+But you won't use ProGuard on e.g. debug builds, so you do need take take the largeish method count into consideration. Anyway, agreed that we should cover multidexing in the guide. (Maybe I'll do it if I find the time to look into it.)
+",jonikarppinen,2016-06-18 10:46:52
+26,2015-06-18 08:04:20,"I agree with @pimterry that Guava is not an issue. It offers a lot of goodies, which simplify development and I used for a lot of projects - the code become clearer with it (if use it reasonably of course). Maybe when we will have Java 8 Streams we can avoid Guava. 
+With the help of ProGuard and now Multidex support 65K will not be an issue.
+I posted a question more than two years ago on stackoverflow: http://stackoverflow.com/questions/14978699/is-it-a-good-idea-to-use-google-guava-library-for-android-development   about the same issue.
+",AlexanderKaraberov,2016-06-18 10:46:52
+26,2015-06-23 11:03:29,"I didn't really see the value in Guava, given the pressure it put on method limits. However, a few months back I saw a talk that demoed an app that showed it's strengths and I was fairly impressed. I think the key is that if you use Guava, use it thoroughly and get real value from it; it's a good, reliable library. 
+
+With the somewhat recent modularization of Google Play Services, the pressure on method limits has eased somewhat, making the benefits of using Guava less of a trade-off. 
+",peter-tackage,2016-06-18 10:46:52
+26,2016-06-18 10:46:52,"Closing this discussion due to inactivity.
+",peter-tackage,2016-06-18 10:46:52
+25,2014-11-06 19:48:55,"- Should one use the support library?
+- When does it make sense to use the support library?
+- What are the advantages of using support fragments vs normal fragments (a.k.a `android.app.Fragment` vs `android.support.v4.app.Fragment`)?
+
+The answer(s) to the above question might make a lot of sense in an android best practices doc?
+",kaushikgopal,2015-01-17 10:15:30
+25,2014-11-06 20:13:17,"In my opinion:
+- Yes
+- From the start of the project
+- I would recommend using the support library whenever possible. One argument for it is that SL can be updated much more often than Android framework itself if a bug is found. Also the newest API's can get backported to older Android version thanks to the SL. 
+",recuutus,2015-01-17 10:15:30
+25,2014-11-07 09:03:42,":+1: @recuutus could you send a PR with these advices added into the ""libraries"" section?
+",staltz,2015-01-17 10:15:30
+25,2014-11-07 09:16:12,"OK, will do that when I have some time
+",jaggernod,2015-01-17 10:15:30
+25,2014-11-07 09:17:27,"Sure
+",staltz,2015-01-17 10:15:30
+25,2014-11-07 21:03:20,"it's worth listing the disadvantages for support library use too:
+1. `android.support.v4.app.Fragments` do custom animations very differently (they use tween animations instead of object animators which make animations far more easy to deal with).
+2. support libraries obviously bump up your apk size.
+3. choosing ""which"" support library is always a mind bending penance-involved decision.
+   etc.
+
+(most of these are not deal breaking for a majority of use cases.
+",kaushikgopal,2015-01-17 10:15:30
+25,2014-11-18 19:49:48,"Created a pull request: https://github.com/futurice/android-best-practices/pull/29
+",jaggernod,2015-01-17 10:15:30
+25,2015-01-17 10:15:30,"Closed as #29 has been merged.
+",ilkka,2015-01-17 10:15:30
+24,2014-11-05 18:36:32,"For example, http://developer.android.com/tools/building/multidex.html
+",staltz,
+24,2014-11-06 13:12:07,"It's still a bit iffy, our project and several others are having tool hell with unreproducible, stochastic builds.
+
+The solution google is giving is downloading an AOSP script to run and generate a main dex class list which you have to manually maintain, and multidex tasks around the framework. And even with it, you're not assured it'll work.
+",pakoito,
+24,2015-07-01 22:48:51,"Multidex is still subject to random failures on older devices, and slow/unreproducible builds in any case.  We wrote a Gradle plugin to keep tabs on method counts as you build: https://github.com/KeepSafe/dexcount-gradle-plugin
+",benjamin-bader,
+23,2014-11-03 15:10:29,"Related to #10 
+",staltz,2014-11-03 15:10:53
+22,2014-11-03 13:44:03,"Related to issue #21.
+",staltz,2014-11-03 13:45:19
+21,2014-11-03 13:09:26,,staltz,2014-11-21 09:52:42
+20,2014-11-03 12:12:42,,staltz,2014-11-03 12:13:13
+19,2014-11-03 09:50:05,,staltz,2014-11-03 12:09:47
+18,2014-11-03 01:01:40,,brenopolanski,2014-11-03 08:31:32
+18,2014-11-03 08:31:29,"Thanks!
+",staltz,2014-11-03 08:31:32
+17,2014-11-02 22:16:55,"There's one occasion in the README where ""Retrojava"" is used instead of ""Retrolambda"".
+",passy,2014-11-03 08:32:11
+16,2014-11-01 08:39:48,"Project now supports Robolectric testing that
+is performed on the local machine. No need
+for Android device nor emulator.
+
+Added some tests as examples
+
+To run the tests start gradle's 'test' task
+",recuutus,2014-11-03 09:34:58
+16,2014-11-03 02:19:14,"Just beggin with this new feature look s great. 
+",6versus9,2014-11-03 09:34:58
+16,2014-11-03 09:34:48,"Confirmed that this is working. Thanks @recuutus :+1:
+",staltz,2014-11-03 09:34:58
+15,2014-11-01 05:59:53,"A small problem in readME.The title,Development,not develoment.
+",ChenWenhong,2014-11-03 08:33:11
+15,2014-11-03 08:33:11,"Fixed in PR #18 
+",staltz,2014-11-03 08:33:11
+14,2014-10-31 09:21:36,,staltz,2014-10-31 14:50:37
+13,2014-10-31 08:13:24,"Hey, 
+What do you think about add Android Adapter good practices, such as use **BaseAdapter** instead of **ArrayAdapter** or use the **ViewHolder pattern**?
+
+Check this article: http://www.piwai.info/android-adapter-good-practices/
+
+Thanks for the recopilation!
+",jlmd,2016-06-18 10:59:04
+13,2014-11-18 19:57:51,"I would skip this step and directly go to [RecyclerView](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.html).
+
+What do you think?
+",jaggernod,2016-06-18 10:59:04
+13,2014-11-19 08:11:55,"Yes, I think the new RecyclerView is a good practice.
+
+RecyclerView requires a ViewHolder, and you don't need to care about if the view is being recycled. It's really a good alternative.
+",jlmd,2016-06-18 10:59:04
+13,2015-02-19 15:49:55,"RecyclerView doesn't replace everything though: implementing the equivalent of  ExpandableListView with RecyclerView is pretty tough.
+",kjeremy,2016-06-18 10:59:04
+13,2015-03-05 03:05:26,"Its worth noting that for simple lists, ListView is not a bad thing to use. RecyclerView shines when you need customization or complex interactions and or animations.
+",ToxicBakery,2016-06-18 10:59:04
+13,2016-06-18 10:59:04,"It's been a while, so closing this due to inactivity! If you'd still like to see an Adapter practices section, create a PR and we'll take a look
+",peter-tackage,2016-06-18 10:59:04
+12,2014-10-29 19:25:40,"Using an event bus is excellent for decoupling communication between Fragments and also between Services and Activities. Possible mechanisms:
+- Otto (my personal recommendation)
+- Green Robot EventBus
+- RxJava
+
+I'm guessing the developers of Futurice are obviously aware of the use of event bus but chose not to include it in this list for a reason? If that's the case, I would love to hear an opinion on this.
+",kaushikgopal,2014-11-21 09:50:30
+12,2014-10-29 21:12:41,"Hi, did you see we have a project template based on RxJava?
+",staltz,2014-11-21 09:50:30
+12,2014-10-29 22:14:27,"I did! and looks pretty amazing. I remember seeing a very similar approach by @tehmou in the project https://github.com/tehmou/rx-android-architecture. I'm gathering some thoughts, ideas on that approach too.
+
+That being said, my intention was to point out the use of the ""event bus"" as a concept for communication rather than the use of the library RxJava. Sure RxJava could be used for the purpose of an event bus, but it would be interesting to call that out in the best-practices document (if that really is a practice observed at Futurice). Though the easiest implementation of an event bus is probably using Otto or similar.
+",kaushikgopal,2014-11-21 09:50:30
+12,2014-10-30 09:01:55,"There usually is a decision made between a bus-based architecture and Rx for example. Tehmou's example was based on a real-life largescale project we are doing and there we chose Rx. I was actually thinking about using Otto before made the decision to go with Rx.  They don't need to be mutually exclusive though. They can compliment each other as well.
+",riussi,2014-11-21 09:50:30
+12,2014-11-06 19:45:51,"> a decision made between a bus-based architecture and Rx for example
+
+I was going to try and counter this point, but you explained it well by saying:
+
+>  They can compliment each other as well.
+
+:)
+
+The way i see it:
+- if you're going all in with Rx (at the architecture level) then the use of an event bus doesn't make too much sense (as you rightly pointed out).
+- if you're not using Rx however, i like to believe that an event bus can be invaluable starting out.
+
+Does this have to go in to the best practices doc? I really don't know :S.
+
+I'm not sure if you want to go ahead and close this issue. My intention was only to bring it to attention. 
+
+Cheers
+",kaushikgopal,2014-11-21 09:50:30
+12,2014-11-21 09:50:30,"Hi @kaushikgopal I added some content about event buses in this commit: https://github.com/futurice/android-best-practices/commit/af80048afa4ca920f9b73c3a4a31e3454c01ff8b
+
+There's one solid project in our company that was built with greenrobot's EventBus, and it worked out well. But in general we tend to prefer an Rx-based architecture, which can have or not an Event Bus for communications. We let the developer choose.
+",staltz,2014-11-21 09:50:30
+12,2014-11-21 16:04:05,"Yup that makes sense. 
+",kaushikgopal,2014-11-21 09:50:30
+11,2014-10-29 14:24:59,"Perhaps include this as tip?
+
+Rather than hard coding android:text, consider using design time attributes available for Android studio:
+
+http://tools.android.com/tips/layout-designtime-attributes
+",glad,2014-11-03 12:13:22
+11,2014-10-29 16:42:31,":+1: 
+",gaudecker,2014-11-03 12:13:22
+11,2014-10-29 17:20:28,"Great tip, will add that this week.
+",staltz,2014-11-03 12:13:22
+11,2014-11-02 10:15:24,"+1
+",recuutus,2014-11-03 12:13:22
+11,2014-11-02 13:39:36,":+1: 
+",yassirh,2014-11-03 12:13:22
+10,2014-10-29 08:52:36,"I use Activities, Fragments, and custom views, depending on the context.  I don't think it's wise to recommend the Fragment approach as a catch-all solution.
+
+> Proper screen-to-screen communication. Android's API does not provide a proper way of sending complex data (e.g., some Java Object) from one activity to another activity. With fragments, however, you can use the instance of an activity as a channel of communication between its child fragments.
+
+If you're relying on non-parcelable/serializable POJOs, how do you retain instance state if the user switches to another application?   Speaking of that, there's no mention of instance state, parcelable, or serializable in the doc.
+
+> Many Android classes expect fragments. The API for tabs on the ActionBar[1] expects the tab contents to be fragments. Also, if using Google Maps API v2, the recommended solution is MapFragment, even though MapView exists.
+
+The ActionBar Tabs API is now deprecated.  There's no benefit to use MapFragment over MapView.
+
+> Easy to implement swiping transitions between screens. If a UI screen is a fragment in your application, you can use FragmentPagerAdapter to contain a collection of fragments and implement smooth and interactive transitioning between them. For instance, horizontal swiping of screens.
+
+ViewPager has nothing to do with Fragments. It's trivial to implement your own PagerAdapter, the only reason why one is provided in the support lib for fragments is because fragments have such a complex lifecycle.
+
+Also, Fragments don't support some complex transitions.  [""The Z adjustment only works for window animations.  I thought this was documented, but apparently not.""](https://groups.google.com/forum/?fromgroups=#!topic/android-developers/2xVkWWY2oBU)  This means you can't do things like fade out one fragment and slide in the other from the right, because the outgoing fragment might be rendered above the incoming one.
+
+> Intelligent behavior for ""back""
+
+The fragment back stack is far from intelligent. You can't [remove an item from the back stack unless it's on top](http://stackoverflow.com/questions/9033019/removing-a-fragment-from-the-back-stack), you can't [pop the back stack without triggering an animation without hackish workarounds](http://stackoverflow.com/questions/9194311/pop-the-fragment-backstack-without-playing-the-pop-animation).
+",jacobtabak,
+10,2014-10-29 16:42:42,"@jacobtabak I agree 100%. 
+
+This section sounded like it was written by the dev who wrote the Android Plugins for Eclipse. 
+Fragments are powerful and flexible no doubt. But they should not be seen as a silver bullet for every UI.
+",Wapples,
+10,2014-10-29 17:25:20,"Thanks @jacobtabak for the ""other side of the coin"" type of feedback. A couple of developers from our company gathered to discuss how a typical app should be structured, and we converged on a Fragment-based architecture. This is not to mean it's a silver bullet for every situation, and it's true the advice can be misleading. 
+
+The whole Activities vs Fragments vs custom is a hot debatable issue in the Android community, so we try to give a ""good enough"" starting point for new developers. We'll talk about this internally in our company, but we're open for PRs and suggestions on what to advise. 
+",staltz,
+10,2014-10-29 18:19:18,"There's certainly a benefit to having a consistent architecture in your application, and the fragment approach is not a bad one, but I take issue with many of the points you've listed for the reasons above.  I feel like the only two points that stand up to scrutiny.  
+
+I'm not suggesting that you withdraw your recommendation for the fragment approach, but I think you should prune your list to only the arguments that stand under scrutiny.  
+
+Specifically, I'd revise or remove the following, and I'll differentiate this from my criticism above with more specific feedback about what I believe should be changed and why.
+
+> Many Android classes expect fragments. The API for tabs on the ActionBar expects the tab contents to be fragments. Also, if using Google Maps API v2, the recommended solution is MapFragment, even though MapView exists.
+
+Definitely remove the comment about ActionBar Tabs since it's been deprecated and perhaps find another example that's more relevant.  Maybe go into detail about why the MapFragment solution is easier to use than MapView - with MapFragment, you don't need to explicitly invoke the lifecycle methods (onCreate, onResume, onPause, etc), but there's no advantage other than that.
+
+> Easy to implement swiping transitions between screens. If a UI screen is a fragment in your application, you can use FragmentPagerAdapter to contain a collection of fragments and implement smooth and interactive transitioning between them. For instance, horizontal swiping of screens.
+
+What you're describing is the ViewPager class which has no dependency or relationship to fragments other than that there are Fragment pager adapter.  I object because it's perpetuating beginners' misconception that ViewPagers only work with fragments.
+
+> Intelligent behavior for ""back"". The FragmentManager allows you to perform transactions to change the fragments inside an activity. Hence, the FragmentManager manages the ""state"" of fragments. The back button/action will be handled by the FragmentManager to go back to the previous ""fragments state"". This is more advanced than the activity stack.
+
+What specifically makes it ""more advanced"" than the activity back stack?  In my opinion, the activity back stack is much more flexible with different activity launch modes.  I personally haven't found a use case for the fragment back stack, it is way too inflexible, and works very poorly when replacing fragments.
+
+> Even the ActionBar can be managed from within fragments. You can choose to have one Fragment without a UI with the sole purpose of managing the ActionBar, or you can choose to have each currently visible Fragment add its own action items to the parent Activity's ActionBar. Read more here.
+
+I don't believe this is an advantage, managing the action bar with fragments doesn't provide you with anything that managing the action bar from an activity does not.  
+",jacobtabak,
+10,2015-03-23 21:37:13,"The part about Fragments was a ""surprise"" for me. 
+So for an app that has a couple of screens (list of products, product details, product search, checkout, profile) I should consider having one, big MainActivity with lots of Fragments? 
+Doesn't this activity become a God class really fast? Am I not going to have problems when the activity gets killed, recreated, etc? I know, a non-ui fragment can be used - but what about activity-kill situations not related to configuration changes?
+If every screen I see is a Fragment, aren't nested fragments going to be something very common, for any non-trivial layout(consider having a gallery in the product page or having a screen with multiple tabs)? And after telling us to use fragments for everything you tell us to avoid nesting fragments; that is just funny.
+
+I would dial it down to the point where [this](http://stackoverflow.com/questions/12363790/how-many-activities-vs-fragments/12528434#12528434) is a good idea, just to keep the code DRY; but to have a single activity for the whole app is a bit of a stretch. Why not just use the Application class for the POJOs if having them available across the app was the problem?
+
+Anyway, the rest of the document is really good and I just ate it up, but I'm quite sure that the part about fragments is at best an opinion - and not even a very popular one, according to all the StackOverflow disputes on the subject.
+
+Sorry if my opinion upsets you in any way.
+",andreidiaconu,
+9,2014-09-26 00:30:56,"Added small tip.
+",Diolor,2016-06-18 15:50:02
+9,2016-06-18 13:47:16,"@Diolor - I'm not sure why we didn't merge this at the time, but it looks like ViewServer has been superseded by [Hierarchy Viewer](https://developer.android.com/studio/profile/hierarchy-viewer-setup.html) for modern (ICS+) devices. If you'd like to update the PR to remove the ViewServer reference and recommend Hierarchy Viewer instead, I'd be happy to merge.
+",peter-tackage,2016-06-18 15:50:02
+9,2016-06-18 15:50:02,"@peter-tackage I assume this didn't get merge because the repo was best practices by only Futurice employees. I will just close this PR.
+",Diolor,2016-06-18 15:50:02
+8,2014-09-25 05:55:46,"Hey guys, thanks for the tutorial and general guidelines.  Do you have any best practice recommendations wrt providers?
+",beedub,2016-06-18 10:43:04
+8,2016-06-18 10:43:04,"Given the delay in answering, I say we don't have much to add to the general guidelines given by Google. There is also the [Reark library](https://github.com/reark/reark), which captures some of our experience in building data layers.
+",peter-tackage,2016-06-18 10:43:04
+7,2014-09-22 09:21:56,,paulirotta,2014-09-22 09:58:34
+6,2014-09-01 17:29:30,"Add anchor links from the Summary items to their explanation
+",staltz,2016-04-21 15:41:03
+6,2016-01-31 18:47:42,"I believe this issue can be closed . I notice all the links are now clickable after #96 commit was made.
+Good work @jonikarppinen 
+",jeradgodreault,2016-04-21 15:41:03
+5,2014-08-15 09:24:27,,markvoit,2014-08-15 11:06:15
+4,2014-08-15 07:56:39,,markvoit,2014-08-15 08:59:24
+3,2014-08-07 12:05:51,"We currently have the branch templates which is getting ready with one template. As the name suggests, it will be a directory with templates (plural), more than one.
+
+Currently we are making one template based on RxJava, inspired by Timo Tuominen's Rx Android architecture. But since RxJava is not everyone's cup of tea, we should also have templates without it.
+
+There is also the Retrofit vs Volley dichotomy. I can see at least 3 strong and good project templates we should have:
+- RxJava + Retrofit + OkHttp + Picasso + Jackson
+- Retrofit + OkHttp + Picasso + Jackson
+- Volley + Jackson
+
+We would some volunteer to guide the way with Volley, because at least I have no experience enough to be able to say ""this is how you're supposed to use it"".
+",staltz,2016-10-02 21:47:41
+3,2016-10-02 21:47:41,"Closing. I can't see or imagine much movement on this issue. At least internally, https://github.com/futurice/freesound-android while not strictly being a template, provides a useful initial outline of a project structure that hopefully is useful to developers in the same way (assuming they are comfortable with Rx).
+",peter-tackage,2016-10-02 21:47:41
+2,2014-08-07 12:01:48,"Maybe @markvoit or @jonikarppinen or both could share a few sentences about Proguard on the README.md ?
+
+The idea isn't an introduction or tutorial-ish, but really advices coming from battle experiences. That's all what's needed. 
+",staltz,2014-09-01 17:25:22
+2,2014-09-01 17:25:22,"Mark Voit did this. Thanks
+",staltz,2014-09-01 17:25:22
+1,2014-08-07 09:20:32,"...fter code inspection.
+",markvoit,2014-08-07 11:52:59
+1,2014-08-07 11:52:19,"Nice. Seems good, but I'll test run it after I come back from holidays.
+Also, I'll add you to the repo so you won't need to always do pull requests (although often it's useful for code reviews).
+",staltz,2014-08-07 11:52:59
+1,2014-08-07 11:52:58,"Great :)
+
+—
+
+Mark Voit · +358 45 128 6500
+Software Development · Futurice Oy
+www.futurice.com · twitter.com/futurice
+
+On 07 Aug 2014, at 14:52, Andre Staltz notifications@github.com wrote:
+
+> Nice. Seems good, but I'll test run it after I come back from holidays.
+> Also, I'll add you to the repo so you won't need to always do pull requests (although often it's useful for code reviews).
+> 
+> —
+> Reply to this email directly or view it on GitHub.
+",markvoit,2014-08-07 11:52:59

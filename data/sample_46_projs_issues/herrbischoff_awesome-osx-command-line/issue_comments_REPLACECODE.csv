@@ -1,0 +1,1528 @@
+issue_num,datetime,body,login,close_date
+163,2017-03-14 21:05:37,,diego-vieira,
+162,2017-03-07 23:30:01,,mhumeSF,2017-03-09 17:00:48
+162,2017-03-09 16:11:41,"Thank you very much for your submission.
+
+Please format your entry according to the rules specified in [contributing.md](https://github.com/herrbischoff/awesome-osx-command-line/blob/master/contributing.md), especially with regard to capitalization.",herrbischoff,2017-03-09 17:00:48
+162,2017-03-09 17:08:21,"Thanks, I had to clean it up a bit to merge it.",herrbischoff,2017-03-09 17:00:48
+162,2017-03-09 17:10:00,"Gah, yea sorry. I did see that, but you beat me to it.",mhumeSF,2017-03-09 17:00:48
+162,2017-03-09 17:16:30,I really would have liked to give you proper credit but resolving merge conflicts on the command line apparently won't honor the original authors' id.,herrbischoff,2017-03-09 17:00:48
+161,2017-03-04 14:59:28,The Apple Remote Desktop ARDAgent can be configured using the  Kickstart command to set Apple Remote Desktop preferences using terminal.,gclaeys,
+161,2017-03-04 16:20:00,"Basically a nice addition, thank you, however the Markdown headline hierarchy is wrong.",herrbischoff,
+161,2017-03-04 17:34:16,"Thanks for the quick feedback. 
+The headline hierarchy should now be correct. ",gclaeys,
+160,2017-03-02 23:04:11,"sorin-iconescu/prezto is abandoned, see https://github.com/sorin-ionescu/prezto/issues/1239 the project moved to https://github.com/zsh-users/prezto",dritter,2017-03-10 19:45:31
+160,2017-03-03 15:32:50,"I see recent commits in the original repo from February and March, so this does not seem to be abandoned. Given the popularity of the source, I don't see a reason to link to a very young fork.
+
+Maybe @sorin-ionescu himself can shed some light on this. If he's on board with the new community fork, I will merge this.",herrbischoff,2017-03-10 19:45:31
+160,2017-03-03 17:29:35,"> I see recent commits in the original repo from February and March, so this does not seem to be abandoned. Given the popularity of the source, I don't see a reason to link to a very young fork.
+
+Yep. 2016.. Anyway. Your decision. Just wanted to let you know.
+
+And I don't think Sorin will answer here or join there. He didn't answer on the thread I mentioned (and which is about moving Prezto to the more official ""zsh-users"").",dritter,2017-03-10 19:45:31
+160,2017-03-07 03:39:43,Would like to see this get merged.,paulmelnikow,2017-03-10 19:45:31
+160,2017-03-09 17:13:11,"I'm going to give @sorin-ionescu until the end of the month to reply with a short comment on the current state of his project. If there is no word from him, the community fork will will added in its place. Should I forget this, please feel free to remind me in April.",herrbischoff,2017-03-10 19:45:31
+160,2017-03-09 18:35:53,You could list both in the meantime. Would you be open to that?,paulmelnikow,2017-03-10 19:45:31
+160,2017-03-10 08:33:05,"@paulmelnikow why would that be relevant? Does any external project depend on that link being updated?
+
+The author responded to the thread mentioned earlier, let's see if he wants to continue maintaining the project or not. ",antoineco,2017-03-10 19:45:31
+160,2017-03-10 15:09:22,"Exactly. Especially his mentioning of not even having received an email is worrying. Is the social media notification craze already at a point where people can't be bothered to write a single email any more? Real life interferes with the best of plans.
+
+I'm just going to wait until the situation resolves itself. I bet they will all just merge everything back into the original repo and continue from there with several contributors. ",herrbischoff,2017-03-10 19:45:31
+160,2017-03-10 15:53:06,"Prezto is not abandoned, but it has been neglected publically for a year. I want to give write access to several volunteers. There are several forks, which need to be reconciled.
+
+A GitHub notification subject line starts with `[user/repository]`, which often does not even fit in the threads column row of an email client, for example `Re: [herrbischoff/awesome-osx-command-li...`, let alone the issue title. I have hundreds of notification threads on Prezto alone. So, using GitHub notifications to get a hold of someone's attention is not effective. I wish @facastagnini or someone else that commented in https://github.com/sorin-ionescu/prezto/issues/1239 had sent me an email.",sorin-ionescu,2017-03-10 19:45:31
+160,2017-03-10 19:45:30,"Thanks for your comment, @sorin-ionescu. That's what I figured. The sheer amount of notifications the sole maintainer of a popular open source project gets is staggering. If Real Life™ issues of any kind take the focus away for some time, getting back on top is an almost impossible task.
+
+I view this as resolved and will leave the original repo in place as in all likelihood the changes made in other forks will be merged back into it with the help of additional volunteers.",herrbischoff,2017-03-10 19:45:31
+160,2017-03-10 20:02:40,"Chapeau to your gut feeling @herrbischoff 
+
+And good to see you around again @sorin-ionescu ",dritter,2017-03-10 19:45:31
+159,2017-02-27 11:57:06,fix broken path: remove erroneous space between `Launch` and `Daemons`,clarketm,2017-03-09 17:19:17
+159,2017-03-09 17:18:57,This is entirely correct. Merging. Thanks!,herrbischoff,2017-03-09 17:19:17
+157,2017-02-25 02:13:12,"call the menu: 
+<S_CODE_TOKEN>
+screen:
+![default](https://cloud.githubusercontent.com/assets/5896784/23327162/380cf4be-fb42-11e6-93c0-c571dfb5e3ce.png)
+
+A menuItem with a star means it's execuable, others are parent menu.
+The menu is defined in msh.etc, and the corresponding function is defined in msh.fun.
+Adding new menu or changing is very easy.",qihaiyan,2017-03-09 17:25:16
+157,2017-02-25 03:09:43,"This is intriguing, thank you! :)
+
+In the spirit of DRY: how about a function that is updating the script's content automatically? This is probably not possible in plain shell script as you would need to convert from Markdown to plain text. I don't see manually updating for every change happening. This would effectively be duplicating data and amounts to tedious work.",herrbischoff,2017-03-09 17:25:16
+157,2017-02-25 03:11:07,Although: https://github.com/chadbraunduin/markdown.bash,herrbischoff,2017-03-09 17:25:16
+157,2017-02-25 05:53:41,"1. Gennerate shell script from Markdown.
+It's not easy because the README.md is not that structured.
+2. Generate Markdown from the shell content.
+It's possible, if you agree with it, i'll give it a try with https://github.com/chadbraunduin/markdown.bash.",qihaiyan,2017-03-09 17:25:16
+157,2017-03-09 17:25:16,"As I don't see this as feasible to support in the long run, I'm going to close the pull request. I don't want to discourage you, however the added maintenance and additional barrier of contributing will almost certainly not be worth it. This appears to be one of those ideas that sound neat in theory until you think through the long-term implications.",herrbischoff,2017-03-09 17:25:16
+156,2017-02-21 09:35:31,"The `nettop` program displays a list of sockets or routes. The counts for network structures are updated periodically.
+
+Very useful if you want to know which program uses what socket.",caillou,
+156,2017-03-09 17:28:27,"Thank you very much for your submission.
+
+Please format your entry according to the rules specified in [contributing.md](https://github.com/herrbischoff/awesome-osx-command-line/blob/master/contributing.md), especially with regard to capitalization.",herrbischoff,
+156,2017-03-16 13:29:11,@herrbischoff Title has been capitalized.,caillou,
+155,2017-02-20 16:45:52,"Symlink instructions moved to it's own section, on the second line. `airport` is now used in place of the long form directory to the framework. 
+
+MAC address spoofing instructions added.",lkwatson,
+154,2017-02-19 18:14:19,"<S_CODE_TOKEN>
+
+System Info:
+
+<S_CODE_TOKEN>",dklesev,
+153,2017-02-19 17:10:52,"Hi, Added Image Capture stop auto opening when a new device is connected.",ogzolmz,2017-02-19 17:43:07
+153,2017-02-19 17:43:07,Please submit your changes on a completely new fork as I have recently rebased the repo. This here is a mess. Thanks!,herrbischoff,2017-02-19 17:43:07
+152,2017-02-19 15:48:35,,mtklr,
+151,2017-02-18 18:22:14,"Hi,
+I added ""Full Keyboard Access"" to Keyboard section.
+best regards.",ogzolmz,2017-02-18 18:55:13
+151,2017-02-18 18:23:58,"Nice! Please sort alphabetically inside the section and I will merge this. Please also add `(Default)` to the heading of the default OS setting. The descriptions should be more succinct and in line with the other entries: `Enable`, `Disable`, `Status`, ...",herrbischoff,2017-02-18 18:55:13
+151,2017-02-18 18:55:13,"Sorry, this was not formatted very well, so I went ahead and added the two relevant settings manually. Thanks again for suggesting it!",herrbischoff,2017-02-18 18:55:13
+151,2017-02-18 19:00:28,You are welcome,ogzolmz,2017-02-18 18:55:13
+151,2017-02-18 19:11:07,"For good measure, I have amended the commit to reflect you being the author: https://github.com/herrbischoff/awesome-osx-command-line/commit/80c5b9d7fbd29f698c183fa7881eb028728b549b",herrbischoff,2017-02-18 18:55:13
+150,2017-02-18 11:23:57,"Monoid is Customisable coding font with alternates, ligatures and contextual positioning. Crazy crisp at 12px/9pt.  https://github.com/larsenwork/monoid",alimoeeny,2017-03-09 17:27:34
+150,2017-02-18 17:58:43,"I don't like this one, it looks weird and not balanced at all. I will put this on the back burner for now. It needs endorsements from people that like and use it.",herrbischoff,2017-03-09 17:27:34
+150,2017-03-09 17:27:34,Closing for lack of endorsement.,herrbischoff,2017-03-09 17:27:34
+149,2017-02-18 10:30:41,,gorkem-cetin,2017-02-18 18:00:33
+149,2017-02-18 18:00:33,"As you have been able to figure this out, I'm going to leave this in place.",herrbischoff,2017-02-18 18:00:33
+148,2017-02-18 10:04:05,"This is important for contexts in which images can't be rendered — screen readers, search engines, etc.",alyssais,2017-02-18 19:25:37
+148,2017-02-18 16:41:25,I'd also recommend wrapping the image in an `<h1>` to apply the semantics of a heading to it.,alyssais,2017-02-18 19:25:37
+148,2017-02-18 18:04:11,Good idea. Please add the h1 tags and I will merge.,herrbischoff,2017-02-18 19:25:37
+148,2017-02-18 19:26:24,Thanks! I will add the h1's myself.,herrbischoff,2017-02-18 19:25:37
+147,2017-02-18 01:49:34,"This will now work with Sierra machines with the change of the DB location to V4.
+
+Also changed the string for the San Francisco font being inputed into the main font library of the machine.",qu1gl3s,2017-02-18 18:20:21
+147,2017-02-18 13:56:45,"Was about to propose the same changes, good fixes! 👍 ",lumaxis,2017-02-18 18:20:21
+147,2017-02-18 17:56:15,Please split this. As per contribution guidelines there needs to be only one change per pull request.,herrbischoff,2017-02-18 18:20:21
+147,2017-02-18 18:20:21,"Closing this in favor of #140, which came earlier.",herrbischoff,2017-02-18 18:20:21
+146,2017-02-17 22:24:12,,emlai,2017-02-18 18:02:23
+146,2017-02-18 18:02:23,"As this needs to be installed via Homebrew before usage, it is not applicable to this list.",herrbischoff,2017-02-18 18:02:23
+146,2017-02-18 18:09:08,"If that is the case, what are macvim, neovim, bash, fish, and zsh doing in the list? Thanks for the clarification.
+
+P.S. You could add that to `contributing.md` to avoid future misunderstandings. Currently there's no indication anywhere that Homebrew should be avoided.",emlai,2017-02-18 18:02:23
+146,2017-02-18 18:15:04,"The shells are very basic necessities that are updated easily this way. The Vim versions are there because they are the most popular terminal text editors. Additionally, if I added this one utility, it would open the floodgates to argue for everyone's favorite shell tool to be included. Consider adding it to an applicable list, like <https://github.com/herrbischoff/awesome-command-line-apps>.",herrbischoff,2017-02-18 18:02:23
+145,2017-02-17 21:32:43,"This adds a small note about the fundamental difference between the two package managers. Reuse vs. ensuring compatibility.
+
+I tried to be neutral and just point out the difference, but I'm not sure if I succeeded or not, feedback is much welcome.
+
+On that note, perhaps the personal note from the original author should be removed, as this serves as a guide for many new and old Mac tinkerers? I mean that whoever reads this should make an informed decision, and probably do their research, as you are pretty much stuck with your choice of package manager.
+
+---
+
+Personally I've used both MacPorts and Homebrew, and tried Fink. I found brew to be nicer, since it reuses the existing libraries, but that's just personal taste and MacPorts did a fine job when I did use it.",maxnordlund,2017-02-18 18:02:53
+145,2017-02-18 18:02:53,Thanks but I don't feel this is needed.,herrbischoff,2017-02-18 18:02:53
+145,2017-02-18 18:04:00,"Could you elaborate, please?",maxnordlund,2017-02-18 18:02:53
+145,2017-02-18 18:05:18,"> I mean that whoever reads this should make an informed decision, and probably do their research",herrbischoff,2017-02-18 18:02:53
+145,2017-02-18 18:06:09,"Yes, what about it.",maxnordlund,2017-02-18 18:02:53
+145,2017-02-22 04:45:43,"I found the additional info useful. I haven't thought about mac ports or fink in years. I just remember struggling with them, but didn't recall they had different philosophies",bf4,2017-02-18 18:02:53
+144,2017-02-17 17:33:54,,pklinger,2017-03-09 17:38:22
+144,2017-02-18 19:31:29,Is this truly just affecting Time Machine? It appears to be a debug setting completely ignoring low priority task settings. This is dangerous for anyone but a developer and appears to have many unintended side effects.,herrbischoff,2017-03-09 17:38:22
+144,2017-02-19 13:33:38,"I stumbled upon this trick, as my backups did not finish in reasonable time. I guess this completely disables prioritization of the usual CPU allocation strategy. Nevertheless, my experience as well as the experience of other users of this command suggest, that there are no severe side effects happening. You should of course not use this command if you need to work under heavy CPU load... which _dangerous_ side effects do you see here?",pklinger,2017-03-09 17:38:22
+144,2017-03-09 17:38:22,"As this is a `sysctl` setting that has system-wide consequences, it should be added under a new ""System"" section with an entry accurately describing its behavior. It may help boost Time Machine as a side-effect but as I understand it, it will disable low priority tasks altogether. This may very well lock up your machine completely if there is a stray process eating up lots of CPU cycles.
+
+I am convinced that when Time Machine is not able to run successfully due to being a low priority task, the source of your troubles may be found elsewhere entirely.
+
+I'm going to close this for now, eventually revisiting it after I have learned more about the settings' implications.",herrbischoff,2017-03-09 17:38:22
+143,2017-02-17 16:06:17,"In ""Disks and Volumes"", you document using ""bless"" to set boot volume.
+
+With the newly-introduced [System Integrity Protection](https://developer.apple.com/library/content/documentation/Security/Conceptual/System_Integrity_Protection_Guide/ConfiguringSystemIntegrityProtection/ConfiguringSystemIntegrityProtection.html) (appears to have been introduced with El Capitan), you must either disable it (using csrutil) or use the ""[systemsetup](https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man8/systemsetup.8.html)"" utility instead.
+
+systemsetup -setstartupdisk ""/path/to/mounted/volume""",compenguy,
+143,2017-02-17 20:44:34,Thanks! I will look into this and amend the respective entry.,herrbischoff,
+142,2017-02-17 13:52:28,"Hi All,
+
+Added Hyper (previously HyperTerm) as an electron alternative terminal. Pretty good backing atm, lots of themes and support for it.
+
+https://github.com/zeit/hyper",sifex,2017-02-17 20:52:14
+142,2017-02-17 20:52:14,"Thanks for the recommendation. However, I feel that Hyper does nothing Terminal.app (and especially iTerm) does not do already. And they do it better. It's not faster, not more compatible, in essence, it offers no substantial benefit over the others. It's just coded in JavaScript for the sake of it. I see the trend of Electron web wrappers as a misguided one. Thanks anyway.",herrbischoff,2017-02-17 20:52:14
+142,2017-02-18 06:07:04,@herrbischoff Can I ask why you're against Electron-based apps? ,sifex,2017-02-17 20:52:14
+142,2017-02-18 17:54:24,"Mainly because most of them are just web applications with no real integration into the OSs they run on. The way I see it, a notable application should leverage the underlying OSs strengths and not be a simple web view. Maybe the performance implications change if something like the [WebGPU proposal](https://webkit.org/blog/7380/next-generation-3d-graphics-on-the-web/) can be agreed upon but this still leaves the OS integration. For comparison, I doubt any advanced Linux/BSD/Solaris user is going to use a web-based terminal application for daily work. That's what xterm, urxvt and others are for. Hyper (and projects like Black Screen) appear to be for people who like to customize the terminal *looks* more than the actual *workflow*. Eye candy is nice, but substance is better.",herrbischoff,2017-02-17 20:52:14
+141,2017-02-17 13:52:00,"They're bundled with Terminal.app, in `/Applications/Utilities/Terminal.app/Contents/Resources/Fonts`",mikew,2017-02-18 18:31:09
+141,2017-02-17 18:14:50,"They are also in the (non-beta) Xcode package, so `cp -v /Applications/Xcode.app/Contents/SharedFrameworks/DVTKit.framework/Versions/A/Resources/Fonts/SFMono-* ~/Library/Fonts` works fine for me with Xcode 8.2.1 on El Cap.",tobiasboyd,2017-02-18 18:31:09
+141,2017-02-17 20:43:57,"Good catch, both of you. I think I'm going to go with the Terminal.app variant as it does not require anything to be installed at all. The current entry was added at a time when the typeface was exclusively used in Xcode (and the then-beta version).",herrbischoff,2017-02-18 18:31:09
+140,2017-02-17 13:36:06,"Mac Mail is using the folder path ~/Library/Mail/V4/ such that the script here needs to be updated.
+The modified script has been checked with my own folder structure (osx sierra 10.12.3) and it worked.
+
+Source:
+http://brettterpstra.com/2015/10/27/vacuuming-mail-dot-app-on-el-capitan/
+
+Another variant is documented here:
+http://brettterpstra.com/2012/09/15/vacuuming-your-mail-app-index-still-works-wonders/
+But I cannot verify which mac mail version (v3 or v4) is used on El Capitan.",frostyandy2k,2017-02-18 18:19:04
+140,2017-02-18 18:18:22,"Good catch, thank you!",herrbischoff,2017-02-18 18:19:04
+139,2017-02-17 10:25:16,A more up-to-date version of PR #132,casr,2017-02-17 20:53:13
+139,2017-02-17 20:52:52,Thanks for this!,herrbischoff,2017-02-17 20:53:13
+138,2017-02-17 10:15:28,Related to section https://github.com/herrbischoff/awesome-osx-command-line#zsh I wonder if only my version of `zsh` (using it together with `ohmyzsh`) is located under `/bin/zsh` or if it’s really a mistake.,m99coder,2017-02-17 12:22:18
+138,2017-02-17 10:25:29,"macOS comes with Zsh, albeit an older one. If you did not use Homebrew, MacPorts or the like to install it, that's where you'd find it. ",herrbischoff,2017-02-17 12:22:18
+138,2017-02-17 11:53:30,You are right. Sorry. I installed `zsh` now by using `Homebrew`. It’s now located under `/usr/local/bin/zsh`.,m99coder,2017-02-17 12:22:18
+138,2017-02-17 12:22:18,No problem. :),herrbischoff,2017-02-17 12:22:18
+137,2017-02-17 10:07:48,"I noticed that 10.12 doesn't have the `srm` utility installed. After a little bit of investigation it would seem that SSD drives wouldn't benefit from it so I have added a note to the ""Wiping data"" part of the README to help others.",casr,2017-02-18 19:38:47
+137,2017-02-18 19:38:47,"Thanks, good work. Added in 2b1758df7543a327e3700ccc3281e7d3f59a94d3.",herrbischoff,2017-02-18 19:38:47
+136,2017-02-17 09:14:26,"I had to set the mail_version to ""V4"" on macOS 10.12.3",rompic,2017-02-18 18:22:18
+136,2017-02-17 20:45:14,Good catch! I will amend the entry accordingly.,herrbischoff,2017-02-18 18:22:18
+136,2017-02-18 01:45:22,"I got it working with V4 for macOS 10.12.3 with this change.
+
+I've submitted a pull request to have this changed.
+
+https://github.com/herrbischoff/awesome-osx-command-line/pull/147",qu1gl3s,2017-02-18 18:22:18
+136,2017-02-18 18:22:18,Merged #140 just now which is the first pull request correctly implementing this.,herrbischoff,2017-02-18 18:22:18
+135,2017-02-17 08:53:19,,henrik242,2017-02-18 19:45:02
+135,2017-02-17 21:37:44,What exactly does *not* work with the current approach?,herrbischoff,2017-02-18 19:45:02
+135,2017-02-17 21:48:34,"The current approach doesn't work.  It runs `echo` with sudo permissions, but the pipe to `/etc/shells` is done as the current user.  And the current user might not have permissions to write to that file.",henrik242,2017-02-18 19:45:02
+135,2017-02-18 19:41:35,Fair enough.,herrbischoff,2017-02-18 19:45:02
+134,2017-02-17 08:30:26,"As of macOS 10.12.4 SIP has to be disengaged to disable the iTunes media keys.
+
+<S_CODE_TOKEN>",PhilipTrauner,
+134,2017-02-17 20:46:06,Thanks for letting me know. I will update the entry to reflect that.,herrbischoff,
+134,2017-03-01 01:30:48,"On macOS 10.11.6 with SIP disengaged I get a ""Could not find specified service"":
+<S_CODE_TOKEN>",m3at,
+133,2017-02-01 22:41:04,"I see, there is one variant:
+https://github.com/herrbischoff/awesome-osx-command-line#reset-dock
+
+But I found another one:
+- http://osxdaily.com/2015/05/05/reset-launchpad-layout-mac-os-x/
+
+<S_CODE_TOKEN>
+
+Is this kinda better way?
+
+PS. I spotted on this, goggling. Issue I have started after Sierra upgrade. I had Launchpad organized into folders: like all browsers collected into one wrapper/folder. and so on. So after Sierra that order was simply crashed. I don't know ow to restore my old order, so I googled simply reset order, and I will recreate later again.",alundiak,
+132,2017-01-30 20:15:37,,Devinsuit,2017-02-17 20:53:54
+132,2017-02-17 20:54:13,Closed in favor of #139.,herrbischoff,2017-02-17 20:53:54
+131,2017-01-30 00:11:50,http://terminus-font.sourceforge.net/,menelkir,2017-01-30 00:36:44
+131,2017-01-30 00:36:44,"> a clean, **fixed width bitmap font**
+
+I don't think that a bitmap font has any relevancy outside of Unix/Linux (X11) and Windows nowadays as it would look terrible on a HiDPi display and Apple has no current computer models except for the basic iMac models that don't feature a retina screen.",herrbischoff,2017-01-30 00:36:44
+130,2017-01-07 21:42:15,The only thing in App Icons was a function moved to functions.md by 5312a9c.,slothbear,2017-01-08 03:09:25
+130,2017-01-08 03:09:32,"Good catch, thanks!",herrbischoff,2017-01-08 03:09:25
+129,2016-11-12 07:08:49,"The current status for local backups can be found in the preferences file under the `MobileBackups` key.
+
+The `DoNotOfferNewDisksForBackup` key should be set in /Library/Preferences/com.apple.TimeMachine, not in ~/Library/Preferences/com.apple.TimeMachine. This is where other Time Machine preferences are stored as well.",Eitot,2016-11-28 13:31:32
+129,2016-11-28 13:31:28,"A sensible change, thanks!",herrbischoff,2016-11-28 13:31:32
+128,2016-11-12 06:33:20,`-g` is a shorthand for `NSGlobalDomain` or `-globalDomain`. This PR makes the usage consistent.,Eitot,2016-11-28 13:28:56
+127,2016-11-12 06:26:40,"In my own tests, I have found it sufficient to change `ComputerName` and `LocalHostName` only. `HostName` is not set by default and `NetBIOSName` in the preference file is changed whenever `LocalHostName` is changed (although there may be a slight delay of a couple of seconds). Changing only these two names corresponds to what the user can do in System Preferences → Sharing.",Eitot,
+126,2016-11-08 10:46:41,"This adds the command to enable the “Anywhere” setting of Gatekeeper. In Sierra, this GUI option is no longer present, but Terminal still has it.",Eitot,2016-11-17 20:20:56
+126,2016-11-12 06:05:12,"I’ve added the changes as requested.
+",Eitot,2016-11-17 20:20:56
+126,2016-11-17 20:20:51,"Thanks! Merging.
+",herrbischoff,2016-11-17 20:20:56
+125,2016-10-31 16:07:28,"https://github.com/mas-cli/mas
+
+what do you think? ",dkhamsing,2016-11-10 12:47:07
+125,2016-10-31 16:08:30,"Oops, should go here.. https://github.com/herrbischoff/awesome-command-line-apps 
+But anyway, same question
+",dkhamsing,2016-11-10 12:47:07
+125,2016-11-10 12:47:07,"This is nice! I especially value that it is not made in Node.js like 90%+ of the command line tools of the last couple of years appear to be. Feel free to add a PR to Awesome Command Line Apps. 👍 
+",herrbischoff,2016-11-10 12:47:07
+124,2016-10-25 00:00:55,,dcondrey,2016-12-24 10:23:10
+124,2016-11-10 12:20:16,"Thanks for the shorter command. But why delete the `find` command? It still works — and even would if someone turned off Spotlight indexing. Please change to a format that both commands are included. Like:
+
+<S_CODE_TOKEN>
+",herrbischoff,2016-12-24 10:23:10
+124,2016-12-24 10:16:04,Updated as requested.,dcondrey,2016-12-24 10:23:10
+124,2016-12-24 10:23:45,Thanks!,herrbischoff,2016-12-24 10:23:10
+124,2016-12-24 19:42:44,"Another alternative people may want to consider is [`mas`](https://github.com/mas-cli/mas) by @argon and team.
+
+Once `mas` is installed, `mas list` will list all application installed from the App Store in formatted columns for app ID number and app name/version. You can, for example, create this file on a system where you've signed into the App Store with
+
+<S_CODE_TOKEN>
+
+That snippet is now part of my standard ""get-a-clean-system-up"" script.",jdickey,2016-12-24 10:23:10
+123,2016-10-02 08:55:54,"Update neovim install instructions as per
+https://github.com/neovim/homebrew-neovim/blob/master/README.md
+",revolter,2016-11-08 09:45:36
+122,2016-09-27 17:01:45,"From this discussion on [StackExchange](http://unix.stackexchange.com/questions/45404/why-cant-tr-read-from-dev-urandom-on-osx): 
+
+""Your tr attempts to interpret its input as text in UTF-8 encoding. So it will complain and abort upon the first byte sequence which is not valid UTF-8""
+
+<S_CODE_TOKEN>
+",greyhoundforty,2016-09-27 17:15:37
+122,2016-09-27 17:06:31,"This indeed appears to be so, are you on Sierra? It worked without a hitch on El Capitan.
+",herrbischoff,2016-09-27 17:15:37
+122,2016-09-27 17:08:41,"I am indeed on Sierra. 
+",greyhoundforty,2016-09-27 17:15:37
+122,2016-09-27 17:10:45,"Well, something must have changed since then. I'm using an identical shell setup and this happens for me too. I will add a note to the entry and research this further.
+",herrbischoff,2016-09-27 17:15:37
+122,2016-09-27 17:15:36,"Thanks!
+",greyhoundforty,2016-09-27 17:15:37
+122,2016-09-27 17:30:38,"According to the manpage of `tr`:
+
+> The LANG, LC_ALL, LC_CTYPE and LC_COLLATE environment variables affect the execution of tr as described in environ(7).
+
+As `tr` requires text files, if any charmap is set, it will have problems with a stream of binary data, as coming from `/dev/urandom`.
+
+The correct command should therefore probably be:
+
+<S_CODE_TOKEN>
+",herrbischoff,2016-09-27 17:15:37
+121,2016-08-24 01:07:10,,MatthiasWinkelmann,2016-11-10 12:27:32
+121,2016-08-24 07:21:11,"Thank you for your suggestion. I was thinking about adding them a while back but did not, for the time being.
+
+Do you feel that any of them is ready for prime time usage? It appears to me that those are at best early beta versions with a lot of work still to be done. Terminal.app itself is probably more capable than any of them. The idea of a HTML/CSS/JS-based terminal emulator is kind of intriguing but as of right now doesn't feel quite right to me. I'm absolutely open to arguments and to learn something new, so feel free to let me know what you think.
+",herrbischoff,2016-11-10 12:27:32
+121,2016-08-25 16:29:49,"HyperTerm is useable (I've switched) but after trying Black Screen again I have to agree with you. I've also just discovered that Terminal.app has changed quite a bit from the last time I tried it.
+
+Soo... feel free to close the PR or keep it around and merge it a few month. Thx for the excellent ressourcce! 
+",MatthiasWinkelmann,2016-11-10 12:27:32
+121,2016-08-25 21:45:47,"Thanks for your feedback. I'm going to keep this open and check back in a couple of months if they improved noticeably.
+",herrbischoff,2016-11-10 12:27:32
+121,2016-11-10 12:27:32,"As no significant progress has been made since August, I'm going to close this issue for now. We may revisit at a much later time, after HyperTerm and Black Screen have both pushed out a 1.0 version (currently at 0.8.3 and 0.2.79 respectively). I for one wouldn't call any of those terminal apps ""awesome"" as of now (and for the foreseeable future).
+
+Additionally, I _really, really, really_ dislike Electron wrappers, aka bundled web apps.
+",herrbischoff,2016-11-10 12:27:32
+120,2016-08-06 13:34:31,,kxxoling,2016-08-09 16:51:37
+120,2016-08-09 16:51:42,"Thanks for noticing and submitting a PR!
+",herrbischoff,2016-08-09 16:51:37
+119,2016-08-04 13:46:51,"Created with https://github.com/dkhamsing/frankenstein
+### GitHub Corrected URLs
+
+| Was | Now |
+| --- | --- |
+| https://github.com/ellerbrock/tutorial-fish-shell-setup-osx | https://github.com/ellerbrock/fish-shell-setup-osx |
+",ReadmeCritic,2016-08-05 16:23:09
+118,2016-07-15 14:28:11,"what do you think of https://github.com/keith/reminders-cli
+",dkhamsing,2016-07-18 17:04:57
+118,2016-07-15 20:35:43,"Looks nice! I believe it is better suited to be included in my other list, https://github.com/herrbischoff/awesome-command-line-apps#mac-os-x.
+",herrbischoff,2016-07-18 17:04:57
+117,2016-07-10 00:03:57,"As soon as Sierra is officially released, change the name to `awesome-macos-command-line`.
+
+**Update:** Lowest priority for now. I'm getting to it eventually but not right now.",herrbischoff,
+117,2016-10-28 02:57:28,"@herrbischoff it's released;)
+",napcae,
+117,2016-11-02 04:43:26,"Ummm, I gave the idea a thumbs-down _because_
+1. There are still a _lot_ of people who haven't upgraded/won't upgrade before 10.12.2 is out (at least); and
+2. Renaming it from a long-used name would encourage new people to expect that the list was Sierra-specific when it's really not.
+",jdickey,
+117,2016-11-02 16:21:57,"@jdickey: A valid and interesting point. I am not particularly partial to jumping on any new development. Long term however, this makes sense as Apple has officially renamed Mac OS X to macOS, for better or worse.
+",herrbischoff,
+117,2016-11-02 18:36:45,"@jdickey Almost a [third on Sierra, 40% on El Capitan](https://www.gosquared.com/global/mac/sierra/#beta). I think it's safe to say that we can ignore Yosemite, since command line users are power users and have updated systems.
+",napcae,
+117,2016-11-03 11:46:52,"@napcae. Right. We're an El Capitan shop and have no expectation to even touch Sierra until 10.12.2+ reduces the support panic to normal levels _and_ all our critical tools support it. Neither of those conditions yet apply. Did they change the name of El Capitan and we just didn't notice? _That_ was my point.
+",jdickey,
+117,2016-11-10 12:41:36,"I wonder why the name change appears to be such a thing of importance for some people. It's still OS X, it's just marketing. Gonna get to it later.
+",herrbischoff,
+116,2016-06-29 10:12:14,"Command line to change default backup interval doesn't work with OS X El Capitan 10.11.5:
+https://github.com/herrbischoff/awesome-osx-command-line/blame/master/README.md#L267
+
+`Launch Daemons` was renamed in `LaunchDaemons`, but even when changing the path, there's still an error.
+",bmalynovytch,2016-11-10 20:46:22
+116,2016-06-29 15:58:11,"Thanks for reporting this I'm going to investigate further. If anyone has insight into this, I'll be happy to hear it.
+
+Could you please also post the error message you get?
+",herrbischoff,2016-11-10 20:46:22
+116,2016-06-29 16:00:27,"<S_CODE_TOKEN>
+
+<S_CODE_TOKEN>
+",bmalynovytch,2016-11-10 20:46:22
+116,2016-06-29 16:22:48,"Thanks. Hmm... My first instinct would be to blame [SIP](https://github.com/herrbischoff/awesome-osx-command-line#system-integrity-protection). Would you be willing to disable it, run the command and enable it again afterwards to see if that may work?
+",herrbischoff,2016-11-10 20:46:22
+116,2016-06-29 16:26:03,"You're welcome.
+I won't have much time to reboot my MBP as I have tones of work opened.
+I'll keep you informed if I get any chance to give it a try.
+",bmalynovytch,2016-11-10 20:46:22
+116,2016-06-29 16:45:42,"I see, don't we all? ;) No haste, I'm looking forward to hearing from you.
+",herrbischoff,2016-11-10 20:46:22
+116,2016-11-10 12:38:39,"@bmalynovytch: Any luck?
+",herrbischoff,2016-11-10 20:46:22
+116,2016-11-10 20:13:39,"Sorry no, had no time to give it a try :/
+",bmalynovytch,2016-11-10 20:46:22
+116,2016-11-10 20:46:22,"Alright, I'm closing the issue now.
+",herrbischoff,2016-11-10 20:46:22
+115,2016-06-26 06:53:45,"Your permissions can still get messed up, and the new command to fix them is: sudo /usr/libexec/repair_packages --repair --standard-pkgs
+
+This is new to El Capitan.
+",bumblebritches57,2016-11-10 12:37:57
+115,2016-06-29 16:43:43,"Thanks for this interesting catch. However, upon trying and researching it, it's about as (in)efficient as the ""old"" permission repair. It is not able to completely repair every instance it finds differing in permissions.
+
+Also, when using Homebrew, it resets the user:group of `/usr/local` to `root:wheel`, effectively removing write permissions for the current user. This breaks Homebrew. I may add this to the collection with this result as a caveat.
+
+Anyway, good catch!
+",herrbischoff,2016-11-10 12:37:57
+115,2016-11-08 09:48:09,"This command was not new to El Capitan, it existed since permissions repair existed. The libexec directory normally contains binaries that are used by other programs, in this case presumably by Disk Utility itself. In El Capitan, Apple severed this usage and in Sierra they removed this command entirely. Even `pkgutil` can no longer repair packages (Apple seems to have forgotten to update this program).
+",Eitot,2016-11-10 12:37:57
+115,2016-11-10 12:37:57,"Since the suggested command is entirely deprecated, I'm going to close this issue without adding it to the list.
+",herrbischoff,2016-11-10 12:37:57
+114,2016-06-25 14:15:01,,kutsan,2016-11-10 12:29:28
+114,2016-06-27 10:32:07,"Thanks. Could you please add a short explanation what exactly that command resp. the value `0` does. 
+",herrbischoff,2016-11-10 12:29:28
+114,2016-06-27 19:50:26,"@herrbischoff Seems good now.
+",kutsan,2016-11-10 12:29:28
+114,2016-11-10 12:29:48,"Thanks again for your addition!
+",herrbischoff,2016-11-10 12:29:28
+114,2016-11-10 12:30:45,"No problem!
+",kutsan,2016-11-10 12:29:28
+113,2016-06-22 19:57:22,"Last login: Wed Jun 22 10:27:53 on ttys004
+/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/universal-darwin15/rbconfig.rb:213: warning: Insecure world writable dir /usr/local in PATH, mode 040757
+/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/universal-darwin15/rbconfig.rb:213: warning: Insecure world writable dir /usr/local in PATH, mode 040757
+/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/universal-darwin15/rbconfig.rb:213: warning: Insecure world writable dir /usr/local in PATH, mode 040757
+",achyuth2016,2016-06-23 16:01:16
+113,2016-06-23 07:30:26,"Try `sudo chmod o-w -R /usr/local`.
+
+What is the output of `brew doctor`?
+",00101010b,2016-06-23 16:01:16
+113,2016-06-23 16:01:07,"What exactly do you need help with? Please do not just paste an error message without explaining what you wanted to achieve. I'm going to close this. Please feel free to open another issue with details about what you tried to do, what you already tried but what did not work and what you cannot figure out. 
+",herrbischoff,2016-06-23 16:01:16
+112,2016-05-24 07:33:10,"added another awesome link to this awesome list
+",ellerbrock,2016-05-24 11:25:53
+112,2016-05-24 11:30:13,"I'm merging this, as it may be of interest to some and fish is not used as broadly as other shells. However, shell-usage specific tutorials are generally not well suited for this list as they are not specific to OS X.
+",herrbischoff,2016-05-24 11:25:53
+111,2016-05-15 14:56:50,,nloveladyallen,2016-05-16 23:19:20
+111,2016-05-16 17:20:52,"Thanks for your suggestion. I'd rather see TT removed altogether. If you update the PR accordingly, I will merge. 
+",herrbischoff,2016-05-16 23:19:20
+111,2016-05-16 22:11:22,"Done.
+",nloveladyallen,2016-05-16 23:19:20
+110,2016-05-06 17:38:13,,unixorn,2016-11-28 11:57:08
+110,2016-11-10 12:33:30,"Please excuse the late reaction. See my inline comments for changes needed to be merged.
+",herrbischoff,2016-11-28 11:57:08
+110,2016-11-10 16:07:02,"Applied the feedback.
+",unixorn,2016-11-28 11:57:08
+110,2016-11-10 20:48:03,"Thanks. But the TOC also needs to be indented by 4 spaces...
+",herrbischoff,2016-11-28 11:57:08
+110,2016-11-10 22:19:54,"Fixed the TOC indentation
+",unixorn,2016-11-28 11:57:08
+110,2016-11-20 01:37:57,"@herrbischoff, are there any other changes you'd like me to make?
+",unixorn,2016-11-28 11:57:08
+110,2016-11-28 11:57:00,Thanks! Everything is alright. I was just away for some time. Thanks again for your contribution.,herrbischoff,2016-11-28 11:57:08
+109,2016-05-05 13:58:21,,thomanq,2016-05-09 11:18:56
+109,2016-05-08 16:26:40,"Please see my inline comments. Also, please add the SSH sub-category to the index on top.
+",herrbischoff,2016-05-09 11:18:56
+109,2016-05-08 16:41:25,"Done.
+",thomanq,2016-05-09 11:18:56
+108,2016-05-03 10:18:59,"Remove Fin because it's now Fisherman 2.0.
+",brandonpittman,2016-05-03 13:11:38
+108,2016-05-03 13:11:56,"Good catch! Thanks. 
+",herrbischoff,2016-05-03 13:11:38
+107,2016-05-02 16:43:10,"Add links to CamingoCode and Operator Mono to Terminal List
+",seandellis,2016-05-03 13:19:46
+107,2016-05-03 13:17:56,"Thanks for your submission but I don't feel any of those fonts are particularly good additions. Especially after having test-driven Operator Mono, it strikes me as a work of designers who don't particularly understand the needs of developers. It's a style typeface, not a workhorse, more suited to designers than code monkeys like me. ;) A far better commercial alternative is Pragmata Pro. Camingo Code is alright but already present on the font list in this section.
+",herrbischoff,2016-05-03 13:19:46
+106,2016-05-01 11:11:13,,thomanq,
+106,2016-05-03 13:21:57,"Thanks for your addition. This looks interesting. Will have to check it out over the coming days.
+
+In the meantime, please fix the merge issues so I can do a clean merge. 
+",herrbischoff,
+106,2016-05-03 16:22:08,"Done! :)
+",thomanq,
+106,2016-11-10 12:35:49,"Sorry for the late reaction. I'm going to have to clean this up before I can merge it.
+",herrbischoff,
+106,2017-02-20 18:16:42,"I had a similar script in [my own dotfiles](https://github.com/TwP/dotfiles/blob/master/macos/defaults/keyboard#L43-L56), but alas, MacOS Sierra changed the way that keyboard mappings are handled. Short story is that `ioreg -n IOHIDKeyboard -r` no longer returns any results. This script will not work on Sierra.",TwP,
+106,2017-02-20 18:45:46,Thanks for the feedback. I will possibly add this with a note that it doesn't work on Sierra. I believe there are still people using earlier versions of the OS. ,herrbischoff,
+106,2017-02-20 19:36:52,"> I believe there are still people using earlier versions of the OS.
+
+:joy: that made me laugh out loud! Thank you for collecting all the command line scripts. I'm learning many new tricks reading through the codebase :bow: ",TwP,
+105,2016-04-13 18:22:54,,KishanBagaria,2016-04-13 19:14:24
+105,2016-04-13 19:14:42,"Good catch, thanks. Merged.
+",herrbischoff,2016-04-13 19:14:24
+104,2016-04-13 18:18:20,,KishanBagaria,2016-04-13 19:13:03
+104,2016-04-13 19:13:03,"It's calling itself ""The Fishshell Framework"", so this is not applicable. Closing.
+",herrbischoff,2016-04-13 19:13:03
+104,2016-04-13 19:28:49,"That's just a tagline. Do a `s/Fishshell/JavaScript/`, then it becomes 
+
+> The JavaScript Framework
+
+which is not a name.
+
+It's referred to as OMF or Oh My Fish everywhere. Look at the link, both the repo and the organization is named `oh-my-fish`:
+https://github.com/oh-my-fish/oh-my-fish
+",KishanBagaria,2016-04-13 19:13:03
+103,2016-02-29 16:37:30,"Per comment on #89, moving this to functions.md
+",unixorn,2016-02-29 19:45:16
+103,2016-02-29 19:45:12,"Very nice, thanks!
+",herrbischoff,2016-02-29 19:45:16
+102,2016-02-29 10:37:11,"Read more about the awesome bot here https://github.com/dkhamsing/awesome_bot
+
+Maybe we should close the other pull request for tests?
+",vinkla,2016-02-29 11:42:37
+102,2016-02-29 10:47:24,"The awesome BOT found 4 issues:
+
+<S_CODE_TOKEN>
+",vinkla,2016-02-29 11:42:37
+102,2016-02-29 11:26:10,"Nice! Thanks for the suggestion and changes. I'm all for it. Let's whitelist the link from the script though, as it's an attribution and the site may come online again. Also, closing the other testing pull request is a good idea as `awesome_bot` seems to be exactly what we're looking for.
+",herrbischoff,2016-02-29 11:42:37
+102,2016-02-29 11:34:12,"Okay, all fixed.
+",vinkla,2016-02-29 11:42:37
+102,2016-02-29 11:42:22,"Good stuff. I'm just going to pull the trigger here and hope it works as expected... :D
+",herrbischoff,2016-02-29 11:42:37
+102,2016-02-29 11:44:40,"Thanks! It should work. I use it myself in https://github.com/vinkla/awesome-fuse without any issues.
+",vinkla,2016-02-29 11:42:37
+102,2016-02-29 11:45:51,"I guess we can delete the `setup-files` branch as well?
+",vinkla,2016-02-29 11:42:37
+102,2016-02-29 11:47:16,"Yup, just do away with it.
+",herrbischoff,2016-02-29 11:42:37
+102,2016-02-29 11:48:17,"Do you want me to remove it or will you?
+",vinkla,2016-02-29 11:42:37
+102,2016-02-29 11:48:58,"I'll leave the honors to you. ;)
+",herrbischoff,2016-02-29 11:42:37
+102,2016-02-29 11:49:23,"Thanks :)
+",vinkla,2016-02-29 11:42:37
+101,2016-02-29 00:49:11,"Add the Codeface repository to the Terminal Fonts section.
+
+_Note:_
+Codeface is not an individual font, but a repo of fonts.
+I'm unsure if it's 100% suited for this section; however, I thought to send a pull request anyway, in case it was thought to be useful.
+It's also another awesome-project - I don't know if those should link to each other or not.
+",ed-flanagan,2016-02-29 11:30:59
+101,2016-02-29 11:30:55,"Thanks for your submission. I don't see a reason for not linking to a relevant list. Better than duplicating all the content from there. ;) Merging.
+",herrbischoff,2016-02-29 11:30:59
+100,2016-02-29 00:45:34,"Change ""compability"" to compatibility
+",ed-flanagan,2016-02-29 11:18:56
+100,2016-02-29 11:18:51,"Nice catch, thanks! I copied the snippet verbatim so it didn't occur to me.
+",herrbischoff,2016-02-29 11:18:56
+99,2016-02-08 17:22:46,,f213,2016-03-07 11:16:42
+99,2016-02-29 11:58:24,"Please see my inline comment.
+",herrbischoff,2016-03-07 11:16:42
+99,2016-03-05 13:43:42,"Here it is!
+",f213,2016-03-07 11:16:42
+99,2016-03-05 22:46:59,"Please don't be sloppy. It should be formatted like the other entries, including a ""disable"" and ""enable"" part. Look at the whole file and adhere to the style.
+",herrbischoff,2016-03-07 11:16:42
+99,2016-03-07 13:03:19,"Why did you close the pull request? Are you going to submit a new, correct one?
+",herrbischoff,2016-03-07 11:16:42
+99,2016-03-07 13:14:18,"Nevermind, I just added it myself: https://github.com/herrbischoff/awesome-osx-command-line/commit/ccf49bf24d8ed65fd4020339e68a56fed287ab0b
+",herrbischoff,2016-03-07 11:16:42
+98,2016-02-03 19:31:37,,claxch,2016-03-07 13:18:03
+98,2016-02-29 11:37:38,"Thanks for your suggestion. Please see my inline comments.
+",herrbischoff,2016-03-07 13:18:03
+98,2016-03-07 13:18:03,"No reply for a week, closing.
+",herrbischoff,2016-03-07 13:18:03
+97,2016-01-21 23:44:09,"Tested on my Mac OS since Yosemite till now (10.11.3).
+
+<img width=""948"" alt=""screenshot 2016-02-29 20 29 03"" src=""https://cloud.githubusercontent.com/assets/2131633/13406311/0c1df15a-df23-11e5-842f-49425ccb5e05.png"">
+
+@herrbischoff please review.
+",alundiak,2016-02-29 19:46:27
+97,2016-02-29 11:58:45,"Please see my inline comment.
+",herrbischoff,2016-02-29 19:46:27
+97,2016-02-29 19:27:50,"@herrbischoff how about now? I made changes (squashed).
+",alundiak,2016-02-29 19:46:27
+97,2016-02-29 19:46:21,"This is alright, thank you.
+",herrbischoff,2016-02-29 19:46:27
+96,2016-01-21 20:45:56,"@herrbischoff please review, and merge if such suggestion make sense for this repo.
+",alundiak,2016-01-21 21:30:26
+96,2016-01-21 21:33:19,"Thanks for your contribution!
+",herrbischoff,2016-01-21 21:30:26
+95,2016-01-03 08:04:09,"Does what it says on the tin.
+
+On another note, the very top of the readme says: ""A curated list of shell commands and tools specific to OS X.""...... so should this command even be here at all as it is not OSX specific?
+",aaron-trout,2016-01-03 17:25:42
+95,2016-01-03 08:05:58,"Balls, just noticed my git commit text has a typo too, want me to close and reopen with correct spelling?
+",aaron-trout,2016-01-03 17:25:42
+95,2016-01-03 17:25:42,"Thanks for your submission. I will however not merge as OpenDNS is far more likely to remain online for the next decade than a random IP resolver. There are dozens of those curl-based services out there, but using the current technique will guarantee that it still works years from now.
+
+Regarding your typo: you can just `git amend` if you screwed up in your last commit. ;)
+Compare: `man git-amend`
+
+Regarding the OS X-specific note: yes, some commands will invariably end up on this list that are common Unix commands. Their inclusion does not follow any strict rule. I will add them if I feel they provide context and/or are not generally known but exceedingly helpful.
+",herrbischoff,2016-01-03 17:25:42
+94,2015-12-22 17:10:19,"sudo defaults write /System/Library/LaunchDaemons/com.apple.mDNSResponder ProgramArguments -array-add ""-NoMulticastAdvertisements""
+Fails with: defaults[379:4885] Could not write domain /System/Library/LaunchDaemons/com.apple.mDNSResponder; exiting
+",ryanshuck,2016-02-02 23:01:08
+94,2015-12-25 18:10:06,"Ahh… This may very well be another instance of System Integrity Protection at work. You probably use El Capitan, correct?
+",herrbischoff,2016-02-02 23:01:08
+94,2015-12-26 03:23:07,"I do indeed. I think the rest of the ones I did all worked fine.
+",ryanshuck,2016-02-02 23:01:08
+94,2016-02-02 23:01:08,"Please see issue #39. Apparently adding `.plist` to the domain name does work.
+",herrbischoff,2016-02-02 23:01:08
+94,2016-02-03 23:18:32,"Definitely doesn't work, even after running csrutil disable. I read the guy's post, but I can't replicate it.
+",ryanshuck,2016-02-02 23:01:08
+94,2016-02-05 00:59:53,"After a little more work, I found a repeatable process.
+
+In recovery, run 
+`csrutil disable && reboot`
+Once back in OS X, log in as an admin user and run 
+`sudo launchctl unload /System/Library/LaunchDaemons/com.apple.mDNSResponder.plist`
+`sudo defaults write /System/Library/LaunchDaemons/com.apple.mDNSResponder.plist ProgramArguments -array-add ""-NoMulticastAdvertisements""`
+`sudo launchctl load /System/Library/LaunchDaemons/com.apple.mDNSResponder.plist`
+Reboot and go back into recovery and run
+`csrutil enable && reboot`
+
+That worked for me.
+",ryanshuck,2016-02-02 23:01:08
+93,2015-12-21 06:01:31,"I could not convert my png to svg. I want to translate this great tool to Turkish.
+",ahmetshen-us,2016-01-04 16:43:38
+93,2016-01-03 17:35:25,"If you feel that people would benefit from a translated version, you are welcome. Seeing that you have announced your intent but did no work since, I believe you are waiting for my consent.
+
+However, I believe that people who are knowledgeable enough to use the shell on any Unix-based OS usually have a pretty good grasp of the English language. Otherwise using pretty much any system will prove to be a pain. English is the de-facto _lingua franca_ of the web. Whether that's deservedly so is a matter of debate. As it stands now, those are the facts.
+
+Let me know if you plan to work on your suggestion or otherwise please close this PR. Thanks!
+",herrbischoff,2016-01-04 16:43:38
+93,2016-01-04 16:43:38,"I was actually waiting for your consent. But right now I see your point and I will just close the PR. Thanks...
+",ahmetshen-us,2016-01-04 16:43:38
+92,2015-12-18 17:57:00,"Hello, I wrote a tool that can validate README links (valid URLs, not duplicate). It can be run when someone submits a pull request. 
+
+ It is currently being used by 
+- https://github.com/vsouza/awesome-ios 
+- https://github.com/matteocrippa/awesome-swift 
+- https://github.com/dkhamsing/open-source-ios-apps 
+
+Examples 
+- https://travis-ci.org/matteocrippa/awesome-swift/builds/96526196 ok ✅
+- https://travis-ci.org/matteocrippa/awesome-swift/builds/96722421 link redirected / rename 🔴
+- https://travis-ci.org/dkhamsing/open-source-ios-apps/builds/96763135 bad link / project deleted 🔴
+- https://travis-ci.org/dkhamsing/open-source-ios-apps/builds/95754715 dupe 🔴
+
+If you are interested, connect this repo to https://travis-ci.org/ and add a [`.travis.yml`](https://github.com/dkhamsing/open-source-ios-apps/blob/master/.travis.yml) file to the project. 
+
+See https://github.com/dkhamsing/awesome_bot for options, more information 
+Feel free to leave a comment :smile:
+",awesome-bot,2016-02-29 11:54:31
+92,2016-02-29 11:54:31,"This was just added by @vinkla in PR #102. Thanks for letting me know.
+",herrbischoff,2016-02-29 11:54:31
+92,2016-02-29 15:00:45,":tada: 
+",awesome-bot,2016-02-29 11:54:31
+91,2015-12-09 21:21:53,,darlanmendonca,2016-03-07 13:22:53
+91,2016-02-29 12:00:32,"Please see my inline comments.
+",herrbischoff,2016-03-07 13:22:53
+91,2016-03-07 13:22:53,"No response in 7 days, closing. Manually added in https://github.com/herrbischoff/awesome-osx-command-line/commit/f349ea4acda6e028fa168682097f553f0ccde040.
+",herrbischoff,2016-03-07 13:22:53
+90,2015-12-09 19:35:28,,darlanmendonca,2016-03-07 13:31:12
+90,2016-02-29 12:07:27,"Please see my inline comments.
+",herrbischoff,2016-03-07 13:31:12
+90,2016-03-07 13:28:45,"No response in 7 days, closing. Manually added in https://github.com/herrbischoff/awesome-osx-command-line/commit/7d0eef281b4ef00eb17882554e8c0584e11fe10b.
+",herrbischoff,2016-03-07 13:31:12
+89,2015-12-05 17:27:05,"Prints the files & directories selected in the Finder.
+",unixorn,2016-02-29 12:09:15
+89,2016-02-29 12:09:15,"This should be added to `functions.md`. Please submit a new PR, thanks!
+",herrbischoff,2016-02-29 12:09:15
+89,2016-02-29 16:37:59,"Done as #103 
+",unixorn,2016-02-29 12:09:15
+88,2015-12-04 01:51:00,"Zgen is faster than oh-my-zsh, can use its plugins and makes it considerably easier to use third party plugins.
+",unixorn,2015-12-04 03:06:55
+87,2015-12-04 01:05:33,"- Add column_view function
+- Add function to get the path to frontmost Finder window
+- Add icon_view function
+- Add list_view function
+- Update TOC
+
+Unfortunately I didn't note where I got these functions in my zsh dotfiles so I can't give the original author proper credit. If anyone does recognize them, please PR to add a credit.
+
+Replaces #83.
+",unixorn,2015-12-04 01:23:35
+87,2015-12-04 01:23:35,"Thanks! Merged. The TOC is fine for the time being. I'll see about that should a flood of functions come in. ;)
+",herrbischoff,2015-12-04 01:23:35
+86,2015-12-03 04:10:04,"adding memory stats info with vm_stat
+",reklis,2015-12-03 22:19:42
+85,2015-11-30 12:55:39,"I added an option to enable/disable hidden apps on dock
+
+![Example](http://cdn.makeuseof.com/wp-content/uploads/2015/02/hiddenapps.jpg?eb3875)
+",darlanmendonca,2015-12-03 22:29:48
+85,2015-12-03 22:29:48,"Merged.
+",herrbischoff,2015-12-03 22:29:48
+84,2015-11-27 10:14:30,,cybertk,2015-12-03 23:00:08
+84,2015-12-03 23:00:08,"Merged.
+",herrbischoff,2015-12-03 23:00:08
+83,2015-11-07 15:20:18,,unixorn,2015-12-03 23:27:41
+83,2015-12-03 23:09:47,"Sorry for the late reply. This appears to be a more involved duplicate of https://github.com/herrbischoff/awesome-osx-command-line#change-working-directory-to-finder-path.
+",herrbischoff,2015-12-03 23:27:41
+83,2015-12-03 23:27:41,"With 2074d14 I have added a new file `functions.md` into which I have added your function. With 1a254cb this addition was deleted to allow you correct attribution. Please add the function there. Indentation should be 4 spaces. Thanks!
+",herrbischoff,2015-12-03 23:27:41
+83,2015-12-04 01:14:49,"@herrbischoff NP about the late reply. I added a few more Finder control functions in #87. Let me know if you want any changes in the TOC format I used.
+",unixorn,2015-12-03 23:27:41
+82,2015-11-06 18:11:12,"Adding an example for encrypting the output DMG file.
+",unixorn,2015-11-06 18:15:41
+82,2015-11-06 18:15:56,"Good stuff, thanks! Merged.
+",herrbischoff,2015-11-06 18:15:41
+81,2015-11-06 15:15:07,"Hi, this is really an awesome list :ok_hand: 
+
+I wonder if command line apps would have there place in this list.
+It seems that it mainly lists bash commands. Am I right?
+
+Otherwise I would like to add my [iTunes CLI](https://github.com/mischah/itunes-remote) :octocat: 
+
+But there are way more awesome CLI Apps not just for OS X.
+Therefore I guess I have to create an »awesome-cli-apps« list :relaxed: 
+There is enough material in different categories.
+
+Michael
+",mischah,2015-11-06 19:01:12
+81,2015-11-06 15:24:55,"I'd be very psyched about a CLI app list! :+1: 
+",ursooperduper,2015-11-06 19:01:12
+81,2015-11-06 18:12:46,"Hi there! Thanks for the kind words. I feel that an OS X command line list is not quite the right place for additions like yours. That being said, I have come across a lot of questions and material that could benefit from a nicely curated list. Therefore, @mischah, I hope you excuse my enthusiasm in setting up such a list myself: https://github.com/herrbischoff/awesome-command-line-apps
+
+It's very, very basic right now, but I will keep adding interesting material to it.
+
+Please feel free to add to your hearts' content. And since @mischah is the originator of that idea (or at least the spark that finally lit the fuse), I'll gladly add you as a collaborator with full push privileges if you're interested.
+",herrbischoff,2015-11-06 19:01:12
+81,2015-11-06 18:50:03,"Uhm … You ripped my idea without checking my Github repos to see if I already set up this list :open_mouth: 
+
+Here is my list: https://github.com/mischah/awesome-cli-apps
+
+>  Therefore, @mischah, I hope you excuse my enthusiasm in setting up such a list myself: https://github.com/herrbischoff/awesome-command-line-apps
+
+Sorry, that’s feels kinda lame to me. :unamused:
+
+Now we have two lists with the same purpose in the making. Which doesn’t make sense.
+",mischah,2015-11-06 19:01:12
+81,2015-11-06 19:01:07,"Update: I’ll delete my list because I finally found [Awesome CLI](https://github.com/aharris88/awesome-cli).
+",mischah,2015-11-06 19:01:12
+81,2015-11-06 19:05:50,"Well, what can I say...
+",herrbischoff,2015-11-06 19:01:12
+81,2015-11-06 19:08:42,"No Problem man. I just was pissed for a minute or two.
+",mischah,2015-11-06 19:01:12
+81,2015-11-06 19:24:45,"@mischah: You're still very welcome to contribute. The existing lists appear very fragmented, partial and sometimes even confusing to me. For me it's not about the GitHub ""stars"" or the recognition — whatever that means — because that's fleeting and unsubstantial. I just want to build a list that I wish I came about when I was searching. So, how about building that together?
+",herrbischoff,2015-11-06 19:01:12
+81,2015-11-06 19:33:04,"> The existing lists appear very fragmented, partial and sometimes even confusing to me.
+
+You’re right. But the guy maintaining »Awesome CLI« knows about the problems and is asking for help.
+
+→ https://github.com/aharris88/awesome-cli/issues/14
+
+> So, how about building that together?
+
+Or we both could contribute to the existing one and help @aharris88 to make a proper awesome list out of his awesome list.
+",mischah,2015-11-06 19:01:12
+81,2015-11-06 19:47:35,"That would be great! And actually, yesterday I was actually thinking about renaming it from `awesome-cli` to `awesome-cli-apps`.
+",aharris88,2015-11-06 19:01:12
+81,2015-11-06 19:51:55,"@aharris88: Renaming it and strengthening its focus would surely go a long way.
+",herrbischoff,2015-11-06 19:01:12
+81,2015-11-06 19:54:07,"@aharris88 Count me in. Let’s continue over there.
+",mischah,2015-11-06 19:01:12
+81,2015-11-06 20:08:40,"@mischah  Sounds good. Thanks.
+",aharris88,2015-11-06 19:01:12
+80,2015-11-04 18:02:19,"Show how to create disk images from the CLI.
+",unixorn,2015-11-05 19:45:21
+80,2015-11-05 08:54:43,"Thanks for your addition! Please see my inline comments.
+",herrbischoff,2015-11-05 19:45:21
+80,2015-11-05 19:27:45,"Ok, made the changes you requested.
+",unixorn,2015-11-05 19:45:21
+80,2015-11-05 19:45:33,"Great! Thank you. Merged.
+",herrbischoff,2015-11-05 19:45:21
+79,2015-11-03 17:49:17,,unixorn,2015-11-05 08:55:34
+79,2015-11-04 11:50:43,"Thanks for your addition. Please sort and capitalize correctly. It all in the contribution guidelines.
+",herrbischoff,2015-11-05 08:55:34
+79,2015-11-04 17:58:08,"Fixed the capitalization and moved the snippet to alpha order, @herrbischoff 
+",unixorn,2015-11-05 08:55:34
+79,2015-11-05 08:55:30,"Thanks! Merging now.
+",herrbischoff,2015-11-05 08:55:34
+78,2015-11-02 06:21:53,"Made some changes according to the contributing.md.
+
+However, I'm not sure about putting this command in the category of Disk Images.
+Any other suggestions?
+
+Thanks. 
+",18z,2015-11-06 00:26:31
+78,2015-11-04 11:54:34,"Thanks for your addition. As this command is applicable for all kinds of disk images, it would be better to name it accordingly. In a short description mention that it also applies to .iso and .img images.
+",herrbischoff,2015-11-06 00:26:31
+78,2015-11-04 15:53:38,"Thank you for the suggestion.
+
+I read this https://en.wikipedia.org/wiki/Apple_Disk_Image.
+And added short description mention that it also applies to images (Yes, I named it accordingly.)  :-D
+",18z,2015-11-06 00:26:31
+78,2015-11-04 16:38:42,"Thanks for the change. However, AFAIK there are no .fat, .hfs, .smi or .udf images. Those are types and filesystems housed in the .iso, .img and .dmg file formats.
+",herrbischoff,2015-11-06 00:26:31
+78,2015-11-05 02:14:39,"Oh! I'm sorry for not reading the document carefully.
+
+So what I'm gonna do is to change the short description to:
+
+> `This command applies to .iso, .ing and .dmg images.`
+
+If the short description is correct, I'll then update the README.md file.
+
+Thank you for pointing out my mistakes.
+",18z,2015-11-06 00:26:31
+78,2015-11-05 08:49:41,"Sounds good. Just write `.img` instead of `.ing` and we're golden. :)
+",herrbischoff,2015-11-06 00:26:31
+78,2015-11-06 00:26:31,"Merged by other means.
+",herrbischoff,2015-11-06 00:26:31
+78,2015-11-06 01:18:06,"Thank you :smiley:
+",18z,2015-11-06 00:26:31
+77,2015-11-01 10:31:39,"Will set the screenshot file name to e.g. `Example name [date] at [time]`.
+",gillstrom,2015-11-01 12:43:32
+77,2015-11-01 10:31:58,":+1: 
+",vinkla,2015-11-01 12:43:32
+77,2015-11-01 12:43:29,"Nice addition, thanks!
+",herrbischoff,2015-11-01 12:43:32
+76,2015-10-31 16:43:32,,tylercrumpton,2015-10-31 23:47:32
+76,2015-10-31 23:47:22,"Thanks!
+",herrbischoff,2015-10-31 23:47:32
+75,2015-10-30 04:26:41,"`hdiutil burn /path/to/file.iso`
+",18z,2015-11-02 06:22:07
+75,2015-10-30 07:44:59,"Please read the contribution guidelines.
+",herrbischoff,2015-11-02 06:22:07
+74,2015-10-30 04:04:21,,JEphron,2015-11-04 11:55:32
+74,2015-10-30 07:50:04,"Thanks for your suggestion. **Don't** restructure existing commands while adding yours. Plus, read the contribution guidelines.
+",herrbischoff,2015-11-04 11:55:32
+74,2015-11-03 17:09:38,"Okay. Should be fixed now.
+",JEphron,2015-11-04 11:55:32
+74,2015-11-04 11:55:28,"Thanks.
+",herrbischoff,2015-11-04 11:55:32
+73,2015-10-29 22:53:35,"Add ""Disable Auto-Hide Delay"" to Dock section.
+",nyanfly,2015-11-04 11:58:38
+73,2015-10-30 07:52:57,"Thanks. This could use a short description. Change ""Disable"" to ""Set"" and explain what it does and how to set it to the default value.
+",herrbischoff,2015-11-04 11:58:38
+73,2015-11-04 11:58:38,"As this pull request is kind of messed up, I'm closing it and add the suggestion myself. Please learn how to properly create pull requests before contributing. Thanks.
+",herrbischoff,2015-11-04 11:58:38
+72,2015-10-29 18:50:05,"Added DejaVu Sans Mono, a font based on Bitstream Vera, to Terminal Fonts.
+",phmullins,2015-10-30 07:55:06
+72,2015-10-29 19:21:58,"Please see my inline comment.
+",herrbischoff,2015-10-30 07:55:06
+72,2015-10-30 07:55:16,"Merged.
+",herrbischoff,2015-10-30 07:55:06
+71,2015-10-29 18:10:46,"Thu Oct 29 18:10:12 GMT 2015
+
+Add kextstat to Kernel Extensions section.
+",rprimus,2015-10-29 19:24:01
+71,2015-10-29 19:24:11,"Thanks. Merged.
+",herrbischoff,2015-10-29 19:24:01
+70,2015-10-29 16:49:25,,Plastix,2015-10-30 07:56:04
+70,2015-10-29 19:25:06,"Please sort correctly.
+",herrbischoff,2015-10-30 07:56:04
+70,2015-10-29 22:13:39,"Sorry! Updated commit to be in alphabetical order. 
+",Plastix,2015-10-30 07:56:04
+69,2015-10-29 16:42:55,"This sets a text on the login window.
+
+If you want me to place it in any other way I'll fix it.
+",gillstrom,2015-10-30 07:56:55
+69,2015-10-29 16:44:18,":+1: 
+",vinkla,2015-10-30 07:56:55
+69,2015-10-29 19:27:05,"Excellent addition, but please change it so it reads ""Login Window"" in all places.
+",herrbischoff,2015-10-30 07:56:55
+69,2015-10-29 20:54:05,"It should now say `Login Window` everywhere!
+",gillstrom,2015-10-30 07:56:55
+69,2015-10-30 07:57:12,"Great, thanks! Merged.
+",herrbischoff,2015-10-30 07:56:55
+68,2015-10-29 14:11:12,"Reference https://gist.github.com/wesbos/f38ce56002292db71a82
+",vinkla,2015-10-29 15:52:41
+68,2015-10-29 14:15:01,"What do you like the new `snippet` label? Maybe there is a better name …
+",vinkla,2015-10-29 15:52:41
+68,2015-10-29 15:36:13,"Please see my inline comment. Other than that, I believe a new label is not necessary, as most of these additions are snippets in one way or the other.
+",herrbischoff,2015-10-29 15:52:41
+68,2015-10-29 15:46:41,"Okay, I'll remove it.
+",vinkla,2015-10-29 15:52:41
+68,2015-10-29 15:51:56,"Done.
+",vinkla,2015-10-29 15:52:41
+68,2015-10-29 15:52:53,"Great! Merged. Thanks.
+",herrbischoff,2015-10-29 15:52:41
+68,2015-10-29 16:08:36,":+1: 
+",vinkla,2015-10-29 15:52:41
+67,2015-10-29 14:03:09,,ryansouthern,2015-10-29 14:04:11
+66,2015-10-29 13:32:51,,janost,2015-10-29 15:59:40
+66,2015-10-29 15:10:53,"Nice addition! Please see my inline comment.
+",herrbischoff,2015-10-29 15:59:40
+66,2015-10-29 15:21:42,"Thanks for the review. Your suggestion has been applied.
+",janost,2015-10-29 15:59:40
+66,2015-10-29 15:32:39,"Now just [sort the entry correctly](https://github.com/herrbischoff/awesome-osx-command-line/blob/master/contributing.md) in its category and I will merge.
+",herrbischoff,2015-10-29 15:59:40
+66,2015-10-29 15:56:46,"Apologies for missing that. Fixed.
+",janost,2015-10-29 15:59:40
+66,2015-10-29 15:59:47,"Thanks! Merged.
+",herrbischoff,2015-10-29 15:59:40
+65,2015-10-29 02:18:32,"Hi. Does anyone knows how to enable this? show desktop previews right away without hovering the mouse at the top/desktops? TIA
+",rad182,2016-11-10 12:36:32
+65,2015-11-27 13:04:43,"I'd love if there was this feature
+",darlanmendonca,2016-11-10 12:36:32
+65,2016-02-06 18:08:06,"Kind of a hack, but you can set your top left hot corner to launch Mission Control, and your mouse is already up there.
+",ryanshuck,2016-11-10 12:36:32
+65,2016-11-10 12:36:32,"As there have been no answers in over a year, I'm going to close this issue.
+",herrbischoff,2016-11-10 12:36:32
+64,2015-10-28 21:02:22,"When I tried the Disable Chime when Charging it would not work, so i changed the second line and it worked for me after that
+",vladmrnv,2015-10-29 05:33:20
+64,2015-10-29 05:33:37,"Thanks. That makes total sense. Merged.
+",herrbischoff,2015-10-29 05:33:20
+63,2015-10-28 16:53:38,"The ""Stop Responding to the Keyboard Media Keys"" tip was great - but later on, I wanted to re-enable it. Replacing `unload` with `load` does the trick to restore the default behavior!
+",bryanjclark,2015-10-29 05:35:19
+63,2015-10-29 05:35:19,"I'm not going to merge this for the time being as it should be clear that `unload` and `load` are the essential commands here.
+",herrbischoff,2015-10-29 05:35:19
+62,2015-10-28 09:07:27,"Macs may be reliable, but they have been known to freeze up on occasion. If you'd rather not deal with having to manually force a shutdown, you can use this Terminal command to make OS X instantly reboot on a freeze.
+",djonsson,2015-10-29 08:41:36
+62,2015-10-29 05:37:53,"Good addition, thanks! Please see my inline comment.
+",herrbischoff,2015-10-29 08:41:36
+62,2015-10-29 08:34:47,"Thanks! 
+The heading is now updated according to your suggestion, please see 3f9bdda.
+",djonsson,2015-10-29 08:41:36
+61,2015-10-27 23:49:08,,ceooten,2015-10-28 00:19:16
+61,2015-10-28 00:19:16,"Please do not send nonsensical pull requests.
+",herrbischoff,2015-10-28 00:19:16
+58,2015-10-27 21:01:06,"Work around this bug:
+
+<S_CODE_TOKEN>
+",maximveksler,2015-11-04 13:04:04
+58,2015-10-28 06:08:04,". 
+",Dr00pe,2015-11-04 13:04:04
+58,2015-10-29 05:39:43,"Did you install Zsh via Homebrew? Are you sure your Homebrew setup is correct? I have never had that problem.
+",herrbischoff,2015-11-04 13:04:04
+58,2015-10-29 09:15:24,"Thu Oct 29 09:14:26 GMT 2015
+
+The sudo line should end with `&& \`, not just `\`.
+",rprimus,2015-11-04 13:04:04
+58,2015-10-29 15:12:35,"@rprimus: Indeed. Missed that.
+
+@maximveksler: Please fix. Also, double-check what I've asked in my [previous comment](https://github.com/herrbischoff/awesome-osx-command-line/pull/58#issuecomment-152082229).
+",herrbischoff,2015-11-04 13:04:04
+58,2015-10-29 17:33:20,"Thanks for the catch @rprimus.
+
+@herrbischoff - yes, zsh is installed with brew. El Capitan won't let you edit /bin so my homebrew is set to /usr/local/bin which is not enabled by default Apple /etc/shells setup.
+",maximveksler,2015-11-04 13:04:04
+58,2015-10-29 19:32:56,"Interesting. `/usr/local/bin` is the Homebrew default, so that's fine. Although I never had any problem with installing Zsh from scratch without manually adding it to `/etc/shells`. Since there is also no caveat listed in Homebrew, I assume this is not a known problem.
+
+<S_CODE_TOKEN>
+
+Compare bash:
+
+<S_CODE_TOKEN>
+",herrbischoff,2015-11-04 13:04:04
+58,2015-10-29 19:59:40,"Thu Oct 29 19:56:50 GMT 2015
+
+I believe I also had to manually add the entry to `/etc/shells`.
+
+This same advice is given in this [blog post](http://zanshin.net/2013/09/03/how-to-use-homebrew-zsh-instead-of-max-os-x-default/).
+
+A search for 'homebrew zsh /etc/shells' shows many results that suggest this.
+",rprimus,2015-11-04 13:04:04
+58,2015-11-03 10:23:15,"Great. so should we merge this ?
+",maximveksler,2015-11-04 13:04:04
+58,2015-11-03 21:54:57,"FWIW, I didn't have to add `/usr/local/bin/zsh` to `/etc/shells` on my new Air running El Cap.
+",unixorn,2015-11-04 13:04:04
+58,2015-11-03 23:19:46,"@unixorn: That's exactly been my experience on every OS X version including El Capitan. The only time I had to add something to `/etc/shells` was when using a newer Bash version, which is kind of logical given that OS X ships with a default version installed.
+
+I'd like to hear other voices about their experience before merging this change. I'm still not convinced that having to add it manually is expected behavior.
+",herrbischoff,2015-11-04 13:04:04
+58,2015-11-04 00:16:42,"@herrbischoff Thinking back, I may have set my shell to brew's zsh using System Preferences instead of `chsh`, so that isn't necessarily a useful data point.
+",unixorn,2015-11-04 13:04:04
+58,2015-11-04 10:07:09,"@unixorn: Thanks for your input.
+",herrbischoff,2015-11-04 13:04:04
+58,2015-11-04 13:04:00,"To finally put this to rest, I have set up a fresh VM with 10.11.1 and followed the steps. Zsh is indeed not added to `/etc/shells` on install. Hence I'm merging this pull request.
+",herrbischoff,2015-11-04 13:04:04
+58,2015-11-04 13:19:05,"Just opened a pull request at the Homebrew repository adding a notice to the zsh formula.
+",herrbischoff,2015-11-04 13:04:04
+57,2015-10-27 03:47:03,"Added a command to add a space in your dock
+",vladmrnv,2015-10-27 04:16:23
+57,2015-10-27 04:07:34,"Thanks for your suggestion. Please see my inline comments.
+",herrbischoff,2015-10-27 04:16:23
+57,2015-10-27 04:11:48,"I'm still trying to learn how to properly do pull requests, please let me know if I did it correctly, thank you.
+",vladmrnv,2015-10-27 04:16:23
+57,2015-10-27 04:17:00,"It's all good! :) And don't worry, we all learn something new every day. Merged.
+
+You should always work on a branch in a forked project instead of editing `master`. This way you always have the main branch clean and your changes are just in the branch. Actually, this is generally a good practice while working with Git.
+",herrbischoff,2015-10-27 04:16:23
+57,2015-10-27 08:05:17,"Thank you, Ill keep your suggestions in mind next time I try to work on something.
+",vladmrnv,2015-10-27 04:16:23
+57,2015-10-27 08:20:40,":+1: 
+",vinkla,2015-10-27 04:16:23
+56,2015-10-26 21:58:12,"My vim removed some ending whitespace of other lines.
+",shichao-an,2015-10-27 01:38:32
+56,2015-10-26 23:50:30,"Thanks for the suggestion. Please see my inline comments.
+",herrbischoff,2015-10-27 01:38:32
+56,2015-10-27 00:02:47,"Fixed!
+",shichao-an,2015-10-27 01:38:32
+56,2015-10-27 01:38:27,"Great, thanks! Merging.
+",herrbischoff,2015-10-27 01:38:32
+55,2015-10-26 20:24:56,"AppleScript commands for getting the currently displayed page from Safari as text, as html source or its URL.
+",cmittendorf,2015-10-29 15:24:49
+54,2015-10-26 18:11:36,"PNGs look sexier, JPEG is less suitable for on-screen content. And HD space doesn't matter as much as it did some time ago.
+You can see the difference by taking both screenshots and zooming in just a little bit.
+",Hummer12007,2015-10-27 00:00:19
+54,2015-10-27 00:00:19,"Sure, but since PNG is standard the point of this is a demonstration of how to change the output format as well.
+",herrbischoff,2015-10-27 00:00:19
+53,2015-10-26 15:55:14,"Takes a screenshot after 3 seconds and displays in Preview.
+",sdayal,2015-10-26 16:34:54
+53,2015-10-26 16:34:50,"Thanks. Merged.
+",herrbischoff,2015-10-26 16:34:54
+51,2015-10-26 05:26:22,"Added gitx command to open from current folder
+",nsriram,2015-10-26 16:31:00
+51,2015-10-26 16:31:00,"This is a trivial command and also would be better executed by symlinking the GitX executable to `/usr/local/bin`.
+",herrbischoff,2015-10-26 16:31:00
+50,2015-10-26 01:36:34,"Will instantly utilize 100% of computer's CPU
+",jesusgalvan,2015-10-26 01:41:48
+50,2015-10-26 01:41:48,"This is a general Unix command.
+",herrbischoff,2015-10-26 01:41:48
+49,2015-10-25 18:44:29,"Takes a screenshot after 3 seconds and displays in Preview.
+",sdayal,2015-10-25 22:36:41
+49,2015-10-25 22:36:41,"Please [read my comments](https://github.com/herrbischoff/awesome-osx-command-line/pull/48#issuecomment-150951892) more closely. Especially the part of the fresh clone.
+",herrbischoff,2015-10-25 22:36:41
+48,2015-10-25 17:17:11,"Takes a screenshot after 3 seconds and displays in Preview
+",sdayal,2015-10-25 18:29:04
+48,2015-10-25 18:29:04,"Please see the inline comment. Also, resubmit on a fresh clone and create a new branch off of master instead of editing your master.
+",herrbischoff,2015-10-25 18:29:04
+47,2015-10-25 15:30:41,"Basic grammar changes in a couple of locations
+",harshalbot,2015-10-25 16:35:35
+46,2015-10-24 21:28:29,"I've fucked something up last week, so it's sometimes easier to do the right thing from scratch.
+",Hummer12007,2015-10-24 21:33:24
+46,2015-10-24 21:36:29,"Thanks. I'm happy you did it. I had already added the entry on my own. I have merged yours and removed my duplicate. This way the credit is where it should be. ;)
+",herrbischoff,2015-10-24 21:33:24
+45,2015-10-24 20:09:07,"Fix ""Remove Apple Remote Desktop Settings"" so it doesn't fight with the defaults system and make the commands independent of each other since some of the items being removed may not currently exist
+",perryclarke,2015-10-25 18:29:59
+45,2015-10-25 07:08:49,":+1: 
+Fixes #40 so don't forget to close it after merge.
+",G07cha,2015-10-25 18:29:59
+45,2015-10-25 18:29:55,"Thanks, merging.
+",herrbischoff,2015-10-25 18:29:59
+44,2015-10-24 19:18:21,"This is the work in progress pull request to add Travis support.
+
+This closes #43
+",vinkla,2016-02-29 11:33:57
+44,2015-10-24 19:46:15,"@herrbischoff I don't know which setup we want to use but in this PR we test the `setup.sh` script and see how well it performs on OS X 10.9, 10.10 and 10.11. Let me know what you think about this.
+",vinkla,2016-02-29 11:33:57
+44,2015-10-24 21:25:02,"@vinkla: Nice work. I'm wondering though why the badge still shows that the build is failing although it is passing.
+
+Apart from that little hiccup, I think we should test both at least `setup.sh`, `brew.sh` and the sourcing of the `aliases` and `function` files. If all of them go smoothly, this would account for the most basic code glitches like missing colons, quotes and the like. It would also make sure that all Homebrew formulas are available and installing correctly.
+
+I suppose you removed the pre-sudo check because Travis would otherwise complain, correct?
+
+This automation is going to be a treat when finally set up. ;)
+",herrbischoff,2016-02-29 11:33:57
+44,2015-10-24 21:32:01,"@herrbischoff The reason it show failing is because I pointed it against the `master` branch. 
+",vinkla,2016-02-29 11:33:57
+44,2015-10-24 21:33:11,"Why should we test the other files? Isn't it better we just test all snippets?
+",vinkla,2016-02-29 11:33:57
+44,2015-10-24 21:38:41,"Well, I believe that as long as we're testing, we could as well test the whole bunch for code problems. That's my thinking. Any reason why we shouldn't?
+",herrbischoff,2016-02-29 11:33:57
+44,2015-10-24 21:51:00,"Maybe we should but I don't agree we should use similar setup to Mathias Bynens dotfiles. IMO I think we should only create a script which executes all the snippets from the README. We don't provide dotfiles like in Mathias project.
+
+What is your opinion on this?
+",vinkla,2016-02-29 11:33:57
+44,2015-10-24 22:12:13,"Ahh, now I see what you mean. Sure, that could be a way. I thought that by adding extra files that would be a place to put all the nice functions and solutions people come up with without cluttering the main list. Kind of an expanded version of the list, for inspiration and copy and paste.
+
+A single script testing the main README would of course ease the burden of having to put stuff in several places. Well...
+
+Okay, agreed. For now we stick with the main list. Are you going to take a stab at the script iterating through the commands or should I?
+",herrbischoff,2016-02-29 11:33:57
+44,2015-10-24 22:22:19,"Okay, cool. For me it works either way, maybe it is better if you do it? Since you seem to know all about the awesome terminal stuff. I can help but I think it will become better if you do. Thats okay with you?
+",vinkla,2016-02-29 11:33:57
+44,2015-10-24 22:30:21,"Sure, I'm going for it. ;)
+",herrbischoff,2016-02-29 11:33:57
+44,2015-10-24 22:39:58,":+1: 
+",vinkla,2016-02-29 11:33:57
+44,2015-10-24 22:57:49,"Okay, I let my `sed`-fu out and cooked something up along the lines of:
+
+<S_CODE_TOKEN>
+sed -n '/^<S_CODE_TOKEN>/p' < README.md | sed '/^<S_CODE_TOKEN>```
+
+:D
+
+This gets every command out as a single line which we can then run through a `for` loop. However, commands that require, for example, a disk image will have none. We can either create simple test files and put them in a `test` folder or need to think of a way to skip those. Additionally, commands like restarting the system and unlocking FileVault automatically would very likely put Travis either in an infinite testing loop or simply fail every time.
+
+Any thoughts on this?
+",herrbischoff,2016-02-29 11:33:57
+44,2015-10-24 23:19:38,"Added the whole contraption. Somehow one clipboard command refuses to play along. I'll have to look into it later.
+",herrbischoff,2016-02-29 11:33:57
+44,2015-10-25 18:44:31,"Actually I've no idea how rebooting system and FileVault will work on Travis. I guess it could be hard to get it to pass. Then again, I don't know. We'll have to test :)
+
+Maybe we should point the travis against the new `test.sh` file? I can do that if you want?
+",vinkla,2016-02-29 11:33:57
+44,2015-11-06 07:42:35,"Any progress on this?
+",vinkla,2016-02-29 11:33:57
+44,2016-02-29 11:33:56,"Closing in favour of #102 
+",vinkla,2016-02-29 11:33:57
+43,2015-10-24 18:34:59,"Create a `.travis.yml` file that runs test on all included bash scripts along with the alias and function files.
+",herrbischoff,2016-02-29 11:55:29
+43,2015-10-25 07:05:23,"@herrbischoff what about pull request validation? For correct style and script? I can write some code for style check btw.
+",G07cha,2016-02-29 11:55:29
+43,2015-10-25 18:36:37,"@G07cha: That would indeed be nice. You can send a PR to the `travis` branch so @vinkla, you and I can take a look. Thanks!
+",herrbischoff,2016-02-29 11:55:29
+43,2016-02-29 11:55:29,"Closing this due to #102.
+",herrbischoff,2016-02-29 11:55:29
+42,2015-10-24 09:32:27,"Add sublime text alias
+",MrGosti,2015-10-24 10:38:42
+42,2015-10-24 10:06:48,"Doesn't Sublime already ship with a `subl` CLI tool?
+",vinkla,2015-10-24 10:38:42
+42,2015-10-24 10:38:42,"Indeed, and how to link to the executable is straight in the [documentation](http://www.sublimetext.com/docs/3/osx_command_line.html). Which is also a cleaner way to do it than the proposed PR. Besides, it was also sorted incorrectly.
+",herrbischoff,2015-10-24 10:38:42
+41,2015-10-24 07:37:59,,tricinel,2015-10-29 19:38:28
+41,2015-10-24 08:47:21,"Thanks for your suggestion. This is a little bit too much thrown together for my taste. Please make the ""Empty Trash"" command separate from the system log deletion. I would not expect my system logs to be wiped by a trash cleanup.
+
+Also, the Metadata delete command is a duplicate.
+",herrbischoff,2015-10-29 19:38:28
+41,2015-10-24 11:07:34,"Ouch, sorry, yeah the Metadata delete was there. I expected to find it in the Metadata not in Find category though :) Do you want me to remove my addition or does it make sense to have it in the Metadata instead of the Find category?
+
+Splitting that Trash command though, you're right.
+",tricinel,2015-10-29 19:38:28
+41,2015-10-28 07:53:46,"Done.
+",tricinel,2015-10-29 19:38:28
+41,2015-10-29 15:38:22,"Thanks. Now please rebase your clone with the new additions so there are no more merge conflicts and I can merge.
+",herrbischoff,2015-10-29 19:38:28
+41,2015-10-29 17:13:26,"There's actually a lot of conflicts, the rebase fails. I can however fetch and merge then push.
+",tricinel,2015-10-29 19:38:28
+41,2015-10-29 19:38:19,"I see you worked on the master branch, which is almost always a bad idea. The easiest way would be to close this pull request, delete the clone directory and start fresh. Always work in a branch to avoid these kinds of rebase issues. Master needs to be clean at all times.
+",herrbischoff,2015-10-29 19:38:28
+40,2015-10-23 17:47:54,"In the ""Remove Apple Remote Desktop Settings"" entry (https://github.com/herrbischoff/awesome-osx-command-line#remove-apple-remote-desktop-settings) preferences are removed by ""rm""ing the preference files which doesn't work reliably because of the way preferences are cached.  The correct way to remove prefs is using `defaults delete`.
+",perryclarke,2015-10-25 18:30:41
+40,2015-10-24 05:39:54,"Thanks for the suggestion. Would you mind creating a pull request for it?
+",herrbischoff,2015-10-25 18:30:41
+40,2015-10-25 18:30:41,"Fixed through #45.
+",herrbischoff,2015-10-25 18:30:41
+39,2015-10-23 16:49:26,"The following command didn't work:
+
+<S_CODE_TOKEN>
+
+I'm using El Capitan and the result was this:
+
+<S_CODE_TOKEN>
+",gfpacheco,2016-10-03 20:55:35
+39,2015-10-24 05:41:23,"Ahh... You need to use `sudo` of course. ;) I'm going to fix that. Please confirm.
+
+![](https://imgs.xkcd.com/comics/sandwich.png)
+",herrbischoff,2016-10-03 20:55:35
+39,2015-10-24 20:15:42,"I don't think a missing sudo was the problem. I'm getting the exact same result when running the command with sudo:
+
+<S_CODE_TOKEN>
+
+Outputs:
+
+<S_CODE_TOKEN>
+",gfpacheco,2016-10-03 20:55:35
+39,2015-10-24 21:43:30,"Hmm... Maybe try adding `.plist`, like `com.apple.mDNSResponder.plist`. Does that work?
+",herrbischoff,2016-10-03 20:55:35
+39,2015-10-25 00:25:14,"Nop, sorry
+",gfpacheco,2016-10-03 20:55:35
+39,2015-10-25 00:39:45,"I'm beginning to suspect that this may be due to the new System Integrity Protection feature in El Capitan. If you like, you could try rebooting while holding `Cmd-R`, opening the terminal and then enter `csrutil disable` followed by `reboot`. Once booted, run the Bonjour command again. Does it work now?
+
+To enable SIP again, repeat the above steps but run `csrutil enable`.
+",herrbischoff,2016-10-03 20:55:35
+39,2015-10-29 15:43:00,"@gfpacheco: Does my last suggestion work?
+",herrbischoff,2016-10-03 20:55:35
+39,2015-10-29 23:15:03,"Sorry, I still didn't have time to try it. I'll try it soon
+",gfpacheco,2016-10-03 20:55:35
+39,2015-11-14 15:20:45,"No news is good news. Closing.
+",herrbischoff,2016-10-03 20:55:35
+39,2016-02-02 18:52:42,"Adding the **`.plist`** fixed the error on my machine:
+
+`$ sudo defaults write /System/Library/LaunchDaemons/com.apple.mDNSResponder.plist ProgramArguments -array-add ""-NoMulticastAdvertisements""`
+
+_There were two files in the directory: `com.apple.mDNSResponder.plist` and       `com.apple.mDNSResponderHelper.plist` _
+
+OS X El Capitan Version 10.11.2 (15C50)
+MacBook Pro (Retina, 15-inch, Mid 2015)
+",wallter,2016-10-03 20:55:35
+39,2016-02-03 23:19:30,"Walter - did you do anything else? I can't replicate the fix that you did, even with SIP turned off.
+",ryanshuck,2016-10-03 20:55:35
+39,2016-02-05 01:00:29,"After a little more work, I found a repeatable process.
+
+In recovery, run 
+csrutil disable && reboot
+Once back in OS X, log in as an admin user and run 
+sudo launchctl unload /System/Library/LaunchDaemons/com.apple.mDNSResponder.plist
+sudo defaults write /System/Library/LaunchDaemons/com.apple.mDNSResponder.plist ProgramArguments -array-add ""-NoMulticastAdvertisements""
+sudo launchctl load /System/Library/LaunchDaemons/com.apple.mDNSResponder.plist
+Reboot and go back into recovery and run
+csrutil enable && reboot
+
+That worked for me.
+",ryanshuck,2016-10-03 20:55:35
+39,2016-03-30 15:44:01,"@herrbischoff please re-open, adding .plist didn't work for me either. @ryanshuck solutions works though
+",mindfulmonk,2016-10-03 20:55:35
+39,2016-05-12 05:20:43,"Temporarily disabling SIP worked for me. As a side note, the plist file was XML beforehand. It is now an ""Apple binary property list"". Seems fine, though.
+",wKovacs64,2016-10-03 20:55:35
+39,2016-10-02 23:06:42,"Didn't work for me.
+
+I just went through the disable SIP>reboot>run commands>re-enable SIP process.
+mDNSResponder is still active and using RAM.
+
+OS X 10.11.6
+",GitTheHellOutaHere,2016-10-03 20:55:35
+39,2016-10-03 11:57:37,"You do realize that mDNSResponder absolutely needs to run because it's the local macOS DNS client, do you? Right, didn't think so.
+
+This command turns off picking up multicast advertisements (Zeroconf/Bonjour/Avahi). The fact that mDNSResponder still runs only indicates that you have been unsuccessful in mangling your system beyond usability but have otherwise probably achieved what you were looking for.
+
+You should really know about what exactly these things do **before** you disable SIP and/or run system level commands you find on the internet.
+",herrbischoff,2016-10-03 20:55:35
+39,2016-10-03 18:28:50,"Thanks for the reply - it's always nice to wake up to a snarky retort.
+Thankfully my system hasn't been ""mangled"" so that I may respond.
+
+BTW, you might investigate your Dictionary app sometime, because you used ""mangled"" incorrectly.
+
+> severely mutilate, disfigure, or damage by cutting, tearing, or crushing.
+
+I _thought_ mDNSResponder was necessary, but then while trying prevent more processes from calling home I ran across some pages discussing it and Bonjour and ways to disable it. Nowhere did they mention that mDNSResponder is essential and that entering the commands only disables the discovery ability, not actually mDNSResponder itself. Nor did they describe a method of testing to see if discovery was in fact disabled or not after entering the commands.
+
+I'm not sure the steps are necessary anyway since checking the box to **Disable all incoming connections** in the firewall pane also blocks Bonjour.
+
+> The firewall will block all sharing services, such as file sharing, screen sharing, Messages, Bonjour, and iTunes music sharing.
+
+I hope your day gets better for you. Keep workin' on it...good luck.
+",GitTheHellOutaHere,2016-10-03 20:55:35
+39,2016-12-22 04:35:45,"Apparently this is possible without disabling SIP:
+<S_CODE_TOKEN>
+
+See https://derflounder.wordpress.com/2016/08/22/disabling-bonjour-advertisement-on-os-x-el-capitan-and-later/",stefansundin,2016-10-03 20:55:35
+38,2015-10-23 16:27:40,"This command allows users with FileVault protected drives to restart their machine without it prompting for an unlock key at startup. This is especially useful for people working remotely over SSH who do not have physical access to enter the unlock key after a reboot.
+",RobJDavey,2015-10-24 08:49:10
+38,2015-10-24 05:51:40,"Nice suggestion! Please see my inline comments. Oh, and never mind the Travis build errors, I forgot to turn it off.
+",herrbischoff,2015-10-24 08:49:10
+38,2015-10-24 08:49:06,"Thanks! Merging.
+",herrbischoff,2015-10-24 08:49:10
+37,2015-10-23 07:55:39,,scottydelta,2015-10-23 08:02:47
+37,2015-10-23 08:02:42,"Looks good, thanks.
+",herrbischoff,2015-10-23 08:02:47
+36,2015-10-23 05:56:55,"Added commands for remaining battery backup time and percentage with title ""Battery Status"" in System Category.
+",scottydelta,2015-10-23 07:52:20
+36,2015-10-23 07:46:08,"Thanks for your suggestion. Please see my inline comments.
+",herrbischoff,2015-10-23 07:52:20
+35,2015-10-22 23:27:32,"I just wondered about creating a subfolder in this repo with several additional files:
+- A setup script, containing sane default settings for OS X
+- An alias file containing useful command snippets and shortcuts to be sourced
+- Separate alias files for functions and shortcuts for specific applications (as to give a home to solutions like #23) and environments
+
+The idea is obviously influenced by [Mathias Bynens' repo](https://github.com/mathiasbynens/dotfiles/blob/master/.osx) but I'd like to go beyond it, creating a structured collection of settings, aliases and shortcuts. Kind of like commented master config files for OS X. For Unix tools that need a config file, often there is a sample file with comments, explaining the settings. That's what I have in mind.
+
+What do you think?
+",herrbischoff,2015-10-25 18:38:22
+35,2015-10-23 05:47:37,"Would also be good if we could run tests on the snippets. Maybe using Travis?
+",vinkla,2015-10-25 18:38:22
+35,2015-10-23 07:49:52,"@vinkla: Interesting idea. Travis does support Mac OS as a testing target. However, writing effective tests for simple configuration changes could prove to be challenging, as there is usually no output. Also, Hardware-related tests will probably be impossible.
+",herrbischoff,2015-10-25 18:38:22
+35,2015-10-23 07:56:02,"We could just create a script that is executed and see how well it performs on different versions of OS X. Take a look at this repository: https://github.com/mikemcquaid/strap
+",vinkla,2015-10-25 18:38:22
+35,2015-10-23 08:08:24,"I see, so what you have in mind is a simple (global) check instead of adding tests for every snippet separately. ;)
+",herrbischoff,2015-10-25 18:38:22
+35,2015-10-23 08:15:20,"Yeah, that will make it easier to implement :)
+",vinkla,2015-10-25 18:38:22
+35,2015-10-23 08:26:50,"Alright. I will see if I find the time to work on the new content today. I'll leave the creation of the `.travis.yml` file to you. :) If you like, I'm going to add you as a collaborator when things are added and set up. This way you can trigger Travis builds at will.
+",herrbischoff,2015-10-25 18:38:22
+35,2015-10-23 08:31:21,"Aaah, cool! Let me know when I can start :)
+",vinkla,2015-10-25 18:38:22
+35,2015-10-24 18:26:05,"Alright, @vinkla: as of now you have push access to the repository. Use it wisely! ;)
+
+I have set up a new branch `setup-files` for us to work with. I believe the structure should be self-explanatory. I use Vim as my main code editor so the files are tailored to this environment. To spare yourself and others the pain of having to adjust editor settings manually, there is also an `.editorconfig` file. Which should (given the correct plugin for your code editor is installed) adjust the code formatting automatically.
+
+I believe the files should ultimately be in a separate folder which contains its own `README.md` with basic information about their intent and instructions on how to use them.
+
+Let's see what we can create! I'm especially looking forward to how the Travis tests will run. They are set to run only when a `.travis.yml` file is present. So as soon as you add one, it's go time.
+",herrbischoff,2015-10-25 18:38:22
+35,2015-10-24 19:13:33,"Alright! I'll get started directly :)
+",vinkla,2015-10-25 18:38:22
+35,2015-10-25 18:38:22,"Closing this ticket because for now we're sticking to the main list.
+",herrbischoff,2015-10-25 18:38:22
+34,2015-10-22 17:49:30,"I am proposing adding a new way of changing the wallpaper that works on OSX Machines post-Mavericks. Starting in OSX the settings for the wallpaper is stored in a sqllite database so the currently displayed method doesn't work. 
+",nstrayer,2015-10-25 18:31:49
+34,2015-10-24 06:21:32,"Nice catch! Please see my inline comments.
+",herrbischoff,2015-10-25 18:31:49
+34,2015-10-25 02:12:31,"Awesome. I made the suggested changes!
+",nstrayer,2015-10-25 18:31:49
+33,2015-10-21 19:38:56,"> uname -a
+> Darwin MacBook-Pro.local 15.0.0 Darwin Kernel Version 15.0.0: Wed Aug 26 16:57:32 PDT 2015; root:xnu-3247.1.106~1/RELEASE_X86_64 x86_64
+",sdayal,2015-10-21 19:43:26
+33,2015-10-21 19:43:26,"This is a general Unix command which is not specific to OS X. This is already excessively documented elsewhere.
+",herrbischoff,2015-10-21 19:43:26
+32,2015-10-21 19:20:11,,sdayal,2015-10-21 19:23:59
+32,2015-10-21 19:23:59,"Duplicate: https://github.com/herrbischoff/awesome-osx-command-line#search-via-spotlight
+",herrbischoff,2015-10-21 19:23:59
+31,2015-10-21 02:22:21,,jesusgalvan,2015-10-21 14:00:52
+31,2015-10-21 02:33:52,"Strictly not a Mac OS X thing, though.
+",Starefossen,2015-10-21 14:00:52
+31,2015-10-21 02:37:00,"Oops sorry. I got too ahead of myself without fully reading the readme.
+",jesusgalvan,2015-10-21 14:00:52
+31,2015-10-21 14:00:52,"Okay, so I'm going ahead and close this pull request.
+",herrbischoff,2015-10-21 14:00:52
+30,2015-10-21 01:22:53,"Adding the `-D` flag prevents passwords that aren't for Wi-Fi Networks from being shown.
+
+<S_CODE_TOKEN>
+",rileyjshaw,2015-10-21 01:32:29
+30,2015-10-21 01:32:23,"Neat!
+",herrbischoff,2015-10-21 01:32:29
+29,2015-10-21 01:18:57,"Pretty useful when combined with ""Show Wi-Fi Network Passwords"" :)
+",rileyjshaw,2015-10-21 01:39:54
+29,2015-10-21 01:28:22,"Cool! :) So we can run one humongous command:
+
+<S_CODE_TOKEN>
+
+Or, combined with the shortcut above, short and sweet:
+
+<S_CODE_TOKEN>
+
+The power of the command line shell.
+
+Please do sort correctly though and I will merge.
+",herrbischoff,2015-10-21 01:39:54
+29,2015-10-21 01:33:37,"> Order titles alphabetically within each category.
+
+Gah, I totally missed that in the contribution guidelines! Sorry about that, fixing now.
+",rileyjshaw,2015-10-21 01:39:54
+29,2015-10-21 01:36:05,"Alright, fixed the order
+",rileyjshaw,2015-10-21 01:39:54
+29,2015-10-21 01:39:50,"No problem. Looks good now! Merging.
+And for today, I'm going off to bed. In case you submit more pull requests. ;)
+",herrbischoff,2015-10-21 01:39:54
+29,2015-10-21 01:40:49,"Heh, alright – good night!
+",rileyjshaw,2015-10-21 01:39:54
+28,2015-10-21 00:47:12,"Rather than `grep`ing for `password:`, we can simply use the `-w` flag.
+
+<S_CODE_TOKEN>
+",rileyjshaw,2015-10-21 01:13:54
+28,2015-10-21 00:59:34,"Nice catch! :) If you get rid of the trailing double quotes, I will merge.
+",herrbischoff,2015-10-21 01:13:54
+28,2015-10-21 01:12:43,"Whoops! Fixed :)
+",rileyjshaw,2015-10-21 01:13:54
+28,2015-10-21 01:13:48,"Neat, thanks!
+",herrbischoff,2015-10-21 01:13:54
+27,2015-10-21 00:32:40,"If multiple windows are open, it chooses the top-most one.
+",rileyjshaw,2015-10-21 01:14:31
+27,2015-10-21 00:45:04,"See inline comment. Nice addition though! Please adjust and put at the top of Opening Things to be properly sorted.
+",herrbischoff,2015-10-21 01:14:31
+27,2015-10-21 00:49:46,"@herrbischoff good call, updated the title :)
+",rileyjshaw,2015-10-21 01:14:31
+27,2015-10-21 00:56:23,"Thanks. Now just sort properly and I will merge.
+",herrbischoff,2015-10-21 01:14:31
+27,2015-10-21 01:00:08,"Done.
+",rileyjshaw,2015-10-21 01:14:31
+27,2015-10-21 01:14:27,"Thanks!
+",herrbischoff,2015-10-21 01:14:31
+26,2015-10-21 00:27:35,"Awesome repo!  Curious if you think it might be a good idea to add the following mac dev setup focused repo as a link?  The repo has a good amount of Mac shell commands and tools.
+
+https://github.com/donnemartin/dev-setup
+
+If so, I suppose it would probably have to go under a new section?
+
+If there's interest I can submit a pull request.  Thanks!
+",donnemartin,2015-10-21 00:59:59
+26,2015-10-21 00:37:29,"Thanks! Looks like an interesting repository. However, there's a little too much stuff thrown together for my taste though.
+",herrbischoff,2015-10-21 00:59:59
+26,2015-10-21 00:59:59,"No problem, closing.
+",donnemartin,2015-10-21 00:59:59
+25,2015-10-21 00:24:31,,ed-flanagan,2015-10-21 00:28:54
+25,2015-10-21 00:28:51,"Good addition, thanks.
+",herrbischoff,2015-10-21 00:28:54
+24,2015-10-20 23:18:25,"From [Show Wi-Fi Network Passwords](https://github.com/herrbischoff/awesome-osx-command-line#show-wi-fi-network-passwords), running:
+
+<S_CODE_TOKEN>
+
+produces the following error on my machine (latest OSX):
+
+<S_CODE_TOKEN>
+",rileyjshaw,2015-10-20 23:29:24
+24,2015-10-20 23:28:15,"Of course you need to exchange ""ROUTERNAME"" with the SSID of the router you wish to query the password entry from. ;) I will clarify this in the description.
+",herrbischoff,2015-10-20 23:29:24
+23,2015-10-20 20:41:22,"this may be a little too involved, but let me know what you think.  it's pretty cool!
+",boneskull,2015-10-21 08:11:05
+23,2015-10-20 23:56:57,"I'm conflicted. While surely an interesting solution, it's very specific to Dash.app and not a simple plist change. I don't want this list to get too bloated with all kinds of scripts. Comments anyone?
+",herrbischoff,2015-10-21 08:11:05
+23,2015-10-21 06:42:25,"I agree, it's too specific
+",G07cha,2015-10-21 08:11:05
+23,2015-10-21 08:11:05,"very well.  [gist](https://gist.github.com/boneskull/4b6378784e2d719dd543)
+",boneskull,2015-10-21 08:11:05
+23,2015-10-22 23:35:17,"I have just had an idea on how to collect all those useful things. Please see issue #35 and let me know what you think. Thanks.
+",herrbischoff,2015-10-21 08:11:05
+22,2015-10-20 20:13:26,"suggestions welcome, thanks!
+",boneskull,2015-12-03 23:44:37
+22,2015-10-20 23:47:26,"Thanks for your suggestion. Although nice, I feel this is a little too specific to Homebrew to be included in this list. I'll leave this open for the time being to give others the opportunity to comment. If there is enough interest, I may expand the Package Managers category. Still, I'd see this better placed in a Gist that is linked to.
+",herrbischoff,2015-12-03 23:44:37
+22,2015-10-21 01:41:39,"what about making it the example for doing the periodic job, fills two roles, allowing people to see how to run the periodic job as well as giving a practical example 
+",plessbd,2015-12-03 23:44:37
+22,2015-10-21 01:52:36,"@plessbd: Intriguing idea. Let me sleep on it. 
+",herrbischoff,2015-12-03 23:44:37
+22,2015-10-21 06:44:17,"+1 for link to Gist.
+",G07cha,2015-12-03 23:44:37
+22,2015-10-21 08:11:35,"Where would I put the link?
+",boneskull,2015-12-03 23:44:37
+22,2015-10-21 08:14:48,"@boneskull, good question, my opinion is to set link with short description, like:
+`[.plist file](https://gist.github.com/your-gist)`
+But @herrbischoff may have different opinion so let's wait for him.
+",G07cha,2015-12-03 23:44:37
+22,2015-10-22 23:33:15,"I would either favor the default template idea, explaining a little more what's going on in the example or using it in a collection of system defaults like proposed in #35. Let me know what you think!
+",herrbischoff,2015-12-03 23:44:37
+22,2015-10-23 15:51:50,"Hi,
+the links that are included in this PR could not be resolve.
+
+<S_CODE_TOKEN>
+
+Correct link is this?
+http://cdn.curvve.com/wp-content/uploads/2013/09/homebrew_osx_logo.png
+",d6rkaiz,2015-12-03 23:44:37
+22,2015-10-24 05:54:06,"Confirmed. The link does not resolve. The replacement link does however.
+",herrbischoff,2015-12-03 23:44:37
+22,2015-12-03 23:44:37,"To finally resolve this long-running PR, I have decided with 479cd58 to add a new file `launchagents.md` and put the submission (along with the correct image link) in there. I have also done the same for functions. It would be a shame for the good and creative ideas to go to waste, so feel free to contribute in those files. This should keep things neat and tidy while still being comprehensive and useful.
+
+@boneskull: If you're interested, I can delete the entry so you can re-add it for proper attribution. Let me know.
+",herrbischoff,2015-12-03 23:44:37
+22,2015-12-04 05:23:30,"@herrbischoff not necessary. thanks!
+",boneskull,2015-12-03 23:44:37
+21,2015-10-20 15:53:09,"Make iTunes ignore users pressing the media keys.
+",vinkla,2015-10-21 13:56:28
+21,2015-10-20 23:59:36,"Additionally, running the command in 10.11 gives the following error:
+
+<S_CODE_TOKEN>
+",herrbischoff,2015-10-21 13:56:28
+21,2015-10-21 06:47:39,"@herrbischoff, it's ok becouse you already unloaded service, if you will load service back and try unload again, it will unload without any message, if you unload second time it will give you same message as you accrued.
+Btw, I'm think that redirect to `/dev/null` is unnecessary too
+",G07cha,2015-10-21 13:56:28
+21,2015-10-21 07:19:17,"Okay, I've removed `/dev/null`.
+",vinkla,2015-10-21 13:56:28
+21,2015-10-21 13:56:21,"@G07cha: Thanks, I thought as much. I should really get more sleep. ;)
+
+@vinkla: Thanks. Merging.
+",herrbischoff,2015-10-21 13:56:28
+21,2015-10-21 14:03:33,":+1: 
+",vinkla,2015-10-21 13:56:28
+20,2015-10-20 15:43:20,"Same as #19 only this is your local IP address.
+",vinkla,2015-10-20 23:23:14
+20,2015-10-20 23:22:03,"Please move to TCP/IP category, thanks!
+",herrbischoff,2015-10-20 23:23:14
+20,2015-10-20 23:23:07,"Wait, this is the Wi-Fi interface. Hence, it should stay where it is. I'm merging it.
+",herrbischoff,2015-10-20 23:23:14
+19,2015-10-20 15:42:19,"Don't know about the naming/description though. Any thoughts to make it better?
+",vinkla,2015-10-21 13:48:16
+19,2015-10-20 15:46:30,"What about ""Show public IP address"" title?
+",G07cha,2015-10-21 13:48:16
+19,2015-10-20 15:47:26,"That might be better, what do you think @herrbischoff?
+",vinkla,2015-10-21 13:48:16
+19,2015-10-20 23:19:02,"I'd call this ""Show External IP Address"".
+",herrbischoff,2015-10-21 13:48:16
+19,2015-10-20 23:21:34,"Also, please move this to the TCP/IP category. Just because every Mac sold nowadays has Wi-Fi does not make it the only way to connect to a network... ;P
+",herrbischoff,2015-10-21 13:48:16
+19,2015-10-21 07:18:16,"All fixed :)
+",vinkla,2015-10-21 13:48:16
+19,2015-10-21 13:48:11,"Thanks. Merging.
+",herrbischoff,2015-10-21 13:48:16
+19,2015-10-21 14:03:41,":+1: 
+",vinkla,2015-10-21 13:48:16
+18,2015-10-20 13:46:43,"According to https://raymii.org/s/snippets/OS_X_Turn_Bonjour_off_or_on_via_the_command_line.html there is a confusion between the Bonjour's enable and disable commands
+",talkain,2015-10-21 14:02:12
+18,2015-10-20 23:11:31,"Looks about right. The `NoMulticastAdvertisements` part is a dead giveaway... ;)
+
+Could you please sort the entries in such a way that the disable command is on top. This is the way the commands are structured: the one that changes a default is on top, the revert command below. Thanks!
+",herrbischoff,2015-10-21 14:02:12
+18,2015-10-21 14:02:07,"Never mind, I'll do it.
+",herrbischoff,2015-10-21 14:02:12
+17,2015-10-20 01:28:30,"Prezto is a faster framework than Zsh. It's worthy of mentioning.
+",Glutnix,2015-10-21 14:45:30
+17,2015-10-20 01:35:36,"Thanks for the recommendation. As far as I can see, it appears to be quite limited and not really well documented. Did I miss something?
+
+I'd welcome a lightweight OMZ alternative but I cannot seem to grasp its exact advantages.
+",herrbischoff,2015-10-21 14:45:30
+17,2015-10-20 01:53:37,"I'm probably not the right guy to defend Prezto vs OhMyZsh, but I'd say Prezto is not as flexible or extensible as OMZ, but it still brings a lot of that Zsh power to play without the slowdown. It's still got a lot of what I would guess the majority of people use OMZ for.
+",Glutnix,2015-10-21 14:45:30
+17,2015-10-20 01:54:05,"As for documentation, yeah, the project is lacking, but there are many good posts on other sites detailing it.
+",Glutnix,2015-10-21 14:45:30
+17,2015-10-20 01:55:22,"Could you give me some links to check out?
+",herrbischoff,2015-10-21 14:45:30
+17,2015-10-20 02:05:53,"- http://codurance.com/2015/03/16/installing-zprezto-a-quick-guide/
+- http://jeromedalbert.com/migrate-from-oh-my-zsh-to-prezto/
+- http://mikebuss.com/2014/04/07/customizing-prezto/
+- http://joshsymonds.com/blog/2014/06/12/shell-awesomeness-with-prezto/
+- http://concreted.azurewebsites.net/custom-terminal-with-zshell-iterm-and-prezto/ (dated 3 Nov 2014)
+",Glutnix,2015-10-21 14:45:30
+17,2015-10-20 23:17:21,"Thanks, I'm going to check them out and let you know.
+",herrbischoff,2015-10-21 14:45:30
+17,2015-10-21 14:45:26,"Thanks again for your suggestion. I had the opportunity today to check it out. I'm pretty impressed by it's snappiness. I'm possibly becoming a convert. ;)
+
+Anyway, I'm merging. I can see how this would be useful to others as well.
+",herrbischoff,2015-10-21 14:45:30
+17,2015-10-21 18:00:28,"Addition: yes, I'm a convert. :) Prezto is a winner in my book. The `rm -i` alias was driving me nuts though...
+",herrbischoff,2015-10-21 14:45:30
+17,2015-10-21 23:15:16,"Agreed about the `rm -i` alias, but I'm more of a [trash](http://hasseg.org/trash/) fan. I could do that as another pull request.
+",Glutnix,2015-10-21 14:45:30
+17,2015-10-21 23:32:12,"Interesting. But where would it go? And personally, I like things to get deleted right away. ;)
+",herrbischoff,2015-10-21 14:45:30
+16,2015-10-19 10:06:33,"Much faster than open iTunes and very useful for deploying builds, running tests on various devices
+",G07cha,2015-10-19 14:40:38
+16,2015-10-19 14:18:37,"Neat trick! Please correctly capitalize the title and I will merge.
+",herrbischoff,2015-10-19 14:40:38
+16,2015-10-19 14:20:01,"I forget about this, fixed.
+",G07cha,2015-10-19 14:40:38
+16,2015-10-19 14:40:34,"Thanks. Merging.
+",herrbischoff,2015-10-19 14:40:38
+15,2015-10-18 18:54:06,"As seen in http://9to5mac.com/2015/09/07/macbook-tricks-chime-sound-like-an-iphone/.
+",Psidium,2015-10-18 21:02:57
+15,2015-10-18 20:56:32,"Please, verify if my latest changes fit the criteria?
+Thanks
+",Psidium,2015-10-18 21:02:57
+15,2015-10-18 21:02:53,"Looks great, thanks! Merging.
+",herrbischoff,2015-10-18 21:02:57
+14,2015-10-18 17:25:25,,hffmnn,2015-10-23 08:13:19
+14,2015-10-18 17:44:33,"See inline comments. Also, all titles need to be properly capitalized, see [Contribution Guidelines](https://github.com/herrbischoff/awesome-osx-command-line/blob/master/contributing.md). Thanks!
+",herrbischoff,2015-10-23 08:13:19
+14,2015-10-23 08:13:15,"Thanks for the fixes. Merging.
+",herrbischoff,2015-10-23 08:13:19
+13,2015-10-18 11:15:42,,Hummer12007,2015-10-18 15:54:11
+13,2015-10-18 14:13:17,"Very nice!:) But you forgot to include the new sub-category in the index.
+",herrbischoff,2015-10-18 15:54:11
+13,2015-10-18 15:54:07,"Thanks!
+",herrbischoff,2015-10-18 15:54:11
+12,2015-10-18 10:50:06,,Hummer12007,2015-10-18 15:52:58
+12,2015-10-18 15:09:24,"You're welcome!
+But actually, I disagree with you on the topic of relation between the two entries ;)
+**UPD:** Oh, got it.
+",Hummer12007,2015-10-18 15:52:58
+12,2015-10-18 15:52:53,"Thanks!
+",herrbischoff,2015-10-18 15:52:58
+11,2015-10-18 10:38:18,"Added a command to create a stack (in Dock) with most recently launched apps, and a new section for it.
+",Hummer12007,2015-10-24 21:20:38
+11,2015-10-18 15:55:14,"Thanks. Now please resolve the conflicts and push again so I can merge.
+",herrbischoff,2015-10-24 21:20:38
+11,2015-10-20 23:13:32,"Are you going to update this pull request or should I close it?
+",herrbischoff,2015-10-24 21:20:38
+11,2015-10-21 05:05:16,"Sorry, I was rather busy this week. Will update ASAP
+",Hummer12007,2015-10-24 21:20:38
+11,2015-10-24 06:15:06,"Just a quick reminder that pull requests that haven't changed in 7 days will be closed.
+",herrbischoff,2015-10-24 21:20:38
+10,2015-10-18 10:32:33,,Hummer12007,2015-10-18 15:23:37
+10,2015-10-18 15:19:51,"This doesn't work in El Capitan https://github.com/mathiasbynens/dotfiles/commit/2fe242baf2ca3c9de269120746429188a1e99ef8
+",vinkla,2015-10-18 15:23:37
+10,2015-10-18 15:23:37,"@vinkla: Thanks for the pointer. I will close this then.
+",herrbischoff,2015-10-18 15:23:37
+10,2015-10-18 18:01:01,":+1: 
+",vinkla,2015-10-18 15:23:37
+9,2015-10-17 20:19:12,,keith,2015-10-17 20:38:42
+9,2015-10-17 20:53:35,"Thanks!
+
+## 
+
+Keith Smiley
+
+On Oct 17, 2015, 13:38 -0700, Marcel Bischoffnotifications@github.com, wrote:
+
+> Merged#9(https://github.com/herrbischoff/awesome-osx-command-line/pull/9).
+> 
+> —
+> Reply to this email directly orview it on GitHub(https://github.com/herrbischoff/awesome-osx-command-line/pull/9#event-438318083).
+",keith,2015-10-17 20:38:42
+8,2015-10-17 20:12:12,"Not sure how you're handling adding/removing stuff based on new OS X releases. But with 10.11 [this](https://github.com/herrbischoff/awesome-osx-command-line#repair-file-permissions) no longer works. See [here](https://support.apple.com/en-us/HT201560) for details.
+",keith,2015-10-17 20:52:32
+8,2015-10-17 20:43:26,"Thanks for the pointer! I verified this and indeed the commands for `verifyPermissions` and `repairPermissions` are gone. I will update the main file accordingly.
+",herrbischoff,2015-10-17 20:52:32
+8,2015-10-17 20:52:31,"Done.
+",herrbischoff,2015-10-17 20:52:32
+8,2015-10-17 20:53:29,"Thanks!
+
+## 
+
+Keith Smiley
+
+On Oct 17, 2015, 13:52 -0700, Marcel Bischoffnotifications@github.com, wrote:
+
+> Done.
+> 
+> —
+> Reply to this email directly orview it on GitHub(https://github.com/herrbischoff/awesome-osx-command-line/issues/8#issuecomment-148950302).
+",keith,2015-10-17 20:52:32
+7,2015-10-17 19:17:37,,matteocrippa,2015-10-17 19:54:08
+7,2015-10-17 19:53:49,"Good catch! Thanks.
+",herrbischoff,2015-10-17 19:54:08
+6,2015-10-16 17:55:09,,Hummer12007,2015-10-16 18:59:19
+6,2015-10-16 18:59:06,"Good addition, thanks!
+",herrbischoff,2015-10-16 18:59:19
+5,2015-10-16 12:02:28,"This add a command that enables file extensions in finder
+",veloxy,2015-10-16 12:30:12
+5,2015-10-16 12:30:06,"Good catch, missed that one.
+",herrbischoff,2015-10-16 12:30:12
+4,2015-10-16 06:20:46,"Added the commands to hide and show the icons on the desktop.
+",mauran,2015-10-16 12:33:03
+3,2015-10-16 03:44:07,"Hello!
+
+I thought it might be good to share the open command on the list because it's one of those commands that new people don't really know and once they do they use it all the time. There are examples for opening a url, file, application and a directory. 
+",willywos,2015-10-16 16:50:43
+3,2015-10-16 12:29:03,"Good idea! Since they are primarily Finder-related, I would put them as a sub-category there. Please move them there and I will merge.
+",herrbischoff,2015-10-16 16:50:43
+3,2015-10-16 12:49:01,"There you go! 
+
+Thanks for creating this list @herrbischoff 
+",willywos,2015-10-16 16:50:43
+3,2015-10-16 12:52:52,"Great! Now the titles need to be [properly capitalized](https://github.com/herrbischoff/awesome-osx-command-line/blob/master/contributing.md), to keep things tidy. ;) Missed that the first time around.
+",herrbischoff,2015-10-16 16:50:43
+3,2015-10-16 13:01:21,"Titles have been capitalized. 
+",willywos,2015-10-16 16:50:43
+3,2015-10-16 16:50:39,"Looks good! Merging now.
+",herrbischoff,2015-10-16 16:50:43
+3,2015-10-17 00:15:17,":tada: :tada:  
+
+Thanks!
+",willywos,2015-10-16 16:50:43
+2,2015-10-15 10:37:07,"Useful when updating/changing XCode
+",G07cha,2015-10-15 14:12:58
+2,2015-10-15 14:12:54,"Looks good, thanks!
+",herrbischoff,2015-10-15 14:12:58
+1,2015-10-15 07:50:27,"<S_CODE_TOKEN>
+",G07cha,2015-10-15 10:20:40
+1,2015-10-15 10:20:32,"Good catch! Thanks. 
+",herrbischoff,2015-10-15 10:20:40

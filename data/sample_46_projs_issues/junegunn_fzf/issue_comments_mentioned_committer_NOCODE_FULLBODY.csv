@@ -1,0 +1,1696 @@
+issue_num,datetime,body,login,mention_login
+882,2017-03-26 09:15:20,"@junegunn How far can I go for handling the filepaths on Windows?
+I need to add `fzf#fnamemodify()` and `fzf#getcwd()` for `s:shortpath()` since `shellslash` affects both the shellquoting (which depends on the slash) and the filepath slashes (forward or back). I'll need to use batch file because backslashes are shellescaped via double-quotes which breaks `:!` in Vim.
+
+I'm defaulting to `set noshellslash`  with backslash filepaths for Vim.
+Paths with spaces still break on Neovim though.
+
+@justinmk I'm using this build currently. Should I get the latest?
+`nvim --version`
+NVIM v0.2.0-828-g11b08bb0
+Build type: Release
+Compilation: C:/msys64/mingw64/bin/gcc.exe -Wconversion -O2 -DNDEBUG -DDISABLE_LOG -Wall -Wextra -pedantic -Wno-unused-parameter -Wstrict-prototypes -std=gnu99 -D__USE_MINGW_ANSI_STDIO -D_WIN32_WINNT=0x0600 -Wvla -fdiagnostics-color=auto -DINCLUDE_GENERATED_DECLARATIONS -DHAVE_CONFIG_H -IC:/projects/neovim/build/config -IC:/projects/neovim/src -IC:/projects/neovim/.deps/usr/include -IC:/projects/neovim/.deps/usr/include -IC:/projects/neovim/.deps/usr/include -IC:/msys64/mingw64/include -IC:/msys64/mingw64/include -IC:/projects/neovim/build/src/nvim/auto -IC:/projects/neovim/build/include
+Compiled by appveyor@APPVYR-WIN
+",janlazo,junegunn
+882,2017-03-26 09:15:20,"@junegunn How far can I go for handling the filepaths on Windows?
+I need to add `fzf#fnamemodify()` and `fzf#getcwd()` for `s:shortpath()` since `shellslash` affects both the shellquoting (which depends on the slash) and the filepath slashes (forward or back). I'll need to use batch file because backslashes are shellescaped via double-quotes which breaks `:!` in Vim.
+
+I'm defaulting to `set noshellslash`  with backslash filepaths for Vim.
+Paths with spaces still break on Neovim though.
+
+@justinmk I'm using this build currently. Should I get the latest?
+`nvim --version`
+NVIM v0.2.0-828-g11b08bb0
+Build type: Release
+Compilation: C:/msys64/mingw64/bin/gcc.exe -Wconversion -O2 -DNDEBUG -DDISABLE_LOG -Wall -Wextra -pedantic -Wno-unused-parameter -Wstrict-prototypes -std=gnu99 -D__USE_MINGW_ANSI_STDIO -D_WIN32_WINNT=0x0600 -Wvla -fdiagnostics-color=auto -DINCLUDE_GENERATED_DECLARATIONS -DHAVE_CONFIG_H -IC:/projects/neovim/build/config -IC:/projects/neovim/src -IC:/projects/neovim/.deps/usr/include -IC:/projects/neovim/.deps/usr/include -IC:/projects/neovim/.deps/usr/include -IC:/msys64/mingw64/include -IC:/msys64/mingw64/include -IC:/projects/neovim/build/src/nvim/auto -IC:/projects/neovim/build/include
+Compiled by appveyor@APPVYR-WIN
+",janlazo,justinmk
+882,2017-03-26 11:07:50,@janlazo try https://github.com/neovim/neovim/pull/6359 or just wait for it to be merged.,justinmk,janlazo
+882,2017-03-28 01:57:52,"@junegunn This PR has a mixture of commits meant for Vim but is compatible with Neovim via powershell. I can make a separate PR for using backslashes in Windows filepaths such that, with `set noshellslash`, the finalized command passed to `:!` should  use backslash for all filepaths.",janlazo,junegunn
+882,2017-03-28 02:47:07,"Thanks for your work @janlazo. To be honest, it's a little hard for me to follow this thread; what are the exact problems we are trying to solve? What are the steps to reproduce each problem and how do we validate the correctness of the fixes? Are we talking about Vim, Neovim, or both? Is this the right time for us to make changes for unannounced Neovim? Is it okay for us to proceed with the Neovim issues mentioned above unresolved? Do we have to fix the code for `:FZF` command? Because then we also have to fix some commands in fzf.vim repository.
+
+So basically what I'm saying is that I'd like to see this PR broken down into smaller ones each tackling a single problem.",junegunn,janlazo
+870,2017-03-20 15:22:15,"@junegunn I'm affraid I made a mistake. With this commit, I broke support for hostnames containing a hyphen (e.g. my-host-name). This is because for the grep command, in bracket expressions, the hyphen acts as a range expression, unless it's located as the last character where it's interpreted as a literal.
+So, for this patch to be correct, the colon should be placed in front of the hyphen. What do you suggest I should do?",S4mw1s3,junegunn
+860,2017-02-28 14:05:45,"This must be an issue with my system then.  I'm going to go ahead and close the issue, but I'll report back if I find a solution.  Thank you for trying to reproduce this, @junegunn!",KibaFox,junegunn
+849,2017-02-22 23:16:44,Thanks for troubleshooting @junegunn. I am reverting back to Go 1.7 until I figure out how to by pass the Cylance AV. Will post the update once I have the solution,alotofnoodles,junegunn
+849,2017-02-22 23:19:06,"Yeah, thank you @junegunn for taking the time to troubleshoot. I really appreciate your help and LOVE a TON of your projects :), Keep up the good work.
+
+@alotofnoodles Cylance blows. I have it for work too :p",hahuang65,junegunn
+833,2017-02-06 16:36:04,@junegunn thanks a lot. Perfect as always.,yevhen-m,junegunn
+821,2017-01-26 09:24:02,@junegunn thanks. Waiting for fzf 0.16.3.,yevhen-m,junegunn
+820,2017-01-24 09:11:52,"@junegunn thanks for the quick fix and for your efforts in making fzf!
+
+@balta2ar I recorded a video and put it here: https://vimeo.com/200792397",danr,junegunn
+817,2017-01-20 05:22:24,"Hi, thanks for the suggestion, but I'm pretty much with @acornejo on this, for a number of reasons.
+
+1. We'll have to implement the logic for 3 different shells (bash, zsh, and fish) and I'll have to maintain the code forever. Supporting 3 shells has been the number one pain point for me, because all I use and know well is bash. Let's delegate the role to the tools that are obviously better at it (unix philosophy) and keep it simple.
+2. I know `.gitignore`, but `.ignore` is new to me. But I'll just assume that it's similar to `.gitignore`. The complexity of `.gitignore` is monstrous (see `man gitignore`). It is obvious that the suggested solution won't be able to fully address the specification and it is not clear to the user what is supported and what is not. This can lead to unnecessary confusions.
+",junegunn,acornejo
+811,2017-01-21 12:00:01,"@junegunn Sorry, I don't quite understand this decision. You recently hardcoded `--height` into ctrl-r, effectively forcing users who have never used it to add another option `--no-height` to cancel it. Why didn't you just add `--height` to your own FZF_DEFAULT_OPTS? Also, what's the point of `--no-height` if you can simply omit `--height`? (except when you can't where `--height` is hardcoded). This war of options got so complicated and frustrating...
+
+Another confusion is that `--height` seems to erase screen content. This is very confusing when cursor is at the bottom of the screen. Here I demonstrated it with and without `--height`: https://asciinema.org/a/bmfcztbpzod891qindyfppz3e. Is this a bug? Do you want me to create an issue on that?",balta2ar,junegunn
+811,2017-01-21 16:32:26,"@junegunn Sorry if my previous comment sounded like a rant or a complaint. I didn't mean to. I understand that you spend a lot of your own time on this for free and you don't own anything to anybody.
+
+To be more constructive, let me ask it this way. What if instead of hard coding, you put `--height` into CTRL_R_OPTS by default (if it's not set by a user)? In this case 1. height would be default as you like 2. I could override CTRL_R_OPTS to cancel height effect. yes I can do it now using no-height,  but 3. You would not need no-height option anymore: it potentially saves your time maintaining the code — less options, the better. What do you think?
+
+As for un-scrolling, I think it's reasonable to expect that fzf without height (fullscreen) and fzf with height=100% behave exactly the same. As of now their effect is different. I'm not using height so it's not bothering me, but it still looks inconsistent and other users may ask the same question.
+
+EDIT: Judging by your last comment at gitter you didn't know they have different behavior. Please consider this ""unscrolling"" feature before throwing off old renderer.
+
+> Once we're confident with this new renderer, I'll completely replace ncurses renderer with it (basically --no-height becomes --height 100%)
+
+EDIT2: Apparently, there is a reason to have `--no-height`, and the reason is that it uses a different renderer. This makes suggestion in my second paragraph pretty much useless.",balta2ar,junegunn
+811,2017-01-23 05:44:43,"@junegunn 
+
+Thanks, I try your suggestions, it works.",markwu,junegunn
+802,2017-01-15 06:54:56,"@junegunn apologies for not being clear on what I was asking for. 
+
+Let's take the following example:
+
+
+
+which gives us the following (ignore the comment, it's just so that I can refer to steps):
+
+
+
+(with the cursor at the position shown by the caret)
+
+For me the default mapping for the action `backward-kill-word` is `alt-bs`. If we `backward-kill-word` once we are left with:
+
+
+
+If we `backward-kill-word` again we are however left with:
+
+
+
+`backward-kill-word` isn't really what I'm trying to do here; I'm trying to make the query string equal to the value of [`filepath.Dir(currentQueryString) + string(os.PathSeparator)`](https://godoc.org/path/filepath#Dir) in Go terms (there are of course edge cases, but you get the idea) which would have instead have left us with:
+
+
+
+So what I'm asking is whether it would be possible to introduce an action (to which I can then add a key binding) that makes this possible.
+
+Does that help to clarify?
+
+---
+
+**Update 1** couple of points made clearer
+**Update 2** `kill-word` corrected to `backward-kill-word`",myitcv,junegunn
+802,2017-01-15 18:09:09,@junegunn - brilliant. Working like a dream; thank you!,myitcv,junegunn
+791,2017-01-07 13:54:43,"@junegunn now completions are fixed, but I get this after `**<tab>`
+",yevhen-m,junegunn
+786,2017-01-03 17:07:17,"@janlazo Thanks, the code looks good to me. Please send me a pull request.",junegunn,janlazo
+782,2017-01-16 06:14:05,"Thanks @junegunn for the quick reply. Not sure which install script you are referring to.
+
+What I did is 
+brew reinstall fzf
+
+and the error is still there.
+fzf --version shows 0.15.9",paulhybryant,junegunn
+782,2017-01-19 14:17:04,"Running `brew upgrade` after @junegunn's change got merged helped me with this, gj!",cbrwizard,junegunn
+765,2016-12-13 03:39:14,"Thanks @mhinz, but I'm still seeing errors with the patch :/",junegunn,mhinz
+765,2017-01-24 18:04:16,"@justinmk is right, adding a param to `on_exit` fixes things
+
+",supermarin,justinmk
+758,2016-12-05 12:52:23,"Thanks @justinmk.
+
+You also can use `./install --all`.
+
+
+
+`./install --bin` is another useful option for those who don't want the extra stuff.",junegunn,justinmk
+754,2016-12-14 13:36:53,"@junegunn I'm not sure how to redefine `fzf#vim#files` as it calls `s:fzf`.
+
+I too would love to see a cleaner interface. Replacing the vim prompt with a single character (e.g. `/`) would be a great option to have. The ability to remove the red pointer and grey line on the left side, and  the file count (`202/202`) would also nice.
+
+Aesthetics complaints aside though, fzf is really impressive!",net,junegunn
+754,2016-12-15 04:32:47,"@junegunn I understand your concerns, but Vim is by nature highly customizable. It should follow that its plugins be the same. My Vim, as is many other's, is set up to have a specific look. Fzf.vim is the best fuzzy finder available, but its visual complexity clashes with my Vim's style.
+
+I know that fzf is not just a Vim plugin; the same argument follows for bash/zsh. I have no doubts that more visual customization options would be greatly welcome and widely used by many—if not most—of fzf's users.",net,junegunn
+716,2016-10-25 18:03:41,"@junegunn yes, that is exactly what is broken. The latter part of my report has 
+
+> If I reopen it thought...
+
+so opening a new terminal is where fzf isn't working.
+
+@mjwestcott I do have that:
+
+
+",ptarjan,mjwestcott
+716,2016-10-25 18:03:41,"@junegunn yes, that is exactly what is broken. The latter part of my report has 
+
+> If I reopen it thought...
+
+so opening a new terminal is where fzf isn't working.
+
+@mjwestcott I do have that:
+
+
+",ptarjan,junegunn
+714,2016-10-31 03:47:14,"@junegunn - regarding the issues that you mentioned:
+1. I will look into this 
+2. can you give me a test case for this?
+3. should be fixed in my latest commit
+4. there's a bug in mouse scrolling in termbox-go (see mentioned issue in my latest source code commit).  I disabled mouse input for now as this terminates fzf and I can't find an easy workaround.
+
+Other than that it seems to be working fine for me, though I haven't stress tested all of fzf's functionality.
+",kelleyma49,junegunn
+712,2016-11-13 03:43:36,"Hello @junegunn! Thank you very much for developing `fzf` and `fzf.vim`! I use both the program and the Vim plugin on a very regular basis. Your work is very much appreciate by me.
+
+I know that this issue is now closed. But, I noticed that you wrote ""It requires revising the syntax for color specification. Not now, but maybe in the future."" and I wanted to chime in to say that I would really appreciate the addition of this feature. Right now, when I use `fzf` I notice that it always highlights the current line in a bold font.
+
+While I agree that this is a suitable approach, I find the transition from a normal font, to a bold one, and then back to a normal font (as I am, say, going up and down a list of files) to be slightly jarring. Is there a current way to highlight the current line without using the bold font? Or, is this what you were referencing in the aforementioned quote when you said that you would revise the color specification in the future?
+",gkapfham,junegunn
+712,2016-11-14 21:34:07,"Hello @junegunn. Again, thanks for developing fzf and thanks for sharing the patch with me. I will consider compiling from source in the future. For now, I will accept the bold font. If you ever decide to implement some of the requested styling features, then let us know. Overall, I really appreciate your effort in creating this very useful program!
+",gkapfham,junegunn
+712,2016-12-27 21:22:41,"Hello @junegunn! Please accept my apology for the delay in my reply on this issue. Again, thanks so much for all of your hard work on this plugin! I was delighted to see that you added the `--no-bold` option and I have added it to my `$FZF_DEFAULT_OPTS` so that it is the default when I am using `fzf` in Vim, NeoVim, and in my terminal. Again, your addition of this option is greatly appreciated!",gkapfham,junegunn
+692,2016-10-04 16:42:04,"Fair point, I completely understand your viewpoint @junegunn - thank you for explaining and thank you for an incredible tool!
+",wayneashleyberry,junegunn
+681,2016-09-28 11:01:58,"Dear @junegunn,
+
+Please see below.
+
+
+",orschiro,junegunn
+681,2016-10-04 06:49:42,"Dear @junegunn,
+
+I am running Ubuntu Unity 16.04, Bash 4.3.46(1) and GNOME Terminal 3.18.3. 
+
+-Robert
+",orschiro,junegunn
+669,2016-09-24 18:34:21,"Hi @junegunn, when i'm trying this example:
+`fzf --preview 'highlight -O ansi {}' --bind alt-j:preview-down,alt-k:preview-up`
+i'm getting this:
+`unknown action: preview-down`
+Am i doing something wrong?
+
+I'm using Linux with zsh 5.2 and tmux 2.2.
+Thank you for your work!
+",deathmaz,junegunn
+664,2016-09-25 06:29:27,"Dear @junegunn,
+
+Thanks for your resources!
+
+After having watched [this](https://www.youtube.com/watch?v=AX3u10bruOI) video I finally understood what to do. 
+1. I installed fzf using the Git method
+2. I type in `up`, press `Ctrl+t` and search for `192`
+3. I confirm with `Return`
+4. The absolute path to the file containing `192` is being inserted after the `up`. 
+
+This is wonderful! :-)
+
+-Robert
+",orschiro,junegunn
+664,2016-09-25 08:12:14,"@junegunn,
+
+`up ~/**<TAB>` doesn't work for me in Bash. 
+
+-Robert
+",orschiro,junegunn
+664,2016-09-25 09:51:17,"I see, thank you @junegunn!
+
+-Robert
+",orschiro,junegunn
+653,2016-09-22 23:13:36,"Hi @edi9999 
+when I boot linux I get into linux console, there alt-c works. Then I run startx to get in to X windows environment, in which alt-c does not work in xterm or urxvt, however esc-c works. I use debian testing and icewm as windows manager. Thanks!
+",githubfun,edi9999
+649,2016-09-04 12:00:48,"@junegunn thank you it works!
+",aliev,junegunn
+643,2016-08-31 05:23:45,"@qiemem Hi, unfortunately the fix for this caused #648, and I had to revert the commit.
+",junegunn,qiemem
+640,2016-11-20 14:05:54,"@prabirshrestha Thanks. I'll mention the project somewhere on the wiki.
+",junegunn,prabirshrestha
+638,2016-09-06 09:50:52,"@junegunn I have been using **FZF** for everything since its creation. I still use it for a lot. However, currently I prefer **fzy** for finding files. This is due to the fact that, when I open a file I usually (90% of the times) know where it is. Typing some of the first letters of the path to takes me to it.
+
+Knowing that you have already stated that
+
+> What's clear though is that it would be much easier for fzf to steal good stuff from fzy than the other way around :)
+
+Can we have both of the scoring methods and make it changeable through an argument `--sorter : sorter_type`. This way everybody will be happy :)
+",khalidchawtany,junegunn
+638,2016-09-06 10:59:29,"I agree with the sentiments expressed above. fzf is still my favoured tool. Its only weakness is the scoring algorithm.
+
+@junegunn is right that there's no universally acknowledged solution to the scoring problem. My own use of fuzzy finding is based largely on word prefixes. So if the file I'm looking for is:
+
+/Users/mattwestcott/repos/python/trains/models.py
+
+I'm very likely to choose a pattern like
+
+pytrains
+pytramod
+repotrmod
+
+That is, I naturally go for consecutive characters following word boundaries. I'm not likely to choose 
+
+postrans
+wetepo
+
+or some other misspelling that is technically a subsequence. 
+
+My view is that fzf doesn't support this usage well enough. @TheZoq2 seems to use it the same way.
+
+For some background: a few months ago I [proposed](https://github.com/mjwestcott/fzf/commit/60c9d849f2c7056e3ea26cbb67896e1bf4b0df1b) a scoring algorithm that emphasises word boundaries and, in particular, gave a penalty to characters of the pattern that matched far from the start of the word.
+
+This led to the current scoring system (via [this commit](https://github.com/junegunn/fzf/commit/2f6d23b91e845f53e746e7cf74477a735ec88a85)) which was adapted to be more conservative. If I understand correctly, it gives a bonus if the first character of the pattern matches the start of a word, but doesn't penalise patterns that match in the middle or the end of a word. The total match length is the dominant feature of the algorithm.
+
+I understand @junegunn's desire to keep it simple and choose a solution that everyone can understand. But perhaps, as others have suggested, we can start with a more sophisticated solution as an optional flag. The approach of fzy is certainly interesting and in my limited testing I like its results.
+",mjwestcott,junegunn
+638,2016-09-07 12:58:01,"Thanks @junegunn. Based on a few hours' use, the alpha version is awesome. Even before your optimisations, I found it usable on 1-2 million filenames. The results are definitely worth the cost.
+
+I'll be interested to check out your implementation.
+
+Also, highlighting only the characters that match is a big improvement.
+",mjwestcott,junegunn
+634,2016-08-16 04:14:17,"@junegunn Yes and it works as expected.
+",nimamo,junegunn
+634,2016-08-16 12:00:06,"@junegunn This command works. I tried the same procedure ( `export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g """"'` ) on a different Linux installation and it just worked fine. This doesn't seem to be a bug in fzf, yet seeing different results from `fzf` in bash and `:FZF` in Vim is worth noticing.
+",nimamo,junegunn
+633,2016-08-11 10:10:33,"@junegunn that's right.
+",yevhen-m,junegunn
+632,2016-08-02 08:27:20,"@justinmk still slow on:
+
+
+",kassio,justinmk
+632,2016-08-02 08:28:30,"@junegunn the workaround seems to improve a little bit, but still way slow compared with vim.
+",kassio,junegunn
+632,2016-08-02 16:26:46,"@justinmk great TIL! Thank you for the help!
+",kassio,justinmk
+631,2016-08-10 15:55:26,"@edi9999 Thanks Edgar, I really appreciate it!
+
+@eyalev Thank you!
+",junegunn,edi9999
+630,2016-07-29 10:08:21,"@junegunn You're right, I just replaced the `bufexists` for the `filter`.
+",kassio,junegunn
+626,2016-07-31 09:10:21,"@vaxXxa @junegunn @edi9999 Is this helpful http://unix.stackexchange.com/a/84838/44493?
+
+The idea is to add numbers as the first column, sort & uniq by the second column (actual history lines), sort again by the first column (original indices) and remove indices. Only standard tools are used.
+",balta2ar,junegunn
+626,2016-07-31 09:10:21,"@vaxXxa @junegunn @edi9999 Is this helpful http://unix.stackexchange.com/a/84838/44493?
+
+The idea is to add numbers as the first column, sort & uniq by the second column (actual history lines), sort again by the first column (original indices) and remove indices. Only standard tools are used.
+",balta2ar,edi9999
+626,2016-08-02 06:50:23,"@edi9999 @balta2ar Interesting results, thanks! With my 37K history, it takes 26ms to deduplicate using the approach. Interestingly, alternative solutions using awk or perl turned out to be slower although they can immediately start printing the lines before processing the entire list. However, this advantage does not hold in this case, as the users will most likely want the tail of the list.
+
+
+
+26ms for 37k means that it will take many more lines to reach 100ms which I believe is still reasonable. If we are concerned about the user seeing the incomplete input stream, we can consider applying `--sync` option to block the UI until the stream is complete.
+
+I'm more inclined to make this behavior the default. You might have noticed that I'm not a big fan of adding more configuration knobs, I think it's our responsibility to find and present the good defaults than to lazily pass the buck to the users.
+",junegunn,edi9999
+624,2016-07-19 20:18:47,"Thanks for the plug :)  While it would be nice to have the MRU built into fzf.vim, I've come to see @junegunn's perspective.  fzf.vim makes use of FZF's and Vim's builtin features, but doesn't add anything beyond that.  Building in MRU would require more than a few options and a separate script since opinions on what an MRU is varies.
+
+fzf-filemru is easy enough to maintain separately as long as it's possible to grab a reference to fzf.vim's `s:common_sink`.
+",tweekmonster,junegunn
+624,2016-07-19 21:54:56,"@junegunn What I want to do is just make the FZF to replace the original CtrlP out of box. As @tweekmonster say,
+
+>  fzf.vim makes use of FZF's and Vim's builtin features, but doesn't add anything beyond that. 
+
+What fzf.vim can do is just make Vim's builtin features more easy. But it is just for @junegunn personal use.
+
+The FZF is an awesome cli tool which should deserve to be used in more and more other tool, eg Vim, Emacs, and so on. Maybe the FZF repository should be split into to parts like 
+1. fzf-cli which only contains the binary's `go` code
+2. fzf-vim which contains the VimL required for vim integration
+3. fzf-emacs for emacs
+4. more ...
+
+And I use Homebrew to install the fzf binary, and use Vim-Plug to install [fzf](https://github.com/junegunn/fzf) again. For vim, what I only need is the https://github.com/junegunn/fzf/blob/master/plugin/fzf.vim. However, I have to download all other `*.go` file.
+
+So the current situation is a dilemma.
+- The fzf.vim file FZF stocked does not support functions other `fzf#run()` to minimize burden.
+- The fzf.vim plugin is just a **personal** @junegunn  simple wrapper of some Vim's builtin function.
+",lvht,junegunn
+624,2016-07-20 02:08:47,"@tweekmonster 
+
+> fzf-filemru is easy enough to maintain separately as long as it's possible to grab a reference to fzf.vim's s:common_sink.
+
+Do you want me to make it public? I can surely consider that.
+
+@lvht 
+
+> However, I have to download all other *.go file.
+
+Homebrew package of fzf contains fzf.vim, so you can do this:
+
+
+
+I recently [updated the installation instructions](https://github.com/junegunn/fzf.vim/commit/cd94fca6ce608c0f66086a393b53e56f33b27f28) to mention the above.
+
+> fzf-emacs for emacs
+
+https://github.com/bling/fzf.el
+
+> What fzf.vim can do is just make Vim's builtin features more easy. But it is just for @junegunn personal use.
+
+That was the original intention as I know it becomes more and more difficult to satisfy different needs as the feature set grows, and fzf.vim is a plugin that does maybe too many different things. But I'm aware that there are a lot of users actively using it, so I probably won't break things.
+
+There are many [CtrlP extensions](https://github.com/search?utf8=%E2%9C%93&q=ctrlp) out there that provide extra features. I prefer the approach over having an inflexible, monolithic plugin and we can do the same for fzf, like you guys did.
+
+Feel free to add your projects to [the wiki page](https://github.com/junegunn/fzf/wiki/Related-projects). I'm going to close this as wontfix. Thanks.
+",junegunn,junegunn
+622,2016-07-14 04:18:57,"@junegunn I understand that I can scroll down. The thing is - even if I set ""down"" to ""~90%"", nothing changes. What happens is - the window height is automatically calculated based on the number of matches. But the calculated window height does not take the ""--header"" line into account, so the last match gets pushed out of the window no matter what ""~X%"" is set in ""down"". The auto-calculated window height should be incremented by 1 if ""--header"" is specified (but stay within the ""~X%"" bounds of course).
+",mrbiggfoot,junegunn
+622,2016-07-14 11:11:45,"Thanks @junegunn, your work is much appreciated!
+",mrbiggfoot,junegunn
+600,2016-06-16 08:14:05,"Thanks @junegunn and sorry for the duplicate
+",benoittgt,junegunn
+596,2016-06-12 12:48:09,"Thanks @junegunn 
+",ahmedelgabri,junegunn
+589,2016-06-07 03:42:24,"@justinmk  Because of ncurses and some other unixy stuff. #147 has been open for a while, but nobody has presented a complete solution to the problem. I'm probably not going to spend my time on Windows support (I don't even have a Windows PC) or extracting non-UI part as a library because I don't need it. He that would eat the fruit must climb the tree.
+",junegunn,justinmk
+587,2016-06-07 15:56:01,"Thanks @junegunn! 
+fzf is already great, and this feature sounds awesome.
+",infokiller,junegunn
+587,2016-06-08 12:56:17,"@junegunn 
+I'm not really familiar with ncurses, so I'm not sure I'm following.
+Given the line number of the selected line, wouldn't it be possible to grab +-N lines (for example using `head` and `tail`) and send it for display to the ncurses window?
+What is the interface to the ncurses window? is it just a string that is passed?
+",infokiller,junegunn
+587,2016-06-08 16:22:43,"@junegunn Just to clarify, my intention is to show in the preview window something similar to what you would get using grep's `-C` option.
+For example, let's say I want to display 1 line of context. Furthermore, let's say I have these lines in my shell history:
+
+
+
+Then, if I type 4 in the fzf prompt I want the preview window to show:
+
+
+",infokiller,junegunn
+587,2016-06-08 18:50:16,"@junegunn :+1:  At least the toggle binding is so much lovely to have. Even if there is no default on/off part.
+
+I know for sure that others will request the on/off part so much, that you will not be able to resist :stuck_out_tongue_winking_eye: 
+",khalidchawtany,junegunn
+587,2016-06-13 19:08:09,"@junegunn is there anyway to use a vim function for the `--preview` command?
+",khalidchawtany,junegunn
+587,2016-06-14 08:20:17,"@junegunn Can this functionality be used to display one-line hg log/git log on the left side, and corresponding changeset diff on the right side? If so, could you please demonstrate a simple example of that?
+",balta2ar,junegunn
+587,2016-06-16 07:51:36,"@junegunn Thanks! I'm using this feature and I like it!
+
+> Still we need a way to specify if we want the preview window from the beginning or not
+
+Yes, that would be awesome. I miss that.
+
+There is an issue, though. I'm using diff-so-fancy, and it probably detects terminal width upon execution to calculate the length of the horizontal bar. Unfortunately, with fzf it thinks that the horizontal space is wider than it actually is:
+
+![](http://scrin.org/i/16/06/tmpyiblgoru0es.png)
+
+Notice long white horizontal lines. They should not wrap the window. Like this:
+![](http://scrin.org/i/16/06/tmp5ifnoxeshns.png)
+
+Could fzf fix that?
+",balta2ar,junegunn
+587,2016-06-16 13:34:23,"@junegunn okay, fair enough.
+
+In that case I have another question. Is there a way to minimize wasted screen space? I know this is about aesthetics and is of course arguable, but I'd like to remove certain characters from the output. Look at the partial output near the preview window delimiter:
+
+
+
+Here we have:
+1. Two characters `..` for ellipses
+2. One character for space
+3. One character for pipe
+4. One character for space
+
+Can I get rid of `..` and spaces and leave only vertical bar? I also would like to remove horizontal lines at the top and at the bottom and a vertical line on the right.
+",balta2ar,junegunn
+582,2016-06-10 07:58:17,"@junegunn Thanks for merging this. @akashin Now that FZF opens a new split with the ""fzf"" pane title, do I have to update my .tmux.conf to have a flag called $is_fzf (or similar) to conditionally send the ""send-keys""/""select-pane"" command? Further, what would that look like? Sorry for my inexperience with Tmux (I am trying to learn!) 
+",kieran-bamforth,junegunn
+582,2016-06-10 07:58:17,"@junegunn Thanks for merging this. @akashin Now that FZF opens a new split with the ""fzf"" pane title, do I have to update my .tmux.conf to have a flag called $is_fzf (or similar) to conditionally send the ""send-keys""/""select-pane"" command? Further, what would that look like? Sorry for my inexperience with Tmux (I am trying to learn!) 
+",kieran-bamforth,akashin
+582,2016-07-06 22:20:37,"@akashin `#T` is showing just `localhost` for me if I open fzf from vim and run `:run-shell 'echo ""#T""'`. Did you ever figure this out?
+",adamyonk,akashin
+579,2016-05-25 07:12:05,"@acornejo my zsh version is 5.2 and yes, after `setopt glob_subst` i can reproduce the issue
+",deathmaz,acornejo
+578,2016-05-23 18:04:21,"@junegunn, interesting. I have set it to use `ag` and it does indeed seem to run faster, however, now Ctrl-T doesn't include directories anymore.
+Is there a solution? So far as I can see `ag` can't search for directory names, so I'm guessing not.
+",caesar,junegunn
+578,2016-05-23 18:45:44,"@junegunn, that's great! Only problem I see is that it doesn't include empty dirs. That would require a different approach. But it's really helpful nonetheless, thanks.
+
+A few thoughts:
+- would it make sense to include that in `fzf` by default, or as an option?
+- maybe it would be good to have two shortcuts, one for directories (use whatever mechanism Alt+C uses) and one for files?
+- maybe `fzf` could automatically use `ag` if it is available?
+
+Sorry for the false bug report. :-)
+
+Off topic, but since I'm talking to you.... is there any reason the autocompletion (`**`) doesn't work in Fish? Is it just that nobody's written the code, or is there a reason it wouldn't work?
+(I'm new to Fish, and honestly I'm seeing so many incompatibility issues I'm considering moving to ZSH, but I'm going to stick with it a few weeks and see how I feel then. Change is always hard and Fish has a lot of nice features...)
+",caesar,junegunn
+577,2016-05-23 16:59:18,"@edi9999 Thanks for chiming in.
+
+> If you start matching on the right, (in your example, by typing ""component""), you can view more
+
+Yes that's what I would do. A large `--hscroll-off` value in `$FZF_CTRL_R_OPTS` can definitely help (the default is 10).
+
+But anyway I don't have a great answer to this. Adding support for manual horizontal scrolling is the last thing I want to do as getting it right and implementing a clean, straightforward interface is not going to be trivial (manual scroll vs. auto scroll, short item vs. long item)
+
+When the above trick doesn't work you, you might want to fall back to the original ""reverse-search-history"" that can display the command in multiple lines by binding it to a different key sequence (e.g. `bind '""\C-x\C-r"": reverse-search-history'`), or simply use <kbd>CTRL-P</kbd> or <kbd>CTRL-N</kbd> to browse the recent entries on bash.
+
+Closing as ""wontfix"" (at least for the moment). Thanks.
+",junegunn,edi9999
+576,2016-05-22 14:28:48,"@junegunn Thanks!
+
+I know about <kbd>CTRL+C</kbd> but it's just that my brain is programmed to use <kbd>ESC</kbd> for exit while <kbd>CTRL+C</kbd> is for killing processes :)
+",ahmedelgabri,junegunn
+570,2016-05-10 16:14:07,"@rosshadden Updated the code to use tigetnum call. Will be included in the next release. Or you can easily build the latest binary with `go get github.com/junegunn/fzf/src/fzf` if you have Go.
+
+@justinmk Thanks for chiming in. This is a new territory for me. The return value of `tigetnum(""colors"")` of ncurses seems to depend on the value of `$TERM` (e.g. `TERM=screen fzf` / `TERM=screen-256color fzf`), so I guess it's okay?
+",junegunn,justinmk
+570,2016-05-10 19:12:06,"@junegunn Your change works perfectly.  Thank you!
+
+@justinmk Your argument works even better against what you said.  Looking in `$TERM` for the presence of `256` is exactly the same in many ways as user-agent sniffing.  Looking at `tput colors` and `tigetnum('colors')` (which return numbers like 1, 8, 256, or greater) are more along the lines of feature testing, which is less hacky and more future-proof.  I think we may be saying the same thing, here, but ultimately being smart about the checks we make is a good practice, and I think you can probably agree that @junegunn's solution is indeed smart.
+
+Also `fzf` is awesome!
+",rosshadden,junegunn
+570,2016-05-10 19:12:06,"@junegunn Your change works perfectly.  Thank you!
+
+@justinmk Your argument works even better against what you said.  Looking in `$TERM` for the presence of `256` is exactly the same in many ways as user-agent sniffing.  Looking at `tput colors` and `tigetnum('colors')` (which return numbers like 1, 8, 256, or greater) are more along the lines of feature testing, which is less hacky and more future-proof.  I think we may be saying the same thing, here, but ultimately being smart about the checks we make is a good practice, and I think you can probably agree that @junegunn's solution is indeed smart.
+
+Also `fzf` is awesome!
+",rosshadden,justinmk
+569,2016-05-11 04:09:11,"> And what if one did not end up? Or ended up wrong one? 
+> Then you should backspace couple of times to correct your query.
+
+Naturally, yes. I don't see how the new feature is different in that regard except for very small input that fits in one screen. Anyway the point is that the whole process is strictly ""query-driven"" as @justinmk pointed out.
+
+> ""No turning back"" is not the problem if you're touch typing.
+
+Touch typing does not completely prevent typos. But that was not my point anyway, we can be looking at the two far ends of the screen.
+
+<img width=""1440"" alt=""hadoop"" src=""https://cloud.githubusercontent.com/assets/700826/15169037/01121278-1772-11e6-8142-e4e26e5002f0.png"">
+
+I guess you see my point. It's easy to get confused while moving one's focus from the far right to the far left.
+
+And as I mentioned earlier, the method cannot be used when we want to select multiple items with tab and shift-tab since it exits immediately. One thing we can consider is to make it only jump to the target. So that 1. we can check if the cursor is positioned on the right item, 2. and we're given a choice to either press tab or enter. The obvious downside is that it requires an extra keystroke.
+",junegunn,justinmk
+569,2016-05-12 17:59:45,"@mhrebenyuk Well, speaking of ""separation of concern"", I would argue that the alternative approach suggested above provides exactly that by just being another way of moving your cursor instead of being a new mode of operation that is a combination of two actions (move + accept). It blends well with the rest of the interface.
+- `CTRL-P` / `CTRL-K` / Mouse wheel-up
+  - Move cursor up
+- `CTRL-N` / `CTRL-J` / Mouse wheel-down
+  - Move cursor down
+- `PgUp`
+  - Move cursor up by a page
+- `PgDn`
+  - Move cursor down by a page
+- `<trigger key><label>` / Mouse-click
+  - Move cursor to the designated position
+
+It acts like `<line no>G` movement of Vim. It allows you to move around the screen and do whatever you want to do. It doesn't suffer the aforementioned ""no turning back"" problem. In my opininon, combining it with `accept` action should be considered as the next step that builds upon this new ""movement"". And I'm not against the direction per se.
+
+> Anyway multiselect is not what it made for.
+
+We're discussing pros and cons of different approaches and trying to come up with a better, more flexible solution. I shared my concerns about your proposal and you agreed that it has limitations. I hope you don't dismiss suggestions to tackle those very problems saying that they are overengineered, overbloated or not on the point because they don't meet your specific requirement or you don't care about the problems. fzf is a hugely popular tool that is used by many users with different preferences. We don't add new features without careful consideration beforehand. Like I said, we're in no rush. We're still in the process of brainstorming. You can always use your fork until we reach the conclusion (or after that).
+
+@justinmk Interesting idea. It's a bit unclear though what should happen when you press enter after `,ac`, or tab when multi-select is not enabled. Another concern is that as it's a part of the query and we can type in more characters, the mappings between the labels and the items will change (`foo ,ac` -> `foo ,ac bar`) and then `a` and `c` may no longer point the items we want.
+",junegunn,justinmk
+569,2016-05-18 07:21:43,"Hi @junegunn, first of all thank you very much for your work, can't imagine my life without fzf.
+Can you please explain how this feature can be used?
+",deathmaz,junegunn
+559,2016-04-27 16:39:40,"@justinmk Ah okay, noted. Thanks.
+",junegunn,justinmk
+559,2016-04-28 18:46:50,"@junegunn 
+The problem with (re)storing tab/window numbers is that they are not bound to the actual tab/window.
+
+Feel free to apply your patch first though.
+",blueyed,junegunn
+559,2016-04-29 02:46:56,"@blueyed Yes, the assumption here is that it's unlikely that a user opens more than one fzf buffer at a time, which I believe is a reasonable one and it simplifies the implementation.
+",junegunn,blueyed
+559,2016-06-01 14:05:20,"@blueyed that is the idea once I get my plugin updates out of the door.
+",kopischke,blueyed
+556,2016-04-25 17:07:49,"@justinmk Thanks for chiming in. But no, it's not reproducible on original Vim. The bang versions of the commands such as `:FZF!` do not use tmux and they are still fine.
+
+You can use this config to reproduce the problem:
+
+
+",junegunn,justinmk
+556,2016-04-25 17:22:16,"@junegunn Thanks for the repro! I just tried that vimrc with `NVIM v0.1.5-24-gef205c3` and didn't find much lag using `:FZF!` (with 57562 results) compared to Vim 7.4.52. (ubuntu 32-bit, ssh to VM from mintty, tmux 1.8)
+
+> The bang versions of the commands such as :FZF! do not use tmux and they are still fine.
+
+I didn't mean to imply that tmux is the differentiating factor--rather a blocking `system()` call (which [prevents statusline updates](https://github.com/junegunn/fzf.vim/issues/84#issuecomment-182417756)).
+
+In Neovim, `:FZF!` still runs a `:term` buffer, so again it's non-blocking and we haven't made an apples-to-apples comparison vs. Vim. (Admittedly, this is impossible at the moment because `:!` and `system()` in nvim do not support interactive processes)
+",justinmk,junegunn
+556,2016-04-25 17:29:36,"Hey @justinmk, did you run it on a git repo? It only happens when the current directory is inside a git repo.
+",junegunn,justinmk
+547,2016-05-04 10:37:24,"Hello! Cygwin maintainer here! @gene-pavlovsky pointed me at this thread over in me-and/Cygwin-fzf#2.
+
+So far, I've just been naively packaging up latest fzf release for Cygwin every so often; there've been changes that look like they're relevant to Cygwin, in things like the Tmux script, and I've not been thinking too hard about things like whether the version numbers are actually appropriate.
+
+Now I'm actually thinking about what's appropriate, I think the sensible thing to do is to officially fork fzf into a fully supported Ruby-based project and an exclusively Go-based project, with separate releases and presumably different names, rather than having the Ruby code languishing unmaintained here. Does that seem sensible to you?
+
+If so, I've started with the very basics of ripping out the Go code to form a Ruby-based project over at [me-and/fzf:ruby](https://github.com/me-and/fzf/tree/ruby), and I suspect the sensible next step is for the Ruby code to be officially removed from this repository, possibly with a pointer in the README or similar to the Ruby fork.
+",me-and,gene-pavlovsky
+543,2016-04-18 07:16:27,"@justinmk With 1. and 2., what I am trying to tell you is **how to speed up loading file list with exclude pattern**, not **how to filter out some exclude pattern within file list**.
+I have checked the fzf man page, but I can't find how I can set the exclude pattern.
+Please tell me what I have misunderstood.
+",dongminkim,justinmk
+543,2016-04-18 13:57:09,"@junegunn Thank you for your kind reply.
+
+I agree with the point that fzf binary should remain in the same scope with grep.
+But grep doesn't do key binding such as Ctrl-t or Ctrl-r.
+I thought the functionalities could be added as shell integration extensions.
+
+I have switched from bash into zsh, and I realized how handy tab completions are.
+I think `vi s/p/d/<Ctrl-t>` is much cooler than `vi some/parent/dir/**<tab>`.
+
+Anyway, I'll try more configurations that you suggested.
+And thank you for fzf.
+",dongminkim,junegunn
+542,2016-04-15 13:45:45,"@mjwestcott Thanks :)
+",junegunn,mjwestcott
+542,2016-04-15 14:11:48,"Thanks @mjwestcott @junegunn Apologies for clogging up the issues, will check the 'Usage' section.
+",alistaircolling,junegunn
+542,2016-04-15 14:11:48,"Thanks @mjwestcott @junegunn Apologies for clogging up the issues, will check the 'Usage' section.
+",alistaircolling,mjwestcott
+536,2016-04-01 03:25:29,"Thanks so much @junegunn for the excellent and timely response 
+",oscarmorrison,junegunn
+534,2016-03-31 16:31:18,"@junegunn thanks... I'd just like to match the tag exactly. Unfortunately, `--nth=1,..` doesn't quite help since there's still no way to match on the full exact tag (from what I can tell at least).
+
+Makes sense you don't want to overcomplicate things, though. So far, my current approach is working better than standard vim `C-]` at least. If anybody is interested, here's my function:
+
+
+",MichaelMackus,junegunn
+526,2016-03-22 17:46:56,"The proposed changes would be marvelous, @junegunn 
+",svenstaro,junegunn
+525,2016-03-20 08:48:03,"Thanks for the inputs. @george-b @junegunn @D630 
+I knew about Rofi and wmctrl, but i don't have root permission to install it in the system. So started looking for other options. 
+",mkpaul,junegunn
+520,2016-03-03 23:18:07,"@justinmk 
+What are you using for `g:fzf_layout` exactly?  I've found `let g:fzf_layout = {}` in your vimrc?! (makes it really not obvious then)
+It seems to be a good workaround for now - also providing more space.. ;)
+",blueyed,justinmk
+520,2016-03-03 23:37:07,"@blueyed `let g:fzf_layout = {}` makes fzf use a tab instead of a split (had to dig around the code; not documented). However, it opens in the next tab slot instead of the previous, so it doesn't return to the original tabpage on cancel.
+",justinmk,blueyed
+520,2016-03-04 06:34:38,"Note that `g:fzf_layout` is only used by the commands in fzf.vim project.
+
+https://github.com/junegunn/fzf.vim/blob/master/plugin/fzf.vim#L27-L31
+
+This map is eventually passed to `fzf#run()` function, and it is supposed to contain [down/up/left/right or window attribute](https://github.com/junegunn/fzf#fzfrunoptions). `window` attribute, which only works in neovim unlike the others, holds the ex command to create the terminal window. So what @justinmk suggested above can be done like follows:
+
+
+
+(There was a bug though, see 3073ca3.)
+",junegunn,justinmk
+520,2016-05-24 20:47:09,"@edi9999 I would just note that the terminal mode of neovim and freedom from tmux is one of the main reasons for me using neovim instead of vim.
+",azag0,edi9999
+520,2016-09-21 04:08:55,"@justinmk 
+
+> Derp, I just noticed that f025602 uses winrestcmd().
+
+It's a shame that we didn't know about it when the great ctrlp has been using it for like 5 years :)
+
+Incidentally, I also have a zoom mapping. It uses `:tab split`, like Goyo.
+
+
+",junegunn,justinmk
+512,2016-03-01 08:01:48,"@DanielFGray You could do the following :
+
+Sorry this isn't what you expect, I've made a mistake.
+
+
+",netei,DanielFGray
+512,2016-03-02 07:54:50,"@DanielFGray Can you also try the following one?
+
+
+",D630,DanielFGray
+498,2016-02-22 20:07:23,"Strange... Installing fzf.vim seems to have fixed the issue, even for the previously broken wiki examples. Not sure what caused the original issue, but I'm back in business now.
+
+Thanks for the fzf.vim link @junegunn, I didn't even know about that project!
+",adambiggs,junegunn
+492,2016-06-11 15:57:10,"@netei @junegunn is there an example of how to remove duplicates for ctrl-r with fzf? I've seen a couple open issues about it and it'd be a nice thing to have.
+",aaronjensen,junegunn
+488,2016-02-12 04:03:35,"@junegunn yup, you're right. never mind. I just googled the error, found some RHEL bug report about how its useless.
+
+Anyways an empty line seems to work fine but I don't know if its the proper way.
+",nhooyr,junegunn
+486,2016-02-24 02:36:05,"> **@junegunn**: Does the new code run on slightly older versions of fish?
+
+ No. The new code uses the read builtin `-a` option which is only available in fish ^2.2.0. Still, you should merge as soon as tests pass since fish users are rarely locked to a particular version anyway.
+
+Source
+- https://fishshell.com/release_notes.html
+- https://github.com/kballard/fish-shell/commit/973dd6ffbdc189f22b634de0d684e92a9c160c9d
+",ghost,junegunn
+480,2016-01-31 04:13:21,"Thanks for the prompt response @junegunn, 
+
+I haven't done any heavy modifications to any of my configs to be honest but here they are.
+
+zshrc: 
+http://sprunge.us/VGMf
+
+this is the file that gets sourced:
+http://sprunge.us/DPdG
+
+and this is my oh-my-zshrc:
+http://sprunge.us/DGAV
+
+> You mean, CTRL-C doesn't work?
+
+Yeah, CTRL-C does nothing, CTRL-Z doesn't send the job to the background, I have to kill my terminal or tmux panel.
+
+> bindkey ""^I""
+> bindkey | grep fzf
+> echo $fzf_default_completion
+
+I'm sorry but what should I do whit this?
+
+> If you disable keybindings and fuzzy completion, there is no way fzf can start on tab key. Have you made sure that you restarted the shell?
+
+Yep, just tried it again, sourced and killed my terminal to be sure and it still does it ( I uninstalled it, closed my term and then reinstalled it again ).
+
+Thanks again!
+",EduardoRT,junegunn
+480,2016-01-31 15:13:30,"@junegunn thank you very much! I found the culprit with your config, it seems that oh-my-zsh's [common-aliases](https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins#common-aliases) breaks it, just removing that specific plugin fixes everything, I'm really sorry, I thought that I tried that correctly but it seems I removed my plugins wrong before.
+
+Thanks a lot! 
+",EduardoRT,junegunn
+474,2016-01-21 05:18:56,"thanks for the info @junegunn ! I was unaware of CTRL-6 and CTRL-O -- those should come in handy. And for now CtrlP's MRU works fine. Just thought if there was a way to do everything with FZF, it might be nice.
+",mattsawyer77,junegunn
+470,2016-02-21 11:58:47,"@junegunn  Awesome, that worked a treat!  I'd tried a bunch of ways such as copying the `fzf/src` contents into appropriate place in GOPATH and then `go build`.
+
+Binaries would be great but I'm very pleased I now have FZF on my FreeBSD laptop.
+",rosstimson,junegunn
+460,2015-12-29 18:50:30,"@junegunn in tmux 2.1 (https://github.com/tmux/tmux/commit/7382ba82c5b366be84ca55c7842426bcf3d1f521) $TERM inside tmux can be `tmux` or `tmux-256color`.
+",atweiden,junegunn
+454,2015-12-24 22:28:26,"@junegunn thanks! I didn't realize fzf.vim is a separate repository. Please feel free to resolve it here. 
+
+@netei thanks for point to :Registers; Looks like it's not as capable as `yankring`/`Unite history/yank`, but could work as a simple alternative.
+",anvaka,junegunn
+453,2016-04-23 03:52:50,"@junegunn Ok, so I tried to disable everything but the problem still persists.
+
+I'm using neovim, this is my `init.vim`
+
+
+
+As you can see, I'm using pathogen to load nerdtree. I don't have anything else in my `bundle` folder.
+",mrleolink,junegunn
+447,2015-12-14 06:45:00,"@junegunn Nope, no luck with `-ttt`. I still get `/dev/pty/0`. Here's the output from the above commands again whilst logged in with `-ttt`:
+
+
+
+I could perhaps create you a limited temporary account on my server if you are unable to replicate a suitable testing environment.
+
+A bit more information about my server: It's virtualized using OpenVZ, and I'm using the latest RHEL kernel to my knowledge.
+",sbrl,junegunn
+447,2016-02-07 09:04:00,"@junegunn If I open `/dev/tty` on my laptop with `cat`, anything I type into it get's echoed back as expected. If I do the same on the server, I get a permission denied.
+
+If, however, I run the `tty` command, on the server it returns `/dev/pty/0`, and on my laptop it returns `/dev/pty/4`. Opening them both with `cat` on their respective machines works like a charm.
+
+Would it be possible to try opening `/dev/tty`, and if that fails run the `tty` command to determine the terminal to try next?
+",sbrl,junegunn
+447,2016-02-08 06:59:37,"@junegunn Ah I see. That _is_ a problem. I have just tried contacting OVH and pointed them towards this bug - hopefully I'll get a response in a day or two.
+
+Here's the message I sent:
+
+> Hello,
+> I have recently been taking a look at some software that I wanted to install on my VPS, but the software in question is unable to open /dev/tty, and the developer has advised me  to contact you.
+> 
+> Here's a link to the issue with the software in question: https://github.com/junegunn/fzf/issues/447
+",sbrl,junegunn
+447,2017-01-19 21:25:48,"@junegunn Thanks for reminding me to update this issue! I think I did, yeah, but it boiled down to the virtualisation tool they used for the 2014 range of VPSes. I'm renting a different (much better!) server now, so it should work. I'll check it out :D",sbrl,junegunn
+446,2015-12-11 16:59:44,"@justinmk Ha, didn't know that! :bulb: 
+",junegunn,justinmk
+446,2015-12-12 16:11:25,"@chaoren Works perfectly. Thanks!
+",junegunn,chaoren
+437,2015-12-08 10:20:20,"@junegunn Yeah I will try to do that.
+Meanwhile if I execute only the find command in a prompt I get an error message:
+
+
+",rhabbachi,junegunn
+437,2016-01-01 18:47:47,"Thank you @junegunn. After a while I couldn't reproduce the issue. Closing.
+",rhabbachi,junegunn
+434,2015-12-07 18:00:52,"@junegunn
+
+
+
+and
+
+
+
+very usable.
+
+I think same issue https://github.com/tmux-plugins/vim-tmux-focus-events/issues/2
+",aliev,junegunn
+430,2015-12-04 07:29:11,"+1 @junegunn , it makes more sense to me that the dependencies are in other repos, so that you keep only **your** source code in the repository.
+",netei,junegunn
+426,2015-11-19 16:50:51,"@acornejo Not sure why (internal) `startinsert` doesn't work, but looks like we can workaround the issue with a `feedkeys` call.
+
+
+
+@khalidchawtany The same thing can be done in your case as well. Try changing `startinsert` to `call feedkeys('i')`.
+",junegunn,acornejo
+426,2015-11-19 16:55:04,"@junegunn yup, I can confirm this fixes the issue for me (makes sense, I was working around it by pressing i, so might as well have vim emualte that key press).
+
+Right now I amended my scripts by sprinkling the following in the right places:
+
+
+
+that being said, it would be wonderful if this fix was in fzf itself, so that user scripts don't have to care weather they are running in nvim or in plain old vim.
+",acornejo,junegunn
+405,2015-11-05 17:53:24,"@D630 have you tried with modification @junegunn suggested? In my initial testing I realized my original example does not work if `FZF_DEFAULT_OPTS` is unset. This works for me in `st` and `gnome terminal` on a Fedora 23 VM.
+",george-b,junegunn
+405,2016-10-16 14:36:26,"> AFAIK ncurses still clears the whole screen even when starting using a margin right?
+
+@acornejo Yeah, that is basically how ncurses works.
+",junegunn,acornejo
+405,2016-10-16 17:43:49,"Tks @junegunn, just closed the PR. If clearing the screen is unavoidable I don't see how starting from the current row is a desirable feature (if someone sees value on it, let me know since I had the code to add this to the fzf binary instead of doing it through shell scripts).
+",acornejo,junegunn
+405,2016-10-16 19:10:39,"Woah totally forgot about this! I'm actually not using fzf much these days, @junegunn should this be closed?
+",george-b,junegunn
+405,2016-10-17 00:25:22,"@acornejo I think the benefit is that we don't have to move our focus when fzf is started in full screen mode. But yeah, the usefulness of it is quite limited.
+
+@george-b I'll close it. Thanks.
+",junegunn,acornejo
+403,2015-11-04 06:12:12,"@junegunn @JackDanger 
+I spend quite some time back in #242 to look for the reason but couldn't find it. It happened only occasionally and seemed to only happen after some usage of the shell (maybe history size is important? For me this is quite large often and I also increased the limits).
+
+Nevertheless I would recommend to merge the pull request. For me it fixed the problem, apparently also for @JackDanger and there is **no** downside. It only expliciity takes care of non-zero return code, which the original version ignores. Also I find the split-up `if` a bit more readable.
+
+@junegunn knowing the reason for the non-zero return code would certainly be interesting for fzf. Maybe one can add a debug-section that checks for the return code and then saves out some more details about what happened in fzf before returning to zsh.
+",robinro,JackDanger
+403,2015-11-04 06:12:12,"@junegunn @JackDanger 
+I spend quite some time back in #242 to look for the reason but couldn't find it. It happened only occasionally and seemed to only happen after some usage of the shell (maybe history size is important? For me this is quite large often and I also increased the limits).
+
+Nevertheless I would recommend to merge the pull request. For me it fixed the problem, apparently also for @JackDanger and there is **no** downside. It only expliciity takes care of non-zero return code, which the original version ignores. Also I find the split-up `if` a bit more readable.
+
+@junegunn knowing the reason for the non-zero return code would certainly be interesting for fzf. Maybe one can add a debug-section that checks for the return code and then saves out some more details about what happened in fzf before returning to zsh.
+",robinro,junegunn
+403,2015-11-04 06:45:37,"@junegunn if the problem can not be found within a certain time/effort, still the workaround should be included. Fixing the original problem would be nicer, but not fixing a bug for a long time that keeps many people from using the tool is not reasonable.
+",robinro,junegunn
+403,2015-11-04 07:25:19,"@robinro I installed oh-my-zsh (since I couldn't reproduce with vanilla zsh) and noticed that zsh occasionally fails to update the prompt even when fzf-tmux properly completes (logged exit status and observed no anomaly there, always 0). I applied the patch, but the problem still persists. I don't think this is a proper fix to the problem.
+
+@JackDanger Can you try logging the exit status? I don't understand how fzf-tmux exits with non-zero code (unless the selection is empty). If it does, it's a bug of fzf or fzf-tmux. We should fix the problem there, instead of trying to workaround it here.
+",junegunn,robinro
+403,2015-11-04 07:25:19,"@robinro I installed oh-my-zsh (since I couldn't reproduce with vanilla zsh) and noticed that zsh occasionally fails to update the prompt even when fzf-tmux properly completes (logged exit status and observed no anomaly there, always 0). I applied the patch, but the problem still persists. I don't think this is a proper fix to the problem.
+
+@JackDanger Can you try logging the exit status? I don't understand how fzf-tmux exits with non-zero code (unless the selection is empty). If it does, it's a bug of fzf or fzf-tmux. We should fix the problem there, instead of trying to workaround it here.
+",junegunn,JackDanger
+403,2015-11-04 08:00:45,"@junegunn Thanks for looking into this. For me the patch resolved the problem, but I'll also look into logging the return code and collecting more info what's going on. I will only be able to do this towards the end of next week.
+",robinro,junegunn
+403,2015-11-05 00:07:13,">  Can you try logging the exit status?
+
+@junegunn It was `128`. I didn't get any more info about it than that but, like other folks here, I've noticed that the behavior is different depending on if my current working directory is a git repo. So there's something about ZSH + my `$PS1` and the git functions that are causing fzf to exit uncleanly. I'll be damned if I could figure out what, exactly was doing it though.
+",JackDanger,junegunn
+403,2015-11-05 03:56:24,"@JackDanger Can you share your `$PS1` and the functions used in it? I'll try to reproduce the problem from my machine with it.
+
+fzf never exits with `128`, so if that was the case, it was probably caused by some code in `fzf-tmux` script. It would be really helpful if you could put `#!/bin/bash -x` on the top of the script and check what's going on when that happens.
+",junegunn,JackDanger
+403,2015-11-05 04:23:35,"@junegunn Here's what I've got, I'll try to include as much as possible:
+
+I've changed the key binding function to include some debug output:
+
+
+
+And, with `bash -x` set as the shebang on fzf-tmux, I open a new tmux pane:
+
+
+
+The PS1 seems to work fine and the only real function call in the PS1 string has as it's last value an `echo` so nothing seems fishy to me.
+
+Now I `CTRL-R` and I get a hell of a lot of output in the current tmux pane as a new fzf-tmux pane opens below:
+
+
+
+I select one of the simple options in the fzf-tmux pane and hit enter and the fzf-tmux pane closes and the following is written to the main pane:
+
+
+
+Those last two lines (`last exit: 128` and `__fzfcmd: fzf-tmux -d40%`) are debug output from `fzf-history-widget`. If I remove the two echo commands from `fzf-history-widget` then I get nothing at all in my current shell line.
+
+Interestingly, if I just run this in my terminal the exit code is fine:
+
+
+
+Any ideas?
+",JackDanger,junegunn
+403,2015-11-05 04:30:57,"@JackDanger Thanks for looking into it. It looks like that `rm -f` in `cleanup()` failed with exit status 128. Is your `rm` an alias of something? What does `type rm` say?
+
+And can you check adding `set +e` to `cleanup()` as follows fixes the issue?
+
+
+",junegunn,JackDanger
+403,2015-11-05 04:41:02,"@JackDanger Thank you. So the whole log says that fzf-tmux correctly finished with `0` as expected. We'll have to find where that 128 comes from. Hmm. Can you check again with a very simple `$PS1`? Such as `PS1=""> ""`.
+",junegunn,JackDanger
+403,2015-11-05 07:33:11,"@JackDanger Found it. Changing `return` in `git_prompt_info` to `return 0` fixes the issue.
+
+So for some reason, the exit status from `PS1` is affecting the return code of command substitution. Extremely strange. Not sure if it's a bug or an expected behavior, but finally I'm willing to apply the patch.
+",junegunn,JackDanger
+403,2015-11-05 07:51:40,"@JackDanger Can you rebase your commit?
+",junegunn,JackDanger
+403,2015-11-05 18:08:09,"@junegunn Nice sleuthing! Sorry I couldn't find it myself, I got a little lost in all the moving pieces here. I've rebased and edited my comment to let the next person know why this might be necessary and what kinds of situations can cause this. Thank you!
+",JackDanger,junegunn
+403,2015-11-12 09:45:59,"thanks @junegunn @JackDanger for this fix! :+1: 
+",robinro,JackDanger
+403,2015-11-12 09:45:59,"thanks @junegunn @JackDanger for this fix! :+1: 
+",robinro,junegunn
+402,2015-11-03 17:57:50,"@justinmk Ah yes, thanks. It just slipped out of my mind. So is this behavior a bug or is it expected?
+",junegunn,justinmk
+402,2016-02-15 09:24:58,"I'm running fzf (0.11.3) and seeing this problem still in Neovim (0.1.2).
+
+**Neovim version:**
+
+
+
+**FZF command in Vim:**
+
+
+
+The above mapping fail to browse the selected directory. Manually calling `doautocmd BufEnter` after selection works. If I change sink to `:Explore` instead it also works.
+
+Any ideas why this still is an issue? Thought #371 would solve it?
+
+/cc @justinmk
+",KevinSjoberg,justinmk
+402,2016-02-15 12:01:42,"@justinmk I'm currently just running Neovim, but I can certainly check if I can reproduce this within Vim as well.
+",KevinSjoberg,justinmk
+402,2016-02-16 07:55:28,"@junegunn I understand. So the current status of this issue is that it's not possible to fix?
+",KevinSjoberg,junegunn
+400,2015-11-03 17:30:42,"Thanks @junegunn I've been using fzf for quite a while and did not know about this :sob: 
+",rgrinberg,junegunn
+397,2015-10-28 02:21:27,"Thanks @justinmk , any details on how to do the local terminal mapping? I would need some help here.
+
+Each time FZF opens it shifts horizontal splits up. so after a while if I have quickfix and whatnot my work buffer shrinks up to a single line, then I do 'Ctrl-W-o` and start over.
+",firedev,justinmk
+397,2015-10-28 02:46:19,"@justinmk Thanks, however it looks like there is no FileType fzf. It opens a new terminal window and filetype is empty for it.
+",firedev,justinmk
+397,2015-10-28 13:48:52,"@junegunn system() cannot run interactive commands in Neovim.
+",justinmk,junegunn
+397,2015-10-28 16:07:09,"@justinmk Yeah, but fzf-tmux opens a new pane and all the interactivity will happen there.
+",junegunn,justinmk
+383,2016-12-13 22:36:20,"@junegunn Regarding the `.gitignore` settings you mention above... where I do I set/run the commands you list?
+
+",jdsimcoe,junegunn
+383,2016-12-14 06:08:15,@junegunn Did that and it worked. Thanks!,jdsimcoe,junegunn
+353,2015-09-23 14:57:25,"@justinmk It reports `autochdir`
+
+For some reason, everything works fine on Vim, but not Neovim.
+",ianks,justinmk
+353,2015-09-23 16:26:10,"No I am not @justinmk. It appears nowhere in my code (confirmed by grepping).
+",ianks,justinmk
+353,2015-09-28 13:05:55,"@ianks @justinmk I see the same problem with the latest neovim-git -- it reports autochdir to be set, although it is not. I must manually run `set noautochdir` before using vim-filer every time, no matter what is in my `.nvimrc`.
+",saulhoward,justinmk
+350,2015-09-18 09:49:38,"@junegunn i just manually compiled fzf and that binary works. I already tried removing ~/.fzf and cloing and running ./install again without success. 
+
+Check my last comment above. I saw different errors when using your static and linked binary. 
+",jonaz,junegunn
+350,2015-09-18 17:55:21,"Aaand I think I pinpointed what is the problem.
+
+both me and @jonaz  use statically compiled binary which is probably compiled against older glibc version.
+In glibc 2.22 locale format changed a bit.
+
+So upgrading to glibc 2.22 on arch will automatically call `locale-gen` and thus update locales.
+And because fzf is probably compiled against older version  (@junegunn  can probably confirm that)  it will fail when trying to load file saved in newer format.
+
+I think that static recompilation against newer glibc will fix that problem on Arch. Or at least it should help to confirm whether this is a problem.
+",kowalskey,junegunn
+348,2015-09-16 19:43:24,"Sorry yeah @tarruda @junegunn it was my config
+",azure-satellite,junegunn
+347,2015-09-15 15:01:17,"@junegunn Thanks for the clarification!
+",siadat,junegunn
+345,2015-09-15 06:31:43,"Thank you @junegunn!
+",siadat,junegunn
+328,2015-08-31 16:42:05,"@junegunn The problem is not resolved. My config (I replaced my home path with ~):
+
+
+",slonka,junegunn
+328,2015-09-01 11:52:27,"@junegunn I don't know how to do that. If you post a link how to debug this I will try.
+",slonka,junegunn
+319,2015-08-14 14:31:35,"Awesome! Thanks @junegunn 
+",zhangchiqing,junegunn
+308,2015-08-05 09:04:46,"@edi9999 Agreed. I wonder which part of the current implementation caused the delay @azag0 experienced.
+",junegunn,edi9999
+308,2015-08-05 10:02:03,"@junegunn If someone submits a similar issue, feel free to ping me, I can look into it. Until then, I'll stick to my own key bindings. I guess you can close this.
+",azag0,junegunn
+306,2015-07-29 08:37:23,"> I have a question: does the plugin work by opening a buffer and pasting the contents of the actual file into that buffer? Because if so, I think that is the part where the problem lies.
+
+Nope.
+
+As @justinmk mentioned, I think `autochdir` can be the culprit. Can you try again with the option unset and see if the problem still persists?
+
+I actually found an issue with `autochdir` when selecting multiple files. When multiple files are selected, `fzf#run()` will open files one by one, but the directory is changed after the first file is open, so the rest of the files are not properly open.
+",junegunn,justinmk
+288,2015-10-11 16:52:35,"@junegunn Nice! I tried the latest commit and trailing space no longer appears! :+1: 
+",wzyboy,junegunn
+288,2015-11-09 19:50:17,"Just wanted to say thank you @junegunn!
+",tonglil,junegunn
+285,2015-07-04 01:35:07,"Done.
+@junegunn , thanks for the useful tool!
+",evverx,junegunn
+283,2015-06-30 00:05:09,"Thanks, @justinmk!
+",junegunn,justinmk
+283,2015-06-30 00:32:18,"Thanks @justinmk 
+",ahmedelgabri,justinmk
+280,2015-06-26 01:16:06,"@edi9999 I see your concern, and that's what I would usually tell the users. But we can't ignore that many of the users simply do not want to go that far and `FZF_CTRL_T_COMMAND` seems like an okay compromise to me.
+
+> not put the key bindings in the git repository
+
+You know the install script allows you to opt-out the default key bindings. So it's already an option.
+",junegunn,edi9999
+279,2016-05-05 16:13:57,"@junegunn Thanks for the link. This fixed it. Not sure why I've never seen that in any other application though ^^. Sorry for the noise.
+",guiniol,junegunn
+279,2016-06-29 20:04:41,"Quick update: the fix @junegunn gave me made `HOME` and `END` work in `fzf` but now they don't work in `neovim`.
+I added a comment at the end of this issue: neovim/neovim#4308
+
+Basically, if I add to Xdefaults:
+
+
+
+then `HOME` and `END` work in fzf but not in neovim, and if I remove that, it works in neovim but not in fzf. In both cases, both neovim and fzf work in tmux.
+So I'm at a loss as to how to debug that. Any tips would be appreciated.
+",guiniol,junegunn
+279,2016-07-04 18:03:57,"@eigengrau Great, thanks for the patch! Seems to make sense. Can you post a simple configuration file or script that reproduces the problem we're discussing here? I'd like to locally reproduce the problem on my vanilla zsh and confirm that the patch fixes the issue before merging it.
+",junegunn,eigengrau
+265,2015-06-17 10:02:10,"@junegunn I completely agree, this looks like the case where one can argue on the color of bike shed until the end of times. What comes into my mind is `man find`, specifically `-exec` option which supports both exec per one result and exec once with all results.
+",balta2ar,junegunn
+264,2015-06-13 15:00:10,"My bad about `:file_f` I have not found the documentation. :blush:
+
+@justinmk just explained for me about the `term://...`, thank you. :smile: 
+
+About the `bd!`, the `name` thing fixes it because `:file` creates another buffer, from `:h :file_f`:
+
+> If the buffer did have a name, that name becomes the |alternate-file| name.  An unlisted buffer is created to hold the old name
+
+So, with `:file [FZF]`, actually you have 2 buffers (one named as `term://...` and named as `[FZF]`), this is why you were needing the `bd!`:
+
+![nvim 2015-06-13 11-54-10](https://cloud.githubusercontent.com/assets/120483/8144761/426bb874-11c3-11e5-93da-0753f7b4a961.png)
+",kassio,justinmk
+264,2015-06-13 15:11:13,"@kassio Thanks for the explanation. So, `term://` prefix is the convention that we are going to have to follow, whether I like it or not. Overriding `&statusline` can be an option but people using fancy statusline plugins will not appreciate it. Anyway, I'll merge the PR, thanks!.
+",junegunn,kassio
+262,2015-10-07 17:16:12,"@junegunn So things seem to be working fine when outside of vim, but inside vim it's an empty list. However, :Tags works just fine. I have another laptop running with fzf + fzf.vim just fine so it's probably a config issue.
+",seanwash,junegunn
+262,2015-10-07 17:20:11,"@junegunn That was it. AG wasn't installed on this machine -____- sorry to waste your time! I'm really loving FZF and spreading the word as much as I can!
+",seanwash,junegunn
+259,2015-06-09 16:17:39,"thanks for the quick response, @junegunn I get the same output from terminal and within tumx
+looks like when in tmux, the candidates beyond 1862 were somehow truncated or hidden
+",timfeirg,junegunn
+250,2015-06-05 16:21:38,"@junegunn thanks, I've just made a s/fzf-tmux/fzf.
+",taromero,junegunn
+249,2015-06-18 13:54:49,"@junegunn thank you! :heart: 
+",padde,junegunn
+243,2015-05-28 03:31:34,"ctrlp-funky [uses regular expressions for every file type](https://github.com/tacahiroy/ctrlp-funky/tree/master/autoload/ctrlp/funky/ft) it supports, I don't think I quite like the approach. I'd rather use ctags as @justinmk suggested. But for listing functions and stuff in a single file (that's what ctrlp-funky does, right?), performance hardly matters, so fzf won't give you much benefit.
+
+> But, It won't showing what I expect.
+
+You mean it doesn't work? Or you mean it's not equivalent to ctrlp-funky? `:FZFTags` is just a small example that works, and it would require some effort to make it fancier.
+",junegunn,justinmk
+243,2015-05-28 03:47:37,"Thanks for your response @junegunn :)
+Yes, i just use your sample `:FZFTags` as is. I'm new to Vim. 
+The https://github.com/xolox/vim-easytags plugin allow me to create tag on read and save a file. Here is my conf:
+
+
+
+But, FZFTags seem to show all my tag. Not limit it to current active file
+
+What I want to have is like this:
+![a](https://cloud.githubusercontent.com/assets/1274849/7852392/01ba6e18-0527-11e5-9869-16f0ae049b74.png)
+
+Where I can easily jump to the method. This also allow me to filter the method like this:
+![a1](https://cloud.githubusercontent.com/assets/1274849/7852395/09dc02e6-0527-11e5-9c27-8a59f9f8dde2.png)
+
+As a new user in Vim world, I still can't modify your sample `:FZFTags`. Maybe I need to learn some vim scripting to modify your script..
+",rawaludin,junegunn
+243,2015-07-22 11:18:34,"@junegunn 
+
+I found a small solution (taken from CtrlPBufTag) without creating tagfile (works with current buffer):
+
+
+
+But go to line I can't realize. maybe you have a solution? (it would be great to display the expression type too like in ctlp). For example:
+
+JSONField | 32 | class
+
+Example usage:
+
+
+
+![fzf-ctags](https://dl.dropboxusercontent.com/u/5837324/fzfctag.png)
+
+Thanks!
+",aliev,junegunn
+243,2015-07-22 18:04:36,"@junegunn wow! thanks!!!! :)
+",aliev,junegunn
+240,2015-05-26 08:46:35,"@junegunn thank you very much! one more question: how to implement search for tags, without the tags file as in ctlpbuftag? for example: https://coderwall.com/p/x39gbg/use-ctrlp-s-ctrlpbuftag-to-quickly-jump-to-methods
+",aliev,junegunn
+240,2015-06-21 12:27:08,"@junegunn Hey, thanks for the awesome project. I copied the https://github.com/junegunn/fzf/wiki/Examples-(vim)#narrow-ag-results-within-vim (AG results in vim) in my vimrc and 
+I tried `:Ag my_pattern` in my directory, the tmux window quickly opens(the pattern has results) and closes down, before I could look through the files. 
+
+The other functions like `FZFMru`, `FZFTags`, `FZFTagFile`, `FZFLines`, just works, wondering what I did wrong, can you please help? 
+",vysakh0,junegunn
+240,2015-06-21 14:56:46,"@junegunn Just updated fzf, it works :) Thanks :+1: 
+",vysakh0,junegunn
+240,2015-06-21 15:24:16,"@junegunn I've another question, hope you won't mind. In Vim, 
+- I did `:Ag mypattern`, it returned 4 results, 
+- I chose the first result, and fzf window (tmux split) closes, 
+- I've to do `:Ag mypattern` again to see the other results. 
+
+Question: How to close the split window(fzf results) only on pressing escape, not on any selection of results? 
+",vysakh0,junegunn
+240,2015-07-09 17:37:22,"@junegunn :dancers: thank you :+1: 
+",vysakh0,junegunn
+239,2015-05-18 15:16:03,"@noahfrederick @junegunn Thank you both! I just tried what @junegunn posted and it seems to work great. Yes, I'm not very good at vimscript but I agree this is more flexible :) 
+",Linuus,junegunn
+236,2015-05-20 07:09:55,"@junegunn I can reproduce, `ls **<tab>` then `Ctrl + C` and it will be in column 0 with `ls **` in prompt.
+",pigmej,junegunn
+236,2015-05-20 07:17:46,"@pigmej @tiziano88 Aha, I was unable to reproduce it because I was on tmux, but I can see the prompt garbled when not on tmux. Actually the cursor is not moved to column 0, it just looks like so because `zle redisplay` is skipped. I'll fix it.
+",junegunn,tiziano88
+234,2015-05-13 14:49:18,"Thanks @junegunn for your quick reply. My feedback as follows:
+
+> Does this work on command line?
+
+I don't understand what you mean here. If I run `fzf` on terminal, it works. If I run your mentioned script, it says `zsh: command not found: xterm`
+
+> Can you check if it works when there's no other plugins and settings?
+
+It didn't work, I still suffer from the same error :disappointed:
+
+> This is not relevant to your issue, but I just updated the vim plugin so that MacVim window is refocused when fzf is closed. So, please update
+
+With new update, the nagging error has gone, but the plugin is defective. There no pop-up windows for `FZF` 
+",babygau,junegunn
+234,2015-05-13 15:15:04,"> Well, that's the reason. You need to install http://xquartz.macosforge.org/landing/
+
+Your suggestion is spot on. I can run `fzf` on `MacVim` now :+1: 
+
+> The update wasn't meant to fix your problem. I just wanted to let you know of it.
+
+Yeah, I also just wanted to let you know anyway :grinning: 
+
+Many thanks @junegunn, cheers :100: 
+",babygau,junegunn
+234,2015-05-13 15:28:59,"@junegunn 
+This could not be an issue, but is there anyway to change cursor background in `fzf`, currently the cursor background is `white` and it looks like a `block cursor`. I just want to turn off cursor highlight so it will look like a `vertical bar cursor`. 
+",babygau,junegunn
+234,2015-05-13 16:11:32,"Thanks @junegunn,
+
+I found a way to fix it
+
+
+
+And the background disappeared though I lost the vertical bar cursor.
+",babygau,junegunn
+230,2015-05-10 23:16:20,"Thanks for all this @junegunn ! Also I think we should add support for configuring a different bound key and having no trigger at all. Specifically, the use case I'd like to support is: start writing a path name, use tab completion as usual up to a certain point, and then use a different shortcut (e.g. <kbd>CTRL</kbd>+<kbd>P</kbd>) to trigger fzf from that point on (without ever typing a specific trigger).
+",tiziano88,junegunn
+227,2015-05-15 10:19:51,"@junegunn Hm, unexpectedly, putting `source ~/.fzf.zsh` after autosuggestions seems to have solved the problem. I'd give it a longer try, though, before concluding it works 100%.
+",balta2ar,junegunn
+227,2015-05-15 14:28:32,"@junegunn Thanks, I'll probably stick with disabling autocompletion for a while. Unfortunately, I have zero knowledge of how zsh plugins work, but I'll add problem investigation to my TODO list. Autosuggestions is a nice plugin but as it was mentioned many times in its issues, it requires someone with time and energy to fix all its problems.
+
+Also, could you please expand that Wiki page to describe what value fzf zsh completion adds (maybe more pictures, GIFs or other visual demos of the awesomeness it brings)? Sorry if I sound stupid but I don't quite understand what I am missing here.
+",balta2ar,junegunn
+225,2015-05-14 06:31:53,"@junegunn 
+
+I just checked. The problem has been fixed. kudos @junegunn :tada: 
+
+Now there's only one nagging #206 left that causing misbehaving `default enter` key in `fzf`. Hope you and @tarruda could fix it one day :sparkles: 
+",babygau,junegunn
+223,2015-05-19 20:39:30,"@junegunn is there any easy way to have `Ctrl+K` not for ""up"" action but for `kill-line` (emacs function name) ?
+",pigmej,junegunn
+223,2015-05-21 15:51:44,"@junegunn cool,
+
+About your last question, it seems that I use `crtl+k` more than I even expected ;-) Usually for delete to the end of the line.
+",pigmej,junegunn
+216,2015-11-29 01:09:51,"@Tranquility Now I see the real issue: nvim does not update the terminal buffer as soon as it receives data. Here's a high-level overview of how it works:
+- Nvim receives data from the pty
+- Data is fed to libvterm, which immediately updates its internal screen
+- At most 10ms later, nvim updates the terminal buffer to reflect libvterm internal screen.
+
+In other words, nvim updates the buffer at most once each 10 milliseconds. This is done because updating buffers is more expensive than simply updating a virtual screen, and if we updated the buffer every time data is received, there could be serious performance problems with programs that send large bursts of output(It is not a premature optimization, I actually noticed these problems while working on neovim/neovim#2076).
+
+A relatively simple workaround is to expose a separate API for accessing libvterm screen state directly. This would allow @junegunn patch to be adapted to use this API to get the number of matches instead of `getline(line('$') - 1)`.
+",tarruda,junegunn
+207,2015-05-19 15:16:07,"@tarruda the backtrace looked the same as [the one I posted earlier](https://github.com/junegunn/fzf/issues/207#issuecomment-94966323).
+
+@junegunn I was running the latest version of NeoVim & FZF when I posted.
+
+Let me know if there's any other debugging steps that would be helpful.
+",adambiggs,junegunn
+207,2015-05-20 17:12:12,"Sorry, this is my first experience generating a backtrace like this...
+
+I followed the [instructions](https://github.com/neovim/neovim/wiki/Development-tips#core-dumps) posted by @justinmk, but I had to modify the command slightly to get it to work... Maybe I screwed something up in the process.
+
+I found that after running `ulimit -c unlimited`, the core dump showed up at `/cores/core.1234`, so I used the following to get a backtrace:
+
+
+
+FYI I'm on OSX 10.10.3 running NeoVim in Tmux 2.0.
+",adambiggs,justinmk
+207,2015-08-14 11:06:00,"@jebaum can you provide the file you opened to reproduce this issue?
+",tarruda,jebaum
+207,2015-09-10 07:37:14,"@jebaum @tarruda Unfortunately, it is not yet _flawless_. I found another issue where nvim hangs forever saturating a CPU core. The problem is always reproducible. See https://github.com/junegunn/fzf.vim/issues/8
+",junegunn,jebaum
+207,2015-09-12 09:16:24,"I can still reproduce it almost 100% of the times with a debug build (with the release build usually it just doesn't open the file, in fact I suppose this issue and https://github.com/junegunn/fzf/issues/206 are the same one). Also it seems to not be related to https://github.com/neovim/neovim/issues/3150 since the latest fixes by @tarruda in the commit https://github.com/tarruda/neovim/commit/9ce5dbe15be2351e58740d455879fbf555cbc5a9 don't fix it for me. 
+@jebaum Would you mind trying with a debug build and see if you can still reproduce it?
+
+Here's my symbolicated backtrace:
+
+
+",choco,jebaum
+206,2015-04-21 02:03:24,"@junegunn can you assign this and any other neovim-related issues to me?
+",tarruda,junegunn
+206,2015-05-28 14:21:22,"Guys, @junegunn, @tarruda 
+
+This seems to be fixed properly. Now I can open every files with ""Enter"" key. Could anyone confirm this so that we could close this issue? Because I updated both `neovim` and `fzf` so I don't know which one fixed the bug. 
+
+Here is my `fzf` config that allows me to use <C-P> to activate `fzf` window and open new buffer window with `Enter` key
+
+
+
+Here is my OSX 10.10.3 config
+
+
+",babygau,junegunn
+205,2015-09-22 05:26:00,"@junegunn The [redraw!](https://github.com/junegunn/fzf/issues/205#issuecomment-101751888) should not be needed anymore.
+",justinmk,junegunn
+202,2015-04-21 17:22:13,"@junegunn 
+Just chiming in to say I like the new `--inline-info` UI a lot.
+",noahfrederick,junegunn
+202,2015-04-21 17:29:49,"agreed, @junegunn has an impressive history of listening to suggestions and improving them. great work as always
+",jebaum,junegunn
+201,2016-02-05 22:31:19,"Thanks for that workaround @chaoren !
+",alcuadrado,chaoren
+201,2016-09-15 19:55:02,"@chaoren Just tried the latest build (`brew reinstall tmux --HEAD`) and it works just as expected. Great job!
+",junegunn,chaoren
+201,2016-09-16 04:04:17,"@chaoren Thanks for letting us know! Then we just need a latest version of tmux :)
+
+Tmux 2.3 includes this.
+",wookayin,chaoren
+197,2015-05-11 10:07:46,"Hey @junegunn && @tarruda ,
+
+after upgrading to the latest version of fzf on my second computer (which was not affected by this bug for now), I encountered the same issue again.
+
+I suspect the issue comes from fzf rather than neovim, because both had the latest version of neovim, but different versions of fzf until today.
+
+So after finding out that the version 0.9.7 worked well, I started a git bisect to find out where the problem comes from.
+
+
+
+Here are the versions I use:
+
+
+
+I also use zsh, but I can reproduce the issue even without using zsh and without using tmux (just running neovim from a shell)
+
+Hope that helps to find the origin of the bug
+",edi9999,junegunn
+197,2015-05-12 15:57:24,"Personally, I don't think we should chekcout to use old version of fzf.vim. Also, as @junegunn said, this is not the issue in fzf but in neovim. The correctly way to solve this is waiting neovim for fixing the bug.
+That being said, I found there is a way to by pass this .. you can just use `<C-v>` to open a splitted window, and then close the other windows by `<C-w> o`.
+",lazywei,junegunn
+197,2015-05-15 01:30:04,"@edi9999 @lazywei Try updating the vim plugin to the latest and see if it helps. I added a `redraw!` hoping that it would help avoid some race conditions and it does seem to help. It probably [isn't a perfect solution](https://github.com/junegunn/fzf/issues/205#issuecomment-101755075) to the problem, but I haven't run into an issue yet and it feels pretty usable.
+",junegunn,edi9999
+197,2015-09-08 16:50:47,"@forbesmyester @edi9999 @lazywei Is this still happening on latest Neovim?
+",justinmk,edi9999
+191,2015-04-16 00:57:21,"@qiemem That's an interesting idea, thanks, and yeah, it's true that it'll be prohibitively slow. It should allow total customization, but at the same time, it'll be be much harder to use for ordinary users.
+
+I'm leaning towards adding `--tiebreak` option. Simpler and does the job. Also no increase in memory footprint or sorting cost.
+",junegunn,qiemem
+179,2015-04-10 07:00:45,"I found https://github.com/junegunn/fzf/issues/111 which already gave me the idea of using `export FZF_DEFAULT_OPTS='-x'`
+
+I've used it since yesterday and it seems a good solution. 
+
+Out of curiosity, what other fzf related config do you use @junegunn on your machine ?
+",edi9999,junegunn
+178,2015-04-09 14:23:47,"@wellle @Ram-Z 
+So if I understood correctly, `aa/bb/cc` effectively translates to `a[^/]*?a[^/]*?/b[^/]*?b[^/]*?/c[^/]*?c[^/]*?`, and `aaa/bbb/ccc` matches the pattern but `aaa/bbb/xxx/ccc` does not. Is it correct? Or am I missing something? If that's the case, it might be useful if the input only consists of paths, but I don't think it's ideal for command history. For example, consider input string:
+
+
+
+and you type in `cpaa/bb/cc` but it doesn't match because of `hello/world` before `aaa/`, and you're obliged to include `h/` to the pattern.
+
+EDIT: `/` instead of `h/`, but you get the point. It can be confusing when there are multiple path arguments to the command. e.g. `mv a/b c/d/e /x/y/z`
+",junegunn,wellle
+159,2015-03-27 15:55:49,"@junegunn - thanks, works like a charm, although I renamed it to agv in my bashrc :)
+Now all it needs is to go to the next result from within vim - if it's possible :)
+
+@balta2ar thanks for the `pt` tip - It does seem slightly faster
+",naseer,junegunn
+153,2015-03-22 05:26:49,"@junegunn Makes sense! :+1: Thanks for taking the time to clarify. Awesome
+",unphased,junegunn
+147,2016-10-22 09:20:41,"@kelleyma49 Thank you for you awesome work! This is exactly what I was looking for.
+
+@junegunn How do you think of this branch? Is it seems to be able to be merged?
+",simnalamburt,junegunn
+147,2016-10-22 20:36:03,"@simnalamburt It looks promising but it isn't ready to be merged. Some features are commented out. I see it more as a proof-of-concept implementation as for now. But if you just need the basic features, this might be already usable.
+
+@kelleyma49 Cool, thanks! Did you have any issues while porting the code to termbox? I considered using termbox before I started on rewriting fzf in Go (late 2014), but it lacked some features fzf needed such as the support for 256 color terminal and mouse. I guess things have changed over the time? (https://github.com/nsf/termbox/releases)
+
+If we can implement everything ncurses provides using termbox, it does make sense to migrate to termbox completely like @justinmk suggested. But I wouldn't go that far at this stage. If it ain't broke, why fix it? I have much trust in battle-tested ncurses and I expect things to be less stable with its much younger alternative.
+
+Implementation-wise, I think we should do some refactoring of extracting non-portable parts of the code first, to minimize code duplication I see in your branch. Then we can rebase your work on it. Also I would make it possible to build fzf with termbox even on non-Windows platform using build tags. I'll let you know of the progress.
+",junegunn,justinmk
+147,2016-10-23 17:20:06,"@junegunn - I agree, it isn't ready to be merged.  It's not feature parity yet (for example, preview window doesn't work.)  
+
+You've abstracted the curses enough that I don't think it would be a problem to keep ncurses and the termbox-go implementations around until you're satisfied that termbox-go (or another solution) matches the features and performance of the ncurses.  Let me cleanup the code and test some more before I attempt a pull request. 
+",kelleyma49,junegunn
+147,2016-10-24 14:38:02,"Thanks @junegunn .  I submitted a pull request to you: https://github.com/junegunn/fzf/pull/714
+",kelleyma49,junegunn
+142,2015-03-12 16:38:54,"It works now. Thanks for your work. @junegunn 
+",xuchunyang,junegunn
+138,2015-05-26 10:27:58,"thanks @junegunn !! all I needed!
+fzf is such a great idea! love it! slowly I migrate more and more functionality that I used unite for...it's insanely fast!
+",marcmo,junegunn
+137,2015-03-07 17:15:50,"@wellle Yeah, I'm looking forward to that, but I still wish they don't cripple `:!`.
+",junegunn,wellle
+137,2015-03-10 04:47:44,"@jebaum 
+
+> If fzf adds support to its vim plugin for opening in nvim :terminal, is it also possible that it'll add some keymaps?
+
+Hmm, I don't know. Maybe `tnoremap` will allow us to do that?
+",junegunn,jebaum
+137,2015-03-26 09:04:59,"@junegunn I suggest waiting for neovim/neovim#2247(which will me merged until tomorrow) before merging this change
+",tarruda,junegunn
+137,2015-03-28 18:34:03,"@jebaum In the meanwhile, ctrlp-compatible key bindings (CTRL-T/X/V) for `:FZF` are now implemented using `--expect` option of 0.9.6.
+",junegunn,jebaum
+137,2015-03-29 12:11:01,"@jebaum 
+
+> I really like that way of doing it, very unobtrusive, although wouldn't your original tnoremap idea still work as well?
+
+Neovim is not my primary editor (yet), and I'm always on tmux, so I currently have no issue running fzf on vim and now I can even have custom key bindings with `--expect` option. We can still use `tnoremap` instead on Neovim, but I don't see the point. There's no reason to implement two different ways to do the same thing. The neovim version of fzf plugin should only differ in the way it launches fzf, the rest of the code does not need to be changed.
+
+> I think there's still some support needed from neovim
+
+Not much. Have you tried the examples on [the wiki page](https://github.com/junegunn/fzf/wiki/Examples-%28vim%29)? I'm using fzf on vim to [open files](https://github.com/junegunn/dotfiles/blob/8318f4c/vimrc#L1322-L1325), [switch buffers](https://github.com/junegunn/dotfiles/blob/8318f4c/vimrc#L1340-L1359), [select color scheme](https://github.com/junegunn/dotfiles/blob/8318f4c/vimrc#L1327-L1338), or [go to a line in any open buffer](https://github.com/junegunn/dotfiles/blob/8318f4c/vimrc#L1382-L1405) (I think this is equivalent to the line source of unite you mentioned) using horizontal/vertical tmux panes. No need to complicate, simple uses of temporary files should suffice in most of the cases. The only thing that I need at the moment is `TermClose` autocmd @tarruda mentioned.
+",junegunn,jebaum
+137,2015-03-29 12:37:31,"@jebaum note that you can add your own custom mappings for fzf with something like this:
+
+
+",tarruda,jebaum
+137,2015-04-10 07:51:53,"@junegunn Yes I will add `TermClose`. I'm just waiting a few days for the community to give more feedback on the terminal emulator before I start fixing bugs and enhancing it.
+
+But there's a temporary workaround you can use to get an exit notification: Just spawn the terminal with [`termopen`](http://neovim.org/doc/user/eval.html#termopen%28%29) which is similar to `jobstart`. Here's a little snippet to get you started:
+
+
+
+Note that the `feedkeys` hack is required because nvim will crash if you call `bd!` directly while the terminal is focused(it's on my list of fixes :smile:). Also, the `enew` is required because `termopen` will use the current buffer to spawn the terminal(this is done so terminals are restored by scripts created with `:mksession`)
+
+If you'd rather wait for `TermClose` I might add it this weekend.
+",tarruda,junegunn
+137,2015-04-10 08:08:30,"@junegunn Actually the crash I mentioned earlier is gone, thanks to @splinterofchaos. The following should also work:
+
+
+",tarruda,junegunn
+137,2015-04-10 16:47:31,"@junegunn @tarruda awesome work guys! FZF in NeoVim is blazing fast!
+",adambiggs,junegunn
+137,2015-04-15 11:28:50,"@junegunn for what it's worth, I was reinstalling fzf using Homebrew (`brew reinstall --HEAD fzf`) and forgot that I also needed to update the vim plugin.
+",tamagokun,junegunn
+137,2015-04-15 11:48:02,"@junegunn aha! Of course. Thanks!
+",tamagokun,junegunn
+137,2016-02-26 00:04:18,"> are you still planning to add TermClose? For this to work, I need a way to either
+
+@junegunn Not sure if you still need it, but `TermClose` was added some time ago, and I noticed fzf doesn't seem to be using it.
+",justinmk,junegunn
+137,2016-02-26 00:15:52,"@justinmk No, I was just unaware of `on_exit` callback when I asked for it.
+",junegunn,justinmk
+128,2015-11-02 19:29:11,"Although I'm pretty sure it's obvious for others by now, `fzf` does [respect](https://github.com/junegunn/fzf#respecting-gitignore-hgignore-and-svnignore) `.gitignore` et. al which should solve this problem. 
+<3 this tool btw @junegunn.
+",shri3k,junegunn
+116,2015-01-05 03:06:41,"@justinmk There are some hurdles for supporting Windows. fzf depends on ncurses which is as far as I know not available on Windows platform. Fortunately, there is a cross-platform alternative to ncurses called [termbox](https://github.com/nsf/termbox-go), but it lacks some features fzf needs, such as proper mouse support and escape key sequences (for alt-something). Those features are not really crucial to fzf, so given that we can live without them on Windows, it's doable. But I don't have a Windows PC for the development, so I could use some help.
+",junegunn,justinmk
+115,2015-01-02 14:37:07,"@wellle Thanks :) This is my first experience in Go. I hope you can help me stabilize the new version. I decided to spend a few days in the holiday season to do this to learn the language. After years of playing with higher level languages like Ruby or Clojure, writing Go didn't feel so smooth. But it's still much better than writing some C++ code, and Go seems to be the right balance between developer happiness/productivity and performance.
+",junegunn,wellle
+115,2015-01-09 03:32:12,"@wellle @JackDanger You guys interested in trying/testing the Go version? I think it's getting pretty close to being stable and I wish to merge it to master soon, but I'm not yet confident enough. You can check out `go` branch and rerun the install script. I'd appreciate any feedback.
+",junegunn,wellle
+115,2015-01-09 03:32:12,"@wellle @JackDanger You guys interested in trying/testing the Go version? I think it's getting pretty close to being stable and I wish to merge it to master soon, but I'm not yet confident enough. You can check out `go` branch and rerun the install script. I'd appreciate any feedback.
+",junegunn,JackDanger
+115,2015-01-09 04:59:44,"@junegunn I've just replaced the Ruby version with the Go version on my laptop (OS X) and it's fantastic. Almost indistinguishable except it indexes extremely large directories about twice as fast as the Ruby one. Feels shippable to me.
+",JackDanger,junegunn
+115,2015-01-09 07:03:02,"@JackDanger Thanks for checking out!
+
+@jebaum Right, I experienced the same issue when running a binary that was built on ubuntu on arch linux. So I updated the build script to build the binaries on arch linux (https://github.com/junegunn/fzf/blob/go/src/Makefile#L48) and confirmed that the issue is gone. Tell your friend to update the repo, delete the binary, and rerun the install script. I'll be constantly updating the binaries on https://github.com/junegunn/fzf-bin/releases/tag/0.9.0 until it's officially released.
+",junegunn,jebaum
+115,2015-01-09 07:03:02,"@JackDanger Thanks for checking out!
+
+@jebaum Right, I experienced the same issue when running a binary that was built on ubuntu on arch linux. So I updated the build script to build the binaries on arch linux (https://github.com/junegunn/fzf/blob/go/src/Makefile#L48) and confirmed that the issue is gone. Tell your friend to update the repo, delete the binary, and rerun the install script. I'll be constantly updating the binaries on https://github.com/junegunn/fzf-bin/releases/tag/0.9.0 until it's officially released.
+",junegunn,JackDanger
+114,2015-01-02 05:12:35,"@justinmk Maybe it's a bug from older versions of git? Haven't had time to really look into. Homebrew and NeoBundle also stopped supporting shallow clones for some reasons.
+- https://github.com/Homebrew/homebrew/commit/8a1c2ec
+- https://github.com/Shougo/neobundle.vim/issues/81
+
+EDIT: They're actually related to `git fetch` instead of `git clone`, so they could be unrelated.
+",junegunn,justinmk
+112,2014-12-23 14:47:00,"@junegunn You are right, in bash it works just like fzf. I must have compared it with zsh where it works as I described originally.
+",balta2ar,junegunn
+111,2014-12-22 11:37:21,"I second that request, I also find fuzzy search too broad sometimes. @junegunn Thanks for reminding about exact search using quote, I will give it a try. At the first glance I see weird behavior: I'm using zsh and I see different search results when 1) I press `<CTRL-R>` and search with exact match 2) when I run `history 0 | fzf -x`. Though I have added `FZF_DEFAULT_OPTS=""-x""` to my `~/.zshrc`.
+
+Is `FZF_DEFAULT_OPTS` option used when history widget is triggered [here](https://github.com/junegunn/fzf/blob/master/install#L226)?
+",balta2ar,junegunn
+111,2014-12-22 12:33:02,"@junegunn oops, my bad! Now it works, thank you! Personally I was thinking about toggling three search modes: exact, regexp and fuzzy. However this extended mode can cover pretty much of my use cases (if not all of them).
+
+This is probably for another issue but I miss `<ALT-BACKSPACE>` and `<ALT-D>` shortcuts to delete previous/next word correspondingly. It would be great to support them.
+",balta2ar,junegunn
+111,2014-12-23 09:27:18,"@junegunn Thank you! Yes, `<ALT-BS>` and `<CTRL-W>` are the same.
+
+Two things I noticed, though. `<ALT-F>` behaviour is inconsistent with one in bash and zsh (readline?). The cursor should go to the first letter of the next word. In your implementation it is stopped at the word separator. `<ALT-B>` behaviour is correct.
+
+And second, which I don't really know how to make fully compliant, is what to consider a word separator. Say, if you have `aaa-bbb=ccc_ddd<CURSOR>`, you need to press `<ALT-BS>` four times (bash, zsh) to delete the whole line while your implementation deletes it in one stroke (this, however, can be tuned in zsh as it has WORDCHARS variable). This is confusing.
+",balta2ar,junegunn
+109,2014-12-12 04:48:08,"@brettanomyces Simply reset the changes and force-push the new commit:
+
+
+",junegunn,brettanomyces
+107,2014-12-04 15:59:12,"@junegunn Thanks! Working for me now. :+1:
+",beaugunderson,junegunn
+106,2014-12-01 01:31:57,"@mhinz Since the role of the install script is to set up bash and zsh functions and extensions, there's no point of running it on the systems without those shells. In that case, we should be able to run fzf as a Ruby script by manually putting it in a `$PATH` directory, but no extra goodies. Having said that, I have to mention that I have no experience in systems other than Linux and OSX.
+",junegunn,mhinz
+106,2014-12-01 12:59:36,"@mhinz Looks like I misunderstood the point of your comment. Sorry about that.
+",junegunn,mhinz
+101,2014-10-20 15:07:49,"@wellle 
+I see - of course, thanks!
+",blueyed,wellle
+101,2014-10-20 15:53:37,"Thanks @wellle :)
+@blueyed I noticed [peco](https://github.com/peco/peco) (which is not precisely a fuzzy finder though) allows remapping of keys, you might want to check it out.
+",junegunn,blueyed
+101,2014-10-20 15:53:37,"Thanks @wellle :)
+@blueyed I noticed [peco](https://github.com/peco/peco) (which is not precisely a fuzzy finder though) allows remapping of keys, you might want to check it out.
+",junegunn,wellle
+92,2016-04-22 17:26:04,"@junegunn sorry, I was wrong. Actually nothing happens when I `ctrl - t`. 
+
+For example: If I do `rm` then `ctrl - t`. Nothing happens. 
+",yifanchen,junegunn
+88,2014-08-13 23:01:17,"@junegunn : that did not change the behavior. I still see duplicates.
+",bnovc,junegunn
+85,2015-02-14 03:25:18,"@junegunn I suppose the vim plugin is the only complex thing, as you say the other snippets are fairly simple.
+:+1: for breaking up the wiki though.
+",george-b,junegunn
+85,2015-02-14 03:56:54,"@george-b @junegunn 
+
+Sorry I totally forgot this issue ...
+
+I'm somehow against placing snippets in wiki as it's not easy to maintain them (without version control, and modification management). Either placing them into fzf repo, or using `fzf-contrib` to contain them would be better, IMHO.
+
+By the way, @george-b , if you'd like to, maybe I can add you as fzf-contrib's collaborator, and then we can transfer the snippets to that repo?
+
+Thanks.
+",lazywei,junegunn
+81,2017-02-02 02:06:18,"@junegunn I've just found this and it is super useful! However when I run it fzf always opens up in a full screen pane and the configs I've set for it don't apply. Here is my config: 
+
+
+
+Any idea's how I can get it to maintain the 20% split?
+
+Unrelated question, but I might as well ask here. If I set the layout to top, left or right I get a full screen panel as well. I'd love to be able to set it to top and still see the code.
+
+Thanks",bag-man,junegunn
+67,2014-06-24 16:08:26,"@junegunn All the outstanding issues should be fixed. I am using lots of `\` to escape quotes now, and I forgot to add `-print`(s) to `__fzf_select`.
+",neersighted,junegunn
+65,2015-07-06 00:50:52,"@junegunn I have the (apple) script named `fzf_launch` on Vim's PATH and I can see it by typing `:set runtimepath?`.  Apple script works fine when I invoke it manually but I'm unable to make it work with `let g:fzf_launcher`
+Getting `Error running fzf_launch '/Users/cabhishek/.fzf/bin/fzf --expect ctrl-v,ctrl-x,ctrl-m,ctrl-t'` when I type `:FZF` in Vim. I'm missing something ?
+",cabhishek,junegunn
+65,2015-07-06 15:59:30,"@junegunn Thanks worked. 
+",cabhishek,junegunn
+52,2014-06-18 11:02:39,"@Shougo @junegunn  A better idea, can I use fzf with unite? Then, I can combine both of them, and get super power.
+",markwu,junegunn
+52,2014-06-20 09:24:31,"@junegunn Thanks.  I fixed the error.
+
+> So here is the new GIF (sorry the demo is a bit silly):
+
+Thanks.  I will improve unite.vim performance.
+",Shougo,junegunn
+52,2015-10-01 11:11:05,"@junegunn Okay, I should really be comparing fzf with percol.
+I was confused, and thought fzf was another alternative implementation of searching utility. Now, I see `fzf` is an interface for command line interactions, pick/open files, not a search engine like ag or find.
+
+Was @Shougo just looking for optimizing `unite.vim`'s caching algorithm from `fzf` from this thread? 
+",ldong,junegunn
+50,2014-06-04 07:43:15,"@junegunn, almost forgot :) Is there any way to show more than just 30 last commands in Ctrl+R menu? Didn't find any way to change this behaviour.
+",roboslone,junegunn
+45,2014-06-02 11:04:30,"@cskeeters , `grep -v` ?
+",roboslone,cskeeters
+45,2014-08-06 15:18:09,"One option for filtering files would be to use Steve Losh's friendly-find (ffind) instead of find.  It ignores files in .hg .git and .svn plus ignores files that match patterns in .gitignore, .hgignore, and it's own .ffignore.
+
+@junegunn do you have any experience using these two tools together?
+",cskeeters,junegunn
+45,2014-08-06 16:58:40,"@cskeeters Thanks. Yes, I discovered the tool a while ago, but unfortunately the performance was not satisfactory as it's written in Python. And its implementation of .gitignore filtering was inaccurate when I checked. (ag is also shipped with an incomplete implementation of the filtering, but it's much faster than ffind. However, ag is not really a tool for listing, and its output does not include directories.)
+
+Actually it got me started on a fast alternative in a complied language, which delegates the filtering to libgit2 not to reinvent the wheel. But the project is on hold due to some bugs in libgit2 :/
+",junegunn,cskeeters
+44,2014-05-20 15:03:48,"@wellle Thanks man!
+
+@aboettger Don't feel pressured to make it perfect, especially if you don't have access to OSX. Just force-push the updated version, then I'll do the rest :)
+",junegunn,aboettger
+44,2014-05-20 15:03:48,"@wellle Thanks man!
+
+@aboettger Don't feel pressured to make it perfect, especially if you don't have access to OSX. Just force-push the updated version, then I'll do the rest :)
+",junegunn,wellle
+33,2016-01-28 22:08:03,"In case other Fish users read this, here is an alternative:
+
+
+
+That's good when the result is one line. For multiple selections, `fzf -m`, the best solution so far is the one @junegunn posted using a temp file.
+",da99,junegunn
+25,2014-05-02 14:06:53,"@wellle Yep, I should definitely consider moving a good part of the section to the wiki. Too bad there's no way to give people write access to it though.
+
+@grota I generally agree with your sentiment. I must admit that the install script has become quite messy and convoluted. One excuse is that you can still choose not to install key bindings and completion functions during the installation. I liked that CTRL-T binding so much that I couldn't resist including it in the installation process, maybe I shouldn't have done that. But what can we do now? :relieved: Well then if we put aside the key bindings and fuzzy completion, you might wonder why it sets up `fzf` function, when you can simply put the `fzf` script in a bin directory. There's a good reason for doing that. Most Ruby users have multiple versions of Ruby installed using RVM or rbenv, and frequently switch between them. And you don't want to start fzf with JRuby or Rubinius. So the fzf function effectively locks the version of Ruby. And additionally, it passes `--disable-gems` option for Ruby 1.9 ~ 2.0, which helps reducing the startup time. Anyway, if you have any suggestion on the project layout or anything, feel free to create an issue and let me know. Thanks.
+",junegunn,wellle
+25,2014-05-02 14:13:39,"@junegunn Everybody already has write access. I just changed the main page: https://github.com/junegunn/fzf/wiki
+
+Edit: Removed the change again.
+",wellle,junegunn
+25,2014-05-02 14:18:14,"@wellle Whoa, I didn't know that!
+",junegunn,wellle
+25,2014-05-02 14:35:40,"@wellle Wiki indeed seems like a much better place for sharing examples: https://github.com/junegunn/fzf/wiki/examples
+",junegunn,wellle
+25,2014-05-02 14:51:46,"@wellle Updated. Thanks!
+
+@harelba, @dimonomid: I added cdf function to [the examples page](https://github.com/junegunn/fzf/wiki/examples#changing-directory) with a few fixes.
+- You shouldn't be able to choose multiple items so I changed `-m` to `+m`
+- No reason to not sort the result, so I removed `+s`
+- `-q """"` is equivalent to not passing the option at all, so checking `$1` is not required.
+",junegunn,wellle
+19,2014-02-26 02:47:51,"@wellle I've just realized that this change doesn't work on [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh),
+where `history` is an alias to `fc -l 1`.
+Although I'm not particularly fond of oh-my-zsh, it has such a large user base,
+so I've made a slight adjustment to the command.
+",junegunn,wellle
+19,2014-06-19 02:15:52,"@blueyed Thanks. There was [a recent pull request](https://github.com/sencer/fzf/commit/3827a1b09e1ae79b6ca79c5ae131f7e966226033) which applied that method.
+",junegunn,blueyed
+18,2014-03-06 01:25:05,"@justinmk Okay, I'll see what I can do. In the meantime, what is the default value of TERM on it when you don't explicitly set it? I don't think you should set TERM to screen or screen-256color unless you're using tmux or screen.
+",junegunn,justinmk
+18,2014-03-06 03:31:55,"@justinmk Currently fzf simply decides to use 256-color [when the value of $TERM includes ""256""](https://github.com/junegunn/fzf/blob/master/fzf#L521). Could you try again with $TERM set to `xterm`? (And yeah, I should probably add another option to force using 16-color regardless of $TERM)
+",junegunn,justinmk
+18,2014-03-08 01:09:13,"@justinmk Yesterday I had a chance to work on fzf on Windows 7. Fixed up some issues with escape key sequences there. But other than that, it seemed to work fine on putty and Cygwin terminal with both `xterm` and `xterm-256color`.
+",junegunn,justinmk
+18,2014-03-08 19:16:04,"@justinmk Phew, the new `--black` option will fix the problem (no need for `--no-256`). See the commit message for the details.
+",junegunn,justinmk
+16,2014-02-01 01:40:48,"@junegunn updated. I'll let you know if it happens again :)
+",Taar,junegunn
+16,2014-05-21 14:12:55,"@junegunn Splendid! It's now working as expected. Thanks for the swift response and fix!
+",elemakil,junegunn
+16,2014-05-26 06:30:21,"@junegunn, works fine, thank you!
+",roboslone,junegunn
+813,2017-01-19 15:59:07,"<!-- Check all that apply [x] -->
+- Category
+    - [ ] fzf binary
+    - [ ] fzf-tmux script
+    - [ ] Key bindings
+    - [ ] Completion
+    - [ ] Vim
+    - [ ] Neovim
+    - [x] Etc.
+- OS
+    - [ ] Linux
+    - [x] Mac OS X
+    - [ ] Windows
+    - [ ] Windows Subsystem for Linux
+    - [ ] Etc.
+- Shell
+    - [ ] bash
+    - [x] zsh
+    - [ ] fish
+
+<!--
+### Before submitting
+
+- Make sure that you have the latest version of fzf
+- If you use tmux, make sure $TERM is set to screen or screen-256color
+- For more Vim stuff, check out https://github.com/junegunn/fzf.vim
+
+Describe your problem or suggestion from here ...
+-->
+
+Dear @junegunn, I found recently that fzf started behaving very slowly. I was receiving lag of multiple seconds for each keypress, while fuzzy searching my shell history. I tracked this issue to the following config from my .zshrc
+
+
+
+Removing this line of code solves the problem for me. 
+
+I don't use iTerm2 shell integration, so I don't need it and I stopped my investigation here. I figured I would submit an issue to document my findings, in case others are running into this issue as well.
+
+Regards, thanks for fzf, I use it daily!
+sheldon",sheldond,junegunn
+809,2017-01-17 16:49:32,"Hi, thanks for the report. It's a known issue of Neovim terminal. See https://github.com/neovim/neovim/issues/4151
+
+Until the issue is fixed (or fzf finds another way to find cursor position), you'll have to disable `--height` option in Neovim terminal.
+
+
+
+I'll leave this issue open so that the other Neovim users can see.
+
+/cc @justinmk ",junegunn,justinmk
+792,2017-01-06 04:56:49,"Hi @junegunn,
+
+This is a PR for accompanying issue #775. I've tried to make it the least invasive as possible. Basically it just adds a separate code path `s:execute_tmux_async` to run fzf-tmux asynchronously if Vim8 jobs or Neovim are available. `s:execute_tmux_async` is closely modeled after `s:execute_tmux` and `s:execute_term`.
+
+Please check the commit message for more details.
+
+Tested on both Linux and Mac using Vim 8.0.0086 and Neovim 0.1.7.",toiffel,junegunn
+781,2016-12-29 08:06:44,"<!-- Check all that apply [x] -->
+- Category
+    - [x] fzf binary
+    - [ ] fzf-tmux script
+    - [ ] Key bindings
+    - [ ] Completion
+    - [ ] Vim
+    - [ ] Neovim
+    - [ ] Etc.
+- OS
+    - [x] Linux
+    - [ ] Mac OS X
+    - [ ] Windows
+    - [ ] Windows Subsystem for Linux
+    - [ ] Etc.
+- Shell
+    - [ ] bash
+    - [x] zsh
+    - [ ] fish
+
+Would you @junegunn like to make the <kbd>-L</kbd> as the default option of `find` at [src/constants_unix.go#L7](https://github.com/junegunn/fzf/blob/master/src/constants_unix.go#L7), so that fzf could list files within a unix symbolic link dir.
+
+While the find command could be override by the `FZF_DEFAULT_COMMAND` environment, it will be of great convenience to make <kbd>-L</kbd> as default.
+
+Thanks :smile: 
+
+
+",lvht,junegunn
+718,2016-10-25 21:57:17,"<!-- Check all that apply [x] -->
+- Category
+  - [ ] fzf binary
+  - [ ] fzf-tmux script
+  - [ ] Key bindings
+  - [ ] Completion
+  - [ ] Vim
+  - [ ] Neovim
+  - [ ] Etc.
+- OS
+  - [x] Linux
+  - [ ] Mac OS X
+  - [ ] Windows
+  - [ ] Etc.
+- Shell
+  - [ ] bash
+  - [ ] zsh
+  - [ ] fish
+
+@junegunn: Would you be open to my adding fzf to the [PPA](https://help.launchpad.net/Packaging/PPA/InstallingSoftware) so that I can use `apt-get install` from Ubuntu?
+",rmharrison,junegunn
+685,2016-10-01 16:51:30,"Ping @acornejo
+",junegunn,acornejo
+669,2016-09-24 16:29:30,"Suggested by @DanielFGray in the Gitter channel. I realized that it's actually easy to implement it.
+1. Make the window scrollable with mouse scroll
+2. Add bindable actions: `preview-up`, `preview-down`, `preview-page-up`, `preview-page-down`
+",junegunn,DanielFGray
+635,2016-08-09 18:37:49,"Hello! First of all, I've said it before and I can't help but say it again: thank you for the great piece of software!
+
+We all know that fzf is amazingly fast already. However, maybe there is still space left for optimization?
+Below I'm bringing your attention to two approaches that may work out well.
+### 1. Suffix array
+
+This approach is algorithmic. A lot of information can be found on the Internet, but I personally was introduced to suffix arrays in this course: https://www.coursera.org/learn/algorithms-on-strings
+
+Here is another interesting article that demonstrates how to use suffix arrays in go. Luckily, they are implemented in the standard library! This one is definitely worth reading:
+http://eli.thegreenplace.net/2016/suffix-arrays-in-the-go-standard-library/
+
+From what I understand, in this approach it's time-consuming to prepare the data before the first use. Also, the benefits reveal themselves when data gets larger. Considering this, maybe suffix arrays could be used when two conditions hold: 1. in interactive mode 2. when input data is larger than a certain threshold. An as example, I can say that filtering my locate database is... well, not blazingly fast.
+### 2. SSE2/SSE4.2
+
+The idea is to perform comparison of multiple DWORDs at once by using xmm registers. This approach is more hardcore, to my opinion, it's technically more difficult and limited in its possible use cases due to variations in current implementation of NaiveMatch (by variations I mean `forward` argument, but maybe it's not an issue).
+
+Some articles to whet you appetite:
+http://0x80.pl/articles/sse4_substring_locate.html
+http://www.codeproject.com/Articles/383185/SSE-accelerated-case-insensitive-substring-search
+https://www.strchr.com/strcmp_and_strlen_using_sse_4.2
+https://mischasan.wordpress.com/2011/07/16/convergence-sse2-and-strstr/
+
+Some more papers. Hopefully, they go into more details:
+http://www.dmi.unict.it/~faro/papers/conference/faro32.pdf
+http://arxiv.org/pdf/1209.6449.pdf
+http://www.joics.com/publishedpapers/2013_10_18_5867_5880.pdf
+http://www2.compute.dtu.dk/~phbi/files/publications/2011opsmC.pdf
+
+And some implementations in the wild:
+https://github.com/lattera/glibc/blob/a2f34833b1042d5d8eeb263b4cf4caaea138c4ad/sysdeps/x86_64/multiarch/strcmp-sse42.S
+http://opensource.apple.com/source/Libc/Libc-498.1.1/i386/string/strlen.s
+### Conclusion
+
+I've marked the issue with [research] because I don't think there is an urgent need to make things even faster here. This is rather for our own education and fun. And discussion, of course! Maybe you or some other contributor find these ideas worthwhile and applicable to fzf. I'd love to hear what you think about this, @junegunn!
+
+감사합니다. Thank you!
+",balta2ar,junegunn
+615,2016-07-11 08:46:12,"`pipefail` was introduced in #601, but it's fine to ignore the error. I'll update the code shortly.
+
+/cc @blueyed 
+",junegunn,blueyed
+586,2016-06-03 01:07:34,"@akashin Any idea?
+",junegunn,akashin
+586,2016-06-03 03:03:47,"@akashin I'm going to have to revert the change until the issue is resolved.
+",junegunn,akashin
+517,2016-03-02 15:07:57,"### junegunn/fzf now has a Chat Room on Gitter
+
+@junegunn has just created a chat room. You can visit it here: [https://gitter.im/junegunn/fzf](https://gitter.im/junegunn/fzf?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&content=body_link).
+
+This pull-request adds this badge to your README.md:
+
+[![Gitter](https://badges.gitter.im/junegunn/fzf.svg)](https://gitter.im/junegunn/fzf?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=body_badge)
+
+If my aim is a little off, please [let me know](https://github.com/gitterHQ/readme-badger/issues).
+
+Happy chatting.
+
+PS: [Click here](https://gitter.im/settings/badger/opt-out) if you would prefer not to receive automatic pull-requests from Gitter in future.
+",gitter-badger,junegunn
+442,2015-12-10 02:24:23,"Hi, thanks for the report. Yes, we did update the script so that fzf-tmux can still split the screen even if the pane is zoomed (see #433), but I can't seem to reproduce the problem you described. Can you check what's going on with `#!/bin/bash -x`?
+
+/cc @pokey
+",junegunn,pokey
+403,2015-11-04 02:22:29,"Thanks, but the suggested change is identical to #242. I'd like to know why you get non-zero exit status in the first place before merging it. I can't reproduce on my side. Does it always happen or just occasionally happen? Do you still have the problem if your .zshrc is minimal? Can you check which causes the problem? @lyeoh [mentioned that](https://github.com/junegunn/fzf/pull/242#issuecomment-129700522) git_prompt_short_sha was the problem.
+
+/cc @robinro 
+",junegunn,robinro
+397,2015-10-28 02:17:39,"> I have mapped exit from terminal to <esc><esc>
+
+You could do a buffer-local `:tnoremap` mapping for fzf, I think, which maps a single `<esc>` to quit fzf.
+
+@junegunn It might be a good idea to `setf fzf` in the Neovim terminal buffer so that users can do customization (or is there some equivalent event already?).
+
+> Neovim changes the size of buffes every time
+
+It changes them permanently, or only while fzf is showing? 
+",justinmk,junegunn
+324,2015-08-22 10:04:28,"Ha!
+/cc @tarruda @justinmk 
+",junegunn,justinmk
+264,2015-06-13 14:42:45,"Thanks, but with the patch the name of the buffer is shown with `term://` prefix instead of simple `[FZF]` and I don't think I like it.
+![2015-06-13 11 30 17](https://cloud.githubusercontent.com/assets/700826/8144665/56282526-1224-11e5-8657-9a35747c212f.png)
+Is there a way to fix this?
+
+> Instead of use a non-documented behaviour of :file command, with named terminal buffers, the bd! used to delete the FZF buffer after it's closed will not be required anymore.
+
+I'm not sure if I follow you here. I'm using `:file` command to change the name of the buffer (`:help :file_f`) and I do not understand how giving `name` to the terminal buffer can be a fix to the problem of superfluous use of `bd!`. @justinmk mentioned that it's a known issue of neovim: see https://github.com/junegunn/fzf/commit/34e5e2dd8200fc2cf4b298cd2d5583f2875c7a70#comments
+",junegunn,justinmk
+246,2015-06-01 18:38:08,"Hey @junegunn, I'm a big fan of fzf, I was wondering how you recommend using brew's fzf with vim-plug?
+",estk,junegunn
+234,2015-05-13 13:57:39,"Hi @junegunn :night_with_stars: ,
+
+I just run into this error today while trying to run `FZF` command on `MacVim`. Here is the error msg :dizzy_face: 
+
+> Error running xterm -T [fzf] -bg ""#141414"" -fg ""#E6E1DC"" -geometry 183x25+0+0 -e bash -ic '/Users/babygau/.fzf/bin/fzf --expected=ctrl-v,ctrl-x,ctrl-m,ctrl-t > /var/folders/kh/hrlrq3cx6fg5kvb1tft8jm900000gn/T/vMy8R1Z/2
+
+Note that, Vim Terminal has no issue at all
+",babygau,junegunn
+85,2014-08-02 08:44:54,"As @junegunn suggests in #84, let discuss more detail about how to organize useful snippets for users.
+A `fzf-contrib` would be great. Any other thought?
+",lazywei,junegunn
+67,2014-06-24 06:57:58,":shipit:  @junegunn
+",neersighted,junegunn
+36,2014-04-02 12:49:03,"Okay, now we have `--select-1` and `--exit-0` option (or `-1` and `-0` respectively).
+I've also updated [`fe` example](https://github.com/junegunn/fzf#useful-examples) on the README page.
+Could you update fzf and check if it works for you? Let me know if you see any problem.
+
+(/cc @wellle)
+",junegunn,wellle

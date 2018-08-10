@@ -1,0 +1,80 @@
+issue_num,datetime,body,login,mention_login
+54,2012-10-17 15:20:46,"Hi @grimreaper,
+
+I am the maintainer for the FreeBSD port.
+
+It is of my opinion, that the patches included in the port (a simple find/grep/sed for perl) is not a ""fix"" that can be pushed to upstream. The patch is dependent on the local system's installation for where perl is (note I am using the make variable $PERL rather than the assumed location of /usr/local/bin/perl). This is a mundane patch that is localized to the FreeBSD architecture and can be handled consistently. Furthermore, I do additional steps beyond just patching perl paths.
+
+I have chosen not to touch non-core files - VREFs/tests in the package - because they are non-core (also tests don't matter for the install). I have provided a patch (includes path changes AND other changes) separately for users testing the src via my github port site: http://milki.github.com/gitolite.
+",milki,grimreaper
+54,2012-10-17 15:28:50,"@milki, the patch is not system dependent. The only correct shebang line for portable scripts is to use /bin/sh or /usr/bin env.  That you need to use a ""simple"" find/grep/sed is itself a bug. This isn't specific to FreeBSD either: this is for any system that doesn't install bash in /bin.
+@sitaramc's system is 'weird' in the sense of it happens to place bash in /bin unlike other systems. In addition gitolite won't work correctly if a OSX user opted to install a newer version of bash in /opt/local/bin and modified PATH to teach applications to use that instead.
+
+Relying on bash being in /bin is as buggy on anyother non-portable system dependent construct.
+
+In any case gitolite's maintainer already said that he has no interest in this patch, so I've dropped it.
+",grimreaper,milki
+54,2012-10-17 15:28:50,"@milki, the patch is not system dependent. The only correct shebang line for portable scripts is to use /bin/sh or /usr/bin env.  That you need to use a ""simple"" find/grep/sed is itself a bug. This isn't specific to FreeBSD either: this is for any system that doesn't install bash in /bin.
+@sitaramc's system is 'weird' in the sense of it happens to place bash in /bin unlike other systems. In addition gitolite won't work correctly if a OSX user opted to install a newer version of bash in /opt/local/bin and modified PATH to teach applications to use that instead.
+
+Relying on bash being in /bin is as buggy on anyother non-portable system dependent construct.
+
+In any case gitolite's maintainer already said that he has no interest in this patch, so I've dropped it.
+",grimreaper,sitaramc
+54,2012-10-17 15:41:26,"(1) Please don't keep harping on bash -- you know the fix for that: I
+will accept changing it to /bin/sh after removing bashisms.
+
+(2) So fedora and debian are ""weird"".  That's a bit better than
+""broken"", so thanks, I guess!
+
+[top posting because the lines in the original message didn't wrap
+like they usually do, for some reason, and so quoting is messed up.]
+
+On Wed, Oct 17, 2012 at 8:58 PM, grimreaper notifications@github.com wrote:
+
+> milki, the patch is not system dependent. The only correct shebang line for portable scripts is to use /bin/sh or /usr/bin env. That you need to use a ""simple"" find/grep/sed is itself a bug. This isn't specific to FreeBSD either: this is for any system that doesn't install bash in /bin.
+> @sitaramc's system is 'weird' in the sense of it happens to place bash in /bin unlike other systems. In addition gitolite won't work correctly if a OSX user opted to install a newer version of bash in /opt/local/bin and modified PATH to teach applications to use that instead.
+> 
+> Relying on bash being in /bin is as buggy on anyother non-portable system dependent construct.
+> 
+> In any case gitolite's maintainer already said that he has no interest in this patch, so I've dropped it.
+> 
+> —
+> Reply to this email directly or view it on GitHub.
+
+## 
+
+Sitaram
+",sitaramc,sitaramc
+77,2015-12-12 06:15:22," git push origin master
+Counting objects: 7, done.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 389 bytes | 0 bytes/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+remote: Can't locate Gitolite/Hooks/Update.pm in @INC (you may need to install the Gitolite::Hooks::Update module) (@INC contains: /git-install/gitolite/src/lib/ /etc/perl /usr/local/lib/perl/5.18.2 /usr/local/share/perl/5.18.2 /usr/lib/perl5 /usr/share/perl5 /usr/lib/perl/5.18 /usr/share/perl/5.18 /usr/local/lib/site_perl .) at hooks/update line 11.
+remote: BEGIN failed--compilation aborted at hooks/update line 11.
+remote: error: hook declined to update refs/heads/master
+To git://bfuwu.cn/gitolite-admin
+ ! [remote rejected] master -> master (hook declined)
+error: failed to push some refs to 'git://bfuwu.cn/gitolite-admin'
+",xiaohuoban,INC
+72,2014-10-26 09:39:37,"@ginzel, please use the mailing list. See https://github.com/sitaramc/gitolite/blob/master/CONTRIBUTING
+",milki,ginzel
+69,2014-05-08 10:29:49,"repos must be readable by gitweb users
+and have at least one 'gitweb.' option
+
+so you can hide a repo even if a global gitweb. options is set
+repo  @all
+      config gitweb.owner = ""Owner""
+
+repo  hidden
+      -  =  gitweb
+",jeremyz,all
+19,2011-03-01 12:32:09,"The documentation says that now ""@all_devs has 7 users"", this can be only achieved if the @staff is also added to the list.
+
+ps. Wasn't sure if you want it into pu branch or the master..... went with the default.
+",dmitrijsledkovs,all
+19,2011-03-01 12:32:09,"The documentation says that now ""@all_devs has 7 users"", this can be only achieved if the @staff is also added to the list.
+
+ps. Wasn't sure if you want it into pu branch or the master..... went with the default.
+",dmitrijsledkovs,staff

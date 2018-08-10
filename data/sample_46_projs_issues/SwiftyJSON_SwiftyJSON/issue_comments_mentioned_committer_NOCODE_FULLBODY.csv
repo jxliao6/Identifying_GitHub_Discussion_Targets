@@ -1,0 +1,702 @@
+issue_num,datetime,body,login,mention_login
+807,2017-02-23 14:04:18,Thanks! @jobinsjohn ,wongzigii,jobinsjohn
+806,2017-03-15 15:22:18,"Hey @gsabran Seems like the format is broken, would you mind fixing it? Or I will do it by myself.",wongzigii,gsabran
+801,2017-02-20 15:25:32,"Hey @gsabran Thanks for this PR, anyway #793 has been merged. I am going to close this now. Let me know If you have any issue. :) 
+
+Cheers!",wongzigii,gsabran
+800,2017-02-16 13:30:00,"Hey @MikotoZero Thanks for your PR, I will review this If I have some spare time at this weekend. :)",wongzigii,MikotoZero
+796,2017-02-15 15:05:13,Thanks for your contribution. @Humoud ,wongzigii,Humoud
+793,2017-02-20 11:25:35,Merged. Thanks 💯  @MikotoZero ,wongzigii,MikotoZero
+788,2017-02-04 07:44:14,"@wongzigii I created a new project and added SwiftyJSON and socket.io to it and made sure that there is no duplicate SwiftyJSON module and still my project does not compile.
+Therefore i have added the project. Please have a look at it and propose a desired solution.
+Thanks.
+[SocketWithSwiftyJSON.zip](https://github.com/SwiftyJSON/SwiftyJSON/files/752087/SocketWithSwiftyJSON.zip)
+",crickabhi,wongzigii
+779,2017-01-12 11:35:18,Thanks! @craiggrummitt ,wongzigii,craiggrummitt
+777,2017-02-05 16:04:36,Hey @justinmakaila Sorry for the late reply. Is https://github.com/SwiftyJSON/SwiftyJSON/issues/475 what you are looking for?,wongzigii,justinmakaila
+777,2017-02-09 19:28:01,"@wongzigii, no, it's not. In the example above, the part I'm referring to is in the `init(json: JSON)` method. I'm trying to mutate the `json` to exclude the ""error"" or ""errors"" key. I don't want to transform it to a dictionary, nil out the values, then initialize a new JSON.",justinmakaila,wongzigii
+775,2017-01-03 10:20:41,"Awesome, thank you. @skyline75489 💥 ",wongzigii,skyline75489
+766,2016-12-25 15:16:32,Thank you! @kscheff 🎅 🎉 ,wongzigii,kscheff
+764,2016-12-22 04:23:36,Thanks! @lbrndnr ,wongzigii,lbrndnr
+759,2017-02-21 04:20:50,Thanks @JeffGuKang ,wongzigii,JeffGuKang
+755,2016-12-11 11:46:57,Thanks! @takasek ,wongzigii,takasek
+752,2016-12-11 06:23:12,Cool! Thanks! @looseyi ,wongzigii,looseyi
+748,2016-12-17 06:18:52,"Hello All ,  I got the same error trying to build on ubuntu 16.04 on Raspberry Pi 3 Swift 3 & Package Manger 3. @wongzigii thanks for taking the time to investigate the problem  and looking forward for the fix :)",ta3ban4,wongzigii
+743,2017-02-17 02:03:09,"Hi @wongzigii , I've fixed the indentation issues.  I didn't notice that line 174 was indented by tabs originally :)",flybrotherlixiang,wongzigii
+743,2017-03-20 14:32:57,@wongzigii ,flybrotherlixiang,wongzigii
+739,2016-12-01 05:25:37,@JeffGuKang Neat! Would you mind discarding your changes in `contents.xcplayground` and `contents.xcworkspacedata`? Thank you!,ldiqual,JeffGuKang
+739,2016-12-01 05:35:35,@ldiqual I updated following your suggestions. :),JeffGuKang,ldiqual
+739,2016-12-01 05:37:50,@JeffGuKang Still shows up in the diff: https://github.com/SwiftyJSON/SwiftyJSON/pull/739/files#diff-baa084bbb5cafa8d9e3a530988a38ca4,ldiqual,JeffGuKang
+739,2016-12-01 06:11:15,"@ldiqual  I think github recommend including new line at the end of file. What is better? 
+I do not mind to discard the file :).",JeffGuKang,ldiqual
+739,2016-12-01 06:30:03,"@JeffGuKang We should probably fix this as part of a PR that is more related to it, like the Xcode 8.2 upgrade or something like that. It's more about keeping the history clean and avoiding conflicts, I don't mind too much about the change itself but it can be misleading for git blaming.",ldiqual,JeffGuKang
+739,2016-12-01 07:09:19,@ldiqual You are right. I rewinded to some previous commit having newline warning. ,JeffGuKang,ldiqual
+734,2016-11-24 17:44:01,"@wongzigii From the comments in the thread you posted, I guess it doesn't work with Xcode 8.0
+But as 8.1 is the latest, it makes sense to have the master branch work with the latest Xcode. We can simply have a specific tag that is the last version working on Xcode 8.0. (same logic as making it work for Xcode 7).",gmoledina,wongzigii
+732,2016-12-02 09:03:25,"@ldiqual Thanks for reply, In my opinion, the `bool` return a strict value and the `boolValue` gives a conversion, so we can get a `""5""` from a int `5` by stringValue. by this way, it's great to add this ability.",strangeliu,ldiqual
+731,2016-12-03 22:55:15,@wongzigii Great suggestion. Updated the CHANGELOG.,ldiqual,wongzigii
+731,2016-12-20 13:55:35,@ldiqual I want to get this into mater. Could you resolve the conflict?  Seems the conflict is related to #664,wongzigii,ldiqual
+729,2016-11-23 07:21:36,"@wongzigii Restarted the build and tests passed correctly. Can you review this PR as well, I'll take which ever 👍 comes first :P",ldiqual,wongzigii
+728,2016-11-22 03:34:49,@cwkatzmann Thanks a lot for your contribution! Merging,ldiqual,cwkatzmann
+725,2016-12-03 22:51:10,"@danielkiedrowski Awesome!  Thank you so much for contributing to SwiftyJSON, this is a great feature. Merging now.",ldiqual,danielkiedrowski
+725,2016-12-07 08:52:10,Thank you @ldiqual! It was great working with you.,danielkiedrowski,ldiqual
+717,2016-11-16 16:30:00,"@zhigang1992 
+
+Thanks!
+
+Good point. I've made the appropriate changes.
+",SumoSimo,zhigang1992
+716,2016-11-22 04:21:36,"@papertigers @wongzigii Is there anything we can do at the SwiftyJSON level to fix this issue? Or is it using `--no-use-binaries` an appropriate workaround, which would make this issue resolved?",ldiqual,wongzigii
+716,2016-11-22 19:49:44,@wongzigii Thanks for elaborating on this! It seems that it's a Carthage issue and not related to SwiftyJSON so I'm gonna go ahead and close this. Let me know if you need to reopen. Thanks!,ldiqual,wongzigii
+716,2017-01-05 12:00:28,"@wongzigii I know the code itself is compatible with Swift 3.0.2, but I'm fairly certain that the uploaded binary for the 3.1.4 release was compiled with Swift 3.0.  This means that you need to use `--no-use-binaries` with Carthage.  Or, in my case, I forked the repo and uploaded a binary built with Swift 3.0.2 so that I could use Carthage without turning off prebuilt binaries.",solidcell,wongzigii
+709,2016-11-08 15:28:11,"@wongzigii sure thing, just pushed `3.1.2` can you test it out and see if it works?
+",zhigang1992,wongzigii
+709,2016-11-08 15:37:12,"@zhigang1992  Confirmed
+
+
+",wongzigii,zhigang1992
+708,2016-11-22 03:52:56,@wongzigii Can you clarify what's left on this PR? Do you need an extra hand maybe?,ldiqual,wongzigii
+708,2016-11-22 04:13:26,"@ldiqual SPM currently doesn't provide a way to include resources e.g. `.json` file to be tested.
+
+Relate: 
+
+https://lists.swift.org/pipermail/swift-users/Week-of-Mon-20161114/003987.html
+https://lists.swift.org/pipermail/swift-users/Week-of-Mon-20161107/003912.html",wongzigii,ldiqual
+708,2016-11-22 04:17:34,"@wongzigii Given that it will remain unfixed for a while, maybe we should go ahead and put the json file in a [gist](https://gist.github.com/) that we'd download during the test? In theory it shouldn't be too hard to implement, it'd just make one test case a tad slow. What do you think?",ldiqual,wongzigii
+693,2016-11-07 14:16:40,"Hey @patricks 
+
+You are parsing a long JSON file . This will cause a gargantuan memory consumption. I would recommend you 
+1. write your data into file then read file with `Data(contentsOf:options:)`  method with `Data.ReadingOptions.uncached` and `Data.ReadingOptions.alwaysMapped` flag
+2. separate parsing job into several parts
+(Or use something likes  [YAJL SAX style JSON parser](https://github.com/gabriel/yajl-objc) )
+",wongzigii,patricks
+689,2016-11-22 04:27:09,"@JsonWong87 I believe your issue was addressed by @wongzigii so I'm gonna go ahead and close this. If you have a use case where you think `JSON` should be subclassed, please feel free to file an enhancement issue so we can evaluate whether to add it to the library directly. Another solution for you would be to use extensions. Let me know if you need to reopen!",ldiqual,wongzigii
+689,2016-11-26 01:24:46," got it , thank you
+
+
+发自网易邮箱大师
+On 11/22/2016 12:27, Loïs Di Qual wrote:
+
+@JsonWong87 I believe your issue was addressed by @wongzigii so I'm gonna go ahead and close this. If you have a use case where you think JSON should be subclassed, please feel free to file an enhancement issue so we can evaluate whether to add it to the library directly. Another solution for you would be to use extensions. Let me know if you need to reopen!
+
+—
+You are receiving this because you were mentioned.
+Reply to this email directly, view it on GitHub, or mute the thread.",JsonWong87,wongzigii
+688,2016-11-22 04:29:19,"@rickw As @wongzigii suggested, we believe that the issue that was last mentioned is due to #705. Concerning the versioning problem, I believe it was addressed by @zhigang1992 and confirmed by yourself, so I'll go ahead and close this. Let me know if you need to reopen",ldiqual,zhigang1992
+688,2016-11-22 04:29:19,"@rickw As @wongzigii suggested, we believe that the issue that was last mentioned is due to #705. Concerning the versioning problem, I believe it was addressed by @zhigang1992 and confirmed by yourself, so I'll go ahead and close this. Let me know if you need to reopen",ldiqual,wongzigii
+685,2017-02-25 03:42:10,"@kwstasna I tested @zhigang1992's solution and it appears to work just fine!
+
+Here's my test code:
+
+",brandonlee503,zhigang1992
+680,2016-11-22 04:31:48,"@shivam5x This is now a month old and @wongzigii 's solution seems reasonable. I'm gonna go ahead and consider the issue fixed, let me know if you need to reopen!",ldiqual,wongzigii
+677,2016-11-18 15:14:54,"Hello @wongzigii, sorry for my late response. I just updated the framework but still getting the same error: ""Error Domain=SwiftyJSONErrorDomain Code=999 ""It is a unsupported type"" UserInfo={NSLocalizedDescription=It is a unsupported type}"".
+
+![screen shot 2016-11-18 at 17 13 12](https://cloud.githubusercontent.com/assets/22174478/20434854/763f9314-adb2-11e6-9b46-64a37306369c.png)
+
+Thank you for your time,
+Alin
+",alynmuntean,wongzigii
+677,2016-11-23 09:38:00,"Hi @ldiqual, tested on: iPhone 5 (iOS 10.0.1) - real device, iPhone 6S (iOS 9.3) - simulator, iPhone 7 - simulator, same result on all devices. Xcode Version 8.0 (8A218a).
+Later Edit 1: I will download now Xcode 8.1 and give it a try.
+Later Edit 2: It works now with Xcode Version 8.1 (8B62), thank you all for your time :).",alynmuntean,ldiqual
+674,2016-10-07 18:16:25,"@zhigang1992 that didn't help I get the same error, I changed it to `title` but no difference. Also I am not sure how to open it back up hahah
+",travisday,zhigang1992
+674,2016-10-12 19:25:35,"@zhigang1992 well it needs to be an array hahaha, but your solution used with `[""name"": ""Jack""]` just prints out `name` not the value of name `Jack`
+",travisday,zhigang1992
+672,2016-10-07 12:59:17,"Thank you, @zhigang1992!! 
+",clrung,zhigang1992
+664,2016-11-17 07:00:57,"@ldiqual sure, I think though Ill take a closer look at the PR with regards to the notes from @zhigang1992. Ill get on it as soon as I can :)
+",MadsBogeskov,zhigang1992
+664,2016-11-17 07:00:57,"@ldiqual sure, I think though Ill take a closer look at the PR with regards to the notes from @zhigang1992. Ill get on it as soon as I can :)
+",MadsBogeskov,ldiqual
+664,2016-12-10 07:00:25,@ldiqual @zhigang1992 can you approve this PR?,MadsBogeskov,zhigang1992
+664,2016-12-10 07:00:25,@ldiqual @zhigang1992 can you approve this PR?,MadsBogeskov,ldiqual
+659,2016-09-28 13:51:25,"Awesome @jeneumeier. Making success and failure lowercase did the trick. Thank you.
+",donadley,jeneumeier
+659,2016-09-28 14:44:42,"@jeneumeier nice catch, let me update README as well. 
+
+🍻 
+",zhigang1992,jeneumeier
+654,2016-10-03 15:11:39,"thanks @zhigang1992 !  Didn't know that.  What version of cocoapods does not have that issue?
+",justdan0227,zhigang1992
+652,2016-09-26 02:30:39,"@aaronpearce nice catch, can you help fix the build and lets ship it. ;)
+",zhigang1992,aaronpearce
+652,2016-09-26 02:53:08,"@zhigang1992 Should be ready to merge now. 🎉 
+",aaronpearce,zhigang1992
+647,2016-10-04 12:56:19,"@zhigang1992 
+why don't you set this in your podspec?
+
+
+
+No need to force people changing their podfiles with `post_instal`. So simple.
+",kas-kad,zhigang1992
+639,2016-09-21 17:09:56,"@zhigang1992 Fantastic news! Thank you so much for taking time to review and merge those changes.
+
+As a side note, if you guys need more contributors, I'm offering my help. My company (@takescoop) is actively involved in the OSS world and I'd be happy to help manage issues/PRs and work on new features, taking a couple hours on my weekly schedule. Let me know if you're interested.
+
+Closing this issue, now that the swift 3 concern has been addressed.
+",ldiqual,zhigang1992
+638,2016-09-21 23:10:22,"Are you using Alamofire? Because if it's the case and you're calling for example another response handler distinct of `responseJSON` then you cannot call the initializer `JSON(response.data)` of SwiftyJSON as you did in your code, you need to call:
+
+
+
+as @zhigang1992 proposed above or 
+
+
+
+In case your JSON come as a `String` object in case you use `responseString` from Alamofire
+",Vkt0r,zhigang1992
+637,2016-09-22 04:08:13,"Hey @zhigang1992, its working with `3.0.0.` Thanks a lot :) 👍 
+",sree127,zhigang1992
+636,2016-09-23 08:52:17,"@zhigang1992 i using 3.0 version still have this problem
+
+Using SwiftyJSON (3.0.0)
+",rudian,zhigang1992
+636,2016-09-23 10:15:39,"@zhigang1992  
+
+i use alamofire4 to get the value
+
+
+
+for (_, k): (String, JSON) in json[""main""]{
+self.alldata.addObject([k[""p""].stringValue,k[""t""].stringValue,k[""v""].stringValue,k[""c""].stringValue,k[""u""].stringValue]);
+
+}
+",rudian,zhigang1992
+636,2016-09-23 11:01:00,"@zhigang1992  xcode shown error
+value of type 'JSON?' has no member 'dictionaryValue'
+",rudian,zhigang1992
+635,2016-09-22 01:10:33,"@zhigang1992 Very Nice . Thinks
+",dowhilenet,zhigang1992
+635,2016-09-22 12:25:04,"@zhigang1992 
+`PODS:
+- SwiftyJSON (2.3.2)
+
+DEPENDENCIES:
+- SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`, branch `swift3`)
+
+EXTERNAL SOURCES:
+  SwiftyJSON:
+    :branch: swift3
+    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
+
+CHECKOUT OPTIONS:
+  SwiftyJSON:
+    :commit: 494f9bf12763d634216ce5b10a88bb5240f59074
+    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
+
+SPEC CHECKSUMS:
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+
+PODFILE CHECKSUM: d646f0dd20b277efbdfbbc3803cb9204c296ab67
+
+COCOAPODS: 1.0.0
+`
+",MaximGorin,zhigang1992
+635,2016-09-22 12:35:25,"@zhigang1992 the error persists
+
+PODS:
+- SwiftyJSON (3.0.0)
+
+DEPENDENCIES:
+- SwiftyJSON (~> 3.0.0)
+
+SPEC CHECKSUMS:
+  SwiftyJSON: f57b2b44bc166617372d1c70773591fe9f0f5fd4
+
+PODFILE CHECKSUM: 3c7432f9e522dd9230a200cf2f7646c325981751
+
+COCOAPODS: 1.0.0
+",MaximGorin,zhigang1992
+635,2016-09-22 19:36:33,"@zhigang1992 it works. Thx
+",MaximGorin,zhigang1992
+633,2016-09-21 15:33:18,"@zhigang1992 :
+Thank you for merging this. 👍 
+
+Please consider, as a follow-up, also merging #641 . See my comment above.
+",lukas2,zhigang1992
+620,2016-09-27 19:13:34,"@zhigang1992 thanks!
+",dpassage,zhigang1992
+613,2016-09-22 03:47:26,"@JeffGuKang definitely, let's do it. 😄 
+",zhigang1992,JeffGuKang
+611,2016-09-21 16:39:30,"@zhigang1992 Just tried it out now with carthage going towards the `swift2` branch. Works like a charm. Thanks!
+",MrAlek,zhigang1992
+611,2016-09-21 18:43:58,"Thank you @zhigang1992!
+",mitchellporter,zhigang1992
+606,2016-11-17 08:19:21,"@gsabran You can use something like this:
+
+
+",ldiqual,gsabran
+587,2016-11-22 09:19:55,@ldiqual Think you pinged the wrong Lucas on this thread :) @LucasVanDongen ,lucasderraugh,ldiqual
+587,2017-02-22 15:48:34,"Is it possible to split this topic? I responded because I noticed @merktassel also had problems parsing the specific ""id"" field. Also I don't know if what the other people are seeing is not related to my problem.
+
+@ldiqual I can parse that field fine as an int as soon as I use my hackaround or ask the intValue of any other field contain a numeric value either in string or int.",LucasVanDongen,ldiqual
+584,2016-12-13 06:45:00,"@ldiqual Re-added this code and now it suddenly isn't giving this error anymore. But I've added a few lines just to test it and it's producing nil instead of data.
+
+See line 123-126 in the project: https://github.com/jaymutzafi/Movie-Hop-URLS/blob/SwiftyJSON/Movie%20Hop/TMDBService.swift#L123
+
+let parsedResult: [String:AnyObject]!
+ do {
+       parsedResult = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! [String:AnyObject]
+ } catch {
+      print(""Could not parse the data as JSON: '\(data)'"")
+      return
+}
+                let json = JSON(data!)
+                print(json)
+                let jsonResults = json[""results""].array
+                print(jsonResults)
+                
+                var pageResult = [[String:AnyObject]]()
+                pageResult = parsedResult[""results""] as! [[String:AnyObject]]
+
+
+Basically with the same original data object, JSONSerialization lines work, but SwiftyJ don't. 
+
+(if you end up running it, click New Game and you'll run through those lines)",jaymutzafi,ldiqual
+543,2016-11-17 09:08:43,"Thanks @ldiqual I created a extension for my on purpose
+
+
+",vinbhai4u,ldiqual
+530,2016-07-19 13:51:49,"Thanks for that, @lingoer. Just wanted to give you a heads up for that branch's code: In ""SwiftyJSON.swift"", for lines no. 739 and 740, there is a syntax error. Make sure you change that. Many thanks!
+",simplealina,lingoer
+526,2016-11-25 01:52:23,"self.json[""1""] = ""1""
+
+->
+
+self.json![""1""] = ""1""
+
+Fixed, 3x @ldiqual ",QiuZhiFei,ldiqual
+509,2016-09-22 02:12:53,"@zhigang1992 Okay, rebased
+",jamesjn,zhigang1992
+500,2016-11-22 05:25:30,@isair @CraigSiemens Sorry for the delay on this. This issue was fixed in https://github.com/SwiftyJSON/SwiftyJSON/pull/678. Let me know if you need to reopen. Thanks!,ldiqual,CraigSiemens
+487,2016-11-22 03:51:46,"@zhigang1992 Looking at the code, it seems that we're gonna end up with a confusing API. For instance, to unpack a string you have
+
+ - `json.string -> String?`
+ - `json.stringValue -> String` with a fallback on `""""` if not found, potentially error prone
+ - `json.requiredString throws -> String` which throws if the value is incorrect.
+
+I would argue that we should be as strict as possible and leave the responsibility on the user to fallback on whatever is best if the value cannot be unpacked. This is why I'm proposing this unique interface:
+
+ - `json.string() throws -> String`
+
+It covers all the cases above:
+
+ - `try? json.string()`
+ - `try? json.string() ?? """"`
+ - `try json.string()`
+
+It also has the value to provide an explicit error if the unpack fail, as opposed to returning `nil` or a ""fake"" value. Imho it'll lead to more robustness in codebases.
+
+However it does introduce a code-breaking change, probably worth a SwiftyJSON v4 or something. What do you think?",ldiqual,zhigang1992
+487,2017-03-21 05:53:33,"@ldiqual This change is huge, but the benefit is not that much. I don't think the try syntax is very beginner friendly or easy to use.",CosynPa,ldiqual
+475,2016-11-17 07:54:13,"@ldiqual As far as I know, it's not fixed. I did an extension to work around this limitation 
+
+
+
+Of course I did a function of each data type supported.
+
+I can make a PR if you want to embrace this. Just let me know!
+",dral3x,ldiqual
+459,2016-11-23 08:34:20,"@ldiqual  I think that's a good idea, we should document the crap out of it this time. 😄  ",zhigang1992,ldiqual
+405,2015-12-04 09:09:15,"@diogoguimaraes I just tagged the release, we will update CocoaPods shortly.
+",zhigang1992,diogoguimaraes
+397,2015-11-11 13:42:49,"@erez-rabih did you manage to get it working? I would be glad if you could post the correct way to use it.
+",guidev,erez-rabih
+395,2015-11-09 07:20:53,"@lingoer I am still using Swift 1.2 ...
+",hiragram,lingoer
+395,2015-11-09 08:00:08,"@lingoer This issue was solved by removing Carthage directory.
+Maybe Carthage/Build/tvOS directory caused this issue I think.
+Thanks for your quick reply.
+",hiragram,lingoer
+372,2015-11-03 03:22:49,"@zhigang1992, it was Carthage v0.8.
+",adityatrivedi,zhigang1992
+372,2015-11-03 04:20:19,"Yep the latest version of carthage seems to mitigate the issue. Thanks @zhigang1992!
+",adityatrivedi,zhigang1992
+369,2016-08-04 13:30:52,"@lingoer By any chance someone could explain to me this behaviour ?
+",Katafalkas,lingoer
+362,2015-10-16 16:25:05,"@tangplin The necessary line of code for tvOS support is still not appearing in the `xcode7.1` branch's podspec. Do you know when that might happen?
+",IndianAg0711,tangplin
+322,2015-10-14 08:45:07,"@pcantrell thanks.
+",tangplin,pcantrell
+316,2015-11-02 20:14:09,"@zhigang1992 Yeah, that's the workaround I mentioned in the description. Multiply that by a dozen times and it's not very nice, compared to the intuitive, obvious, and terse `j[""a""].int`. The priority, as far as the semantics go, should be developer intention and usefulness.  We're using SwiftyJSON to parse our _data_ and not _code_, and it stops just short of that goal by insisting that a string in the source JSON has to be parsed as a `String`, even if I know it is an `Int`. 
+
+Everything starts out as a `String`, that's why we're using a library to parse it. The JSON spec may say that `""5""` is a string and `5` is a number, but I happen to know differently. I care whether an `Int` can be parsed from it, not whether or not _SwiftyJSON_ happens to know that it is an `Int`. Developer knowledge should trump naive type detection.
+",endash,zhigang1992
+247,2015-06-16 01:52:05,"@tangplin Any plan to merge back to mater? Xcode7 branch works fine. 
+",coolgeng,tangplin
+247,2015-07-09 19:56:59,"If Xcode 7 do release ！
+
+发自我的 iPhone
+
+> 在 2015年6月16日，09:52，cooper notifications@github.com 写道：
+> 
+> @tangplin Any plan to merge back to mater? Xcode7 branch works fine.
+> 
+> —
+> Reply to this email directly or view it on GitHub.
+",tangplin,tangplin
+246,2015-06-12 02:56:01,"@lingoer +1 please do this!
+",kamoljan,lingoer
+246,2015-06-12 08:53:21,"@lingoer Most repos just use the swift-2.0 branch and works just fine.
+",duemunk,lingoer
+246,2015-06-17 20:10:35,"@lingoer +1 for @duemunk's branching model. Keep the Swift 2 compatible version on a `swift-2.0` branch while Xcode 7 is in beta. In addition, please consider:
+1. switch the default branch on Github to `swift-2.0` (to affirm Swift-2.0 readiness and make it easier to discover).
+2. tag a new release on `swift-2.0` (for Carthage users).
+",dduan,duemunk
+246,2015-06-17 20:10:35,"@lingoer +1 for @duemunk's branching model. Keep the Swift 2 compatible version on a `swift-2.0` branch while Xcode 7 is in beta. In addition, please consider:
+1. switch the default branch on Github to `swift-2.0` (to affirm Swift-2.0 readiness and make it easier to discover).
+2. tag a new release on `swift-2.0` (for Carthage users).
+",dduan,lingoer
+244,2015-08-09 12:20:45,"@tangplin fixed this in 4cf6f023d4023848914b6e35baa655d278f34ef6. :sparkles: Thanks! :+1: 
+
+@Thomvis, I think you can close this pull request. :closed_book: 
+",narfdotpl,Thomvis
+236,2015-11-25 04:08:20,"@zhigang1992 As I mentioned in a previous comment, the error I was getting was most definitely related to either xcode or cocoapods.  The error xcode was giving me was non specific and moved to my 3rd import statement regardless of what that was importing.  For example, the error would transition to `import Alamofire` if I commented out `import SwiftyJSON`.  I'm not sure what fixed the error but it seemed to go away and I have submitted my app and been approved.
+",craigpearce5,zhigang1992
+223,2015-05-01 13:47:26,"@kmikael thanks.
+",tangplin,kmikael
+213,2016-11-22 19:54:31,@Domsware Can you try @tangplin 's solution and get back to me with your result? Thanks!,ldiqual,tangplin
+210,2015-04-16 06:23:17,"Thank you @tangplin :clap: 
+",evenh,tangplin
+205,2015-07-16 12:50:34,"@tangplin wouldn't it be better if isEmpty() defaulted to true? Imho it's very confusing when it returns false for .Null or .Unknown json types.
+",zmeyc,tangplin
+205,2017-03-13 21:52:06,@ldiqual Lois can we re-open this? Still can't figure out how to (reliably) know how to check for null values in SwiftyJson! This is crazy. Let's add that 'isNull' already and be done with it!,marchy,ldiqual
+205,2017-03-13 22:13:54,"@ldiqual we found a bug why this wasn't reliable and driving us crazy. If you store a JSON result in a variable the null value gets lost on it! This is quite critical and unexpected.
+
+Example:
+",marchy,ldiqual
+203,2015-04-13 05:52:35,"Done 4b3bdd6f04ddf435af695bd43d95202396a5cab3
+@chschu thanks!
+",tangplin,chschu
+200,2015-04-11 15:54:45,"@chschu I do not import SpriteKit anywhere in my project but the sample code still fails
+",Jan0707,chschu
+200,2015-04-14 09:46:18,"@chschu My `Base SDK` is set to `Latest iOS (iOS 8.3)` and it still throws that error here. It might be worth mentioning that I do not include SwiftyJSON via Cocoapods but rather copy the Swift file manually ( which I of course took from the latest master).
+",Jan0707,chschu
+200,2015-04-16 17:57:01,"@chschu Oddly enough, this gist works perfectly fine:
+
+https://gist.github.com/Jan0707/cc8db99778c0f527bef5
+
+There must be something wrong in my project - especially since some of my request work while others won't.
+",Jan0707,chschu
+195,2015-04-09 06:10:52,"@justinmakaila Please check on the `xcode6.3` brunch.
+",rcgary,justinmakaila
+192,2015-05-05 10:25:23,"@patricks  your solution doesn't work eighter .. 
+",alexlezeu,patricks
+190,2015-04-23 15:37:16,"@l12ab 看到你的这个issue后 我就一直没有使用SwiftyJSON  不过刚才我按照你的做法和你给的sample做了一个测试，发现很快啊。我把代码贴过来，你看看是不是这样测试的，如果不是，能不能贴一下你的代码？
+
+English translation for everyone:  
+@l12ab I decided not to use SwiftyJSON as I saw your issue here. I did a test using your instruction and sample just now, turns out it was not that slow. Please take a look of my test code below. If this is not the correct way to reproduce it, could you please provide me your own testing code?
+
+
+
+XCode 6.3.1
+
+模拟器(simulator): iPhone 8.3
+结果是: 0.0225430130958557
+
+真机 (real device): iPhone 6 plus   iOS8.3
+结果是: 0.144482016563416
+- @tangplin 
+",meng-zhang,tangplin
+190,2015-04-26 08:16:17,"@tangplin @meng-zhang 刚刚升级到了Xcode 6.3.1，性能再一次提升，如果使用json[i]模式，耗时100-200毫秒，如果是subJson模式，耗时20-60毫秒。看来
+",l12ab,tangplin
+149,2015-02-12 03:47:53,"Merged fa057b8ddedff649fa5ae92f2d562ab67f401aa0
+Thanks @darrarski
+",tangplin,darrarski
+149,2015-02-14 12:25:45,"Is it possible to install this version via Cocoapods, @darrarski ?
+
+Edit:
+Dont worry about it. Obviously it was just: 
+pod 'SwiftyJSON', :git => ""git@github.com:SwiftyJSON/SwiftyJSON.git"", :branch => 'xcode6.3'
+",andersklenke,darrarski
+146,2015-03-20 07:33:30,"@lwu thanks
+",tangplin,lwu
+143,2015-01-30 11:16:27,"@kilnyy 
+Thank you :)
+Is there a way to do this for a dictionary too?
+",rishimukherjee,kilnyy
+143,2015-02-04 04:33:00,"@lwu 
+`json.arrObject = [""1"", ""2"", ""3""]` this works well, because type of `[""1"", ""2"", ""3""]` is `[String]`
+
+`json.arrObject = arrJSON` this does not work when type of `arrJSON` is `[JSON]`. 
+it has an compiler error `'JSON' is not identical to 'AnyObject'`.
+
+I think the reason is in object setter of JSON struct
+
+
+
+JSON here is an struct, but swift can not convert struct to AnyObject.
+
+So I still not find any way to convert [JSON] to JSON clearly.
+",kilnyy,lwu
+143,2015-02-05 13:48:07,"@kilnyy  what about that workaround, a bit less messy
+
+
+",Nelyus,kilnyy
+115,2014-12-16 08:54:42,"@floydpink thanks.
+",tangplin,floydpink
+100,2014-11-24 11:57:33,"@ValCapri thanks.
+",tangplin,ValCapri
+99,2014-11-24 09:43:19,"@mblsha thanks. The `pr` is base on 1.0.0, but It is 2.1.1 now.
+@ValCapri could you create a pull request?
+",tangplin,ValCapri
+99,2014-11-24 11:53:07,"@tangplin : The PR is created. If you want, you could accept this PR and after mine. Like this every one would be ""credited"" for what they done.
+",ValCapri,tangplin
+94,2014-11-12 10:33:59,"@franklsf95 thanks.
+",tangplin,franklsf95
+92,2014-11-12 10:37:35,"@JonathanPorta you're right! But the pr should handle the error from Alamofire. Can you please add some error handling description?
+",tangplin,JonathanPorta
+92,2014-11-14 01:22:23,"@tangplin I added a simple example where the error object is checked first. I am not sure exactly if this is the best way to check the error. I am still new to Swift. :)
+",JonathanPorta,tangplin
+91,2014-11-07 10:11:31,"@carloslozano  thanks.
+",tangplin,carloslozano
+84,2014-10-25 00:03:47,"@johngoren thank you very much.
+",tangplin,johngoren
+83,2014-10-23 01:33:16,"@johngoren thank you very much.
+",tangplin,johngoren
+73,2014-10-16 01:36:02,"@MaddTheSane thanks
+",tangplin,MaddTheSane
+70,2014-10-11 18:16:03,"@k06a: `.description` returns `[I: am, a: json]` and `.debugDescription` returns `[""I"": am, ""a"": json]`, neither of which is valid JSON as far as I know.
+",ChrisBuchholz,k06a
+70,2014-10-17 21:16:04,"@k06a: Indeed that is one way to reach the goal.
+
+@powerje: Yes, that looks like a great way to handle this need. Hoping it gets merged into master at some point!
+",ChrisBuchholz,k06a
+68,2014-10-10 02:47:02,"@Noobish1  Thanks
+",tangplin,Noobish1
+65,2014-10-08 15:25:55,"@rosskimes thanks 
+merge in branch: xcode6.1 5c4773be8f4b8fe4d4c8bf129500b0e157deddd4
+",tangplin,rosskimes
+62,2014-10-06 08:01:03,"@k06a, Is there any argument for not adding a wrapper for that operation to SwiftyJSON?
+",magnusstubman,k06a
+61,2014-10-02 16:58:43,"@k06a
+Impressive code！
+",tangplin,k06a
+61,2014-10-06 15:34:35,"@k06a thanks
+After change to struct JSON. It's possible to set the new value through `subscript` in 
+Done in 59996b25c38ed366209ad76d7a67eb08a7b2dff5 748ef28c3792c6e2f06ec57b1ea8c2fa9ef26b88 eb7cc54fec4597da11ffd52d3e8c23944ab47636 at develop branch.
+like:
+
+
+",tangplin,k06a
+60,2014-10-02 15:53:21,"Hi @k06a, thanks for the reply :-)
+
+I assume you're referencing:
+https://github.com/k06a/SwiftyJSON/blob/editing/Source/SwiftyJSON.swift#L229-L263
+
+I could find any other usage (tests or documentation)...
+",yelled3,k06a
+60,2014-10-03 17:53:26,"@k06a  @yelled3
+I will release the 2.0.0 version of SwiftJSON in a few days, like this:
+
+
+
+
+
+It's very cool!
+",tangplin,k06a
+58,2014-10-01 02:22:36,"@k06a  Thanks!
+The [JSON](http://www.json.org) enum have few of structures not include the raw object.
+The enums may not contain stored properties, but it is simple to store a lazy JSON property in oneself's code.
+
+
+
+
+",tangplin,k06a
+58,2014-10-01 09:07:58,"@tangplin, this example of `let json = JSON(object: raw)` where `raw` is parsed object:
+
+
+
+your version of library parses whole hierarchy recursively to this:
+
+
+
+but my lazy implementation for `let json = JSON(object: raw)` just did this:
+
+
+
+when anybody access `json[0]` it returns:
+
+
+
+and then accessing `json[0][""user""]` it returns:
+
+
+
+and then `json[0][""user""][""name""]` it returns:
+
+
+
+So it means only 10 enum wrappings instead of 17 wrappings.
+And only 3 calls of `object as ClassName` instead of 17 calls!
+
+My lazy solution wraps objects to JSON enum only if necessary. It removes recursion in `init(object:)` method and in property `var object`. So this operations works faster.
+",k06a,tangplin
+57,2014-10-02 07:00:38,"@k06a Thanks!
+@ArifADS It's very very fast now. 
+You can use this:
+
+
+",tangplin,k06a
+56,2014-09-28 01:32:44,"@k06a You can fin it at line 128
+",tangplin,k06a
+56,2014-09-28 09:22:28,"@tangplin I looked in fork lingoer/SwiftyJSON, just pulled SwiftyJSON/SwiftyJSON, it is ok!
+",k06a,tangplin
+9,2014-06-26 08:13:36,"Interesting
+@garnett Shall we introduce some LiteralConvertible Protocol or some other init method?
+",lingoer,garnett
+9,2014-06-26 08:22:23,"`Ya, that was confusing to me, i'd recommend making a separate init that only takes NSData or allowing String input as well.`
+Good point! @lingoer we should rethink public API and use cases of the library. Accepting both primitive types and `NSData` as well really looks confusing.
+
+Maybe, it will be better to make the following public api:
+- `fromObject` - converts json from NSJSONSerialization result
+- `fromData` - which internally uses NSJSONSerialization to get object representation.
+
+This will allow us to keep these two use cases separated
+",garnett,lingoer
+9,2014-06-26 08:28:34,"@lingoer it will be really pain to implement, regexp all the things? I still do not see any real-world usage for this
+",garnett,lingoer
+758,2017-03-16 16:10:35,"@watsonbox i just want to know, if the pr could be accept? i pull it before spring festival, and now i rebase code again. ",looseyi,watsonbox
+736,2016-11-24 16:45:58,self-merged. @zhigang1992 ,wongzigii,zhigang1992
+731,2016-11-23 09:34:35,"@zhigang1992 @wongzigii 
+
+Fixes https://github.com/SwiftyJSON/SwiftyJSON/issues/459 and https://github.com/SwiftyJSON/SwiftyJSON/issues/456
+
+This is an implementation of my proposal in https://github.com/SwiftyJSON/SwiftyJSON/issues/459#issuecomment-262155181. At a high level the changes are as follow:
+
+ - Added `init(jsonString: String) throws` which creates a JSON object from a valid json string. If the string cannot be converted to data or parsed by NSJSONSerialization, the initializer will throw an appropriate error as opposed to failing silently.
+ - Added documentation + tests around the new initializer and updated the README
+ - Removed `JSON.parse` which was doing the same thing (but would fail silently)
+ - Made `init(data: Data)` throw as well, to handle invalid JSON data coming through.
+
+**This is a code breaking change** since `init(data: Data)` now throws.
+
+Let me know what you think.",ldiqual,zhigang1992
+731,2016-11-23 09:34:35,"@zhigang1992 @wongzigii 
+
+Fixes https://github.com/SwiftyJSON/SwiftyJSON/issues/459 and https://github.com/SwiftyJSON/SwiftyJSON/issues/456
+
+This is an implementation of my proposal in https://github.com/SwiftyJSON/SwiftyJSON/issues/459#issuecomment-262155181. At a high level the changes are as follow:
+
+ - Added `init(jsonString: String) throws` which creates a JSON object from a valid json string. If the string cannot be converted to data or parsed by NSJSONSerialization, the initializer will throw an appropriate error as opposed to failing silently.
+ - Added documentation + tests around the new initializer and updated the README
+ - Removed `JSON.parse` which was doing the same thing (but would fail silently)
+ - Made `init(data: Data)` throw as well, to handle invalid JSON data coming through.
+
+**This is a code breaking change** since `init(data: Data)` now throws.
+
+Let me know what you think.",ldiqual,wongzigii
+731,2016-12-01 05:31:04,@wongzigii Are we good on this PR?,ldiqual,wongzigii
+731,2016-12-01 06:34:14,I would like to defer to @zhigang1992 and move on.,wongzigii,zhigang1992
+731,2016-12-13 06:11:30,@zhigang1992 Bump,ldiqual,zhigang1992
+729,2016-11-22 04:13:48,"@zhigang1992 Please review
+
+Fixes https://github.com/SwiftyJSON/SwiftyJSON/issues/703
+
+Pretty straightforward, let me know if you have any question",ldiqual,zhigang1992
+719,2016-11-17 02:55:35,"It was added here
+
+https://github.com/SwiftyJSON/SwiftyJSON/pull/682/files
+
+maybe @mokagio have more context here.
+",zhigang1992,mokagio
+719,2016-11-22 03:43:20,@mokagio Bump. Can you give more context on the changes of your PR and why it creates warnings in 8.1? Thank you!,ldiqual,mokagio
+709,2016-11-08 03:03:33,"@zhigang1992 Would you mind pushing a new release so that SPM could catch this up? 😃
+",wongzigii,zhigang1992
+697,2016-11-16 15:25:14,"Hi @zhigang1992! Is it possible to know when this fix will be released?
+",cikpis,zhigang1992
+647,2016-10-07 01:40:21,"Seems like @fishcharlie already have a PR for it.
+
+https://github.com/SwiftyJSON/SwiftyJSON/pull/673
+
+merging away.
+",zhigang1992,fishcharlie
+639,2016-09-21 06:53:53,"@tangplin @lingoer Pinging you both since you seem to be the two only members of the SwiftyJSON organization.
+
+I see a bunch of issues and pull requests related to Swift 3/Xcode 8 support. The `swift3` branch has remained untouched for 3 months now, and it is _not_ compatible with the latest Swift build. The latest commit on `master` is now 3 months old as well. Most of the open issues could be closed by merging one single of those PRs (most of them actually have a viable source code that is swift 3 compatible). I believe that production apps that use SwiftyJSON and swift3 at the moment need to rely on an external, untrusted code which can be a security and stability risk.
+
+SwiftyJSON is a _very_ popular library in the Swift OSS world: 11k stars on github, 89k app installs (10k just for last week) according to cocoapods. A bunch of apps rely heavily on SwiftyJSON in production. There is an urgent need for a swift 3 compatible version of the library.
+
+I'm opening this issue as an opportunity for you to jump in and describe how you envision the future of the library/project. Are you still maintaining the library? Should you add more contributors to the team? Should the ownership be transferred to an organization with more resources?
+
+In terms of immediate actionable items, can one of you take a couple hours to review, merge, and release a new version of the library for swift 3 so we can stop relying on external – untrusted – PRs? It would be fantastic.
+",ldiqual,lingoer
+639,2016-09-21 06:53:53,"@tangplin @lingoer Pinging you both since you seem to be the two only members of the SwiftyJSON organization.
+
+I see a bunch of issues and pull requests related to Swift 3/Xcode 8 support. The `swift3` branch has remained untouched for 3 months now, and it is _not_ compatible with the latest Swift build. The latest commit on `master` is now 3 months old as well. Most of the open issues could be closed by merging one single of those PRs (most of them actually have a viable source code that is swift 3 compatible). I believe that production apps that use SwiftyJSON and swift3 at the moment need to rely on an external, untrusted code which can be a security and stability risk.
+
+SwiftyJSON is a _very_ popular library in the Swift OSS world: 11k stars on github, 89k app installs (10k just for last week) according to cocoapods. A bunch of apps rely heavily on SwiftyJSON in production. There is an urgent need for a swift 3 compatible version of the library.
+
+I'm opening this issue as an opportunity for you to jump in and describe how you envision the future of the library/project. Are you still maintaining the library? Should you add more contributors to the team? Should the ownership be transferred to an organization with more resources?
+
+In terms of immediate actionable items, can one of you take a couple hours to review, merge, and release a new version of the library for swift 3 so we can stop relying on external – untrusted – PRs? It would be fantastic.
+",ldiqual,tangplin
+625,2016-09-09 13:54:14,"I see the last commit is almost 3 months ago, with 124 open issues,I couldn't find  your most recent comment on them. 
+Have you abandoned this project?
+@tangplin  @lingoer 
+",IsmailHassanein,lingoer
+625,2016-09-09 13:54:14,"I see the last commit is almost 3 months ago, with 124 open issues,I couldn't find  your most recent comment on them. 
+Have you abandoned this project?
+@tangplin  @lingoer 
+",IsmailHassanein,tangplin
+587,2016-11-22 05:01:34,"@LastSoul @merktassel @selaysoysal @lucasderraugh Sorry for the delay on this. Can each one of you post the actual JSON data that you're parsing? Not just the dictionary representation but the full json data. Here's what I'm thinking so far:
+
+ - @LastSoul I ran your code and the JSON parses correctly, I don't get `nil`. Are you on the latest version of SwiftyJSON and if not, would you mind trying again with the latest version?
+ - @selaysoysal Would you mind posting the JSON data you're trying to parse? Will make it easier to investigate
+ - @merktassel @lucasderraugh I believe both of you are accessing `id` with the incorrect type. In one case, you're using `.string` instead of `.int`, and in another case it's the opposite. It would be easily confirmed if you could post the actual data that you're parsing. Let me know
+
+Thanks!",ldiqual,lucasderraugh
+554,2016-07-08 11:56:32,"@lingoer, can you please merge one of those PR ? Thanks !
+",ThibaultVlacich,lingoer
+459,2016-11-22 06:00:21,"@zhigang1992 I believe you added this in https://github.com/SwiftyJSON/SwiftyJSON/pull/406 to parse json strings as opposed to initialize with a string value like `JSON(""hello"")` which does accept invalid json strings. Since `JSON.parse` is undocumented already, how would you feel about having `init(jsonString: String) throws` instead? It would avoid the `init(object: )` confusion by making it clear you need a valid json string there. We would also throw if the data is invalid. Let me know.",ldiqual,zhigang1992
+456,2016-11-22 06:00:53,I'm strongly in support of this. @zhigang1992 thoughts?,ldiqual,zhigang1992
+455,2016-07-12 19:27:48,"The nuclear option is to fork the project and do a release, but this should probably be avoided in the hope of any approved committers agreeing to do it. The two members of the SwiftyJSON organisation are @lingoer and @tangplin, so one of these two would be able to do it.
+
+If neither are interested in making a release, then forking the repository or finding an alternative JSON library might be the only other option.
+",lyptt,lingoer
+455,2016-07-12 19:27:48,"The nuclear option is to fork the project and do a release, but this should probably be avoided in the hope of any approved committers agreeing to do it. The two members of the SwiftyJSON organisation are @lingoer and @tangplin, so one of these two would be able to do it.
+
+If neither are interested in making a release, then forking the repository or finding an alternative JSON library might be the only other option.
+",lyptt,tangplin
+405,2015-12-02 12:57:19,"@zhigang1992 do you have an ETA to the next release? 
+Thank you.
+",diogoguimaraes,zhigang1992
+401,2015-11-24 17:48:37,"cc @zhigang1992 
+",bcapps,zhigang1992
+299,2015-09-15 14:21:01,"+1 @tangplin 
+",bcapps,tangplin
+298,2015-08-17 15:43:53,"@tangplin Any thoughts on this PR? Not great to crash in this scenario.
+",bcapps,tangplin
+283,2015-09-12 20:41:42,"@tangplin Should this be merged into master (with a new Cocoapods version) now that Xcode 7 GM is out?
+",bcapps,tangplin
+276,2015-07-18 21:04:42,"@carlosefonseca Worked like a charm. Thanks much!
+
+I'll leave this issue open to be triaged by @tangplin, though. 
+",rainypixels,tangplin
+246,2015-07-03 22:59:55,"Any update on this? cc @tangplin 
+",RuiAAPeres,tangplin
+244,2015-07-08 08:08:23,"@tangplin is there anything missing?
+",schickling,tangplin
+244,2015-07-28 00:31:54,"Yeah. Any chance of a merge, @tangplin? Pleeeeease?
+",jarrodrobins,tangplin
+244,2015-08-09 12:20:45,"@tangplin fixed this in 4cf6f023d4023848914b6e35baa655d278f34ef6. :sparkles: Thanks! :+1: 
+
+@Thomvis, I think you can close this pull request. :closed_book: 
+",narfdotpl,tangplin
+208,2015-04-13 17:14:34,"This isn't my project - I could make the change and send a pull-request like anyone else I suppose. I've only been learning Swift for 2 days and was trying this for fun/learning. It's probably best to let the maintainer do things like this as he might be planning to merge the branch soon anyway, and I don't know the state of this other branch (experimental? unstable? work-in-progress?).
+
+I think the maintainer is @tangplin - is it best to add such a note to the readme for now, or will this become the master soon?
+",j-h-a,tangplin
+103,2014-12-02 01:22:40,"I agree with https://github.com/SwiftyJSON/SwiftyJSON/pull/87 and https://github.com/SwiftyJSON/SwiftyJSON/pull/85 that SwiftyJSON lacks of date support which nearly everyone using JSON APIs will need at some point and that SwiftyJSON should support dates somehow.
+
+But I also understand @tangplin's answer that there are too many different formats for dates in JSON APIs. So what about the idea to not deeply integrate dates into SwiftyJSON but at least add a helper method that makes getting dates from JSON objects much easier.
+
+I have added an example implementation of what this could look like for dates formatted in String type. The user of SwiftyJSON would still need to provide the correct date formatter for the API he/she is using which solves the problem with too many formats (at least for String formats, but one could of course add support for Number formats as well).
+",Dschee,tangplin
+5,2014-06-23 17:46:30,"@lingoer thanks for the push access!
+I've added more tests and cleaned the code a little. I'll submit new issues and if they are minor enchacements/ bugs - fix the in place, otherwise discuss with you.
+
+I think it's cool idea to have each protocol to be implemented in it's own extension - the code becomes more readable.
+",garnett,lingoer

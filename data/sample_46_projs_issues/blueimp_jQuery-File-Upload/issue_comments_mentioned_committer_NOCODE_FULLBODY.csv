@@ -1,0 +1,189 @@
+issue_num,datetime,body,login,mention_login
+3476,2017-03-02 12:32:29,"Thanks for your contribution @Danter7 
+I'll merge this, but you'll also have to bump the `blueimp-load-image ` optional dependency to version `2.12.2`, else there won't be a separate `scale` module.",blueimp,Danter7
+3468,2017-01-13 16:30:51,Thanks @bowlofeggs ,blueimp,bowlofeggs
+3465,2016-12-20 12:21:03,Thanks @exabugs !,blueimp,exabugs
+3462,2016-11-07 17:09:57,"Thanks for the reply @blueimp 
+
+I am not talking about the max number of files that can be uploaded in a directory, but I did mean about enforcing 1 file limit per upload, which can't be trusted from the client side! User can just fiddle the script and just skip the single file upload limit.
+
+I agree with you on this one:
+
+> Users can still send an arbitrary number of files by sending multiple POST requests for example.
+> Without any user identification, it will not be possible to limit the number of files uploaded.
+> 
+> If you need to limit the number of files users can upload, you can already do this with the current version of the PHP library.
+
+User can upload any no. of files (which can be restricted with the way you mentioned in above comment)
+
+#3462 just adds an option for single file upload (I know it can be restricted from the front end using this process https://github.com/blueimp/jQuery-File-Upload/wiki/Frequently-Asked-Questions#how-to-limit-the-file-selection-so-users-can-only-select-one-file) to be restricted from backend as well.
+
+And trust me, the front end option mentioned in the link above does not work with drag and drops at all.
+
+And apart from all this, can you just enable the `issues` options for this repo? There's another serious vulnerability (And I want to emphasise on vulnerability) which needs attention.
+",saurabh-sharma,blueimp
+3454,2016-07-31 20:04:34,"Thanks, @headlessme!
+",blueimp,headlessme
+3453,2016-07-31 19:51:09,"Thanks for your contribution and sorry for the late reply, @timmetj 
+",blueimp,timmetj
+3451,2016-06-11 14:09:30,"Thanks, @remicollet 
+",blueimp,remicollet
+3449,2016-06-08 11:58:06,"Thanks for your contribution, @akvadrako.
+I prefer to let the UI code handle the display of error messages and don't see a necessary need to explain the lack of video preview.
+Thanks for your understanding.
+",blueimp,akvadrako
+3446,2016-05-27 12:19:28,"Thanks for your contribution, @akvadrako.
+
+I've added some comments to the updated files.
+
+Could you elaborate on separating the AMD and node.js package formats jQuery-style?
+",blueimp,akvadrako
+3446,2016-06-30 14:32:13,"Would love to see this merged also.
+
+@akvadrako couple of notes:
+- Since you’re referencing `angular` and `blueimp-load-image`, I suppose those should be defined as `dependencies` of this project?
+- Why do you explictly reference `blueimpl-load-image/js/load-image` instead of `blueimp-load-image`? That package already exports module which can be consumed?
+",niksy,akvadrako
+3446,2016-08-29 10:59:22,"@akvadrako are you still working on this?
+If there's no reply to my requested changes I'll close this in the next couple of days.
+",blueimp,akvadrako
+3445,2016-05-23 13:11:42,"Thanks @mcdado 
+",blueimp,mcdado
+3444,2016-05-20 09:54:00,"Thanks @orhanveli.
+",blueimp,orhanveli
+3440,2016-05-01 18:32:48,"Thanks, @georgemillo!
+",blueimp,georgemillo
+3439,2016-04-29 14:07:45,"@blueimp , thanks for the reply. I had seen that part, and I anticipated that if I skip the empty version - the original will not be saved. So, e.g. if we have these options
+
+
+
+I thought it would create only these 2 files: `upload_dir/small/image.jpg` and `upload_dir/large/image.jpg`. However I end up having one more `upload_dir/image.jpg` file - which is the original. I also tried to make the empty `''` version as one of my files by having
+
+
+
+However, though it crops the main image by `800x800` as provided, but it exists as `upload_dir/image.jpg` and NOT as `upload_dir/large/image.jpg`. And one more thing: in response object for the last case I see only `smallUrl => 'upload_dir/small/image.jpg'` - I mean the large image's url is not provided.
+
+So, my initial goal is to have e.g. 2 image versions with given dimensions in their corresponding folders - and no original image. Am I missing something ?
+
+Thanks
+",hashmode,blueimp
+3437,2016-04-11 21:52:15,"Thanks, @TeLiXj!
+",blueimp,TeLiXj
+3435,2016-04-11 17:41:04,"Thanks, @mattiasw!
+",blueimp,mattiasw
+3433,2016-02-26 11:16:51,"Thanks @Herst !
+",blueimp,Herst
+3432,2016-02-24 16:38:00,"Thanks @rhymes!
+",blueimp,rhymes
+3431,2016-02-24 18:44:24,"Thanks @ThomasLandauer!
+",blueimp,ThomasLandauer
+3430,2016-02-24 18:40:20,"Thanks for the contribution, @ningliu.
+",blueimp,ningliu
+3422,2016-02-24 18:15:24,"Thanks for your contribution, @istem and sorry for the late reaction.
+",blueimp,istem
+3417,2015-08-28 20:37:41,"Thanks for the contribution, @majornista!
+",blueimp,majornista
+3416,2015-08-25 15:49:09,"Thanks again for your contribution, @fabiogermann.
+With the latest stable AngularJS version it seems the progress apply isn't even necessary so I removed that callback.
+",blueimp,fabiogermann
+3414,2015-08-10 19:25:50,"Thanks, @fabiogermann!
+",blueimp,fabiogermann
+3406,2015-07-08 16:07:48,"@blueimp I really need your help. I tried looking for solution everywhere but could not find anything. May be you can help. It may be very basic but it is just not working for me.
+
+I implemented database implementation of blueim/jQuery-file-upload. Everything is working fine but the problem is, the form shows all uploaded files. I want it to show only that images which are related to a particular post, tried different solution but it is just not working for me.
+
+I think related code changes might be in this function
+
+
+
+I tried to change the select query just so it can pull one particular image but it is not working for me. Can you please help or guide me in the right direction? Thanks
+",hammadkhan,blueimp
+3405,2015-07-05 19:11:35,"I think originally I intended `jquery.ui.widget` to be a named module, as other jQuery projects might potentially include it as well.
+
+That's also why there's an npm package of the same name, that I admittedly didn't maintain for a long time:
+https://www.npmjs.com/package/jquery.ui.widget
+
+RequireJS should definitely work as well with the updated path, as that's how the local scripts are included in the other JS files.
+
+Thanks for your contribution, @palcu!
+",blueimp,palcu
+3405,2015-07-07 08:30:51,"Thanks for the report, @dbrugne.
+I've released a new version reverting the change.
+
+Sorry @palcu, I should have tested my assumptions regarding RequireJS.
+We'll have to find another workaround for the issue with WebPack.
+",blueimp,palcu
+3405,2015-07-10 22:01:56,"@palcu @blueimp simple workaround for WebPack is to disable AMD:
+
+https://www.npmjs.com/package/imports-loader#disable-amd
+",evoyy,palcu
+3405,2015-07-10 22:01:56,"@palcu @blueimp simple workaround for WebPack is to disable AMD:
+
+https://www.npmjs.com/package/imports-loader#disable-amd
+",evoyy,blueimp
+3405,2016-04-26 08:38:30,"The same `Module not found: Error: Cannot resolve module 'jquery.ui.widget'` error is happening to me when using webpack. When I add `jquery.ui.widget` to my dependencies in `package.json`, it works. `jquery.ui.widget`'s `package.json` only misses `""main"": ""jquery.ui.widget.js""` to make it work.
+
+@blueimp Shouldn't `jquery.ui.widget` be part of the plugin's dependencies in `package.json`?
+",orthes,blueimp
+3403,2015-06-28 12:39:11,"Thanks @pquentin !
+",blueimp,pquentin
+3397,2015-05-27 14:03:18,"@blueimp  i'm sorry i think my post it's not submit. Thank you very much @blueimp :). Now I very very happy when you answer my question.Its working now. I like youuuuuuuuuuuuuuuuu.
+",hippobpinh1,blueimp
+3396,2015-05-18 07:51:06,"Thanks @guag!
+",blueimp,guag
+3388,2015-02-05 07:47:26,"Thanks for your contribution, @twlz0ne 
+",blueimp,twlz0ne
+3362,2014-10-13 19:31:54,"Thanks for your contribution, @AndrewEastwood :+1: 
+",blueimp,AndrewEastwood
+3331,2014-09-01 21:01:35,"Thanks for your contribution, @darknessm0404!
+",blueimp,darknessm0404
+3258,2014-07-21 19:03:30,"Thanks for your contribution, @tkleinhakisa ! :+1: 
+",blueimp,tkleinhakisa
+2926,2014-02-05 12:25:02,"@blueimp The use case is loading the jQuery File Upload plugin from a Firefox add on. And in that case, `window.Blob.prototype` is undefined, which I suspect is for security reasons.
+
+Even if you weren't hoping to officially support Firefox add ons, I thought that this patch would be a net win for cases where the environment, for whatever reason, has `window.Blob` defined but not `window.Blob.prototype`; and in that case, the JavaScript application crashes unless we wrap the plugin in a `try...catch`.
+",etruong42,blueimp
+2740,2013-11-15 13:22:28,"Thanks for your contribution, @ottens.
+I've released a new version based on your pull request (slightly refactored and with a unit test added).
+",blueimp,ottens
+2740,2013-12-03 18:15:01,"@ottens, thanks for adding the limitMultiFileUploadSize option. I needed it too and the solution I came up with was not as elegant.
+",dougdomeny,ottens
+2722,2013-11-06 16:00:06,"Thanks @dougdomeny, performance improvements are always very welcome! :)
+",blueimp,dougdomeny
+2607,2013-10-01 06:44:45,"@blueimp We plan to use jQuery-File-Upload via composer package manager not for server side implementation, but for client-side one. That's how we can keep your plugin as an external dependency and have an up-to-date version of the plugin.
+Proposed PR does not require updating `composer.json` after each release. Composer will handle it automatically. All you need is to register at https://packagist.org/ and add a service hook to the Github.
+Thanks in advance
+",maxromanovsky,blueimp
+2585,2013-09-11 15:15:45,"The fact that I didn't assign the value to the variable is just a stupid oversight. :)
+But thanks for kindly explaining it.
+
+As for your decision to not fix the issue, may I carefully suggest you review it once more?
+There is nothing in the spec that disallows such a name.
+In fact, the [spec clearly states](http://developers.whatwg.org/association-of-controls-and-forms.html#attr-fe-name):
+
+> Any non-empty value for name is allowed [..]
+
+I find it quite likely that such a ubiqutous name as `method` might be used by other developers.
+The error that is currently thrown is highly unusual and comes from inside of your upload library.
+Do you think that preventing such a possible issue is not useful at all, @blueimp?
+",denis-sokolov,blueimp
+2164,2013-05-01 12:09:50,"I like the feature but think the implementation could use some more work. 
+
+@blueimp, I feel like I'll break chunked uploads if I overload `get_file_name` because I can't clearly make out what `get_unique_filename` is doing. Have you got any advice on how to easily allow random filenames? Much appreciated
+",ncatanchin,blueimp
+2094,2015-12-29 17:29:03,"@blueimp do you mean https://github.com/blueimp/jQuery-File-Upload/blob/master/js/jquery.fileupload.js#L176?
+
+I am wondering how to use the `i18n` function with the second parameter `context`. Can you give a simple example?
+",dzhuang,blueimp
+1127,2012-10-31 16:40:52,"@blueimp - This seems like a good option.  If people don't want to do use it they don't have to put the data-confirm attribute on the link tag, and then they never see the confirmations.  I personally am having difficulty implementing the example you linked to in above.
+",batter,blueimp
+148,2012-05-18 08:51:51,"Using the headers option like this:
+
+
+
+Seems to do the trick for file uploads, however the header is not attached in the destroy action (when clicking the delete button). It seems that the _getAJAXSettings() method is not invoked inside the destroy() handler. @blueimp ?
+",etdsoft,blueimp
+148,2013-05-02 17:43:57,"@blueimp Could you provide an example of how to implement your suggestion for using URL parameters for iframe upload?  Finding it difficult to adapt your example of extending options for Delete.  Much appreciated.
+",jedierikb,blueimp
+3370,2014-12-27 08:59:39,"@blueimp here is a chance to make a beautiful xmas gift :)
+",nervo,blueimp

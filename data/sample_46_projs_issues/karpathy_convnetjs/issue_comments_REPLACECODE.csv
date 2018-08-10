@@ -1,0 +1,1554 @@
+issue_num,datetime,body,login,close_date
+82,2017-02-24 06:11:37,Anybody manage to implement A3C using convnetjs ?,gitricko,
+81,2017-01-15 07:45:36,"It seems like there are two bugs in the master branch:
+1) unlike the other training parameters, the training method, `method`, is not exported when executing `reset_all() `(line 616);
+2) the bound on the number of popping images in the ""Example predictions on Test set"" section does not work: images keep popping until Chrome eats all the memory (lines 452-453).",ychervonyi,
+80,2016-11-23 02:38:14,Fix usage of document.getElementById,Larry850806,2016-11-25 00:57:14
+80,2016-11-25 00:57:17,ty,karpathy,2016-11-25 00:57:14
+79,2016-10-31 12:18:48,"I feel it's a really stupid node question to ask, but really can't figure it out after a few hours. So here is the code that embarrasses me:
+>
+var convnetjs = require(""convnetjs"");
+var net = new convnetjs.Net();
+var brain = new convnetjs.deepqlearn.Brain(3, 2);
+
+
+Basically it couldn't find Brain function:
+
+>
+weiwe-macbookpro:test weiwe$ node index.js
+/Users/weiwe/test/index.js:5
+var brain = new convnetjs.deepqlearn.Brain(3, 2);
+                                    ^
+
+>
+TypeError: Cannot read property 'Brain' of undefined
+    at Object.<anonymous> (/Users/weiwe/test/index.js:5:37)
+    at Module._compile (module.js:556:32)
+    at Object.Module._extensions..js (module.js:565:10)
+    at Module.load (module.js:473:32)
+    at tryModuleLoad (module.js:432:12)
+    at Function.Module._load (module.js:424:3)
+    at Module.runMain (module.js:590:10)
+    at run (bootstrap_node.js:394:7)
+    at startup (bootstrap_node.js:149:9)
+    at bootstrap_node.js:509:3
+
+
+I'm pretty sure the NPM module is installed correctly because I can use functions (e.g., Net()) in convnet.js just fine. Scratching my head on why this doesn't work .....
+",windmaple,
+78,2016-10-24 22:04:36,"I was wondering if there is a missing sqrt call on this line https://github.com/karpathy/convnetjs/blob/master/src/convnet_trainers.js#L117
+
+According to this article (links to adadelta paper)http://sebastianruder.com/optimizing-gradient-descent/index.html#adadelta it would suggest that:
+
+<S_CODE_TOKEN>
+
+should be:
+
+<S_CODE_TOKEN>
+
+Would be great if someone could correct my understanding if not.
+",SundeepK,2016-10-24 22:05:39
+78,2016-10-24 22:05:39,"Ah looks like I miss read the parenthesis! Looks fine. 
+",SundeepK,2016-10-24 22:05:39
+77,2016-10-03 10:52:40,"This is a javascript project and it's better to use javascript/bash/commandline tools to build it. **Objective is:** To remove Java dependencies. A simple bash/commandline script can do what's there inside `compile/` folder. 
+
+For utmost cross platform compatibility, we can use `node` directly. Or, to not need a dependency for node too, a cross platform script might do the work. But, I prefer node (cross platform + javascript).
+
+What do you think about this?
+",inancgumus,
+76,2016-09-26 17:23:28,"Hello,
+the automatic.html demo refers to importTrainData() but I cannot find where it is defined. 
+Can you help?
+Thanks. Guido
+",gbugmann,2016-09-27 16:05:24
+76,2016-09-27 16:05:24,"I got a bit confused with the two versions of automatic.html (one in the master -needing automatic.js- and one in the release version where ImportTrainData is defined in the html file).  All clear now. Note also that Chrome is blocking the loading of local data. IE and Firefox are ok.
+",gbugmann,2016-09-27 16:05:24
+75,2016-09-26 16:34:32,"Apple are green and poison are red !
+",Pascal66,
+74,2016-09-26 09:32:45,"this.actions = [];
+      this.actions.push([1,1]);
+      this.actions.push([0.8,1]);
+      this.actions.push([1,0.8]);
+      this.actions.push([0.5,0]);
+      this.actions.push([0,0.5]);
+",Pascal66,
+74,2016-12-31 05:14:38,"I am slowly working through the rldemo and this is what I have:
+<S_CODE_TOKEN>
+This should help a bit. Sorry that the distance ahead is vague. I am not familiar with the calculations used for moving (two inputs that combine rotation and distance).",rajshah4,
+73,2016-09-23 16:55:52,"Since i've successfully adapted and trained my network.
+
+How can i use it to predict a result ?
+
+say i've 4 entry and 3 output to make on choice
+
+i want to give 4 new entry to the trained network and get back 1 of the 3 possible  choice.
+and certainly retrain with the new value if it appear that the result is wrong ?
+thank you
+",Pascal66,
+72,2016-09-19 17:31:19,"Hello, I'm a new comer to deep learning.
+And I'm just curious about why you use javascript to implement convnet that need
+expensive computation ? Why not just use python, or c++ ? Is there any specific reason ?
+",YuChunLOL,
+72,2016-09-19 19:53:57,"I believe this was just meant as a demo, it's not a framework to be used for production applications. The datasets are modest and the use of JavaScript makes it more simple to do the beautiful presentations without a lot dependencies and glue code complicating everything. 
+",davidparks21,
+72,2016-09-21 17:47:28,"I think that JavaScript is perfectly fine for AI and in some cases there is no other option, such as running in a web browser or a (hybrid) mobile APP .
+
+Performance-wise there is no reason to believe that JavaScript would perform significantly slower than Python. The reason why Python is used over C++ is not performance, it is the ecosystem.
+
+For fast execution Python or C++ might not even be the best for neural networks as GPGPU computing could be the ultimate solution for fast parallel computing of lots of artificial neurons. In that case JavaScript would yield roughly the same performances as Python of C++.
+
+Because it is about the ecosystem it is important to build one, this is what's missing for JavaScript, not fast computation as so far the cleat winner would be Python.
+",uiteoi,
+72,2016-10-01 17:04:36,"JS is the best solution and everyone should go for it. It is faster then everything else because it is distributed. It is not necessary the main idea of this framework, although, should be. Consider using only 10% of computer power on every visitor of a popular website and you can easily get hundreds/thousands computing hours a day.  The best part, you get it for free.
+",MariasStory,
+72,2016-10-28 15:42:11,"Personally, I think Javascript is not exactly a good idea, despite my own interest in this. Some of the bigger deep networks are too big to fit into the browser. For example, VGG 19 layers, which is around 500MB+, something that size would be difficult to handle in browsers.
+
+If you're looking to seriously train and play with deep learning, I'd suggest going with Caffe. Also, for beginners, Caffe is a lot friendly (more tutorials and various places to ask.) 
+",LimeCookies,
+72,2016-11-15 22:32:49,"there is port for c# https://github.com/cbovar/ConvNetSharp and behold it **isn't** worthless piece of garbage, it actually compiles! I guess you can convert it to c++ for turbo needs.
+",radioman,
+72,2016-11-16 10:01:20,"@YuChunLOL  **convnetjs**  is an excellent library for in-browser visualizations / interactive demos. However, given numerical performance of V8 (JavaScript) and derivates, it is far from being optimal for production use (read it number crunching and analysis). As @uiteoi suggested you might want to have a look on **TensorFlow** or **Caffe**.
+
+@MariasStory 
+
+> JS is the best solution and everyone should go for it. It is faster then everything else because it is distributed.
+
+It seems you got confused here; a bit.
+",ktamiola,
+71,2016-08-20 20:53:33,"Remove a few useless lines in pooling layer.
+",JanHalozan,
+70,2016-08-04 18:00:22,"Hi Andrej,
+
+I recently ran the trainer demo on MNIST and wondered why the Adam optimizer performs so much more worse than Adadelta.
+
+I think I found a little bug in the Adam implementation.
+
+According to the Adam Paper-v8 https://arxiv.org/pdf/1412.6980v8.pdf **Algorithm 1** (p. 2) the bias estimates use division instead of multiplication. The fixed version behaves significantly better when running the trainer demo on MNIST. To get the results as below I also changed the learning rate to 0.001 and the beta2 parameter to 0.999 (from 0.01 and 0.99 respectively) as recommended in the paper.
+
+Before:
+<img width=""814"" alt=""screen shot 2016-08-04 at 21 14 48"" src=""https://cloud.githubusercontent.com/assets/10101036/17415472/49d8aa98-5a8a-11e6-8961-8b1e68599f55.png"">
+
+After:
+<img width=""802"" alt=""screen shot 2016-08-04 at 21 21 27"" src=""https://cloud.githubusercontent.com/assets/10101036/17415430/214938a4-5a8a-11e6-9f3d-c29ec7cecd79.png"">
+",janhuenermann,
+69,2016-08-01 20:59:37,"Hi Andrej,
+
+I modified the LocalResponseNormalization layer according to http://stackoverflow.com/a/33967339/5200303 to reproduce the same results as in Caffe (for both forward and backward passes). I tested and verified the results within CaffeJS but not explicitly in ConvNetJS.
+
+Best,
+Christoph
+",chaosmail,
+68,2016-07-18 21:18:59,"getParamsAndGrads had been deoptimized.
+",nakosung,
+68,2016-07-18 21:20:17,"Hunted down by`--trace-deopt --trace-opt-verbose`.
+",nakosung,
+67,2016-05-30 10:02:33,"gulp integration 
+",qcgm1978,
+66,2016-04-14 15:24:56,"Sir,
+We are very interested in your work and are excited to contribute to your project. Sir, it would be of great help if you kindly help us to understand how you take input in the MNIST Demo. We cannot find the specific codes which help you to take the sample inputs. Any help for external sources and experts will also be helpful and appreciated.
+
+Thanks in advance.
+",rekon,2016-05-11 21:58:45
+66,2016-05-11 21:59:45,"I got it
+",rekon,2016-05-11 21:58:45
+65,2016-04-03 03:11:02,"hey ! I get the following error : 
+TypeError: Vw is undefined
+
+I am 100% sure its because I set up the convnet for regression incorrectly since if I try the example given in the getting started it works fine.
+
+ var layer_defs = [];
+layer_defs.push({type:'input', out_sx:1, out_sy:1, out_depth:2});
+layer_defs.push({type:'fc', num_neurons:5, activation:'sigmoid'});
+layer_defs.push({type:'regression', num_neurons:1});
+var net = new convnetjs.Net();
+net.makeLayers(layer_defs);
+
+var x11 = new convnetjs.Vol([1,2,3,4,5,6]);
+
+// train on this datapoint, saying [0.5, -1.3] should map to value 0.7:
+// note that in this case we are passing it a list, because in general
+// we may want to  regress multiple outputs and in this special case we
+// used num_neurons:1 for the regression to only regress one.
+var trainer = new convnetjs.SGDTrainer(net,
+             {learning_rate:0.01, momentum:0.0, batch_size:1, l2_decay:0.001});
+trainer.train(x11, [1,2,3,4,5,6]);
+
+This raises that error. So knowing js something is breaking and thus Vw becomes undefined. I'll try and go through the docs more carefully to understand how to set up. I am interested in regressing pairs of the form (xi, yi ) and thus why I set it up as it is seen...
+",franciscovargas,
+64,2016-03-29 09:29:37,"I would like to know how to design CNN(this modules) to handle multiple outputs instead of binary outputs.
+For example, I would like to retrieve relevant words (not a word) given an image.
+Any idea?
+
+Thanks
+",wfidditch,
+64,2016-06-06 10:37:25,"@wfidditch cut each letter in image to separate image, then determine each separate letter and combine back to word
+",axvm,
+64,2016-06-07 07:56:19,"@wfidditch did you have in mind here generating matrix of classes as opposed to a binary vector?
+",ktamiola,
+63,2016-03-02 19:47:15,"Hi,
+
+Thanks a ton for the fantastic library!
+I'm using a deep network for NLP, with a varying input size of 12000 down to 4000 nodes.
+I've made sure to enable 8GB for RAM for node: 
+
+`node --max-old-space-size=8192`
+
+My network looks like this (although I'd like to try different types and architectures):
+
+<S_CODE_TOKEN>
+
+My data has been parsed in a json array of objects, which I then randomly shuffle and partition into a training set and testing set.
+
+Each json object has a `vector` (which is simply an array of floats), and a `score` which is a single value.
+
+My training loop is basically the following:
+
+<S_CODE_TOKEN>
+
+It runs, but I have no way of validating it.
+Is there a `Mean Square Error` or `Average Cross Entropy` or any other network-error measurement? AFAIK, the only way to test the network's accuracy is to cross-validate using my `testing` samples, and see (a) if they are classified correctly, or (b) how _far_ the actual output is from my target/ideal output.
+
+I took a peek into the `convent.js` source file but I don't see `Trainer.train` to be returning any type of network error (unless I missed something - very possible!).
+
+Last but not least, referencing your library, do you have a citation you'd like me to use?
+
+PS: is there a way to **save** a trained network?
+
+Best regards,
+Alex
+",alexge233,
+63,2016-03-07 18:15:31,"Hello,
+
+I'm back with more questions.
+I've implemented the  [Average Cross-Entropy/Log Loss Error Function](https://en.wikipedia.org/wiki/Cross_entropy) for my ideal and prediction values.
+1. When running more than one hidden layer, all my network values propagate `Nan`. Is this intended behavior, loss of precision, or a bug?
+2. When using only one hidden layer, I get convergence on absolute values e.g., `[1, 0]` or `[0, 1]` but my ACE becomes a `NaN`.
+
+My implementation is quite simple:
+
+<S_CODE_TOKEN>
+
+Please note that both `ideal` and `actual` are `convnetjs.Vol`, and I obtain them during training iteration:
+
+<S_CODE_TOKEN>
+
+The variable `data` is an array which holds a `convnetjs.Vol` as input `data[k][0]` and a `convnetjs.Vol` as output `data[k][1]` which have been empirically verified.
+
+I understand that the parameters `learning_rate` play a very important role (I've experimented with very small and large values) as well as the L1 and L2 decay values are important.
+
+I haven't yet cross-validated accuracy, but why do I keep seeing those `NaN` values?
+",alexge233,
+63,2016-04-03 04:26:49,"^ for a similar set up I have the same issue :+1: 
+",franciscovargas,
+62,2016-01-31 03:43:07,"I'm curious why the input gradients are zero'd out in FullyConnLayer.backward() and not the biases and filter gradients.
+
+So zero out input, filter and bias gradients like this:
+
+<S_CODE_TOKEN>
+
+Instead of the original:
+
+<S_CODE_TOKEN>
+
+When I use the original code, my 1 layer, 1 neuron net oscillates around the training set rather than steadily decreasing the cost.
+
+When I zero the input, filter and gradient biases, I get steadily decreasing cost.  Isn't the filter gradient supposed to be wrt the input rather than the sum of past backprop gradients?
+
+Thanks for helping me understand!
+Seth
+",lakowske,
+62,2017-03-06 15:41:08,"I think he is summing up the gradients over all training results for a given minibatch. The network is forward/back-propped against a number of samples from a minibatch, the gradients are summed up at each backward() pass, then averaged before weight update. The averaging happens here:
+convnetjs_trainers.js, line 91:
+`gij = (l2grad + l1grad + g[j]) / this.batch_size; // raw batch gradient`
+
+here's more on [minibatch grad update](http://stats.stackexchange.com/questions/183840/sum-or-average-of-gradients-in-mini-batch-gradient-decent).",andyatgh,
+61,2016-01-24 16:04:51,"Hello, Andrej @karpathy 
+
+I think here should be (1-this.drop_prob). Let's consider probability = 0.1 - we should drop 10% and after that scale weights only slightly onto 0.9.
+
+WBR,
+Dmitriy
+",avdmitry,
+61,2016-01-24 17:23:51,"E[weight] = drop_prob_0 + (1-drop_prob)_w[i] = (1-drop_prob)*w[i], so I agree with @avdmitry
+",jruales,
+61,2016-01-24 17:44:18,"@avdmitry 's solution agrees with Figure 2 in the third page of the dropout paper: http://www.cs.toronto.edu/~rsalakhu/papers/srivastava14a.pdf
+
+The Keras library takes a different approach (but still somewhat equivalent): it divides by the retain probability during training time so that during testing the dropout layer is just an identity function
+https://github.com/fchollet/keras/blob/master/keras/layers/core.py#L621
+https://github.com/fchollet/keras/blob/master/keras/backend/theano_backend.py#L555
+",jruales,
+60,2015-12-28 18:05:32,"Hi dude,
+This is a long-due fix for using `deepqlearn` in `nodejs`, as I mentioned in issue #48 
+I noticed `convnet.js` is compiled from multiple sources, so I added the needed code too.
+Tested in `nodejs`; you may wish to test in browser first before merging.
+",kengz,
+59,2015-12-14 19:40:33,"I wrote a very simple simulation to test the Reinforcement Learning Module. I only set up the current action as input, and the output is ""left"" or ""right"". Going right feeds the reward 1 back into the network while going left returns the reward -1. 
+
+To my astonishment, returning an hour later after I let it train, the 'creature' was moving very confidently to the left, and only to the left! Goes without saying, the average reward of the network was negative! What could be an explanation for this?
+
+Regarding the setup of the network, I basically copied all settings from your apples/poison example - including the layer defs. 
+",tenshis,
+59,2015-12-20 09:42:10,"Welcome to the world of QLearning with function approximation! Especially neural networks. Convergence is not guaranteed, and indeed it doesn't converge more often than it does. A lot of parameter tweaking is necessary. It would be awesome if someone with more experience could share some insight on why this happens and how to improve the algorithm.
+",okh1,
+58,2015-12-10 20:12:06,"Using a hash reduces the `arrUnique` function's time complexity from n<sup>2</sup> to n. 
+",hammeiam,
+57,2015-12-07 01:51:34,"The following is my understanding about the backward function in deepqlearn.js. 
+
+If it is in learning process, after one forward path, it begins to do backward propagation. It does SGD with a batch size of N. Those N samples are randomly selecting from replay memory. The code seems to show that the weight matrix of the network is updated N times by calling the backward function once. But in my opinion, the SGD should only update the weight matrix once by averaging all weight updates of a batch size of N. 
+
+Please correct me if I have misunderstood sometime.
+",Cyndilee,
+57,2015-12-09 23:17:38,"It works as you expect. Don't confuse two different functions: Brain.backward() and Trainer.train(). The backward function from deepqlearn.js doesn't update the network's weights, it just calls the train function, which does update the weights, but it does so in batch.
+",okh1,
+56,2015-12-05 15:43:24,"I wonder if anyone converted pre-trained Caffe (or any else) models like AlexNet, VGG, HYBRID to ConvNet.js format? 
+
+If not, how could it be possible?
+",kilickaya,
+56,2015-12-05 19:38:11,"there wouldn't be, you can't use a VGGNet in Javascript :) Maybe one day...
+",karpathy,
+56,2016-01-19 10:39:26,"Mh, what is the reason for this?
+",marcj,
+56,2016-01-19 10:41:58,"Probably due to memory issues (A bowser is allowed to only use 500MB memory..)
+",kilickaya,
+56,2016-06-01 23:56:42,"and models like that will take way too long for a js script to evaluate, not to mention to train.
+",codinfox,
+56,2016-06-02 08:34:59,"> and models like that will take way too long for a js script to evaluate, not to mention to train.
+
+we were recently talking about this in the context of the Brain.js and synaptic frameworks.
+The idea now is to support a different back-end that supports GPU-level parallelization via OpenCL using the arrayfire-js bindings.
+
+Obviously, that will not help with the browser use-case, but the discussion is still interesting: https://github.com/arrayfire/arrayfire-js/issues/10
+
+The only way to make OpenCL work in the browser (without WebCL) is doing something like this: http://composition.al/blog/2015/02/24/to-opencl-from-javascript-via-js-ctypes-or-how-we-rewrote-the-river-trail-firefox-extension/
+
+They  basically came up with a firefox extension to do this.
+",UniqueFool,
+55,2015-11-09 04:48:27,,GritBear,2015-11-09 04:49:18
+55,2015-11-09 04:49:18,"this is a mistake :) please ignore
+",GritBear,2015-11-09 04:49:18
+54,2015-11-03 23:08:01,"Is there any way to read Brain data from stored JSON? toJSON + fromJSON combo doesn't seem to work.
+",Thandriel,
+54,2015-11-29 15:44:15,"I think it works, at least I used it in node js.
+Converting brain to string (t);
+
+<S_CODE_TOKEN>
+
+Loading brain from string (t);
+
+<S_CODE_TOKEN>
+",libraua,
+54,2015-12-01 18:26:15,"I'm trying to save the learning progress and being able to load it later. Process you described seems to save only the network structure.
+
+Edit: I'm the OP. I didn't notice I'm logged in with my work account :)
+",brezinajn,
+54,2015-12-01 20:10:15,"I probably stupid, but what do you mean by ""saving learning progress""?
+",libraua,
+54,2015-12-04 17:39:34,"I think he want for exemple load a trained brain and work with neural network without re-train it
+",BurakDev,
+54,2015-12-06 16:51:15,"Thanks, that's much better phrasing :). Yes that's exactly what I want to achieve.
+",brezinajn,
+54,2015-12-06 21:53:38,"Hi, I am having a similar problem. 
+
+I save the network to a JSON file using 
+
+<S_CODE_TOKEN>
+
+and load it back up with 
+
+<S_CODE_TOKEN>
+
+The file saves the network correctly but after loading it back up and calling
+
+<S_CODE_TOKEN>
+
+it returns NaN instead of one of the outputs from the network. Not entirely sure why that is the case other than the JSON file not being loaded correctly for some reason although no error is thrown.
+",craigmcmillan01,
+54,2015-12-06 22:28:26,"@craigmcmillan01 If you using node.js I guess you should try use readFileSync instead. cause as understand your code working asynchronously, which probably mean that in the moment you call for brain.forward(state); brain is still empty.
+
+I used something like that.
+
+<S_CODE_TOKEN>
+",libraua,
+54,2015-12-06 22:45:53,"@libraua Thanks! that was exactly the issue. 
+",craigmcmillan01,
+54,2016-09-17 22:54:58,"Are you talking about brain.js data?  As in from: https://github.com/harthur-org/brain.js ?
+",robertleeplummerjr,
+53,2015-10-20 18:55:25,"I get a warning every loop when running the brain demo code: 
+
+<S_CODE_TOKEN>
+
+This is the basic code from demo/rldemo.html 
+
+<S_CODE_TOKEN>
+",salamanders,
+53,2016-01-24 01:40:30,"@salamanders – were you able to solve this issue?
+",nemo,
+53,2016-01-27 02:55:36,"I'm also experiencing this. @salamanders, @nemo - did you figure this out?
+I note that the comment for ""RegressionLayer"" in convnet.js says that:
+
+<S_CODE_TOKEN>
+
+so it seems to me that warning might be out-of-date, as y can either be an Array or a structure (like this) for the regression layer?
+",DrGlennn,
+53,2016-01-27 05:30:03,"Gah, sorry about this. Do `brain.backward([reward])`
+
+edit: also fixed on site.
+",karpathy,
+53,2016-01-27 06:50:14,"@karpathy - That didn't work for me. This is because the ""y"" variable in the train function is a structure ({dim: i, val:x}, not an Array, in the case of the deep-q-learning example.
+",DrGlennn,
+53,2016-01-27 06:50:17,"hey @karpathy – that actually doesn't fix the problem.
+
+You can get rid of the warning by changing this line in `deepqlearn.js#254`:
+
+<S_CODE_TOKEN>
+
+to
+
+<S_CODE_TOKEN>
+
+Though, I'm not sure if this breaks anything or not.
+",nemo,
+53,2016-01-27 07:16:28,"@nemo - While that removes the logged error (because you're now sending in an Array), I think the logic in the RegressionLayer ""backward"" function is no longer correct. The this.out_depth variable is 5, but y is a 1-dimensional array - so when you loop i from 0 to 5, the loss function becomes undefined (NAN) for i>0. I didn't see any errors in the output, but (to me at least) I don't think this will actually train correctly.
+
+On reviewing the code, I think the correct solution is, probably, to change the warning so it checks for conditions where y is either (a) an Array, (b) a number of (c) a struct with entries .dim and .val - as these are the three cases that RegressionLayer actually handles. The deepQLearning example seems to be configured as an example of (c).  
+
+That being said, I'm still trying to understand fully how this works, so am not 100% confident about that assessment of the issue.
+",DrGlennn,
+53,2016-01-27 07:27:54,"@DrGlennn – I thought the backward function is the one in the `RegressionLayer` class (which accounts for an arrayed y value.
+
+<S_CODE_TOKEN>
+",nemo,
+53,2016-01-27 20:59:54,"I am not getting the error from the latest hosted build - but I may not be running it the same way, I had to whip together what I _think_ I did last time.
+",salamanders,
+53,2016-01-27 23:31:18,"@nemo - Yes. The backward function is the one in the `RegressionLayer` and, in general, it will handle an Array (as per the code you included). However, this won't work correctly when the array you are sending in is an array of a single element like: 
+`[{dim: 0, val:2.356]`
+
+If you just convert `{dim:0, val:2.356}` into an array (by putting [] around it) then it will use that code, but will loop from `i=0` to `i=this.out_depth` (here `out.depth=5`). After the first element, this will produce an overall loss of NAN.
+
+Anyway, that's my understanding but I'm not an expert by any means, so happy to receive clarification if you think I've misunderstood what's going on.
+
+@salamanders - I still get the logging error, when running the rldemo.html example. As I see it, the basic issue is that the`deepqlearn.js`code (line 253) is sending in the following structure to the trainer:
+
+<S_CODE_TOKEN>
+
+As such the test in the `train` method:
+
+<S_CODE_TOKEN>
+
+is correctly (at least as written) logging a warning that `y` is not an Array. However, despite the warning, the Regression method does not seem to require an array as a training output vector. It can also handle this `{dim: ?, val: ?}` structure. 
+
+Happy to hear if I'm misunderstanding what is happening here. I'm still trying to really understand, so happy to be corrected if my understanding is way off base. 
+
+That being said, my guess is that the ""if statement"" just needs to include the condition where y is of the form `{dim: e.action0, val: r}`
+
+Thoughts?
+",DrGlennn,
+52,2015-09-30 22:51:43,"@karpathy, I've corrected a typographical error in the documentation of the [convnetjs](https://github.com/karpathy/convnetjs) project. You should be able to merge this pull request automatically. However, if this was intentional or if you enjoy living in linguistic squalor, please let me know and [create an issue](https://github.com/thoppe/orthographic-pedant/issues/new) on my home repository.
+",orthographic-pedant,
+51,2015-09-18 10:19:02,"Main script can't be used in WebWorker. Breaks because of a reference to the window object at the end of the script. 
+",eivbsmed,
+50,2015-09-10 11:28:21,"Like others I am have been using ConvNetJS in Node.js, server-side.
+
+In order to actually use MagicNet from Node.js given a CSV or similar data, however, one needs to implement preprocessing code like that in automatic.js.
+
+To avoid rewriting such code, in my own experimental branch I separated the preprocessing code out of automatic.js, leaving only the UI layer there.  I have tested it and am happy to submit a pull request.  But before I do so I want to see if this type of change is wanted and if there any suggestions as far as naming and structure.
+
+Have a look here:
+https://github.com/bittlingmayer/convnetjs/compare/master...bittlingmayer:csv
+(I based it off of my fork, but if https://github.com/karpathy/convnetjs/pull/49 is not merged it would be easy to rebase.)
+",bittlingmayer,
+50,2015-09-20 19:02:24,"Hey, thank you for opening an issue about this. You're right of course. The whole MagicNet code is weirdly done and not nearly feature-complete enough. I am thinking of removing all of the functionality and the demo from ConvNetJS entirely, because it's probably deceiving or confusing people. 
+",karpathy,
+50,2015-09-20 19:05:29,"It's also worse: You have to store the exact preprocessor mappings with the model checkpoint so that they can be applied identically to test data. If the preprocessor methods are called on test data then it will generate ""garbage"" mapping indices and the performance will be random.
+
+Thoughts? If none I'll probably remove MagicNet from ConvNetJS in a few days.
+",karpathy,
+50,2015-09-21 08:32:01,"I will leave to you, to decide whether you want this to be a demo, and strictly pedagogic, or a lib on which devs actually rely.  Let's assume strictly pedagogic.
+
+It is, I think, really useful to have one Browser Demo that takes arbitrary CSV data.  (And making it easy to preload iris.csv and a few similar well-known minisets from diverse domains is instructional too.)
+But the magic part and associated complications are not necessary for that - better to let performance suffer a bit.  In fact, I would think of it as the ""simple"" ""clean"" demo (quite the opposite from magic).
+
+In any case such a clean demo will not be very visual, it will be more interesting to play with it programmatically, and that I would say is much better done with Node than inside a browser.  And for the HTML page I would put the js inside a text area, so you don't have to make UI controls for each parameter.
+",bittlingmayer,
+50,2015-09-21 12:17:15,"I think Ideally I'd like ConvNetJS to be a small core library that devs can rely on. Except I'm just barely familiar with Node - this complicates things :)
+",karpathy,
+50,2015-09-21 13:55:03,"In that case I think some good net that requires only a .csv | 2D array | JSON and a label column index would be good.
+
+To be honest I only learnt Node while playing with MagicNet.
+
+(As an aside: consider creating an Org 'convnetjs' ie github.com/convnetjs while it is still available, and then you can decide later to transfer this repo to there.  Transferring is easy and all issues history, references from forks etc are preserved.)
+",bittlingmayer,
+49,2015-08-28 14:11:30,"Just ripped the files from the cs.stanford.edu/people/karpathy/...  Tried to minimise changes, personally I think it's best to avoid hosting any of these external libs locally.
+For the data files, because of the requests for the .txt one must still run a server to load the demo page.
+I did not check if other demos are similarly broken when running locally.
+",bittlingmayer,2015-09-21 12:04:21
+49,2015-08-28 14:29:37,"Hmmmm I agree in general it's just that I'm worried of bloating the core library with all these appendages and extra data files, etc. Do you happen to know how large these files are in terms of kb? 
+",karpathy,2015-09-21 12:04:21
+49,2015-08-29 08:11:29,"The data files together are 4.2 MB.  The additional JS libs are negligible (< 100KB).
+
+I agree bloat is a concern, not in terms of KB but in terms of readability.
+
+We could just link to https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data etc.  According to Talebian antifragility they will probably outlive this repo.  Same for the JS, including jQuery.
+
+Or we could make it work at least for npm.  That would mean explicitly adding a demo/package.json with these deps and demo/Readme.md with a few lines to get started:
+
+<S_CODE_TOKEN>
+
+I'm open to other suggestions.
+",bittlingmayer,2015-09-21 12:04:21
+49,2015-08-29 12:59:59,"I checked now, some of the other demos also have broken deps, mostly to MNIST data.
+",bittlingmayer,2015-09-21 12:04:21
+49,2015-09-10 11:29:33,"Friendly ping :-)
+",bittlingmayer,2015-09-21 12:04:21
+49,2015-09-20 19:13:47,"Very sorry for late reply on these, too busy with other things :( I think I'm going to remove MagicNet altogether, which will deprecate this PR and we can keep the core library lean.
+",karpathy,2015-09-21 12:04:21
+49,2015-09-21 08:37:00,"That works too. :-)  However because the other demos have the same problem, we should probably create an Issue then, to track what is needed for any dev to build the site (whether that is changing the source to point to external versions, adding data files to the repo or creating instructions in the README about how to get them).
+",bittlingmayer,2015-09-21 12:04:21
+49,2015-09-21 12:04:21,"I mostly thought of the demos as a dump of some example code that people might refer to. Ideally it would be as you describe. But many of the demos require data (e.g. CIFAR images), which I think are too large to be put in the repo. At the very least in any case all of this should be documented in the README, which I should do. 
+
+I'm going to close this issue and in short term will update Readme. Thanks!
+",karpathy,2015-09-21 12:04:21
+48,2015-08-28 13:35:13,"Followed your example and suddenly it cannot find `deepqlearn`. I'm doing this in Node.js.
+
+<S_CODE_TOKEN>
+
+Seems like it can't find deepqlearn. Saw under `node_modules/convnet/deepqlearn.js` there's an export statement; but your `package.json` specifies `convnet.js` as the `main`.
+",kengz,
+48,2015-08-28 14:25:39,"You have to require deepqlearn by itself and separately, I think. Does that work? It's not part of the library as default, it's only provided on a side because I didn't want to bloat the library.
+",karpathy,
+48,2015-08-28 14:29:04,"Yes I can do this
+
+<S_CODE_TOKEN>
+
+but then the deepqlearn wouldn't recognize its neighbor in `node_modules/convnetjs`
+
+<S_CODE_TOKEN>
+",kengz,
+48,2015-08-28 14:33:00,"Crap. I don't have experience with nodejs, so I didn't really foresee these issues and dependency problems. I'm not sure I fully understand why convnetjs is not defined, when you've already required it first, shouldn't the variable exist? Not sure how to fix this in cleanest way
+",karpathy,
+48,2015-08-28 14:40:37,"Yeah node.js has a slightly different way of importing dependencies.
+
+A quick and dirty solution is to simply go into `node_modules/convnetjs/build/deepqlearn.js` manually and  add these two lines at the top:
+
+<S_CODE_TOKEN>
+",kengz,
+48,2015-11-02 13:21:32,"@kengz  can `convnetjs` work good in node js?
+",SimplyY,
+48,2015-11-02 16:03:11,"@SimplyY If by that you mean if it can run like an efficient program on Java/C++, then yes. Nodejs is a complete and performant language like Python. I just wanted to get rid of the browser dependency here and use convnet like a programming library.
+",kengz,
+47,2015-08-26 19:38:19,"How would I go about if I wanted to save the experiences of the ""Brain"" object in Deep Q-Learning, and subsequently restore them and continue training? It seems that saving the ""experience"" object would suffice but I'm not sure..
+
+Thanks
+",yconst,
+47,2015-11-29 16:13:43,"I think this would help.
+Converting brain to string (t);
+
+<S_CODE_TOKEN>
+
+Loading brain from string (t);
+
+<S_CODE_TOKEN>
+",libraua,
+46,2015-08-26 07:24:40,"As per #32, I've been trying to rewrite convnetjs using SIMD and Typed Objects, which are both proposals for ECMAScript 2016 (ES7). In the end I also ended up rewriting most of the code in ES6 and changed the build process to use [Babel](https://babeljs.io/) and Browserify.
+
+Unfortunately, it appears as though the Typed Objects proposal is about to be changed substantially, and SIMD is going to be modified slightly so it becomes somewhat of a subset of Typed Objects (as will Typed Arrays). Given this sort of instability as far as APIs are concerned, this repo won't currently run in any browser or in node.js. It would be possible to get it to run in Firefox Nightly with some effort.
+
+Some changes that were necessary:
+- All `Vol`s are instances of a `VolType` - so all `Vol`s of a particular `VolType` have the same preset dimensions and can't be resized.
+- Support for browsers without Typed Arrays had to be dropped. I don't think this affects too many people, given it's just old versions of IE.
+- Most algorithms have been made as parallel as possible using SIMD.
+
+Some things I've also considered:
+- Tried using a `use_webgl` argument, which is either `false` or a reference to a WebGL context (can easily be emulated in node.js using OpenGL bindings).
+
+Given my branch is behind quite a few commits, and isn't actually working, I thought I'd just send through this pull request so progress thus far could be looked at/torn apart by anyone who's interested.
+",thomasfoster96,
+46,2015-08-26 22:38:39,"Sorry that I haven't looked through your code in more detail, but in your Typed Objects usage, do you need these features:
+- Pointers from Typed Objects to other Typed Objects, or JS objects?
+- Modifying a Typed Object directly after it's been created? Or observing a modification by changing the underlying array?
+  I'm wondering if this problem can be solved part of the way with value types. We may want the full Typed Objects proposal eventually, in part for WebAssembly, but I was thinking of starting with value types.
+",littledan,
+46,2015-08-26 23:21:22,"@littledan As far as I know, probably not to the former and yes to the latter.
+
+A bit of background: The convnetjs library works using Vols, which are objects with two properties, `w` and `dw`, which are both three-dimensional arrays, as well as three other properties `sx`, `sy` and `depth`, which hold the sizes of the arrays.
+
+Currently the Vols are objects and the `w` and `dw` properties are one-dimensional arrays, with `set(sx, sy, depth)`, `get(sx, sy, depth)`, `set_grad(sx, sy, depth)` and `get_grad(sx, sy, depth)` methods used to set and get values in the `w` and `dw` properties (see [this file](https://github.com/karpathy/convnetjs/blob/master/src/convnet_vol.js)). This method is awfully slow, and in some places the methods to figure out the offset of a given element (`sx`, `sy`, `depth`) are manually inlined for speed.
+
+This pull request changes this by instead having a [`VolType` constructor](https://github.com/thomasfoster96/convnetjs/blob/master/src/structures/vol.js), from which different `Vol`s of the same dimensions can be created. Using the Firefox Nightly implementation of Typed Objects, it was possible to use the underlying ArrayBuffer of the Vols (and even their individual properties) to create a Float64Array view of the `w` and `dw` arrays and then use the SIMD load/store methods to parallelize calculations (see [this code](https://github.com/thomasfoster96/convnetjs/blob/master/src/layers/convlayer.js#L60)), as well as use nicer, faster array indexing( `myVol.w[0][2][1]` instead of `myVol.get(0, 2, 1)` and have the performance benefits of things being explicitly typed.
+
+Note that I wrote most of this code a few months ago and only cleaned it up a little the other day to open the pull request to see what @karpathy thought of the approach (as per #32 Andrej would like an easy way to create tensors in JS) - I probably wrote this using out of date drafts for SIMD.
+",thomasfoster96,
+46,2015-08-27 00:11:59,"It sounds to me like this would be compatible with using value types (even if typed objects might make more sense--I don't know enough about the application to determine one way or another). Assuming you had multidimensional arrays (which has already been efficiently implemented in JS with ndarrays), value types would let you read an immutable object out of the Float64Array which represents the (w, dw) pair. Looks like you're only modifying that object within the array, not when you have a particular instance of it, so that would work.
+
+Not sure if the SIMD load/store method will work going forward. We removed Float64x2 from Phase 1 in the name of minimalism (we didn't have a compelling use case), though it will be coming back in Phase 2. I bet most of your speedup will come from doing things in terms of arrays, and using the SIMD-accelerated load and store will be only a small speedup on top of that, but I'd be interested to hear if you have data to the contrary.
+
+Value types might be easier for the compiler to unbox than typed objects, since the compiler doesn't have to keep track of object identity. They also overlap with existing JS objects and strong mode objects a bit less. That's why I was thinking of starting with them, but if there are really compelling use cases for Typed Objects that don't fit, then I want to figure that out too.
+",littledan,
+46,2015-08-27 01:08:36,"Sounds like Value Types might do - as long as `sx`, `sy` and `depth` could be implemented as getters on the `VolType`'s prototype chain.
+
+> Looks like you're only modifying that object within the array, not when you have a particular instance of it, so that would work.
+
+Not quite sure I follow - do you mean that the array is being modified in place?
+
+Regarding Float64x2, I was using it because changing the precision of values from 64-bit to 32-bit could be a problem. Float64x2 would be nice to have, given numbers are by default doubles. 
+",thomasfoster96,
+46,2015-08-27 01:27:45,"I mean that the array is being modified in place, as opposed to the objects being modified directly and having that be reflected in the array. Also, for modifications that are made in the array ""behind the back of the elements""--do these need to be reflected in the objects that are read out of the array, or is it OK if reading the array element has the semantics of copying the object out of the array?
+
+Well, SIMD is motivated by doing operations like add on vectors. I haven't been thinking about the load/store case. Are you doing add on multiple Float64x2 elements, or your acceleration really just came from load/store? Definitely you shouldn't switch to 32-bit floats if it doesn't suit your use case.
+",littledan,
+46,2015-08-27 02:20:24,"> Also, for modifications that are made in the array ""behind the back of the elements""--do these need to be reflected in the objects that are read out of the array, or is it OK if reading the array element has the semantics of copying the object out of the array?
+
+The former would be greatly preferred. I don't think copying makes much sense for this use case - if someone was to use a `VolType` using, say, HTML5 canvas image data, you've got 300px \* 300px \* 4 colors \* 2 (w and dw) - copying would end up being a bottleneck.
+
+I was using SIMD because a lot of the calculations in this library are easily parallelizable. Ideally a lot of these calculations could be done using OpenGL bindings or WebGL, but for a good chunk of use cases of this library the CPU is good enough, and thus it makes sense to use SIMD. For example, there's a few spots where there are a dozen or more add/subtract/divide/multiply operations on a number - makes sense to do that in parallel as far as I'm concerned. 
+",thomasfoster96,
+45,2015-08-24 12:57:18,"When you train a network for regression and that you want to predict only one value it is very tricky that the trainer should take **an array of one value**:
+
+<S_CODE_TOKEN>
+
+i just added a console log so that beginners users realise this quickly (i've seen two people fall in this trap in a short interval).
+",vallettea,2015-08-25 11:11:30
+45,2015-08-24 15:36:51,"You're right, it's a tricky part. I burned myself a few times too. Is there an off by one error in your code? Should you be subtracting -1 from the index? 
+",karpathy,2015-08-25 11:11:30
+45,2015-08-24 15:42:45,"oops sorry about that. just corrected
+",vallettea,2015-08-25 11:11:30
+45,2015-08-25 11:11:33,"Thanks!
+",karpathy,2015-08-25 11:11:30
+44,2015-08-24 08:41:34,"Hi, newbie machine learner here. I am trying to classify news articles based on their headlines, mainly into two classes : ""crime"" and ""non crime"". I have used [Natural](https://github.com/naturalnode/natural)'s NaiveBayes Classifier, but I want to improve upon the accuracy. Will SVM improve the prediction, and if so please guide me how to implement it using your library!
+Btw, i love reading your blog and got to learn a lot from there :) Please do complete the book, eagerly waiting for the remaining chapters!
+",koustuvsinha,
+43,2015-08-15 00:08:42,"In your code you specify that 
+
+<S_CODE_TOKEN>
+
+This is fine and makes sense
+
+how ever this volume calculation is odd to me.
+
+<S_CODE_TOKEN>
+
+In your lecture notes you say
+
+H2 = (H1 - F) + (2 \* P) / S + 1
+H2 = (32 - 5) + (2 \* 2)/ 1 + 1
+H2 = (27) + (4) / 2 
+H2 = 15.5
+W2 = (W1 - F) + (2 \* P) / S + 1
+W2 = 15.5
+
+D2 = K
+D2 = 16
+Resulting Volume 
+15.5 \* 15.5 \* 16
+
+I am confused about how you arrived at 32 x 32 x 16 volume
+",ArEnSc,2015-08-15 00:34:46
+43,2015-08-15 00:15:10,"H2 = (32 - 5) + (2 \* 2)/ 1 + 1 = 32 - 5 + 4 + 1 = 32, not 15.5. This is
+elementary school stuff ;)
+
+also make sure you're not missing brackets, the formula is
+H2 = ((H1 - F) + (2 \* P)) / S + 1
+
+On Sat, Aug 15, 2015 at 1:08 AM, Michael Chung notifications@github.com
+wrote:
+
+> In your code you specify that
+> 
+> layer_defs.push({type:'input', out_sx:32, out_sy:32, out_depth:3}); // declare size of input// output Vol is of size 32x32x3 here
+> 
+> This is fine and makes sense
+> 
+> how ever this volume calculation is odd to me.
+> 
+> layer_defs.push({type:'conv', sx:5, filters:16, stride:1, pad:2, activation:'relu'});// the layer will perform convolution with 16 kernels, each of size 5x5.// the input will be padded with 2 pixels on all sides to make the output Vol of the same size// output Vol will thus be 32x32x16 at this point
+> 
+> In your lecture notes you say
+> 
+> H2 = (H1 - F) + (2 \* P) / S + 1
+> H2 = (32 - 5) + (2 \* 2)/ 1 + 1
+> H2 = (27) + (4) / 2
+> H2 = 15.5
+> W2 = (W1 - F) + (2 \* P) / S + 1
+> W2 = 15.5
+> 
+> D2 = K
+> D2 = 16
+> Resulting Volume
+> 15.5 \* 15.5 \* 16
+> 
+> I am confused about how you arrived at 32 x 32 x 16 volume
+> 
+> —
+> Reply to this email directly or view it on GitHub
+> https://github.com/karpathy/convnetjs/issues/43.
+",karpathy,2015-08-15 00:34:46
+43,2015-08-15 00:21:34,"LOL OMg I need sleep thanks hahahaha
+",ArEnSc,2015-08-15 00:34:46
+42,2015-07-29 14:29:30,"Hi Andrej,
+Is there a thorough explanation of the inner workings of convnet.js & deepqlearn.js? I have some question marks to clarify
+
+Marco
+",marcoippolito,
+42,2015-07-29 16:34:48,"I'm afraid not, beyond what's in the code. Or can ask here
+
+EDIT: also some docs on main convnetjs.com page
+",karpathy,
+42,2015-07-29 17:27:26,"Ok. I'm going to sum up all my skimmed doubts in a list (hopefully not that long).
+(I've been reading https://github.com/cs231n/cs231n.github.io/blob/master/convolutional-networks.md and some doubts were already solved).
+Thanks for support Andrej.
+Marco
+",marcoippolito,
+42,2015-08-06 10:12:38,"Hi Andrej,
+my objective is to use the Deep Reinforcement Learning approach and algorithms for intelligent web crawling, as (actually briefly) showed by the paper ""Learning to Surface Deep Web Content""-Zhaohui Wu, Lu Jiang, Qinghua Zheng, Jun Liu: www.aaai.org/ocs/index.php/AAAI/AAAI10/paper/viewFile/1652/2326
+
+I put in a,starting (please forgive me if in future I will have few other doubts to clarify), list some questions I have, to properly understand the inner workings of your great work, in order use and adapt it to what I have to do:
+
+1) https://github.com/karpathy/convnetjs/blob/master/src/convnet_vol.js#L51  
+""var ix=((this.sx \* y)+x)_this.depth+d"":
+  since var Vol = function(sx, sy, depth, c) and var n = sx_sy*depth
+    sx: dimension of width
+    sy: dimension of height 
+
+I do not understand why to add +x, and then add ""d"" (after multiplying for this.depth)
+Is it related to x = x + step_size \* x_derivative ( http://karpathy.github.io/neuralnets/) ?
+
+2)
+https://github.com/karpathy/convnetjs/blob/master/src/convnet_layers_dotproducts.js#L70
+a += f.w[((f.sx \* fy)+fx)_f.depth+fd] \* V.w[((V_sx \* oy)+ox)_V.depth+fd] :
+I guess the dot product between the entries of the filter and the input is done through f.w[...] \* V.w[...] : am I right or completely out of track?
+
+3) https://github.com/karpathy/convnetjs/blob/master/src/convnet_vol_util.js#L38 :
+I do not understand W.get(W.sx - x - 1,y,d):
+could you please give my some hints about -x -1 ?
+4) https://github.com/karpathy/convnetjs/blob/master/src/convnet_layers_dropout.js#L36 :
+for(var i=0;i<N;i++) { V2.w[i]*=this.drop_prob; }
+I do not understand the rationale: why multiplying the V2.w[i] value for the drop_probability, which is 0.5 as default (if not specified) ?
+
+5)
+https://github.com/karpathy/convnetjs/blob/master/src/convnet_layers_normalization.js#L76  :
+var g = -aj_this.beta_Math.pow(S,this.beta-1)_this.alpha/this.n_2*aj;
+var SB = Math.pow(S, this.beta);
+if(j===i) g+= SB;
+g /= SB2;
+g *= chain_grad;
+V.add_grad(x,y,j,g);
+
+I do not understand the rationale behind these computations.
+Would you please give me an hint?
+
+6)https://github.com/karpathy/convnetjs/blob/master/src/convnet_trainers.js#L92 :
+var dx = - this.learning_rate \* biasCorr1 / (Math.sqrt(biasCorr2) + this.eps);
+I found a paper called ""Adam: a method for stochastic optimization-Diederik P. Kingma, Jimmy Lea"" but I didn't find the above formula.
+The same for ""nesterov"".
+Would you pleas give me references for ""adam"" and ""nesterov""?
+
+7) https://github.com/karpathy/convnetjs/blob/master/build/deepqlearn.js#L61
+
+this.net_inputs = num_states \* this.temporal_window + num_actions \* this.temporal_window + num_states;
+Why adding num_states again, after multiplying it by this.temporal_window ?
+
+8)
+https://github.com/karpathy/convnetjs/blob/master/build/deepqlearn.js#L166  :
+for(var k=0;k<this.temporal_window;k++) {
+    w = w.concat(this.state_window[n-1-k]);
+    action1ofk[this.action_window[n-1-k]] = 1.0*this.num_states;
+    w = w.concat(action1ofk);
+}
+I do not grasp the size of the window   : why this.action_window[n-1-k] ? : Why the actual size of the window is shrinked starting from [k-1] position and not just from [k] position?
+
+9) https://github.com/karpathy/convnetjs/blob/master/build/deepqlearn.js#L183   :
+this.epsilon = Math.min(1.0, Math.max(this.epsilon_min, 1.0-(this.age - this.learning_steps_burnin)/(this.learning_steps_total - this.learning_steps_burnin)));
+Can you please give me a reference (a paper, a book) where to find how to calculate epsilon?
+
+10)
+https://github.com/karpathy/convnetjs/blob/master/build/deepqlearn.js#L229  :
+e.state0 = this.net_window[n-2];
+again it's not clear to me the window size: could you please explain me why [n-2] ?
+
+11)
+As anticipated, my objective is to apply deep reinforcement learning to web crawling, creating a sort of ""adaptative crawling"": the crawling agent learns a promising crawling strategy from its own experience, and, from diverse features of query keywords.
+
+I still have to figure out how to devise the whole mechanism, but I would like to ask you what could be, according to your experience, the key aspects and elements to consider, in order to use and properly adapt your deep reinforcement learning implementation to successfully accomplish an adaptative ""intelligent"" web crawling engine.
+
+Looking forward to your kind help (I'm eager to learn as much as possible from you and, possibly, from other experts like you).
+Marco
+",marcoippolito,
+42,2015-08-18 16:17:32,"1. those two x are not same and have nothing to do with each other
+2. yes
+3. it's a loop going backwards I assume
+4. see cs231n notes under Inverse Dropout
+5. that's backward pass for a neormalization layer. gradient computation
+6. that adam formula is some kind of simplified version of Adam that works similarly, I think. Isn't my code
+   7,8. can't remember
+7. no reference, it's just decayed slowly from 1 to a value of 0.1
+8. you'll have to step through these carefully. I can't remember
+
+It doesn't seem to me that DQN is a good match for the problem you're describing, and especially given that you do not seem to have a strong background of applying neural networks in general. DQN is for now an advanced kind of algorithm and isn't a plug and play thing.
+",karpathy,
+42,2015-08-19 10:26:59,"Hi Andrej,
+thank you very much for kindly answering most of my questions.
+
+Sorry for candidly asking you again, but I still have left 2 doubts from my previous long list.
+1) 
+https://github.com/karpathy/convnetjs/blob/master/src/convnet_vol.js#L51 
+""var ix=((this.sx \* y)+x)this.depth+d"":
+since var Vol = function(sx, sy, depth, c) and var n = sxsy*depth
+sx: dimension of width
+sy: dimension of height 
+Having confirmed my hypothesis that the equation has nothing to do with x = x + step_size \* x_derivative, I still have doubts about why adding x and then d:
+That's because I would have done this in order to get the ""infinitesimal"" element:
+    var ix = ((this.sx \* y) \* this.depth  , without adding x and then d
+instead of : ""var ix=((this.sx \* y)+x)this.depth+d""
+
+2)
+https://github.com/karpathy/convnetjs/blob/master/build/deepqlearn.js#L61 
+this.net_inputs = num_states \* this.temporal_window + num_actions \* this.temporal_window + num_states
+I still do not understand why to add num_states again, after multiplying it by this.temporal_window 
+
+I thank you in advance for your kind further explanations, in order to learn, with an humble but confident approach, from you.
+Marco
+",marcoippolito,
+42,2017-01-29 21:19:00,"I see this thread is quite old, but who knows maybe it be useful to someone. Read ""Playing Atari with Deep Reinforcement Learning"" first. deeplearn.js is basically impl. of what is written there. You might understand better what's going on with 2. in particular. Here is my short explanation. You have three things: State of your system, Action taken upon some action and NN with input. Input to NN is a combination of current state (that you want to find action for) + sequence of previous states and actions that have been taken. In this context this sequence of previous actions called temporal memory or temporal window. So said that you have your network input to be `temporal_window` times pair of (state size + actions) + current state.",soswow,
+41,2015-07-28 21:47:10,"`lambda` parameter was redundant and has been removed.
+",kashif,2015-08-01 11:45:27
+41,2015-08-01 11:45:30,"thanks!
+",karpathy,2015-08-01 11:45:27
+40,2015-07-22 08:27:42,"Noticing a framerate drop with nets loaded from JSON.
+
+Setup a test in jsfiddle with the library included, only thing which jumped out at me was `dw` in `Vol.toJSON` so added to see if that helped.
+http://jsfiddle.net/MrYellow/xLy0Lp45/7/
+1. Hit start
+2. Run until loss drops.
+3. Log some timings.
+4. Save/Load.
+5. Re-enable learning.
+
+I'm going from 145-150 or so to 120.
+",mryellow,
+40,2015-07-22 10:10:12,"I think this must be because some Typed Arrays somehow got made into ordinary JS arrays. I can't remember if I properly account for this in the loading JSON. It might be that it simply loads the arrays and somewhere it forgets to make sure that the Vols use typed ones.
+",karpathy,
+40,2015-07-22 10:28:17,"Was thinking maybe an array growing or losing some properties so sounds right.
+
+I saw a few Vols around...
+
+`ConvLayer`, has `filters` and `biases` (filled by `biases.fromJSON`, which has no Vol inside but uses `global.zeros`).
+",mryellow,
+40,2015-07-23 05:29:55,"`FullyConnLayer.fromJSON`:
+- `filters` empty before `push`.
+- `biases` redefined before `fromJSON`.
+- Each filter uses `Vol.fromJSON`.
+
+`ReluLayer`:
+- All straight assignment.
+
+`Vol.fromJSON`:
+- Redefines with `global.zeros(n)`.
+
+`zeros`:
+- `Float64Array`.
+
+So I guess (without logging the output of all this stuff) that means the input isn't growing or defined as the wrong object types.
+
+Could it be related to gradients in some way? I don't see much other than straight math, and `FullyConnLayer` doesn't have the complications of `get_grad` etc.
+",mryellow,
+39,2015-07-19 19:46:50,"There is syntax error at line 47.
+",riantsoa,2015-07-26 12:57:03
+39,2015-07-19 19:47:21,"There is syntax error on line 47.
+",riantsoa,2015-07-26 12:57:03
+39,2015-07-26 12:57:07,"odd, thank you for the fix.
+",karpathy,2015-07-26 12:57:03
+38,2015-07-09 10:05:10,,korczis,2015-07-09 10:42:28
+38,2015-07-09 10:42:32,"thx!
+",karpathy,2015-07-09 10:42:28
+37,2015-06-20 19:51:25,"I've added [Adam](http://arxiv.org/pdf/1412.6980.pdf) to the list of trainers, using the same implementation as in Torch7's [optim](https://raw.githubusercontent.com/torch/optim/master/adam.lua).
+",Kaixhin,2015-06-21 13:21:44
+37,2015-06-21 13:21:47,"Sure, thank you!
+",karpathy,2015-06-21 13:21:44
+37,2015-06-21 14:19:54,"I also updated the [trainer demo](https://cs.stanford.edu/people/karpathy/convnetjs/demo/trainers.html), so you can update your website to reflect the addition of Adam. I would also suggest updating the [documentation](https://cs.stanford.edu/people/karpathy/convnetjs/docs.html) on Trainers to include Adam, Windowgrad and Nesterov, as they are implemented but not actually mentioned in the docs.
+",Kaixhin,2015-06-21 13:21:44
+36,2015-06-11 04:49:27,"installing convnetjs for node.js via `npm install convnetjs` gets you [this version](https://www.npmjs.com/package/convnetjs) last published a year ago. should it be updated?
+
+the version currently on npm doesn't expose the deepqlearn module, which i needed, so i put together [a fork](https://github.com/garbados/convnetjs) of convnet that uses npm to build, compile, test, and expose the library. i'd be happy to polish those changes into a pull request if you're at all interested in that kind of automation.
+",garbados,
+36,2015-07-21 20:30:25,"Seems the author has removed compiled files and broken the package management.
+
+https://github.com/karpathy/convnetjs/issues/12#issuecomment-54083992
+",mryellow,
+36,2015-07-21 20:32:53,"sorry about this. I'm a bit of an `npm` noob as well, so that doesn't help. Any recommendations for what should be done to make this clean? I could try look over the `npm` docs again and figure out if I could update the repository properly.
+",karpathy,
+36,2015-07-21 20:40:19,"I know bower better than npm far as the styles... They tend to put compiled versions in a `dist` directory which is pretty standard across most packages.
+
+For more complex deployments I'd usually have gulp tasks for handling all this stuff, so you'd just run `npm install` and `gulp build`. This would then run `bower install`, and any custom stuff.
+
+At the end of the day, `npm install convnetjs --save-dev` (or `bower install convnetjs --save-dev`) should result in all the files being ready to use.
+",mryellow,
+36,2015-07-21 21:02:36,"Righto, I see the issue with compiled versions being committed, was thinking different workflow where you have something like gulp making sure developers are testing on a built version from their source.
+
+So you really do want to avoid commit compiled versions.....
+
+Something like this might work:
+
+Work in `develop` branch.
+`.gitignore` the whole `build` directory.
+Put `deepqlearn.js`, `util.js` and `vis.js` in `src`.
+Script to package/copy them to `build` directory.
+Then script to deploy, which calls `yuicompressor` and then forces the build directory into `master` branch.
+",mryellow,
+35,2015-06-01 02:06:25,"This should fix mnist example
+",cbovar,2015-06-02 04:05:40
+34,2015-05-07 23:00:45,"Just an aesthetic suggestion, but I think it would be nice if the toy 2D classification demo (http://cs.stanford.edu/people/karpathy/convnetjs/demo/classify2d.html) used the Marching Squares algorithm so that the classification boundary looked smooth and not blocky. See also: http://jamie-wong.com/2014/08/19/metaballs-and-marching-squares/
+",jruales,
+33,2015-05-07 09:27:22,"I extracted styles and javascript from all the demo files,
+explicitly declared several magic constants in mnist and cifar demos, 
+unified the javascript for mnist and cifar10 into one js file,
+moved js and css files to respective folders and updated references in html 
+added ability to test with own image in cifar10 and mnist demos
+
+still left to do:
+refactor and/or unify the javascript files for the rest of the demos
+",pavelpep,2015-05-07 21:08:48
+33,2015-05-07 18:02:42,"Whoa, nice! This looks like an extensive commit; I assume you verified that the demos work? I skimmed through the changes but I don't think I'll have time for a thorough look.
+",karpathy,2015-05-07 21:08:48
+33,2015-05-07 20:43:42,"Yes, I tested all the demos and they behave correctly. I also checked the console for errors and unimported js/css files, all clear :)
+",pavelpep,2015-05-07 21:08:48
+33,2015-05-07 21:08:58,"looks good, great, thank you!
+",karpathy,2015-05-07 21:08:48
+33,2015-05-07 21:36:48,"My pleasure! Great job on the whole project :)
+",pavelpep,2015-05-07 21:08:48
+33,2015-05-31 11:28:21,"@pavelpep should it be `<image_channels` rather than `<3` [here](https://github.com/karpathy/convnetjs/blob/72b4719f6b7bf1ce460549a9b2c2070a7e653bc6/demo/js/images-demo.js#L24) and [here](https://github.com/karpathy/convnetjs/blob/72b4719f6b7bf1ce460549a9b2c2070a7e653bc6/demo/js/images-demo.js#L60)?
+
+Thanks for the work! 
+(Should I do a pull request if I spot such error?)
+",cbovar,2015-05-07 21:08:48
+33,2015-05-31 18:32:33,"@cbovar nice catch! You are correct, it should be `<image_channels` instead of `<3`
+",pavelpep,2015-05-07 21:08:48
+32,2015-04-12 07:17:13,"SIMD instructions are going to be available in ECMAScript 7, and are already supported in Firefox and Crosswalk. Plus, there's a Typed Arrays based polyfill available at https://github.com/johnmccutchan/ecmascript_simd. For projects using convnetjs, especially on mobile, SIMD might make everything a bit faster.
+",thomasfoster96,
+32,2015-04-12 18:12:07,"interesting! thanks for pointing this out, I wasn't previously aware of it. I think the ultimate frontier of JS DeepLearning is still on GPU. It would be ideal if there was some Tensor object in JS with various operations that can happen on GPU or CPU. The CPU part could maybe use the SIMD instruction set for additional speed when on CPU. 
+Cool stuff!
+",karpathy,
+32,2015-04-13 02:48:13,"Perhaps [Typed Objects](http://wiki.ecmascript.org/doku.php?id=harmony:typed_objects) (again, Firefox only for now) and [Parallel JavaScript](http://wiki.ecmascript.org/doku.php?id=strawman:data_parallelism) might be worth a look? Typed Objects could make going between CPU and GPU pretty easy. 
+
+I might fork the repo and see if I can get SIMD and Typed Objects working in Firefox.
+",thomasfoster96,
+32,2015-04-17 03:02:05,"@karpathy I've been playing around with Typed Objects and to me it seems to best way to use Typed Objects would be to have a `VolType` class that extends `StructType`. This would allow Vols to be very memory efficient and performant, and allow efficient arrays of Vols. Sounds pretty good to me :smile:.
+
+This is a (broken) implementation of `VolType`:
+
+<S_CODE_TOKEN>
+
+The VolType class could be used like this:
+
+<S_CODE_TOKEN>
+
+The above would be equivalent to calling:
+
+<S_CODE_TOKEN>
+
+Typed Objects allows multidimensional typed arrays, so the `add()`, `set()` and `get()` methods wouldn't be needed, same goes for `addGrad()`, `setGrad()` and `getGrad()`.
+
+`cloneAndZero()` is also not needed, because another instance of a VolType is used instead. `clone()` is replaced as well, as passing a Vol to an instance of VolType would perform a clone.
+
+The only huge downside to this is the Typed Objects are only available in Firefox beta builds, and as they are a part of the ECMAScript 7 standard, they won't be standardised until as late as September 2016. I'm sure Typed Objects could be polyfilled (just as SIMD and Typed Arrays can, just with lesser performance), but one would have to be written from scratch.
+",thomasfoster96,
+32,2015-04-17 21:32:22,"Nice, thanks for looking into this.
+
+Maybe it's possible to check if the user has TypedObject.float64 arrays available and if so, use them under the hood. We already do this with the implementation of zeros(), using typed arrays when possible.
+
+Unfortunately, I think it's not very clean to put this in with the other code base because I traded speed for modularity, and have all kinds of math implemented inline, all over the place, and in hardcoded ways.
+
+Maybe I should restart ConvNetJS from scratch... :)
+",karpathy,
+32,2015-04-18 01:18:38,"I'd agree that using Typed Objects won't go very well with the current codebase. 
+
+I ended up actually sort of rewriting ConvNetJS anyway (I turned the concatenation of files into ES6 modules, and turned the pseudo-classes used into ES6 Classes), so you if you take a look at [thomasfoster96/convnetjs](https://github.com/thomasfoster96/convnetjs) the /src directory looks completely different. Not to mention using Typed Objects requires incompatible changes to the way Vols work.
+",thomasfoster96,
+31,2015-03-24 03:30:37,"I'm was really happy to see this library and your post (Hacker's Guide to Neural Networks). I work mostly with Javascript on the server and client and am considering building a some machine learning functionality in our web application. We are also working towards taking it offline, so a pure JS solution is really interesting. 
+
+However, a lot of people dismiss JS as a good language for this kind of heavy, computational work. Other hits against it are no immutable data structures (although now we have a couple great options), floating point math (0.1*0.2), and it's not statically typed. 
+
+I think it would be interesting to talk more in the intro to this repo about
+- What motivated you built it in JS
+- If or how JS floating point math problems would affect results
+- Limitations on size of learning data sets 
+- For large data sets, presumably it's recommended to train on the server and load the saved trained networks in the browser. How big are saved trained networks for large data sets? Giving some rough guidelines would help determine if this is even an option for some projects. 
+
+I was interested in these questions previously, but then read through the Hacker News thread on your post (https://news.ycombinator.com/item?id=8553307). Cynical comments as usual, but there are good questions in there. 
+
+Thanks
+",jefffriesen,2016-04-13 01:38:49
+31,2016-04-13 01:38:49,"If ever there is a good example for going ML in the browser, it's this: http://playground.tensorflow.org/
+
+Closing...
+",jefffriesen,2016-04-13 01:38:49
+30,2015-03-14 02:11:28,"Hi Andrej,
+
+Just asking out of politeness really.  Are you ok with my using convnetjs as a 'reference implementation' for my gpu-based neural net library?  I doubt my maths a bit :-P  and convnetjs seems to be widely used, therefore highly likely to have good correctness, and relatively straightforward to read, therefore ideal for a 'reference implementation'?  I've provisionally added it here https://github.com/hughperkins/ClConvolve/tree/ca0752db840772a8c0efb6d7a454af9cd2ccba47/prototyping/convnetjs-reference
+
+Hugh
+",hughperkins,2015-11-11 14:32:20
+30,2015-03-16 11:33:22,"(Interestingly, found a bug like this :-)  I mean, in my own code.  Not a maths issue, just a my-programming-sucks issue :-P  https://github.com/hughperkins/ClConvolve/commit/84350b34ab2b95e70990d57152c927775e328ed4 )
+",hughperkins,2015-11-11 14:32:20
+29,2015-02-27 02:41:57,"On the page [ConvNetJS Automatic Prediction Demo](http://cs.stanford.edu/people/karpathy/convnetjs/demo/automatic.html) would you please add a download button to help export the model?
+
+When I try to copy and paste the model (I tried it a few different ways), it freezes or fails: I think it is the size.
+
+Regardless, it would be convenient, and this looks like a good example of [how to do it with HTML5](http://html5-demos.appspot.com/static/a.download.html)
+",az0,2015-02-27 04:17:56
+29,2015-02-27 04:17:56,"`stty cbreak` helps to paste large items in the terminal.
+",az0,2015-02-27 04:17:56
+28,2015-02-09 02:27:38,"Fixed some inconsistencies and minor typos in formatting. Changes made to the files are circled.
+
+![screen shot 2015-02-08 at 6 20 30 pm](https://cloud.githubusercontent.com/assets/7351267/6100227/da923666-afbf-11e4-9acb-994aac7a0d53.png)
+- Last bullet point had a period while the others did not
+- Demo and code were not capitalized and is inconsistent with the rest of the file
+
+![screen shot 2015-02-08 at 6 20 19 pm](https://cloud.githubusercontent.com/assets/7351267/6100232/e3f43592-afbf-11e4-9250-a92b8be05256.png)
+- Inconsistency in capitalization of the points
+",jasonly,2015-02-09 02:41:51
+28,2015-02-09 02:41:56,"Haha! Thank you :)
+",karpathy,2015-02-09 02:41:51
+28,2015-02-09 02:42:39,"No problem! This project looks exciting!
+",jasonly,2015-02-09 02:41:51
+27,2015-01-23 20:45:31,"Dear Andrej,
+
+I really like your deep q-learning demo page :+1:  May I ask if you, or anyone you know have tried to use Torch, Theano or Caffe, with iPython notebooks or something else to build a GPU version of the demo? 
+
+I realize this would be a lot of work, but it would also be a lot of fun :+1:  Since you have made the big first step of proof of principle that it can be done, it also gives a clear map of how to do it!
+
+Best wishes, Aj  
+",AjayTalati,2015-02-09 15:31:07
+27,2015-02-13 10:49:15,"Thanks! I'm not aware of any other implementation right now.
+",karpathy,2015-02-09 15:31:07
+26,2015-01-18 21:12:24,"Hello 
+I am a beginner and not sure this is the correct place to post for 'support' so please forgive me ahead of time
+
+I would like to present a scenario and ask which type of neural network I should be using to solve it and anything else I should be aware of when I implement it as a beginner to neural networks but apt user of javascript
+
+I'm building something that would give me data about the game hearthstone, the data might look like this:
+
+<S_CODE_TOKEN>
+
+I've experimented with brainjs but that only accepts numerics as inputs/outputs
+
+I would like to put those data points into the neural network so it gets an idea of what was played every turn for a game 
+
+then I would ask the neural net things like 
+if turn 1 had a card id of EX_13 what is most likely to be the play on turn 2? 
+Is there a neural network capable of guessing that information based on previous data?
+",slifin,
+26,2015-01-18 21:24:05,"Nice, neat application! 
+
+I think this would be pretty hard for someone with very little experience. I could wire it up with custom code, but don't think ConvNetJS supports such architecture.
+
+As simple thing you could probably build a network that does prediction for the n-th step (individual network for each n). The way to input the data would be to discretize all cards to 1-of-k encodings. For example the card EX_13 would be the 234-th dimension, so the vector of numbers you pass in would be all zeros except for a single 1 on the 234-th position. If that makes sense?
+
+Then you could also use brainjs, but this library is nicer :) You'd then have an architecture of form 
+input
+softmax
+
+,for example, for a simple linear classifier. If you add 'fc' layers in between you'd get more complex neural nets.
+",karpathy,
+26,2015-01-18 21:45:35,"Btw if you were willing to learn much more about Neural Nets, you could try reading through our class notes http://cs231n.stanford.edu/syllabus.html . The class is technically about Computer Vision, but a lot of the stuff can be taken and directly applied to any kind of data (including this) in straight-forward manner.
+",karpathy,
+26,2015-01-18 21:46:52,"How would the neural networks work together? The prediction/patterns would ideally come from knowing that players typically play certain cards in certain orders, wouldn't the neural networks be isolated from each other and not understand what was played in the turn before? 
+
+edit: Thank you for the reading material
+",slifin,
+26,2015-01-18 21:53:35,"I think a recurrent network would be best to model this problem, but it is beyond the scope of a beginner and beyond the scope of ConvNetJS. My project RecurrentJS could be used to build this, but only if you know your neural nets (e.g. the class).
+
+Otherwise, the option I'm suggesting above is to have independent neural nets for each step.
+One net predicts the second card given first
+One net predicts the third card given first two (for example, by concatenating their 1-of-k vectors into a single input vector)
+etc.
+",karpathy,
+26,2015-03-25 17:05:24,"I have a similiar question, so I will put it under the same issue. I am wondering what kind of a NN to use or even figure out how a problem like this could be approached. 
+
+So, can we have a neural network that given a number ( say 32 ) gives you back an equation ( 8*4 or 1+1+1+....32 times). It can give back only 1 answer or multiple ( whichever is simpler ). The problem I have with a NN in this scenario is that the number of possible outputs is unbounded. We know that the output is a sequence of 0-9, -,+,/ and \* ( lets assume that ). Now, how do we build a NN which can produce outputs like these ?   
+",ganarajpr,
+26,2016-06-13 11:36:03,"Dear Andrej. Great work it is really impressive. I read your class notes and your presentation on neuraltalk. I was particularly interested on combining RNN or LSTM(=recurrentjs) with convnet. You talk as well about transfer learning. Do you have a js example or could you direct me to literature on transfer learning or combining LSTM with other algorithms. Thanks a lot for your help
+",ivanjacobs,
+25,2015-01-08 13:59:48,"mnist folder is not available inside demo folder. can you please send this missing code.
+",bjambu20,2015-01-08 17:54:00
+25,2015-01-08 17:54:00,"It was too large to include. My online demo has a pointer to it in the source files. (on my public page)
+",karpathy,2015-01-08 17:54:00
+24,2014-12-27 22:04:40,"Hello All - 
+
+Was wondering if this was intended behavior?  Been reading the source over the holidays and noticed that in the MaxOut's constructor:
+
+(convnet_layers_nonlinearities.js:128)
+this.switches = global.zeros(**_this.out_sx_this.out_sy*this.out_depth***); // useful for backprop
+
+Which doesn't seem to match with the from_json initialization:
+
+(convnet_layers_nonlinearities.js:224)
+this.switches = global.zeros(this.group_size);
+
+Was wondering if this was a bug or maybe you could educate me on why the switches would be a different size in this case?
+
+Thankyou.
+",arminius2,
+23,2014-12-22 20:54:52,"I have some trouble with the parameters of MagicNet:
+
+<S_CODE_TOKEN>
+
+Is <b>train_data</b> a JSON string, an object, a CSV string, etc?
+Also, what format would <b>train_labels</b> be in?  
+
+Could you provide an example of each?
+
+Thanks!
+",dokinoki,2015-01-17 04:07:56
+23,2015-01-17 04:07:56,"Found it :D  <b>The MagicNet class takes a training set (as a list of convnetjs.Vols and training labels). </b>
+
+<S_CODE_TOKEN>
+",dokinoki,2015-01-17 04:07:56
+22,2014-11-30 22:22:00,"doesn't seem to brake anything, but who knows, right?
+",torrmal,2014-12-02 19:24:24
+22,2014-12-02 19:24:50,"whoops, thanks. I was copy pasting some code around and didn't change it properly.
+",karpathy,2014-12-02 19:24:24
+21,2014-11-19 20:22:11,"Can a network that is already trained be serialized? In which format can it be serialized?
+Can I train a network with other tools and let convnetjs only read it?
+",MartinThoma,
+21,2014-11-19 20:24:56,"Hi Martin,
+
+A network that was trained in ConvNetJS can be serialized with
+net.toJSON(), as mentioned in docs. And then loaded with net.fromJSON()
+
+Currently there is no support for taking a net from other tools/libraries
+and converting them to ConvNetJS. I've converted Caffe Alexnet reference
+model in my own branch but it was too messy and hacky to release. So it's
+possible if you're willing but not very clean.
+
+Andrej
+
+On Wed, Nov 19, 2014 at 12:22 PM, Martin Thoma notifications@github.com
+wrote:
+
+> Can a network that is already trained be serialized? In which format can
+> it be serialized?
+> Can I train a network with other tools and let convnetjs only read it?
+> 
+> —
+> Reply to this email directly or view it on GitHub
+> https://github.com/karpathy/convnetjs/issues/21.
+",karpathy,
+21,2014-11-19 20:30:49,"Hi Andrej,
+
+Thank you for the quick response.
+
+I am working with neural networks for handwriting recognition (see http://martin-thoma.com/write-math/ if you are interested). I used a university-internal Python toolkit which is based on Theano to train with the GPU. The network in JSON format needs about 8.1 MiB which is much bigger than it needs to be because JSON doesn't store big float matrices efficiently. Do you have any idea of a ""compressed"" serialization format that works with JavaScript?
+",MartinThoma,
+21,2014-11-19 20:36:47,"Good question, I only had a brief look at some of these. bson and similar
+protocols seem like a possibility but I've never fully investigated it.
+I've also considered super hacky ways where I would create a regex over the
+JSON to manually trim all floats to only a few significant digits, since
+these networks don't need all that precision at test time (they do in train
+time)
+
+Andrej
+
+On Wed, Nov 19, 2014 at 12:30 PM, Martin Thoma notifications@github.com
+wrote:
+
+> Hi Andrej,
+> 
+> Thank you for the quick response.
+> 
+> I am working with neural networks for handwriting recognition (see
+> http://martin-thoma.com/write-math/ if you are interested). I used a
+> university-internal Python toolkit which is based on Theano to train with
+> the GPU. The network in JSON format needs about 8.1 MiB which is much
+> bigger than it needs to be because JSON doesn't store big float matrices
+> efficiently. Do you have any idea of a ""compressed"" serialization format
+> that works with JavaScript?
+> 
+> —
+> Reply to this email directly or view it on GitHub
+> https://github.com/karpathy/convnetjs/issues/21#issuecomment-63708077.
+",karpathy,
+21,2015-03-15 20:08:19,"Hi Andrej,
+
+When you said that converted alexnet from Caffe, what made it messy?  are there particular things that caffee does in alexnet that currently convnetjs doesn't support?
+
+Jorge
+",torrmal,
+21,2015-03-15 20:44:34,"Yeah the more annoying one was group convolution (the parameter group:2).
+That's the point where I gave up because I was too lazy to implement it,
+although it probably would have been not too difficult.
+
+In particular, the AlexNet is broken down into two streams due to
+historical reasons, since there were difficulties in fitting the full model
+on a single GPU. So with K filters looking at input volume of depth D, the
+first K/2 look at the first D/2 activation maps, and the other K/2 look at
+the other D/2 activation maps.
+
+Andrej
+
+On Sun, Mar 15, 2015 at 1:08 PM, Jorge Torres notifications@github.com
+wrote:
+
+> Hi Andrej,
+> 
+> When you said that converted alexnet from Caffe, what made it messy? are
+> there particular things that caffee does in alexnet that currently
+> convnetjs doesn't support?
+> 
+> Jorge
+> 
+> —
+> Reply to this email directly or view it on GitHub
+> https://github.com/karpathy/convnetjs/issues/21#issuecomment-81220171.
+",karpathy,
+20,2014-11-07 16:51:21,,hartca,2014-11-07 21:28:54
+20,2014-11-07 21:28:57,"thanks!
+",karpathy,2014-11-07 21:28:54
+20,2014-11-07 21:46:27,"No problem.
+",hartca,2014-11-07 21:28:54
+19,2014-11-06 06:51:06,"In convent_net.js,  line 133:
+
+""var layer_reponse = this.layers[i].getParamsAndGrads();""
+
+e..., it means 'layer_response'??
+",neutronest,2014-11-07 21:30:25
+19,2014-11-07 21:30:25,"Thanks! Luckily it doesn't introduce a bug, but yeah it's a typo. I'll fix it next update perhaps.
+",karpathy,2014-11-07 21:30:25
+18,2014-10-29 13:54:00,"Added Nesterov trainer.
+
+Code adapted from Caffe:
+
+https://github.com/BVLC/caffe/issues/53
+
+https://github.com/BVLC/caffe/blob/master/src/caffe/solver.cpp
+",pgmmpk,2014-10-29 18:10:09
+18,2014-10-29 18:09:57,"Thanks! It's a little tricky to derive the nesterov update ""backwards"", but this looks right to me. It also matches the Caffe implementation, which I will assume was appropriately scrutinized before commit. The slight discrepancy is a minus sign backwards, which stems from the fact that Caffe does the update with a minus sign, keeping the semantics of a gradient throughout, while ConvNetJS simply adds the step to the current parameter vector.
+
+Thanks!
+",karpathy,2014-10-29 18:10:09
+17,2014-10-01 18:42:50,"I was looking through your code and you initialize the gradient to be zero on each backward pass, won't this impact the use of `batch_size`?  Doesn't the gradient need to be added up so that you get the average gradient for the weight update?  You already set the gradient to zero on each weight update.
+",jgbos,2014-10-01 19:25:35
+17,2014-10-01 18:51:21,"I'm not sure which lines you're referring to. I initialize the gradient to zero but only with respect to data. The gradient on the weights doesn't get reset and keeps accumulating (until a batch update).
+",karpathy,2014-10-01 19:25:35
+17,2014-10-01 19:25:35,"Oh shoot, I was looking at the data not the filters.  Sorry.
+",jgbos,2014-10-01 19:25:35
+17,2014-10-01 21:49:54,"No worries, thanks for bringing this potential issue up anyway!
+",karpathy,2014-10-01 19:25:35
+16,2014-09-24 22:02:31,"I was in the documenting mood today so I decided to use jsdoc to document `convnet_layers_input.js`. I don't know if this is appropriate for your project or not, but if it is I can document some more modules too.
+",rylans,2015-06-26 18:21:53
+15,2014-09-24 17:42:26,"Fix small typo in README. 'intall' to 'install'
+",rylans,2014-09-24 17:43:09
+15,2014-09-24 17:43:05,"thanks :)
+",karpathy,2014-09-24 17:43:09
+14,2014-09-10 06:01:26,"I try to train magicnet on a simple data set, about 100 data records, it run over 100+ hours and seems will  run forever without return. When I input less than 40 records, it would work fine.
+",newebug,
+14,2014-09-10 06:23:27,"The MagicNet will never stop - the idea is that the longer it runs the better its predictions will be. You have to decide for yourself when you want to stop training. The first time the MagicNet is ready to predict is when it first calls finishedBatch callback, and every time the callback is called, its predictions will improve. Just stop when you get impatient.
+",karpathy,
+14,2014-09-10 08:53:58,"Thanks for quick reply.
+
+I train it with less than 40 records data, it will fire finishedBatch quickly, when I train it with 100+ records data, it won't finish after 100+ hours, is these normal?
+",newebug,
+13,2014-09-01 08:07:19,"(this is a continuation of the discussion started in #11, so it can be 'closed' cleanly)  
+
+> ...  jpcnn, which in turn relies on underscore ...
+
+Hmm - that _is_ a lot of machinery to include 100-200 lines of WebGL.  The least-intrusive method for including the end result (i.e. what the client sees) would be to have a separate `convnet.webgl.min.js` which, if it's there, sets up a webgl flag for the regular `convnet.min.js` to call into - or even overwrite the re-implemented methods themselves.  
+
+On the source side, however, I've got to think there's a more direct way of making the BLAS.js code ready-to-use.  I also think it makes sense to go the BLAS-compatible route, since it's a standard, and one avoids having to continuously re-invent the wheel...  I'll have a poke around for a cleaner set of includes.
+
+All the Best
+Martin
+:-)
+",mdda,
+13,2014-09-03 19:29:59,"From what I see in `jpcnn`, there's a lot of machinery in `jpcnn.js` that's duplicative of what you have in `convnet.js`.  
+
+Most of the calculations are still in javascript (in particular, it seems that all the WebGL results seem to be brought back to javascript Arrays, rather than being held in GPU memory for the next layer).  
+
+The two big sets of WebGL'd stuff are 'GEMM' and 'max' / 'maxPatch', with the GEMM stuff having a two versions : (a) one that delay with (n,n) matrices of Float32s, and (b) one where the (n,n) matrices are represented instead as (n/4,n/4) matrices of (r,g,b,a:Float32).  Given the effort spent compacting/extracting from the x4 format, I suspect that it's a decent win to deal with the data packed in this way within the GPU (though doing this for `convnet.js` may be better left for v2).  
+
+The array packing issues are particularly tricky issue for `convnet.js`, since you've already got everything nicely packed into 1-dimensional arrays (buffers), with the various strides & offsets set up for packing multiple matrices within the array.  So it would be a pity to have to re-copy everything into the format expected by `jpcnn`.  (Another issue : `convnet.js` is working with Float64Array, and WebGL is only going to do Float32...)
+
+In terms of WebGL machinery required, the utils/webgl.js does most of the gl-specifics.  Do you know whether this originated at JetPac?
+",mdda,
+13,2014-09-05 18:48:32,"Hi Martin, I think this is all from JetPac, but Pete is now at Google. By the way, when I hacked around with JPCNN I was able to get exact same outputs from ConvLayer and jpcnn's GEMM, and also note that there is a trivial way to convert between them, because we both store values in the same packing order in the 1D array:
+
+<S_CODE_TOKEN>
+
+and I can also get identical outputs from Conv layer and from GeMM. Taking a randomly initialized conv layer, here is how it's achieved: Converting Conv weights and biases to dims:
+
+<S_CODE_TOKEN>
+
+and then the two are equivalent, when `vol` is the input volume:
+
+<S_CODE_TOKEN>
+
+<S_CODE_TOKEN>
+
+so `v0 = v1` but the latter is much faster with webgl magic :) So one option is to implement a `forward_GPU` which translates everything from Vols to Bufs and then backwards in `backward_GPU`. There would be a bit of an overhead with filling up the kernel buffer every forward pass, but maybe this can be memoized so if the kernels were not updated with a backward pass, they dont need to be recomputed.
+",karpathy,
+13,2014-09-15 05:15:12,"So I hacked on this a bit today and created a second target convnet-webgl.js, which is the same build as vanially convnetjs, but also includes jpcnn and it overwrites ConvLayer with a WebGL version. (but it backs up the old ConvLayer into ConvLayerCPU). I also wrote jasmin tests to verify that it returns same result (both forward and backward pass). It's not commited anywhere but temporarily I put it up here:
+
+http://cs.stanford.edu/people/karpathy/convnetjs/build/convnet-webgl.js
+
+you can ctrl+f to it if you search for, for example `syncKernels_` function which copies over convnetjs filters/biases to jpcnn representation. I also put up a speedtest here:
+
+http://cs.stanford.edu/people/karpathy/convnetjs/demo/speedtest.html
+
+this runs the CPU and then the GPU version for 10 iterations, following exactly the setup for layer L1 in [convnet-benchmarks](https://github.com/soumith/convnet-benchmarks):
+
+The issue is that somehow it's unexpectedly slow! I get average running time for CPU version of 1600ms, and this is giving me 336ms with WebGL, a speedup of only ~5x. I expected to see much more dramatic improvements. Extrapolating this time into a batch of 128 examples, as seen in convnet-benchmarks gives ~40 seconds, while Caffe gets 2 seconds. 
+
+I'm not sure why it's that slow. I think the issue is that Caffe does the whole batch a single time on the GPU, while here this is doing one example each (since ConvNetJS works on batches of 1 by default). Another issue might be that I have a super-crappy GPU on my machine, but a friend who has a newer GPU (GTX660) isn't getting much faster either (about 300ms). I'll have to stare at this a bit more.
+",karpathy,
+13,2014-09-15 18:31:48,"I'm guessing that you're right on the single batch vs 128 at once as being a big source of the speed difference.  
+
+There's also the possibility (which I haven't checked out) that the convolution matrix could be encouraged to be stored in more 'local' GPU memory in WebGL (local accesses much quicker than 'global' ones, though have to be explicit on GPU).  
+
+Similarly, the rows/columns of the matrices could be laid out so that they were each sequential in memory (transpose the convolution matrix?) so that SIMD loads pull them in in blocks.  
+
+(I'm sure there's other stuff too : like the (r,g,b,a) packing that JPCNN is capable of - there's probably a good reason they included it)
+
+Sorry for not having responded earlier : I've been a bit snowed under with 'stuff' here.
+",mdda,
+13,2015-01-19 19:18:34,"@Maratyszcza do you think that it could take a speedup using fusion.js?
+",bhack,
+13,2015-01-19 19:26:44,"@bhack I am not related to [fusion.js](https://code.google.com/p/fusionjs/) project.
+
+If you mean [Furious.js](https://github.com/hpcgarage/furious.js), it does not aim at small matrix manipulations.
+",Maratyszcza,
+13,2015-01-19 19:31:12,"Yes sorry I meant Furious.js.  So your effort ""blis for the web"" it was not related to Furious?
+",bhack,
+13,2015-01-19 19:34:16,"@bhack It is intended to be integrated into Furious.js, but it is not there yet. And in any case, it would only help for large matrices/NDArrays
+",Maratyszcza,
+13,2015-11-29 21:51:25,"@karpathy Just wondering if there's been any progress on this, as I haven't been able to find much else about it online. 
+
+I'd like to use your deep q learning code to try and train an agent on Go, as most of the necessary additional code is already available online in javascript, but I'm not sure how slow training would be without the speedup of a gpu.
+",ssampang,
+13,2015-12-02 17:51:09,"I'm thinking about pulling together all the pieces on this topic (GPU acceleration via WebGL) into a standalone library (possibly using the jetpac code as a starting point) for accelerating deep learning and other machine learning applications in the browser.
+
+My hope is to provide a base for libraries like this one (and new entrants) to build on, and (hopefully) get performance gains that approach those found in Caffe. 
+
+Do people think this could be useful?
+",waylonflinn,
+13,2015-12-04 08:37:58,"@waylonflinn Definitely. GPU acceleration right from the browser could lead to some very cool and useful demo pages that don't need any extra setup to run - not to mention the wide applicability if you didn't tie it to ConvNetJS specifically.
+",ssampang,
+13,2015-12-04 14:27:45,"@ssampang Glad to hear! I created a repository to track progress. No code there yet, but expect a basic implementation of `gemm` in the next couple of days!
+
+[weblas](https://github.com/waylonflinn/weblas)
+
+I also have an update on the GPU `gemm` code from the Deep Belief SDK. It looks like it doesn't run in Chrome anymore (and possibly has issues in a few other browsers). If anyone is interested in troubleshooting or contributing a fix, you can track that in [issue 57](https://github.com/jetpacapp/DeepBeliefSDK/issues/57) of their repository. In the meantime I'm working from an alternate base implementation.
+",waylonflinn,
+13,2016-02-17 16:37:22,"Wanted to post a quick update here, for interested parties. I've [fully converted](http://waylonflinn.github.io/DeepBeliefSDK/) the jetpac demo to use weblas, producing close to a 2x speedup. The `GEMM` function, in particular, is about 4x faster.
+
+The key to this speedup was a combination of the factors that @mdda outlines above. Namely: transposing the second matrix, full packing of RGBA elements and using a single GPU instruction (`dot`) to process four elements at a time.
+
+A good next step here might be to convert the work @karpathy links to above to make use of this, and see if more impressive speedups ensue. If no one else steps in to take up the torch, I'll likely start on it in the next few days.
+",waylonflinn,
+13,2016-04-07 16:07:31,"There's been a release of [a library](http://gpu.rocks/) for converting JS functions to GPU calculations with fallbacks to JS which could make it pretty easy to have complex matrix math done on the GPU while not having to worry about doing it in both GLSL and JS.
+",RangerMauve,
+13,2016-08-21 03:36:53,"hi guys, i am really interested in this. what is the current state?
+",haehn,
+13,2016-08-25 13:09:33,"Hey everyone. I'm about to resume development on my convolutional neural net library powered by weblas (an in browser computation library powered by the GPU). Weblas was about five to ten times faster than gpu.js on the relevant functions last time I checked.
+
+Library is here: https://github.com/waylonflinn/webnn
+",waylonflinn,
+12,2014-09-01 06:18:28,"(this is just an end-stop for the discussion started in #11, so it can be 'closed' cleanly)
+
+The two 'constructed files' include `build/convnet.js` and  `build/convnet.min.js` 
+
+Pedantically
+Martin
+:-)
+",mdda,2014-09-01 18:29:26
+12,2014-09-01 18:29:26,"Thanks for the fork of the issue.
+
+In previous versions of ConvNetJS I included the compiled library inside git repo in the `build` directory. I removed these so that it is easier to submit patches to ConvNetJS without always having to submit the compiled library as well. 
+
+The built files are now part of **releases** of the library.
+
+I will also keep this link to [convnet-min.js](http://cs.stanford.edu/people/karpathy/convnetjs/build/convnet-min.js) up to date for easier distribution of the minified library.
+
+Closing the issue.
+",karpathy,2014-09-01 18:29:26
+12,2015-07-21 20:32:52,"This isn't going to work with package management paradigm, you need the files compiled for deployment. Otherwise there is nothing runnable in the packages. Another approach might be to compile them using gulp, grunt, npm or whatever, but really the compiled source should be in a directory and committed to the master branch. 
+
+If you wish to remove it during development, can `gitignore` and then `git add -f` to add to master.
+",mryellow,2014-09-01 18:29:26
+11,2014-08-29 14:35:18,"I noticed that the ConvLayer.forward is being benchmarked by `convnet-benchmarks` - and I thought have a go at some optimisation.  With a little type-hinting here and there (plus some slight loop-order modifications, and constant extraction), I think I've got at least a 2x speed-up (YMMV, of course).  It's functionally identical (AFAICT).
+
+Here's the run-down of the benchmark timings
+
+<S_CODE_TOKEN>
+
+One issue with submitting the patch, though, is that my `build/convnet.js` is also updated, which seems wasteful.  OTOH, since you want the concatted-minimised version in the repo, I don't see how to get away from including it...
+
+In addition, the current state-of-play has both `forward_orig` and `forward`(new) in it - as well as some commentary about things that don't work, etc.  Would you like me to clean them up before submitting?
+
+All the Best
+Martin
+:-)
+",mdda,2014-09-01 18:24:58
+11,2014-08-31 05:34:28,"This is a Awesome, thanks a lot for looking into it - I wasn't aware of type hinting.
+
+I included build/convnet.js and the minified version for convenience, but I agree that it's a little messy with it there. Do you know what people usually do in these cases? I'd like to release the latest built version here on Github.
+
+And we should definitely fold this into convnetjs, replacing the old code. I'll first wait to see if you happen to have suggestions on what we should do with built files. As a side note, I might also look into eventually converting the backprop part, and fullyconnected layer and pooling layer with the same tricks.
+
+Lastly, I have a WebGL version of ConvNetJS in my local repo and it's almost nicely wired in. It's a forward_GPU funciton and it is extremely fast compared to this code.
+
+Thanks,
+Andrej
+",karpathy,2014-09-01 18:24:58
+11,2014-08-31 09:45:51,"Looks like the right way to do binary/machine-generated assets is with ""releases"".
+First, git rm `./build/convnet.*js`, then add them to `.gitignore`.
+
+Then, use a script like `https://pypi.python.org/pypi/ghrelease/0.1.2` to upload the `convnet.min.js` asset individually.  
+
+Perhaps the version number could be (for instance) `2014.08.31`, so as to avoid version increment anxiety...
+
+It's not ideal, though, is it?  
+",mdda,2014-09-01 18:24:58
+11,2014-08-31 09:55:49,"The type-hinting (particularly on `stride`) was a big win (and that should be placeable higher up the food chain, so that it works more generally too).  The other win was re-ordering the loops, so that they execute more in order of memory placement (row-wise, rather than column-wise), since that apparently makes the code more cache-friendly.  Surprisingly, factoring out in-loop constants (like the array arithmetic) didn't help much.
+
+I'd love to have a look at the WebGL stuff : Since that was already solidly in my plan for using `convnet.js` (FWIW, I'm one of the contributors for https://github.com/stackgl/shader-school).  My main goal was to implement the back-prop step on the GPU, to reduce training time...  I know there are other capable convnet modules out there, but I particularly want to retain client-side compatibility for the trained network.
+
+If I can 'get in' on the WebGL side, I'd be happy to contribute to doing the (more basic) JS-side optimisations too.
+",mdda,2014-09-01 18:24:58
+11,2014-08-31 17:33:20,"Thanks, I thought releases might be the preferred way. I noticed a few repos using them for this purpose but never fully read up on it.
+
+My WebGL implementation is essentially a wrapper around some core functions inside jpcnn (a really nice library from Pete Warden). Among other things he implemented gemm (""General Matrix Multiply"" as seen in BLAS) in WebGL. This can be used to do very fast convolutions in a straight forward way: you reshape all patches into rows, take filters as columns, matrix multiply, and then reshape the result back into correct output dimensions. It's a little wasteful in terms of space (because you have to more than duplicate all image pixels, WITH overlaps in their reshaped form), but it's an often used strategy (in very early CNNs by LeCun and also for example in Caffe).
+
+However jpcnn only implements forward pass, not backprop.
+
+I'll look at cleaning all of this mess up today, and maybe fold in some of my preliminary WebGL functionality.
+",karpathy,2014-09-01 18:24:58
+11,2014-08-31 18:02:55,"Great!  
+
+Thanks for pointing me towards Peter Warden, whose blog (http://petewarden.com/) is super-interesting & in-depth.  And, in case anyone else is looking for the WebGL behind the jpcnn library : have a look at https://github.com/jetpacapp/DeepBeliefSDK/blob/gh-pages/JavascriptLibrary/jpcnn.js#L1954
+
+I'll check back in a day or two, and see how 'mergeable' my patch will be by then.
+
+All the Best
+Martin
+:-)
+",mdda,2014-09-01 18:24:58
+11,2014-09-01 00:49:41,"Ok, I removed the built library from repo and created a release instead. I also folded your optimizations into ConvLayer (slightly modified), and also tweaked the backward pass so that the same optimizations are applied to backprop for Conv layer. 
+
+Now moving on to incorporating the GPU code. It's a little tricky because it relies on jpcnn, which in turn relies on underscore. I'm  not sure what the cleanest way to add these is then. Should I include them in the compile as all the other convnetjs files? It would make the entire library quite a bit larger, but I'm not sure if there is any other way.
+",karpathy,2014-09-01 18:24:58
+11,2014-09-01 18:24:58,"Thanks Martin, end result of this issue: the ConvLayer is now twice as fast (both forward and backward pass). For future (dramatic) improvements we are moving towards WebGL. Closing the issue.
+",karpathy,2014-09-01 18:24:58
+10,2014-08-29 09:16:31,"I noticed that `convnet_layers_transform.js` is missing, when required by `build.xml`.
+
+In the same commit, where that requirement appeared in `build.xml`, a bunch of code for `QuadTransformLayer` appeared in `build/convnet.js`.
+
+Is there a file that you haven't `git add`ed?
+
+All the Best
+Martin
+:-)
+",mdda,2014-08-31 05:21:07
+10,2014-08-31 05:21:07,"Thanks for pointing this out, this is a vestige of a failed experiment that I forgot to clean up. Sorry about that, thanks!
+",karpathy,2014-08-31 05:21:07
+9,2014-07-29 21:52:46,"At http://cs.stanford.edu/people/karpathy/convnetjs/demo/cifar10.html , for me at least, the ""Current Image"" field is broken - the `src` attribute is empty.
+",nathanleclaire,2014-07-30 00:02:02
+9,2014-07-30 00:02:02,"Hi Nathan, thanks for reporting this. This is actually a non-issue, there used to be an image there and I moved it away, but forgot to take away the associated text. The current image is displayed in the ""input"" layer. Thanks!
+",karpathy,2014-07-30 00:02:02
+8,2014-06-28 20:13:00,"To add convnetjs to the bower repository, just run the following.
+
+<S_CODE_TOKEN>
+
+If you have any questions, please let me know.
+",levicc00123,2014-06-30 16:16:13
+7,2014-06-28 20:03:00,"If you don't know, [Bower](http://www.bower.io) is a package manager for javascript libraries,  I use bower when working on my web apps, and It'd be useful if I could add convnetjs to my current project. I've taken the liberty of creating a bower.json file and I'll have a pull request for you in a jiffy.
+",levicc00123,2014-08-03 23:35:32
+7,2015-07-21 20:29:02,"It's true.... Without having the compiled versions you're left with an empty directory which can't be used in a deployment. This means the `npm` and `bower` installs are incomplete.
+
+https://github.com/karpathy/convnetjs/issues/12#issuecomment-54083992
+",mryellow,2014-08-03 23:35:32
+5,2014-05-07 12:43:29,"Hey,
+
+Awesome job! I'm learning a bunch. 
+My question => how I can I save a trained network as JSON? (and load it back up again) I noticed it was done in some of the demos, but I didn't see how to do so in the Docs. Thank again!
+",iraladson,2014-05-08 19:00:54
+5,2014-05-07 19:30:05,"Ah, good point thanks for bringing this up, I will mention it in docs.
+
+As shown in the demos, to save network:
+
+<S_CODE_TOKEN>
+
+and to load network back up:
+
+<S_CODE_TOKEN>
+
+and and this point net2 should be identical to your original net.
+
+EDIT: I also now updated the docs. Thanks!
+",karpathy,2014-05-08 19:00:54
+4,2014-04-29 19:45:03,"I'm new to node and npm so I might be doing something wrong, but when I try:
+
+<S_CODE_TOKEN>
+
+I get:
+
+<S_CODE_TOKEN>
+",cjauvin,2014-05-08 18:41:55
+4,2014-05-01 03:58:34,"Hey, npm is being very annoying and refusing to upload my package, always with a different mysterious error. I will look into this in next few days, I know it's an issue and I apologize. 
+",karpathy,2014-05-08 18:41:55
+4,2014-05-08 12:45:06,"https://github.com/npm/npm/issues/5181#issuecomment-42544945
+",stephenmathieson,2014-05-08 18:41:55
+4,2014-05-08 12:55:42,"It's something weird in the `""files""` key.  If you remove it, it works just fine:
+
+<S_CODE_TOKEN>
+",stephenmathieson,2014-05-08 18:41:55
+4,2014-05-08 18:41:53,"Thanks a bunch, I removed ""files"" key and created a separate directory for the npm publishing and got it to work.
+
+Just Unbelievable. The ""files"" key comes straight from npm docs.
+",karpathy,2014-05-08 18:41:55
+3,2014-04-19 09:50:03,"# Summary
+
+This diff implements DropConnect, following the paper in
+http://cs.nyu.edu/~wanli/dropc/dropc.pdf.
+
+""When training with Dropout, a randomly selected subset of activations
+are set to zero within each layer. DropConnect instead sets a randomly
+selected subset of _weights_ within the network to zero.  Each unit thus
+receives input from a random subset of units in the previous layer.""
+
+DropConnect has been shown to achieve significant improvements in model
+performance over DropOut.
+## Test Plan
+
+I'm not sure on how to proceed here - do you want me to add a demo
+demonstrating DropOut vs DropConnect on an otherwise identical
+dataset/architecture?
+
+I'd like to add unit tests but it's unclear how to add them into this
+project.
+
+I verified that existing demonstrations (MNIST, autoencoder, etc) work,
+and that adding a drop-connect layer allows training to continue as expected.
+",ajtulloch,
+2,2014-01-06 07:36:17,"Switched mnist and cifar10 demos to using setInterval as mentioned in #1
+",JimAllanson,2014-01-07 07:46:08
+2,2014-01-07 07:46:00,"Added the change myself since you went missing :), really does seem to be faster though, nice! Closing this pull.
+",karpathy,2014-01-07 07:46:08
+1,2014-01-05 12:53:17,"I had a go at using typed arrays (where available) for w & dw in Vol (and return value of zeros function). Running in Chrome Canary, there seems to be a bit of a performance increase - the first 1000 examples in the MNIST demo went from taking ~16s to ~12s on my machine (Chrome 34.0.1769.2, Windows 8.0).
+",JimAllanson,2014-01-07 08:26:19
+1,2014-01-05 13:06:49,"Hey, thanks for the changes I'll have a look. I did of testing myself but never saw significant boosts in performance. I also read this StackOverflow post: http://stackoverflow.com/questions/13328658/are-the-advantages-of-typed-arrays-in-javascript-is-that-they-work-the-same-or-s that seems to suggest that the JIT compilers can decide to be optimistic and sub in a typed array if they see that you only put floats into your arrays, so I assumed that's what's happening here as well. I will test this out again to see if I also see an improvement. Thanks!
+",karpathy,2014-01-07 08:26:19
+1,2014-01-05 14:10:57,"I did some rough profiling on MNIST with window.performance.now() and got these per step averages https://gist.github.com/JimAllanson/eebe8f82c9d5d0fbbee2 - I also tried swapping out the setTimeout(fn, 1) for setInterval(fn, 0) on the main loop which seemed to shave an extra couple of milliseconds off while staying responsive (in Chrome at least).
+",JimAllanson,2014-01-07 08:26:19
+1,2014-01-05 22:17:04,"Ahh, I was worried about responsiveness so used 1 and then forgot all about tuning this. That's great! We should definitely have some code, maybe in test/ for running a detailed speed benchmark to validate these decisions more quantitatively, with a per-layer timing breakdowns, and also running the forward backward many times in loop to allow the JIT compiler to work its magic a bit.
+",karpathy,2014-01-07 08:26:19
+1,2014-01-05 23:48:20,"question, doesn't floatArray return array of undefined when you use new Array(n) from zeros, if the browser lacks support for typed array? bug?
+",karpathy,2014-01-07 08:26:19
+1,2014-01-06 07:39:24,"Ah, good catch, I forgot to add that back in after I added the typedArray function.
+
+I'll put some of my performance testing code into a standalone benchmark file when I get a chance. I've opened another PR for the setInterval change, though I've just noticed you've made some commits since I took my fork, so I'll get your changes & reopen it for easier merging if you like.
+",JimAllanson,2014-01-07 08:26:19
+1,2014-01-06 07:51:40,"i did, a few commits but there are no other ones in my pipeline anymore for tonight. Reopen if you can with latest changes.
+",karpathy,2014-01-07 08:26:19
+1,2014-01-07 08:26:19,"I also noticed a large increase, incorporated the idea (since you went missing for the PR resubmit). Closing.
+",karpathy,2014-01-07 08:26:19
+1,2014-01-07 10:10:21,"Thanks for handling this manually, I was intending to resubmit last night but ended up getting tied up with work.
+",JimAllanson,2014-01-07 08:26:19

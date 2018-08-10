@@ -1,0 +1,1176 @@
+issue_num,datetime,body,login,close_date
+83,2016-12-20 20:00:18,"I read the message below, but this seems like a pretty trivial change. I introduced a variable name for the gitolite-admin repo. Will run git-format-patch and send via email, as well.
+
+----------------------------------------------------------------------------------------
+Go to http://gitolite.com/gitolite/index.html#contact for information on
+contacting me, the mailing list, and IRC channel.  *Unless you are reporting
+what you think is a security issue, I prefer you send to the mailing list,
+not to me directly.*
+
+Please DO NOT send messages via github's ""issues"" system, linkedin
+comments/discussion, stackoverflow questions, google+, and any other Web 3.0
+""coolness"". (The issues system does have an email interface, but it is not a
+substitute for email. I can't cc anyone else when I want to, for instance.
+Well I can, but any response the original requester then makes using the
+website will not get cc-d to the person I cc-d).
+
+Please send patches *via email*, not as github pull requests. Again, if you
+think it's a security issue, send it directly to my gmail address, but
+otherwise please send it to the mailing list, so others can see it and comment
+on it.
+
+The preferred format is the files created by git-format-patch, as attachments.
+However, if your repo has a public clone URL, you can make a new branch just
+for this fix, and send the repo URL and branch name to the mailing list.
+
+(If you do send me a github pull request, I may take it if it's a trivial
+patch, but otherwise I'll ask you to close the pull request, then read
+this URL for how to send me the patch.)
+",isysd,
+82,2016-09-29 21:08:43,"Go to http://gitolite.com/gitolite/index.html#contact for information on
+contacting me, the mailing list, and IRC channel.  _Unless you are reporting
+what you think is a security issue, I prefer you send to the mailing list,
+not to me directly._
+
+Please DO NOT send messages via github's ""issues"" system, linkedin
+comments/discussion, stackoverflow questions, google+, and any other Web 3.0
+""coolness"". (The issues system does have an email interface, but it is not a
+substitute for email. I can't cc anyone else when I want to, for instance.
+Well I can, but any response the original requester then makes using the
+website will not get cc-d to the person I cc-d).
+
+Please send patches _via email_, not as github pull requests. Again, if you
+think it's a security issue, send it directly to my gmail address, but
+otherwise please send it to the mailing list, so others can see it and comment
+on it.
+
+The preferred format is the files created by git-format-patch, as attachments.
+However, if your repo has a public clone URL, you can make a new branch just
+for this fix, and send the repo URL and branch name to the mailing list.
+
+(If you do send me a github pull request, I may take it if it's a trivial
+patch, but otherwise I'll ask you to close the pull request, then read
+this URL for how to send me the patch.)
+",zmt,
+82,2017-01-30 19:26:22,Bump - I also sent an email patch like the instructions said. Please acknowledge or just take the patch.,zmt,
+81,2016-08-19 07:41:57,"Send already an email to the mailing-list. Also sending a pull request as it's a trivial patch as written in the CONTRIBUTING-file.
+",alexgit2k,
+80,2016-07-04 22:46:41,"Trivial patch to fix the fact that when doing a first-time gitolite setup -pk <user>.pub that one gets a failure due to the gitolite-admin.git/hooks dir not getting created.
+",ghost,
+80,2016-09-29 06:03:21,"ping: did my post to the Google Group make it; I was having trouble getting subscribed.
+",ghost,
+79,2016-04-06 09:14:36,"On non Linux OS the 'wc' command contains leading TAB which leads to a failure in string comparison.
+
+Solution compare as integers instead of strings. Further it also fixes 0 line counts on missing newline '\n' at the end of a public key.
+",smlng,2016-09-02 13:31:10
+79,2016-09-02 13:31:10,"I'll close this one, proposed patch was applied - though somewhat different, but it does the same ...
+",smlng,2016-09-02 13:31:10
+78,2016-02-18 01:10:59,"Github recently added support for TEMPLATEs for certain Github-specific activities, including creating Issues and Pull Requests. This patch creates these files as symlinks to the CONTRIBUTING document, which explains the process that should be used.
+
+Signed-off-by: Eugene E. Kashpureff Jr eugene@kashpureff.org
+",EugeneKay,2016-06-16 15:02:33
+78,2016-06-16 15:02:33,"This was cherry-picked as 2494a40
+",EugeneKay,2016-06-16 15:02:33
+77,2015-12-12 06:15:22," git push origin master
+Counting objects: 7, done.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 389 bytes | 0 bytes/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+remote: Can't locate Gitolite/Hooks/Update.pm in @INC (you may need to install the Gitolite::Hooks::Update module) (@INC contains: /git-install/gitolite/src/lib/ /etc/perl /usr/local/lib/perl/5.18.2 /usr/local/share/perl/5.18.2 /usr/lib/perl5 /usr/share/perl5 /usr/lib/perl/5.18 /usr/share/perl/5.18 /usr/local/lib/site_perl .) at hooks/update line 11.
+remote: BEGIN failed--compilation aborted at hooks/update line 11.
+remote: error: hook declined to update refs/heads/master
+To git://bfuwu.cn/gitolite-admin
+ ! [remote rejected] master -> master (hook declined)
+error: failed to push some refs to 'git://bfuwu.cn/gitolite-admin'
+",xiaohuoban,
+76,2015-03-13 12:34:43,"If a single disk is not enough for all the repos, one has to
+use symlinks to split them between disks.
+",pvalsecc,2015-03-13 12:35:52
+75,2015-03-03 20:50:26,"Omitting a repo name in some commands produces a perl warning:
+
+  shell:~$ ssh git@example.com perms -l
+  WARNING: Use of uninitialized value $repo in concatenation (.) or
+  string at /srv/git/gitolite/src/lib/Gitolite/Conf/Load.pm line 239,
+  <DATA> line 1.
+
+  FATAL: invalid repo ''
+
+This commit makes gitolite output this instead:
+
+  shell:~$ ssh git@example.com perms -l
+  FATAL: no repo specified
+",hkoof,2015-03-17 14:37:28
+74,2015-02-27 21:54:45,"As per discussion in:
+https://groups.google.com/forum/#!msg/gitolite/eLTiK8hvijo/9dKI8YfTSecJ
+added another check whether the command actually starts with the pathname to
+gitolite-shell when shell mode is used.
+
+Signed-off-by: Christoph Anton Mitterer mail@christoph.anton.mitterer.name
+",calestyo,2015-02-27 21:55:47
+74,2015-02-27 21:55:47,"ah forgot about the no pull requests thingy ^^
+",calestyo,2015-02-27 21:55:47
+73,2014-11-11 22:03:04,"This test isn't recognized without a leading / and should fail.
+",milki,2014-11-12 06:00:26
+73,2014-11-12 06:00:26,"Real fix is to delete the test.
+",milki,2014-11-12 06:00:26
+72,2014-10-21 15:15:23,"Add ~ to REPONAME_PATT and REPOPATT_PATT.
+
+Tilde is used when copying with --backup=numbered.
+https://www.gnu.org/software/coreutils/manual/html_node/Backup-options.html#Backup-options
+",hginzel,
+72,2014-10-26 09:39:37,"@ginzel, please use the mailing list. See https://github.com/sitaramc/gitolite/blob/master/CONTRIBUTING
+",milki,
+71,2014-07-11 22:16:19,"It's ambiguous which commands are run on the local machine vs the gitolite server.
+",adymitruk,2014-07-20 00:47:06
+71,2014-07-20 00:47:06,"see #62
+",sitaramc,2014-07-20 00:47:06
+70,2014-07-08 13:12:26,,esterlus,2014-07-08 13:19:31
+70,2014-07-08 13:19:31,"sorry,
+
+just saw the do not submit pull request pr
+",esterlus,2014-07-08 13:19:31
+69,2014-05-08 10:29:49,"repos must be readable by gitweb users
+and have at least one 'gitweb.' option
+
+so you can hide a repo even if a global gitweb. options is set
+repo  @all
+      config gitweb.owner = ""Owner""
+
+repo  hidden
+      -  =  gitweb
+",jeremyz,2014-05-08 10:30:23
+68,2014-05-07 00:27:16,"Add sample script for getting group membership from LDAP.
+based on ldapsearch.
+",dnozay,2014-07-20 00:46:55
+68,2014-07-20 00:46:54,"see #62
+",sitaramc,2014-07-20 00:46:55
+67,2014-05-06 22:30:33,"simple one-line update; perl-Time-HiRes isn't installed by default on all systems.
+",dnozay,2014-07-20 00:31:49
+67,2014-05-07 14:19:34,"<S_CODE_TOKEN>
+
+It seems to me that the 5.8.8 requirement on the previous line precludes the need for requiring Time::HiRes.
+
+See also #62.
+",MidLifeXis,2014-07-20 00:31:49
+67,2014-05-07 14:49:06,"see https://groups.google.com/forum/#!topic/gitolite/hEZFnRLsEdM .
+on RHEL based systems you can definitely install perl without installing perl-core.
+
+I've seen #62, this is fine if this gets closed.
+",dnozay,2014-07-20 00:31:49
+66,2013-03-31 15:28:03,"why do not you use 'README.md'?
+",chshouyu,2013-03-31 15:31:24
+65,2013-03-24 10:16:21,"Fixed a minor typo
+",bjornars,2013-04-24 15:43:09
+64,2013-03-23 16:18:44,,jefferai,2013-06-14 16:35:23
+63,2013-03-04 00:47:59,"Some older systems don't have a -a flag for cp. The -a flag also has
+slightly different effects on different system, but I have replaced it
+with -RpP which does appear to have a consistent effect across
+different systems and works the same as -a for this particular use.
+",lparkes,2013-06-14 16:45:33
+63,2013-06-14 16:45:33,"will take a look...
+
+Meta note: I don't accept pull requests normally, in fact I don't even log on to github most of the time.  The gitolite mailing list is the correct place to communicate with me.
+",sitaramc,2013-06-14 16:45:33
+62,2013-02-26 09:24:05,"Please do not open a Pull Request on Github for this repo - they are ignored, and will not be merged. Read the Wiki for this repository to find out how to properly submit patches.
+
+This is a dummy commit used to open this PR as a notice to others, because Github does not allow disabling the PR feature entirely. Do not merge. Commentary on this PR is similarly pointless.
+",EugeneKay,
+62,2013-02-27 13:59:43,"A [CONTRIBUTING file](https://github.com/blog/1184-contributing-guidelines) should be added instead of this dummy PR.
+",dolmen,
+62,2013-02-28 01:17:25,"You are free to raise this point on the mailing list.
+",EugeneKay,
+62,2014-07-20 00:47:44,"CONTRIBUTING file exists now (as of March 2013)
+",sitaramc,
+61,2013-02-24 04:14:22,"I was getting a warning from perl during pushes of the gitolite-admin repo.  The line traced to an ambiguous usage of shift being concatenated with a newline char.
+The perl version on the server is ""This is perl, v5.8.8 built for x86_64-linux-thread-multi""
+It is an annoying message and off-putting to other developers as I evaluate migrating to gitolite for management. 
+
+$ git push
+Counting objects: 8, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 952 bytes, done.
+Total 6 (delta 0), reused 0 (delta 0)
+remote: WARNING: Warning: Use of ""shift"" without parentheses is ambiguous at /home/git/gitolite/src/triggers/post-compile/ssh-authkeys line 124, <DATA> line 1.
+",jwadamson,2013-02-24 04:17:04
+61,2013-02-24 04:17:04,"I see now in the wiki that pull requests here are ignored and that we are to contact via email.
+",jwadamson,2013-02-24 04:17:04
+60,2013-02-04 23:41:45,"Hello,
+
+I made these changes to enable git-annex to work correctly with gitolite and GitLab:
+- fixed processing of repository urls ending with .git (GitLab recommends urls like that to users by default),
+- git-annex-shell command is added to .gitolite.rc (disabled by default)
+- command pattern is changed to allow for some characters git-annex may include in its arguments
+
+These changes along with your commits in git-annex branch are also backported to gl-v320 branch of GitLab fork of gitolite - I created another pull request for those.
+
+Best regards,
+Oleg
+",olegch,2013-06-14 16:42:09
+60,2013-04-11 19:02:28,"Hi Chris,
+
+No, unfortunately I did not have time to test it yet, I don't know if
+git-annex is supported in GitLab 5.
+This is one of the reasons we have not upgraded from 4.2 to 5 yet.
+
+Let me know if you figure it out before me :)
+
+Thank you,
+Oleg
+
+On Tue, Apr 9, 2013 at 12:45 PM, Christian Dompierre <
+notifications@github.com> wrote:
+
+> Hi Oleg,
+> 
+> Starting with version 5, GitLab doesn't use gitolite anymore (
+> http://blog.gitlab.org/gitlab-without-gitolite/). Do you know if
+> Git-Annex is still supported by GitLab? Does GitLab Shell need some sort of
+> patch to support Git-Annex as well?
+> 
+> Thanks,
+> 
+> chris
+> 
+> —
+> Reply to this email directly or view it on GitHubhttps://github.com/sitaramc/gitolite/pull/60#issuecomment-16124865
+> .
+
+## 
+
+Best regards,
+Oleg Chunikhin,
+EastBanc Technologies,
+Cell: (202)374-2262
+Work: (202)295-3004
+e-mail: oleg.chunikhin@gmail.com, ochunikhin@eastbanctech.com
+",olegch,2013-06-14 16:42:09
+60,2013-06-14 16:42:09,"gitlab 5 no longer uses gitolite, so I am closing this.  Note that I do not accept pull requests nor do I normally log on to github to look at them.  Today is an aberration.
+
+If it isn't on the gitolite mailing list, it didn't happen.
+",sitaramc,2013-06-14 16:42:09
+59,2013-02-04 16:58:17,"I made a fix for Gitolite:
+- 233d2d4b fixed ssh-authkeys failing when the authorized_keys file contains commands or options for the keys already present in the file
+
+I also made some improvements:
+- 7e7dd91a allows to specify a custom Git location in Gitolite
+- 7add7a53 rewrote update-gitweb-access-list in perl
+- 7d4d34cc support multi-valued keys in config file
+
+There's also 5566d5e6 when I merged code from sitaramc/gitolite@3e87a082
+
+Pick any of those if you find they are interesting.
+",Wizmaster,2013-06-14 16:43:00
+59,2013-02-04 18:07:44,"I am not in a position to vote for nor merge this, but if I were, I'd also ask for updates to the parts of the documentation that were affected by these changes. Most notably how the multi key config works, and how to specify the custom git location. +1 for the inclusion of tests, though :)
+",kaos,2013-06-14 16:43:00
+59,2013-02-04 21:51:08,"Please note that sitaram does not accept/read Pull Requests made through the github interface. The Wiki for this repository contains directions on proper channels to discuss features / submti patches, etc.
+",EugeneKay,2013-06-14 16:43:00
+59,2013-02-05 10:32:41,"I admit not being a great writer of documentation. :) If the changes are accepted, I'll see if I can write something.
+
+I know sitaram does not accept pull request, I posted to the mailing list at the same time. I have a different view than his about github and others may be only monitoring the github repository. So I decided to open the request.
+",Wizmaster,2013-06-14 16:43:00
+59,2013-06-14 16:42:59,"I think we discussed this on the ML, IIRC
+",sitaramc,2013-06-14 16:43:00
+58,2013-01-23 06:13:55,"Adding elliptic curve ssh key support in sshkey-lint
+",rjsalts,2013-01-23 23:34:17
+58,2013-01-23 19:32:25,"Please read the Wiki link - Pull Requests are not accepted directly through Github. You can email sitaram directly with your patch.
+",EugeneKay,2013-01-23 23:34:17
+58,2013-01-23 23:34:17,"I've already sent an email to the mailing list and Sitaram is looking at it.
+",rjsalts,2013-01-23 23:34:17
+57,2013-01-02 13:58:26,"i renamed the README and fixed some indentions. Useful, because github understands markdown and it was nearly the same like markdown.
+The changes are readable as like before.
+",DenisKnauf,2013-06-14 16:44:35
+57,2013-01-02 14:43:46,"I'm sorry but I have my reasons for this to be as in plain text.  The full
+markdown documentation, pre-rendered to HTML, is at the link given near the
+top of this document, and the raw markdown is in the associated
+'gitolite-doc' repo.
+
+I wish you'd told me before you started doing this; I could have saved you
+the effort.
+
+On Wed, Jan 2, 2013 at 7:28 PM, Denis Knauf notifications@github.comwrote:
+
+> i renamed the README and fixed some indentions. Useful, because github
+> understands markdown and it was nearly the same like markdown.
+> 
+> ## The changes are readable as like before.
+> 
+> You can merge this Pull Request by running:
+> 
+>   git pull https://github.com/DenisKnauf/gitolite master
+> 
+> Or view, comment on, or merge it at:
+> 
+>   https://github.com/sitaramc/gitolite/pull/57
+> Commit Summary
+> - README.txt -> README.md + clean up
+> 
+> File Changes
+> - _A_ README.md (359)
+> - _D_ README.txt (373)
+> 
+> Patch Links
+> - https://github.com/sitaramc/gitolite/pull/57.patch
+> - https://github.com/sitaramc/gitolite/pull/57.diff
+>   
+>   —
+>   Reply to this email directly or view it on GitHubhttps://github.com/sitaramc/gitolite/pull/57.
+
+## 
+
+Sitaram
+",sitaramc,2013-06-14 16:44:35
+57,2013-01-02 15:00:31,"If you don't to use markdown, you can also provide both files.  So github will provide a nice view and you can use your plaintext-file.
+I only need some minutes to convert this file.
+",DenisKnauf,2013-06-14 16:44:35
+57,2013-01-02 16:18:22,":+1: 
+",juzerali,2013-06-14 16:44:35
+57,2013-01-08 13:17:52,"I'm sorry but this README is only meant as a placeholder and a pointer to the real docs, which are in the gitolite-doc repo (separated from 'gitolite' shortly after I changed the doc license to CC-BY-NC-SA because distros can'twon't shipping NC docs).
+
+I probably put in too much information in it, and that is causing confusion.  I'll reduce it.
+
+As for markdown, I don't mind doing that after I reduce it enough that no one will think ""this is all the documentation there is"" :-)
+",sitaramc,2013-06-14 16:44:35
+57,2013-06-14 16:44:35,"No sorry; that will be plain text.  Feel free to discuss on the mailing list.
+
+Meta note: I don't accept pull requests normally, in fact I don't even log on to github most of the time.  The gitolite mailing list is the correct place to communicate with me.
+",sitaramc,2013-06-14 16:44:35
+56,2012-12-09 02:36:20,"Explicitly set ""Content-Type: text/plain"" for gitolite commands when
+issued over http, so that it is possible to see the output with normal
+browsers.
+(At least) Apache httpd might set the Content-Type to something
+different and triggers a download instead of showing the text directly.
+
+Signed-off-by: Sven Strickroth email@cs-ware.de
+",csware,2012-12-09 02:37:31
+56,2012-12-09 02:37:31,"Just found https://github.com/sitaramc/gitolite/wiki :(
+",csware,2012-12-09 02:37:31
+56,2012-12-09 02:47:57,"I need to update that page to say ""pull requests are OK but dont expect me
+to reply by anything other than email or to do anything that requires
+logging on to github"".
+
+Specifically, the email message that github sends also contains a ""patch""
+url, and I find I can easily do this
+
+<S_CODE_TOKEN>
+
+so it's not as bad as it used to be.
+
+The only problem that remains is that -- unless the requester goes and
+closes the pull request after I have done this, it _appears_ as if I have a
+lot of pending pull requests and therefore I am unresponsive.
+
+Oh well, can't have everything I guess...
+
+On Sun, Dec 9, 2012 at 8:07 AM, csware notifications@github.com wrote:
+
+> Just found https://github.com/sitaramc/gitolite/wiki :(
+> 
+> —
+> Reply to this email directly or view it on GitHubhttps://github.com/sitaramc/gitolite/pull/56#issuecomment-11166758.
+
+## 
+
+Sitaram
+",sitaramc,2012-12-09 02:37:31
+55,2012-10-29 23:19:27,"Was perplexed as to why using ""keysubdirs-as-groups"" wasn't adding my users to the correct groups until I checked the compiled gitolite.conf output and realized it was not ignoring my ""old style multi-keys"", and was creating a separate entry for each of my users (john@main, john@laptop, etc).  The fix here works here, and should also work for users that are using mutli-keys with email addresses, or users that aren't using the old style multi-keys at all.
+",tianon,2012-10-31 01:07:43
+55,2012-10-30 01:04:46,"I dont log on to github, and I ignore pull requests etc.  See the ""wiki""
+part of my github page for reasons.  (I did change the wiki text just now,
+but only to add some detail and to re-arrange some text.)
+
+On Tue, Oct 30, 2012 at 4:49 AM, Tianon Gravi notifications@github.comwrote:
+
+> Was perplexed as to why using ""keysubdirs-as-groups"" wasn't adding my
+> users to the correct groups until I checked the compiled gitolite.conf
+> output and realized it was not ignoring my ""old style multi-keys"", and was
+> creating a separate entry for each of my users (john@main, john@laptop,
+> etc). The fix here works here, and should also work for users that are
+> using mutli-keys with email addresses, or users that aren't using the old
+> 
+> ## style multi-keys at all.
+> 
+> You can merge this Pull Request by running:
+> 
+>   git pull https://github.com/infosiftr/gitolite master
+> 
+> Or view, comment on, or merge it at:
+> 
+>   https://github.com/sitaramc/gitolite/pull/55
+> Commit Summary
+> - fix for keysubdirs-as-groups sugar script to support ""old style
+>   multi…
+> 
+> File Changes
+> - _M_ src/syntactic-sugar/keysubdirs-as-groups (2)
+> 
+> Patch Links
+> - https://github.com/sitaramc/gitolite/pull/55.patch
+> - https://github.com/sitaramc/gitolite/pull/55.diff
+>   
+>   —
+>   Reply to this email directly or view it on GitHubhttps://github.com/sitaramc/gitolite/pull/55.
+
+## 
+
+Sitaram
+",sitaramc,2012-10-31 01:07:43
+55,2012-10-30 05:45:02,"Ah, my apologies!  I will send a patch to the mailing list for review
+tomorrow, and close out this request.
+On Oct 29, 2012 7:05 PM, ""Sitaram Chamarty"" notifications@github.com
+wrote:
+
+> I dont log on to github, and I ignore pull requests etc. See the ""wiki""
+> part of my github page for reasons. (I did change the wiki text just now,
+> but only to add some detail and to re-arrange some text.)
+> 
+> On Tue, Oct 30, 2012 at 4:49 AM, Tianon Gravi notifications@github.comwrote:
+> 
+> > Was perplexed as to why using ""keysubdirs-as-groups"" wasn't adding my
+> > users to the correct groups until I checked the compiled gitolite.conf
+> > output and realized it was not ignoring my ""old style multi-keys"", and
+> > was
+> > creating a separate entry for each of my users (john@main, john@laptop,
+> > etc). The fix here works here, and should also work for users that are
+> > using mutli-keys with email addresses, or users that aren't using the
+> > old
+> > 
+> > ## style multi-keys at all.
+> > 
+> > You can merge this Pull Request by running:
+> > 
+> > git pull https://github.com/infosiftr/gitolite master
+> > 
+> > Or view, comment on, or merge it at:
+> > 
+> > https://github.com/sitaramc/gitolite/pull/55
+> > Commit Summary
+> > - fix for keysubdirs-as-groups sugar script to support ""old style
+> >   multi…
+> > 
+> > File Changes
+> > - _M_ src/syntactic-sugar/keysubdirs-as-groups (2)
+> > 
+> > Patch Links
+> > - https://github.com/sitaramc/gitolite/pull/55.patch
+> > - https://github.com/sitaramc/gitolite/pull/55.diff
+> > 
+> > —
+> > Reply to this email directly or view it on GitHub<
+> > https://github.com/sitaramc/gitolite/pull/55>.
+> 
+> ## 
+> 
+> Sitaram
+> 
+> —
+> Reply to this email directly or view it on GitHubhttps://github.com/sitaramc/gitolite/pull/55#issuecomment-9891838.
+",tianon,2012-10-31 01:07:43
+55,2012-10-30 06:16:13,"well that's ok for now; I did look at the diff and it look sane.
+
+I have only one question.  Are you Tianon Gravi or Andrew Page?  I.e., Why
+is the email coming from one name and the commit has another name on it?
+
+It's not a big issue but I am curious...
+
+On Tue, Oct 30, 2012 at 11:15 AM, Tianon Gravi notifications@github.comwrote:
+
+> Ah, my apologies! I will send a patch to the mailing list for review
+> tomorrow, and close out this request.
+> On Oct 29, 2012 7:05 PM, ""Sitaram Chamarty"" notifications@github.com
+> wrote:
+> 
+> > I dont log on to github, and I ignore pull requests etc. See the ""wiki""
+> > part of my github page for reasons. (I did change the wiki text just
+> > now,
+> > but only to add some detail and to re-arrange some text.)
+> > 
+> > On Tue, Oct 30, 2012 at 4:49 AM, Tianon Gravi notifications@github.comwrote:
+> > 
+> > > Was perplexed as to why using ""keysubdirs-as-groups"" wasn't adding my
+> > > users to the correct groups until I checked the compiled gitolite.conf
+> > > output and realized it was not ignoring my ""old style multi-keys"", and
+> > > was
+> > > creating a separate entry for each of my users (john@main, john@laptop,
+> > > 
+> > > etc). The fix here works here, and should also work for users that are
+> > > using mutli-keys with email addresses, or users that aren't using the
+> > > old
+> > > 
+> > > ## style multi-keys at all.
+> > > 
+> > > You can merge this Pull Request by running:
+> > > 
+> > > git pull https://github.com/infosiftr/gitolite master
+> > > 
+> > > Or view, comment on, or merge it at:
+> > > 
+> > > https://github.com/sitaramc/gitolite/pull/55
+> > > Commit Summary
+> > > - fix for keysubdirs-as-groups sugar script to support ""old style
+> > >   multi…
+> > > 
+> > > File Changes
+> > > - _M_ src/syntactic-sugar/keysubdirs-as-groups (2)
+> > > 
+> > > Patch Links
+> > > - https://github.com/sitaramc/gitolite/pull/55.patch
+> > > - https://github.com/sitaramc/gitolite/pull/55.diff
+> > > 
+> > > —
+> > > Reply to this email directly or view it on GitHub<
+> > > https://github.com/sitaramc/gitolite/pull/55>.
+> > 
+> > ## 
+> > 
+> > Sitaram
+> > 
+> > —
+> > Reply to this email directly or view it on GitHub<
+> > https://github.com/sitaramc/gitolite/pull/55#issuecomment-9891838>.
+> 
+> —
+> Reply to this email directly or view it on GitHubhttps://github.com/sitaramc/gitolite/pull/55#issuecomment-9895566.
+
+## 
+
+Sitaram
+",sitaramc,2012-10-31 01:07:43
+55,2012-10-30 16:28:51,"Actually, it is both.  Despite my personal interest and love for gitolite,
+this particular fix was done for my use of gitolite at work (since we had
+to completely rebuild our git server yesterday and used the opportunity to
+finally upgrade from v2), so I try to keep my work-related attributions
+under my work email address and given name (hence the pull request coming
+through ""infosiftr"" and not my personal account).
+
+I really have no problem submitting this to the mailing list with a link
+back here showing your brief review, if you'd like, or have absolutely no
+qualms if you just wanted to grab the change to the regex and commit it
+yourself (no need to accept the pull request).  I just noticed a small
+deficit in one of the core scripts and figured since I wanted it fixed for
+us, my first instinct was to reach out with a pull request offering the
+fix.  In the future, I'll be sure to start directly with the mailing list.
+
+On 30 October 2012 00:16, Sitaram Chamarty notifications@github.com wrote:
+
+> well that's ok for now; I did look at the diff and it look sane.
+> 
+> I have only one question. Are you Tianon Gravi or Andrew Page? I.e., Why
+> is the email coming from one name and the commit has another name on it?
+> 
+> It's not a big issue but I am curious...
+> 
+> On Tue, Oct 30, 2012 at 11:15 AM, Tianon Gravi notifications@github.comwrote:
+> 
+> > Ah, my apologies! I will send a patch to the mailing list for review
+> > tomorrow, and close out this request.
+> > On Oct 29, 2012 7:05 PM, ""Sitaram Chamarty"" notifications@github.com
+> > wrote:
+> > 
+> > > I dont log on to github, and I ignore pull requests etc. See the
+> > > ""wiki""
+> > > part of my github page for reasons. (I did change the wiki text just
+> > > now,
+> > > but only to add some detail and to re-arrange some text.)
+> > > 
+> > > On Tue, Oct 30, 2012 at 4:49 AM, Tianon Gravi <
+> > > notifications@github.com>wrote:
+> > > 
+> > > > Was perplexed as to why using ""keysubdirs-as-groups"" wasn't adding
+> > > > my
+> > > > users to the correct groups until I checked the compiled
+> > > > gitolite.conf
+> > > > output and realized it was not ignoring my ""old style multi-keys"",
+> > > > and
+> > > > was
+> > > > creating a separate entry for each of my users (john@main,
+> > > > john@laptop,
+> > > > 
+> > > > etc). The fix here works here, and should also work for users that
+> > > > are
+> > > > using mutli-keys with email addresses, or users that aren't using
+> > > > the
+> > > > old
+> > > > 
+> > > > ## style multi-keys at all.
+> > > > 
+> > > > You can merge this Pull Request by running:
+> > > > 
+> > > > git pull https://github.com/infosiftr/gitolite master
+> > > > 
+> > > > Or view, comment on, or merge it at:
+> > > > 
+> > > > https://github.com/sitaramc/gitolite/pull/55
+> > > > Commit Summary
+> > > > - fix for keysubdirs-as-groups sugar script to support ""old style
+> > > >   multi…
+> > > > 
+> > > > File Changes
+> > > > - _M_ src/syntactic-sugar/keysubdirs-as-groups (2)
+> > > > 
+> > > > Patch Links
+> > > > - https://github.com/sitaramc/gitolite/pull/55.patch
+> > > > - https://github.com/sitaramc/gitolite/pull/55.diff
+> > > > 
+> > > > —
+> > > > Reply to this email directly or view it on GitHub<
+> > > > https://github.com/sitaramc/gitolite/pull/55>.
+> > > 
+> > > ## 
+> > > 
+> > > Sitaram
+> > > 
+> > > —
+> > > Reply to this email directly or view it on GitHub<
+> > > https://github.com/sitaramc/gitolite/pull/55#issuecomment-9891838>.
+> > 
+> > —
+> > Reply to this email directly or view it on GitHub<
+> > https://github.com/sitaramc/gitolite/pull/55#issuecomment-9895566>.
+> 
+> ## 
+> 
+> Sitaram
+> 
+> —
+> Reply to this email directly or view it on GitHubhttps://github.com/sitaramc/gitolite/pull/55#issuecomment-9895988.
+",tianon,2012-10-31 01:07:43
+54,2012-10-10 03:58:27,"/bin/bash is ALWAYS wrong. It should immedietly switched to
+/usr/bin/env bash and in the long run switched to /bin/sh once
+all of the bogus bashisms have been removed.
+
+/usr/bin/perl is often correct, but not always. it is better to use env
+
+Try using the checkbashism script to help fix things: http://sourceforge.net/projects/checkbaskisms/files/
+",grimreaper,2012-10-17 02:01:16
+54,2012-10-16 23:57:30,"Please read the Wiki for this repository; sitaram does not check or accept github Pull Requests. You should instead contact him via email, either directly or by the mailing list.
+
+Additionally, I do not agree with your sentiment that ""/bin/bash is evil"" - while it may be a legacy way to refer to the `bash` binary, it is not going away any time soon, and I have seen many scripts which do not work because the `env` binary is missing for whatever reasons(minimal system, bad *NIX, or just plain old), whereas /bin/sh or /bin/bash work just fine.
+",EugeneKay,2012-10-17 02:01:16
+54,2012-10-17 00:02:26,"[not sure if this email will get to all the people involved]
+
+Thanks Eugene; I had not seen this because I generally dont log on to
+the github website.
+
+On Wed, Oct 17, 2012 at 5:27 AM, Eugene E. Kashpureff Jr
+notifications@github.com wrote:
+
+> Please read the Wiki for this repository; sitaram does not check or accept github Pull Requests. You should instead contact him via email, either directly or by the mailing list.
+> 
+> Additionally, I do not agree with your sentiment that ""/bin/bash is evil"" - while it may be a legacy way to refer to the bash binary, it is not going away any time soon, and I have seen many scripts which do not work because the env binary is missing for whatever reasons(minimal system, bad *NIX, or just plain old), whereas /bin/sh or /bin/bash work just fine.
+
+I'm willing to accept patches that remove bashisms from the code and
+change the shebang line to /bin/sh from /bin/bash, but that's it.
+
+I will not use /usr/bin/env.  If you need it, your system is broken.
+Fix it, or run the gitolite sources through a fixup script when you
+install.
+
+Also, /usr/bin/env also has some security issues if I recall.
+
+regards
+
+## 
+
+Sitaram
+",sitaramc,2012-10-17 02:01:16
+54,2012-10-17 00:14:42,"If a program doesn't use /usr/bin/env to run bash the program is broken, simple as that. The problem is that may not be installed in /bin and /usr/bin/env finds it. 
+
+I will attempt to go through and find all the non-portable bashisms, but I don't know when I will be able to do so.
+
+So far as I am aware, there are no specific security issues with /usr/bin/env though I am happy to be enlightened.
+",grimreaper,2012-10-17 02:01:16
+54,2012-10-17 00:29:18,"On Wed, Oct 17, 2012 at 5:44 AM, grimreaper notifications@github.com wrote:
+
+> If you don't use /usr/bin/env to run bash your program is broken, simple as that. The problem is that may not be installed in /bin and /usr/bin/env finds it.
+
+And I think anything that requires env is broken.
+
+Anyway, unless you claim this applies to 'sh' also, I did suggest
+another way out (although it doesn't help with perl).
+",sitaramc,2012-10-17 02:01:16
+54,2012-10-17 01:18:30,"It doesn't apply to /bin/sh because POSIX requires that /bin/sh exist and act a certain way. There is no standard for /bin/bash.
+
+Why is a program which
+- is more portable
+- respects the user's preference
+
+broken?
+
+FWIW I do plan on fixing the bashims eventually, I'm just not sure when I'll get to it (testing them requires a lot more work this fixing the shebang line)
+",grimreaper,2012-10-17 02:01:16
+54,2012-10-17 01:40:54,"On Wed, Oct 17, 2012 at 6:48 AM, grimreaper notifications@github.com wrote:
+
+> It doesn't apply to /bin/sh because POSIX requires that /bin/sh exist and act a certain way. There is no standard for /bin/bash.
+> 
+> Why is a program which
+> 
+> is more portable
+> respects the user's preference broken?
+
+why is it more portable?  Where's the guarantee that 'env' will be
+where you think it is?
+
+as fo user's preference, the only time I see 'env' as useful is if you
+have multiple versions of something and want to set the PATH before
+running a script so it picks up the right one.
+
+That argument doesn't wash here, for either bash or perl.  In both
+cases, gitolite imposes no minimum version (well, perl 5.8.8, but
+that's so old it's hardly a problem), so assuming you have _some_
+version in the usual places, it will work.
+
+If you don't have _any_ version in the usual places, your system is broken.
+
+User preferences, which could even include $HOME/bin for all I know,
+are for _additional_ versions, not for the base version installed in
+the system.
+
+In any case, I am not budging on this, sorry.
+",sitaramc,2012-10-17 02:01:16
+54,2012-10-17 01:46:56,"On Wed, Oct 17, 2012 at 7:10 AM, Sitaram Chamarty sitaramc@gmail.com wrote:
+
+> In any case, I am not budging on this, sorry.
+
+forgot to add my standard caveat to this statement.
+
+There _is_ a mailing list, and you should try to get a discussion
+going on this.  If enough people agree, and make a good case for it
+(that does not involve oddball systems, like closed-source NAS boxes,
+uggh), then I may not be so cocky ;-)
+
+## 
+
+Sitaram
+",sitaramc,2012-10-17 02:01:16
+54,2012-10-17 02:01:16,"> That argument doesn't wash here, for either bash or perl.  In both
+> cases, gitolite imposes no minimum version (well, perl 5.8.8, but
+> that's so old it's hardly a problem), so assuming you have _some_
+> version in the usual places, it will work.
+
+The usual place is /usr/local/bin/bash - not /bin/bash - at least for systems I'm on
+
+> In any case, I am not budging on this, sorry.
+
+I'll try to fix the bashisms at some point.  In the mean time I'll have to live with gitolite being broken by default.
+
+I appreciate the work you have to put into other parts of the program. Gitolite is quite useful. 
+",grimreaper,2012-10-17 02:01:16
+54,2012-10-17 03:48:49,"On Wed, Oct 17, 2012 at 7:31 AM, grimreaper notifications@github.com wrote:
+
+> That argument doesn't wash here, for either bash or perl. In both
+> cases, gitolite imposes no minimum version (well, perl 5.8.8, but
+> that's so old it's hardly a problem), so assuming you have some
+> 
+> version in the usual places, it will work.
+> 
+> The usual place is /usr/local/bin/bash - not /bin/bash - at least for systems I'm on
+
+Gitolite was released August 2009.  Since that time you're only the
+second person to have this problem.  (The first was some stupid NAS
+box.
+
+Not having bash at all is actually more acceptable to me (since I
+support Solaris, HP-UX, etc. also); hence my comment about bashism
+removal being OK.
+
+> In any case, I am not budging on this, sorry.
+> 
+> I'll try to fix the bashisms at some point. In the mean time I'll have to live with gitolite being broken by default.
+
+You seem to think that if you keep saying it you will convince me.
+How old are you, and how old do you think I am?
+
+[those are rhetorical; no need to answer...]
+",sitaramc,2012-10-17 02:01:16
+54,2012-10-17 11:57:07,"> Gitolite was released August 2009.  Since that time you're only the
+> second person to have this problem. 
+
+Because the package managers fix it downstream. I was hoping that it would fixed upstream so we could stop patching it.  This isn't the biggest deal in the world, but I try to upstream fixes wherever possible (even  if minor)
+
+> You seem to think that if you keep saying it you will convince me.
+
+Not at all. I am just annoyed. 
+
+> how old do you think I am?
+
+Don't know, don't care.
+",grimreaper,2012-10-17 02:01:16
+54,2012-10-17 15:20:46,"Hi @grimreaper,
+
+I am the maintainer for the FreeBSD port.
+
+It is of my opinion, that the patches included in the port (a simple find/grep/sed for perl) is not a ""fix"" that can be pushed to upstream. The patch is dependent on the local system's installation for where perl is (note I am using the make variable $PERL rather than the assumed location of /usr/local/bin/perl). This is a mundane patch that is localized to the FreeBSD architecture and can be handled consistently. Furthermore, I do additional steps beyond just patching perl paths.
+
+I have chosen not to touch non-core files - VREFs/tests in the package - because they are non-core (also tests don't matter for the install). I have provided a patch (includes path changes AND other changes) separately for users testing the src via my github port site: http://milki.github.com/gitolite.
+",milki,2012-10-17 02:01:16
+54,2012-10-17 15:28:50,"@milki, the patch is not system dependent. The only correct shebang line for portable scripts is to use /bin/sh or /usr/bin env.  That you need to use a ""simple"" find/grep/sed is itself a bug. This isn't specific to FreeBSD either: this is for any system that doesn't install bash in /bin.
+@sitaramc's system is 'weird' in the sense of it happens to place bash in /bin unlike other systems. In addition gitolite won't work correctly if a OSX user opted to install a newer version of bash in /opt/local/bin and modified PATH to teach applications to use that instead.
+
+Relying on bash being in /bin is as buggy on anyother non-portable system dependent construct.
+
+In any case gitolite's maintainer already said that he has no interest in this patch, so I've dropped it.
+",grimreaper,2012-10-17 02:01:16
+54,2012-10-17 15:41:26,"(1) Please don't keep harping on bash -- you know the fix for that: I
+will accept changing it to /bin/sh after removing bashisms.
+
+(2) So fedora and debian are ""weird"".  That's a bit better than
+""broken"", so thanks, I guess!
+
+[top posting because the lines in the original message didn't wrap
+like they usually do, for some reason, and so quoting is messed up.]
+
+On Wed, Oct 17, 2012 at 8:58 PM, grimreaper notifications@github.com wrote:
+
+> milki, the patch is not system dependent. The only correct shebang line for portable scripts is to use /bin/sh or /usr/bin env. That you need to use a ""simple"" find/grep/sed is itself a bug. This isn't specific to FreeBSD either: this is for any system that doesn't install bash in /bin.
+> @sitaramc's system is 'weird' in the sense of it happens to place bash in /bin unlike other systems. In addition gitolite won't work correctly if a OSX user opted to install a newer version of bash in /opt/local/bin and modified PATH to teach applications to use that instead.
+> 
+> Relying on bash being in /bin is as buggy on anyother non-portable system dependent construct.
+> 
+> In any case gitolite's maintainer already said that he has no interest in this patch, so I've dropped it.
+> 
+> —
+> Reply to this email directly or view it on GitHub.
+
+## 
+
+Sitaram
+",sitaramc,2012-10-17 02:01:16
+54,2012-10-17 15:46:56,"> (1) Please don't keep harping on bash -- you know the fix for that: I
+> will accept changing it to /bin/sh after removing bashisms.
+
+And you know that I have plans to fix this. I am merely responding to
+people that have commented after me. I intended to stop when I hit
+""close"".
+
+> (2) So fedora and debian are ""weird"". That's a bit better than
+> ""broken"", so thanks, I guess!
+
+I used scare quotes for a reason - I was joking!
+gitolite is broken though, for assuming that bash will be in
+/bin/bash. That said - repeating this is just going to play in the
+""I'm wrong because I'm immature"" comment you made earlier or something
+like that.
+
+I never said that having bash in /bin is broken.
+
+at this point I'm not going to bother replying at all. I am well aware
+of your opinions:
+(a) you will accept bashism removal patches should they be submitted
+(b) you won't accept a temporary fix to make gitolite more portable
+than it is now by default.
+",grimreaper,2012-10-17 02:01:16
+53,2012-08-03 07:49:50,"I am installing gitolite from a tarball of gitolite, not a git repo. This patch means that `install` does not fail.
+",drnic,2013-06-14 16:44:58
+53,2012-08-13 11:16:27,"Psst. Have you read the wiki page?
+",dajoho,2013-06-14 16:44:58
+53,2012-08-13 12:55:02,"https://github.com/sitaramc/gitolite/wiki
+",dolmen,2013-06-14 16:44:58
+53,2012-08-16 17:38:56,"Sorry, guys. I'll get around to learning the specific contribution rules for this specific project soon. 
+",drnic,2013-06-14 16:44:58
+52,2012-07-12 00:53:46,"I just did the bare minimum (which wasn't much) to get this to render on the GitHub site.  Already it's a big improvement in terms of accessibility, IMO.
+",dabrahams,2012-07-12 01:22:44
+51,2012-07-12 00:25:46,,dabrahams,2012-07-12 01:22:55
+50,2012-06-20 12:40:48,"Only '+' sign was unescaped in `http_simulate_ssh_connection()`.
+When user translates `ssh git@host perms <repo> + <role> <user>` to
+`curl https://host/git/perms?<repo>+%2b+<role>+<user>` nothing happens.
+This commit fixes it modifying url unescaping.
+",grossws,2012-06-20 14:29:22
+50,2012-06-20 14:24:56,"Read the wiki on pull requests if you haven't.
+",AeroNotix,2012-06-20 14:29:22
+49,2012-06-12 13:28:08,"Having symlinks support is necesary (unless a workaround is available)
+",txomon,2012-06-17 14:55:34
+49,2012-06-16 19:00:00,"Have you read the wiki?
+Please DO NOT send me pull requests via github. Instead, send me an email saying what URL and what branch to pull. (The pull system forces a --no-ff even if the merge is at the top of my branch and doesn't need one. It also gives me no chance to fix up minor typos, add any more text to the commit message, etc. I can do that afterward, but this forces a ""push -f"" or a trivial ""typofix"" commit).
+",ColdIce1,2012-06-17 14:55:34
+48,2012-06-06 19:23:33,"This sentence refers to D perm.
+",milki,2012-06-06 23:33:22
+47,2012-03-27 15:32:46,"Add example of allowing users to create their own repos when wildcards are used
+",davidosomething,2012-04-15 04:31:42
+47,2012-03-27 16:03:41,"I don't respond to github-sent emails and pull requests.  My reasons
+are at the bottom of the ""wiki"" link on the github page.
+
+On Tue, Mar 27, 2012 at 9:02 PM, David
+reply@reply.github.com
+wrote:
+
+> Add example of allowing users to create their own repos when wildcards are used
+> 
+> You can merge this Pull Request by running:
+> 
+>  git pull https://github.com/davidosomething/gitolite patch-1
+> 
+> Or you can view, comment on it, or merge it online at:
+> 
+>  https://github.com/sitaramc/gitolite/pull/47
+> 
+> -- Commit Summary --
+> - Add example of allowing users to create their own repos when wildcards are used
+> 
+> -- File Changes --
+> 
+> M user.html (6)
+> 
+> -- Patch Links --
+> 
+>  https://github.com/sitaramc/gitolite/pull/47.patch
+>  https://github.com/sitaramc/gitolite/pull/47.diff
+> 
+> ---
+> 
+> Reply to this email directly or view it on GitHub:
+> https://github.com/sitaramc/gitolite/pull/47
+
+## 
+
+Sitaram
+",sitaramc,2012-04-15 04:31:42
+47,2012-03-27 16:09:10,"ok thanks for letting me know
+
+David O'Trakoun
+http://www.davidosomething.com/
+
+On Tue, Mar 27, 2012 at 12:03 PM, Sitaram Chamarty
+reply@reply.github.com
+wrote:
+
+> I don't respond to github-sent emails and pull requests.  My reasons
+> are at the bottom of the ""wiki"" link on the github page.
+> 
+> On Tue, Mar 27, 2012 at 9:02 PM, David
+> reply@reply.github.com
+> wrote:
+> 
+> > Add example of allowing users to create their own repos when wildcards are used
+> > 
+> > You can merge this Pull Request by running:
+> > 
+> >  git pull https://github.com/davidosomething/gitolite patch-1
+> > 
+> > Or you can view, comment on it, or merge it online at:
+> > 
+> >  https://github.com/sitaramc/gitolite/pull/47
+> > 
+> > -- Commit Summary --
+> > - Add example of allowing users to create their own repos when wildcards are used
+> > 
+> > -- File Changes --
+> > 
+> > M user.html (6)
+> > 
+> > -- Patch Links --
+> > 
+> >  https://github.com/sitaramc/gitolite/pull/47.patch
+> >  https://github.com/sitaramc/gitolite/pull/47.diff
+> > 
+> > ---
+> > 
+> > Reply to this email directly or view it on GitHub:
+> > https://github.com/sitaramc/gitolite/pull/47
+> 
+> ## 
+> 
+> Sitaram
+> 
+> ---
+> 
+> Reply to this email directly or view it on GitHub:
+> https://github.com/sitaramc/gitolite/pull/47#issuecomment-4719874
+",davidosomething,2012-04-15 04:31:42
+46,2012-03-08 23:53:35,"The one-argument calls are compatible with each other, but older perls die with
+
+<pre>""make_path"" is not exported by the File::Path module
+Can't continue after import errors at gl-system-install line 5
+BEGIN failed--compilation aborted at gl-system-install line 5.</pre>
+
+
+This change uses the older mkpath with no loss of functionality.
+",gbacon,2012-03-09 00:09:35
+46,2012-03-09 00:02:33,"please send me proper email; I will not respond to stuff sent from
+github.  See the wiki section of my gitolite page for my reasons
+
+On Fri, Mar 9, 2012 at 5:23 AM, Greg Bacon
+reply@reply.github.com
+wrote:
+
+> The one-argument calls are compatible with each other, but older perls die with
+> 
+> <pre>""make_path"" is not exported by the File::Path module
+> Can't continue after import errors at gl-system-install line 5
+> BEGIN failed--compilation aborted at gl-system-install line 5.</pre>
+> 
+> 
+> You can merge this Pull Request by running:
+> 
+>  git pull https://github.com/gbacon/gitolite file-path-compat
+> 
+> Or you can view, comment on it, or merge it online at:
+> 
+>  https://github.com/sitaramc/gitolite/pull/46
+> 
+> -- Commit Summary --
+> - Be compatible with older versions of File::Path
+> 
+> -- File Changes --
+> 
+> M src/gl-system-install (4)
+> 
+> -- Patch Links --
+> 
+>  https://github.com/sitaramc/gitolite/pull/46.patch
+>  https://github.com/sitaramc/gitolite/pull/46.diff
+> 
+> ---
+> 
+> Reply to this email directly or view it on GitHub:
+> https://github.com/sitaramc/gitolite/pull/46
+
+## 
+
+Sitaram
+",sitaramc,2012-03-09 00:09:35
+45,2012-03-07 16:28:29,"usage in gitolite.conf: reponame category = ""category name""
+",PeterHoeche,2012-03-08 07:31:10
+45,2012-03-07 18:06:06,"please correspond exclusively by email; my reasons are listed in the
+""wiki"" section of gitolite's github page.
+",sitaramc,2012-03-08 07:31:10
+43,2012-01-02 14:37:35,"Use COMMAND OPTION REDIRECTION syntax to improve readability.
+
+Signed-off-by: Jari Aalto jari.aalto@cante.net
+",jaalto,2012-01-04 06:14:08
+42,2012-01-02 10:43:20,"Improve usage() output.
+",jaalto,2012-04-15 04:29:43
+41,2011-11-26 18:07:58,"now all keys have root@... and from this patch it will be $user@...
+",graywolf,2012-01-04 06:12:58
+40,2011-11-22 16:32:32,"Fixes for three issues in gitolite:
+1. Sometimes I would like expand command to always show all repositories. Right now there is no other way to obtain this effect, other then specify arbitrary large $BIG_INFO_CAP
+2. When a file is added to hook directory and then removed, the broken links are left atferwards.
+3. I think it is not always necessary to call gl-install twice in gl-setup. 
+",draenog,2012-04-15 04:31:27
+40,2012-04-15 04:31:27,"please don't send me pull requests etc.  My reasons are explained at the bottom of the ""wiki"" page.
+",sitaramc,2012-04-15 04:31:27
+39,2011-11-21 16:08:17,"When the configuration file has an config inclusion, it is opening
+and processing the file relative to gitolite-admin. When we manually
+run gl-compile-conf from the bin directory, it fails and says
+""included file not found: gitolite-test.conf and exists. This
+ensures the current working directory when processing that file
+is always relative to the config folder.
+",mohamedmansour,2012-04-15 04:32:01
+38,2011-11-06 22:44:09,"Added a step to the server migration instructions reminding the user to pull all changes to gitolite-admin. Fixed set-url syntax in the same section to match current git version's syntax.
+",mattkimmel,2011-11-07 17:22:21
+37,2011-10-31 10:58:35,,grossws,2011-11-16 00:54:09
+37,2011-11-16 00:54:09,"pulled
+",sitaramc,2011-11-16 00:54:09
+36,2011-10-17 22:24:21,,jefferai,2011-10-20 14:06:46
+36,2011-10-20 14:06:46,"done
+",sitaramc,2011-10-20 14:06:46
+35,2011-10-01 18:58:19,"Corrected doc/3-faq-tips-etc.mkd as refering to previous config $GL_REPO_BASE instead of $REPO_BASE (as appears in gitolite.rc)
+",txomon,2011-10-20 14:08:05
+35,2011-10-20 14:08:05,"done
+",sitaramc,2011-10-20 14:08:05
+34,2011-09-30 17:37:05,"gl-mirror-push fails with dash as /bin/sh due to the use of bash pattern
+substition (${parameter/pattern/string}). Use sed instead.
+",svend,2011-10-19 16:54:06
+34,2011-10-19 16:54:06,"This is fixed in 696bffe60578a1b170641dcfaaec01f373460259
+",svend,2011-10-19 16:54:06
+33,2011-09-28 23:11:10,"I spent a few perplexed minutes tonight trying to figure out why a project for which I had not specified ""R gitweb"" was being added to projects.list. After wading through the code for a bit, I found that the setup_gitweb_access used the description being set as a sufficient condition to enable gitweb access. I set description and owners on all projects since they will eventually be publicly available so I found this behavior quite annoying. Here is a patchset changing this. I could not find any places for documentation updates, although I'll gladly submit further patches if needed.
+
+Cheers,
+- Ben
+",bgamari,2011-10-03 08:55:55
+33,2011-10-03 08:55:55,"sorry but this is documented; see http://sitaramc.github.com/gitolite/doc/2-admin.html#_specifying_gitweb_and_daemon_access
+
+If you don't intend it to be used for gitweb, don't set a description.
+",sitaramc,2011-10-03 08:55:55
+32,2011-08-25 13:40:34,,ebfe,2011-09-02 12:09:06
+31,2011-08-24 20:34:01,"This version of gl-conf-convert supports converting a lot more features of gitosis to gitolite than the previous version of this script. Hopefully it will help others in the transition to gitolite from gitosis.
+",behanw,2011-10-20 14:08:32
+31,2011-10-20 14:08:32,"done
+",sitaramc,2011-10-20 14:08:32
+30,2011-08-24 20:13:57,"Great product!  Here are a few very simple typos fixes that I noticed.
+",christilden,2011-08-25 11:07:49
+29,2011-08-24 16:22:19,"Patch attached. I think this could be useful sometime.
+",fabn,2011-11-16 00:54:45
+29,2011-08-25 12:44:02,"I've updated the code in order to allow both partial and full matches for references. Current code check if $2 is a valid full reference. If not it checks for a match in `refs/heads` and then in `refs/tags`.
+
+In this way you can use both syntaxes.
+
+What do you think?
+",fabn,2011-11-16 00:54:45
+28,2011-08-18 16:40:49,"do not assume /bin/sh is bash. For example on Solaris it is really the sh shell.
+
+With my change, the user PATH decides the location of the bash shell. (This way is also used in the official python docs)
+",kTitan,2011-09-10 09:19:02
+28,2011-09-10 09:19:03,"Ok, if my times allow i will write a patch src/gl-system-install, and make a new pull request.
+
+btw: If i remember right even solaris 9 has /bin/bash, but i could not checked it, because we have shutdowned our last solaris 9 system 4 Weeks ago ;)
+",kTitan,2011-09-10 09:19:02
+27,2011-06-22 15:15:41,"find . -type d -name ""*.git"" -prune 
+can take a LOT of time, if your REPO_BASE is home to some non git projects with huge folder structure. Added option limits a depth for searching... and thus limits time...
+",miiihi,2011-07-16 04:48:50
+27,2011-07-16 04:48:50,"Sorry, the correct solution is not to put something else in $REPO_BASE.
+",sitaramc,2011-07-16 04:48:50
+27,2011-07-18 07:45:16,"Well, while I may agree, that ""the correct solution"" would be best, it isn't always possible, for various reasons, legacy beeing the first. This is where my solution can help.
+",miiihi,2011-07-16 04:48:50
+26,2011-05-31 15:25:46,"Our production post receive hooks do some deploying which needs agent forwarding that is disabled by default install.
+This patch allows for custom authentication options. If needed/desired, $AUTH_OPTIONS should be added to conf/example.gitolite.rc and described there.
+",miiihi,2011-06-08 19:04:22
+25,2011-04-14 02:59:20,"Using Msysgit bash shell on Windows, passing in a file into
+setperms confuses Gitolite since it doesn't parse out the
+permissions correctly since it contains Windows CR Line Feed.
+It saves it correctly, but cannot verify it in the regex.
+
+By cleaning out any CR character when that gets inputed, solves
+the problem. Mysgit clients can continue using the default
+settings. They could easily fix this issue by setting their
+editors to LF instead of CR but that isn't by default.
+",mohamedmansour,2011-11-16 00:55:17
+25,2011-11-16 00:55:17,"was added later, though not by this patch
+",sitaramc,2011-11-16 00:55:17
+24,2011-03-16 13:43:15,"Hello,
+
+I believe that there is some inconsistency in the way the ""base repository path"" is handled by Gitolite (or in the way it is documented).  
+
+https://github.com/sitaramc/gitolite/blob/pu/doc/gitolite.rc.mkd#_rarely_changed_variables says ""$REPO_BASE [...] is where all the repos go. If it's not an absolute path, it is considered to be relative to $HOME"". 
+
+In fact, based on my experience, it is actually not relative to $HOME but to $PWD, so I would respectfully suggest a revision to the code so that it passes an absolute path to the repository to git as per the attached pull request.
+
+You could also consider modifying the default gitolite.rc so that $REPO_BASE is defined as $HOME/repositories and/or change the documentation to clearly document the current behavior.
+
+I hope this helps, let me know if you have any comments.
+Damien
+
+PS: many thanks for this excellent piece software
+",dregad,2011-03-22 12:46:21
+23,2011-03-15 12:38:59,"The mirroring functionality doesn't work without exporting GL_RC.
+
+Error message when pushing to the master:
+Writing objects: 100% (10/10), 835 bytes, done.
+Total 10 (delta 4), reused 0 (delta 0)
+hooks/post-update: line 3: die: command not found
+ENV GL_RC not set
+BEGIN failed--compilation aborted at /git/gitolite/bin/gl-compile-conf line 16.
+To git@slave.internal:gitolite-admin.git
+   2e34f2b..55849d0  master -> master
+",houtmanj,2011-05-10 18:38:22
+22,2011-03-07 21:56:52,"Hey sitaramc,
+
+These fixes might be necessary to make some corporate ITSEC folks ""happy"".  In particular, receiving kill and term signals are now noted in the logs (but still do the same thing they did before), and a system(""echo $creator > gl-creater"") call was replaced with an echo_file() method which uses a real open (faster and safer).
+
+Feel free to do these changes ""your way"", but I hope that their spirit can be merged into gitolite so we don't have to maintain these patches.
+
+Thanks so much!
+-Carl
+",terabyte,2011-05-10 18:38:50
+21,2011-03-06 05:48:12,"I ran into this problem myself, and thought some additional information on the matter may help others.
+",Thynix,2011-05-10 18:39:28
+20,2011-03-01 23:04:12,"Hi, I had to move my gitolite to new server.  Followed your instructions and it went ok.  However, in the end, my repos were still in my users home directory on the new server instead of the git user.  Probably should have figured it out sooner and it didn't cost me much time, but I thought a couple edits would make the process clearer.  Gitolite is great. Thanks,
+",maddentim,2011-05-10 18:40:07
+19,2011-03-01 12:32:09,"The documentation says that now ""@all_devs has 7 users"", this can be only achieved if the @staff is also added to the list.
+
+ps. Wasn't sure if you want it into pu branch or the master..... went with the default.
+",dmitrijsledkovs,2011-03-05 20:00:23
+19,2011-03-05 12:00:56,"Thanks; applied
+",sitaramc,2011-03-05 20:00:23
+19,2011-03-05 12:01:19,"Thanks; I applied it.
+",sitaramc,2011-03-05 20:00:23

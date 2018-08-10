@@ -1,0 +1,261 @@
+issue_num,datetime,body,login,mention_login
+154,2017-03-04 10:19:04,"Hey @ptmt I was just about to reply - you are totally correct, I have deleted the folder and it's now working!
+
+I was quite confused as the README.md in Examples/UIEXplorer says to clone and install react-native.
+
+Thank you for your help by the way!",axsauze,ptmt
+153,2017-02-27 18:17:33,"@ptmt could be the case! My logic was faulty, I was rendering an image with an invalid source (because the source was loaded w/ state). 
+
+Any way I can help with upgrading? or is that a relatively massive undertaking",ColeTownsend,ptmt
+149,2017-02-16 18:29:07,"@ptmt Thanks for the fast reply.
+
+I tried to link [React Native I18n](https://github.com/AlexanderZaytsev/react-native-i18n).
+
+Really all I need support for getting the user's language. On the web I'd use something like `navigator.language`.
+
+Would you be able to share how I might approach getting that on macOS?",c-h-,ptmt
+140,2017-02-04 22:13:08,@ptmt I would actually say to add both sections in there. `Real World Examples` can be any source code repo of actual idiomatic applications built with RN for macOS and `Built with RN for macOS` can be implemented/added when we have actual applications in production. I'm working on a simple app that demonstrates how to use RN for macOS (still working on figuring out routing solution with ReactNavigation or another library of the sort) so we can add that to the Examples lists too.,andrerfneves,ptmt
+139,2017-02-01 16:08:27,"@ptmt I don't have many requirements. Anything that would handle `push` to a navigation stack, or of the sort would suffice. Basically just any library that would have the same approach to routing as any of the libraries I mentioned above. I haven't yet tried NavigationExperimental though. Have you had any success with that?",andrerfneves,ptmt
+139,2017-02-01 16:12:14,"Yes, I changed default scene transitioner (basically, animation), but
+overall it integrates nicely with Redux and codebase can be shared with
+iOS. Although, RN for macOS has many flaws and still not ready for
+production. You should be prepared for some of them: processing a lot of
+view layers can be painfully slow, bugs with events, lack of some must-have
+Cocoa native controls.
+
+On Wed, 1 Feb 2017 at 19:08 André Neves <notifications@github.com> wrote:
+
+> @ptmt <https://github.com/ptmt> I don't have many requirements. Anything
+> that would handle push to a navigation stack, or of the sort would
+> suffice. Basically just any library that would have the same approach to
+> routing as any of the libraries I mentioned above. I haven't yet tried
+> NavigationExperimental though. Have you had any success with that?
+>
+> —
+> You are receiving this because you were mentioned.
+>
+>
+> Reply to this email directly, view it on GitHub
+> <https://github.com/ptmt/react-native-macos/issues/139#issuecomment-276699089>,
+> or mute the thread
+> <https://github.com/notifications/unsubscribe-auth/AA9SU44bgchtkFAxn9U61TS_ISzLyj2Qks5rYK39gaJpZM4L0CkE>
+> .
+>
+",ptmt,ptmt
+139,2017-02-01 17:15:26,@ptmt awesome! I'll take a look at these. This helps a lot. Please keep me posted on any ventures you take into ReactNavigation though. As I believe RN Core could eventually settle on ReactNavigation if it becomes the defacto router for RN-based apps. Cheers!,andrerfneves,ptmt
+139,2017-02-16 03:30:33,"@andrerfneves (cc @ptmt) I've been working on a side project that uses every platform variant of react native. The router solution I settled on was using [React Navigation](https://github.com/react-community/react-navigation) since it's fully featured and handles everything from deep linking to redux integration to web URL support. It utilizes native navigation stacks on iOS and Android, and it's easy to extend with your own routers/navigators/views. Only problem is the documentation is pretty limited and not super clear - I had to trawl through source to build my own navigator. I built a non-native-powered router (just Views etc) that I'm using for web, macOS, and Windows, but you could easily build a ""native"" one assuming you can access the APIs from React Native. I'll publish my project in the next week or two.
+
+I'm only raving because I remember when React Native Android came out and there was no usable solution at the time, so I'm quite pleased that such a well-thought out project is finally coming together.",c-h-,andrerfneves
+139,2017-02-16 03:30:33,"@andrerfneves (cc @ptmt) I've been working on a side project that uses every platform variant of react native. The router solution I settled on was using [React Navigation](https://github.com/react-community/react-navigation) since it's fully featured and handles everything from deep linking to redux integration to web URL support. It utilizes native navigation stacks on iOS and Android, and it's easy to extend with your own routers/navigators/views. Only problem is the documentation is pretty limited and not super clear - I had to trawl through source to build my own navigator. I built a non-native-powered router (just Views etc) that I'm using for web, macOS, and Windows, but you could easily build a ""native"" one assuming you can access the APIs from React Native. I'll publish my project in the next week or two.
+
+I'm only raving because I remember when React Native Android came out and there was no usable solution at the time, so I'm quite pleased that such a well-thought out project is finally coming together.",c-h-,ptmt
+139,2017-02-18 16:30:03,@c-h- that's great news. Looking forward to it. Please do let us know when you have some source code up as I'd love to get a feel for the tool.,andrerfneves,c-h-
+139,2017-02-21 19:04:45,"Hey @andrerfneves I just published the boilerplate I came up with. I intend to use it to build an app that works on every platform using the same code within the next month or so.
+
+https://github.com/c-h-/universal-native-boilerplate
+
+Of particular interest may be the routing/navigation support I added through react-navigation. You can see screenshots of the ""app"" on every platform. It comes with URL support on web/server-side rendering and deep linking support on every platform that supports React Native's `Linking` API. The tab bar is native on iOS and Android. On other platforms, like macOS, it's a custom tab bar written in pure JS.
+
+If you're familiar with react-navigation concepts then the organization should be easy enough to follow. The navigation-related components are here: https://github.com/c-h-/universal-native-boilerplate/tree/master/js/components
+
+Please let me know any comments or issues you see with it - I built this out of the two years experience I have with React on web and React Native on Android and want it to be as great as possible of a starting point.",c-h-,andrerfneves
+139,2017-02-21 19:28:40,@c-h- that package looks pretty great. Would love to dive into it a bit more and contribute. I've been working with RN and React for a long time as well and I believe a universal package `that works` would be very interesting. I'm going to go ahead and move this discussion to the package's github repo's issues so we can discuss further.,andrerfneves,c-h-
+134,2016-12-25 15:34:30,"@ptmt Should i clear code from unused variables ? 
+How to fix travis checks ? ",matpaul,ptmt
+124,2016-11-07 12:14:53,"Thank you @ptmt, it work! :)
+",jhen0409,ptmt
+124,2016-11-13 11:44:31,"@ptmt 40d2b39 /  `0.11.0-rc1` build succeeds but `<TextInput>` and `<Button>` seems to be broken now, at least on OSX 10.11:
+
+![image](https://cloud.githubusercontent.com/assets/100993/20245310/b7e00654-a99e-11e6-9965-910622bdd8d5.png)
+
+![image](https://cloud.githubusercontent.com/assets/100993/20245265/b9fcc3a6-a99d-11e6-8441-ccc1bf006fa5.png)
+",knoopx,ptmt
+124,2016-11-14 07:20:37,"@knoopx Supposedly fixed Button's default height for 10.11 in https://github.com/ptmt/react-native-macos/commit/a296de4c81951fcc2d02a51e1eede5fdf3d40d92. 
+",ptmt,knoopx
+123,2016-11-06 19:38:48,"@ptmt, maybe we can write a babel plugin to transform `react-native` to `react-native-macos` for import / require? We can add it to [transformer](https://github.com/ptmt/react-native-macos/blob/master/packager/transformer.js#L35) by default. Although there may be have a better way.
+",jhen0409,ptmt
+123,2016-11-14 11:49:57,"@hmelenok This going to be resolved with https://github.com/ptmt/react-native-macos/pull/125 by @jhen0409 , you can try it right now and provide a feedback.
+",ptmt,jhen0409
+122,2017-02-06 17:26:09,"Tried doing some debugging with the latest RN iOS and RN macOS.
+
+Specs:
+
+
+`react-native-macos init Sample` creates a project, that builds successfully but then errors out on the Packager when loading bundle:
+
+![screen shot 2017-02-06 at 12 12 35 pm](https://cloud.githubusercontent.com/assets/2574011/22657763/9e8dc8da-ec65-11e6-9759-f6eafbc1f00b.png)
+
+However, the exact same behavior is seen in React Native iOS:
+
+![screen shot 2017-02-06 at 12 21 09 pm](https://cloud.githubusercontent.com/assets/2574011/22658104/e8688ce6-ec66-11e6-9bd9-ef8d52a6e106.png)
+
+I've tried `resetting-cache`, tried cleaning my flow and watchman watchers. As well as reinstalling all modules or pruning npm cache.
+
+Thoughts? @ptmt maybe we should close this issue since it's been a while, and `Sample` shouldn't be a good application name. As well as the overlapping bug behavior with React Native. We could then add a `KNOWN_ISSUES.md` to our `docs` once we have them up. (Could potentially have it in the `README.md` for now)
+",andrerfneves,ptmt
+93,2016-12-23 22:26:18,"@ptmt Hi, any updates about this pull request ?) ",matpaul,ptmt
+92,2016-06-09 10:29:01,"@jhen0409 thanks for pointing out. Can you check your setup with the latest master commit?
+",ptmt,jhen0409
+92,2016-06-09 13:29:47,"@ptmt It works! thanks! :)
+",jhen0409,ptmt
+89,2016-06-28 05:19:46,"@ptmt it [looks](https://www.npmjs.com/package/react-native-desktop) v0.8.7 not published yet.
+",jhen0409,ptmt
+89,2016-06-28 05:22:07,"Published now.
+
+On Tue, 28 Jun 2016 at 08:19 Jhen-Jie Hong notifications@github.com wrote:
+
+> @ptmt https://github.com/ptmt it looks
+> https://www.npmjs.com/package/react-native-desktop v0.8.7 not published
+> yet.
+> 
+> —
+> You are receiving this because you were mentioned.
+> 
+> Reply to this email directly, view it on GitHub
+> https://github.com/ptmt/react-native-desktop/issues/89#issuecomment-228950914,
+> or mute the thread
+> https://github.com/notifications/unsubscribe/AA9SU6-VTsQx5tUyw1n5jp7MY8MZoGEQks5qQK71gaJpZM4IsfkY
+> .
+",ptmt,ptmt
+71,2016-04-25 12:30:49,"@pvinis It's a proposal of two different things here. In the web browser there is an behavior that considered as expected: the ability to not use the mouse / touchpad at all while interacting with the form, including links and buttons. I'm not so sure about `keyDown` override, though. Just an implementation details. The second thing here is an ability to create custom components which could be first responders and react to focus. For example, some navigation system based on pure `<View />` (tree view for browsing files). So yeah, this is the place where classic desktop experience meets web (electron) expectations from users. 
+",ptmt,pvinis
+71,2016-04-26 14:37:21,"@pvinis sure, you're right, it should only work if the user wants it working, in this case, because of `tabIndex` prop. Thank you for your advice for implementation, I hope to get time soon to continue working on this, and add another example (default / custom behavior). 
+",ptmt,pvinis
+65,2016-08-01 11:14:44,"Thanks @ptmt! Do you have any more information about the React Native support for additional UI layers?
+",mattoakesnet,ptmt
+59,2016-04-13 19:09:33,"@ptmt Have you considered trying to integrate with node instead of JSC?
+",cesarandreu,ptmt
+59,2016-07-20 09:45:07,"Hi @ptmt any updates on the status? I've been waiting for this project for more than a month now. :)
+",SuhairZain,ptmt
+59,2016-07-20 14:27:58,"Hi @ptmt . I know the struggle. :)
+
+I've made electron apps before but this particular one requires file system access (as in full read/write & file watchers). I didn't find a way to do that in electron since it's basically a packaged HTML and JS file and it has it's limitations, which drew me to your project. Guess I'll have to wait.
+
+I was also thinking about lending a hand to this project. Get started on something using GTK+, but I have no experience in native desktop development whatsoever, and it would be a great help if you could point me to something that could be useful.
+",SuhairZain,ptmt
+59,2016-10-25 09:54:29,"@ptmt Just wondering, how is this going? Thanks :-)
+",Mayzie,ptmt
+56,2016-04-04 07:22:47,"@ptmt 10.11.4
+",heshiyou,ptmt
+56,2016-04-04 15:46:24,"@ptmt el capitan 10.11.4 please fix or point me in direction so I can take a look, no log no nothing :(
+",myusuf3,ptmt
+50,2016-03-31 03:48:06,"Yes, I have done that, but the problem still exits. @beretboat 
+",JasonLiuOrg,beretboat
+47,2016-03-19 13:42:42,"I can reproduce the exact problem with a project by `react-native-desktop init`.
+
+I think it might has something to do with `NSFullSizeContentViewWindowMask` `styleMask` of the window(Code is in AppDelegate.m, `-[AppDelegate init]`):
+- With `NSFullSizeContentViewWindowMask` (default code), I see the problem @jhen0409 reported. But I can only reproduce this on a Macbook Pro(15'', Retina, Mid 2012), not iMac 5k.
+- Remove `NSFullSizeContentViewWindowMask`, the `RCTRootContentView` will not go with `RCTRootView` when window resized:(This I can reproduce on both Macbook Pro and iMac)
+  <img width=""937"" alt=""screen shot 2016-03-19 at 9 39 58 pm"" src=""https://cloud.githubusercontent.com/assets/4593681/13898898/5189170e-ee1b-11e5-85fd-448dcc23b0de.png"">
+",beretboat,jhen0409
+46,2016-03-12 04:14:07,"@jhen0409 is this empty project created from react-native-desktop init? 
+
+Anyway, please try to `0.5.0-rc1` version from npm. 
+",ptmt,jhen0409
+39,2016-02-05 05:45:37,"@beretboat you can it to existed example here https://github.com/ptmt/react-native-desktop/blob/master/Examples/UIExplorer/TextInputExample.osx.js
+",ptmt,beretboat
+36,2016-02-02 23:07:14,"The new version seems work for me now. Was not working at previous version. Thanks for the fix @ptmt 
+",fraserxu,ptmt
+28,2016-01-31 10:11:19,"@beretboat, it should be fixed now in 0.3.7. Yes, I mean react-hot-loader, which partially implemented now in react-native and therefore react-native-desktop.  
+",ptmt,beretboat
+27,2016-01-10 08:27:30,"@ptmt   thanks for reply , i understand.
+",mydearxym,ptmt
+21,2015-11-25 04:41:59,"@ptmt I like the react way, a big ecosystem, very glad to see it run on desktop
+
+not sure how run on windows, do you have any idea now?
+",leecade,ptmt
+13,2016-03-30 07:12:45,"@ptmt The ""[Getting Started](https://github.com/ptmt/react-native-desktop#getting-started)"" instructions were quite confusing to me specially the last instruction.
+
+`open osx/MyProject.xcodeproj`
+
+I think it would be great if we can be explicit that **osx** is the folder in which the code is residing. Also how did we generate the **MyProject.xcodeproj** file. Unless I open the folder **MyProject** in xcode, I don't see this file. 
+
+Let me know if I am missing something here! I would be happy to send a pull request to add these if it is a welcome contribution.
+
+Thanks,
+Harshita
+",hkasera,ptmt
+13,2016-04-06 08:02:10,"@ptmt Sure, thanks :+1: 
+",hkasera,ptmt
+13,2016-04-07 16:45:23,"Hey @ptmt - looks like this is a great project, thanks for all the hard work! It looks like in the latest release you implemented hot reloading? Does this change the getting started above?
+",tommoor,ptmt
+13,2017-02-02 01:58:00,@ptmt do you want help with this getting started documentation? I see the tag on the issue.,andrerfneves,ptmt
+13,2017-02-03 15:58:32,"@andrerfneves yeah, it would be nice, though, I'm not sure how to solve the docs problem best. It's almost the same experience as React Native for iOS. I guess adding some pages here https://github.com/ptmt/react-native-macos/tree/master/docs will be the best. Then we can push it as a github pages",ptmt,andrerfneves
+13,2017-02-03 16:11:37,"@ptmt I could strip out some of those iOS/Android specific md files and do a quick revise of the other ones, and we can deploy to GH pages and then iterate on a branch until Docs are up-to-date/correct.",andrerfneves,ptmt
+9,2015-10-23 01:47:10,"I got the same error a while ago, and added some temporary workaround: https://github.com/ptmt/react-native-desktop/blob/master/React/Base/RCTTouchHandler.m#L96. Anyway, mouse events is bad and incomplete right now, need to invest a more time to RCTTouchHandler to fix a few major problems. @mrjjwright  could you reach me out on muakacho at gmail.com, I would love to know what kind of apps you are going to make with RND?
+",ptmt,mrjjwright
+4,2016-12-28 16:51:28,"@ptmt what of these tasks has more priority ? 
+Is resizing by dragging mean NSSplitView ?",matpaul,ptmt
+4,2016-12-28 18:07:18,"Yes, NSSplitView would be one of key component for desktop app.
+
+The blocker-issue, though, is dealing with resizing due to a lot of views
+in AppKit. https://github.com/ptmt/react-native-macos/pull/93 this solution
+was a workaround, I don't sure if it needs to be merged. If I had enough
+time, I would update RN for macOS with latest React Native (including Yarn,
+Flow updates and etc.) and keep profiling this. If you interested in let me
+know, I'll provide some details.
+
+The other core issue is events system, like mouse events and such. See
+problems like this https://github.com/ptmt/react-native-macos/issues/58
+
+Also: https://github.com/ptmt/react-native-macos/issues/40 (that's
+something that original React Native doesn't have as a concept).
+
+On Wed, 28 Dec 2016 at 19:51 Paul Matyukov <notifications@github.com> wrote:
+
+> @ptmt <https://github.com/ptmt> what of these tasks has more priority ?
+> Is resizing by dragging mean NSSplitView ?
+>
+> —
+> You are receiving this because you were mentioned.
+>
+>
+> Reply to this email directly, view it on GitHub
+> <https://github.com/ptmt/react-native-macos/issues/4#issuecomment-269504735>,
+> or mute the thread
+> <https://github.com/notifications/unsubscribe-auth/AA9SU7m8IAUHUTSE5bWSIJj1TIrIo2wOks5rMpOSgaJpZM4GSJTs>
+> .
+>
+",ptmt,ptmt
+1,2015-10-15 14:50:25,"@pvinis Short answer: no, there isn't. I will add the bundled (ready-to-run) app when 0.1.0 will be ready. 
+",ptmt,pvinis
+1,2015-10-15 14:51:28,"Cool. i mean also try it as in compile and run, so we can mess around with it
+
+-- 
+Pavlos Vinieratos
+
+On 15 Oct 2015 at 16:50:25, Dmitry (notifications@github.com) wrote:
+
+@pvinis Short answer: no. I will add the bundled (ready-to-run) app when 0.1.0 will be ready.
+
+—
+Reply to this email directly or view it on GitHub.
+",pvinis,pvinis
+1,2015-10-15 16:15:28,"@pvinis Basically you can run it the same way as React Native, though, I highly recommend waiting at least one week : )
+",ptmt,pvinis
+147,2017-02-14 07:19:01,"Hi @ptmt ,you haven't updated this repo since v0.12.0-rc1, won't you upgrade this project anymore?",bakso,ptmt
+132,2016-12-19 09:57:13,"What's your macOS version? I guess you have the same problem https://github.com/ptmt/react-native-macos/issues/130. It seems that @jondot didn't have a chance to send a pull request, I'll try to do that in a weekend. Sorry, busy weeks. ",ptmt,jondot
+109,2016-08-26 00:05:42,"You can see the issue when enabling the `PanResponder` `UIExplorer` example.
+
+This is a critical feature for my application, so I'm going to look into supporting it. @ptmt Do you have any advice or thoughts on how you were going to support it. It seems the card I'd need to change is is `React/Base/RCTTouchHandler.m`.
+",mattoakesnet,ptmt
+108,2016-08-25 14:37:55,"Fixes #106.
+
+This was actually fixed in the main React Native repo with the same commit about 2 weeks ago (https://github.com/facebook/react-native/commit/a5678983bb16ff48f91ed43caafba96ca322f7dc). It would be really useful if @ptmt could document the process for bringing in change from the forked repository so others can help keep it up to date 👍 
+",mattoakesnet,ptmt
+58,2016-04-03 09:42:55,"_by @beretboat. _
+- [ ] Reproduce that behavior. 
+",ptmt,beretboat
+49,2016-03-30 12:40:32,"Hi @ptmt  
+Can you publish cli the new version?
+",nightink,ptmt
+38,2016-02-05 01:42:27,"Hi @ptmt, would you mind if I created a PR to add tool tip support?
+",beretboat,ptmt
+37,2016-02-02 17:25:07,"- [ ] Fix resize mode
+  `<Image source={require('../nick.png')}  resizeMode={'contain'} />`
+  `<Image source={require('../nick.png')}  style={{width: 600}} />`
+- [ ] Autoload sizes from bundle
+- [ ] Dissapearing images mentioned by @beretboat here:
+
+Sometimes all images just not show in <Image/> component. It’s very hard to reproduce. Me and a tester see this once or twice in a few days. My <Image/> is wrapped in <TouchableOpacity/>. Clicking still works.
+",ptmt,beretboat

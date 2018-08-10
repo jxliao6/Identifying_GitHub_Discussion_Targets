@@ -1,0 +1,2359 @@
+issue_num,datetime,body,login,close_date
+177,2017-03-24 09:32:01,,CodeLife2012,
+176,2017-03-09 19:11:24,"Adds a check for `respondsToSelector:@selector(compare:)` to prevent a crash if the property corresponding to a column represents something that doesn't respond to `compare:`, e.g. a RLMAccessor. See #175. ",NSIRLConnection,
+175,2017-03-09 19:04:40,"Tapping on a header in FLEXTableContentViewController to sort causes a crash if the property represents a type which does not implement 
+
+`- (NSComparisonResult)compare:(Type)type`
+
+such as a property that represents a RLMAccessor. It throws an exception with the following format:
+
+`-[RLMAccessor_<SOME_NUMBER>_<REALM_OBJECT_CLASS_NAME> compare:]: unrecognized selector sent to instance`",NSIRLConnection,
+174,2017-02-27 10:39:33,"Is it possible to check which class and methods are swizzled in runtime?
+",avnerbarr,
+173,2017-02-25 08:38:08,"FLEX purges older items from the network debugging cache even when the cache is nowhere near full. I would assign this to myself if I could. I would like it to cache them to a temporary file or something, it's super annoying when recent requests are purged for seemingly no reason...",NSExceptional,
+172,2017-02-17 07:08:41,"How do I know how many memory application use?
+Flex can not accurately know the memory size",yaochenfeng,2017-02-21 05:31:44
+172,2017-02-21 05:31:44,I suggest using Instruments to investigate memory usage. Apple has some tips here: https://developer.apple.com/library/content/documentation/DeveloperTools/Conceptual/InstrumentsUserGuide/MonitoringMemoryUsage.html,ryanolsonk,2017-02-21 05:31:44
+171,2017-02-06 06:07:05,Network Debugging enable but I can not see anything on network history except fabric / crashlytics requests.The requests sends from the other framework in the workspace where the application is bound.,barankaansert,
+171,2017-02-21 05:35:18,"Any chance you can provide a sample project with a repro of this? If not, could you provide details about your project like language, version, etc.?",ryanolsonk,
+170,2017-01-31 13:44:21,"In our POST requests, we gzip the request body which unfortunately the FLEX network logger can't display.
+
+It's trivial to add support for displaying gzipped data (~3 lines of code) using a pod like 'GZIP', but I'm not sure what the policy is on adding 3rd-party dependencies.
+
+If it's OK to add a dependency to the pod spec, I'm happy to create a pull request with this change, but thought I'd check first.",nicked,2017-02-05 12:00:03
+170,2017-02-05 00:06:32,"We actually already support this if the response headers are set correctly:
+
+https://github.com/Flipboard/FLEX/blob/22e7edb698a74d2b9a083eb942f1f4384a9a7c94/Classes/Network/FLEXNetworkTransactionDetailTableViewController.m#L457-L460",ryanolsonk,2017-02-05 12:00:03
+170,2017-02-05 00:07:49,Ah -- reading again I see you're talking about the request body. Want to bring that support over to displaying the request body? Should be pretty easy since it's already separated into a utility method.,ryanolsonk,2017-02-05 12:00:03
+170,2017-02-05 11:37:29,Ah that's easy then. I assumed NSURL* automatically decoded zipped responses so FLEX didn't need to support it at all. I'll see if I can use that for the request bodies too.,nicked,2017-02-05 12:00:03
+170,2017-02-05 12:00:03,"Actually it seems that we aren't setting the headers in the way that FLEX is expecting... if I set ""Content-Encoding"": ""gzip"" then it works OK. Which actually happens right in that snippet you posted. Thanks anyway :)",nicked,2017-02-05 12:00:03
+169,2017-01-30 02:51:29,Reorganizes some code in `-[FLEXRuntimeUtility performSelector:onObject:withArguments:error]` and fixes a crash. See #168.,NSExceptional,
+169,2017-02-05 00:12:42,It's tricky to read what the functional change is in 58404e2 since it's mixed in with style/formatting changes. I'd like to see that separated out to properly evaluate the change. I'd also suggest rebasing the branch onto the latest master to eliminate the merge commits.,ryanolsonk,
+169,2017-02-05 00:17:42,"> (me:) can I squash those somehow?
+
+Rebasing is what I was looking for, I'll do that. Will that require a new pull request? I'm not super familiar with how that works
+
+> I'd like to see that separated out to properly evaluate the change
+
+As in just separate commits?",NSExceptional,
+169,2017-02-05 00:20:02,"Actually would be awesome if you want to make the changes as separate PRs so they can be evaluated/merged separately.
+
+You should be able to force push to the branch after rebasing to update the existing PR. Alternatively you could open a new one if that's easier.
+
+Thanks!",ryanolsonk,
+169,2017-02-19 00:52:51,"Alrighty, that should do it for the original bug-fix.
+
+As for the stylistic changes, how do I get those in a separate PR? Haven't committed them yet because they'll show up here, won't they?",NSExceptional,
+169,2017-02-21 05:28:19,I'm hesitant to expand the scope of the try/catch blocks since it may be hiding a bug that could be fixed directly. Do you have a project with a consistent repro for the crash? I'd like to understand this one better.,ryanolsonk,
+169,2017-02-22 01:45:35,"I do not. It was crashing in a third party app when scrolling through the properties.
+
+The only thing I can think of is that `NSGetSizeAndAlignment` is clobbering `bufferSize` before throwing an exception, which results in the code below the `@catch` being executed no matter what.
+
+AFAIK, it's actually bad practice to write code like this:
+
+<S_CODE_TOKEN>
+
+It should instead be structured like this, because it's easier to read and you can be certain `foo()` will only execute if no exception was thrown:
+
+<S_CODE_TOKEN>
+
+",NSExceptional,
+169,2017-03-20 19:34:23,Bump,NSExceptional,
+168,2017-01-30 02:47:56,"Relevant part of the crash log:
+
+    Last Exception Backtrace:
+    0  __exceptionPreprocess + 0x7c
+    1  objc_exception_throw + 0x38
+    2  -[NSInvocation getArgument:atIndex:] + 0x200
+    3  +[FLEXRuntimeUtility performSelector:onObject:withArguments:error:] + 0xae8
+    4  +[FLEXRuntimeUtility valueForProperty:onObject:] + 0x154
+    5  -[FLEXObjectExplorerViewController valueForPropertyAtIndex:] + 0x104
+    6  -[FLEXObjectExplorerViewController subtitleForRow:inExplorerSection:] + 0x120
+    7  -[FLEXObjectExplorerViewController tableView:cellForRowAtIndexPath:] + 0x474
+
+Relevant disassembly (`+[FLEXRuntimeUtility performSelector:onObject:withArguments:error:]` + `0xae8` = `0x6f500`):
+
+    0006f4e4    adrp       x8, #0xcb000      ; @selector(errorWithDomain:code:userInfo:)
+    0006f4e8    add        x8, x8, #0x880    ; @selector(getReturnValue:)
+    0006f4ec    ldur       x9, [x29, #-0xa0]
+    0006f4f0    ldr        x2, [sp, #0x100]
+    0006f4f4    ldr        x1, x8
+    0006f4f8    mov        x0, x9
+    0006f4fc    bl         imp___stubs__objc_msgSend
+    0006f500    adrp       x8, #0xc9000
+
+I'm not great at reverse engineering, but since `@selector(getReturnValue:)` is in `x1` before the `msgSend`, isn't it crashing in `-[NSInvocation getReturnValue:]`?
+
+I'm not sure what caused it but I've submitted a PR that fixes it somehow.",NSExceptional,
+167,2017-01-15 09:40:59,"Hey,
+I am using this over iPhone 6s+ with iOS10.1.
+
+Always getting null here:
+
+<S_CODE_TOKEN>
+
+on this line:
+<S_CODE_TOKEN>
+
+Can you please advise?",yanivhasbani,
+167,2017-03-07 00:51:42,"I am seeing the same thing, a debug logging view that used to work no longer receives and log messages",evilDave,
+166,2017-01-04 03:41:05,cann't  download image by SDWebImage SDK when open FLEX debug request data.,FelixYin66,
+166,2017-01-04 09:16:57,"I use FLEX and SDWebImage in the same time, no problem. Maybe you need provide more info",Huang-Libo,
+165,2016-12-29 09:43:09,"![image](https://cloud.githubusercontent.com/assets/5977236/21540989/4131b222-cdee-11e6-846a-06a183500fd5.png)
+",wenyhooo,
+165,2016-12-29 13:19:47,"You can try:
+
+![image](https://cloud.githubusercontent.com/assets/2378280/21544708/6ed3f226-ce0c-11e6-9057-3a9fd284855b.png)
+
+If you are using FLEX with dynamic lib",lovesunstar,
+165,2017-01-07 18:34:56,debug in simulators is ok,diong,
+164,2016-12-26 01:48:54,"This is a first pass at adding richer inspection of apps using AsyncDisplayKit view/layer backed nodes in their hierarchy. It generalizes the View type with the introduction of the `FLEXElement` proxy class. Items represent either `UIView`s or `ASDisplayNode`s and provide a public interface that encapsulates the heuristics of jumping in and out of the node and view hierarchies. Goal was to add support without having to include the AsyncDisplayKit framework as a dependency, hence the excessive amount of `performSelector:` and `NSInvocation`.
+
+I'd like to add some richer properties to the custom node object explorer view controller, but I wanted to put this up in its simplest form to get feedback on the direction and start the conversation about including node hierarchy support to FLEX. Tons of great ideas came to mind while working on this that I'd love to see introduced into FLEX — opening up the object explorer view controller API to be extensible by consumers of the framework being one of them. Looking forward to making it easier to debug ASDK app with FLEX!
+
+- [ ] elementsAtTapPoint equality always fails. Compare element objects.",levi,
+164,2016-12-26 18:24:30,"@levi very cool!  This could be useful to thousands of developers :).  If it gets merged, let's feature it on asyncdisplaykit.org and in the Slack channel.
+
+Could you share some screenshots of what it looks like for an end user?",appleguy,
+164,2016-12-27 01:25:31,Super cool! I'm on holiday right now but will try to get this reviewed asap! It would be awesome to see screenshots as Scott mentioned.,ryanolsonk,
+164,2016-12-27 02:59:24,"I would also love to gut the current object explorer architecture as it is painful to work with or extend as-is. I've got a branch rebuilding the explorer VCs with IGListKit but I haven't had time to finish it. Hopefully would be easier to customize the node explorer in that new-world. Please don't judge me for the code I wrote three years ago 😉.
+
+One thought from reading the description is whether we could make `FLEXHierarchyItem` a protocol that anything (view, node, component, etc.) could conform to. We could possibly ship the implementation for the `ASNode` conformance in a category inside of ASDK. That might cut out some of the runtime introspection. Just an idea so let me know what you think.",ryanolsonk,
+164,2017-01-07 01:44:10,"@ryanolsonk I love the idea of extending the `FLEXHierarchyItem` to be a protocol, such that any framework can support hierarchy inspection. There is a caveat, however, where I've extended FLEX to jump between view and node hierarchies based on some heuristic rules for the entire picture to be visible in the explorer. If FLEX were to be opened up to support multiple frameworks, we'd have to figure out how to support custom traces of the hierarchy in a meaningful way — likely just push that responsibility down to the individual framework implementing support.
+
+I haven't had much time to look at this since I've put it up, but happy to continue the dialog with you to figure out where to take this. In the meantime, we've started using my branch internally at Pinterest and it's working great. Excited to provide the support to others in the near future.
+
+Also, screenshots soon.",levi,
+164,2017-01-16 00:45:49,"Finally had a chance to patch this locally and did some quick checks on the example project to look for functional regressions. Here are a few bugs I noticed:
+
+Info bar doesn't show up below toolbar when an item is selected:
+![screenshot 2017-01-15 16 34 34](https://cloud.githubusercontent.com/assets/1422245/21967725/15bba034-db41-11e6-9388-2339b492d823.png)
+vs.
+![screenshot 2017-01-15 16 36 01](https://cloud.githubusercontent.com/assets/1422245/21967727/1ee5a574-db41-11e6-93e8-28800d727459.png)
+
+When an item is selected, the hierarchy list lacks the depth and selection indicators
+![screenshot 2017-01-15 16 34 46](https://cloud.githubusercontent.com/assets/1422245/21967736/3a945266-db41-11e6-99f9-d777473c3875.png)
+vs
+![screenshot 2017-01-15 16 36 08](https://cloud.githubusercontent.com/assets/1422245/21967737/4163417e-db41-11e6-99cc-7a4e69280859.png)
+
+When the hierarchy list is dismissed, outlines of the other views at the tap point disappear
+![screenshot 2017-01-15 16 34 52](https://cloud.githubusercontent.com/assets/1422245/21967749/7319ece0-db41-11e6-8a33-72341b3e4e94.png)
+
+When moving a selected item, the outline/selection doesn't move along with the item
+![screenshot 2017-01-15 16 35 07](https://cloud.githubusercontent.com/assets/1422245/21967755/9684cf24-db41-11e6-95cd-5af0c904ea20.png)
+vs
+![screenshot 2017-01-15 16 36 26](https://cloud.githubusercontent.com/assets/1422245/21967756/9b616fde-db41-11e6-83de-95400c456a45.png)
+
+
+I'll try to track down fixes for these if I get some time. Looking forward to getting this out to the community!
+
+",ryanolsonk,
+164,2017-01-18 19:44:07,"Thanks for the review, @ryanolsonk. I'll take a look at fixing this up in the next week and will get back to you.",levi,
+164,2017-01-20 15:53:00,"Great, thanks @levi!",ryanolsonk,
+164,2017-02-08 23:58:48,@ryanolsonk finally found some time to fix up the issues in this diff. Going to do a test pass on my side this week to identify remaining issues. Is this something you'd like to land?,levi,
+164,2017-02-21 05:30:02,Awesome! Will patch and test out locally. I'm keen to do a full review pass and land this once we've verified all the functionality is working!,ryanolsonk,
+164,2017-02-21 05:31:31,That's great news! There are still a few edge cases I need to work out. Can prioritize fixing them up this week for a full review. ,levi,
+163,2016-11-28 21:00:54,Would this be possible to build FLEX as a static library and have a simple binding to use it in Xamarin.iOS ? ,lduchosal,
+162,2016-11-21 21:48:29,"This is very basic, I'm sorry, but I can't figure out how to do it.
+
+I've included it in `Podfile`, run `pod install`:
+
+    pod 'FLEX', '~> 2.4', :configurations => ['Debug']
+
+And then tried:
+
+* Running as-is in simulator. (doesn't show up, keyboard shortcuts `f` and `?` have no effect)
+* Adding `#import <FLEX.h>` and `#import <FLEXManager.h>` to `Bridging-Header.h` (no change)
+* Adding `import FLEXManager` or `import FLEXManager.h` to swift files (no such module)",SimplGy,
+162,2016-11-21 21:49:00,"I can do a PR that adds this to the readme if you'd like, once I figure it out.",SimplGy,
+162,2017-02-19 18:28:01,@SimplGy did you figure it out? I have exactly the same problem!,victorfigol,
+161,2016-11-08 13:06:49,"Hi, I've just replaced the original **Copy** button with an **Action** button in `FLEXImagePreviewViewController`, it behaves just like the **Photos** app, providing actions like ""Save to Camera Roll"", ""AirDrop"" and so on. I guess it's pretty handy.
+
+I totally love this project, and hope to make it more powerful.",unixzii,2017-01-15 20:05:38
+161,2017-01-15 20:05:33,Great addition. Thanks for the contribution!!,ryanolsonk,2017-01-15 20:05:38
+160,2016-11-07 08:13:15,"Hi!
+
+As suggested in pull request #159 comments, I added an example image to the Carthage setup instructions. I directly added the image in a `REAMDE-images` directory within the repository, instead of linking the image attached to my original PR.
+
+Best regards.",defagos,2017-01-15 20:07:49
+160,2017-01-15 20:07:46,👍  thanks!,ryanolsonk,2017-01-15 20:07:49
+159,2016-11-04 06:50:52,"Hi!
+
+I mostly use Carthage for my projects, and needed a way to properly exclude FLEX from release builds. I found one and added instructions to the readme file. This provides a more detailed answer to issue #131, which has been closed.
+
+I did not include any screenshot since yours seem hosted on your own. Here is an example if you want to upload it with the others and update the readme file accordingly:
+
+![flex_exclusion](https://cloud.githubusercontent.com/assets/170201/19996900/2c78a02c-a263-11e6-9861-63ef11a7e47d.jpg)
+
+Thanks for considering this (small) contribution to your awesome project!
+
+Best regards.",defagos,2016-11-04 23:54:32
+159,2016-11-04 23:54:24,"Great! This will be super helpful to those using Carthage. Thanks for the contribution!
+
+I no longer have access to the location that has been hosting the media files. Could we simply link to the image in this PR?
+",ryanolsonk,2016-11-04 23:54:32
+158,2016-10-20 08:54:45,"Hi,
+
+We are using this SDK in one of our popular product, I feel that this SDK is just for local purpose under the hood this does not track or send anything to remote server, reason i'm asking here is to ensure that this will not be show blocker in s :pite of ATS compliance requirement at the time we release. :)
+
+Thanks
+",pavm035,2016-10-21 16:09:08
+158,2016-10-20 22:56:52,"Just don't include FLEX in your release builds.
+",mitchellporter,2016-10-21 16:09:08
+158,2016-10-21 04:20:39,"Hi @mitchellporter  
+
+So in that case if we running the app in debug build do we still need ATS compliance check, I mean at least by adding Exception keys.
+",pavm035,2016-10-21 16:09:08
+158,2016-10-21 15:49:34,"You're worrying about nothing. I've never actually inspected it but I HIGHLY doubt FLEX is tracking or sending anything to a remote server. I'm so sure that I'd bet money on it. The purpose of FLEX is just a debug tool. It's not like it has any third-party plugins or calls to a FLEX web service or something.
+
+Just don't include FLEX in your release builds and use it as a debugging tool. 
+",mitchellporter,2016-10-21 16:09:08
+158,2016-10-21 16:09:08,"FLEX itself does not make any network requests. As @mitchellporter said, this is just a debugging tool. Including in release builds is also not officially supported by this project as there is private API use which goes against App Store guidelines.
+",ryanolsonk,2016-10-21 16:09:08
+157,2016-10-20 02:59:03,,froody,2016-10-21 02:48:28
+157,2016-10-21 02:48:25,"Very cool! Thanks for the contribution.
+",ryanolsonk,2016-10-21 02:48:28
+156,2016-10-18 03:22:54,"thanks your contribution..
+",michaelmou,
+155,2016-10-17 14:10:39,"I have integrated the FLEX library in my app but i am sometimes not getting the icons for Copy, Done etc in the explorer.
+
+PodFile
+pod 'FLEX', '~> 2.0', :configurations => ['Debug']
+",vim1486,
+154,2016-10-14 04:51:45,"I saw a commit 7afd50d24167fb3679edc6312b8507db7f98d165 has `removed asl hacks needed for iOS 7`.
+",CodeLife2012,2016-10-15 14:18:09
+154,2016-10-14 12:37:20,"Yes, FLEX now only supports iOS 8 and higher. I'm not sure I understand the question here. Could you clarify?
+",ryanolsonk,2016-10-15 14:18:09
+154,2016-10-15 14:18:09,"ReadMe still state support iOS 7 and higher, just confirm this. So close this.
+",CodeLife2012,2016-10-15 14:18:09
+154,2016-10-21 02:54:44,"Ah yea, we should update the readme
+",ryanolsonk,2016-10-15 14:18:09
+153,2016-10-14 02:26:09,"When I use apple mobile phone opened the FLEX system Log function, it is a blank, my mobile phone system is iOS 10.
+",Excalibur-CT,2016-10-14 12:37:42
+153,2016-10-14 12:37:41,"Duplicate of #140 
+",ryanolsonk,2016-10-14 12:37:42
+152,2016-10-08 03:09:36,"Use `@selector(URLSession:dataTask:didBecomeDownloadTask:)` instead of `@selector(URLSession:dataTask:didBecomeDownloadTask:delegate:)` in method search.
+",rtyu128,2016-10-10 15:16:59
+152,2016-10-10 15:16:44,"Thanks for the fix!!
+",ryanolsonk,2016-10-10 15:16:59
+151,2016-09-29 10:21:01,"`URLSession:task:willPerformHTTPRedirection:newRequest:completionHandler:`
+`URLSession:dataTask:didReceiveResponse:completionHandler:`
+
+The completion handler must be invoked If these delegates are implemented. Otherwise, the task will never finish.  
+",Blankdlh,2016-09-30 23:38:55
+151,2016-09-30 23:38:52,"Thanks for the fix! LGTM
+",ryanolsonk,2016-09-30 23:38:55
+150,2016-09-27 03:44:06,"Hi~ There is a little mistake in `FLEXNetworkObserver`.
+Method:injectIntoAllNSURLConnectionDelegateClasses line:175
+
+<S_CODE_TOKEN>
+
+Although this makes no effect in most situation. 
+If some class implement `@selector(URLSession:dataTask:didBecomeDownloadTask:)` only, the method will not be swizzled.
+`FLEX` is a fantastic debugging tool helps me a lot, B&R~
+",rtyu128,2016-10-10 15:17:00
+150,2016-09-30 23:47:45,"Good catch! Do you want to open a pull request? 😉 
+",ryanolsonk,2016-10-10 15:17:00
+150,2016-10-08 03:03:27,"It's my pleasure, Thank you very much~ 😄 #152 
+",rtyu128,2016-10-10 15:17:00
+149,2016-09-26 22:16:08,,c0diq,2016-09-30 23:41:54
+149,2016-09-30 23:41:50,"Thanks for the PR!
+
+:shipit: 
+",ryanolsonk,2016-09-30 23:41:54
+148,2016-09-26 13:40:03,"We have apps that are getting rejected by the App Store for the use of className in our code, which is considered by Apple to be a non-public API. They mentioned this:
+
+<S_CODE_TOKEN>
+
+I found this line in the code:
+
+<S_CODE_TOKEN>
+
+Would it be possible to update the class FLEXRealmDatabaseManager to eliminate the use of className?
+
+Thanks,
+Larry
+",larryaasen,
+148,2016-09-26 22:10:02,"Also NSURLConnection is now deprecated when targeting iOS 9. Is there a way to add support to conditionally remove its usage?
+",c0diq,
+148,2016-10-01 00:03:03,"Ironically, this call looks like private API use to Apple but it's actually not. However we do have some actual private API use (obfuscated) which is part of why we discourage shipping FLEX in app store builds. There are instructions in the README on how you can exclude it.
+
+It could be nice to restructure the Realm integration as a subspec. That would keep the integration optional but properly include the Realm headers/library rather than doing things dynamically through the runtime for those that opt-in. If someone want's to look into that, I'd be happy to review, but it's not something I plan to take on personally.
+
+For the separate `NSURLConnection` question, we've traditionally handled that in the project by suppressing the deprecation warnings via `#pragma clang diagnostic push ...` directives. I think there is enough lingering use of `NSURLConnection` that we don't actually want to remove the code.
+",ryanolsonk,
+147,2016-09-09 06:34:25,,CoderJackie,
+147,2016-10-01 00:04:50,"Could you provide more details on the issue you're seeing here?
+",ryanolsonk,
+146,2016-09-06 03:02:00,"Any private API used in this framework?
+
+Or put this in a release build will cause some problems?
+",CodeLife2012,2016-09-07 23:46:55
+146,2016-09-06 03:16:57,"You should only be using this in debug builds.
+",mitchellporter,2016-09-07 23:46:55
+146,2016-09-06 04:20:42,"But why? @mitchellporter 
+",CodeLife2012,2016-09-07 23:46:55
+146,2016-09-06 04:32:49,"Here is the description for FLEX in the README: 
+
+> FLEX (Flipboard Explorer) is a set of in-app debugging and exploration tools for iOS development. When presented, FLEX shows a toolbar that lives in a window above your application. From this toolbar, you can view and modify nearly every piece of state in your running application.
+
+Ask yourself whether that belongs in a release build being given to beta testers or being submitted to the App Store. For me the answer has always been no.
+",mitchellporter,2016-09-07 23:46:55
+146,2016-09-07 16:34:22,"I hope use this framework when release and submit to App store, but hide when application launch, it aroused only server issued some instruct.
+",yanzhiwei147,2016-09-07 23:46:55
+146,2016-09-07 23:46:55,"There are several apps on the store that include this framework (see http://mightysignal.com/top-ios-sdks?tag=6)
+
+Be warned that there is private API use and your app may be rejected. I do not recommend including the tool in your production app, but it seems at least a few people have gotten it through app review.
+",ryanolsonk,2016-09-07 23:46:55
+146,2016-09-08 06:11:11,"nice site.
+",CodeLife2012,2016-09-07 23:46:55
+145,2016-09-01 13:47:25,"I debugging a strange case where when accessibility is turned on , touches are passed through windows which are at a high level to the windows underneath. ( the window ""floats"" above the other windows content, 
+
+>  window.windowLevel = keywindow.windowLevel+1
+
+)
+
+I've also noticed that when I show the flex explorer, the default accessibility behavior isn't happening on it as well, i.e. labels are not read out load from the explorer view controller's table view. It would seem the same behavior is happening there as well.
+
+Any way to make accessibility work on higher window levels by default or debug why accessibility touches are passed through to beneath views using the explorer?
+
+A minimal working example:
+
+<S_CODE_TOKEN>
+",avnerbarr,2016-09-01 17:04:48
+145,2016-09-01 17:04:48,"Found the reason. 
+
+Need to set the accessability attribute in order for the system to read out the values properly
+
+'''
+Window.accessibilityViewIsModal = true
+'''
+",avnerbarr,2016-09-01 17:04:48
+144,2016-08-25 06:12:02,"After the lunching of FLEX, the 'FLEX' button works well in the simulator. But when i use a physical device, there's nothing happened after i click the button. I find that FLEXManager alway returns null, any help?   
+",Scyano,2016-10-01 00:08:40
+144,2016-10-01 00:08:40,"My only guess here is that your project is set up to exclude FLEX in the builds that you are running on the device. However, I'm surprised that you're not getting build errors when referencing `FLEXManager`. Without more details, it's difficult to say what's going on. I have not seen reports of this before. I'm going to close since there's not currently anything actionable here.
+",ryanolsonk,2016-10-01 00:08:40
+143,2016-08-21 14:47:47,"FLEX hook NSURLSessionDataDelegate optional method `-URLSession:dataTask:didReceiveResponse:completionHandler:`. In Apple's document,  if delegate implement this method, they have to call completionHandler, or system will not proceed the request.
+To reproduce this bug, remove this function in `Example/UICatalog/AAPLAppDelegate.m`. Then the NSURLSessionDataTask with URL `http://cdn.flipboard.com/serviceIcons/v2/social-icon-flipboard-96.png` will be hang-up forever.
+So when inject to this function, we should first check if delegate class has implement this function. If not implemented, we have to call completionHandler every time this method get called.
+",huajiahen,2016-09-30 23:39:24
+143,2016-08-23 23:39:58,"I too have been affected by this issue. It would be tremendously helpful if this PR gets accepted and merged.
+",dcirne,2016-09-30 23:39:24
+143,2016-09-30 23:39:24,"Thanks for the PR! Sorry for the latency on review here. I think #151 has a slightly cleaner approach to fixing this, since we already have a mechanism for providing a different block when the method is not implemented. I've merged that one, which should resolve the issue!
+",ryanolsonk,2016-09-30 23:39:24
+142,2016-08-15 15:17:23,,shepting,2016-09-30 23:42:58
+142,2016-08-23 23:43:52,"I assume the original author meant ""purged,"" not ""pruned.""
+",samdozor,2016-09-30 23:42:58
+142,2016-09-30 23:42:52,"I did mean purged, but pruned is fine too :)
+
+Sorry for the latency here.
+",ryanolsonk,2016-09-30 23:42:58
+141,2016-08-15 11:31:35,"Need support cocoapods 1.0.0 1.1.0
+",nypisces,2016-10-01 22:33:58
+141,2016-10-01 22:33:58,"I am running cocoapods 1.0.1 and the spec lints successfully. As far as I'm aware, 1.0.0 did not require changes to the podspecs. Any issues are likely in your podfile. If there's a specific issue that still not resolved, please reopen/comment again here.
+",ryanolsonk,2016-10-01 22:33:58
+140,2016-08-03 13:16:48,"On iOS 10 betas 1-4 no log messages are displayed. Probably due to introduced [Unified Logging and Activity Tracing](https://developer.apple.com/videos/play/wwdc2016/721/)?
+",andreyz,
+140,2016-10-01 00:14:31,"Yea, it looks like ASL has been replaced by OS Log. We'll need to provide conditional support for iOS 10+.
+",ryanolsonk,
+140,2016-10-29 13:54:22,"I also have this problem ，hope to resolve this
+",coderyi,
+140,2016-11-22 07:32:07,Same problem.,LittleChuan,
+140,2016-12-20 03:31:23,same problem,gjterry,
+140,2016-12-22 01:23:31,Looking forward to the enhancement,Huang-Libo,
+140,2016-12-26 10:12:22,Same problem,pegurov,
+140,2017-03-20 04:24:03,Same problem,neghao,
+139,2016-07-29 08:17:30,"I hope support IOS7!TKS!
+",wangjindong,2016-07-29 22:56:43
+139,2016-07-29 22:56:43,"This project has a minimum iOS version of 8.0. No plans to return to supporting 7. Sorry!
+",ryanolsonk,2016-07-29 22:56:43
+139,2016-08-02 01:36:49,"So, I can't use pods to manage it.
+",wangjindong,2016-07-29 22:56:43
+138,2016-07-27 20:56:17,,iampgzp,2016-08-01 17:15:44
+138,2016-07-29 22:25:10,"This great!! Just two comments on the commit.
+",ryanolsonk,2016-08-01 17:15:44
+138,2016-08-01 16:51:23,"Let me know if this works. Thanks
+",iampgzp,2016-08-01 17:15:44
+138,2016-08-01 17:15:39,"Looks great. Thanks!
+",ryanolsonk,2016-08-01 17:15:44
+137,2016-07-27 06:30:13,"I have a lazy var:
+
+<S_CODE_TOKEN>
+
+And then I have a loadView():
+
+<S_CODE_TOKEN>
+
+If I added FLEX library, then it crashes on this line:
+
+<S_CODE_TOKEN>
+
+**EXC_BAD_ACCESS**
+
+If I remove FLEX everything works perfectly. Any thoughts on this?
+",gontovnik,
+137,2016-10-01 00:16:50,"I have no idea. Do you know if this reproduces in a minimal sample project?
+",ryanolsonk,
+136,2016-07-22 17:53:36,"Fixed in my PR #134, please merge!
+",NSExceptional,2016-07-29 23:16:57
+136,2016-07-29 23:16:57,"Merged 😄 
+",ryanolsonk,2016-07-29 23:16:57
+135,2016-07-18 13:46:24,"has any projects  like  this for Android？
+",lytasky,2016-07-29 23:17:24
+135,2016-07-29 23:17:24,"Not that I'm aware of. You could start one! 😄 
+",ryanolsonk,2016-07-29 23:17:24
+134,2016-07-06 20:05:36,"Added a way to jump to a specific class from the System Libraries tab,
+since it is sometimes difficult to find a class if you don’t know which
+bundle it’s in.
+
+Also fixed a crash in the second commit. Whoever wrote `[FLEXRuntimeUtility valueForIvar:onObject:]` was checking `strcmp(name, ""isa"") != 0` when I think they intended to write `strcmp(name, ""isa"") == 0`, so I corrected that.
+",NSExceptional,2016-07-29 22:35:49
+134,2016-07-29 22:35:45,"Thanks for the contribution!
+
+""Whoever wrote `FLEXRuntimeUtility`..."" -- I think that would be me 😉 . Thanks for fixing the bug.
+",ryanolsonk,2016-07-29 22:35:49
+134,2016-07-29 22:42:47,"Sure thing! I was browsing commits and the bug wasn't there originally, so I was thinking someone else might have introduced it via a merge or something.
+",NSExceptional,2016-07-29 22:35:49
+133,2016-07-06 07:15:28,,jjj2mdd,2016-07-27 06:33:31
+132,2016-06-21 07:47:04,"Fix typos
+",revolter,2016-07-29 22:27:32
+132,2016-07-29 22:27:29,"👍  thanks!
+",ryanolsonk,2016-07-29 22:27:32
+131,2016-06-14 03:38:26,"Hi,
+I have read the section **Excluding FLEX from Release (App Store) Builds** in the README, which suggests to exclude source files by name.
+However, I am using **FLEX.framework** with the form of **Embedded Binaries**.
+Is there any way to exclude **FLEX.framework** from release builds?
+Thanks
+",coppercash,2016-10-01 00:21:04
+131,2016-10-01 00:21:04,"You should be able to do something like `-framework FLEX.framework` in the **Other Linker Flags** build setting. I haven't looked into specifics, hopefully that sets you on the right path.
+",ryanolsonk,2016-10-01 00:21:04
+130,2016-06-06 04:36:06,"It must crash when did select ""Heap Objects"" each time.
+
+![image](https://cloud.githubusercontent.com/assets/2561942/15812097/59fa7828-2be3-11e6-8d10-89fe912e07c0.png)
+",xohozu,2016-07-29 23:26:53
+130,2016-06-06 16:40:04,"This is a duplicate of #119 
+",sozorogami,2016-07-29 23:26:53
+130,2016-07-29 23:26:53,"Closing as duplicate.
+",ryanolsonk,2016-07-29 23:26:53
+129,2016-05-20 19:37:24,"I'm considering adding FLEX to our team projects.  Our database files have the extension ""data"".  I see there have already been two updates adding supported file extensions to FLEXTableListViewController.  Would you welcome a PR where I added a static method registerSQLiteExtension?
+",dakamojo,
+129,2016-07-29 23:28:38,"Sure!
+",ryanolsonk,
+128,2016-05-20 07:32:46,"Following the latest trends in Swift, Realm made the decision to deprecate using strings for file paths in its API in favour of `NSURL`. As of the latest version of Realm, 0.103.0, the deprecated `path` property was completely removed.
+
+As reported in https://github.com/Flipboard/FLEX/issues/127, this pull request updates the integration of Realm in FLEX to use the new NSURL value for file paths.
+",TimOliver,2016-05-20 13:15:30
+128,2016-05-20 13:15:07,"Thanks for the quick fix! :shipit:
+",ryanolsonk,2016-05-20 13:15:30
+127,2016-05-19 15:40:19,"I got this error when tried to complile my project, it bight be by an update of realm or something, so pleas check out what could you do to fix it
+",davidlondono,2016-10-01 23:06:17
+127,2016-05-19 17:40:16,"I have the same problem too ... 
+",rubikva,2016-10-01 23:06:17
+127,2016-05-19 18:14:14,"I'm using an older version of Realm.... but thats not the idea....
+",davidlondono,2016-10-01 23:06:17
+127,2016-05-20 07:14:47,"Hi guys! I just noticed this too. Realm recently changed its API to use `NSURL` instead of strings when referring to file paths. In the very latest release, the old `path` properties were deprecated and subsequently removed. 
+
+I'll make a pull request to fix this ASAP!
+",TimOliver,2016-10-01 23:06:17
+127,2016-06-08 07:37:50,"I'm using Flex from cocoapods. Please update cocoapods too.
+",idream97,2016-10-01 23:06:17
+127,2016-07-10 18:00:11,"👍  for cocoapods update, for now you can use the master or a specific commit like so:
+
+<S_CODE_TOKEN>
+",lakhman,2016-10-01 23:06:17
+127,2016-07-29 23:29:04,"Will do a version bump shortly.
+",ryanolsonk,2016-10-01 23:06:17
+127,2016-10-01 23:06:17,"Latest release has this now. Sorry for the delay.
+",ryanolsonk,2016-10-01 23:06:17
+126,2016-05-15 09:41:05,"title says it all.
+",joemerlino,
+125,2016-05-04 18:32:56,"Says there are 0 tables - but I verified using realm browser that there is data stored in the realm file.
+",jkim-git,
+125,2016-10-01 00:26:29,"@TimOliver do you have any insight here?
+",ryanolsonk,
+125,2016-10-01 01:07:11,"Uh-oh. Not without more information!
+
+If there's nothing private in there, can you please post the zipped up Realm file here so I can test it myself?
+",TimOliver,
+125,2016-10-01 19:29:59,"This is pretty old -- just going back through the issues now -- so perhaps it's no longer a problem.
+",ryanolsonk,
+125,2016-10-03 16:42:40,"Okay sure thing. Let me know if you need me to test/fix anything! :)
+",TimOliver,
+124,2016-05-01 05:46:14,"This error pops up when i try to sideload FLEX
+",memlojr,2016-10-01 00:25:37
+124,2016-10-01 00:25:37,"If you are trying to inject FLEX into other apps, that is not something officially supported by this project. If I am misunderstanding the question, please comment again/reopen.
+",ryanolsonk,2016-10-01 00:25:37
+123,2016-04-26 05:25:17,"Wait how do i actually run this app onto my (iPod 5,1 iOS 9.2.1) 
+There is that error adressed (IN README) but i dont know exactly how to do it.
+Thanks 
+",memlojr,2016-10-01 00:22:16
+123,2016-10-01 00:22:16,"There is not enough information here for me to provide any suggestions. Closing out.
+",ryanolsonk,2016-10-01 00:22:16
+122,2016-04-18 06:17:15,"I am having trouble sideloading FLEX through xcode
+",memlojr,2016-07-29 23:28:20
+122,2016-04-18 07:38:43,"I'm using `Flipboard FLEX Loader` on my jailbroken iPod 5. Hopefully that helps.
+",mitchellporter,2016-07-29 23:28:20
+122,2016-04-18 09:05:05,"Oh do you have to be jailbroken to use FLEX?
+",memlojr,2016-07-29 23:28:20
+122,2016-04-18 17:46:36,"No, you don't have to be jailbroken, just saying that currently works for me. The cocoapod also works for me on my normal iPhone.
+",mitchellporter,2016-07-29 23:28:20
+122,2016-04-18 20:29:06,"Oo
+",memlojr,2016-07-29 23:28:20
+122,2016-07-29 23:28:19,"If you would like to run FLEX in other people's apps, you will need a jailbroken phone. Otherwise you can integrate it into your own app through cocoapods, carthage, or directly. There are instructions in the readme.
+",ryanolsonk,2016-07-29 23:28:20
+121,2016-04-18 02:58:20,"First, thx for the great tool. But, it would be better to support for debugging app extension: keyboard.
+",mayqiyue,
+120,2016-04-14 21:00:44,"Can I be added where it will hold a request for a selected host and you can edit either the request or the response before they are send to the server/app? It would do me a big favor when I'm not next to a PC with fiddler installed
+",MrARM,
+119,2016-04-08 15:40:31,"Trying to open the Heap Objects inspector in a large project, I get a crash on line 69 of `FLEXHeapEnumerator` with `EXC_BAD_ACCESS`. This occurs consistently on iOS 8.4 and 9.3, on both device and sim.
+
+I believe this was working before with the current version of FLEX, so the issue may be caused by a class added recently. By throwing in a log on line 71 of `FLEXLiveObjectsTableViewController`, I can confirm that it enumerates through about 150000 objects successfully before crashing. Of course, the exception occurs before printing the name of the class it's choking on.
+
+I would love advice as to how I can track down the object causing the crash.
+",sozorogami,
+119,2016-04-29 21:08:18,"+1
+",yniesp,
+119,2016-05-01 10:32:19,"+1
+",dissimiral,
+119,2016-05-02 22:19:38,"The crash occurs on line 69 of FLEXHeapEnumerator.m.
+
+`zoneCount` is 7 but the app segfaults when i = 4 (at zone 4?).  Setting `zoneCount` to 3 in the debugger stopped the crash, but I still haven't narrowed down the reason why.  Investigating...
+",JALsnipe,
+119,2016-07-29 23:16:31,"I think the core issue here is that enumerating through the heap while the heap itself is changing is inherently unsafe. I'd like to investigate if there's a way we can make this async safe and signal to stop all threads. I don't have a timeframe on investigating that though.
+",ryanolsonk,
+119,2016-07-29 23:25:02,"Actually, there is an issue that was introduced here that may cause issues for memory allocated through something other than malloc. I should have a fix up shortly.
+",ryanolsonk,
+119,2016-08-09 15:58:30,"Can you see if things work any better following 22e7edb?
+",ryanolsonk,
+119,2016-08-09 16:12:23,"Still crashing at `zone->introspect->enumerator(TASK_NULL, (__bridge void *)block, MALLOC_PTR_IN_USE_RANGE_TYPE, (vm_address_t)zone, reader, &range_callback);`.
+
+Backtrace:
+
+<S_CODE_TOKEN>
+
+Xcode 7.3.1, OS 10.11.5, iPhone 6s simulator.
+",JALsnipe,
+119,2016-11-01 07:24:39,"+1
+",LunaCodeGirl,
+119,2017-01-23 03:38:47,"By  lock introspect before enumerator, I solve this.
+Sample codes:
+zone->introspect->force_lock;
+                zone->introspect->enumerator(TASK_NULL, (__bridge void *)block, MALLOC_PTR_IN_USE_RANGE_TYPE, (vm_address_t)zone, reader, &range_callback);
+                zone->introspect->force_unlock;",spyLiuDJ,
+119,2017-01-23 20:56:41,"Nice! I was discussing that API with @kastiglione recently. The one concern is that any allocations within the enumeration itself could lead to deadlock if they happen to be within the same zone. We should be able to avoid that by creating a side zone for memory used within the enumeration, but it will take a little more restructuring.
+
+All that said, I'm open to trying the simple lock/unlock mechanism with the existing implementation. It may not be totally safe, but neither is what we have now.",ryanolsonk,
+119,2017-01-31 17:46:03,@ryanolsonk Did you or anyone ever implement the locking on `master`? Trying to see *Objects referencing this object* crashes 100% of the time in certain apps like Twitter,NSExceptional,
+119,2017-02-05 00:14:57,Haven't tried but it's literally two lines if someone wants to open the PR ;),ryanolsonk,
+118,2016-04-08 07:38:13,,TristenChenTao,2016-07-29 22:25:44
+118,2016-07-29 22:25:44,"Carthage is already supported
+",ryanolsonk,2016-07-29 22:25:44
+117,2016-03-15 03:08:39,"http://stackoverflow.com/questions/36001728/nsinvalidargumentexception-nsconcretemutabledata-initwithcapacity-absu
+
+I have written my issue in a SO post. I am using FLEX 2.2.
+",kccheung,
+117,2016-03-26 18:58:20,"We should probably add our own upper limit on capturing the response data for a request.
+",ryanolsonk,
+116,2016-03-11 11:56:56,"https://github.com/Flipboard/FLEX/issues/5 is amazing! But I would love to have a waterfall graph of when each request starts and ends so I can understand why one may be taking a littler longer (Maybe we are sending too much?
+
+Something like we have in chrome debugger.
+
+![image](https://cloud.githubusercontent.com/assets/1484989/13701523/590ba0a6-e780-11e5-9b8d-de79e6c02bb0.png)
+",jcampbell05,
+115,2016-03-01 21:03:21,"Hi, first thank you so much for this is amazing! :+1: 
+
+Excuse me! amm the Peek and Pop it does not work on Simulator 6s plus with Xcode 7.2 when I´m doing the longer press and use the combination of the command, control, and shift ... can you tell me why? 
+
+Thanks!
+Regards!
+",Hacoga,
+115,2016-03-04 09:58:28,"I have the same problem. Peek and Pop doesn't work with Xcode 7.2, I tried iOS 9.1 and 9.2 on various iPhone simulators.
+",Romza,
+115,2016-03-12 17:59:10,"One important part about the force touch support is that the touch needs to move to get force updates. Can you try moving the touch slightly after pressing command + control + shift? It's still working for me on Xcode 7.2.
+
+I realize this isn't ideal behavior, but the feature is really just a stopgap until Apple provides actual support for force touch directly in the simulator.
+",ryanolsonk,
+115,2016-03-17 06:53:12,"It works on my Xcode 7.2.1 and iPhone 6S simulator. Just like @ryanolsonk said, 
+
+For peeking,
+You need to move a bit of your mouse cursor to let it work while holding Shift + Command, **not** Command + Control + Shift.
+
+For Popping,
+While holding Shift + Command during peeking, press Control 3 times to pop out. I think 3 times means the hardest force applied, as the document stated, each key contributes 1/3 of maximum possible force.
+",felixwcf,
+114,2016-02-25 14:24:11,"when the number of objects changed frequently, may be will  crash that add wrong thing to instances
+",SoXeon,2016-02-29 05:52:30
+114,2016-02-25 14:49:19,"for example,before you click the cell of NSCFString, the count of it is 23770, but when you push the view controller, the number of NSCFString changed to 25394, the process of changing will let some instance release，so may be crash
+",SoXeon,2016-02-29 05:52:30
+114,2016-02-29 05:52:23,"Interesting! The heap objects stuff is inherently unsafe but it seems like this could make it a little better. Thanks for the PR!
+",ryanolsonk,2016-02-29 05:52:30
+113,2016-02-24 15:13:06,"Hi,
+
+I'm experiencing a crash when debugging my app with the iOS 8 simulator, when entering text with the iOS onscreen keyboard (happens in the first character).
+I'm getting `EXC_BAD_ACCESS` in `keyCode = [event _keyCode];` at the `handleKeyboardEvent` function in the FLEXKeyboardShortcutManager.m class.
+
+Thanks in advance!
+Oren
+",orenco82,2016-02-29 05:48:10
+113,2016-02-24 15:15:00,"(iOS 8.4 simulator in Xcode 7.2.1) , doesn't happen in iOS 9 simulator.
+",orenco82,2016-02-29 05:48:10
+113,2016-02-26 19:11:58,"Happens to me in my iOS 9 sim. Got around it by turning off the method swizzling happening on keyboard shortcuts via: `[[FLEXManager sharedManager] setSimulatorShortcutsEnabled:NO];`
+",Munchery-KleinLieu,2016-02-29 05:48:10
+113,2016-02-26 20:02:17,"I believe this was fixed on master a few weeks ago. I'll do a release soon to make sure everyone gets the fix.
+",ryanolsonk,2016-02-29 05:48:10
+113,2016-02-28 15:36:44,"Thanks @ryanolsonk , that would be great.
+Went with the `[[FLEXManager sharedManager] setSimulatorShortcutsEnabled:NO];` fix in the meantime.
+",orenco82,2016-02-29 05:48:10
+113,2016-02-29 05:48:10,"This was actually a different issue that what I thought. Fixed in 24985ac9842f22b1609e296a286f61f7d4a352db
+",ryanolsonk,2016-02-29 05:48:10
+112,2016-02-23 14:12:21,"Sorry about this! It appears a bug involving Realm nullability slipped through the cracks!
+
+This PR adds a small check to ensure properties return from a Realm object are not nil, and substitutes an `NSNull` instance if it is to ensure the data is still valid when passed to an `NSArray` down the line.
+",TimOliver,2016-02-23 14:12:57
+112,2016-02-23 14:13:19,"Thanks a lot for write access @ryanolsonk! I hope doing this was okay! :)
+",TimOliver,2016-02-23 14:12:57
+112,2016-02-23 19:22:59,":+1: :shipit: 
+",ryanolsonk,2016-02-23 14:12:57
+111,2016-02-21 19:07:17,"Hi, thanks for Realm browser supporting:) 
+But when i trying to open any table, app crashes...
+
+**\* Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: '**\* -[__NSArrayM insertObject:atIndex:]: object cannot be nil'
+**\* First throw call stack:
+(
+    0   CoreFoundation                      0x000000010ead1e65 __exceptionPreprocess + 165
+    1   libobjc.A.dylib                     0x000000010e54adeb objc_exception_throw + 48
+    2   CoreFoundation                      0x000000010e9988c5 -[__NSArrayM insertObject:atIndex:] + 901
+    3   FLEX                                0x000000010adf0340 -[FLEXTableContentViewController contentAtRow:] + 464
+    4   FLEX                                0x000000010adb3e5d -[FLEXMultiColumnTableView tableView:cellForRowAtIndexPath:] + 365
+    5   UIKit                               0x000000010bd86e43 -[UITableView _createPreparedCellForGlobalRow:withIndexPath:willDisplay:] + 766
+    6   UIKit                               0x000000010bd86f7b -[UITableView _createPreparedCellForGlobalRow:willDisplay:] + 74
+    7   UIKit                               0x000000010bd5ba39 -[UITableView _updateVisibleCellsNow:isRecursive:] + 2996
+    8   UIKit                               0x000000010bd9001c -[UITableView _performWithCachedTraitCollection:] + 92
+.......................
+",khoren93,2016-02-29 05:53:41
+111,2016-02-23 05:16:25,"Hi @khoren93! I'm the one who filed the PR for Realm support! Glad to hear you've started using it!
+
+Oh dear! That was quick! While I tested the library on both a test Realm file, and a Realm file from one of my own apps, it sounds like it doesn't actually handle nullability properly. Sorry I missed that!
+
+It'll take me a while to set up some test Realm data and test this myself, so if you have access to the FLEX codebase, could you please try this code out for me?
+
+In the file `FLEX/GlobalStateExplorers/DatabaseBrowser/FLEXRealmDatabaseManager.m`, on line 104, can you please replace that with this?
+
+<S_CODE_TOKEN>
+
+That should check to see if there's actually a value provided by that Realm property, and if there's not, insert an `NSNull` instance in its place to ensure that a `nil` value isn't applied to the `NSArray` there.
+
+Please let me know if that fixes it, and if it does, I'll file another PR. Thanks!
+",TimOliver,2016-02-29 05:53:41
+111,2016-02-23 13:31:24,"Hi @TimOliver! That fixes crash, thanks! :)
+",khoren93,2016-02-29 05:53:41
+111,2016-02-29 05:53:41,"Fixed in 552e687b9c07bc9147959f8cb10bd62c29675e2d
+",ryanolsonk,2016-02-29 05:53:41
+110,2016-02-21 18:11:59,"Oops! Something I clean forgot to include in my original PR. Sorry about that!
+
+This PR updates the README, to both mention the `sqlite` extension for SQLite, as well as Realm now being a supported format. :)
+",TimOliver,2016-02-23 06:08:27
+110,2016-02-23 06:08:24,":+1:
+",ryanolsonk,2016-02-23 06:08:27
+109,2016-02-17 08:53:17,"Currently, the password is set for every database connection, even if some databases are not password protected.
+
+I think that the check would look something like [this](https://github.com/sqlitebrowser/sqlitebrowser/blob/dd92f160125e04e97c1a16fcd05a8407ddb183db/src/sqlitedb.cpp#L207) and I don't know if it's necessary. It depends on the users' use cases, myself for example have only one database, which is encrypted.
+",revolter,2016-09-30 23:45:48
+109,2016-02-17 10:46:13,"So it looks like `sqlite3_key` function was not found, and it worked for me because I have SQLCipher included or something. Could it be done with a runtime check if `sqlite3_key` exists in the current scope (project)?
+",revolter,2016-09-30 23:45:48
+109,2016-02-17 14:42:46,"Maybe use [this solution](http://stackoverflow.com/a/12518433/865175)?
+",revolter,2016-09-30 23:45:48
+109,2016-09-30 23:45:48,"I'm going to close this out since it doesn't build in the current state. Feel free to reopen if you want to move forward with a different solution.
+",ryanolsonk,2016-09-30 23:45:48
+109,2016-09-30 23:51:11,"I'll make another PR, hopefully soon
+",revolter,2016-09-30 23:45:48
+108,2016-02-17 08:35:50,,revolter,2016-02-21 17:41:50
+108,2016-02-21 17:41:49,"Thanks for the pull request! I think this is covered by the PR I just merged from @TimOliver, so I'm going to close this one out. 
+",ryanolsonk,2016-02-21 17:41:50
+107,2016-02-16 04:38:12,"This is more of a convenience thing in most cases. It does become quite useful when debugging parent and child view controllers and is quite helpful (personally) when messing with apps and injecting FLEX using Cydia Substrate. `_viewControllerForAncestor` is quite an old method and has been around since [iOS 4.2 (November 2010)](https://github.com/nst/iOS-Runtime-Headers/blob/4.2/Frameworks/UIKit.framework/UIView.h#L279) so it can be assumed that it is as safe `_viewDelegate` which was introduced in 4.0, I believe. It is, however, more robust in that the view controller can be determined from _any_ view contained within a given view controller.
+
+I left the old method as is, even though this new method should be a suitable replacement. I'll leave such changes up to the main contributors' discretion going forward.
+",nin9tyfour,2016-02-17 04:24:36
+107,2016-02-17 04:24:32,"Cool! Thanks for the contribution! Sorry for making you deal with the object explorer class hierarchy/customization mess. I've been meaning to refactor that but just haven't found the time.
+",ryanolsonk,2016-02-17 04:24:36
+107,2016-02-17 06:25:59,"I actually have a few other additions/changes that I've implemented that I'm not sure whether or not you're interested in. I'm not sure of their usefulness outside of my main focus - development of tweaks for jailbroken iOS, but I guess they could be useful to some. My modifications currently exist in the form of a tweak and swizzle methods (this was simply to allow me to update the git repository without having to worry about resolving conflicts and whatnot). With some work, I can probably adapt them for use in the main project.
+
+Namely:
+- Inspecting a class from a string.
+- Listing the origin of the class (e.g: UIView originates from UIKit.framework).
+- Overview of protocols inherited by classes.The code itself traverses the class hierarchy and lists protocols inherited by each superclass.
+- A button to dismiss the keyboard if the explorer window is presented with the keyboard visible.
+- A controller for viewing all classes loaded by every loaded image.
+- A controller for viewing the names of all methods for all classes in all images.
+- A controller for viewing the names of all methods for all classes in a selected image.
+- A function for simulating a crash.
+- I also modified some code to allow inspection of UIAlertViews and UIActionSheets (or UIAlertControllers). This is achieved by enabling the FLEX window to be just over the level of such controllers and then to be reduced upon presenting a view controller.
+
+I've got these implemented in a way that would probably cause app rejection if left in a published build. If you'd like any of these changes implemented, let me know and I'll see what I can do to hide them using the methods that you've used throughout FLEX.
+",nin9tyfour,2016-02-17 04:24:36
+106,2016-02-11 23:46:44,"This pull requests corrects the spelling of **CocoaPods** 🤓
+https://github.com/CocoaPods/shared_resources/tree/master/media
+
+<blockquote class=""twitter-tweet"" data-lang=""en""><p lang=""en"" dir=""ltr"">One day I’ll make a bot that looks through the READMEs of all Pods, looks to see if it uses “Cocoapods” and PRs “CocoaPods” :D</p>&mdash; Ørta (@orta) <a href=""https://twitter.com/orta/status/697374357975388160"">February 10, 2016</a></blockquote>
+
+<script async src=""//platform.twitter.com/widgets.js"" charset=""utf-8""></script>
+",ReadmeCritic,2016-02-13 21:36:37
+105,2016-02-09 06:29:57,"This PR introduces the ability to introspect the contents of Realm database files, using the system that was already put in place to accomodate SQLite files.
+
+Being wary that requiring Realm as an explicit dependency in FLEX would be very cumbersome for any non-Realm users, all of the code has been made optional via the `#if __has_include(<Realm/Realm.h>)` macro. As such, in order for it to be included in the build, it will be necessary for the project to already have the Realm Objective-C framework present at FLEX's build time.
+
+Please let me know if you require anything further in order for this PR to be accepted.
+
+**Full Disclosure:** While I am a full-time employee of Realm, at present we are not in a position to be able to provide official support for Realm integrations in external projects. But I am more than happy to assist if anyone has any queries in my spare time. :)
+",TimOliver,2016-02-21 17:39:55
+105,2016-02-10 17:53:44,"This is awesome! I'll try to carve out some time to review this weekend. Thanks for the PR!
+",ryanolsonk,2016-02-21 17:39:55
+105,2016-02-10 18:08:17,"Thanks a lot Ryan! 
+
+No worries! If you need any clarification, or need me to make any adjustments to the PR, please let me know! :)
+",TimOliver,2016-02-21 17:39:55
+105,2016-02-13 21:30:41,"This is great! Super clean. I left a few suggestions but everything looks good overall.
+
+What do you think about including Realm with the example project so we can demo this feature?
+",ryanolsonk,2016-02-21 17:39:55
+105,2016-02-14 05:32:58,"I haven't had a good look at this pull request. But noticed you're using some preprocesser macros to determine if Realm is present. Have you instead considered using some of Objective-C's reflection features to determine if some core Realm classes exist within the loaded class list. You can determine if Realm exists using something like objc_getClass(""RLMRealm"") or NSClassFromString, if non-nil is returned Realm exists. To me it seems like a more portable solution, especially to those who compile Flex into a dynamic library and use it across multiple projects. Just something to consider anyway.
+",nin9tyfour,2016-02-21 17:39:55
+105,2016-02-14 23:27:27,"Great point @nin9tyfour. Making this fully dynamic will definitely make it messier, but I can see the advantage of making it work with realm independent of whether it's built with realm. There are other places in this codebase where I've taken _interesting_ approaches to support everything inside a dylib (e.g. the toolbar icons).
+
+I'll defer to what ever @TimOliver thinks is best here.
+",ryanolsonk,2016-02-21 17:39:55
+105,2016-02-16 11:32:33,"Thanks a lot for the feedback @ryanolsonk and sorry for the late reply!
+
+Yeah, I was originally hoping to do it like @nin9tyfour suggested. It would be very cool if the integration of Realm could be fully dynamic so that the functionality was available if Realm itself was detected at runtime.
+
+I initially had a very quick play with it, but I couldn't get it to compile. I've never really played with weak linking a framework to that degree before, so I wasn't sure how much extra work it would actually entail.
+
+I'm certainly happy to try and make it dynamic if you have any tips on how to go about doing it. I was wondering if it would have actually meant needing to import all of Realm's headers into the FLEX project.
+
+Also, yep! I can provide a demo Realm file and class if you'd like some test data for the example app!
+
+In any case, thanks for the feedback! I'll add those code changes and report back here. Time providing, I might also see about having another play with making Realm dynamic too!
+",TimOliver,2016-02-21 17:39:55
+105,2016-02-18 04:20:35,"Hi everyone! Sorry for the slight delay in updating.
+
+I had a play with making Realm's integration more dynamic, and I THINK I've got it working now. The FLEX framework can now successfully build with or without the Realm framework being present, and still provide Realm introspection capabilities depending on whether the Realm framework is present at runtime. 
+
+I tested it multiple times by linking the Realm framework to the example app, running, and then removing it again, and it was working perfectly. That being said, since I've never done something like that before, please feel free to check out my changes in case there's a cleaner/easier way to do it.
+
+I also integrated the previously requested changes.
+
+Thanks a lot!
+",TimOliver,2016-02-21 17:39:55
+105,2016-02-18 05:20:18,"Hi Tim, I'll take a look at this later when I'm at my computer. From what I saw when quickly looking at it, you seem to be quite on point. Great stuff!
+",nin9tyfour,2016-02-21 17:39:55
+105,2016-02-21 17:39:52,"Awesome! Thanks again for building this feature!
+",ryanolsonk,2016-02-21 17:39:55
+105,2016-02-21 18:07:09,"Excellent! Thanks a lot for that Ryan! I'm really happy I was able to contribute something to FLEX! :)
+",TimOliver,2016-02-21 17:39:55
+104,2016-01-28 21:20:03,"move to more permissive contribution doc.
+@timonus @ryanolsonk 
+",dcreemer,2016-01-30 23:13:42
+104,2016-01-30 23:13:35,"Thanks for making this more permissive, @dcreemer 
+",ryanolsonk,2016-01-30 23:13:42
+103,2016-01-27 00:13:03,"in FLEXKeyboardShortcutManager.m, line 168
+
+<S_CODE_TOKEN>
+
+`maximumPossibleForce` is iOS 9 and above  ;(
+
+Using FLEX 2.2.0 via CocoaPods, repros easily by launching iOS 8.4 simulator and pressing cmd+ctrl+shift together while tapping mouse.
+",adamatimvu,2016-02-13 21:44:29
+103,2016-02-13 21:44:29,"Fixed in bd821dc553a837c4c9f46226a3192e8d4dbc1f4c
+",ryanolsonk,2016-02-13 21:44:29
+102,2016-01-18 08:42:12,,pra85,2016-01-18 19:43:12
+102,2016-01-18 19:43:09,"Thanks!
+",ryanolsonk,2016-01-18 19:43:12
+101,2016-01-08 09:28:15,"As title, so that user no need to toggle it every time upon a fresh install of an app supported with FLEX.
+",kccheung,2016-01-08 15:28:06
+101,2016-01-08 15:28:06,"Yep! You can use the API on `FLEXManager`: https://github.com/Flipboard/FLEX/blob/master/Classes/ExplorerToolbar/FLEXManager.h#L27
+",ryanolsonk,2016-01-08 15:28:06
+100,2015-12-31 11:53:05,"[Realm](https://realm.io) is a new database for mobile device. Is there any plan to support viewing the db file of Realm in the future? Thanks.
+",xilin,2016-02-21 17:43:40
+100,2016-01-03 04:44:37,"I don't personally have plans to build support, but it would be awesome if someone else wanted to pick this up!
+",ryanolsonk,2016-02-21 17:43:40
+100,2016-02-03 06:33:30,"Consider using RealmBrowser as viewing Realm databases is the intention of this project. Also be aware that including Realm is quite a large dependency to add to FLEX, seeing it doesn't currently require any third-party dependencies (AFAIK).
+",nin9tyfour,2016-02-21 17:43:40
+100,2016-02-09 06:35:57,"Greetings everyone! Crazily enough, I actually had the same idea and came here to discover someone had already beaten me to suggesting it!
+
+This was something I also wanted to see in FLEX (I use it quite a lot to debug one of my side project apps), so I took the time last weekend to add Realm integration and just pushed it as a PR: https://github.com/Flipboard/FLEX/pull/105
+
+I was also very wary, as @nin9tyfour pointed out that requiring Realm as an explicitly-included dependency would be terrible. So the code is presented in an optional macro that is only included if the Realm framework is present in the project itself when FLEX is built.
+
+In any case, let me know if you have any queries about it.
+
+**Full Disclosure:** I am an employee of Realm (My main project is the Realm Browser), but as we are not presently in a position to offer official support for third party Realm integrations, I'm providing this as an unofficial project. I'm happy to assist with any queries in my spare time. :)
+",TimOliver,2016-02-21 17:43:40
+100,2016-02-13 16:38:59,"@TimOliver That's great! Thanks for your work!
+",xilin,2016-02-21 17:43:40
+100,2016-02-21 16:28:04,"@TimOliver Thanks:)
+",khoren93,2016-02-21 17:43:40
+100,2016-02-21 17:43:40,"This is now on master :smile: 
+",ryanolsonk,2016-02-21 17:43:40
+99,2015-12-14 07:40:32,"The current toolbar is fairly large and somewhat invasive. It may be worth considering other interface options that would make it easier to interact with the app running underneath.
+",ryanolsonk,
+98,2015-12-14 07:32:11,"The inheritance patterns used in the FLEXExplorerViewController subclasses are pretty nasty. Ideally we can make FLEXExplorerViewController more configurable and remove these subclasses. This should make it easier to configure the explorer for more classes of objects.
+",ryanolsonk,
+97,2015-12-10 02:33:22,"In ios9.1,when chose 'heap objects' ,the console always show  'malloc: Attempted to register zone more than once: 0x7fff587b18b0' ,sometime crash when chose one of the live objects.
+",wzxing55,2016-01-07 02:01:24
+97,2016-01-07 02:01:24,"Very happy to say this is fixed now! See 94f06d5ff8ccb1cd4cdd4deeb07810d8a858ebd3
+",ryanolsonk,2016-01-07 02:01:24
+96,2015-12-08 20:48:47,"![screen shot 2015-12-08 at 12 47 51 pm](https://cloud.githubusercontent.com/assets/522951/11668052/ffb87efe-9da9-11e5-94df-200c715e3202.png)
+",timonus,2015-12-14 07:01:26
+96,2015-12-14 07:01:26,"Resolved in dda9dd5beb2c69f3613f0f5194717a0e9c7f99e2, 888887f09a78e8889975fc0515e7b675e564b74a, and b70a1a2f485118a3c0b97848f1294bc8b5df1c2f
+",ryanolsonk,2015-12-14 07:01:26
+96,2015-12-14 07:44:37,":+1: thanks!
+",timonus,2015-12-14 07:01:26
+95,2015-12-01 16:05:02,"When we have to build a complex view with a lot of components on it with tons of layout constraint. Although we resolved all the constraint warning on xib/storyboard but on runtime we still sometime got breaking constraint due to layout conflict and got these error logs.
+
+<S_CODE_TOKEN>
+
+Its a bit hard to find out which view has that conflict constraint because we have only its pointer address, such as (0x15dc4f90, 0x15dbe780, ..)
+Therefore i'm thinking of adding support to search for its pointer address inside FLEXHierarchyTableViewController.
+![Image of Yaktocat](https://i.imgur.com/fzGdgUV.png)
+So you can easily filter the view with its pointer address then tap on it and locate it on the screen to resolved the conflict easier.
+I think it wont be messed up with title searching because the pointer address is a HexString, its different to UIKit component class name.
+I made a pull request for it here:
+https://github.com/Flipboard/FLEX/pull/94
+
+Thanks
+",untouchable741,2015-12-05 19:57:43
+95,2015-12-02 03:38:20,"It has been merged. 
+Thanks @ryanolsonk 
+",untouchable741,2015-12-05 19:57:43
+95,2015-12-05 19:57:43,":+1: Thanks for the pull request! Closing this now.
+",ryanolsonk,2015-12-05 19:57:43
+94,2015-12-01 16:02:35,"Add support to search by view pointer's address in FLEXHierarchyTableViewController.
+
+![Image of Yaktocat](https://i.imgur.com/fzGdgUV.png)
+",untouchable741,2015-12-01 16:26:43
+94,2015-12-01 16:26:31,"Nice! Thanks for the contribution!
+",ryanolsonk,2015-12-01 16:26:43
+93,2015-11-30 10:21:42,"Hi,
+I've added a database browser for opening a .db file.
+Sometimes, Some people may want to view SQLite databases on device.
+",tttpeng,2015-12-13 03:11:12
+93,2015-12-01 16:17:48,"Wow! Very cool. I'll review this one soon.
+",ryanolsonk,2015-12-13 03:11:12
+93,2015-12-05 19:55:11,"Nice work! This is really cool!
+
+I left some comments on the changes in-line. My biggest concern is that we properly attribute any code that was copied from a 3rd party and make sure the licensing is compatible. There are some style inconsistencies with the rest of the project (e.g. 2 space indenting instead of 4), but I can just run clang-format over the changes after merging. Let me know once you've had a chance to look at the feedback.
+
+Thanks again for making this pull request. This is going to be an awesome new feature for FLEX!
+",ryanolsonk,2015-12-13 03:11:12
+93,2015-12-05 21:16:23,"Thanks for review my code so carefully, I learned a lot.
+
+This is my first time to participate in open source projects,Forgive me have some not good enough,I corrected some mistakes you mentioned,I copied some code from FMDB,I see FMDB license is MIT LICENSE,I think I can do this,I added some explanation in the file,I do not know whether I'm doing right,If I do what is wrong. Please help me to correct,Because my English is poor,Thank you!
+
+It is a valuable experience for me,Thank you.
+",tttpeng,2015-12-13 03:11:12
+93,2015-12-13 03:11:02,"Looks great! Sorry for the delay on my part. Merging now. Thanks again for the contribution and for making the changes!
+",ryanolsonk,2015-12-13 03:11:12
+93,2015-12-14 14:22:40,"The feature is Very nice! thanks!
+",Cooooper,2015-12-13 03:11:12
+92,2015-11-30 10:13:21,"**If always dismiss first before present, then the property `previousKeyWindow` and `previousStatusBarStyle` will be not effective.**
+
+`previousStatusBarStyle` for example:
+1. original: white color
+![image](https://cloud.githubusercontent.com/assets/7866087/11468817/439edb04-978d-11e5-9a1e-e78d399a3469.png)
+2. FLEX presented: black color
+![image](https://cloud.githubusercontent.com/assets/7866087/11468830/4f0c44d6-978d-11e5-8dc8-5705ed5a9f40.png)
+3. FLEX dismissed: still black color(`previousStatusBarStyle` lose effectiveness)
+![image](https://cloud.githubusercontent.com/assets/7866087/11468835/577c163c-978d-11e5-869b-5456af9fa72e.png)
+",WangHengHeng,2015-12-14 07:12:41
+92,2015-12-01 16:22:13,"Unfortunately the dismiss before present is there for the keyboard shortcuts. For example, you might trigger presentation of the menu while the view hierarchy list is showing. Is there an alternative approach to solving this issue?
+",ryanolsonk,2015-12-14 07:12:41
+92,2015-12-02 03:10:08,"@ryanolsonk I notice that when present, the keyWindow changed. so I add a method `dismissPreviousPresentViewController` to solve this issue.
+",WangHengHeng,2015-12-14 07:12:41
+92,2015-12-14 07:12:34,"Thanks for contributing this fix! Merging.
+",ryanolsonk,2015-12-14 07:12:41
+91,2015-11-22 10:58:44,"Is it possible to view body in request? And to store network history?
+For example, to explore last request after which app crashes.
+
+Thanks. 
+",EugeneGoloboyar,
+91,2015-12-05 20:02:24,"Viewing the request body is already supported if the data is put into `NSURLRequest`'s `HTTPBody`. Viewing body data in `HTTPBodyStream` is an open TODO.
+
+There's currently no persistence for the network history, but this could also be a nice feature to add.
+
+Pull requests always welcome! :wink: 
+",ryanolsonk,
+91,2016-03-21 12:25:22,"Hi, privatly I implemented persistence of network history by using [PINCache](https://github.com/pinterest/PINCache). Moreover I implemented a whitelist which is an array of host that will be recorded.
+
+@ryanolsonk do you think this kind of solution with additional dependency is something acceptable by you? 
+",aleksandergrzyb,
+91,2016-03-26 18:49:43,"@aleksandergrzyb awesome! I definitely would want to carefully evaluate taking on the dependency, but it's not something I'm necessarily opposed to. I think using something like PINCache makes a lot more sense then re-inventing a persistence layer ourselves.
+
+The things I would want to look into are:
+1. Is there a way we could use PINCache if it's available, but fall back to no persistence? This is similar to what we've done with Realm, and lets people opt-in to taking the dependency.
+2. If we were to take PINCache on as a full dependency, how would current users of FLEX feel about that?
+
+If anyone has thoughts here, please chime in!
+",ryanolsonk,
+91,2016-03-29 13:52:07,"I could create a subspec to `FLEX` podspec with this additional functionality and `PINCache` dependency. By default this subspec wouldn't be included in `FLEX` library, the user would have to explicitly write in its `Podfile` something like `pod FLEX/Persistance`. What do you think about this solution?
+",aleksandergrzyb,
+90,2015-11-12 05:06:47,"Settings:
+The project is with swift 2.1 in Xcode 7. I installed FLEX with cocoapod ~> 2.0 so it should be the newest version. 
+
+Problem description:
+When app is running In the simulator, when pressed ""f"" in the keyboard of my computer, the toolbar does not show up. But it can be activated with code ''FLEXManager.sharedManager().showExplorer()''
+",ansonyao,2016-06-16 21:12:16
+90,2015-12-05 20:13:10,"Can you verify that the version of FLEX you're using has the `FLEXKeyboardShortcutManager` class and that `FLEXManager.sharedManager().simulatorShortcutsEnabled` is `true`?
+",ryanolsonk,2016-06-16 21:12:16
+90,2016-01-07 02:03:55,"Closing since I can't reproduce this. Please comment here if you continue to see the issue.
+",ryanolsonk,2016-06-16 21:12:16
+90,2016-01-07 03:01:17,"Sorry for the late reply.
+
+I have added
+
+FLEXManager.sharedManager().simulatorShortcutsEnabled = true
+
+and have checked FLEXKeyboardShortcutManager  is in the pod.
+
+But I still cannot use the keyboard shortcut...
+
+My pod file:
+pod 'FLEX', '~> 2.0', :configurations => ['Debug']
+
+On Wed, Jan 6, 2016 at 6:04 PM, Ryan Olson notifications@github.com wrote:
+
+> Closing since I can't reproduce this. Please comment here if you continue
+> to see the issue.
+> 
+> —
+> Reply to this email directly or view it on GitHub
+> https://github.com/Flipboard/FLEX/issues/90#issuecomment-169522610.
+",ansonyao,2016-06-16 21:12:16
+90,2016-01-07 03:02:12,"The project is with swift and newest version of XCode Version 7.2 (7C68).
+
+On Wed, Jan 6, 2016 at 7:01 PM, Enxin Yao yaoenxin@gmail.com wrote:
+
+> Sorry for the late reply.
+> 
+> I have added
+> 
+> FLEXManager.sharedManager().simulatorShortcutsEnabled = true
+> 
+> and have checked FLEXKeyboardShortcutManager  is in the pod.
+> 
+> But I still cannot use the keyboard shortcut...
+> 
+> My pod file:
+> pod 'FLEX', '~> 2.0', :configurations => ['Debug']
+> 
+> On Wed, Jan 6, 2016 at 6:04 PM, Ryan Olson notifications@github.com
+> wrote:
+> 
+> > Closing since I can't reproduce this. Please comment here if you continue
+> > to see the issue.
+> > 
+> > —
+> > Reply to this email directly or view it on GitHub
+> > https://github.com/Flipboard/FLEX/issues/90#issuecomment-169522610.
+",ansonyao,2016-06-16 21:12:16
+90,2016-06-16 21:12:15,"Sorry guys. Turns out I probably forget to choose ""connect hareware keyboard"" option for the simulator.
+",ansonyao,2016-06-16 21:12:16
+89,2015-11-09 09:18:43,"Fix help screen typo
+",revolter,2015-11-09 14:27:26
+89,2015-11-09 14:27:23,"Doh! Thanks.
+",ryanolsonk,2015-11-09 14:27:26
+88,2015-11-08 23:53:58,"When trying to view Heap Objects and MyApp Classes instances, the results table views are empty, as you can see in the following screenshots:
+
+[![Screenshot 1](http://i.imgur.com/Ra6AYIdm.jpg)](http://i.imgur.com/Ra6AYId.jpg) [![Screenshot 2](http://i.imgur.com/ZWe9NTkm.jpg)](http://i.imgur.com/ZWe9NTk.jpg)
+
+[![Screenshot 3](http://i.imgur.com/D0TvbnQm.jpg)](http://i.imgur.com/D0TvbnQ.jpg) [![Screenshot 4](http://i.imgur.com/V7uYrDOm.jpg)](http://i.imgur.com/V7uYrDO.jpg)
+
+When I first added this library, it worked, but it was often crashing, and suddenly stopped showing instances.
+
+Even if I call `new` on a class, and the instance creates successfully, when I go back and select `Instances` it shows up empty.
+
+How can I debug this problem? Does anyone have a clue about why is this happening?
+
+I'm on my phone so I could add more info if needed later.
+",revolter,2016-01-07 02:02:47
+88,2015-11-10 17:09:38,"Yea, unfortunately the heap objects feature has some inherent instability. The state of the application is constantly shifting underneath, so by the time you drill in, all the objects you saw in the first list may be gone. However, if you're never seeing any instances in the detail menus, that definitely sounds like a bug. I can't reproduce that myself, so maybe you can provide more details about your environment.
+
+I'd also like to spend some time trying to reduce crashes in this area but it's not exactly a straightforward task. Simply retaining some of these objects or calling -description can cause crashes immediately or down the line. Also, any expectations of thread confinement will likely be violated through the presentation of this interface.
+
+The code itself is not actually that complex if you want to poke around. I also think it's one of the more interesting areas of the tool. Check out `FLEXHeapEnumerator`, `FLEXLiveObjectsTableViewController`, and `FLEXInstancesTableViewController`.
+",ryanolsonk,2016-01-07 02:02:47
+88,2015-11-11 08:42:40,"Well, I don't know what details would help. I guess (not sure) that it worked before [removing the files from the Release configuration](https://github.com/Flipboard/FLEX#excluding-flex-from-release-app-store-builds), but this shouldn't be a problem. And, it indeed crashed a couple of times, but now it doesn't crash at all.
+
+It is indeed very interesting and useful, you can't imagine my reaction when I saw it. Thanks for the directions, I'll take a look when I have some time.
+",revolter,2016-01-07 02:02:47
+88,2015-11-12 16:42:25,"Sorry, I could've been more clear. By details I meant simulator/device type, OS version, SDK version, etc.
+",ryanolsonk,2016-01-07 02:02:47
+88,2015-11-13 08:23:13,"iPhone 6s and simulator, 9.1.1, I should've mentioned these in the first comment
+",revolter,2016-01-07 02:02:47
+88,2016-01-07 02:02:47,"I think this is fixed now after the change in 94f06d5ff8ccb1cd4cdd4deeb07810d8a858ebd3. I'm unable to reproduce it at least. Please let me know if you continue to see it!
+",ryanolsonk,2016-01-07 02:02:47
+88,2016-01-07 08:49:33,"Well, I figured it out. Dumb me commented out [this line](https://github.com/Flipboard/FLEX/blob/master/Classes/GlobalStateExplorers/FLEXInstancesTableViewController.m#L34) to stop the crashes, and forgot about it.
+",revolter,2016-01-07 02:02:47
+87,2015-11-05 14:58:22,"When the scroll is decelerating in debug mode, I cannot press the navigation bar buttons (right or left buttons).
+Actually, the button changes to pressed state, and when the scroll stops, the action of the button is launched. It's very strange.
+However, in release mode, it works perfectly.
+Or if I remove FLEX from the debug version.
+
+Any idea?
+",Ricardo1980,2015-12-05 20:15:39
+87,2015-11-09 14:31:57,"This sounds very strange indeed. Have you seen this behavior in the example project? I've never encountered it myself.
+
+Do you have any additional details about simulator vs device, iOS version, etc.?
+",ryanolsonk,2015-12-05 20:15:39
+87,2015-11-09 16:55:37,"I could reproduce it in the sample app.
+
+In AAPLAppDelegate.m, in didFinishLaunchingWithOptions add:
+
+<S_CODE_TOKEN>
+
+Add also this method there:
+
+<S_CODE_TOKEN>
+
+Launch the app in the simulator, move the scroll view and when is moving with the inertia, try for example to press the button at the top/right that says FLEX.  It will execute the action after the scroll stops.
+",Ricardo1980,2015-12-05 20:15:39
+87,2015-11-10 17:12:56,"Ah, thanks for providing the additional context.
+
+It looks like this isn't actually related to FLEX, but to the 4-tap gesture recognizer that you attach to the window. You should see the same behavior if you remove FLEX entirely, but keep the gesture recognizer.
+
+I'd suggest using a different gesture recognizer to trigger FLEX. You can use multiple touches rather than multiple taps to avoid conflicting with existing gestures in your app.
+
+Let me know if this solves your issue.
+",ryanolsonk,2015-12-05 20:15:39
+87,2015-12-05 20:15:39,"Closing this issue since the gesture chosen to activate FLEX is not something this project has control over.
+",ryanolsonk,2015-12-05 20:15:39
+86,2015-11-02 12:52:44,"crash reason:
+Fatal Exception: NSRangeException
+Cannot remove an observer <FLEXExplorerViewController> for the key path ""frame"" from <TTTLogoutWindow> because it is not registered as an observer.
+
+Here is trace:
+Thread : Fatal Exception: NSRangeException
+0  CoreFoundation                 6490509128 **exceptionPreprocess
+1  libobjc.A.dylib                6838321024 objc_exception_throw
+2  CoreFoundation                 6490508944 -[NSException initWithCoder:]
+3  Foundation                     6505732568 -[NSObject(NSKeyValueObserverRegistration) _removeObserver:forProperty:]
+4  Foundation                     6505731252 -[NSObject(NSKeyValueObserverRegistration) removeObserver:forKeyPath:]
+5  TutorTeacher                   4297117164 -[FLEXExplorerViewController stopObservingView:](FLEXExplorerViewController.m:308)
+6  TutorTeacher                   4297114184 -[FLEXExplorerViewController setViewsAtTapPoint:](FLEXExplorerViewController.m:240)
+7  TutorTeacher                   4297127036 -[FLEXExplorerViewController updateOutlineViewsForSelectionPoint:](FLEXExplorerViewController.m:547)
+8  TutorTeacher                   4297126852 -[FLEXExplorerViewController handleSelectionTap:](FLEXExplorerViewController.m:538)
+9  UIKit                          6585987888 _UIGestureRecognizerSendTargetActions
+10 UIKit                          6581963612 _UIGestureRecognizerSendActions
+11 UIKit                          6580447324 -[UIGestureRecognizer _updateGestureWithEvent:buttonEvent:]
+12 UIKit                          6585992972 ___UIGestureRecognizerUpdate_block_invoke898
+13 UIKit                          6580181176 _UIGestureRecognizerRemoveObjectsFromArrayAndApplyBlocks
+14 UIKit                          6580168252 _UIGestureRecognizerUpdate
+15 UIKit                          6580438732 -[UIWindow _sendGesturesForEvent:]
+16 UIKit                          6580436168 -[UIWindow sendEvent:]
+17 UIKit                          6580241572 -[UIApplication sendEvent:]
+18 UIKit                          6580234092 _UIApplicationHandleEventQueue
+19 CoreFoundation                 6490211652 __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION**
+20 CoreFoundation                 6490210264 __CFRunLoopDoSources0
+21 CoreFoundation                 6490201304 __CFRunLoopRun
+22 CoreFoundation                 6489345184 CFRunLoopRunSpecific
+23 GraphicsServices               6676234376 GSEventRunModal
+24 UIKit                          6580670460 UIApplicationMain
+25 TutorTeacher                   4297150244 main (main.m:14)
+26 libdyld.dylib                  6847031480 start
+",fjswhl,
+86,2015-11-09 14:42:30,"Thanks for the report. Does this consistently repro for you or was it a one-off crash? I'm having trouble reproducing the crash in the example project, and I don't see anything obviously wrong with the KVO accounting, so I'm not exactly sure what's happening here.
+",ryanolsonk,
+85,2015-10-31 22:38:20,,dlo,2015-11-09 14:29:55
+85,2015-11-09 14:29:52,"Awesome, thanks!
+",ryanolsonk,2015-11-09 14:29:55
+84,2015-10-19 19:09:38,"Hi,
+
+I've added a very small amount of code that allows for a very basic way of browsing shared cookie storage - something I found useful.
+
+Rich
+",robinsonrc,2015-10-20 23:31:02
+84,2015-10-20 05:12:28,"Awesome! Can you check on the example (UICatalog) build and fill out the the [ICLA](https://docs.google.com/forms/d/1gh9y6_i8xFn6pA15PqFeye19VqasuI9-bGp_e0owy74/viewform) if you haven't already?
+",ryanolsonk,2015-10-20 23:31:02
+84,2015-10-20 07:00:58,"Hi - apologies, I'd missed updating the UICatalog project. I have now done this and have also filled in the ICLA.
+",robinsonrc,2015-10-20 23:31:02
+84,2015-10-20 23:30:57,"Great. Thanks for the contribution!
+",ryanolsonk,2015-10-20 23:31:02
+83,2015-10-12 09:26:50,"i used `pod 'FLEX', '~> 2.0', :configurations => ['Debug']`
+
+at method `supportedInterfaceOrientations`
+it will be show a warn about conflict return type
+it returns `UIInterfaceOrientationMask` but uiviewcontroller return `NSUInteger`,this is the reason
+
+a Obsessive-compulsive disorder person's isses,3q
+",tangbl93,2015-10-13 00:57:16
+83,2015-10-12 14:05:44,"Are you able to update to Xcode 7 and the iOS 9 SDK? The return type was changed in iOS 9, so older versions of the SDK now get the warning. I suppose we could wrap this in `#pragma clang diagnostic ignored` to accommodate building with older versions of the SDK.
+",ryanolsonk,2015-10-13 00:57:16
+83,2015-10-13 00:57:12,"oh.i used Xcode 6.4.thank you
+",tangbl93,2015-10-13 00:57:16
+83,2015-10-13 01:18:10,"if someone has problem same with me,you can use my solution or update your Xcode to 7 
+the method i used to disable this warn is:
+
+<S_CODE_TOKEN>
+",tangbl93,2015-10-13 00:57:16
+82,2015-10-02 14:24:33,"In FLEXNetworkTransactionTableViewCell.m around line 130 there is a nil date being inserted into an NSArray. 
+It turns out self.transaction is nil (the setter is never called). This happens on iOS 9.0.2, not on iOS 8.
+- (NSString *)transactionDetailsLabelText
+  {
+  NSMutableArray *detailComponents = [NSMutableArray array];
+  
+  NSString *timestamp = [[self class] timestampStringFromRequestDate:self.transaction.startTime];
+  [detailComponents addObject:timestamp];
+
+.....
+",Joride,2015-10-29 02:40:56
+82,2015-10-27 15:20:59,"I'm seeing the same thing. Just to expand a bit, the app crashes when I press ""Network History"" (on iOS 9.0.2). It was working on iOS 8.
+
+It looks like `FLEXNetworkHistoryTableViewController` dequeues a `FLEXNetworkTransactionTableViewCell` then [sets the transaction](https://github.com/Flipboard/FLEX/blob/master/Classes/Network/FLEXNetworkHistoryTableViewController.m#L295). In iOS 9.0.2, it looks like `dequeueReusableCellWithIdentifier` actually calls `layoutSubviews` which means the transaction hasn't been set yet.  So I think a bunch of errors would happen because it tries to layout without a transaction.
+
+Just to get it working again, I [added a nil check](https://github.com/bendytree/FLEX/commit/6eafd1944f8e0e45cfc1a1dafbd80aea61ea631d#diff-d16fd968ab04fb8eb9f23b8f366b2e91) at the beginning of `layoutSubviews`. Setting the transaction causes a re-layout, so this seems to work.
+",bendytree,2015-10-29 02:40:56
+82,2015-10-29 02:40:56,"Sorry for the slow response time on this one. I couldn't repro on the 9.1 simulator or on my 9.1 iPhone 6, so hopefully that means they fixed the underlying issue. I added some nil safety in `FLEXNetworkTransactionTableViewCell` in b0b64c1ba9819fda4f004a71de7f6d5f7f7c8d2a to cover people still on 9.0.2.
+",ryanolsonk,2015-10-29 02:40:56
+81,2015-09-30 19:58:56,"@Flipboard, I've corrected a typographical error in the documentation of the [FLEX](https://github.com/Flipboard/FLEX) project. You should be able to merge this pull request automatically. However, if this was intentional or if you enjoy living in linguistic squalor, please let me know and [create an issue](https://github.com/thoppe/orthographic-pedant/issues/new) on my home repository.
+",orthographic-pedant,2015-09-30 20:01:24
+80,2015-09-24 17:57:40,"Not required but may be useful since I typically manually do this with my tap gesture handlers. If you feel it's not necessary, feel free to reject this.
+",evliu,2015-09-24 18:37:53
+80,2015-09-24 18:37:49,"Sure! Thanks for the contribution.
+",ryanolsonk,2015-09-24 18:37:53
+80,2015-09-24 20:00:55,"awesome, will be using `pod 'FLEX',:git => 'https://github.com/Flipboard/FLEX', :commit => 'e9e084e6f15cb8b6e42cfe52581852884973084d'` until the next batch release! (included it here just incase anyone else wants an easy copy/paste)
+",evliu,2015-09-24 18:37:53
+79,2015-09-13 17:12:26,"To toggle it on/off in all apps at once 
+",cleverjackal,2015-09-14 18:23:26
+79,2015-09-14 18:23:26,"This project is not associated with the jailbreak tweaks that allow you to inject into other apps. https://github.com/dtrukr/FLEX_injected may be a better project for this suggestion.
+",ryanolsonk,2015-09-14 18:23:26
+79,2015-09-14 18:25:12,"Hey, I meant toggling the pop up with which you can select elements on and off for all apps, instead of having to turn it off individually for each app I turned it on for. 
+",cleverjackal,2015-09-14 18:23:26
+79,2015-09-14 18:29:02,"Sorry, I'm not sure what you're referring to. Can you post a screenshot the pop up you're talking about?
+",ryanolsonk,2015-09-14 18:23:26
+79,2015-10-05 20:53:59,"Nvm
+",cleverjackal,2015-09-14 18:23:26
+78,2015-09-07 07:40:47,"Open the menu , chooice the `[UIDevice currentDevice]` row , change the segment to `Include Inheritance` , then scroll the UITableView to bottom , the app will be crashed at row fourth  IVARS(4) section .
+
+The code at `FLEXRuntimeUtility.m` , line 210 .
+
+<S_CODE_TOKEN>
+
+I was tested by my iPhone 5s , mode A1533 .
+",JyHu,2015-09-08 16:49:48
+78,2015-09-07 16:45:27,"This one is really interesting. It only happens for me on device, not in the simulator. 
+
+Took me a while to figure it out, but I tried running with the environment variable `OBJC_DISABLE_NONPOINTER_ISA=YES` and voila, no crash. The type encoding on the `isa` ivar indicates that it's a `Class` pointer, but in iOS for arm64, that may be a lie. See http://www.sealiesoftware.com/blog/archive/2013/09/24/objc_explain_Non-pointer_isa.html for a more detailed explanation of changes to the `isa` ivar on arm64.
+
+We probably need to call `ivar_getName()` and special case when the name is `isa`. I'll try to put together a change that resolves this.
+",ryanolsonk,2015-09-08 16:49:48
+78,2015-09-08 16:49:48,"Thanks for the crash report. This is now fixed in 30f1fecc54cd9ca795c2ddfaca3fae6dc6edba2f.
+",ryanolsonk,2015-09-08 16:49:48
+78,2015-09-08 16:51:41,"Nice work .
+",JyHu,2015-09-08 16:49:48
+77,2015-09-04 20:56:09,"Resolves https://github.com/Flipboard/FLEX/issues/73.
+",timonus,2015-09-05 02:01:10
+77,2015-09-05 02:01:07,"Ah, thanks. Not sure why that doesn't show up in the example project. Perhaps it's compiled with different warnings settings than the Flipboard project.
+",ryanolsonk,2015-09-05 02:01:10
+77,2015-09-05 16:50:10,"Yeah, that's probably the case.
+",timonus,2015-09-05 02:01:10
+77,2015-09-05 16:50:18,"Thanks!
+",timonus,2015-09-05 02:01:10
+76,2015-09-03 21:26:03,"Addresses #73 and #74.
+
+c250200 fixes the warning in Xcode 7 but introduces a warning in Xcode 6. I think that's livable given that the transition to Xcode 7 is imminent.
+
+@tijoinc for review
+",ryanolsonk,2015-09-03 21:51:39
+76,2015-09-03 21:49:38,"LGTM, thank you for doing this @ryanolsonk! Looking forward to eliminating these warnings in Flipboard.
+",timonus,2015-09-03 21:51:39
+76,2015-09-03 21:51:32,"Thanks for the quick review @tijoinc! Merging.
+",ryanolsonk,2015-09-03 21:51:39
+75,2015-08-14 02:56:03,"In storyboard, I can add a UITableViewCell in UITableView, but I have no idea how to add a UITableViewWrapperView in UITableView as Sliders Scene in FLEX application. What is the practice way of adding it? Thank you~
+",MonicaTu,2015-08-14 03:45:30
+75,2015-08-14 03:45:30,"Resolved! I should set the Style of the Table View to Grouped.
+http://www.ralfebert.de/tutorials/ios-swift-uitableviewcontroller/
+",MonicaTu,2015-08-14 03:45:30
+74,2015-08-12 20:03:48,"There's a few that have popped up, pretty minor.
+",timonus,2015-09-03 21:52:11
+74,2015-09-03 21:52:11,"Resolved in #76 
+",ryanolsonk,2015-09-03 21:52:11
+73,2015-08-12 20:02:12,"Shows up when building with Xcode 7
+
+https://github.com/Flipboard/FLEX/blob/master/Classes/Network/PonyDebugger/FLEXNetworkObserver.m#L871
+",timonus,2015-09-05 02:01:10
+73,2015-09-03 21:52:24,"Resolved in #76 
+",ryanolsonk,2015-09-05 02:01:10
+73,2015-09-04 20:52:55,"@ryanolsonk actually, I don't believe https://github.com/Flipboard/FLEX/pull/76 resolves this. I'm still seeing [this](https://github.com/Flipboard/FLEX/blob/master/Classes/Network/PonyDebugger/FLEXNetworkObserver.m#L870) unused `typedef` on master.
+",timonus,2015-09-05 02:01:10
+73,2015-09-04 20:56:16,"Opened a PR to resolve in https://github.com/Flipboard/FLEX/pull/77.
+",timonus,2015-09-05 02:01:10
+72,2015-07-20 20:47:51,"This would make it so you can use an activator gesture to toggle the picker.
+",scj643,2015-09-08 17:24:04
+72,2015-09-03 21:53:06,"Thanks for the suggestion. I'm not familiar with Activator. Are there any examples or documentation that you can point me towards?
+",ryanolsonk,2015-09-08 17:24:04
+72,2015-09-04 20:54:12,"Oh this is for if flex was to be made into a mobile substrate tweak for jailbroken devices
+",scj643,2015-09-08 17:24:04
+72,2015-09-08 17:24:04,"There are other projects that support FLEX injection with substrate (e.g. https://github.com/dtrukr/FLEX_injected). Those repos are probably a better place for this feature suggestion.
+",ryanolsonk,2015-09-08 17:24:04
+71,2015-07-19 00:49:39,"- Creates a root-level framework project that builds FLEX.framework
+- Adds FLEX shared scheme
+- Creates a root .xcworkspace to contain both the framework and example projects
+- Updates `.travis.yml` to build both framework and example project
+- Declares [Carthage](https://github.com/Carthage/Carthage) compatability in README
+",erichoracek,2015-08-05 18:11:09
+71,2015-07-22 08:21:10,"Nice! I'm out of the country traveling at the moment (and on very slow internet), but I'll have a look when I get back next week. Thanks for the PR!
+",ryanolsonk,2015-08-05 18:11:09
+71,2015-08-05 18:11:39,"Sorry for the delay! I've been without a computer for the last few weeks. Merged now. Thanks again!
+",ryanolsonk,2015-08-05 18:11:09
+71,2015-08-05 18:20:58,"No worries—thanks for merging this in and thanks for FLEX!
+",erichoracek,2015-08-05 18:11:09
+70,2015-07-03 04:14:24,"Turn on Exception Breakpoint
+Here is the Stack Trace (FLEX 1.1.1 and FLEX 2.0.3)
+
+<S_CODE_TOKEN>
+",onmyway133,2015-09-08 17:28:47
+70,2015-07-03 05:19:56,"Searching for `TFileDescriptorContext` leads to this [All exeption break point is stoping for no reason on simulator](http://stackoverflow.com/questions/27375640/all-exeption-break-point-is-stoping-for-no-reason-on-simulator)
+",onmyway133,2015-09-08 17:28:47
+70,2015-07-03 18:41:06,"Is this actually crashing or just pausing on the exception breakpoint? The exception may get caught by the font library.
+",ryanolsonk,2015-09-08 17:28:47
+70,2015-07-07 07:01:38,"@ryanolsonk I edited the title, it is C++ Exception breakpoint. But this is the first time I got this
+",onmyway133,2015-09-08 17:28:47
+70,2015-09-03 22:04:59,"Sorry for the lack of action on this one. I just tried reproducing this in the example project in the simulator and was unable to see it. Do you have any more details on how to reproduce?
+",ryanolsonk,2015-09-08 17:28:47
+70,2015-09-08 17:28:47,"Closing this one for now since it isn't clear what exactly the issue is or how we can reproduce it. Sometimes it's easiest to disable any exception breakpoints while using FLEX. Feel free to reopen the issue if there are more details to add.
+",ryanolsonk,2015-09-08 17:28:47
+69,2015-05-26 08:30:01,"Whether it need update podspec to v2.0.3?
+",jkyin,2015-05-26 14:36:35
+69,2015-05-26 14:36:32,":+1: thanks for the reminder!
+",ryanolsonk,2015-05-26 14:36:35
+68,2015-05-17 16:26:53,"Current implementation of swizzled `dataTaskWithRequest:completionHandler:` (and similar methods from `+[FLEXNetworkObserver injectIntoNSURLSessionAsyncDataAndDownloadTaskMethods]`) does not take into consideration case, when sender provides nil completion block (or calls`-dataTaskWithRequest:`).
+ It just wraps completion block (even if it is `nil`) and passes to original implementation, preventing firing of events delegation. From `NSURLSessionDataDelegate` documentation:
+
+> Completion handler block are primarily intended as an alternative to using a custom delegate. If you create a task using a method that takes a completion handler block, the delegate methods for response and data delivery are not called.
+
+As a result, enabled Network Debugging causes ignoring of Alamofires completion blocks as its event handling mechanism relies on `NSURLSessions` delegation.
+
+My fix simply calls original `dataTaskWithRequest:completionHandler:` method implementation in case if nil completion block was provided:
+
+<S_CODE_TOKEN>
+",modnovolyk,2015-05-20 01:00:02
+68,2015-05-20 00:59:52,"Very interesting about the NSURLSession behavior. I had no idea. The fix looks good.
+
+PonyDebugger has taken a different approach to sniffing traffic from NSURLSession which I'm liking better: https://github.com/square/PonyDebugger/pull/151
+At some point I think we should look at moving to use that approach. The main downside I see is that it won't work on iOS 7.
+
+Thanks for the PR! Merging.
+",ryanolsonk,2015-05-20 01:00:02
+68,2015-05-21 20:13:07,"I've thought about reducing amount of swizzling code too. I have another idea. I think it is possible to swizzle only getter/setter methods of `delegate` property (both NSURLConnection and NSURLSession) and create proxy object (delegate) that will both log info and forward invocation to original delegate. We can reduce number of `inject` methods in such way.
+
+Another approach could be to use NSURLProtocol mechanism to hook into iOS URL Loading System. Biggest problem of this method that there is no known (to me) way to extend Apples private  _NSHTTPURLProtocol. I am continue researching this topic.
+",modnovolyk,2015-05-20 01:00:02
+68,2016-09-27 02:26:51,"![image](https://cloud.githubusercontent.com/assets/8268339/18858209/d7ab634c-849c-11e6-968e-ef740b499a08.png)
+😭😭😢
+",BaiCan,2015-05-20 01:00:02
+68,2016-09-27 14:34:02,"![image](https://cloud.githubusercontent.com/assets/8268339/18878168/39efd26c-8502-11e6-9908-90f53729ded0.png)
+
+Doing so in some specific circumstances or will collapse，block need copy.This will not rush to collapse。
+fix: 
+as follows
+![image](https://cloud.githubusercontent.com/assets/8268339/18878289/98d29af8-8502-11e6-85a6-c8a1d8f25174.png)
+",BaiCan,2015-05-20 01:00:02
+67,2015-05-17 11:09:57,"While building FLEX for usage in Swift project i use !use_frameworks option in my podspec. But with this configuration Xcode (6.3.1) can't build FLEX because of following error:
+
+> Include of non-modular header inside framework module 'FLEX.FLEXSystemLogMessage'
+
+![screen shot 2015-05-17 at 13 26 08](https://cloud.githubusercontent.com/assets/4676904/7670078/2f06b49e-fc9e-11e4-8a57-b0ec771327c8.png)
+
+So i've took out declaration of _logMessageFromASLMessage:_ and _asl.h_ import into separate private header.
+Also, some additional _#pragma_ declarations added to suppress _UISearchDisplayController_ deprecated warnings.
+",modnovolyk,2015-05-20 00:53:45
+67,2015-05-17 23:45:17,"Thanks for the PR! I think I'd actually prefer to leave the `FLEXSystemLogMessage` header as is and make all headers except `FLEXManager.h` private. That should be the only class that users need to interact with. What do you think about that?
+
+On the issue of the deprecated warnings, we have an existing approach in that file to mute them with a little less pre-processor noise. There's a property on `FLEXFileBrowserTableViewController` called `searchController` which gives access to the search display controller. I'll quickly push a change to mute those warnings. Looks like they slipped in with the rename/delete files feature.
+",ryanolsonk,2015-05-20 00:53:45
+67,2015-05-18 05:54:01,"I've reviewed `FLEXManager` and other classes a little bit closer and figured out that current architecture does not suppose extending (subclassing) of current implementation. It looks like perfect one-liner. So yes, hiding everything except FLEXManager.h sounds reasonable.
+I've updated branch.
+Also i've removed extra pre-processor directives and used `searchController` instead.
+",modnovolyk,2015-05-20 00:53:45
+67,2015-05-20 00:53:41,"Excellent. Thanks for making those changes! Merging.
+",ryanolsonk,2015-05-20 00:53:45
+66,2015-05-13 22:01:51,"On the latest cocoapods version (0.37.1), cocoapods generates the following error when doing pod install :`[!] Unable to find a specification for `Flex``
+
+To replicate:
+1. Update cocoapods to 0.37.1  
+2. `pod install`
+",williamFalcon,2015-05-14 00:23:06
+66,2015-05-14 00:23:06,"What is the line in your podfile? Perhaps CocoaPods is now case sensitive. The name of the pod is `'FLEX'`.
+
+If changing the case doesn't help, I suggest you open an issue with CocoaPods. The FLEX spec does show up in CocoaPods search: https://cocoapods.org/?q=flex 
+",ryanolsonk,2015-05-14 00:23:06
+66,2015-05-27 19:44:43,"The line is 'Flex'. I'll check to see it 'FLEX' fixes it.
+",williamFalcon,2015-05-14 00:23:06
+65,2015-05-12 07:04:11,"A fix for #64
+",simonlinj,2015-05-14 04:20:50
+65,2015-05-14 04:20:50,"Thanks for the PR! f7c482ceedd539f225733faacb586c49b3247f39 addresses this with a different approach that also covers some related issues, so I'm going to close this one for now.
+",ryanolsonk,2015-05-14 04:20:50
+64,2015-05-12 06:38:12,"This behaviour happens on real phone and simulator. but only on iOS 8.3.
+
+Steps to reproduce: 
+- Enable Flex
+- Test an ActionsSheet or AlertView (no crash)
+- Test an ActionsSheet or AlertView (crash)
+
+Observations:
+[UIApplication sharedApplication] keyWindow] is changed after the first iteration.
+
+<S_CODE_TOKEN>
+
+![screen shot 2015-05-12 at 2 04 17 pm](https://cloud.githubusercontent.com/assets/1506890/7580955/d8956c32-f8af-11e4-9089-36bcf4ef21b0.png)
+",simonlinj,2015-05-14 04:16:04
+64,2015-05-12 09:32:24,"I just found out that this issue is a duplicate of #59 sorry!
+
+but c38b90ee60d2ea9131a01b3e1a7014848e0494c9 doesn't solve the crash 
+",simonlinj,2015-05-14 04:16:04
+64,2015-05-12 17:16:41,"Interesting. c38b90e fixed presenting one alert at a time, but I never thought to try presenting two alerts at the same time. I think your proposed change makes sense, but I'd like to dig into the system logic there to better understand the flow. Thanks for reporting the issue and for the pull request!
+",ryanolsonk,2015-05-14 04:16:04
+64,2015-05-12 17:41:39,"actually, its not presenting two alerts at the same time. but presenting one, close it. then open it again.
+the weird thing is that it only happens on iOS 8.3
+",simonlinj,2015-05-14 04:16:04
+64,2015-05-12 17:47:50,"Oh, sorry I misunderstood. Does it reproduce for you in the example app? I just presented & closed several alerts there with FLEX presented and didn't get a crash (8.3 iPhone 6 simulator).
+",ryanolsonk,2015-05-14 04:16:04
+64,2015-05-13 02:49:52,"Hi sorry for the confusion.. The c38b90e solve the AlertView crash but not the ActionSheets crash. both on simulator and real device
+",simonlinj,2015-05-14 04:16:04
+64,2015-05-14 03:57:40,"Got it, thanks for the clarification. I started digging into this and the issue is a little deeper. When action sheets are presented on iOS 8.3, their host window (a `_UIAlertControllerShimPresenterWindow`) becomes key. This does not appear to happen with alert views.
+
+When the action sheet is dismissed, the system looks for a new key window, basically taking the top visible window that's not a system window. As you noticed, that may be a `FLEXWindow` if FLEX is presented. We don't really want FLEX's window to become key when it is only showing the toolbar. The toolbar is intended to not interfere with anything in the app beneath it, so we want key events to go directly to the main app's windows.
+
+The quickest fix is probably to prevent the `FLEXWindow` from becoming key when it is only showing the toolbar. I'll look at making that change now.
+",ryanolsonk,2015-05-14 04:16:04
+64,2015-05-14 04:16:04,"Ok, I've pushed f7c482ceedd539f225733faacb586c49b3247f39 with the change I mentioned above. The crash should be resolved for now.
+
+Longer term, I may look at hosting the toolbar and the presented modals in separate windows. The toolbar window could declare itself as an internal window to prevent it from hijacking status bar appearance or becoming key. I think that would remove some of the hacks around trying to manage the key window.
+",ryanolsonk,2015-05-14 04:16:04
+63,2015-04-28 19:32:49,"This is not really an issue, but rather a question: Is there a FLEX version for Android? Or another tool that you know of for Android?
+",gardenofwine,2015-05-07 06:48:16
+63,2015-05-07 06:48:16,"Unfortunately I'm not familiar with any similar tools for Android. If you are interested in the network debugging piece, [Stetho](https://github.com/facebook/stetho) for Android looks pretty useful.
+",ryanolsonk,2015-05-07 06:48:16
+62,2015-04-28 03:39:44,"relate to #59 .
+
+Could you explain why we should care about `status bar` and 
+
+> our window shouldn't be the key window when this view controller is asked about the status bar ?
+
+I think FLEX Windows is just a Floating Window.
+",studentdeng,2015-04-29 02:18:37
+62,2015-04-28 06:49:47,"Sure, I can take a stab at explaining this.
+
+Status bar and rotation management somewhat are related because they are both view controller based. Previously, FLEX did an OK job of finding an appropriate view controller from the main app to query for status bar and rotation behavior. However, there were constantly bugs from this and I knew there had to be a better way. Prompted by #59, I investigated deeper into how the system handles these to see if there was any private API that could help us do better. 
+
+It's difficult to add a window to the hierarchy and not affect the status bar appearance or rotation behavior. Let's start by walking through what happens when the system wants to update the status bar. I'm using [Hopper](http://www.hopperapp.com/) to disassemble UIKit (iOS 8.3). See http://www.objc.io/issue-19/debugging-case-study.html for a nice guide on how to set that up.
+
+The first thing the system does is walk through the applications windows. It starts by calling `-[UIApplication _statusBarControllingWindow]` which passes through to `+[UIWindow _statusBarControllingWindow]`. The implementation of this method looks roughly like this:
+
+<S_CODE_TOKEN>
+
+The method names here are descriptive enough to get an idea of what's going on. The system iterates through the windows from top to bottom until it finds one that is visible and says it can affect the status bar. The default implementation of `-[UIWindow _canAffectStatusBarAppearance]` looks like this:
+
+<S_CODE_TOKEN>
+
+So, if the FLEX window is visible and above the application's main window(s), it will be the one returned as the `_statusBarControllingWindow`. `UIViewController` has a class method for determining which view controller should ultimately be consulted for the status bar style. The method makes use of what we looked at above, and looks something like this:
+
+<S_CODE_TOKEN>
+
+When FLEX is only showing the toolbar, we want the underlying app to determine the status bar appearance. However, when FLEX presents a full screen modal view controller, we do want to take control of the status bar. To achieve this, `FLEXWindow` now overrides the private method `-_canAffectStatusBarAppearance` so it can choose whether it decides the status bar appearance or not.
+
+Rotation is a little bit different because the different windows can rotate independently. When the device rotates, the root view controller of each window is asked for a `_viewControllerForSupportedInterfaceOrientations` and a `_viewControllerForRotation`. With FLEX, we intend to match the underlying app's rotation/orientation behavior. Therefore, when responding to the `shouldAutorotate` and `supportedInterfaceOrientations` methods in `FLEXExplorerViewController`, we look for a window from the main app and query it for the appropriate behavior.
+
+That may have been a bit of a roundabout response, but hopefully it helps. Let me know if you have any further questions.
+",ryanolsonk,2015-04-29 02:18:37
+62,2015-04-29 02:18:37,"Thank for your quick reply. it really helps
+",studentdeng,2015-04-29 02:18:37
+61,2015-04-26 05:50:06,"I encountered an exception coming out of `+[FLEXNetworkObserver injectDidFinishLoadingIntoDelegateClass]`.
+
+It seemed like my code managed to cause the `NSURLConnection` to release before the `connectionDidFinishLoading:delegate:` was called. As a result, `sniffWithoutDuplicationForObject:selector:sniffingBlock:` attempted to set an associated object on `nil`.
+
+![image](https://cloud.githubusercontent.com/assets/47405/7336059/594c6de6-eb9d-11e4-9dcb-d25f082346d4.png)
+
+Digging deeper, I noticed that my connection is `nil` as early as the call to the `implementationBlock`, which is swizzled in for `connectionDidFinishLoading:`. I'm not entirely unsurprised that my connection was released so early, as this connection represents a ""fire and forget"" analytics call.
+
+![image](https://cloud.githubusercontent.com/assets/47405/7336044/7ba4cbdc-eb9c-11e4-8702-3153634701e5.png)
+
+This is my current workaround, but I suspect someone who knows more about FLEX might be able to find an appropriate way for FLEX to hook in and hold a reference to the `NSURLConnection`:
+
+<S_CODE_TOKEN>
+
+Thanks!
+",mickeyreiss,2015-05-23 22:01:05
+61,2015-04-27 16:18:51,"Thanks for the detailed write up! I'll try to dig into this one tonight.
+",ryanolsonk,2015-05-23 22:01:05
+61,2015-04-28 07:06:33,"As you suggested, it seems like we have two options here:
+1. Take the diff above which would avoid the crash but result in incomplete request history in some cases.
+2. Keep a strong reference to the `NSURLConnection` in `FLEXInternalRequestState`. This would give us complete request history, but could also extend the lifetime of the `NSURLConnection` and potentially change the behavior of the underlying app.
+
+I'm leaning towards 2 but I don't have a strong opinion either way. Any thoughts?
+",ryanolsonk,2015-05-23 22:01:05
+61,2015-04-28 19:07:16,"I think it would be acceptable to keep a reference to the `NSURLConnection`. In general, I don't think implementations should rely on particular reference count for any given object (but I suppose this could mask some subtle bugs). I'd lean towards option 2 as well.
+",mickeyreiss,2015-05-23 22:01:05
+61,2015-05-07 06:44:30,"@mickeyreiss I'm trying to reproduce this to understand the issue a little better. Could you tell me what version of AFNetworking you were using and what iOS version you were on when the crash occurred?
+
+Thanks!
+",ryanolsonk,2015-05-23 22:01:05
+61,2015-05-22 03:26:47,"I'm also encountering this issue. `Using AFNetworking (2.5.3)` but that may not be relevant in this case. I'm using `iphonesimulator` set to iPhone 6 running iOS Version 8.3 (SimulatorApp-565.9 CoreSimulator-117.15)
+",intelliot,2015-05-23 22:01:05
+61,2015-05-22 03:42:56,"Great, thanks for the details. I'm going to try to repro with a similar setup.
+",ryanolsonk,2015-05-23 22:01:05
+61,2015-05-23 21:48:42,"I've finally gotten to the bottom of this one. It turns out it's unrelated to AFNetworking .
+
+The PayPal SDK is making it's own call to the `-connectionDidFinishLoading:` method. This was especially tricky to track down because it does it via a call to `performSelector:afterDelay:withObject:` in `-[PPSimpleURLConnection initWithRequest:connectionTimeout:]`. It seems to be passing nil in the object argument, too. I knew something wasn't right when I saw `__NSFireDelayedPerform` on the stack trace rather than what you'd expect from URL loading system.
+
+It's unfortunate that the PayPal SDK calls the delegate method itself, but we can avoid the crash by no-oping if the connection argument is nil. In the general case, if libraries are calling the `NSURLConnectionDelegate`  methods themselves, our request accounting will likely be inaccurate. It's worth noting that keeping a strong reference to the connection wouldn't've helped us here. 
+
+Here's the `performSelector:withObject:afterDelay` trace
+
+![screenshot 2015-05-23 14 17 55](https://cloud.githubusercontent.com/assets/1422245/7785842/abad3706-0159-11e5-970e-5157dc861d51.png)
+
+I'm working on a change to fix the crash and should have something up shortly. /cc @mickeyreiss @intelliot 
+",ryanolsonk,2015-05-23 22:01:05
+61,2015-05-23 22:01:05,"Ok! Please check out a42af79040d6506eb431a04b8cf9d45f0f8c0ffa and let me know if it works out for you.
+",ryanolsonk,2015-05-23 22:01:05
+60,2015-04-23 10:45:23,"There is no option to unset/remove value for a NSDate. 
+![img_3017](https://cloud.githubusercontent.com/assets/1506890/7295386/ed095614-e9e7-11e4-9de4-e43a5f32ac84.PNG)
+
+I also tried to call removeFromKey but crashed on the attempt 
+
+![screen shot 2015-04-23 at 6 41 27 pm](https://cloud.githubusercontent.com/assets/1506890/7295465/ccb4ffd4-e9e8-11e4-99b9-4547598b3a89.png)
+",simonlinj,
+60,2015-05-20 01:11:24,"Did you use quotes around `dateKey` when calling `removeObjectForKey:`?
+
+i.e.
+
+![screenshot 2015-05-19 18 05 09](https://cloud.githubusercontent.com/assets/1422245/7717194/d90383dc-fe51-11e4-9fd4-9392ed8940e3.png)
+
+Otherwise the input isn't valid JSON and will call `removeObjectForKey:` with `nil`, which throws an exception.
+
+I agree it would be nice to have an unset button as part of the ""Edit Default"" screen. Contributions are always welcome :wink:.
+",ryanolsonk,
+59,2015-04-14 10:38:20,"Crash at line:  [alert show];
+supportedInterfaceOrientations method in FLEXExplorerViewController is called circularly.
+
+![image](https://cloud.githubusercontent.com/assets/700749/7135043/6069179e-e2d5-11e4-883d-fae03141bc5e.png)
+",simalone,2015-04-23 04:16:06
+59,2015-04-15 00:15:45,"Thanks for reporting this. I'm looking for potential solutions now. I believe this is limited to builds using 8.3 SDK.
+",ryanolsonk,2015-04-23 04:16:06
+59,2015-04-22 06:49:45,"on iOS8.3 if we use UIAlertView it will cause this problem
+",studentdeng,2015-04-23 04:16:06
+59,2015-04-23 04:16:06,"This is now fixed (c38b90ee60d2ea9131a01b3e1a7014848e0494c9). Thanks again for reporting.
+",ryanolsonk,2015-04-23 04:16:06
+58,2015-04-12 13:40:41,"is there a way to present cocoalumberjack output in system log? 
+
+https://github.com/CocoaLumberjack/CocoaLumberjack
+",shams-ahmed,2015-04-14 19:58:20
+58,2015-04-13 21:23:20,"You could start by looking at how [FLAnimatedImage does it](https://github.com/Flipboard/FLAnimatedImage/blob/master/FLAnimatedImageDemo/FLAnimatedImage/FLAnimatedImage.h#L102), but it's quite challenging to make it work automagically in all scenarios and it has been a source of build/configuration errors.
+",raphaelschaad,2015-04-14 19:58:20
+58,2015-04-13 22:32:10,"I think the question is asking about the system log debugging interface in FLEX. You can add the ASL as a Cocoa Lumberjack logger to see your `DDLog*` messages in FLEX:
+
+<S_CODE_TOKEN>
+
+Let me know if I've understood the question correctly.
+",ryanolsonk,2015-04-14 19:58:20
+58,2015-04-13 22:45:14,"@ryanolsonk that correct, i'll like cocoalumberjack console output to be presented in Flex system log... i'll try your approach  
+",shams-ahmed,2015-04-14 19:58:20
+58,2015-04-14 19:58:20,"Great. Closing this issue for now.
+",ryanolsonk,2015-04-14 19:58:20
+57,2015-04-07 18:03:39,"Build error:
+Undefined symbols for architecture arm64:
+  ""_kCGImageSourceCreateThumbnailWithTransform"", referenced from:
+      +[FLEXUtility
+thumbnailedImageWithMaxPixelDimension:fromImageData:] in FLEXUtility.o
+  ""_CGImageSourceCreateWithData"", referenced from:
+      +[FLEXUtility
+thumbnailedImageWithMaxPixelDimension:fromImageData:] in FLEXUtility.o
+  ""_kCGImageSourceThumbnailMaxPixelSize"", referenced from:
+      +[FLEXUtility
+thumbnailedImageWithMaxPixelDimension:fromImageData:] in FLEXUtility.o
+  ""_kCGImageSourceCreateThumbnailFromImageAlways"", referenced from:
+      +[FLEXUtility
+thumbnailedImageWithMaxPixelDimension:fromImageData:] in FLEXUtility.o
+  ""_CGImageSourceCreateThumbnailAtIndex"", referenced from:
+      +[FLEXUtility
+thumbnailedImageWithMaxPixelDimension:fromImageData:] in FLEXUtility.o
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see
+invocation)
+",luiseduardohd,2015-04-07 20:11:11
+57,2015-04-07 20:11:10,"It looks like your build is not linking to CoreGraphics.framework. This should happen automatically if you use cocoapods or have `Link Frameworks Automatically` set to `YES` in your build settings. If not, you may need to manually add it to the list of linked frameworks. Feel free to write back here if I've misdiagnosed the issue. I just tested building the example project for my 64-bit device and didn't encounter any issues.
+
+I don't see a good reason why we would completely disable the thumbnailing functionality for arm64, so I'm closing the pull request.
+",ryanolsonk,2015-04-07 20:11:11
+57,2015-04-07 20:30:55,"Oh, sorry, thank you for the advice.
+",luiseduardohdbackup,2015-04-07 20:11:11
+57,2015-04-07 20:34:15,"No problem! I hope the suggestions fix the error for you.
+",ryanolsonk,2015-04-07 20:11:11
+56,2015-04-01 10:14:45,"FLEX is really helpful, thanks for your brilliant work!
+
+But I believe the `@YES` in following code should be `shouldEnableOnLaunch`, right?
+
+<S_CODE_TOKEN>
+",coppercash,2015-04-01 17:40:10
+56,2015-04-01 17:40:10,"![picard-facepalm](https://cloud.githubusercontent.com/assets/1422245/6947341/61e2315c-d85b-11e4-861b-0ec876582da1.jpg)
+
+Thanks for catching this! Fixed in efab76025325ba1eff5e2be9735972ccfd7e045d
+",ryanolsonk,2015-04-01 17:40:10
+55,2015-03-24 18:22:50,"this is useful if this is being added to a dynamic framework
+",mustafa,2015-03-25 02:48:41
+55,2015-03-25 02:48:37,":+1: thanks!
+",ryanolsonk,2015-03-25 02:48:41
+54,2015-03-19 21:46:48,"Some build system don't accept space in folder names. This commit just replaces ' ' with '_' where necessary.
+",fabiensanglard,2015-03-25 16:48:15
+54,2015-03-25 02:52:05,"Sorry for the delay here. I'm curious - what build system are you working with? And this is super minor, but do you mind going camel case rather than using underscores?
+",ryanolsonk,2015-03-25 16:48:15
+54,2015-03-25 03:09:05,"Also, this change breaks the example project. The paths need to be updated there as well.
+",ryanolsonk,2015-03-25 16:48:15
+54,2015-03-25 05:30:19,"The build system is Bazel.
+I have converted the folder names to camelCase and also fixed the Example project.
+",fabiensanglard,2015-03-25 16:48:15
+54,2015-03-25 16:48:15,"Thanks! I squashed this and pushed as 0b4e2318143ec0c3bdae14ab7938b9df76ac9683
+",ryanolsonk,2015-03-25 16:48:15
+53,2015-03-13 21:25:34,"I can't tell from the read me whether there is a supported path for using FLEX with Apple TestFlight builds. Is this something that is even possible?
+",benlachman,2015-03-14 00:26:23
+53,2015-03-14 00:26:23,"You can choose to include FLEX in any build you like. The README gives instructions on how to _exclude_ FLEX from certain build configurations. For the configuration you use for TestFlight, simply ignore the exclusion instructions.
+
+You _may_ get rejected by beta app review because FLEX makes use of some private API. I've made an attempt to obfuscate all use of private API in a way that will make it through automated validation, but I don't know what will happen since I haven't tried uploading a build myself.
+
+I would generally caution against using FLEX in beta builds, especially as you get close to the build you plan to submit. It's a good idea to have your beta builds be as close as possible to what you'll ultimately submit to avoid any nasty surprises. You almost certainly _do not_ want to include FLEX in builds that you submit to the public App Store, as noted in the README.
+
+I'm happy to answer more questions here, but I don't plan to add a dedicated TestFlight section to the README for now.
+",ryanolsonk,2015-03-14 00:26:23
+52,2015-03-13 15:38:26,"Hello @ryanolsonk,
+
+I found some type encoding is `@?`. Than the method `readableTypeForEncoding` in `FLEXRuntimeUtility.m` convert this to `(? *)` like
+![ios simulator screen shot 2015 3 13 11 31 35](https://cloud.githubusercontent.com/assets/670441/6641505/1df2f408-c9d9-11e4-98e6-0fc3fa5608b9.png)
+
+I am not sure but maybe all of them just `id` type?
+",DaidoujiChen,2015-03-26 06:17:49
+52,2015-03-13 23:50:38,"Hey @DaidoujiChen 
+
+The `?` type encoding means ""unknown type"" (see https://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/ObjCRuntimeGuide/Articles/ocrtTypeEncodings.html)
+
+It looks like the the original type encoding in this case was `^?`, or pointer to unknown type. Have you seen this on any methods that exist in public headers? I'm guessing the parameter is some kind of block.
+",ryanolsonk,2015-03-26 06:17:49
+52,2015-03-14 01:55:16,"Hello @ryanolsonk,
+
+The original type encoding in this case is `@?` not `^?`.
+
+<S_CODE_TOKEN>
+
+`@?` -> `(? *)` wrong!
+
+`@""UIView""` -> `(UIView *)` correct!
+
+Yes, `(? *)` also found in public method like `transitionFromView:toView:duration:options:completion:`
+![ios simulator screen shot 2015 3 14 9 44 52](https://cloud.githubusercontent.com/assets/670441/6649803/89a2e806-ca2f-11e4-97a7-ff8972b8f414.png)
+
+I refer to https://github.com/JaviSoto/iOS8-Runtime-Headers, it seems like declared `@?` to `id` type.
+",DaidoujiChen,2015-03-26 06:17:49
+52,2015-03-14 02:42:59,"Ah, sorry, I missed that. Thanks for clarifying. Seems like the best thing to do here is to make the check for id `[class length] == 0 || [class isEqual:@""?""]`. Does that seem right to you?
+",ryanolsonk,2015-03-26 06:17:49
+52,2015-03-14 04:35:33,"YES！
+",DaidoujiChen,2015-03-26 06:17:49
+52,2015-03-26 06:17:48,"Finally made this change (48826e2160db73e8ad5b2a14d901293e1e55edeb). Thanks for finding it @DaidoujiChen.
+",ryanolsonk,2015-03-26 06:17:49
+52,2015-03-27 13:05:15,":+1:  thanks @ryanolsonk 
+",DaidoujiChen,2015-03-26 06:17:49
+51,2015-03-08 13:07:16,,larrytin,2015-03-08 18:53:55
+51,2015-03-08 18:53:51,":+1: thanks for catching that.
+",ryanolsonk,2015-03-08 18:53:55
+50,2015-03-06 03:44:22,"FLEX has new version,but readme.md is old. so, update it.
+",louis-cai,2015-03-06 06:23:33
+50,2015-03-06 06:23:30,":+1: Thanks
+",ryanolsonk,2015-03-06 06:23:33
+49,2015-03-06 02:54:11,,nonstriater,2015-03-06 06:26:34
+49,2015-03-06 06:26:31,"FLEX only knows about network requests that come via NSURLConnection or NSURLSession. If you are using lower level networking APIs, you will not be able to see the requests in FLEX.
+",ryanolsonk,2015-03-06 06:26:34
+49,2015-03-18 13:43:10,"This could be implemented with https://github.com/facebook/fishhook if someone is willing to dump the dyld shared cache, open the associated frameworks and rebind the symbols. It'd be a huge undertaking though. I am also not so sure as to how FLEX actually is injected, I do believe that fishhook needed to rebound the associated symbols before UIApplicationMain, but I am not certain.
+",nin9tyfour,2015-03-06 06:26:34
+49,2015-03-19 03:30:42,"@nin9tyfour  great,It's a nice way to my problem,i'll try it
+",nonstriater,2015-03-06 06:26:34
+48,2015-03-02 09:51:22,"Hello @ryanolsonk,
+
+in some of my case, server return the wrong mime type like ""text/html"" for json data. I think it will be better using a method `isValidJSONData:` to check it. `prettyJSONStringFromData:` handle only the real json data. how do you feel? thank you.
+",DaidoujiChen,2015-03-04 17:35:00
+48,2015-03-04 05:19:19,"Hey @DaidoujiChen,
+
+Seems like a nice improvement! I was a little concerned that checking `isValidJSONData:` would be slow, but I did some profiling and it looks fine. I left one comment about a check I think we should leave in, but otherwise it looks good!
+",ryanolsonk,2015-03-04 17:35:00
+48,2015-03-04 07:17:27,"Hello @ryanolsonk,
+
+I am rollback the method `prettyJSONStringFromData:`.
+",DaidoujiChen,2015-03-04 17:35:00
+48,2015-03-04 17:34:38,":+1: thanks @DaidoujiChen !
+",ryanolsonk,2015-03-04 17:35:00
+48,2015-03-05 01:42:50,":)
+",DaidoujiChen,2015-03-04 17:35:00
+47,2015-02-25 15:27:10,"Completion handler may be expecting fileURL so should always pass through the response that the session task gave us.
+",judev,2015-02-25 15:55:02
+47,2015-02-25 15:54:57,"Oops! Thanks for the fix!
+",ryanolsonk,2015-02-25 15:55:02
+46,2015-02-24 17:36:48,"At last! Network debugging in FLEX!
+
+![network](https://cloud.githubusercontent.com/assets/1422245/6355083/4b8b978c-bc08-11e4-8311-c747e87ffb78.gif)
+
+When enabled, FLEX will record all requests made through NSURLConnection and NSURLSession. Network debugging can be enabled programmatically through the `networkDebuggingEnabled` property on `FLEXManager` or via the network debugging settings menu in the interface. I ended up swizzling all the things rather than using `NSURLProtocol` in an effort to avoid altering the way the requests executed.
+
+This change addresses #5 and #43 
+",ryanolsonk,2015-02-24 17:38:18
+45,2015-02-14 23:52:05,"The argument input for dates is an UIDatePicker, set to use gregorian
+calendar and UTC time zone (the locale is still the current one).
+
+Unfortunately UIDatePicker doesn’t give an option for showing seconds.
+
+Works in the object explorer and the defaults explorer. The changes
+around ArgumentInputViewFactory and DefaultEditorVC allows to introspect
+the value for its class and show the right editor (otherwise the JSON
+editor is used by default).
+",drodriguez,2015-02-17 05:38:03
+45,2015-02-17 05:37:54,"This change is awesome. Thank you! Merging.
+",ryanolsonk,2015-02-17 05:38:03
+45,2015-02-17 17:22:09,"Thanks!
+",drodriguez,2015-02-17 05:38:03
+44,2015-02-14 05:46:23,"A long press in any file or directory in the file browser will show a menu with options to rename or delete the selected file or directory.
+
+Renames show an alert view with a text field to write the new name for the file or directory.
+
+Deletes show an alert to confirm the deletion of the file.
+
+Some modifications to the main file browser VC have been done to reload the table view sources after the changes.
+",drodriguez,2015-02-18 03:19:29
+44,2015-02-14 07:50:44,"Sweet!
+",timonus,2015-02-18 03:19:29
+44,2015-02-17 05:13:44,"This is great! Thanks for the contribution. Looking over it, I have some minor feedback that I'll leave inline, but overall it looks like a very clean change. 
+",ryanolsonk,2015-02-18 03:19:29
+44,2015-02-17 05:28:50,"Just the one comment that I think would simplify things a little. Let me know what your thoughts are. Otherwise looks good! After merging, I'll do a quick pass to make sure the styling is consistent with the rest of the project.
+",ryanolsonk,2015-02-18 03:19:29
+44,2015-02-18 03:19:29,"Merged manually to address the conflict in the pbxproj file. Thanks!
+",ryanolsonk,2015-02-18 03:19:29
+43,2015-02-11 15:33:44,"Please update your library for using in iOS 8.
+",timurbeg,2015-02-24 17:39:09
+43,2015-02-11 17:43:01,"UISearchDisplayController works without issue on iOS 8. The deployment target of this project is currently iOS 6, so we need to continue using UISearchDisplayController. I will look at muting the deprecation warnings around usage of the class.
+",ryanolsonk,2015-02-24 17:39:09
+43,2015-02-11 17:47:43,"Yes, FLEX works on iOS 8, no probs. Only warnings. Thanks, in advance. 
+",timurbeg,2015-02-24 17:39:09
+43,2015-02-24 17:39:04,"I've muted the warnings on master. I'll bump the version momentarily.
+",ryanolsonk,2015-02-24 17:39:09
+42,2015-02-10 09:48:47,"Makes possible to provide custom UIViewController for user defined global entry, which will be pushed on to the FLEX manager's navigation view controller stack instead of explorer view controller. This could be used to add some custom UI for testers, add different switches/notes, for example network stubbing could be toggled from such custom UI.
+",maniak-dobrii,2015-02-18 17:12:28
+42,2015-02-10 17:15:08,"Nice! I like the added feature.
+
+@JaviSoto, do you have any thoughts on the change or the new API?
+",ryanolsonk,2015-02-18 17:12:28
+42,2015-02-17 06:05:01,"@maniak-dobrii I left some feedback about a small change to the API. Let me know what you think. We also need you to fill out the contributor form prior to merging: https://docs.google.com/forms/d/1gh9y6_i8xFn6pA15PqFeye19VqasuI9-bGp_e0owy74/viewform
+
+Thanks!
+",ryanolsonk,2015-02-18 17:12:28
+42,2015-02-18 09:52:51,"@ryanolsonk Yeah, sounds great, I'll update my code. Already submitted contributor form.
+",maniak-dobrii,2015-02-18 17:12:28
+42,2015-02-18 12:52:06,"Done, check my updates. Not sure about how to handle nils returned from view controller future block, so, for now it is just asserted. Nothing crashes if you return nil, just a note in the log, but I wouldn't rely on that behaviour, as it may change in future iOS versions.
+",maniak-dobrii,2015-02-18 17:12:28
+42,2015-02-18 17:12:16,"Great, thanks for the contribution!
+",ryanolsonk,2015-02-18 17:12:28
+41,2015-02-02 22:45:29,"I'm creating a sort of accessibility control and since I like the FlexWindow approach, I'm using a similar technique. Thank you very much for sharing.
+
+A problem arises when the window control (the explorer toolbar) is moved over the area that will be used to display the keyboard. The latter is displayed under the toolbar.
+
+Is this the correct behavior? Thank you in advance.
+",flexaddicted,2015-02-08 18:10:19
+41,2015-02-08 18:10:19,"The system displays the keyboard in a different window (a `UITextEffectsWindow`). You can control the ordering of the windows by setting the `windowLevel` property on your toolbar's window. FLEX intentionally sets its windowLevel to be high to show over things like the keyboard window and the status bar window, but you can change this if you want different behavior in your tool. Take a look at `FLEXWindow.m` for more: https://github.com/Flipboard/FLEX/blob/master/Classes/Explorer%20Toolbar/FLEXWindow.m#L22
+",ryanolsonk,2015-02-08 18:10:19
+40,2015-01-30 10:32:58,,flexaddicted,2015-01-30 13:56:27
+39,2015-01-21 18:11:07,"This pull request adds a commit that allows users of FLEX to long press on description rows and copy their contents. This was done to resolve [this issue](https://github.com/Flipboard/FLEX/issues/38). It should be extensible to copying other rows too if that's ever desired.
+",timonus,2015-01-21 20:21:08
+39,2015-01-21 20:20:34,"Nice! :shipit: 
+",ryanolsonk,2015-01-21 20:21:08
+39,2015-01-21 21:26:00,":) Thanks!
+",timonus,2015-01-21 20:21:08
+38,2015-01-15 22:46:33,"Would be useful to have in the top right-hand corner of an object's description.
+",timonus,2015-01-21 20:21:08
+38,2015-01-21 18:11:20,"Opened a pull request that does this https://github.com/Flipboard/FLEX/pull/39
+",timonus,2015-01-21 20:21:08
+37,2014-12-29 17:48:18,"The code injection is left as an exercise for the reader. 哭
+",bellchen,2015-01-19 21:58:33
+37,2015-01-19 21:58:33,"Please see the answer to #4 
+",ryanolsonk,2015-01-19 21:58:33
+37,2015-02-07 20:49:37,"Here is a ready to use library for injecting FLEX into 3rd party apps:
+https://github.com/dtrukr/FLEX_injected
+![settings2](https://cloud.githubusercontent.com/assets/658322/6093881/30357f4a-af13-11e4-903f-08d0f9bd82d4.png)
+",dtrukr,2015-01-19 21:58:33
+36,2014-12-26 17:11:54,"Hi all! I'm using FLEX over the last two weeks and like it. But i run into a bit missing feature. I created UIButton manually after that I added ""addTarget:action:forControlEvents"" method. Here we go. I wanted to see which method called specific UIButton object but i didn't see anything about UIButton target - action. In brief, is there way to see which method  called when I tapped to UIButton?
+",serhatsezer,2015-01-20 01:16:49
+36,2015-01-20 01:16:49,"There is actually an existing way to find the target/action pairs for a given `UIButton` (or any `UIControl` subclass). In the object inspector modal for your UIButton, type ""target"" into the search field and make sure the ""Include Inheritance"" segment is selected. You should see an ivar called `_targetActions` which is a mutable array. 
+
+![screenshot 2015-01-19 14 59 47](https://cloud.githubusercontent.com/assets/1422245/5810622/601ac28e-9ffe-11e4-85e3-6f5926f9db02.png)
+
+Tap into the ivar, and then select one of the `UIControlTargetAction` objects in the array. In that object, there is an `_action` ivar and a `_target` ivar. These will have the information you are looking for. I've improved the description for SEL properties and ivars on the top of master (53a95845f4300238653756ac86272d4bafb35bb5). You'll need to update FLEX to that commit to get a readable name for the SEL.
+
+![screenshot 2015-01-19 15 00 07](https://cloud.githubusercontent.com/assets/1422245/5810650/c481db5e-9ffe-11e4-8c3f-51542dd7d99d.png)
+
+Hope this helps!
+",ryanolsonk,2015-01-20 01:16:49
+35,2014-12-01 13:25:09,"When I declare Flex instance in my application delegate file that gave me an error.
+
+""(use -v to see invocation)"" 
+",serhatsezer,2014-12-03 16:52:39
+35,2014-12-01 13:26:47,"Build target VCTransitions
+
+/.../VCTransitions/VCTransitions/VCTransitions-Prefix.pch:16:13: fatal error: 'UIColor+AAPLApplicationSpecific.h' file not found
+    #import ""UIColor+AAPLApplicationSpecific.h""
+            ^
+1 error generated.
+",serhatsezer,2014-12-03 16:52:39
+35,2014-12-01 13:29:01,"Thats ok. I deleted ""UIColor+AAPLApplicationSpecific.h"" line and build-compile it worked. 
+",serhatsezer,2014-12-03 16:52:39
+35,2014-12-03 16:52:39,"It sounds like you may be using the prefix.pch from the example project. UIColor+AAPLApplicationSpecific.h is a header in the example project. Files from the example project generally shouldn't be referenced or used in your own project. Check out the installation section of the readme for instructions on adding FLEX to your own project.
+",ryanolsonk,2014-12-03 16:52:39
+34,2014-11-19 19:42:50,"I love FLEX, and have seen that you have an example of FLEX running in system apps, presumably via a jailbreak. I have 2 jailbroken iOS 7.0.6 devices and a jailbroken iOS 8.1 device.
+
+I understand that FLEX is not made for jailbroken development, but I would really like to learn how Apple have laid out a couple of their internal apps that I am struggling to emulate, e.g., the ""Friends"" tab of Game Center seemingly being a `UISplitViewController` inside a `UITabBarController`. I feel FLEX would be a great learning experience for me, but I have very little knowledge with jailbreak development, nevermind injecting the code in to a system app.
+
+If you can provide any help/pointers, it would be much appreciated, but I understand that you likely cannot (potentially legally) help me.
+",JosephDuffy,2014-12-04 00:39:08
+34,2014-11-24 18:53:28,"I am also wondering how to get images in FLEX format (looks like hex).
+",Legoless,2014-12-04 00:39:08
+34,2014-12-04 00:39:07,"@JosephDuffy This project should cover what you need: https://github.com/qiaoxueshi/FLEXLoader. Note that it is available in the Cydia store.
+
+@Legoless The format is just a byte array with the image data. You can open the images in a program that lets you see the raw data (i.e. [Hex Fiend](http://ridiculousfish.com/hexfiend/)). The FacebookSDK also has [this script](https://github.com/facebook/facebook-ios-sdk/blob/master/scripts/image_to_code.py) which could be helpful in automating the task. 
+",ryanolsonk,2014-12-04 00:39:08
+33,2014-11-18 12:51:35,"The old way works well on simulator in both iOS7 and iOS8. But it doesn't work when we use device in iOS8.
+I changed into another way, which I've tested on simulators (iOS7 and iOS8) and devices (iOS7 and iOS8)
+",studentdeng,2014-11-19 03:11:42
+33,2014-11-19 03:11:18,"This is great. Thanks for the PR!
+",ryanolsonk,2014-11-19 03:11:42
+32,2014-11-06 14:25:02,"A basic trigger system that will trigger FLEX toolbar based on either ""shake gesture"" or 4-finger long press. This makes FLEX integration even easier, as the application does not require any changes or buttons added to display FLEX toolbar. Triggers can be removed in code, if desired.
+",Legoless,2014-11-07 15:22:44
+31,2014-10-01 11:40:08,"In iOS 8 `locationInView:` doesn't seem to take the device orientation into account if `nil` is passed as a view. Instead, passing the root view works.
+",Lascorbe,2014-10-02 17:13:25
+31,2014-10-02 17:13:25,"Thanks for finding this and suggesting a fix! I took a slightly different approach so that we could remove the OS version check, but the change is essentially the same.
+",ryanolsonk,2014-10-02 17:13:25
+31,2014-10-03 08:31:32,"Thanks! And thank you for finding a better solution :wine_glass: 
+",Lascorbe,2014-10-02 17:13:25
+30,2014-09-26 15:47:15,"UIWebView's delegate property uses `assign` not `weak`.
+",jaredsinclair,2014-09-26 19:07:09
+30,2014-09-26 19:07:09,"Good catch. Thanks! Fixed in a04cdf789af017ebcb3e8bcc5f051fc11e727b01
+
+I'm curious - did you see any crashes due to this?
+",ryanolsonk,2014-09-26 19:07:09
+30,2014-09-26 19:23:23,"I didn’t see any with FLEX. We had some crashes with our own web views (same bug, just caught it today), so I searched all the web views in our project to see if they're nilling out the delegate. :-)  
+
+––
+Jared Sinclair
+
+On Friday, September 26, 2014 at 3:07 PM, Ryan Olson wrote:
+
+> Good catch. Thanks! Fixed in a04cdf7 (https://github.com/Flipboard/FLEX/commit/a04cdf789af017ebcb3e8bcc5f051fc11e727b01)
+> I'm curious - did you see any crashes due to this?
+> 
+> —
+> Reply to this email directly or view it on GitHub (https://github.com/Flipboard/FLEX/issues/30#issuecomment-57006674).
+",jaredsinclair,2014-09-26 19:07:09
+29,2014-09-25 22:16:40,,raphaelschaad,2014-09-25 22:17:52
+29,2014-09-25 22:17:45,":thumbsup:
+",ryanolsonk,2014-09-25 22:17:52
+28,2014-09-03 10:14:27,,Jeswang,2014-12-15 04:16:14
+28,2014-09-17 12:38:08,"It's already included. When you are in a view, you will see a ""Preview Image"" menu item in 'Shortcuts' section.  
+",nesimtunc,2014-12-15 04:16:14
+28,2014-12-15 04:16:14,"@Jeswang thanks for the suggestion. Added in 8f6b8b2dae9053b92c5a839eb9aa83ca204a43d0.
+",ryanolsonk,2014-12-15 04:16:14
+27,2014-08-28 05:19:31,"Hi, in FLEXManager
+
+<S_CODE_TOKEN>
+
+I think set `rootViewController` is enough, why `addSubView`?
+",onmyway133,2014-09-26 19:04:48
+27,2014-09-26 19:04:48,"True, it's not needed. Removed in 9d1489adbeccf2d47cf8bc4cd4406c700df5b31b
+",ryanolsonk,2014-09-26 19:04:48
+26,2014-08-19 19:31:45,"The action sheets cover the explorerWindow, So I can't touch the explorerWindow.
+![image](https://cloud.githubusercontent.com/assets/516562/3971767/e4e21f58-27d6-11e4-9b07-4d1fe82b80ca.png)
+
+I think it should be 
+
+<S_CODE_TOKEN>
+
+Thanks.
+",leexiaosi,2015-02-24 17:42:58
+26,2014-08-20 06:38:16,"This is a tricky one. If we set the FLEX window to be above all alerts, then any alerts presented from FLEX modal view controllers will end up behind the modal. See https://github.com/Flipboard/FLEX/blob/master/Classes/Explorer%20Toolbar/FLEXWindow.m#L18-L22 
+
+From digging on this one a little further, here are the actual window levels I found:
+
+`_UIAlertOverlayWindow`: 2001 (`UIWindowLevelAlert` + 1)
+`UIStatusBarWindow`: 1000 (`UIWindowLevelStatusBar`)
+`UIWindowLevelNormal`: 0
+
+I'm thinking about a solution involving modifying the window level of the FLEX window before and after modal presentation. I'll update this thread when I have a chance to try it out.
+",ryanolsonk,2015-02-24 17:42:58
+26,2015-02-24 17:42:58,"There's a tradeoff here that I think we'll have to live with. The FLEX modals need to present alerts and action sheets, so having the FLEX window above the alert level is not an option. If you're interested in exploring alerts, you can temporarily raise the FLEX window level.
+",ryanolsonk,2015-02-24 17:42:58
+25,2014-08-19 14:04:55,"Hi,
+
+First of all: THANK YOU! This is very helpful for developing the next big thing ;).
+But what I found is that if you have `#import ""FLEXManager.h""` in your code the app's UI slows down a lot. Especially reloading table views gets very slow. I do think this is a bug because it lead me to think I just made a mistake building my table view :). If it is possible it would be great if this gets fixed.
+
+Bests,
+Philip 
+",plaetzchen,2014-08-20 06:12:57
+25,2014-08-20 06:12:57,"Hi Phillip,
+
+There is nothing in FLEX that should affect performance in your app when FLEX is not presented. Even when the overlay is presented, the impact on your app should be minimal. To track down performance bottlenecks in your app, please try using insturments. If you do see FLEX showing up significantly in time profiles, I'd be happy to take a look. Without that, there is nothing actionable here.
+
+Cheers,
+Ryan
+",ryanolsonk,2014-08-20 06:12:57
+25,2014-08-20 10:23:33,"I did run a test with Instruments attached. The difference in timing I recognized is in the UISegmentedControl  i use for letting my table view reload certain sections. With FLEX enabled, running in DEBUG configuration `[UISegmentedControl touchesEnded:withEvent]` takes 6ms each, without FLEX (but still running in DEBUG configuration) it takes under 1ms. This seems to be (a part of) the issue.
+
+You can find the trace file here: http://pltzchn.de/flextrace.zip (Run 1 is without, run 2 with FLEX)
+",plaetzchen,2014-08-20 06:12:57
+24,2014-08-15 12:29:21,"It'd be great and really useful if we could see all the device's logs. e.g. NSLogs etc.
+",docash59,2015-01-26 19:01:15
+24,2014-08-19 06:19:47,"+1
+",DDany,2015-01-26 19:01:15
+24,2014-09-08 16:30:52,"It should be doable reading from the standard output.
+However, since all apps (should) already do this and write that to a file, maybe we can just expose an API where developers just point FLEX to that file and simply add a viewer to that file?
+
+I implemented a screen like this with a search bar to filter the logs and it works pretty well.
+",JaviSoto,2015-01-26 19:01:15
+24,2014-11-10 16:47:41,"I've been thinking about this, but how do you plan to get ahold of stdout (Basically NSLogs are sent to stderr, but still)?
+",Legoless,2015-01-26 19:01:15
+24,2014-11-10 16:52:25,"It's doable, you can read from the stderr
+",JaviSoto,2015-01-26 19:01:15
+24,2014-11-10 16:59:45,"The Apple System Log has an API that lets you read log messages. http://www.cocoanetics.com/2011/03/accessing-the-ios-system-log/
+",ryanolsonk,2015-01-26 19:01:15
+24,2014-11-10 17:27:35,"Okay, cool. I'll add this to my fork and then we will see what can be done. Thanks for link @ryanolsonk.
+",Legoless,2015-01-26 19:01:15
+24,2014-11-11 12:03:20,"I've implemented a basic version of this in https://github.com/Legoless/FLEX at [9f76fac](https://github.com/Legoless/FLEX/commit/9f76facdb78bcd070e088deb4053f6f64b3c8a72). This probably will not get a pull request back, because I've changed too much internals of FLEX, but will continue to be developed. If someone wants to use the code and back-port it, go ahead. :)
+",Legoless,2015-01-26 19:01:15
+24,2014-12-29 17:41:39,"you can learn more about nslog from https://github.com/lucascorrea/SCLogger  and  https://github.com/mamaral/MALoggingViewController 
+they are all helpful!
+",bellchen,2015-01-26 19:01:15
+24,2014-12-29 17:46:16,"Those two projects require you to make changes to the host app (calling their method to append to their log).
+",JaviSoto,2015-01-26 19:01:15
+24,2015-01-26 19:01:15,"Happy to say that I implemented this feature yesterday! Check out the latest master to see it. It uses the ASL C API to build a table view of the log messages. You can copy an individual message by long pressing on the cell, and you can filter the messages with a search term. It polls for updates and follows the log unless you scroll away from the bottom. Querying the ASL is a little slow in the simulator but reasonably fast on device. Luckily the main use case for this feature is on device since Xcode provides a much better console when working in the sim.
+
+![screenshot 2015-01-26 10 55 55](https://cloud.githubusercontent.com/assets/1422245/5906150/468b82f8-a54a-11e4-86b6-b1e24fc2de7e.png)
+
+![screenshot 2015-01-26 10 35 33](https://cloud.githubusercontent.com/assets/1422245/5906160/54dfd2dc-a54a-11e4-8f10-37e5acec106a.png)
+
+![screenshot 2015-01-26 10 42 03](https://cloud.githubusercontent.com/assets/1422245/5906164/595e121a-a54a-11e4-81c3-263af95d8e10.png)
+
+![screenshot 2015-01-26 10 42 17](https://cloud.githubusercontent.com/assets/1422245/5906165/5ecf5f74-a54a-11e4-8787-887a6ded9b15.png)
+",ryanolsonk,2015-01-26 19:01:15
+24,2015-01-26 19:18:52,"WUT!? This is the most amazing thing ever. It works on iOS 7 and 8 too?
+",JaviSoto,2015-01-26 19:01:15
+24,2015-01-26 21:37:43,"@JaviSoto thanks!
+
+I hadn't actually tested it on iOS 7 until your comment. There was an interesting issue due to a mistake in the version of asl.h that comes with the iOS 8.1 SDK. It turned into a bit of a rabbit hole, but I think I've got everything worked out now. If you're curious, the commit is here: 063ffe97c1d256c341d522b9b9f95a6a7ee80e2c
+",ryanolsonk,2015-01-26 19:01:15
+24,2015-01-27 01:38:56,"Great :) Sorry to give you work but I'm glad you figured it out!
+",JaviSoto,2015-01-26 19:01:15
+24,2015-01-27 14:48:13,"Perfect, Thank you for implementing this into FLEX, very useful!
+",docash59,2015-01-26 19:01:15
+24,2015-07-30 21:44:03,"Is the system log view only for log events that have been raised whilst the app is running? On my device it only seems to show since startup, and terminating the app has the effect of clearing the log. I'm using FLEX to debug an issue that occurs in the background and possibly across background -> termination and then later startup. It would be good to see the system log as a continuous flow across termination and startup. Is this possible? 
+",jwardle,2015-01-26 19:01:15
+24,2015-08-05 17:06:56,"FLEX uses the ASL API to query for log messages. It filters on the current process ID, which means it will not get messages from previous runs of the app.
+
+More details on the ASL API here: https://developer.apple.com/library/ios/documentation/System/Conceptual/ManPages_iPhoneOS/man3/asl.3.html
+
+And the FLEX method that fetches the log messages: https://github.com/Flipboard/FLEX/blob/master/Classes/GlobalStateExplorers/SystemLog/FLEXSystemLogTableViewController.m#L205-L235
+",ryanolsonk,2015-01-26 19:01:15
+23,2014-08-14 05:58:47,"I think online File Storage App is fine, such as[Dropbox](https://itunes.apple.com/cn/app/dropbox/id327630330?l=en&mt=8). Alternatively, if someone like me, living in China, I would like to use [Baidu Cloud](https://itunes.apple.com/cn/app/bai-du-yun/id547166701?l=en&mt=8).
+
+Mostly, I'm also upload some database file from app to my computer.
+",studentdeng,2014-08-20 07:04:48
+23,2014-08-20 06:17:45,"Sorry for the delay in responding. This looks good to merge. We just need you to accept the individual contributor license agreement here: https://docs.google.com/forms/d/1gh9y6_i8xFn6pA15PqFeye19VqasuI9-bGp_e0owy74/viewform
+
+Thanks!
+",ryanolsonk,2014-08-20 07:04:48
+23,2014-08-20 06:46:52,"Done
+",studentdeng,2014-08-20 07:04:48
+23,2014-08-20 07:04:56,"Great, thanks for the contribution! Merged.
+",ryanolsonk,2014-08-20 07:04:48
+22,2014-08-14 03:12:12,"as #20,
+
+Hello @ryanolsonk,
+
+i found there are 5 search bars need to add, please help to confirm, thank you.
+",DaidoujiChen,2014-08-14 03:20:16
+22,2014-08-14 03:19:49,"Looks great. Thanks! Merging.
+",ryanolsonk,2014-08-14 03:20:16
+22,2014-08-14 03:28:32,":+1: 
+",DaidoujiChen,2014-08-14 03:20:16
+21,2014-08-11 15:54:06,"Not an issue, but a question (and I couldn't find another way to ask it).
+
+Is the ability to look @ the Apple Home Screen (Springboard) accomplished via jailbreak?
+",bluesmoon,2014-08-13 16:14:25
+21,2014-08-13 15:40:28,"Yes, the device has to be jailbroken.
+",hankbao,2014-08-13 16:14:25
+21,2014-08-13 16:14:25,"Thanks
+",bluesmoon,2014-08-13 16:14:25
+21,2014-08-21 19:13:46,"Can anyone show more detail explore way for beginner?thx 
+",limbo0312,2014-08-13 16:14:25
+20,2014-08-11 08:54:36,"Hello @ryanolsonk,
+
+in common use FLEX scenario, i prefer press 'Search' button on the keyboard to finish search rather than scroll the tableview. if you also like it, i will send a pull request to you, thank you. 😊
+",DaidoujiChen,2014-08-14 03:17:22
+20,2014-08-13 16:30:57,"Yea, that would be a nice improvement. Go for it!
+",ryanolsonk,2014-08-14 03:17:22
+19,2014-08-11 03:22:23,"It would be better to take advantage of other Application to upload or open file.
+",studentdeng,2014-08-14 05:21:06
+19,2014-08-13 16:42:46,"I agree that this would be nicer than the current behavior of failing silently. Before we merge, can you please:
+- Make the small style change
+- Squash the changes into one commit and rebase on top of the latest master
+
+Do you have any suggestions for apps you use to open files from the file browser? I might add a note to the readme, and it could be helpful to list some example apps.
+
+Thanks!
+",ryanolsonk,2014-08-14 05:21:06
+19,2014-08-14 01:53:27,"could I just close it and make another pull request ? I don't know how to Squash the ""Merge pull request #1 from Flipboard/master …   da2aa7e"" information
+",studentdeng,2014-08-14 05:21:06
+19,2014-08-14 01:56:41,"I'm not familiar with pull request work flow... 
+",studentdeng,2014-08-14 05:21:06
+19,2014-08-14 03:14:09,"Making a new PR is fine too if that's easier for you.
+",ryanolsonk,2014-08-14 05:21:06
+19,2014-08-14 03:27:27,"Hello @studentdeng,
+
+nice to meet you. i learn squashing commits in FLEX this project too. if you use sourcetree, you can look this [post](https://answers.atlassian.com/questions/213902/in-sourcetree-how-do-i-squash-commits).
+
+first, you need to squash all the commits in your local branch.
+second, use `git push -f` to force write your remote branch, make it the same with the local one.
+
+wish it help you, thank you.
+
+soft remind, if you first try on this, remember to backup your branch. `git push -f` is strong but dangerous.
+",DaidoujiChen,2014-08-14 05:21:06
+19,2014-08-14 05:21:06,"thank @DaidoujiChen . but I prefer to recreate it. I think I've already miss up it : (
+",studentdeng,2014-08-14 05:21:06
+18,2014-08-03 14:37:03,"Is it possible - through the view inspector to get the ""path"" to the selected view? 
+
+I can see the hierarchy through the ""views"" option, but not sure how I would retrieve a private view in code (would I need to result to recursive subviews comparing class name?).
+
+For instance if selected a label in a navigation controller:
+
+[[[UIViewController:xxxxxx navigationController] navigationBar] private instance of some subview] ... more views in the way... particular view I selected in the viewer...]
+Hope the question is clear.
+",avnerbarr,2014-08-20 06:59:21
+18,2014-08-20 06:59:21,"I don't feel that this is something FLEX can or should provide. There is not necessarily a single ""path"" via which an object is accessible. I also don't see a reason to encourage use of private API. It is fragile and may get you rejected in app store review.
+
+That said, you can use some of the features of FLEX to accomplish what you're looking for. At the bottom of the object explorer modal, there is a section called ""Object Graph"". This scans all objects on the heap looking for ivars that reference the current object. You might be able to trace the ivars from the view of interest back to something you have access to, and then use key value coding from there. You can also explore the properties on the ""views in the way"" to help you connect the dots.
+
+![screenshot 2014-08-19 23 49 30](https://cloud.githubusercontent.com/assets/1422245/3977353/5271f83a-2837-11e4-9cb9-6db0914cea91.png)
+
+![screenshot 2014-08-19 23 49 43](https://cloud.githubusercontent.com/assets/1422245/3977354/571a8a46-2837-11e4-9486-03439b9a56f2.png)
+",ryanolsonk,2014-08-20 06:59:21
+17,2014-08-02 12:34:20,"Hello @ryanolsonk,
+
+the hotfix is for #16 issue, thanks.
+",DaidoujiChen,2014-08-02 21:20:44
+17,2014-08-02 21:20:43,"Hey @DaidoujiChen,
+
+Thanks for looking at this one. I found a few other cases where the same issue could arise and addressed them all in one commit: f956f8519039fbd691ee8145ff8fee110458e826
+",ryanolsonk,2014-08-02 21:20:44
+17,2014-08-04 03:08:06,":+1: 
+",DaidoujiChen,2014-08-02 21:20:44
+16,2014-08-01 15:59:12,"I have 2 errors and are the same errors, any idea how to fix it?
+Either one of these ""Fix-it"" options eventually crash my application (_Bridge.. option)
+Have the latest version.
+![screenshot 2014-08-01 16 58 22](https://cloud.githubusercontent.com/assets/4446692/3781290/bc92d1e6-1994-11e4-9083-f2a6f54594a0.png)
+",docash59,2014-08-02 12:14:02
+16,2014-08-02 07:44:48,"Hello @docash59,
+
+i can reproduce those errors in some of my projects.
+actually, the correct class is `FLEXPropertyBox` in `self.filteredProperties`.
+would you please try to replace the code from
+
+<S_CODE_TOKEN>
+
+to
+
+<S_CODE_TOKEN>
+
+thank you.
+",DaidoujiChen,2014-08-02 12:14:02
+16,2014-08-02 12:14:02,"Works perfectly, It'd be good to update the repo so everyone else doesn't run into this problem :+1: 
+",docash59,2014-08-02 12:14:02
+15,2014-08-01 05:17:08,"as #12,
+
+add UISearchDisplayController to FLEXFileBrowserTableViewController. and implement related methods for search.
+",DaidoujiChen,2014-08-06 05:37:27
+15,2014-08-02 21:26:33,"Hey @DaidoujiChen 
+
+I want to spend some more time going over this before providing feedback. My initial impression is that the functionality is awesome, but it involves some added complexity. I'm hoping we can find some ways to simplify to make it easier to maintain. For example, I think it would be better if we could use the built-in sort rather than having a one-off implementation of quick sort. I will leave more detailed feedback when I have a chance to dig into the pull request further.
+",ryanolsonk,2014-08-06 05:37:27
+15,2014-08-04 03:16:00,"Hello @ryanolsonk,
+
+thanks for your reply. i will continue to think if there is a better way to design those methods.
+",DaidoujiChen,2014-08-06 05:37:27
+15,2014-08-04 05:26:31,"I poked around a little today and had an idea. Let me know what you think about this:
+
+We could create an `NSOperation` subclass called `FLEXFileBrowserSearchOperation` that would be configured with a base directory, a search string, and a delegate. The operation would do several tasks in order:
+- Recursively search from the base path to find paths matching the search string
+- Compute a size for each found path
+- Sort using the sizes already computed above
+- Sum all the computed sizes
+- Call a delegate method, passing back a sorted array of paths and the total size.
+
+By using an `NSOperation` subclass, we can check `isCancelled` throughout its `main` method to avoid doing unnecessary work. In `FLEXFileBrowserViewController`, if the search text changes, we can cancel the existing operation and enqueue a new one. We can also cancel any operations when the view controller goes away.
+
+I read in a commit message that the reason for implementing quick sort was to have a cancelable sort. I ran a quick profile, and the sort is mostly slow because of the sizing calls. We end up making a lot duplicate sizing calls, and we could do better by precomputing the size of each path prior to the sort. Precomputing would be cancelable between each path, and the final sort would be reasonably fast, so we wouldn't need to cancel in the middle of that. This would also allow us to cut out duplicate sizing work when computing the total size of the search results.
+
+I think an `NSOperation` subclass would nicely encapsulate all the search logic, and then we would just need a small amount of logic to enqueue/cancel the operations and update the search UI in `FLEXFileBrowserViewController`.
+
+This is just one idea, and other approaches may work just as well. Let me know what you think!
+",ryanolsonk,2014-08-06 05:37:27
+15,2014-08-04 10:09:03,"Hello @ryanolsonk,
+
+sounds great! i have also thought about using `NSOperation`.
+if nothing goes wrong, i will try to redesign it using `NSOperation` tonight.
+thank you.
+",DaidoujiChen,2014-08-06 05:37:27
+15,2014-08-04 15:11:38,"Hello @ryanolsonk,
+
+i am change to using `NSOperation`. and i have a question. why you use 
+
+<S_CODE_TOKEN>
+
+at [here](https://github.com/Flipboard/FLEX/blob/master/Classes/Global%20State%20Explorers/FLEXFileBrowserTableViewController.m#L38) in the beginning, i replace it to 
+
+<S_CODE_TOKEN>
+
+but not sure right or not. thank you.
+",DaidoujiChen,2014-08-06 05:37:27
+15,2014-08-04 16:59:23,"I had concerns about the thread safety of `[NSFileManager defaultManager];`, but I just checked the docs and it appears I was wrong. Using the default manager should be safe.
+
+I'll take a look at the changes tonight. Thanks for reworking it!
+",ryanolsonk,2014-08-06 05:37:27
+15,2014-08-05 06:43:34,"Nice! I think this is getting much easier to understand and the performance should be better now too. I left a few more comments inline. Looking forward to merging this soon!
+",ryanolsonk,2014-08-06 05:37:27
+15,2014-08-05 10:23:20,"Hello @ryanolsonk,
+
+the `NSOperation` become non-concurrent.
+
+update : remove gcd in `FLEXFileBrowserSearchOperation`.
+",DaidoujiChen,2014-08-06 05:37:27
+15,2014-08-05 17:49:34,"Looking good! Thanks for working through the change. We just need to add prefixes to the category methods.
+
+Also, would you mind squashing all the commits together into one to clean up the history?
+",ryanolsonk,2014-08-06 05:37:27
+15,2014-08-06 02:08:11,"Hello @ryanolsonk,
+
+i am fix category naming, remove cancel method / property in `FLEXFileBrowserSearchOperation`, and squished to one commit.
+thank you.
+",DaidoujiChen,2014-08-06 05:37:27
+15,2014-08-06 05:37:21,"Great! Thanks for working through all the changes. This is an awesome feature.
+
+Merging.
+",ryanolsonk,2014-08-06 05:37:27
+15,2014-08-06 06:02:46,"😀
+
+thanks for your patience. please forgive me for my old coding habits. i think i will do much better next time.
+",DaidoujiChen,2014-08-06 05:37:27
+14,2014-07-31 19:11:46,"This allows users of `FLEXManager` to use the `-registerGlobalEntryWithName:objectFutureBlock:` API in a `+load` method of their app. Right now that creates the `UIWindow` object when `UIKit` is not ready. With this change, the window will be created the first time you call `-showExplorer`, which would also help a bit with launch times in apps that have FLEX because creating that object would be delayed from app launch to the first time it's used.
+",JaviSoto,2014-08-02 21:29:37
+14,2014-08-01 02:56:28,"I think the change to lazily create the window is a good one now that we've added API to FLEXManager that isn't related to showing/hiding the window. I have one question which isn't directly relevant but I'll ask it anyway. Why are you making the call in `+load` rather than in `+initialize`? It seems like `+initialize` would provide a safer environment.
+",ryanolsonk,2014-08-02 21:29:37
+14,2014-08-01 02:59:08,"Should we also make the view controller instantiation lazy?
+",ryanolsonk,2014-08-02 21:29:37
+14,2014-08-01 23:14:21,"> I have one question which isn't directly relevant but I'll ask it anyway. Why are you making the call in +load rather than in +initialize? It seems like +initialize would provide a safer environment.
+
+The answer is just that I'm stupid :D You're totally right.
+",JaviSoto,2014-08-02 21:29:37
+14,2014-08-01 23:14:28,"> Should we also make the view controller instantiation lazy?
+
+Yup I'll make that change.
+",JaviSoto,2014-08-02 21:29:37
+14,2014-08-01 23:17:32,"Done.
+",JaviSoto,2014-08-02 21:29:37
+14,2014-08-02 21:29:23,"Awesome. Thanks! Merging.
+",ryanolsonk,2014-08-02 21:29:37
+13,2014-07-31 10:21:29,"In my base UIViewController i have added this with the purpose of having the debugger enabled in all VC when needed:
+
+<S_CODE_TOKEN>
+
+But instead of debugging the current VC i always have the reference of the first VC instantiated by the AppDelegate, it's not the appropriate pattern for achieve this?
+",buguibu,2014-08-01 06:42:05
+13,2014-08-01 02:31:17,"I think you're referring to the 6th row in the globals menu. That row contains `[UIApplication sharedApplication] keyWindow] rootViewController]`. It won't change based on the view controller you present FLEX from.
+
+Here are two suggestions for how to get to other view controllers besides the root view controller.
+1. From the view hierarchy list, find the view belonging to your view controller, inspect the details of that view by tapping the blue info button, and tap on the ""View Controller"" shortcut row.
+2. Add a custom row to the globals menu using `-[FLEXManager registerGlobalEntryWithName:objectFutureBlock:]`. From the object future block, you return a reference to the view controller you want to debug.
+",ryanolsonk,2014-08-01 06:42:05
+13,2014-08-01 06:42:05,"Thanks so much! I'll use the first option during working time as it works perfect, but in my spare time i'll try to implement the second suggestions, this tool looks such amazing that i'll love to customize it for my needs.
+
+I finally i achieve something interesting i'll make a pull request.
+",buguibu,2014-08-01 06:42:05
+12,2014-07-31 08:36:12,"Hello @ryanolsonk,
+
+i am implement this feature like this
+
+![image](https://s3-ap-northeast-1.amazonaws.com/daidoujiminecraft/Daidouji/FLEX_TEST20140731.gif)
+
+is it the same with you think about? or do you have any suggestion?
+thank you.
+",DaidoujiChen,2014-08-02 14:31:11
+12,2014-08-01 02:14:40,"Nice, that looks awesome! It searches recursively down from the directory you're in?
+",ryanolsonk,2014-08-02 14:31:11
+12,2014-08-01 02:40:55,"Hello @ryanolsonk,
+
+yes, it searches recursively down from the directory.
+i am working on modify sort and calculate search files.
+when everything is completed, i will send a pull request.
+thank you.
+",DaidoujiChen,2014-08-02 14:31:11
+10,2014-07-30 11:01:39,"At least something like
+    `pod 'FLEX', '~>1.0.1'`
+would help and doesn´t cost so much.
+",buguibu,2014-08-25 05:13:38
+10,2014-08-25 05:13:38,"Added in fe2ee7670f6288ca45246bbd6534b61290d7453e
+",ryanolsonk,2014-08-25 05:13:38
+9,2014-07-29 04:55:06,"Hi,
+If the rootViewController only supports Portrait mode, Flex will crash at `showExplorer`.
+I have created an example at the link: https://github.com/sahara108/FlexTest.
+Disable 
+`-(BOOL)shouldAutorotate 
+{
+    return NO;
+}
+`
+`-(NSUInteger)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationPortrait;
+}`
+in VNViewController will make the app run normally.
+Please fix this.
+",sahara108,2014-07-29 05:30:54
+9,2014-07-29 05:21:32,"I believe the error is partly in your test application. You are returning a UIInterfaceOrientation value when the method should return a UIInterfaceOrientationMask value. If you change to
+
+<S_CODE_TOKEN>
+
+then the crash no longer occurs. That said, I should probably be forwarding `shouldAutorotate` in `FLEXExplorerViewController`. I'll look into adding that.
+",ryanolsonk,2014-07-29 05:30:54
+9,2014-07-29 05:30:54,"`shouldAutorotate` forwarding added in 190e5336f7c842d6787bb9ba30f5c30dbc25ec86
+",ryanolsonk,2014-07-29 05:30:54
+9,2014-07-29 05:31:24,"Thanks for providing a sample project, it was very helpful!
+",ryanolsonk,2014-07-29 05:30:54
+9,2014-07-29 05:35:00,"Thanks for quick replying. I will get the new code and try again. 
+Cheers. 
+",sahara108,2014-07-29 05:30:54
+8,2014-07-28 09:37:20,"I have two targets in my Xcode project: MyApp and MyApp Staging.
+
+What is the recommended way of installing FLEX for the staging version only, via Cocoapods? I've tried this
+
+<S_CODE_TOKEN>
+
+.. but i got various 'duplicate symbol' erros when building.
+",cannyboy,2014-07-29 06:09:11
+8,2014-07-29 06:09:11,"Some quick searching led me to this issue on the CocoaPods repo: https://github.com/CocoaPods/CocoaPods/issues/1729. If the discussion there doesn't help, you may be able to use the pod in both targets but take advantage of the `EXCLUDED_SOURCE_FILE_NAMES` Xcode build setting to keep FLEX out of your compiled ""MyApp"" target. See more details in the README: https://github.com/Flipboard/FLEX#excluding-flex-from-release-app-store-builds.
+
+I am closing this issue since it is more of a CocoaPods use issue than something specific to FLEX.
+",ryanolsonk,2014-07-29 06:09:11
+7,2014-07-27 11:42:09,"Hello @ryanolsonk,
+
+there are two changes i added for input behavior,
+1. use picker to select fonts. 
+
+![ios simulator screen shot 2014 7 27 7 20 31](https://cloud.githubusercontent.com/assets/670441/3713729/a45836ce-1580-11e4-99c5-3ec22962633f.png)
+1. add a ""done"" button for resign inputview.
+
+![ios simulator screen shot 2014 7 27 7 20 58](https://cloud.githubusercontent.com/assets/670441/3713746/1f6b8cf8-1581-11e4-815a-b9c39a7c30ff.png)
+
+thx.
+",DaidoujiChen,2014-07-29 06:13:36
+7,2014-07-28 01:11:14,"Thanks for the PR! This will be a great improvement to the font picker, but there are a few things we'll need to work out first.
+- Running the example project on iOS 7 and trying to change the font on one of the table view cell labels leads to a crash because the font (`.HelveticaNeueInterface-Regular`) is not in the list of available fonts. We can probably add fonts that are not in the available fonts list dynamically in `setInputValue:`
+- The picker view on iOS 7 ignores the attributes on the strings, so the font names all look the same. It's not a requirement, but we might consider implementing `pickerView:viewForRow:forComponent:reusingView:` to return a UILabel and set an attributed string on it ourselves.
+- There are a number of style differences from the rest of the code in the project. To keep consistency within the project, please don't line break between parameters in method calls, and avoid using statement-expressions.
+- The `supportsObjCType:withCurrentValue:` method in `FLEXArgumentInputFontsPickerView` being misused a little (partly my fault for not providing better documentation). The type for the font name is an `NSString`, not a `FLEXArgumentInputFontsPickerView`. We actually don't need to go through `FLEXArgumentInputViewFactory` at all, and thus `supportsObjCType:withCurrentValue:` does not need to be implemented in `FLEXArgumentInputFontsPickerView`. Then, in `-[FLEXArgumentInputFontView init]` we can just do something like:
+
+<S_CODE_TOKEN>
+
+Let me know when you've had a chance to address these points and I'll take another look. Thanks!
+",ryanolsonk,2014-07-29 06:13:36
+7,2014-07-28 04:32:48,"Hello @ryanolsonk,
+
+I've fixed my code.
+1. corrected those problems on ios7.
+2. alloc `FLEXArgumentInputFontsPickerView` directly, without go through `FLEXArgumentInputViewFactory`. 
+3. remove unused code.
+
+thank you.
+",DaidoujiChen,2014-07-29 06:13:36
+7,2014-07-29 05:09:42,"Thanks for incorporating the feedback! I just had one more comment. Also, please fill out the CLA when you get a chance: https://docs.google.com/forms/d/1gh9y6_i8xFn6pA15PqFeye19VqasuI9-bGp_e0owy74/viewform
+",ryanolsonk,2014-07-29 06:13:36
+7,2014-07-29 06:03:31,"Hello @ryanolsonk,
+
+i commit the little change and fill out the CLA. thank you.
+",DaidoujiChen,2014-07-29 06:13:36
+7,2014-07-29 06:12:44,"Excellent. Thanks for the contribution! Merging.
+",ryanolsonk,2014-07-29 06:13:36
+6,2014-07-27 00:59:37,"Our app uses a light status bar cause all the navigation bars are dark. This is probably tricky to fix because not all apps use View Controller based status bar styling.
+
+Not asking you guys to fix this, I will probably give it a shot myself, but I wanted to create this issue to track this :)
+",JaviSoto,2014-07-29 05:56:25
+6,2014-07-28 01:28:26,"Yea, I've seen this in a few apps, but we don't feel the pain so much since we use view controller based status bar management. I think `FLEXExplorerViewController` can check the info plist for global status bar management. If that is being used, it can stash the current status bar appearance before a modal is presented and change it to `UIStatusBarStyleDefault`. On dismissal, it can restore the old status bar appearance. There's already some status bar hacking going on with window levels on modal presentation. Check out 
+`-[FLEXExplorerViewController makeKeyAndPresentViewController:animated:completion:]`
+and 
+`-[FLEXExplorerViewController resignKeyAndDismissViewControllerAnimated:completion:]` 
+
+https://github.com/Flipboard/FLEX/blob/master/Classes/Explorer%20Toolbar/FLEXExplorerViewController.m#L801-L829
+",ryanolsonk,2014-07-29 05:56:25
+6,2014-07-29 05:33:05,"I'm going to take a look at this quickly. Hopefully you haven't already taken a crack at it.
+",ryanolsonk,2014-07-29 05:56:25
+6,2014-07-29 05:56:25,"This should be resolved in 5be95ddd95527d395185352a1cc04733c4cd7225. Feel free to reopen if I missed something.
+",ryanolsonk,2014-07-29 05:56:25
+6,2014-08-04 18:20:08,"Awesome :+1: 
+",JaviSoto,2014-07-29 05:56:25
+5,2014-07-27 00:57:15,"I'm thinking about implementing this myself. I believe having a UI where you can check which requests have recently happened and some info about them (status code, headers, etc) would be incredible.
+
+The obvious approach would be to use an `NSURLProtocol` to capture all HTTP(s) requests, store the info about each request in disk / memory, but then return that request back to `NSURLConnection` so that it happens normally.
+
+The tricky thing is that only one `NSURLProtocol` will get to capture any given HTTP request. As soon as one returns `YES` from `-canInitWithRequest:`, the other registered ones won't be consulted (_Or so I believe. I'm starting to doubt myself right now_)
+
+I have an implementation that I could open source of a generic `NSURLProtocol` that lets multiple peers hook into requests (or simply get notified of them) with a middleware type of API (the header is already available on gist: https://gist.github.com/JaviSoto/66763cfacac897d0d27f)
+
+The problem is that if we added this to `FLEX`, and people add `FLEX` to their app with an already existent `NSURLProtocol`, either FLEX's request logging wouldn't work, or we would make the 3rd party's app `NSURLProtocol` stop working.
+### Posible Solution
+
+The request logging could be opt-in. `FLEXManager` could have a `-enableRequestLogging` API, that when called, installs the `NSURLProtocol`. Then we could document that the feature wouldn't work in the cases mentioned above.
+
+What do you think about this? Did you have any ideas about how to implement this feature?
+Thanks!
+",JaviSoto,2015-02-24 17:39:57
+5,2014-07-28 01:56:06,"Another approach I'd be ok with is swizzling the `NSURLConnection*Delegate` and `NSURLSession*Delegate` methods. I think that would allow us to get in the middle of all request events without being too disruptive. One thing we'd have to watch out for there is other tools that swizzle those methods too (i.e. PonyDebugger). I agree that this would be very useful in FLEX. We have request logging functionality in Flipboard, but unfortunately it's somewhat coupled to our networking stack and not something we can easily bring over into FLEX.
+",ryanolsonk,2015-02-24 17:39:57
+5,2014-08-21 19:06:21,"Yes ,great idea , same plus this
+",limbo0312,2015-02-24 17:39:57
+5,2014-11-11 09:37:28,"I have implemented this in my fork (https://github.com/legoless/FLEX), it is done similarly to PonyDebugger with slight modifications.
+",Legoless,2015-02-24 17:39:57
+5,2015-02-08 18:15:14,"I've started working on this. I expect to have something to show within the next few weeks.
+",ryanolsonk,2015-02-24 17:39:57
+5,2015-02-17 07:34:59,"I've pushed the progress on this to a branch: https://github.com/Flipboard/FLEX/tree/network-debugging
+Feedback is welcome! Here's a GIF of how things currently look:
+
+![requests](https://cloud.githubusercontent.com/assets/1422245/6224592/fef37e88-b632-11e4-9fd2-f788c1a76c07.gif)
+
+I've been using the PonyDebugger approach but I'm not totally satisfied with it. My main problem is that it misses requests made using `+[NSURLConnection sendAsynchronousRequest:...]` or the synchronous variant. I'm considering using an `NSURLProtocol` subclass which would get all requests (as @JaviSoto  suggested), but that comes with some drawbacks too. If we intercept requests with our own `NSURLProtocol`, the way we end up handling each request may be subtly different than it would've been otherwise.
+
+I think I'll take a crack at the `NSURLProtocol` approach since the implementation should be pretty straightforward. I could see offering both options, though it would probably be better if one emerged as the superior approach. If anyone has other ideas on how to hook into the foundation networking stack, I'd love to hear them. I've been digging around in CFNetwork's private headers, but I haven't found a good place to quietly observe request activity. The system `NSURLProtocol` subclasses (e.g. `_NSURLHTTPProtocol`) do nearly all their work outside of Objective-C land where we can't easily swizzle to observe. Hooking the C/C++ functions is probably out of the question for this library.
+
+Aside from that, here's my remaining task list for the feature:
+- [x] Settings menu for the network history list
+  - [x] Clear/trash button to dump recorded requests
+  - [x] Enable switch for request recording.
+  - [x] Slider for recorder cache size (value persisted in `NSUserDefaults`)
+- [x] Sticky header in network history list to indicate when network capture is turned off and how many requests are in the list/accumulated download size. 
+- [x] Test interaction with PonyDebugger
+- [x] Form upload data in request detail view
+- [x] Test in other apps
+
+And some nice to have tasks:
+- [ ] Sensitive field redacting
+- [ ] Find a way to determine loads from NSURLCache and indicate that in the interface
+- [ ] Copy/export option
+- [ ] Don’t block the main thread while prettifying responses to push into the response detail view (JSON, plist, etc.).
+",ryanolsonk,2015-02-24 17:39:57
+5,2015-02-17 10:27:25,"Does this also support NSURLSession task requests?
+",Legoless,2015-02-24 17:39:57
+5,2015-02-17 17:40:58,"The current approach (PonyDebugger) only works with a subset of `NSURLSessionTask` requests. The session must be configured to use a delegate, since PonyDebugger swizzles the delegate methods to do its observation. Similar to the issue with `NSURLConnection`, the async convenience methods do not get detected.
+
+A `NSURLProtocol` based approach could capture all `NSURLSessionTask` requests except for background session tasks.
+",ryanolsonk,2015-02-24 17:39:57
+5,2015-02-18 01:07:21,"The biggest problem with `NSURLProtocol` is interfering with app's own protocols: when a protocol _captures_ a request, it won't be passed on to the next protocol. I've learned that all the SDKs that do any type of network request monitoring, all go down the swizzling path. I'm curious why your approach misses some requests. Did you have troubles swizzling some of the methods? If that's the case, I can help with that, I used to mess a lot with the Obj-C runtime :)
+
+As a side note, I did this in a previous app by monitoring the requests _outside_ of it, by using apitools.com and https://github.com/JaviSoto/JSTAPIToolsURLProtocol
+",JaviSoto,2015-02-24 17:39:57
+5,2015-02-18 05:30:33,"TL;DR I think there are good reasons to continue investigating both approaches.
+
+Certainly we could swizzle `+[NSURLConnection sendAsynchronousRequest:queue:completionHandler]`, `+[NSURLConnection sendSynchronousRequest:returningResponse:error]`, and their `NSURLSession` friends, but you do give up some information with that approach. In particular, you loose the detailed timing info (i.e. latency vs data transfer) and the details of any redirects that occurred. That might be an acceptable loss, but it would be awesome if we could get the same (complete) information for all requests.
+
+`NSURLProtocol` is a way we could get consistent logging no mater how a request is made. We can actually do this while still making use of any protocols the app has registered itself. When our protocol receives a request to handle, we will use NSURLConnection or NSURLSession internally to actually send out the request. The registered protocols will get consulted again (this time our protocol will decline to handle it), and the request will be handled by the protocol that would've been used in our absence. Something like this is happening in your library. The requests made from inside the protocol through NSURLConnection will typically make it down to the system's `_NSURLHTTPProtocol`, unless there's a different protocol that can handle the request registered in front of that.
+
+The main trick is that we need to be the first protocol consulted in order to hear about all requests. This applies both in the global list used by `NSURLConnection` and `[NSURLSession sharedSession]`, and in the protocol lists used by any custom `NSURLSession`s. For that, I'm planning to do some swizzling to ensure we're in the first spot in the list.
+
+My main concern with `NSURLProtocol` is that we'll loose something about how the request was intended to be made. For example, we'll have lost the `NSURLSession` context by the time an `NSURLSessionTask` makes it to our protocol. If we use a new `NSURLSession` to handle the task, the `NSURLSessionConfiguration` may be different. Luckily, `NSURLSessionTask` has a private back-pointer to its owning `NSURLSession` that we can use to copy the configuration. However, there could be similar pieces of context that would get dropped with this approach.
+
+One idea that came to mind while writing this is that we could do a more invasive swizzle of methods like `+[NSURLConnection sendAsynchronousRequest:queue:completionHandler]` and actually redirect them to the delegate variants (with ourselves as the delegate) rather than calling through to the original methods. This may prove to be less disruptive than the `NSURLProtocol` approach while providing complete information for all requests.
+
+I'm going to keep exploring both options. Sorry to drone on so long here...
+",ryanolsonk,2015-02-24 17:39:57
+5,2015-02-24 17:39:57,"This is now available on master. Check it out and let me know what you think!
+",ryanolsonk,2015-02-24 17:39:57
+5,2015-02-24 19:38:03,"Just checked it out, it looks amazing :)
+",JaviSoto,2015-02-24 17:39:57
+5,2015-02-24 20:29:07,"Yay!
+",timonus,2015-02-24 17:39:57
+5,2015-03-02 05:36:01,"try it :+1: 
+",DaidoujiChen,2015-02-24 17:39:57
+4,2014-07-26 07:53:26,"I'd really like to ""learning from other apps"". I know that first I have to jailbreak my iPhone, but I have no idea how to inject FLEX to it. Could you give me some tips or just a hint? I will  appreciate it very much.
+",itouch2,2014-07-26 20:32:05
+4,2014-07-26 20:32:05,"[This post](http://petersteinberger.com/blog/2013/how-to-inspect-the-view-hierarchy-of-3rd-party-apps/) from @steipete on injecting Reveal into 3rd party apps will set you on the right track. There are also a lot of other jailbreak related resources online, so I suggest you just start searching around.
+
+FLEX is primarily intended to be a tool used in your own apps. I included the Springboard screenshots in the README to hint at what is possible, but I don't plan to add further instructions for that use case anywhere in the project. With a little searching, you should be able to find what you're looking for elsewhere. :wink:
+",ryanolsonk,2014-07-26 20:32:05
+4,2014-07-27 14:44:42,"Thanks!
+",itouch2,2014-07-26 20:32:05
+4,2015-02-07 20:49:07,"Here is a ready to use library for injecting FLEX into 3rd party apps:
+https://github.com/dtrukr/FLEX_injected
+![settings2](https://cloud.githubusercontent.com/assets/658322/6093877/1eee6bc0-af13-11e4-9365-35abf5cb5996.png)
+",dtrukr,2014-07-26 20:32:05
+4,2015-05-11 12:32:41,":+1: 
+",jkyin,2014-07-26 20:32:05
+3,2014-07-25 19:21:34,"# Description
+
+This way 3rd party applications can extend the functionality of `FLEX` by adding quick access to important objects in their applications.
+
+I modified `FLEXGlobalsTableViewController` to keep track of the items to display in the table with a list of `FLEXGlobalsTableViewControllerEntry` objects which have 2 blocks: one that gives you the name of the entry to display, and one that gives you the view controller to push when that entry is selected. I used a block to make the creation of both lazy because they can change (for example in case the application window changes).
+
+I exposed this partially in the API: users can pass a reference to an object. This way they can set this app lazily in a `+load` method in some class, and not wait until the object they want to be able to inspect with FLEX is actually created, which simplifies the use (but this may be my brain being contaminated by ReactiveCocoa, so I'm definitely open to criticism!)
+### TODO
+- [x] Should this API be in `FLEXGlobalsTableViewController`, which means that users of the API must #import that header, or should it be in `FLEXManager`?
+- [ ] Document in the README?
+",JaviSoto,2014-07-31 00:29:26
+3,2014-07-26 19:58:19,"This is a **great** extension and I think the approach is nice and clean. On the open question, I do feel it would be nicer if users of the library only have to know about `FLEXManager`. I left some inline comments, but they are mostly style nits and small things. Thanks for taking the time to contribute! I will try to get our CLA worked out ASAP so we can get this merged.
+",ryanolsonk,2014-07-31 00:29:26
+3,2014-07-26 23:21:58,"I pushed the commit that fixes the warnings here too by accident. Merge the other PR first when you're ready :)
+",JaviSoto,2014-07-31 00:29:26
+3,2014-07-26 23:43:37,"Check out my changes :)
+",JaviSoto,2014-07-31 00:29:26
+3,2014-07-27 18:36:44,"Changes look good!
+",ryanolsonk,2014-07-31 00:29:26
+3,2014-07-31 00:29:11,"Awesome. Merging. Thanks again!
+
+I'm planning to do a 1.1.0 CocoaPods release with this feature, the font picker feature, and a number of bug fixes that have come in over the past week.
+",ryanolsonk,2014-07-31 00:29:26
+3,2014-07-31 00:30:19,"Awesome thanks :D
+",JaviSoto,2014-07-31 00:29:26
+3,2014-07-31 05:46:48,":+1: 
+",DaidoujiChen,2014-07-31 00:29:26
+2,2014-07-25 17:55:40,"Have you guys considered adding a `podspec` and make this available through [CocoaPods](http://cocoapods.org)? 
+",esttorhe,2014-07-25 18:02:25
+2,2014-07-25 17:57:44,"https://github.com/Flipboard/FLEX/blob/master/FLEX.podspec :D
+",JaviSoto,2014-07-25 18:02:25
+2,2014-07-25 17:59:35,"mmm that's weird; running 
+`pod search FLEX` doesn't return anything related to this
+",esttorhe,2014-07-25 18:02:25
+2,2014-07-25 18:00:34,"<S_CODE_TOKEN>
+",esttorhe,2014-07-25 18:02:25
+2,2014-07-25 18:02:25,"Nevermind; just had to run
+`pod repo update`
+and now I can see this.
+",esttorhe,2014-07-25 18:02:25
+1,2014-07-25 17:41:30,,JaviSoto,2014-07-29 04:47:28
+1,2014-07-25 17:56:02,"> The code change looks good . The indentation on the first line looks off.
+
+Just fixed that :D Sorry about that (our project uses 2 spaces for legacy reasons...)
+",JaviSoto,2014-07-29 04:47:28
+1,2014-07-26 20:16:21,"I really appreciate the attention to consistency with the existing code. We'll get this merged as soon as the CLA is finalized.
+",ryanolsonk,2014-07-29 04:47:28
+1,2014-07-26 23:06:56,"I tried :) Consistency is important!
+",JaviSoto,2014-07-29 04:47:28
+1,2014-07-29 01:02:40,"I finally got the CLA up: https://docs.google.com/forms/d/1gh9y6_i8xFn6pA15PqFeye19VqasuI9-bGp_e0owy74/viewform
+",ryanolsonk,2014-07-29 04:47:28
+1,2014-07-29 02:04:28,"Done :)
+",JaviSoto,2014-07-29 04:47:28
+1,2014-07-29 04:47:22,"Excellent. Merging. Thanks!
+",ryanolsonk,2014-07-29 04:47:28

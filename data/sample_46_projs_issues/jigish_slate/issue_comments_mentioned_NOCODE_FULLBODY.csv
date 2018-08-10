@@ -1,0 +1,1197 @@
+issue_num,datetime,body,login,mention_login
+484,2016-11-23 19:26:05,"Thanks @mdznr, changed the color of the active state!
+
+Typically, status bar icons don't change visually between active and default state, they just get a different color treatment, so I didn't make that change.",maxvoltar,mdznr
+455,2016-04-17 20:29:03,"@cyberixae What am I supposed to do with that link? In my original post I said that I can't find the file in my home directory (see screenshot in my previous post). 
+",project-guru,cyberixae
+455,2016-04-17 20:35:28,"Create it @project-guru
+
+> On Apr 17, 2016, at 22:29, project-guru notifications@github.com wrote:
+> 
+> @cyberixae What am I supposed to do with that link? In my original post I said that I can't find the file in my home directory (see screenshot in my previous post).
+> 
+> ―
+> You are receiving this because you are subscribed to this thread.
+> Reply to this email directly or view it on GitHub
+",jneubrand,project-guru
+455,2016-04-17 20:35:28,"Create it @project-guru
+
+> On Apr 17, 2016, at 22:29, project-guru notifications@github.com wrote:
+> 
+> @cyberixae What am I supposed to do with that link? In my original post I said that I can't find the file in my home directory (see screenshot in my previous post).
+> 
+> ―
+> You are receiving this because you are subscribed to this thread.
+> Reply to this email directly or view it on GitHub
+",jneubrand,cyberixae
+455,2016-04-18 17:03:36,"@project-guru save it with that name from your preferred text editor.
+
+> On Apr 18, 2016, at 18:57, project-guru notifications@github.com wrote:
+> 
+> I don't know how. Please advise. As far as I have research, Finder won't let you create a file with a dot preceding it's name.
+> 
+> ―
+> You are receiving this because you commented.
+> Reply to this email directly or view it on GitHub
+",jneubrand,project-guru
+455,2016-04-18 18:09:20,"@project-guru you can also create an alias with the command `ln -s`, for example `ln -s .original .hidden`.
+",jneubrand,project-guru
+437,2014-12-17 23:49:01,"I'd like to be a contributor if possible.
+
+@mattr- the advantage of keeping the repo here is that there are so many people following it and it has many issues already submitted. Hopefully @jigish will allow several of us write access to the repo so your fork can be merged back here.
+",asethwright,mattr-
+437,2014-12-22 19:04:10,"@MoOx Meh. For all we know, he's had a terrible tragedy or something which put Github projects into perspective of being relatively unimportant. Who knows. We don't know the whole story, maybe he has a great reason. All I know is that it is what it is, and it's not likely to change.
+",sdegutis,MoOx
+437,2015-01-06 19:24:31,"The one of @mattr- (https://github.com/mattr-/slate) seems to be the most active one according to https://github.com/jigish/slate/network.
+",troxler,mattr-
+437,2015-01-14 15:29:35,"@MoOx The unicode heart isn't visible on Github, only in my browser's (Chrome's) tab.
+",sdegutis,MoOx
+437,2015-06-02 22:17:48,"hey @mattr- @MoOx @asethwright  --
+
+First of all, my apologies for being _very_ absent over the past couple of years. I've had some serious work-life balance issues and only been contributing to projects I've used for work. That has changed, though.
+
+It has been a while since I first wrote Slate and am planning on pushing a complete rewrite to my github (probably with in ~2 weeks). As it is a complete rewrite, Slate2 will not support many features up front and the config has changed quite a bit. In addition I'm thinking about supporting only Yosemite+ with Slate2. That being said, I will be committing to it very actively to bring it up to speed with Slate.
+
+As far as this version of Slate is concerned I'm happy to do any of the following:
+1. add a pointer to @mattr-'s fork to the readme
+2. merge a large pull request and give write access to @mattr- 
+
+either works for me, but I will be putting a pointer to Slate2 on the readme once I push it to my github.
+
+again, apologies for my absence.
+",jigish,mattr-
+437,2015-06-02 22:17:48,"hey @mattr- @MoOx @asethwright  --
+
+First of all, my apologies for being _very_ absent over the past couple of years. I've had some serious work-life balance issues and only been contributing to projects I've used for work. That has changed, though.
+
+It has been a while since I first wrote Slate and am planning on pushing a complete rewrite to my github (probably with in ~2 weeks). As it is a complete rewrite, Slate2 will not support many features up front and the config has changed quite a bit. In addition I'm thinking about supporting only Yosemite+ with Slate2. That being said, I will be committing to it very actively to bring it up to speed with Slate.
+
+As far as this version of Slate is concerned I'm happy to do any of the following:
+1. add a pointer to @mattr-'s fork to the readme
+2. merge a large pull request and give write access to @mattr- 
+
+either works for me, but I will be putting a pointer to Slate2 on the readme once I push it to my github.
+
+again, apologies for my absence.
+",jigish,MoOx
+437,2015-06-02 22:17:48,"hey @mattr- @MoOx @asethwright  --
+
+First of all, my apologies for being _very_ absent over the past couple of years. I've had some serious work-life balance issues and only been contributing to projects I've used for work. That has changed, though.
+
+It has been a while since I first wrote Slate and am planning on pushing a complete rewrite to my github (probably with in ~2 weeks). As it is a complete rewrite, Slate2 will not support many features up front and the config has changed quite a bit. In addition I'm thinking about supporting only Yosemite+ with Slate2. That being said, I will be committing to it very actively to bring it up to speed with Slate.
+
+As far as this version of Slate is concerned I'm happy to do any of the following:
+1. add a pointer to @mattr-'s fork to the readme
+2. merge a large pull request and give write access to @mattr- 
+
+either works for me, but I will be putting a pointer to Slate2 on the readme once I push it to my github.
+
+again, apologies for my absence.
+",jigish,asethwright
+437,2015-06-02 22:34:14,"Another option would be to commit the rewrite into this repository and add a pointer in the readme to @mattr-'s fork for anyone who wants the original slate. I feel like as it was my first foray into OS X development I've learned a _lot_ from it and would like to do a complete rewrite from scratch.
+",jigish,mattr-
+437,2015-06-02 23:05:31,"@jigish
+- +1 for the Yosemite+ requirement.
+- Is your upcoming rewrite in Swift?
+- Are you going to use the `JSContext` class instead of a hidden WebView?
+- You might wanna ask for some volunteer contributors who can help clean up the Github Issues that have accumulated and maybe help with the readme.
+",sdegutis,jigish
+437,2015-06-02 23:07:32,"@jigish Also, feel free to use https://github.com/sdegutis/WindowManager as a baseline for your rewrite if you choose Swift.
+",sdegutis,jigish
+437,2015-06-03 00:52:16,"@jigish Also, one approach that might be worth considering is to use Lua instead of JS. Lua is very similar to JS semantically, but much easier to integrate with than JSContext. Plus, Apple's rules around converting structures to/from JS are not super well defined, and there are times it will do a different thing than expected. Plus, the ObjC API for it does not integrate with Swift classes, you have to write NSObject-based classes with them. Since Lua has a C API, I wrote a Swift wrapper as https://github.com/sdegutis/lua4swift which you can use if you want. Just throwing it out there as a possibility.
+",sdegutis,jigish
+437,2015-06-04 01:41:31,"@jigish I'm happy to continue maintaining this version of Slate, so however you want to handle the rewrite, whether in this repo or in a separate repo, it doesn't really matter to me. :smiley:
+",mattr-,jigish
+437,2015-06-04 01:43:50,"@jigish If you do end up using the separate repo, I think it makes sense for me to have access to this repo. Another option is to create an organization and move this repo and the new repo for Slate2 into repos under the organization. I know GitHub support is generally happy to do those sorts of things for us.
+",mattr-,jigish
+437,2015-06-05 15:04:48,"@sdegutis If you (or anyone) is wanting to go the Lua route, I would recommend just checking out [Hammerspoon](http://www.hammerspoon.org/) and building from there. I've actually already started a pseudo slate rewrite (similar config principles) and would be happy to work with you in going that route. Lmk if your interested and I can push up my project to GitHub.
+
+:+1: @jigish for resurfacing. Looking forward to the rewrite.
+",rjhilgefort,sdegutis
+437,2015-06-05 15:04:48,"@sdegutis If you (or anyone) is wanting to go the Lua route, I would recommend just checking out [Hammerspoon](http://www.hammerspoon.org/) and building from there. I've actually already started a pseudo slate rewrite (similar config principles) and would be happy to work with you in going that route. Lmk if your interested and I can push up my project to GitHub.
+
+:+1: @jigish for resurfacing. Looking forward to the rewrite.
+",rjhilgefort,jigish
+437,2015-06-05 18:36:52,"@rjhilgefort Thanks for the suggestion will look into it.
+",sdegutis,rjhilgefort
+437,2015-06-08 07:26:19,"Finally, the mastermind responds! And a new version of Slate is in the pipes? Awesome!
+
+However, I have an ongoing interest in the current version of Slate because I'm one of those people who still use OS X Snow Leopard. I use both 10.6.8 and 10.9.5 (soon 10.10.3) depending on what software I need to use, so I look forward to installing Slate2 on my Yosemite partition, but I'm going to continue using Slate on my preferred version of OS X.
+
+With that said, could someone (@mattr-?) _pleeeease_ implement this: https://github.com/jigish/slate/issues/382 It's my biggest wish for Slate.
+",nudefireninja,mattr-
+437,2015-06-10 10:57:58,"@rjhilgefort Thanks for the Hammerspoon plug, but @sdegutis knows about it. It's a fork of his awesome Mjolnir project :)
+",cmsj,sdegutis
+437,2015-06-10 10:57:58,"@rjhilgefort Thanks for the Hammerspoon plug, but @sdegutis knows about it. It's a fork of his awesome Mjolnir project :)
+",cmsj,rjhilgefort
+437,2015-08-16 20:54:25,"hey @jigish 
+
+I have no issues or feature/improvement suggestions for Slate, and that has been the case for the past 3 years or so. Just wanted to to thank you for this amazing work that has become such an important part of my workflow.
+
+Nice to hear that you've managed to find a healthy life/work balance and are willing to return to the oss community. Take as much time as you need ;)
+",arturhoo,jigish
+437,2015-12-15 12:38:25,"@sdegutis the link to https://github.com/sdegutis/WindowManager seems broken. Is it moved?
+
+@jigish were izz the goodies ;-) aka slate2 located?
+",clemens-tolboom,sdegutis
+437,2015-12-15 12:38:25,"@sdegutis the link to https://github.com/sdegutis/WindowManager seems broken. Is it moved?
+
+@jigish were izz the goodies ;-) aka slate2 located?
+",clemens-tolboom,jigish
+437,2016-01-04 12:46:21,"@sdegutis guess now you meant https://github.com/sdegutis/AppGrid
+",clemens-tolboom,sdegutis
+437,2016-01-04 14:18:01,"Via https://github.com/sdegutis/mjolnir I ended up choosing https://github.com/Hammerspoon/hammerspoon as my replacement for slate.
+
+@jigish thanks for the past years
+",clemens-tolboom,jigish
+434,2014-11-12 09:52:32,"@dongyuwei thanks, closing this.
+",zhuangya,dongyuwei
+428,2015-03-05 15:18:27,"@mheuser thanks for the tip.
+
+Confirming that un-checking and immediately re-checking worked on 10.10.2 fresh install.
+",swieder227,mheuser
+414,2014-07-22 23:04:55,"@wincent Nicely done, and good luck.
+",sdegutis,wincent
+409,2014-07-03 08:13:37,"@trishume Thanks a lot!
+",p0deje,trishume
+409,2014-07-18 20:32:22,"@trishume It may also be helpful to explain which PRs you did _not_ merge and why not.
+",sdegutis,trishume
+405,2014-07-25 20:20:42,"thanks @apfritts 
+",mweibel,apfritts
+405,2014-10-17 09:43:26,"@apfritts thank you :)
+",pedro-couto,apfritts
+405,2014-10-18 10:41:04,"Thanks! Feel the exact same way as @mannerisms ;)
+",berinle,mannerisms
+388,2016-03-01 11:13:58,"@tinmarks why did you close this issue?
+",niels-bom-md,tinmarks
+387,2014-07-18 20:30:38,"@jigish @wincent When implementing this feature, this code may be of help: https://github.com/sdegutis/hydra/blob/b20be10f649f4d1c2c7785a00b0602afec14c801/Hydra/API/application.m#L193-L194
+",sdegutis,wincent
+387,2014-07-19 21:17:51,"It was implemented in the pull request 4 months ago.
+
+On Friday, July 18, 2014, Steven Degutis notifications@github.com wrote:
+
+> @jigish https://github.com/jigish @wincent https://github.com/wincent
+> When implementing this feature, this code may be of help:
+> https://github.com/sdegutis/hydra/blob/b20be10f649f4d1c2c7785a00b0602afec14c801/Hydra/API/application.m#L193-L194
+> 
+> —
+> Reply to this email directly or view it on GitHub
+> https://github.com/jigish/slate/pull/387#issuecomment-49476308.
+",wincent,wincent
+387,2014-07-19 21:19:41,"@wincent Oh. My mistake. Sorry for the noise.
+",sdegutis,wincent
+381,2014-02-03 19:08:28,"@adam-jensen  LOL :)
+
+The default mac window manager is unbelievably fucked up compared to the amazing options you have on linux like awesome, i3, xmonad, dwm and rat poison. Clearly lacks a decent tiling window manager. Time to move on :)
+",jaseemabid,adam-jensen
+381,2014-02-03 19:19:35,"@JolinM You are completely missing the point. Please have a look at i3 doc[1]. It tells you how you can do _something_ with it without reading the entire manual. I want to see it in action before I commit the time, and so will be the mentality of majority of the users. 
+
+And _I_ belong to the category of programmers who tweak tools a lot!  I have tracked my dotfiles for over 2 years[2], have read the 1000+ page emacs manual cover to cover and have a  500+ line init.el[3]. I do it because I know the tool is good and worth tweaking and spending time on. I don't know that about slate yet.  
+
+So tldr; Put the default shortcut to make a window occupy 50% width and fundamentals people expect out of a window manager on top of the README. Then let users follow though the doc and do more and more things, tweaking as they read on.
+1. http://i3wm.org/docs/userguide.html
+2. https://github.com/jaseemabid/dotfiles
+3. https://github.com/jaseemabid/emacs.d/blob/master/init.el
+",jaseemabid,JolinM
+381,2014-02-03 20:03:05,"@harizvi No! That tutorial tells me I can copy some js to a config file and make `Ctrl+1` do something  almost useless. 
+
+Ok, let me rephrase it. 
+1. I don't want to configure slate before I use it for a while and get the hang of it => Manuals for an app before you do something with it is utter useless. 
+2. What can it do _OUT OF THE BOX_ ?
+3. Is there one key binding like 'Ctrl+Command+j+k` to make it do _SOMETHING_ even completely useless like making a window blink so that the user can verify the app is installed right and is actually working? 
+",jaseemabid,harizvi
+381,2014-02-04 05:09:52,"@ranman Just like @sergiotapia said, I'd love to write a quick intro _after_ I get this working for me nicely.
+
+The general idea about README is to give a quick overview, and you can move all configuration to a wiki or another file to make life easy for users. Please assume you know **nothing** about slate or a while and read it again, and tell me its any good for a first timer. 
+",jaseemabid,sergiotapia
+381,2014-02-04 05:09:52,"@ranman Just like @sergiotapia said, I'd love to write a quick intro _after_ I get this working for me nicely.
+
+The general idea about README is to give a quick overview, and you can move all configuration to a wiki or another file to make life easy for users. Please assume you know **nothing** about slate or a while and read it again, and tell me its any good for a first timer. 
+",jaseemabid,ranman
+381,2014-02-04 05:32:48,"@ranman No worries man, I was a bit pissed off too last night when I wrote that :/ I got here from a window manager comparison[2] on slant.co. I'll be spending sometime on this later today. Will see how the docs can be improved.
+1. http://www.slant.co/topics/526/~what-is-the-best-window-manager-for-mac
+",jaseemabid,ranman
+381,2014-02-04 13:03:13,"Thanks a bunch for donating your time @ranman , we all appreciate it! :)
+",sergiotapia,ranman
+381,2014-02-04 13:13:42,"I'm a 1st year Software Engineering student from London and have been slowly getting to grips with Slate (quite comfortable with it now) over the past few weeks. I've been playing around with the idea of writing a blog post for new developers and perhaps even a new project to create a UI for slate to make it easy to configure. @jaseemabid  since you're so keen to see something like this, maybe you'd like to help? Having the guide written by newbies as they go along would make it so easy to pick up for other newbies...
+
+I've been using it in conjunction with KeyRemap4MacBook (https://pqrs.org/macosx/keyremap4macbook/) and PCKeyboardHack (https://pqrs.org/macosx/keyremap4macbook/pckeyboardhack.html.en) which I think are a know brainer to install if you're using slate.
+",kylejm,jaseemabid
+381,2014-02-05 17:39:37,"@kylejm Mac is not my primary dev platform, and I'm soon switching back to linux. I wont be using slate much 
+",jaseemabid,kylejm
+381,2014-05-02 19:01:43,"@ProLoser and @RyanBalfanz - Thank you both.
+",tphalp,ProLoser
+381,2014-05-02 19:01:43,"@ProLoser and @RyanBalfanz - Thank you both.
+",tphalp,RyanBalfanz
+379,2014-02-02 08:56:16,"@dsummersl I guess so. Looking forward to see your fork!
+",p0deje,dsummersl
+379,2014-02-05 22:17:52,"@sdegutis does Phoenix also support the display detection like slate?
+",sebald,sdegutis
+379,2014-02-05 22:21:16,"@sebald It has functions to know what screen (aka. display or monitor) a given window is on, and to move it to a given screen. Is that what you mean?
+",sdegutis,sebald
+379,2014-02-05 22:50:00,"By the way @sebald, I just added documentation for Phoenix, which might help answer your question:
+
+https://github.com/sdegutis/Phoenix/wiki/JavaScript-API-documentation
+",sdegutis,sebald
+379,2014-02-05 22:56:37,"@sdegutis  Thx for the fast reply and the docu :) really appeaciate it.
+
+I am actually just looking for something that restores my windows to its previous or a predefined state depending on the monitor they are. It super annoying when I unplug my thunderbolt display...
+",sebald,sdegutis
+379,2014-02-05 23:03:37,"@harizvi No, the API has been changed to enable performance increases and clean documentation enough to the point where it is not backwards compatible anymore. However, it should be a straightforward-enough API to be able to rewrite your config in a few minutes. Just be sure to check the docs to make sure it has all the functionality you need! Some Slate features were dropped in my fork, although there are plans to provide some of them again in the future using a new API.
+",sdegutis,harizvi
+379,2014-02-05 23:40:42,"Good work!  What are your plans w/r/t spaces support - specifically sending
+windows to their own space? And moving windows from spaces by hotkey?
+On Feb 5, 2014 6:03 PM, ""Steven Degutis"" notifications@github.com wrote:
+
+> @harizvi https://github.com/harizvi No, the API has been changed to
+> enable performance increases and clean documentation enough to the point
+> where it is not backwards compatible anymore. However, it should be a
+> straightforward-enough API to be able to rewrite your config in a few
+> minutes. Just be sure to check the docs to make sure it has all the
+> functionality you need! Some Slate features were dropped in my fork,
+> although there are plans to provide some of them again in the future using
+> a new API.
+> 
+> ## 
+> 
+> Reply to this email directly or view it on GitHubhttps://github.com/jigish/slate/issues/379#issuecomment-34271963
+> .
+",logicbomb,harizvi
+379,2014-02-05 23:43:31,"@logicbomb See this issue: https://github.com/sdegutis/Phoenix/issues/6
+",sdegutis,logicbomb
+379,2014-04-30 09:50:44,"@cenkozan do you mind provide the steps for repackaging in xcode? kinda new in xcode here..Also I install slate via homebrew, does it matter at all?
+",gddabe,cenkozan
+379,2014-04-30 10:29:01,"@gddabe You can use this http://stackoverflow.com/a/5579458 link to do what
+you want.
+
+On Wed, Apr 30, 2014 at 12:50 PM, gddabe notifications@github.com wrote:
+
+> @cenkozan https://github.com/cenkozan do you mind provide the steps for
+> repackaging in xcode? kinda new in xcode here..Also I install slate via
+> homebrew, does it matter at all?
+> 
+> —
+> Reply to this email directly or view it on GitHubhttps://github.com/jigish/slate/issues/379#issuecomment-41778970
+> .
+",cenkozan,gddabe
+379,2014-04-30 10:29:01,"@gddabe You can use this http://stackoverflow.com/a/5579458 link to do what
+you want.
+
+On Wed, Apr 30, 2014 at 12:50 PM, gddabe notifications@github.com wrote:
+
+> @cenkozan https://github.com/cenkozan do you mind provide the steps for
+> repackaging in xcode? kinda new in xcode here..Also I install slate via
+> homebrew, does it matter at all?
+> 
+> —
+> Reply to this email directly or view it on GitHubhttps://github.com/jigish/slate/issues/379#issuecomment-41778970
+> .
+",cenkozan,cenkozan
+379,2014-05-02 02:45:22,"@cenkozan thanks a lot, what I need to merge by myself is to fix the wrong name when taking snapshot jigish#393 . Now I've done it successfully.
+",gddabe,cenkozan
+371,2014-12-19 04:06:25,"@jpsim What did you remove out of `MainMenu.xib`?
+",mattr-,jpsim
+371,2014-12-19 06:03:36,"@mattr- it turns out that I didn't make any changes to the xib _myself_, but Xcode just updated it to a newer format, simply by opening it. Yay Xcode!
+
+I've reset the xib to its previous state.
+",jpsim,mattr-
+365,2014-04-05 02:19:31,"@jerrysxu Phoenix looks better, and it can control Screen(Monitor).
+",alswl,jerrysxu
+353,2013-10-25 08:33:22,"I made this work by doing what @jkusachi said. Thanks! :+1:
+",bradwright,jkusachi
+345,2014-06-06 16:46:08,"Okay, mine was just me being stupid, I had `hyper` stored in a variable in my `.slate.js`, and tried to bind something to `hyper + ""s""`, which led to `:ctrl;shift;alt;cmds`.
+
+So never mind on my account about that.
+
+@harizvi: really easy way to alias that in javascript - just make it a variable and you can use it willy nilly after that:
+
+
+",jpadvo,harizvi
+345,2014-06-06 23:27:04,"Thanks @jpadvo for the tip. For now, I have moved onto Phoenix, since I hit some problems with Slate on Mavericks. 
+",harizvi,jpadvo
+342,2013-12-11 22:41:19,"+1 verify this bug. Turning no `persist` for `windowHintsOrder` causes hints to only work once. Reloading/restarting Slate enables another single use. Disabling the `persist` option returns the behavior to normal.
+
+@wwalker This has been a source of frustration for me from day one, thank you for pinpointing the exact problem so I can workaround my config and get back on track using the awesome slate hints.
+",chuckg,wwalker
+341,2013-12-13 20:24:11,"@philc :+1: , you accomplished this by making a layout called default?  I can't seem to bind to a key with this command:
+
+
+
+Slate refuses to parse this and fails on `default`
+",DeaconDesperado,philc
+338,2013-09-06 16:18:48,"I'm definitely interested in finding a better way to do this.
+
+@philc 
+I currently do this by walking all windows of an application looking for a matching title.
+I ended up writing a [runOrRaise](https://github.com/legumbre/dotslatejs/blob/master/slate.js#L39-L93) command which takes an application name and a lambda as a filter and focus only windows matching that filter.
+So something like `runOrRaise(""Emacs"", function (w) { return w.title() == ""foo.org""; })` would focus the Emacs frame currently displaying the `foo.org` buffer. 
+
+This is not the best solution but it seems to work pretty well, maybe someone else can use it and improve it, so there.
+
+@jigish 
+Thanks for Slate, it's wonderful!
+",legumbre,philc
+338,2013-09-10 18:02:29,"@legumbre the workaround I have now is to have 3 separate Emacs apps in the Apps folder, named Emacs, Orgmode, and Email (you can edit an app's display name by Right clicking, Show Package Contents, edit info.plist in English.proj), each with different icons. Then I can target them by app name with slate.
+",philc,legumbre
+335,2013-08-31 17:13:51,"@SethMilliken thanks.. already was aware of the default `Ctrl-F3` binding, but... that solution ends up being a bit awkward.
+
+I would have to `Ctrl-F3` -> `Home` -> `Right Arrow` (x # of times) to simulate a `Cmd-1`, `Cmd-2`, etc type of binding like `Snap` has.
+
+I was hoping that there might be a way to actually invoke an item at a position in the dock.  I'm not an OSX guy, but I assume there must be a way to invoke items in the dock by an index.
+
+One other note -- the `Snap` binding has a behavior that changes.  If the dock app is not running, it starts.  If the dock app is not the current app, it becomes current.  If it is the current app, then it is hidden.  The `focus` behavior of Slate is a little different in that it will always focus the app regardless of whether it's current or not.
+
+It would be interesting to have an easy way to get at dock items by index directly.
+",Iristyle,SethMilliken
+327,2013-08-13 17:21:43,"@WarWithinMe No, the only two that can be used are `NSAccessibilitySizeAttribute` and `NSAccessibilityPositionAttribute`. In [Zephyros](https://github.com/sdegutis/zephyros) I have a function to set the frame of a window, but it technically just sets the size, then the position, then the size again. The extra set-size is needed because sometimes you can't move the window to the right position until it's smaller, and sometimes you can't resize the window to the new size until it's in the right position. So you can just use this technique to get the same results.
+",sdegutis,WarWithinMe
+325,2013-08-07 23:28:29,"@dsdeiz this is an inherent issue with binding global hot-keys, they override anything else that might be using that same key-combo. The only way to solve this is to change your key shortcuts to not conflict with any others.
+",sdegutis,dsdeiz
+318,2013-08-10 03:24:55,"@tzarskyz I'm curios about the `NSAccessibilityWindowAttribute` in the accessibility API, seems like it will return the window to you. The document doesn't tell anything useful, though. But if you can get the window, you pretty much can do anything. ( I'm saying the setLevel things. ).
+",WarWithinMe,tzarskyz
+317,2014-05-12 18:07:03,"I'd second this one - I don't even know where to start looking to find info on how to customize it. @troxler Were you able to find any info elsewhere? I'm thinking a code spelunking expedition may be in order, and I'd appreciate any tips on where to start. 
+",TashaArvanitis,troxler
+317,2014-05-13 18:17:41,"@TashaArvanitis No, I did not look into this any further.
+",troxler,TashaArvanitis
+304,2013-07-16 07:47:01,"@ashi009, so your saying as long as in the display manager arrangements, if the ""primary"" display (with the Apple menu bar) is above the secondary it works?
+",travisperson,ashi009
+304,2013-07-16 07:51:15,"@travisperson yes, just tried a few arrangements, apparent so.
+",ashi009,travisperson
+304,2015-02-25 17:34:42,"@blag thanks for the info!
+",awaxman11,blag
+299,2013-05-15 13:07:38,"@ianyh 
+thanks for mentioning it. it's great :) 
+",rhacker,ianyh
+291,2015-05-05 16:17:07,"@bittner yes, I'm trying to make 1 config for everyone actually, not just a fully custom one: https://gist.github.com/ProLoser/a55406df872c83dd71ea (it has reslate at the top half though).
+
+All keyboard shortcuts needed are <kbd>ctrl</kbd>+<kbd>option</kbd>+<kbd>cmd</kbd>+<kbd>up/down/left/right/space</kbd> and it handles both resizing, relocating to different monitors, moving around, and lets you on-the-fly change grid systems from halves to thirds (and hopefully more if I can fix the arithmatic). It's not perfect though, but worth playing with and improving hopefully.
+
+I also wanted it to sort of reorganize your screen whenever you change monitor configurations. Note that I'm retrieving the current monitor configuration and using it as the config name.
+
+However, I'd like to also store arrangements of windows and applications that aren't open, and when they DO open, place them back to their normal position for that monitor configuration. Although lately, I've slightly been finding OSX has been smarter about doing such things natively.
+",ProLoser,bittner
+291,2015-05-06 22:04:17,"@bittner slate does whatever you configure it to do. I am fully aware of stay, but I don't think I was willing to pay or I think it had buggy behavior. I was saying that I'm writing a config file that does what Stay does.
+",ProLoser,bittner
+275,2013-04-03 00:52:18,"@deiga that's not syntactically valid JavaScript. Would have to write:
+
+
+",puffnfresh,deiga
+273,2013-03-18 17:57:19,"Yes and no. I guess my key arrangement contains unicode characters :(, which I would like to use.
+
+I also changed the description. Hopefully my intentions are clearer now.
+@deiga Thanks for all the comments and suggestions.
+",Velrok,deiga
+272,2015-10-07 17:32:24,"thanks @leonardt :)
+",snario,leonardt
+262,2013-03-08 15:09:13,"@SethMilliken: Agree with you for the most part. However, KeyRemap4MacBook requires admin privileges only once, during installation. So as far as inconvenience goes (ignoring security aspects), its hardly an issue. Also, it might be worth investigating if admin privileges are required specifically for the Fn functionality (though I have a hunch it they would be, as well).
+Using modal-key is a great option, I agree. I did not know about it, so thanks! But its not as seamless as an action that did not require switch modes etc.
+Regarding using KeyRemap with Slate: Not a bad idea (I had thought earlier of doing that myself), but it still requires hotkeys to first be created using Slate, and mapping other (Fn-based) ones to those using KeyRemap. And these Slate hotkeys could still conflict/potentially conflict with other hotkeys, unless one choses really random/weird combinations that are unlikely to be used by the system/other app... but that's far from an ideal solution as far as I am concerned.
+
+Having said that, I agree that you make useful points. If gigish/anyone else authorized to do so feels that the issue should be closed, they can go ahead and do that.
+",himanshu0,SethMilliken
+242,2013-03-09 11:47:01,"@jigish I've just noticed that my .slate.js doesn't load at all, or at least bindings don't work and S.log doesn't either. Could you look at it and tell me if there's something wrong? It used to work last week or so..
+https://github.com/deiga/dotfiles/blob/master/slate.js
+",deiga,jigish
+242,2013-06-20 13:30:23,"@deiga I'm having the same problem with my .slate.js not loading at all. Did you ever get it resolved?
+",stdavis,deiga
+198,2013-01-19 23:07:57,"@hansmi can you do me a favor and use http://manytricks.com/keycodes/ to tell me what the key code for your `y` key is? Also, if you could send me the output of the logs that would be great.
+",jigish,hansmi
+195,2013-01-12 11:55:01,"I was thinking about submitting a pull request that, upon first run, would give you the option to copy the `default.slate` to  `~/.slate` and then open that in your default text editor so you can edit it. Currently this process isn't hugely user friendly, and can only really be understood by reading the README.
+
+What do you think @JeromeNamNam and @phmongeau?
+",josh-,phmongeau
+195,2013-01-12 11:55:01,"I was thinking about submitting a pull request that, upon first run, would give you the option to copy the `default.slate` to  `~/.slate` and then open that in your default text editor so you can edit it. Currently this process isn't hugely user friendly, and can only really be understood by reading the README.
+
+What do you think @JeromeNamNam and @phmongeau?
+",josh-,JeromeNamNam
+193,2012-12-28 06:52:36,"@josh-  I like this a lot, but in order to maintain configurability, do you think you could divorce this from the original background rounded rect? I'd like to keep the option for both.
+",jigish,josh-
+193,2012-12-28 08:54:52,"@jigish Yup, that sounds like an even better idea. Should I add a new `config` directive?
+
+Also, assuming someone configured Slate to draw the rounded rect behind the icon (as it is in the current shipping version) should a shadow/background be applied to the text? (Thinking of ways to improve readability).
+",josh-,jigish
+191,2012-12-28 08:59:11,"@jigish Sounds good mate, have a great vacation. I'll also see if I can get SL going in a VM or something in the next couple of days to try this out.
+",josh-,jigish
+190,2012-12-28 08:57:49,"@brightghost Would you be happy to test this patch?
+",josh-,brightghost
+190,2012-12-28 20:49:10,"@brightghost Okay fantastic, I've just whipped up a build - http://cl.ly/Lq84
+",josh-,brightghost
+189,2012-12-28 06:54:48,"@josh- is correct. Using the default `.slate` file you'll lose a lot of those bindings. If you want to remove them or change them copying the `default.slate` to `~/.slate` is the way to go. You can then mess with the bindings yourself and update them to whatever you want.
+",jigish,josh-
+177,2013-01-30 00:29:53,"@gimbo - I am finally able to reproduce your case. You were absolutely right. Putting the bigger screen on top is what causes the issue. I'll look into this more.
+",jigish,gimbo
+177,2013-01-30 00:39:13,"interesting observation for @gimbo's issue:
+
+
+
+Out of all those, when the window is too wide for the smaller screen, only `8:ctrl` and `9:ctrl` work. The others do not. _really_ weird.
+",jigish,gimbo
+177,2013-01-30 00:42:30,"@westacular - these issues are indeed related. your screen is hanging off the bottom, @gimbo's is hanging off the side. either way the Accessibility APIs seem to have issues resizing them.
+
+As of right now the only way I can think to force a resize is to check if the window is currently off the screen, then resize the window to something like `screenSizeX/2;screenSizeY/2` and then resize it back to full screen. This definitely seems like a limitation in Apple's Accessibility APIs and not Slate.
+",jigish,gimbo
+174,2013-07-23 14:41:47,"@gfreezy thanks! that's definitely along the lines of what i was looking for. 
+
+however, after a stint with slate i went back to divvy. love the added features of slate, but when it came down to it, all i really needed was the basics (which divvy does extremely well). 
+",byalextran,gfreezy
+165,2012-12-13 09:41:57,"@jigish  Still didn't achieve what I wanted. After trying some options in `undoOps`, I found something weird happening. 
+1. When `chain` is removed from `undoOps`, the following 'chained' command does not save snapshot at all:
+   `bind f:ctrl;alt;cmd     chain move screenOriginX;screenOriginY screenSizeX;screenSizeY | undo`
+2. However, normal `move` options do save snapshot:
+   `bind f:shift;ctrl;alt;cmd     move screenOriginX;screenOriginY screenSizeX;screenSizeY`
+
+Tried this with 'move only'(`undoOps move`) and 'everything except chain'(`undoOps activate-snapshot,grid,layout,move,resize,sequence,shell`).
+Adding `chain` results in saving the snapshot, but fails to activate it -- perhaps due to what you said, as it saves another snapshot.
+
+From the observation, my guess is that
+_undoOps without chain_ makes it **fail early** when `chain` is seen, preventing the inner `move` save snapshots..? 
+I've tested it by reading the `Application Support/com.slate.Slate/snapshots` file.
+
+.. or maybe I've made some stupid mistake somewhere in the config file.. 
+",jangxyz,jigish
+156,2012-11-29 22:55:40,"@jigish Sorry for the delay in responding here. Your initial comment about the syntax has now caused the shortcut to be recognized, but now the fn modifier is ignored completely. This is not just with arrow keys for me.
+",michaelmior,jigish
+153,2013-01-30 13:58:18,"@jigish So, is there a permanent JavaScript scope that stays alive between calls to the shortcuts then?
+",eproxus,jigish
+145,2012-11-17 20:25:19,"very interesting idea. i like it. +1 to @trishume though. But instead of changing that method what would be even better is if you could use `ShellUtils` from 9c0906b41b2ccc2fcec6feb1456af3e2ad83b87a to call the script. If you can't use it, then adding a method to `ShellUtils` that serves your purpose and using it would be better. thanks!
+",jigish,trishume
+140,2012-12-03 13:08:15,"I experienced this too, and @philc clued me in on the reason. I am/was running App Tamer which suspends backgrounded applications (and gives them some time to process events at regular intervals). Slate consistently freezes until all applications have been activated.
+",hugowetterberg,philc
+140,2012-12-05 23:35:20,"This happened to me too, finally. Skype was not responding and slate crapped out. Temporary fix: force quit applications that are being stupid.
+
+Just thinking about it, I'm guessing that this is because Slate keeps track of applications in the background and when one doesn't respond the Accessibility API craps out like @philc mentioned. I'll try to check it out when I get time.
+",jigish,philc
+140,2013-01-03 19:07:48,"@jjlharrison , are any of your apps unresponsive when you see that delay?
+",philc,jjlharrison
+140,2013-01-04 07:12:59,"@philc Looks like it was the App Tamer issue that @hugowetterberg mentioned.
+",jjlharrison,philc
+140,2013-01-04 07:12:59,"@philc Looks like it was the App Tamer issue that @hugowetterberg mentioned.
+",jjlharrison,hugowetterberg
+140,2014-03-01 15:50:55,"@linkinpark342 gotcha yea that makes more sense. [Phoenix](https://github.com/sdegutis/Phoenix) does not have this issue thankfully.
+",keith,linkinpark342
+140,2014-04-02 16:17:10,"@zfdang In my experience it is always another non-responsive app that blocks Slate. (For me, it's often Chrome Canary, but it could be anything.)
+
+If Slate ""freezes"", I switch the Activity Monitor, sort by Name, and look for the ""(Not Responding)"" app and kill it. Slate immediately gets better after that.
+
+There are some apps which always claim to be ""Not Responding"", but you learn to ignore those (ie. jamfAgent always misreports as not responding).
+",wincent,zfdang
+140,2014-07-22 21:55:57,"@jigish You might find [this function](https://github.com/sdegutis/hydra/blob/fb4ef150f827a5a78fa0b9ba7f75ac4e43d54860/Hydra/API/application.m#L154-L170) helpful in implementing this feature, if you're comfortable with using private APIs. Otherwise, [this public function](https://developer.apple.com/library/mac/documentation/ApplicationServices/Reference/AXUIElement_header_reference/Reference/reference.html#//apple_ref/c/func/AXUIElementSetMessagingTimeout) might be another way to go.
+",sdegutis,jigish
+140,2014-07-22 22:13:44,"Nice, @sdegutis. Hydra looks great, but I don't want to port my extensive Slate JS config to another program, so I might take a stab at this myself based on your tip.
+",wincent,sdegutis
+140,2014-07-22 22:15:49,"@wincent Glad I could help. And thanks.
+",sdegutis,wincent
+140,2014-07-22 23:07:20,"@wincent Is your config located somewhere online?
+",sdegutis,wincent
+140,2014-07-22 23:11:35,"@sdegutis https://github.com/wincent/wincent/blob/master/.slate.js
+",wincent,sdegutis
+140,2014-07-25 13:51:19,"@harizvi Can you open an issue in Hydra about this so we don't clutter this issue with unrelated discussion? Thanks!
+",sdegutis,harizvi
+133,2012-10-17 18:05:06,"@purcell key codes identify physical keys which is why you need the config for dvorak if you use it. I maintain a hash from key character -> key code (there is no reverse lookup built in to Objective-C unfortunately) for both dvorak and qwerty.
+
+@jbleuzen I think you have the right idea. Thats the app I used to get my initial values. Unfortunately I don't have any non-US keyboards laying around so I can't really test it all out. It would be great if we could compile a list of keys everyone would like to see and I can add them in. For this I would need:
+1. The character representation of the key. For example '3'. Note that the key should _not_ be created using modifiers. This means '3' is good, '#' is not.
+2. The key code that the character represents on qwerty
+3. The key code that the character represents on dvorak
+
+If I can get this information I can start adding keys that people want one by one.
+",jigish,purcell
+133,2012-10-17 18:05:06,"@purcell key codes identify physical keys which is why you need the config for dvorak if you use it. I maintain a hash from key character -> key code (there is no reverse lookup built in to Objective-C unfortunately) for both dvorak and qwerty.
+
+@jbleuzen I think you have the right idea. Thats the app I used to get my initial values. Unfortunately I don't have any non-US keyboards laying around so I can't really test it all out. It would be great if we could compile a list of keys everyone would like to see and I can add them in. For this I would need:
+1. The character representation of the key. For example '3'. Note that the key should _not_ be created using modifiers. This means '3' is good, '#' is not.
+2. The key code that the character represents on qwerty
+3. The key code that the character represents on dvorak
+
+If I can get this information I can start adding keys that people want one by one.
+",jigish,jbleuzen
+128,2012-10-09 20:09:39,"@arlobryer - The idea would be to do both. something like
+
+`bind 1:ctrl shell somthing`
+
+as well as
+
+`$ slate activate 1:ctrl`
+",jigish,arlobryer
+123,2012-10-10 10:30:48,"@constantin3000 That sounds fantastic - when I get some spare time I might work on the code and submit a pull, shall I comment in this issue again when that's done and try to organize the German translations?
+",josh-,constantin3000
+121,2012-11-28 00:30:12,"hmm. what version of slate are you running @dangelov? and what OS version? It seems to be working fine for me on the latest slate and Lion.
+",jigish,dangelov
+121,2013-09-09 13:20:24,"For the record I seem to experience the same problem as @dangelov. I have
+
+
+
+It seems to bind _just_ `1`
+
+## 
+
+BTW great work with Slate! Thanks so much!
+",kizzx2,dangelov
+121,2013-10-02 19:27:19,"Thanks to direction from @SethMilliken (and the work by @jigish of course!) this config works for me:
+
+
+",dreki,jigish
+121,2013-10-02 19:27:19,"Thanks to direction from @SethMilliken (and the work by @jigish of course!) this config works for me:
+
+
+",dreki,SethMilliken
+107,2013-06-02 20:09:22,"Thanks @almostthor!
+
+I ended up with the following chained command (because I like the ability to toggle between centered and full screen with the same key binding).
+
+
+
+where ${full} is defined as:
+
+
+",jtbrough,almostthor
+103,2012-10-03 18:03:51,"@mohanzhang Xcode 4.2 is/was available for Snow Leopard. Apple was so _nice_ to remove it from their servers but you can find it on [TPB](http://thepiratebay.se/torrent/6721955/). I realize that not everyone is a friend of torrents but in this case Apple is not even helping developers on old OS X versions anymore.
+",paddykontschak,mohanzhang
+103,2012-10-03 21:40:08,"Thanks @paddykontschak - For the record, I neither deny nor acknowledge the existence of this torrent.
+
+@jigish But suppose hypothetically that I got Xcode 4.2 via some means and then tried to build the project again. I'd, uh, _probably_ get errors like the following:
+
+.../slate/Slate/SlateAppDelegate.m:36:13: error: existing ivar 'currentHintOperation' for unsafe_unretained property 'currentHintOperation' must be __unsafe_unretained [4]
+
+Any idea what that means? Is there some setting I'm missing somewhere?
+",mohanzhang,paddykontschak
+103,2012-10-03 21:40:08,"Thanks @paddykontschak - For the record, I neither deny nor acknowledge the existence of this torrent.
+
+@jigish But suppose hypothetically that I got Xcode 4.2 via some means and then tried to build the project again. I'd, uh, _probably_ get errors like the following:
+
+.../slate/Slate/SlateAppDelegate.m:36:13: error: existing ivar 'currentHintOperation' for unsafe_unretained property 'currentHintOperation' must be __unsafe_unretained [4]
+
+Any idea what that means? Is there some setting I'm missing somewhere?
+",mohanzhang,jigish
+100,2012-10-05 23:50:23,"@robacarp I'd be very surprised if you're an outlier. This project is like a neodymium magnet for terminal editor and multiplexer vets on OS X. :smile:
+",SethMilliken,robacarp
+100,2012-10-08 18:47:16,"This is perfect.  Thanks @jigish, top notch.
+",robacarp,jigish
+100,2012-10-08 19:17:30,"Maybe this is no longer in the spirit of this request, but would it also be possible to use more than one key for modal? For example, I've had Alt-` as a global shortcut for another window management program, similar to @robacarp.
+",hjon,robacarp
+100,2012-10-08 19:21:41,"@jigish This is a great addition. Any chance of allowing the modal key to include modifiers? (I'm currently using e.g. `Command-Control-w` mapped to `f17` with KeyRemap4MacBook in order to work around this, so not a huge deal for me, but I'm sure others would appreciate it).
+",SethMilliken,jigish
+93,2012-10-05 01:19:10,"So, [determining the OS version](http://cocoadev.com/wiki/DeterminingOSVersion) on OS X is a pretty horrible hack, and I've found that one can simply use Applescript from within Cocoa to enable ""Access for assistive devices"", meaning that the user doesn't have to leave Slate. What do you think about that?
+
+And I also agree with @trishume - so far I haven't had a single issue on Mountain Lion and it's working fantastically :)
+",josh-,trishume
+93,2012-10-06 22:00:33,"@josh- I like the idea of using Applescript from within Cocoa. Would make the process a lot easier than having to close Slate, open preferences, enable access, etc.
+",jigish,josh-
+93,2012-10-07 06:39:07,"@jigish Exactly, that's what I currently believe the best solution to be. Are you happy with [246eb6b](https://github.com/josh-/slate/commit/246eb6b3fea2920225488a6bcd5a47ed4bd1fd44) and [400138e](https://github.com/josh-/slate/commit/400138eb2a3af8506c8bf447b69073036ca0cdbb)?
+
+Also, [as noted](https://github.com/jigish/slate/pull/115#issuecomment-9192928) by @SethMilliken, this merge would conflict with #115.
+",josh-,jigish
+91,2012-11-17 20:00:10,"+1 for Ruby. Slate is already the best thing ever (thank you @jigish!) but Ruby integration would combine the two best things ever for maximum bestness.
+
+Although using Lua would make me just as happy and would be 10000x times easier to implement. Ruby will not be easy to embed until mruby comes out. Lua is probably a better solution but Ruby would be super cool.
+",trishume,jigish
+91,2012-11-24 02:55:16,"@mgax out of curiosity, I've started to do the lua version here: https://github.com/qmx/slate/tree/lua_support, using cocoapods to manage the dependency
+",qmx,mgax
+91,2012-11-27 23:05:41,"couple of thoughts (mainly so I don't forget myself):
+1. if we're going to embed ruby/python/lua I'd like to do it right. e.g. you should be able to run the if/else _while_ the binding is activated. So you could use the current values of the window/screen/etc to change what you want to do with the particular binding in real-time. Like what @v-yarotsky commented.
+2. I do _not_ want to shell out to achieve this. that would have horrible performance. As such I need a language with an interpreter that I can bind directly into objective-c. For example: what @mgax has done in his python branch.
+
+I'm going to try to look into this today/tomorrow most likely and hopefully come out with a decision on the language to use going forward. Right now Python/Lua seem like the easiest to embed. Though I personally prefer Ruby so if I can find a good way to embed it I'll probably try that.
+
+Also, if I do this, I'm going to try to revamp the documentation/wiki as part of the process since most of the syntax will change as a result.
+
+And finally, I will obviously keep backwards compatibility with the current config syntax.
+",jigish,mgax
+91,2012-11-27 23:05:41,"couple of thoughts (mainly so I don't forget myself):
+1. if we're going to embed ruby/python/lua I'd like to do it right. e.g. you should be able to run the if/else _while_ the binding is activated. So you could use the current values of the window/screen/etc to change what you want to do with the particular binding in real-time. Like what @v-yarotsky commented.
+2. I do _not_ want to shell out to achieve this. that would have horrible performance. As such I need a language with an interpreter that I can bind directly into objective-c. For example: what @mgax has done in his python branch.
+
+I'm going to try to look into this today/tomorrow most likely and hopefully come out with a decision on the language to use going forward. Right now Python/Lua seem like the easiest to embed. Though I personally prefer Ruby so if I can find a good way to embed it I'll probably try that.
+
+Also, if I do this, I'm going to try to revamp the documentation/wiki as part of the process since most of the syntax will change as a result.
+
+And finally, I will obviously keep backwards compatibility with the current config syntax.
+",jigish,v-yarotsky
+91,2012-11-30 22:33:15,"It is awesome that @mgax has something working. I think it would be better if the scripting did not require direct interfacing with the objc api.
+
+Maybe if something was passed into the functions like a `currentWindow` parameter and a `slate` object. The objects passed in would have simpler methods in the style of the language being used. The `currentWindow` object encapsulates operations on the focused window and the `slate` object allows the script to do things like query all the windows and show window hints.
+
+Which would make your python example look more like this:
+
+
+
+Or in Lua:
+
+
+",trishume,mgax
+91,2012-12-01 21:56:03,"@mzbik he already has to add a configuration parser when adding a new feature, it would actually be easier with an api. The thing with directly accessing the Obj-C constructs is that Slate is already difficult to configure for many people and a hard API wouldn't help.
+",trishume,mzbik
+91,2012-12-03 21:32:24,"@mgax suggested another option: Javascript. No additional Framework needed, all built in if you use WebViews. Plus the added benefit that it is pretty widely known/used.
+",jigish,mgax
+91,2012-12-03 21:35:51,"@jigish is there any API for using the JS engine without a webview? It would be rather hacky to have an invisible webview floating around at all times.
+",trishume,jigish
+91,2012-12-03 22:19:41,"@trishume unfortunately there is not. Though it does seem hacky it is the ""accepted"" way to run JS in objective c lol. Whatever that means :). There is the side benefit of maintaining a persistent context. For example you could save a JS variable in one binding to be used in another that is activated later (I'd use node.js style closures and proper exporting to make sure things don't get crazy). Also from what I remember the memory footprint isn't that bad though I'll make sure to test thoroughly. Also it will be running on the very mature safari JS engine and will benefit from any updates Apple makes to it.
+
+All of this is still not enough to definitely say JS is the way to go, just food for thought :)
+",jigish,trishume
+91,2012-12-04 00:29:36,"One language-neutral and important point to discuss is how to link the scripting language. I can think of three options:
+1. Make the entire config file a DSL of that language, maintain backward compatibility with old config files. Like:
+
+
+
+
+1. Use a separate file and bind functions from that file like @mgax did with python.
+2. Have a custom command that uses an inline script. Like this:
+
+
+
+**What do people think? I am personally in favor of the DSL approach.**
+",trishume,mgax
+91,2012-12-04 01:04:39,"@jigish why?
+
+
+",qmx,jigish
+91,2012-12-04 06:56:24,"+1 on the DSL approach. It could call out to external code if you really want to, so you get the benefit of the separate-file approach. And we can write a conversion script to upgrade people's config files. For Python there is the decorator syntax:
+
+
+
+@trishume i think http://will.thimbleby.net/script/ describes a nice approach to call into Objective-C from JS.
+",mgax,trishume
+91,2012-12-04 22:45:59,"Hmmmm, I have to figure out how to link to MacRuby, I'm going to try including the framework from the MacRuby distribution, I really don't want to have to compile it.
+
+I might just fiddle with @mgax's python branch or @qmx's lua branch.
+
+I've looked at the Slate code and in most cases the current operation objects can be used unmodified. The only problem is the move, hint and grid operations rely on ExpressionPoint objects, either the DSL library can create dummy expressionpoint objects of some subclass or the code can be modified to not rely on ExpressionPoint objects.
+",trishume,qmx
+91,2012-12-04 22:45:59,"Hmmmm, I have to figure out how to link to MacRuby, I'm going to try including the framework from the MacRuby distribution, I really don't want to have to compile it.
+
+I might just fiddle with @mgax's python branch or @qmx's lua branch.
+
+I've looked at the Slate code and in most cases the current operation objects can be used unmodified. The only problem is the move, hint and grid operations rely on ExpressionPoint objects, either the DSL library can create dummy expressionpoint objects of some subclass or the code can be modified to not rely on ExpressionPoint objects.
+",trishume,mgax
+91,2012-12-08 13:31:59,"I'm not sure about that, people seem to like the idea of a DSL and that is one of Ruby's specialties. I am currently working on implementing a DSL in MacRuby, which shouldn't be too hard. Embedding the MacRuby framework isn't that bad.
+
+Looking back at comments, 4 people (myself included) seem to favor Ruby if it is possible, 2 people favor Python and 2 people favor Lua. If I interpret people's comments right.
+
+I suggest that we build some prototypes and decide which one we like best, I'm building a MacRuby prototype, @mgax may want to build a prototype of a Python DSL and I'm not sure if anyone would be interested in doing other languages.
+",trishume,mgax
+91,2013-01-19 23:01:53,"@mgax - Nice! I was planning on hacking on slate a bunch this weekend, would love to pull this into to mainline so I can implement some of the stuff I was thinking about as well. Couple things I wanted to do:
+- instead of `'l:cmd,ctrl,alt'` as a parameter, I'd like to start deconstructing the slate syntax so it would be more like `slate.bind('l', ['cmd', 'ctrl', 'alt'], function() { slate.resize(10, 0) }, true);`. I feel like doing this will make adding more complex features easier in the future. We'd keep support for the original syntax of course, but some of the new complex features would be only accessible if you use the javascript syntax.
+- implement a bunch of variables in the slate object for use within the callback like current window stuff, current screen stuff, current screen configuration stuff, etc.
+",jigish,mgax
+91,2013-01-20 00:01:11,"@mgax that is awesome! Right now it is kind of inefficient and ugly since it creates a new operation from a string every time you call one of the methods.
+
+I think a DSL would need a refactoring of the way some operations work and other DSL methods could directly call AccessibilityWrapper methods.
+",trishume,mgax
+91,2013-01-20 00:23:47,"Yes, I agree with @trishume - it would be nice to have a `slate.operation()` function that creates an operation for use in later bindings. that way you don't have to keep creating new ones later. also, the ability to specify a function as an argument (say the `x` value) to an operation will allow you to create a dynamic operation that can change based on the context without having to create a brand new operation.
+
+now I'm getting super juiced about this. please excuse me while I hack away.
+",jigish,trishume
+91,2013-01-20 00:51:17,"@muescha 
+
+1) Can I have an example of how this would be used? Are you saying that a sequence of keys would trigger a binding?
+2) you mean Modal Bindings?
+3) I think this is a bit overdone. What would make sense is to wrap the entire keystroke in a class which would make it easier to support modal bindings.
+4) yah this is what I would want to do. the `slate` object would have the information about the current window and maybe with an option on the method we could add the information about all windows on the screen. I say an option on the method because it would affect performance.
+",jigish,muescha
+91,2013-01-20 01:11:23,"@mgax - I hope you don't mind me merging your javascript branch to master and hacking on it. I have tons of time today and would love to get a lot of this squared away before a push a new version :)
+",jigish,mgax
+91,2013-01-20 08:15:17,"@jigish Go ahead and merge it, that was the point :) I was also thinking about pulling in Underscore.
+
+Instantiating an Operation for every callback is not ideal, but we can worry about performance later, once we figure out what's possible with scripting, and where it's going.
+
+I actually prefer string key definitions, they are shorter and more expressive, reminiscent of CSS selectors. The whole binding syntax is inspired by Backbone [event delegation](http://backbonejs.org/#View-delegateEvents) for views.
+
+What sort of extra bindings do you have in mind? Here's one possible approach: Keep a simple API for JavaScript, basically a thin wrapper around `RegisterEventHotKey` and `activateBinding:isRepeat:`, and implement more complex constructs in JavaScript, where it's easier to experiment.
+",mgax,jigish
+91,2013-01-20 16:02:43,"@trishume Yes, that's precisely the idea, but the Slate bindings implementation doesn't make it easy. I have an idea how to make it work though. Also you need a working `setTimeout` implementation, but that should be no problem.
+",mgax,trishume
+91,2013-01-21 07:10:37,"ok just pushed my changes. theres a ton of stuff there. here is what is left to make this fully functional (so you only need the `.slate.js`):
+- include @mgax's stuff to expose current window info, screen info, and other things
+- add the other directives (`config`, `layout`, `default`, `source`)
+- verify/add support for modal keys and implement modal toggle
+
+some additional ideas/notes:
+- `config` locally. i.e. setting a config for a particular binding and not for others
+- `loop` operation. only available from js. will execute the given operation or function for every window (you'll be able to get the current window info from the function). should probably add an option to only loop through windows in the current app.
+- `layout` should really be easier in js than it currently is in the default syntax. I'll try to clean it up when I implement it in js. Ideally, you should be able to call non-movement operations from within the layout (for example `hide`) without jumping through hoops and the various options should be easier to specify.
+- `source` should be able to source both normal `.slate` files and `.slate.js` files.
+
+I'm going to start with `config` since it should be really simple.
+",jigish,mgax
+91,2013-01-21 08:05:33,"@mzbik right now there is some basic handling of exceptions. it _should_ display an alert. Syntax errors are a bit more tricky. I need to figure out a way to deal with them. Infinite loops I'm not really show what the best way to handle is. To be completely honest I'm very much of the opinion that there isn't really much of a point to jumping through hoops to prevent people from doing stupid things. If there is an infinite loop, slate will hang and the user will figure it out or post an issue which can be debugged. From what I can tell, the only way to detect an infinite loop would be to time the execution of the js and break if it takes ""too long"". I'm not convinced that this is a good idea.
+",jigish,mzbik
+91,2013-01-24 23:08:08,"@mzbik Infinite loops should not force a restart, all you have to do is force quit slate, the OS will not hang.
+
+Adding a time limit stops cool behaviors like waiting for the user to press additional keys and things like that.
+
+Also, awesome work @jigish and @mgax, I had hoped to contribute with MacRuby but the stupid GC incompatibility thwarted me :(
+",trishume,mgax
+91,2013-01-24 23:08:08,"@mzbik Infinite loops should not force a restart, all you have to do is force quit slate, the OS will not hang.
+
+Adding a time limit stops cool behaviors like waiting for the user to press additional keys and things like that.
+
+Also, awesome work @jigish and @mgax, I had hoped to contribute with MacRuby but the stupid GC incompatibility thwarted me :(
+",trishume,jigish
+91,2013-01-24 23:08:08,"@mzbik Infinite loops should not force a restart, all you have to do is force quit slate, the OS will not hang.
+
+Adding a time limit stops cool behaviors like waiting for the user to press additional keys and things like that.
+
+Also, awesome work @jigish and @mgax, I had hoped to contribute with MacRuby but the stupid GC incompatibility thwarted me :(
+",trishume,mzbik
+91,2013-01-25 18:55:37,"@mzbik - Spaces Support is being tracked on Issue #78 
+",jigish,mzbik
+91,2013-08-07 21:44:17,"@mgax, @mgax, @jigish, @trishume, @wez:
+
+I just looked at the scripting-language discussion above, and I have some information that may help.
+
+Recently I wrote my own window manager called AppGrid that was along the lines of Spectacle.app but with slightly different actions. Then I wanted to see if I can add scripting to it, so I copied Slate's approach of embedding JS. (However I used JSCocoa which wraps JavaScriptCore directly rather than going through a WebView.) And I renamed the app to [Zephyros](https://github.com/sdegutis/zephyros).
+
+This worked fine, but I wanted to try adding Ruby too. I looked into MacRuby, and as noted above, realized that it only works in GC-enabled apps, and my app used ARC. And RubyCocoa was deprecated. So I just compiled Ruby 2.0 and embedded it directly. It was easy enough to do, took just one weekend.
+
+But then I wanted to embed Python. And Lua. And F-Script, and Nu. But I realized this wouldn't scale, because the executable was getting really big. And I wanted to script it in Go and Rust and Elixir, but you can't embed these into an ObjC app. So I concluded that embedding was the wrong approach if my goal was to extend it via more than one language.
+
+So I came up with what I think is a good compromise. The app acts like a server, listening on a local unix socket, and scripts are written as clients that connect and send messages and receive responses. The protocol is a simple JSON protocol that mimics ObjC method calls, so you would send Zephyros `[message_id_1, my_window_id, ""title""]` and it would send back `[message_id_1, ""Terminal.app - bash""]` for example. Here's some [more details about it](https://github.com/sdegutis/zephyros/blob/master/Docs/TCP.md).
+
+The performance doesn't suffer from this approach. Even on my slower Mac, it performs just as good as it did when it was embedded. The overhead of using unix sockets and parsing JSON doesn't seem to be much higher than the overhead of translating JS <-> ObjC using a WebView. But admittedly you'd have two processes running instead of just one. However that may be a pro rather than a con, depending on how you look at it.
+
+What do you think of taking this approach in Slate.app? It might involve a little internal refactoring, but I think allowing Slate to be scripted in many languages would be really cool.
+",sdegutis,mgax
+91,2013-08-07 21:44:17,"@mgax, @mgax, @jigish, @trishume, @wez:
+
+I just looked at the scripting-language discussion above, and I have some information that may help.
+
+Recently I wrote my own window manager called AppGrid that was along the lines of Spectacle.app but with slightly different actions. Then I wanted to see if I can add scripting to it, so I copied Slate's approach of embedding JS. (However I used JSCocoa which wraps JavaScriptCore directly rather than going through a WebView.) And I renamed the app to [Zephyros](https://github.com/sdegutis/zephyros).
+
+This worked fine, but I wanted to try adding Ruby too. I looked into MacRuby, and as noted above, realized that it only works in GC-enabled apps, and my app used ARC. And RubyCocoa was deprecated. So I just compiled Ruby 2.0 and embedded it directly. It was easy enough to do, took just one weekend.
+
+But then I wanted to embed Python. And Lua. And F-Script, and Nu. But I realized this wouldn't scale, because the executable was getting really big. And I wanted to script it in Go and Rust and Elixir, but you can't embed these into an ObjC app. So I concluded that embedding was the wrong approach if my goal was to extend it via more than one language.
+
+So I came up with what I think is a good compromise. The app acts like a server, listening on a local unix socket, and scripts are written as clients that connect and send messages and receive responses. The protocol is a simple JSON protocol that mimics ObjC method calls, so you would send Zephyros `[message_id_1, my_window_id, ""title""]` and it would send back `[message_id_1, ""Terminal.app - bash""]` for example. Here's some [more details about it](https://github.com/sdegutis/zephyros/blob/master/Docs/TCP.md).
+
+The performance doesn't suffer from this approach. Even on my slower Mac, it performs just as good as it did when it was embedded. The overhead of using unix sockets and parsing JSON doesn't seem to be much higher than the overhead of translating JS <-> ObjC using a WebView. But admittedly you'd have two processes running instead of just one. However that may be a pro rather than a con, depending on how you look at it.
+
+What do you think of taking this approach in Slate.app? It might involve a little internal refactoring, but I think allowing Slate to be scripted in many languages would be really cool.
+",sdegutis,jigish
+91,2013-08-07 21:44:17,"@mgax, @mgax, @jigish, @trishume, @wez:
+
+I just looked at the scripting-language discussion above, and I have some information that may help.
+
+Recently I wrote my own window manager called AppGrid that was along the lines of Spectacle.app but with slightly different actions. Then I wanted to see if I can add scripting to it, so I copied Slate's approach of embedding JS. (However I used JSCocoa which wraps JavaScriptCore directly rather than going through a WebView.) And I renamed the app to [Zephyros](https://github.com/sdegutis/zephyros).
+
+This worked fine, but I wanted to try adding Ruby too. I looked into MacRuby, and as noted above, realized that it only works in GC-enabled apps, and my app used ARC. And RubyCocoa was deprecated. So I just compiled Ruby 2.0 and embedded it directly. It was easy enough to do, took just one weekend.
+
+But then I wanted to embed Python. And Lua. And F-Script, and Nu. But I realized this wouldn't scale, because the executable was getting really big. And I wanted to script it in Go and Rust and Elixir, but you can't embed these into an ObjC app. So I concluded that embedding was the wrong approach if my goal was to extend it via more than one language.
+
+So I came up with what I think is a good compromise. The app acts like a server, listening on a local unix socket, and scripts are written as clients that connect and send messages and receive responses. The protocol is a simple JSON protocol that mimics ObjC method calls, so you would send Zephyros `[message_id_1, my_window_id, ""title""]` and it would send back `[message_id_1, ""Terminal.app - bash""]` for example. Here's some [more details about it](https://github.com/sdegutis/zephyros/blob/master/Docs/TCP.md).
+
+The performance doesn't suffer from this approach. Even on my slower Mac, it performs just as good as it did when it was embedded. The overhead of using unix sockets and parsing JSON doesn't seem to be much higher than the overhead of translating JS <-> ObjC using a WebView. But admittedly you'd have two processes running instead of just one. However that may be a pro rather than a con, depending on how you look at it.
+
+What do you think of taking this approach in Slate.app? It might involve a little internal refactoring, but I think allowing Slate to be scripted in many languages would be really cool.
+",sdegutis,wez
+91,2013-08-07 21:44:17,"@mgax, @mgax, @jigish, @trishume, @wez:
+
+I just looked at the scripting-language discussion above, and I have some information that may help.
+
+Recently I wrote my own window manager called AppGrid that was along the lines of Spectacle.app but with slightly different actions. Then I wanted to see if I can add scripting to it, so I copied Slate's approach of embedding JS. (However I used JSCocoa which wraps JavaScriptCore directly rather than going through a WebView.) And I renamed the app to [Zephyros](https://github.com/sdegutis/zephyros).
+
+This worked fine, but I wanted to try adding Ruby too. I looked into MacRuby, and as noted above, realized that it only works in GC-enabled apps, and my app used ARC. And RubyCocoa was deprecated. So I just compiled Ruby 2.0 and embedded it directly. It was easy enough to do, took just one weekend.
+
+But then I wanted to embed Python. And Lua. And F-Script, and Nu. But I realized this wouldn't scale, because the executable was getting really big. And I wanted to script it in Go and Rust and Elixir, but you can't embed these into an ObjC app. So I concluded that embedding was the wrong approach if my goal was to extend it via more than one language.
+
+So I came up with what I think is a good compromise. The app acts like a server, listening on a local unix socket, and scripts are written as clients that connect and send messages and receive responses. The protocol is a simple JSON protocol that mimics ObjC method calls, so you would send Zephyros `[message_id_1, my_window_id, ""title""]` and it would send back `[message_id_1, ""Terminal.app - bash""]` for example. Here's some [more details about it](https://github.com/sdegutis/zephyros/blob/master/Docs/TCP.md).
+
+The performance doesn't suffer from this approach. Even on my slower Mac, it performs just as good as it did when it was embedded. The overhead of using unix sockets and parsing JSON doesn't seem to be much higher than the overhead of translating JS <-> ObjC using a WebView. But admittedly you'd have two processes running instead of just one. However that may be a pro rather than a con, depending on how you look at it.
+
+What do you think of taking this approach in Slate.app? It might involve a little internal refactoring, but I think allowing Slate to be scripted in many languages would be really cool.
+",sdegutis,trishume
+83,2012-09-07 21:16:01,"Thanks @jigish! Issue resolved. I failed step 1. :D
+
+Appears to be working ok on Mountain Lion. I'll play with it a bit more and let you know how things go.
+",simpleshadow,jigish
+78,2013-06-12 01:09:21,"`osxmonad` relies on private APIs, which it sounds like @jigish wants to avoid. I've been working on an xmonad-style tiling window manager for OS X (similar to `osxmonad`, but in Objective-C instead of Haskell, you can find it [here](https://github.com/ianyh/Amethyst) if you're curious). I figured out a way to move windows between spaces and have a writeup on how it works [here](http://ianyh.github.io/blog/2013/06/05/accessibility/), which might be of interest here.
+",ianyh,jigish
+78,2013-08-19 21:12:40,"Thanks for the explanation @ianyh 
+",wamatt,ianyh
+78,2014-03-17 21:40:36,"Hello,
+
+@ckruse, I disagree with you for the following reasons:
+0. Such a feature would be useful in general as you would not be reliant on the whims of Apple in regards to what UI they decide next is best for you (me).
+1. TotalSpaces is neither free nor open source, with all this entails, so it would be great to have this functionality in an open source program.
+2. Imho slate, being as far as it seems to me currently, the best ""window manager""ish thing would be the natural place to put such functionality, traditionally found in window managers.
+
+Cheers
+",sprig,ckruse
+78,2014-07-18 20:41:30,"@sdegutis looks good but also hacky. I'm curious though, is using a private api that bad? 
+",wamatt,sdegutis
+78,2014-07-18 20:45:57,"@wamatt Good point. I like using private APIs personally, because they're generally more reliable within a single OS X version. In fact I think I'll look at what osxmonad does.
+",sdegutis,wamatt
+78,2014-07-18 20:46:41,"@ianyh I don't think the Mac App Store accepts apps that require accessibility anyway (I know Divvy was grandfathered in).
+",sdegutis,ianyh
+78,2014-07-18 20:58:47,"@sdegutis Huh. That is an interesting data point, but I have actually already moved towards using private APIs in Amethyst and given up on being in the AppStore. There's just not enough public API support for window management.
+",ianyh,sdegutis
+78,2014-07-18 21:04:42,"@ianyh yep; a few days ago I started just using private APIs like crazy in Hydra. On the bright side, they actually work :D (at least in 10.9, we'll see about 10.10)
+",sdegutis,ianyh
+78,2015-05-25 16:55:05,"@jigish Hey, it's been a while, what's the current status of this issue?
+",alexilyaev,jigish
+78,2015-05-25 18:30:47,"@sdegutis Oh, ok, should have read #437 :-)
+Adding the question to [mattr-#8](https://github.com/mattr-/slate/issues/8)
+",alexilyaev,sdegutis
+77,2013-11-05 20:16:12,"@justincampbell do realise that there is an App for that called Bartender (http://www.macbartender.com/) which costs 15USD and does just that but for any app that doesn't support this natively, and you can define a keyboard shortcut to show an ""extended menu"".
+
+My system bar for instance looks like this:
+![screen shot 2013-11-05 at 21 13 24](https://f.cloud.github.com/assets/803296/1477194/d0a55bf2-4656-11e3-9d93-7c953d7fb0a5.png)
+(in the screenshot the extended menu is openend, normally it is closed)
+",larrybolt,justincampbell
+77,2013-12-12 15:42:01,"I don't usually recommend downloading executables from strangers (including myself), but if you can't wait, I've added a compiled version of my fix [here](https://github.com/jpsim/slate/releases/tag/v0.0.0).
+
+I'd also like to know what @jigish thinks of this approach and why it hasn't received his attention yet :smile:.
+",jpsim,jigish
+77,2014-12-16 02:42:40,"@jpsim awesome work, thanks so much for implementing this
+",chrissphinx,jpsim
+70,2014-02-15 19:53:53,"@drgrib have you tried adding `config keyboardLayout dvorak` to your slate config?
+",wkf,drgrib
+70,2014-02-15 20:54:52,"@wkf Yes, I discovered that setting in another thread and it worked. Thanks for putting it in this one for posterity.
+",drgrib,wkf
+33,2012-07-03 23:22:30,"@jigish Looking forward to it, thanks for the great work :)
+",dcai,jigish
+24,2012-10-02 20:29:19,"@eipark or @pstadler is this still an issue? If so OS version, Slate version and .slate file would be greatly appreciated.
+",jigish,eipark
+24,2012-10-02 20:29:19,"@eipark or @pstadler is this still an issue? If so OS version, Slate version and .slate file would be greatly appreciated.
+",jigish,pstadler
+24,2012-10-02 20:52:50,"I can confirm that this is still an issue. I had to add a special alias for the menubar just like @pstadler did.
+
+Slate 1.0.5
+Mac OS X 10.8.2
+[.slate](https://github.com/paddykontschak/dotfiles/blob/master/home/.slate#L21)
+",paddykontschak,pstadler
+484,2016-11-23 03:19:44,"New app icon and status icon.
+
+![dribbble-800x600](https://cloud.githubusercontent.com/assets/125779/20550230/5b3fe3aa-b0e8-11e6-99eb-f57f02677ea1.png)
+
+@niw has a screenshot of the icons in use: https://twitter.com/niw/status/801237742105464832",maxvoltar,niw
+463,2016-03-12 21:56:43,"
+
+This correctly prints `0` when my window is on monitor `0` and it resizes correctly but the origin used is screen `1`. The result is that I have my window changing monitor positioned at 0,0 resized correctly.
+
+Any hints?
+
+P.S. I am seeing this behavior with `move` as well
+
+cc/ @timriot
+",kilianc,timriot
+449,2015-06-22 14:07:58,"No there isn't a spaces support in slate right now. See also #78 the user @franzwr created a hard workaround by using 'cliclick' to solve this problem.
+
+You can also run a second window manager like 'BetterTouchTool' to this special job.
+",tmattausch,franzwr
+449,2015-06-22 14:10:50,"thank you for ur reply. I realize this is a tricky thing because it
+requires special permission from the security pref pane.
+
+On Mon, Jun 22, 2015 at 10:08 AM, Thomas Mattausch <notifications@github.com
+
+> wrote:
+> 
+> No there isn't a spaces support in slate right now. See also #78
+> https://github.com/jigish/slate/issues/78 the user @franzwr
+> https://github.com/franzwr created a hard workaround by using
+> 'cliclick' to solve this problem.
+> 
+> You can also run a second window manager like 'BetterTouchTool' to this
+> special job.
+> 
+> —
+> Reply to this email directly or view it on GitHub
+> https://github.com/jigish/slate/issues/449#issuecomment-114116224.
+",stefangeorge,franzwr
+445,2015-03-14 18:17:56,":+1:, ping @jigish 
+",nylen,jigish
+445,2015-12-04 17:29:39,"+1 @jigish :)
+",mrooney,jigish
+445,2016-11-17 23:39:31,"@jigish any chance of a merge of this super simple documentation PR? I think it would really help others still get benefit from your hard work!
+",mrooney,jigish
+441,2015-01-24 04:03:58,"@AlcariTheMad Is there something wrong with this change or can I go ahead and include it in my fork of Slate?
+",mattr-,AlcariTheMad
+437,2014-12-17 07:08:11,"_Edit_
+
+According to the non response of jigish, here is a fork that seems a better choice
+# [mattr-/slate](https://github.com/mattr-/slate)
+
+---
+
+Hi @jigish,
+
+First of all thanks for your awesome work. I thank you in my head each time I'm triggering my layout adjustment command :)
+I've tried every window manager I've found for OS X & the one you did is still the best we can find these days. JavaScript configuration file is just the icing on the cake !
+
+According to your GitHub activity I understand that you are pretty busy with other stuff in your life than this application (& that's a good thing for you). However I saw over there so many issues & pull requests that I'm wondering about the evolution of this app. I don't like to see apps I like & use to start going down because the maintainer is a busy man (I am a busy man too, we all are & that's good for our lifes).
+
+So what about to cherry pick some people to give them write access in this repos? It can be a good thing to keep the project up to date with the OS & community needs.
+I know this idea seems crazy, but I really think this can be a good thing for your project. You can keep an eye over there & give your opinion (I am sure you still are interested by the project).
+You can also just say ""yes please do that"" or ""no I don't want that for this app"". You can still be the leader of course.
+
+Please think about this idea :)
+",MoOx,jigish
+437,2014-12-17 23:49:01,"I'd like to be a contributor if possible.
+
+@mattr- the advantage of keeping the repo here is that there are so many people following it and it has many issues already submitted. Hopefully @jigish will allow several of us write access to the repo so your fork can be merged back here.
+",asethwright,jigish
+437,2014-12-18 00:29:08,"Having access to this repo would be ideal, but the emails I've sent to @jigish have gone unreplied to, so I started my own fork. :sob:
+",mattr-,jigish
+437,2014-12-22 18:53:18,"That's a shame @jigish just ignore all messages. Not a cool way to behave :(
+",MoOx,jigish
+414,2014-07-22 23:02:15,"Make use of a private API to prevent Slate from hanging waiting for
+unresponsive apps.
+
+Tested by pausing Google Chrome with a command like `kill -STOP 11019`,
+then interacting with Slate (using hot keys to reposition windows). I
+observed that there is some lag before the `CGSEventIsAppUnresponsive`
+API actually registers the state of the world; it returns `false` at
+first, but after about 20 seconds it correctly returns `true`. During
+the initial interval, interacting with Slate is laggy; after that, it
+becomes snappy.
+
+Resumed Chrome with `kill -CONT 11019`.
+
+Fixes: https://github.com/jigish/slate/issues/140
+
+Thanks to @sdegutis for the tip.
+
+Note: there may be other places that need to check for unresponsiveness before proceeding, but in my initial testing, it seems like all the hangs were happening in the `+[AccessibilityWrapper windowsInApp]` method.
+",wincent,sdegutis
+409,2014-07-02 16:52:10,"This PR is an amalgamation of the merging of many of the good pull requests that have been submitted but not merged. I've compiled and tested them and they all work together.
+
+Anyone who wants an app package with all these changes can download one here (not signed sorry):
+http://thume.net/downloads/Slate.zip
+
+@jigish if you don't want to look at individual PRs you can just merge this one.
+
+Creators of PRs in this one: @josh- @napcae @jpsim @mattr- @wincent @georg
+",trishume,napcae
+409,2014-07-02 16:52:10,"This PR is an amalgamation of the merging of many of the good pull requests that have been submitted but not merged. I've compiled and tested them and they all work together.
+
+Anyone who wants an app package with all these changes can download one here (not signed sorry):
+http://thume.net/downloads/Slate.zip
+
+@jigish if you don't want to look at individual PRs you can just merge this one.
+
+Creators of PRs in this one: @josh- @napcae @jpsim @mattr- @wincent @georg
+",trishume,georg
+409,2014-07-02 16:52:10,"This PR is an amalgamation of the merging of many of the good pull requests that have been submitted but not merged. I've compiled and tested them and they all work together.
+
+Anyone who wants an app package with all these changes can download one here (not signed sorry):
+http://thume.net/downloads/Slate.zip
+
+@jigish if you don't want to look at individual PRs you can just merge this one.
+
+Creators of PRs in this one: @josh- @napcae @jpsim @mattr- @wincent @georg
+",trishume,wincent
+409,2014-07-02 16:52:10,"This PR is an amalgamation of the merging of many of the good pull requests that have been submitted but not merged. I've compiled and tested them and they all work together.
+
+Anyone who wants an app package with all these changes can download one here (not signed sorry):
+http://thume.net/downloads/Slate.zip
+
+@jigish if you don't want to look at individual PRs you can just merge this one.
+
+Creators of PRs in this one: @josh- @napcae @jpsim @mattr- @wincent @georg
+",trishume,josh-
+409,2014-07-02 16:52:10,"This PR is an amalgamation of the merging of many of the good pull requests that have been submitted but not merged. I've compiled and tested them and they all work together.
+
+Anyone who wants an app package with all these changes can download one here (not signed sorry):
+http://thume.net/downloads/Slate.zip
+
+@jigish if you don't want to look at individual PRs you can just merge this one.
+
+Creators of PRs in this one: @josh- @napcae @jpsim @mattr- @wincent @georg
+",trishume,jpsim
+409,2014-07-02 16:52:10,"This PR is an amalgamation of the merging of many of the good pull requests that have been submitted but not merged. I've compiled and tested them and they all work together.
+
+Anyone who wants an app package with all these changes can download one here (not signed sorry):
+http://thume.net/downloads/Slate.zip
+
+@jigish if you don't want to look at individual PRs you can just merge this one.
+
+Creators of PRs in this one: @josh- @napcae @jpsim @mattr- @wincent @georg
+",trishume,mattr-
+409,2014-07-02 16:52:10,"This PR is an amalgamation of the merging of many of the good pull requests that have been submitted but not merged. I've compiled and tested them and they all work together.
+
+Anyone who wants an app package with all these changes can download one here (not signed sorry):
+http://thume.net/downloads/Slate.zip
+
+@jigish if you don't want to look at individual PRs you can just merge this one.
+
+Creators of PRs in this one: @josh- @napcae @jpsim @mattr- @wincent @georg
+",trishume,jigish
+387,2014-07-18 20:30:38,"@jigish @wincent When implementing this feature, this code may be of help: https://github.com/sdegutis/hydra/blob/b20be10f649f4d1c2c7785a00b0602afec14c801/Hydra/API/application.m#L193-L194
+",sdegutis,jigish
+387,2014-07-19 21:17:51,"It was implemented in the pull request 4 months ago.
+
+On Friday, July 18, 2014, Steven Degutis notifications@github.com wrote:
+
+> @jigish https://github.com/jigish @wincent https://github.com/wincent
+> When implementing this feature, this code may be of help:
+> https://github.com/sdegutis/hydra/blob/b20be10f649f4d1c2c7785a00b0602afec14c801/Hydra/API/application.m#L193-L194
+> 
+> —
+> Reply to this email directly or view it on GitHub
+> https://github.com/jigish/slate/pull/387#issuecomment-49476308.
+",wincent,jigish
+381,2014-02-19 05:47:28,"If you guys don't feel like figuring it out yourself, you should use mine: https://github.com/ProLoser/reslate
+
+copy this folder to `~/.reslate` and copy `slate.example.js` to ~/.slate.js`
+
+I am still working on features, but for now you can do <kbd>ctrl</kbd>+<kbd>option</kbd>+<kbd>command</kbd>+<kbd>arrows</kbd> (or <kbd>J</kbd><kbd>K</kbd><kbd>L</kbd><kbd>I</kbd>) to move windows around and across monitors.
+
+Right now I'm discussing with @lunixbochs a better key configuration than what we're doing now and I'm trying to implement auto-snapshotting, meaning when you plug/unplug monitors your windows all revert to their last configuration that was used with those monitors.
+",ProLoser,lunixbochs
+379,2014-02-17 21:09:43,"@Keithbsmiley Well, except the one you filed ;)
+",sdegutis,Keithbsmiley
+379,2014-02-17 21:11:49,"@Keithbsmiley Thanks for putting your config file [here in your repo](https://github.com/Keithbsmiley/dotfiles/blob/496c1009c1f8cc28d53f40d40abf4060a69cedb5/phoenix.js) for us to read and steal from :)
+",sdegutis,Keithbsmiley
+371,2014-04-16 16:09:26,"Hi @jigish, could you please take a look at this to see if it's merge-worthy? Thanks!
+",jpsim,jigish
+371,2014-12-16 14:30:38,"Come on @jigish, this is a great feature! :)
+",hector,jigish
+344,2013-10-02 18:09:26,"Bump @jigish 
+",philc,jigish
+343,2014-10-23 19:54:42,"hey @mattr-...first of all, thanks for your branch and release! i'm loving it. glad people like you have picked up the ball and run with it.
+
+second...are you still actively developing on it? if so, any ideas on this bug? i don't have much (any) experience with cocoa apps, but this is getting in my way more and more. if not, i might take a crack at it, but i'd love any help. thanks in advance!
+",snarfed,mattr-
+338,2013-09-06 16:18:48,"I'm definitely interested in finding a better way to do this.
+
+@philc 
+I currently do this by walking all windows of an application looking for a matching title.
+I ended up writing a [runOrRaise](https://github.com/legumbre/dotslatejs/blob/master/slate.js#L39-L93) command which takes an application name and a lambda as a filter and focus only windows matching that filter.
+So something like `runOrRaise(""Emacs"", function (w) { return w.title() == ""foo.org""; })` would focus the Emacs frame currently displaying the `foo.org` buffer. 
+
+This is not the best solution but it seems to work pretty well, maybe someone else can use it and improve it, so there.
+
+@jigish 
+Thanks for Slate, it's wonderful!
+",legumbre,jigish
+319,2013-06-26 22:46:45,"My guess is that the last line doesn't end in a newline, so the comment on the last line comments out the javascript that is appended to the end:
+- (id)run:(NSString_)code {
+  NSString_ script = [NSString stringWithFormat:@""try { %@ } catch (**_ex**_) { 'EXCEPTION: '+**_ex**_; }"", code];
+  id data = [scriptObject evaluateWebScript:script];
+  if(![data isMemberOfClass:[WebUndefined class]]) {
+      SlateLogger(@""%@"", data);
+  if ([data isKindOfClass:[NSString class]] && [data hasPrefix:@""EXCEPTION: ""]) {
+    @throw([NSException exceptionWithName:@""JavaScript Error"" reason:data userInfo:nil]);
+  }
+  }
+  return [self unmarshall:data];
+  }
+
+Therefore the js is a syntax error, because the close brace of try clause and the rest of the line is commented out, so the try clause to is not closed (thanks, comment!), so no exception is caught. 
+
+Try putting a \n after the %@ inside the try clause!
+
+
+",SimHacker,throw
+304,2015-02-25 09:10:08,"@jigish's project appears to be dead. Please report this on the most active fork:
+
+https://github.com/mattr-/slate
+",blag,jigish
+279,2013-03-29 03:59:05,"@artish Ah, editable margins! Good idea, I updated mine. But this would be a great feature to have built in.
+
+
+",davidmerrique,artish
+193,2012-12-28 02:45:18,"As noted by @slavick in #183, the window hints are currently quite difficult to read when drawn on lighter icons.
+
+This change draws the transparent rounded rect infront of the icon, instead of behind it.
+
+Some screenshots:
+![MacVim](https://f.cloud.github.com/assets/712727/33511/facc3b5e-5097-11e2-8bf4-eb017b167e9a.png) ![TextEdit](https://f.cloud.github.com/assets/712727/33512/faf9a440-5097-11e2-95f0-d0ad6ee2c364.png) ![Xcode](https://f.cloud.github.com/assets/712727/33513/fb268974-5097-11e2-8212-b3c6a2d5da74.png)
+
+I'd like to get @trishume's thoughts on this too - since he was originally the one who [implimented icons in window hints](https://github.com/jigish/slate/commit/fb74fd139dbb156c104936231becda28ea41bf8a).
+
+Also, some constants might need their name changed to reflect the updated position of the rounded rect.
+",josh-,slavick
+193,2012-12-28 02:45:18,"As noted by @slavick in #183, the window hints are currently quite difficult to read when drawn on lighter icons.
+
+This change draws the transparent rounded rect infront of the icon, instead of behind it.
+
+Some screenshots:
+![MacVim](https://f.cloud.github.com/assets/712727/33511/facc3b5e-5097-11e2-8bf4-eb017b167e9a.png) ![TextEdit](https://f.cloud.github.com/assets/712727/33512/faf9a440-5097-11e2-95f0-d0ad6ee2c364.png) ![Xcode](https://f.cloud.github.com/assets/712727/33513/fb268974-5097-11e2-8212-b3c6a2d5da74.png)
+
+I'd like to get @trishume's thoughts on this too - since he was originally the one who [implimented icons in window hints](https://github.com/jigish/slate/commit/fb74fd139dbb156c104936231becda28ea41bf8a).
+
+Also, some constants might need their name changed to reflect the updated position of the rounded rect.
+",josh-,trishume
+183,2012-12-28 06:57:42,"I like @josh-'s fix for this. We'll have the option to add a rounded rect under the letter once I merge that in.
+",jigish,josh-
+177,2013-01-30 00:42:30,"@westacular - these issues are indeed related. your screen is hanging off the bottom, @gimbo's is hanging off the side. either way the Accessibility APIs seem to have issues resizing them.
+
+As of right now the only way I can think to force a resize is to check if the window is currently off the screen, then resize the window to something like `screenSizeX/2;screenSizeY/2` and then resize it back to full screen. This definitely seems like a limitation in Apple's Accessibility APIs and not Slate.
+",jigish,westacular
+164,2012-11-27 23:12:55,"@kvs - good shit. I'll add this to the read me today.
+",jigish,kvs
+160,2012-11-28 00:40:46,"Also, @trishume has written an awesome post about getting started with slate here: http://thume.ca/howto/2012/11/19/using-slate/
+",jigish,trishume
+143,2012-11-17 18:34:00,"Odd that @jigish even asked for this but there has been no word from him on this pull request.
+",trishume,jigish
+140,2014-03-01 07:09:56,"@Keithbsmiley I don't think Slate is being app nap'd but that Slate freezes when _other_ apps are getting nap'd
+",linkinpark342,Keithbsmiley
+140,2014-07-24 21:12:09,"@janaspage lol cool, glad to be of service, :thumbsup: 
+",sdegutis,janaspage
+128,2012-10-09 18:30:51,"FYI, @jigish discusses adding an operation for running shell commands [here](https://github.com/jigish/slate/issues/78#issuecomment-9121185) and [here](https://github.com/jigish/slate/issues/85).
+",SethMilliken,jigish
+103,2012-10-03 21:49:17,"hmm. thats a good question. I'm using Xcode 4.5 so i'm not getting that error. From what I can tell it would be complaining about how the properties are declared for some reason. Probably adding something like `(strong)` after `@property` would fix it. This would be a problem most likely fixed by Apple's compiler upgrades since 4.2.
+",jigish,property
+93,2012-10-07 06:39:07,"@jigish Exactly, that's what I currently believe the best solution to be. Are you happy with [246eb6b](https://github.com/josh-/slate/commit/246eb6b3fea2920225488a6bcd5a47ed4bd1fd44) and [400138e](https://github.com/josh-/slate/commit/400138eb2a3af8506c8bf447b69073036ca0cdbb)?
+
+Also, [as noted](https://github.com/jigish/slate/pull/115#issuecomment-9192928) by @SethMilliken, this merge would conflict with #115.
+",josh-,SethMilliken
+91,2013-01-21 08:14:03,"It's not a matter of prevention, but of not crashing enough of the system to discourage use.
+
+For infinite loop, if we can hook the js op code  dispatch, we can establish a configurable limit per keystroke
+
+On Jan 21, 2013, at 12:06 AM, ""Jigish Patel"" <notifications@github.com<mailto:notifications@github.com>> wrote:
+
+@mzbikhttps://github.com/mzbik right now there is some basic handling of exceptions. it should display an alert. Syntax errors are a bit more tricky. I need to figure out a way to deal with them. Infinite loops I'm not really show what the best way to handle is. To be completely honest I'm very much of the opinion that there isn't really much of a point to jumping through hoops to prevent people from doing stupid things. If there is an infinite loop, slate will hang and the user will figure it out or post an issue which can be debugged. From what I can tell, the only way to detect an infinite loop would be to time the execution of the js and break if it takes ""too long"". I'm not convinced that this is a good idea.
+
+—
+Reply to this email directly or view it on GitHubhttps://github.com/jigish/slate/issues/91#issuecomment-12487790.
+",mzbik,mzbikhttps
+91,2013-01-25 15:30:29,"Thanks, Tristan/Jigish.
+
+Here's a question: is there a way to manipulate window/space relationships too?
+
+On Jan 24, 2013, at 15:17, ""Tristan Hume"" <notifications@github.com<mailto:notifications@github.com>> wrote:
+
+@mzbikhttps://github.com/mzbik Infinite loops should not force a restart, all you have to do is force quit slate, the OS will not hang.
+
+Adding a time limit stops cool behaviors like waiting for the user to press additional keys and things like that.
+
+Also, awesome work @jigishhttps://github.com/jigish and @mgaxhttps://github.com/mgax, I had hoped to contribute with MacRuby but the stupid GC incompatibility thwarted me :(
+
+—
+Reply to this email directly or view it on GitHubhttps://github.com/jigish/slate/issues/91#issuecomment-12679099.
+",mzbik,jigishhttps
+91,2013-01-25 15:30:29,"Thanks, Tristan/Jigish.
+
+Here's a question: is there a way to manipulate window/space relationships too?
+
+On Jan 24, 2013, at 15:17, ""Tristan Hume"" <notifications@github.com<mailto:notifications@github.com>> wrote:
+
+@mzbikhttps://github.com/mzbik Infinite loops should not force a restart, all you have to do is force quit slate, the OS will not hang.
+
+Adding a time limit stops cool behaviors like waiting for the user to press additional keys and things like that.
+
+Also, awesome work @jigishhttps://github.com/jigish and @mgaxhttps://github.com/mgax, I had hoped to contribute with MacRuby but the stupid GC incompatibility thwarted me :(
+
+—
+Reply to this email directly or view it on GitHubhttps://github.com/jigish/slate/issues/91#issuecomment-12679099.
+",mzbik,mgaxhttps
+91,2013-01-25 15:30:29,"Thanks, Tristan/Jigish.
+
+Here's a question: is there a way to manipulate window/space relationships too?
+
+On Jan 24, 2013, at 15:17, ""Tristan Hume"" <notifications@github.com<mailto:notifications@github.com>> wrote:
+
+@mzbikhttps://github.com/mzbik Infinite loops should not force a restart, all you have to do is force quit slate, the OS will not hang.
+
+Adding a time limit stops cool behaviors like waiting for the user to press additional keys and things like that.
+
+Also, awesome work @jigishhttps://github.com/jigish and @mgaxhttps://github.com/mgax, I had hoped to contribute with MacRuby but the stupid GC incompatibility thwarted me :(
+
+—
+Reply to this email directly or view it on GitHubhttps://github.com/jigish/slate/issues/91#issuecomment-12679099.
+",mzbik,mzbikhttps
+78,2014-07-22 21:30:39,"Further discussion with @puffnfresh suggests that the existing private APIs worked on 10.8 but broke on 10.9...
+",sdegutis,puffnfresh

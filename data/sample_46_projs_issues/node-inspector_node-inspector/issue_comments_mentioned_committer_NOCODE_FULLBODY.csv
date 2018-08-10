@@ -1,0 +1,2111 @@
+issue_num,datetime,body,login,mention_login
+956,2016-12-27 01:27:06,@bajtos Thanks and wish you happiness in the year to come. :),sparkleholic,bajtos
+930,2016-09-26 23:46:31,"@bajtos Thanks for replying.
+Yes you're right. I'm also noticed that the recent node v6.4 is supporting `inspect` option. It's really good news. 
+But in my case, I'm using the node in the embedded device which is pretty old version(v0.12.0). So unfortunately I can't use `inspect` option there. :(
+",sparkleholic,bajtos
+930,2016-12-07 02:01:15,"I'd like to use this node-inspector to debug node.js remotely, But the latest code looks it needs to run node-inspector on the same machine running on the local machine.
+Even though I submitted a PR (https://github.com/node-inspector/node-inspector/pull/919) regarding this but it just supports only source viewing and break point.
+In order to support other tabs like console, profile and etc, it seems like it should inject some modules to the running nodejs process via getting console object.
+
+@bajtos 
+In the case that the running nodejs process doesn't have console object because it substitutes for the other, node-inspect cannot inject modules into.
+If injection is not available, the node-inspector cannot support forwarding console output, tabs functions like profile/console/etc.
+But I'd like to use this project only for view source and setting break-point except other features.
+So may I distribute this as another project name ? (maybe `node-inspector-remote` ?)
+I just want to do this through forking the old node-inspect branch.
+Please take a look at this (https://github.com/sparkleholic/node-inspector/commit/ef554d8ac26826d74e1113ba7cbe14c47ee4fe65)
+",sparkleholic,bajtos
+930,2016-12-07 16:48:50,"Thanks @bajtos for the fast response.
+
+> What branch would you like to target? 0.7.4 is the last version I am familiar with. If you like, I can create a long-lived branch 0.7.x from v0.7.4 and release v0.7.5 with your patch. That way you don't have to fork.
+
+`0.7.x branch` would be nice :) 
+If you do so, I don't have to fork as you mentioned.
+Would you let me know when 0.7.x branch is made so that I can make a PR into it. :)
+Thanks for your kind feedback.
+",sparkleholic,bajtos
+930,2016-12-09 02:47:18,"@bajtos I've just made a PR(https://github.com/node-inspector/node-inspector/pull/956) into `0.7.x branch`.
+I'll be appreciated if you review it. 
+Thanks. ",sparkleholic,bajtos
+914,2017-01-07 17:16:13,"@Kreozot I think we need to check if NM.length==0.
+`cb(error, NM.length==0 ? null : NM[0].ref);`
+
+This bug prevents me from debugging React Native project. Hope it will be merged soon and all react native developers will benefit.",vinceyuan,Kreozot
+914,2017-01-17 03:57:15,@Kreozot Please take a look at my previous comment.,vinceyuan,Kreozot
+914,2017-01-17 10:26:26,@Kreozot Yes. I think so. But you are right. Actually there is no difference in this context.,vinceyuan,Kreozot
+767,2016-03-11 22:29:55,"@asselin , yes, pr will be acceptable.
+",3y3,asselin
+729,2015-08-28 18:33:00,"@michae1 , thank you for contribution.
+There is one indentation case to fix. All other LGTM.
+Please fix minor bugs and squash all changes to single commit.
+",3y3,michae1
+705,2015-07-28 07:41:25,"@ackalker , thank you for contribution.
+PR is ready to merge, but I need @auchenberg feedback.
+
+@auchenberg , is this change sensible for you?
+",3y3,ackalker
+694,2015-07-23 11:32:36,"https://github.com/benderjs/browser-launcher2/blob/master/lib/config.js
+
+FYI Here is how the config file name is evaluated
+
+On Thursday, 23 July 2015, Yury Puzynya notifications@github.com wrote:
+
+> @jakub-g https://github.com/jakub-g , any thoughts?
+> 
+> —
+> Reply to this email directly or view it on GitHub
+> https://github.com/node-inspector/node-inspector/issues/694#issuecomment-123895474
+> .
+",jakub-g,jakub-g
+684,2015-06-23 22:36:18,"I'm :+1 here.
+
+@auchenberg , are you ready to implement it?
+",3y3,auchenberg
+681,2015-06-16 23:51:34,"@zertosh , thank you for contribution. I'll merge it soon.
+
+I see that you are `babel` organisation member. How about fix this issues also in `babel` itself?
+I can target you to previous discussion about sourcemap problems.
+",3y3,zertosh
+677,2015-06-18 23:43:21,"@bajtos , I fixed targetted issues. Unfortunately changes history was vwry dirty, so I prefer to squash all fixups.
+
+What happened here:
+- added `debug.convert`
+- `response.push` used to handle `dataReceived` and `finishLoading` events.
+
+@bajtos , @jkrems all your issues are fixed. It's ready to next round of review. First round was very useful.
+",3y3,bajtos
+677,2015-06-25 12:38:37,"Ok. I partially fixed issues from last @jkrems comments. I switched to new entry point for wrapper, and now I have some questions for discussion - look at code below.
+
+From `_http_client.js` with my comments
+
+
+
+@jkrems , about your gist example. 
+
+
+
+There you target me to situation when socket will be never initialised.
+I think that current realisation (where we send `requestWillBeSent` after socket initialisation) is correct, otherwise we can't say what request really will be sent =)
+All other cases from your gist are handled in new commits.
+
+@bajtos , I fixed tests and squashed all changes to three commits:
+- implementation
+- backported changes
+- tests
+
+Please review `squash!` changes. There I fixed a completely missed `responseFailure` and checked behavior changing when we listen on `error` and `response` events.
+",3y3,bajtos
+654,2015-06-10 11:38:22,"@marcominetti , I made some changes before merging:
+- removed `Click here to inspect.` from message
+- removed `title = 'Debugger paused';`
+- added `tag` option to prevent messages duplication.
+
+Landed as ca58013de3579665812dbeef403aae461ce7c08b
+
+Great thanks for contribution!
+",3y3,marcominetti
+648,2015-05-19 14:06:04,"Ok. At current step I like my changes in `ScriptFileStorage` and your changes in `front-end`.
+Next step - discussion about renaming files...
+I think that all renamings is out of scope of node-inspector.
+We can't solve existed situation correctly (this is an issue for babel), but we also can't to add dirty fix.
+
+If we leave only changes in `ScriptFileStorage` and in `front-end` this would work for correct sourcemaps. @marcominetti , are you agree?
+
+
+
+One other thing. There are inlined sources. So at current time we prevent requiring of inline sourcemap, but we can also prevent requiring of inline sources which stored in inline sourcemap (or it already works?).
+
+[Source Map Revision 3 Proposal](https://docs.google.com/document/d/1U1RGAehQwRypUTovF1KRlpiOFze0b-_2gc6fAH0KY0k/edit#heading=h.hval2vfopveu)
+",3y3,marcominetti
+648,2015-05-19 14:20:17,"`If we leave only changes in ScriptFileStorage and in front-end this would work for correct sourcemaps. @marcominetti , are you agree?`
+
+I do agree. ;)
+
+`One other thing. There are inlined sources. So at current time we prevent requiring of inline sourcemap, but we can also prevent requiring of inline sources which stored in inline sourcemap (or it already works?).`
+
+I've not tested specifically but it should already work... I use babel and uglify to build an app boot pack for node and front-end resource tree correctly lists original (virtual) source code... with not-inlined sourcemap the code is read from sourcemap sourcesContent property...
+",marcominetti,marcominetti
+648,2015-05-23 17:24:04,"@marcominetti , read also https://github.com/babel/babel/pull/1587
+",3y3,marcominetti
+648,2015-06-02 13:52:59,"@marcominetti , sorry for pending this. I don't have a time to work on source maps on this week, but I follow the work.
+We also discussed about this bug with Bajtos in gitter chat, so I need to fix and extend my part of commits.
+
+Don't worry about this now. I'll rebase and merge all important parts and I'll present it for your review.
+",3y3,marcominetti
+648,2015-06-14 20:25:48,"@marcominetti , I landed it as be64d801ea8bbf418ba316a23610b16ad1a4f1cb with some minor changes.
+
+Thank you for contribution!
+",3y3,marcominetti
+634,2015-05-05 20:59:40,"@adambiggs , thanks for bug report and pr.
+Now my turn to lose some time trying to override this using `front-end-node` folder =)
+Anyway solution will be very hackly...
+I'll return to review from some time.
+",3y3,adambiggs
+634,2015-05-06 20:22:54,"@adambiggs , great thanks for contribution. :beers: 
+",3y3,adambiggs
+628,2015-05-15 09:52:05,"@marcominetti , I already have in plans to test front-end update (with new front-end system, this promises to be simple), so, if you want it soon, I'll make it on this evening or on weekend.
+",3y3,marcominetti
+628,2015-05-15 10:25:58,"@marcominetti , can you open a pr to look on progress?
+",3y3,marcominetti
+627,2015-05-25 08:53:06,"@3y3 could you please add a new section to README.md explaining how to use plugins? It would be great to have some documentation for plugin authors too, I think it's better to move the docs to a different place (either a new md file or perhaps a wiki page).
+
+I don't have enough time to review this PR in detail. If it works for you and for @marcominetti, then I am fine with merging it as it is.
+",bajtos,marcominetti
+627,2015-05-25 09:11:09,"@bajtos , there is one wrong place:
+`InspectorBackendCommands.js` and `SupportedCSSProperties.js` moved to `front-end-node` folder (you requested this movement some prs ago). But it doesn't work as expected.
+Will be it acceptable to add new express `get` statement like this:
+
+
+
+Or you see more elegant way?
+",3y3,bajtos
+627,2015-05-25 09:58:54,"@auchenberg ,
+
+> Question: Is the idea to Fork the DevTools front-end in order to support
+> node-inspector specific plug ins?
+
+No, we won't to design our own plugins system for DevTools.
+
+This is a first step of complex plugin system for Node Inspector.
+We have three levels, where we want to inject code: frontend, inspector's backend, application.
+This PR implements entry point to be able to load plugins to frontend.
+So you have full access to DevTools sources, i.e. you can use `chrome extension APIs` or modify internal devtools methods.
+",3y3,auchenberg
+627,2015-05-25 10:08:38,"@bajtos ,
+
+We use `front-end-node` as a folder with all overrides, but we store all overrides relative to `/node` path.
+
+Main reason to remove `InspectorBackendCommands` from `front-end` - cleanup this folder from any changes. After this step there will no files, which we need to copy to `front-end` folder using `update-front-end` script.
+
+But if we simple move `InspectorBackendCommands` to `front-end-node` folder, this doen't work, because it will be resolved as `/node/InspectorBackendCommands.js`, but we expect `/InspectorBackendCommands.js`
+",3y3,bajtos
+626,2015-05-04 15:33:19,"Thanks @jakub-g for looking into this.  Here's the shell output:
+
+
+
+I tried uninstall/reinstall of node-inspector and got the same result.  I also tried the alternative method:
+
+
+",LegendaryTom,jakub-g
+621,2015-05-12 08:11:09,"@marcominetti , sorry for pending of your features, but there is a lot of bugs, which I need to fix and release before review.
+",3y3,marcominetti
+621,2015-05-14 13:21:28,"Hello, @marcominetti , I target you from Plugin system pr. Also you can look on [0.10.2 milestone](https://github.com/node-inspector/node-inspector/milestones/0.10.2), here are bugs and features with hight priority. It is not necessary, what all this bugs needs to be fixed, in some situations we need only to describe solution. For example #566 - you are friendly with new front-end, so you can target man to entry point for this feature (or implement it by yourself).
+So look at list, and if you ready to fix something - notify me.
+",3y3,marcominetti
+621,2015-07-01 14:28:19,"@marcominetti , I'm not familiar with search API in DevTools, but if I understand right main problem - we receive lot of parallel requests like `searchInContent` and we try to require sources for each `scriptId` also in parallel mode. So, we need to review strategy of original DevTools, when there exists a linked local folder:
+- If in this case DevTools tries to search in all files (not only in loaded to front-end), then we need to completely avoid `getScriptSourceById` and use `fs` (this makes some problems for generated scripts, but I prefer to ignore this problems in initial implementation)
+- Otherwise we can move search logic to app (look at injection example in `ConsoleAgent`)
+
+In all this cases we need to completely avoid caching.
+
+So, main question on current step - are we need to search in preloaded resources?
+",3y3,marcominetti
+621,2015-07-01 15:00:21,"@marcominetti I installed your fork and its working greatly but when i search and click on a line it always highlight the NEXT line!
+I want you to confirm this and if it turns out to be a bug I think I can help you fix it quickly 
+HINT:check the function `getLine(doc, n)` `return chunk.lines[n];` in the ""codemerror.js"" file should be n-1 if n > 0
+
+@3y3 I think it's ok for the search process to be a little bit slower and works like 10 files at a time then next 10 etc. for a basic fix. After all it's better than nothing!
+",a7madgamal,marcominetti
+621,2015-07-15 07:03:14,"Hello @marcominetti , sorry for ignoring your previous comment - I'm very busy at this time. I'll review your changes as soon as possible. I'm not sure that this will happen today, but definitely on this week.
+",3y3,marcominetti
+621,2016-01-13 05:49:29,"@marcominetti , please don't miss time at current weekend. I'll release ""Node Inspector Next"" at this month (I hope) with new frontend and completely reimplemented server. So it's not reasonable to rebase at current master.
+
+Node Inspector Next breaks compatibility with oldest node versions (compatibility starts with 4.*), but implements lot of new features.
+
+I'm sorry that I pending this pr, but each time then I start to review it, there happens new broken node release.
+",3y3,marcominetti
+618,2015-05-29 09:42:58,"@marcominetti let's not wait for @auchenberg and move this patch forward. Could you please rework the code to serve the debugger at the root url, as discussed above?
+",bajtos,marcominetti
+618,2015-05-29 10:04:56,"@bajtos Yep, I should have time this afternoon or evening to carry out all ni related tasks... (CEST)
+",marcominetti,bajtos
+618,2015-05-29 10:28:32,"Looks good. I don't have any problem with removing /debug, as long it won't
+cause problems with /json or future endpoints.
+On May 29, 2015 6:04 PM, ""Marco Minetti"" notifications@github.com wrote:
+
+> @bajtos https://github.com/bajtos Yep, I should have time this
+> afternoon or evening to carry out all ni related tasks... (CEST)
+> 
+> —
+> Reply to this email directly or view it on GitHub
+> https://github.com/node-inspector/node-inspector/pull/618#issuecomment-106763336
+> .
+",auchenberg,bajtos
+618,2015-05-30 15:14:08,"done @bajtos 
+",marcominetti,bajtos
+600,2015-04-24 17:39:06,"@bajtos 
+
+
+",jfromaniello,bajtos
+599,2015-09-07 15:46:51,"@jakub-g Thanks for the hints. Never got around to looking into this before (haven't been using NI much lately). Will try to spend some time investigating in the next few weeks.
+",medington,jakub-g
+594,2015-03-30 21:30:37,"Merged. Thanks @marcominetti .
+Sorry for delayed review - lot of work on node-inspector internals.
+",3y3,marcominetti
+582,2015-03-10 11:09:43,"Hello, @marcominetti . I'm not sure that making `babel` a part of `node-inspector` is a right thing.
+But this is a good point to start extended discussion about plugins.
+For example, we have [one other](https://github.com/node-inspector/node-inspector/issues/502) feature issue, about highlighting `debug` module colors in console, but this is useful only for users that use `debug` module in their projects, so this can't be implemented as main part of node-inspector.
+
+I'd like to provide to users simple way to extend `ni` by plugins.
+This is a work on two-three fronts:
+1. frontend extension
+2. inspector backend extension
+3. [app extension]
+
+Your current pr takes only first part. So, how I see frontend extension mechanism:
+1. We can store all plugins in subdirectory with same name. Example:
+
+
+1. Each plugin has name in npm `node-inspector-<plugin name>`. Example `node-inspector-babel`
+2. Each plugin has `module.json`, like [this](https://github.com/3y3/node-inspector/blob/frontend/front-end-node/module.json), [inspector.json](https://github.com/3y3/node-inspector/blob/frontend/front-end-node/inspector.json) and optionally [protocol.json](https://github.com/3y3/node-inspector/blob/frontend/front-end-node/protocol.json). We need to compile extension structure on node-inspector startup, or for each new [ws session](https://github.com/node-inspector/node-inspector/blob/master/lib/debug-server.js#L20-L23)
+3. Add new paths to [express router](https://github.com/3y3/node-inspector/blob/frontend/lib/debug-server.js#L61-L64), like
+
+
+
+Where `compiled_in_memory_inspectorjson` is the result of something like this:
+
+
+
+So for example if we have `babel` plugin:
+`cd node-inspector/plugins/babel`
+`echo module.json`
+
+
+
+`BabelPlugin.js` is your current diff for overrides.
+
+`echo inspector.json`
+
+
+
+`echo protocol.json`
+
+
+
+And `compiled_in_memory_inspectorjson` is equal to:
+
+
+
+We need to compile same way `protocol.json`.
+
+So, @marcominetti , are you ready to implement plugin system? This work is relative to `frontend` pr. Unfortunately in current time I work on other `ni` issues, and can't finish `frontend` pr at soon, but I'm ready to review prs relative to it.
+So keep in mind that this is a discussion about plugins, and your thoughts are important.
+Welcome to discussion on [gitter](https://gitter.im/node-inspector/node-inspector)
+
+/cc @bajtos 
+",3y3,marcominetti
+582,2015-03-11 11:21:42,"> Ok, I can do develop the plugin system.
+
+@marcominetti , good news!
+
+Feature request already exists (#180). I'll update information.
+
+> why are you defining npm naming convention?
+> 
+> Is it related to your next startup system proposal (ni install)?
+
+Yes. But it's out of scope of current feature. 
+Current `install` solution - clone repo into plugins folder =)
+",3y3,marcominetti
+582,2015-03-11 19:26:56,"> Current install solution - clone repo into plugins folder =)
+> 
+> > IMO that pretty much sucks
+
+@bajtos , I'm agree. Please read my thoughts in `install` part of #578
+",3y3,bajtos
+582,2015-03-12 17:20:48,"@3y3 @bajtos ...a solution could be integrate npm (through npm link instead of having it in ni deps) and just look for every node module - installed locally (cwd) and globally - that matches node-inspector-plugin-xxx name.
+
+IMO the naming convention could be:
+- node-inspector-xxx: custom inspector bundled with plugins (out of scope for the plugin system feature
+- node-inspector-plugin-xxx: plugin that extends ni and contains the module.json, protocol.json and inspector.json and related files
+
+At load time, ni will find the matching node-inspector-plugin-xxx modules, read jsons and create proper static express paths for frontend files. In this case I would suggest to define a dedicated frontend/backend folders within the xxx plugin to avoid security concers of serving backend files to the frontend.
+
+To sum up:
+
+
+
+The same for npm installed modules:
+
+
+
+In case of naming conflicts (same plugin embedded in ni /plugins folder and available as npm installed pkg), the ni embedded wins (cause npm installed pkg could update and break currently installed ni).
+
+In module.json could be useful to add - by specification - a property for supported ni version(s). This property could be checked with semver during load phase.
+
+Any thoughts? 
+",marcominetti,bajtos
+582,2015-03-12 20:59:51,"@bajtos mmm... is it really reliable to use keywords for discoverability? I mean composition of node-inspector and plugin could be not directly related to the plugin system of node-inspector...
+
+What about
+
+> ni-plugin-xxx
+
+Could be shorter then loopback-connector-xxx... ;)
+
+Is node-inspector already published as ""ni""?
+",marcominetti,bajtos
+573,2015-03-04 09:54:46,"Landed as 88fb962, thank you for the contribution.
+
+I had to fix line endings to unix style. @jakub-g please consider configuring your GIT client to convert Windows EOLs to Unix EOLs for you automatically - see https://help.github.com/articles/dealing-with-line-endings/#platform-windows
+
+@3y3 Yeah, I did not appreciate the direct emails either. I guess you can always ignore them if you or setup a (spam) filter to delete them automatically. I'd rather keep the README in a positive tone.
+",bajtos,jakub-g
+573,2015-03-04 10:18:50,"@bajtos , it was a joke =)
+",3y3,bajtos
+569,2015-03-04 09:20:39,"@jakub-g what is the status of this issue? I can see that the linked commit has been already released, can we close this issue as resolved?
+",bajtos,jakub-g
+567,2015-03-04 09:14:55,"Closing as a duplicate of https://github.com/jakub-g/x-default-browser/issues/1. Thank you @jakub-g for taking care of this.
+",bajtos,jakub-g
+566,2015-03-04 10:35:25,"Hi @bajtos, I just tried out some possible solutions for this feature. I came across a very obvious solution: if the node-inspector page encounters an active breakpoint, the node-inspector's javascript code can just do an alert('breakpoint encountered'); in the javascript code, and the Chrome browser will automatically switch to the node-inspector tab!
+
+Btw, it would be handy if you can enable/disable this alert with a config option e.g. in the settings.
+",wdbacker,bajtos
+566,2015-03-05 10:06:47,"Hi @bajtos @3y3, I found a much more elegant solution. As node-inspector needs only works on Chrome or Opera, we can use the new desktop notification API.
+
+See https://developer.mozilla.org/en-US/docs/Web/API/Notification/Using_Web_Notifications
+
+Advantages:
+- notification is much more discrete (no alert neede anymore)
+- the old alert() blocks the javascript event loop, the new notification doesn't
+- no configuration needed in node-inspector, user can simply (dis)allow notification once in node-inspector
+
+I made a small demo page with script code that can be used immediately for node-inspector too.
+
+To see how this works, go to http://srm.stabe.be/ and click on the button. After 5 seconds, Chrome will ask once if you want to allow desktop notifications for this ""website"". If you press ""allow"", the notification will be displayed bottom-right.
+
+Now push the same button a second time and immediately switch to another window/tab in Chrome. After 5 seconds, you'll see the notification bottom-right and you can click on it. You'll be taken immediately to the node-inspector tab!
+
+Btw, the notification script on the demo page is browser independent (the script uses feature checking). You just need Chrome 32 or later, Opera 25 or later for this new feature to work seamlessly, see 
+https://developer.mozilla.org/en-US/docs/Web/API/Notification#Browser_compatibility
+
+You'll see the code needed for node-inspector in the page source of my demo page.
+What do you think?
+",wdbacker,bajtos
+566,2015-03-05 10:26:14,"Notification API will be best solution! :+1: 
+
+I saw it in work on Gitter - it's very useful.
+
+@bajtos ?
+",3y3,bajtos
+566,2015-03-12 13:03:42,"@bajtos @3y3 Can you point me in the right direction in the Node Inspector's source code so that I can prepare a pull request for this notification functionality? Thx!
+",wdbacker,bajtos
+560,2015-04-14 07:07:50,"@bajtos , this partially ready to review.
+
+Strategy of this pr:
+1. Refactor session module. Inherit it from EventEmitter.
+2. Restructure all modules to receive `session` object instead of `debuggerClient, frontendClient etc.`
+3. Fix test after refactoring
+4. Fix test for 0.12 - to be sure that we work on 0.12 with new changes (there are some speculative changes. I need help to understand how they work)
+5. Emit `resource-tree` event from session instead of PageAgent. Rename to `resource-tree-resolved`
+6. Add new tests for `resource-tree-resolved` feature
+
+About fixes for 0.12:
+Ok, I can understand why we need to resume debugger after injections [like there](https://github.com/3y3/node-inspector/commit/c95736904bdf37987c4115710bbb381ac17937c0#diff-78792a5f176ac27c2f69d3b51e9c0b1bR200) - this is related to new isolated debugger with his own event loop.
+But that happens [here](https://github.com/3y3/node-inspector/commit/c95736904bdf37987c4115710bbb381ac17937c0#diff-e26d3be456d1f6213df7d90212089743R165), how it's possible what `fn` is undefined?
+I inspect this situation long time:
+- If you try to pass all tests without this change - failure any time
+- If you try to pass only tests for InjectorClient without this change - failure some time
+- If you try to pass only failing test without this change - all works. WTF?!
+
+It may be that we need help of core node developers here. Unfortunately I can't reproduce this problem in isolated sample.
+",3y3,bajtos
+560,2015-04-21 10:52:16,"@bajtos , I'm really sorry for my English =) You feel free to correct me any time.
+",3y3,bajtos
+553,2015-03-04 09:39:12,"Thank you for the pull request, this is a good thing to have in Node Inspector. I am afraid both me and @3y3 are busy working on other things and don't have time to review this now :( There is also a pending pull request #492 to update the front-end, I am afraid it will invalidate your work made here.
+
+I am proposing to wait until #492 is landed and then kindly ask you to rework your pull request on top of that. @3y3 thoughts?
+
+I know this is not great for you @marcominetti, I am sorry.
+",bajtos,marcominetti
+553,2015-03-04 19:09:20,"Hi @bajtos , sounds perfect. I keep my fork continously updated with the master branch here so reworking my pr is not a problem (it's an opportunity to refactor the pr ;) and merge directly on top of the @3y3 pr).
+
+Out of scope: I've planned to implement support for cluster too and I've seen you did the same, are you still on that? (I've seen some commits based on iframes, in terms of UX I'd try to hack the protocol/frontend internals).
+",marcominetti,bajtos
+551,2015-02-11 23:51:16,"@jldec Thank you for the new pull request. Could you please also include a short note in the README explaining the situation? ""No"" is an acceptable answer ;-)
+",bajtos,jldec
+551,2015-02-12 01:01:23,"@bajtos 
+README note added. hth
+
+(b.t.w. i think the Travis CI failure is the same timeout you tried to mitigate before)
+",jldec,bajtos
+550,2015-02-05 09:03:08,"Hi @jldec, thank you for the pull request. 
+
+In https://github.com/node-inspector/node-inspector/issues/498#issuecomment-72928660, you write:
+
+> The issue in my case came from giant glob results (cost ~40s) and subseqent filtering (cost ~2 min!) on the backend.
+
+And here you say
+
+> delays on deep symlinked projects are now acceptable (~5s instead of ~5min).
+
+I'd like to understand better how did we arrive at 5 seconds. Is it because you run node-debug with symlinks disabled? Or is it because the new glob version with `**/**/*` is faster than the old glob version following all symlinks?
+
+What is the breakdown of glob + filtering times in your project with this patch applied and when symlinks are and are not followed?
+
+In general, I try to make Node Inspector work out of the box for as many projects as possible and keep the number of configuration options low. If we can get a similar improvement by fixing the filtering algorithm instead of disabling symlink follows, then I would much more prefer that solution.
+
+---
+
+Another important fact related to symlinks and `findAllApplicationScripts`: The only reason why we try to find all scripts at the beginning is to allow NI users to set breakpoints in files that are not loaded in V8. However, when you have symlinks in your project, these breakpoints don't work anyway, because UI shows a symlink while V8 uses the resolved real path - see #370.
+
+If you don't need to set breakpoints in files that are not loaded in V8 yet, then you can run Node Inspector with `--no-preload`: it disables `findAllApplicationScripts` and thus the startup should be pretty quick.
+",bajtos,jldec
+550,2015-02-05 13:35:25,"Hi @bajtos 
+simply using the latest 'glob' module stops symlink exploration and there is no way to re-enable it. This is probably fine for most users of NI. With just that change i am able to start NI in under a second on my project, but i can't see files in directories below modules which are local via `npm link`. 
+
+the `/**/**/*` pattern is a slightly hackish solution which tells glob to search one extra level of directories (even inside symlinked modules) but it does slow things down. Most NI users won't need it, so i thought it would be best to make it optional with the `-s` option.
+
+this PR also adds a little debug instrumentation under the name `node-inspector:ScriptFileStorage`. Here is a example of the output without `-s`.
+
+
+
+The glob took ~614ms and the filter ~135ms
+
+With `-s` the output looks like this:
+
+
+
+In this case the glob took ~4s and the filter 279ms
+",jldec,bajtos
+550,2015-02-06 08:49:33,"@jldec I am still not convinced that the root cause is in symlinks. In my opinion, the problem is in the high number of files in node_modules dependencies.
+
+What happens if you `npm pack && npm install` your dependencies instead of `npm link`? Will this pull request fix the startup time for you? My guess is that it won't.
+
+I would like to improve the current `--preload`/`--no-preload` config option to take a glob pattern specifying which files to preload. This pattern can be `!node_modules/**/**/*` by default.
+
+> So until #370 is fixed, i would suggest simply updating NI to use the latest glob and leave it at that. This would at least protect against the circular symlink trap.
+
+Circular symlink trap - is that the reason why the current version of `glob` takes so long in your project?
+
+Let's implement your proposal then - update to the latest glob and stop following symlinks. While I am concerned that such solution may bite us in the future, it is improving the situation in the short term, thus it's worth the risk.
+
+Just make sure the commit message clearly describes the breaking change it introduces.
+",bajtos,jldec
+550,2015-02-06 13:54:26,"@bajtos - Yes, circular symlinks was the main cause of the long delays in my case.
+
+I agree that given #370, bumping the glob version which disables symlink following is the right solution for now. I will post a separate PR for that.
+
+Hopefully having an up-to-date glob version is another small incentive for some NI user to contribute fixes (a) to enable glob to return realpaths  and (b) to enable symlink following in glob (with cycle detection)
+
+I also like your suggestion of using a glob pattern for the NI preload option
+",jldec,bajtos
+546,2015-03-04 23:01:01,"@bajtos I'm assuming you mean duplicate of #523?
+",jimthedev,bajtos
+546,2015-03-06 10:00:54,"@jimthedev Of course, thank you for correcting me!
+",bajtos,jimthedev
+544,2015-03-16 14:28:38,"@3y3, @bajtos, I can confirm this issue exists using 0.9.2.  Do you want to reopen this issue, or should I create a new issue?
+
+I am currently using node v0.10.32.  I created test.js and test2.js as below for an easier test:
+
+## test.js
+
+
+
+## test2.js
+
+
+
+Then I run `node-debug test.js --hidden 'test2'`.  The debugger loads with script execution paused, I switch to test2.js, add a breakpoint on the console.log line, resume execution, and the debugger breaks on my breakpoint in test2.js, even though that file should be ignored because of `--hidden`.
+",zacronos,bajtos
+544,2015-03-16 15:40:06,"@bajtos, I see the same behavior on 0.7.4 of node-inspector.
+
+I am using node v0.10.32 on OS X 10.9.5 with Chrome 41.0.2272.89 (64-bit).  If there is any other information you'd like or scenarios you'd like me to test, let me know.
+
+Thanks for the fast response!
+",zacronos,bajtos
+541,2015-03-04 09:34:15,"@alarre could you please submit a pull request fixing the issue?
+",bajtos,alarre
+535,2015-03-05 02:51:47,"@bajtos Yes i am still seeing this issue.
+I have tried with node versions: 0.11.13, 0.11.16 and 0.12
+
+$ node-debug --version
+Node Inspector v0.9.1
+
+$ node --version
+v0.11.16
+
+Javascript console output:
+Your Node version (undefined) has a partial support of profiler.
+The stack frames tree doesn't show all stack frames due to low sampling rate.
+The profiling data is incomplete and may show misleading results.
+Update Node to 0.11.13 or newer to get full support.
+",Zysen,bajtos
+535,2015-03-05 05:10:35,"@bajtos , this issue can be reproduced on machines with low and medium performance.
+This is inconsistency of debugger's connection states.
+
+If anybody wants to fix this issue, look at `DebuggerClient.isConnected` option.
+",3y3,bajtos
+534,2015-01-27 15:10:06,"Ok. We selected first way.
+
+@ELLIOTTCABLE , @oliverzy , @iliakan , are you want to fix this or this is job for me?
+",3y3,ELLIOTTCABLE
+534,2015-04-03 20:58:11,"@dpwolfe if your statement is accurate then it should be added to README.md
+
+@bajtos can you weigh in?
+",mattkime,bajtos
+523,2015-02-20 11:28:20,"thanks @bajtos, works like a charm until everything is fixed
+",colthreepv,bajtos
+521,2015-01-12 19:11:06,"@bajtos , I prefer to also add `.gitattributes` file to project with `* text eol=lf`
+",3y3,bajtos
+515,2015-01-06 05:40:04,"@bajtos , please join to discussion.
+
+@auchenberg , thanks for contribution. This is interesting feature.
+
+>  Is there any reason why 127.0.0.1/0.0.0.0 currently is used?
+
+From time to time I know why we use `0.0.0.0` in `NODE_INSPECTOR_MODE` and `127.0.0.1` in `NODE_DEBUG_MODE`, but unfortunately now I can't remember this.
+
+> I had to change the default web-host to the local IP instead of 127.0.0.1, as the IP is needed in order to enable other clients to connect.
+
+Can you explain me more verbose this part. At first glance new IP detecting opens weak security risk. I prefer to have minimal network area in default configuration, but it's discussable.
+",3y3,auchenberg
+515,2015-01-06 16:19:21,"Good points @bajtos. 
+
+My intention is to enable the MDNS broadcasting out of the box, in order to minimize the workflow, but I understand the added security risk of binding to a addressable IP. 
+
+Alternatively we could add a command-line flag that would enable MDNS broadcasting, the user could flip when running `node-debug` and `node-inspector`? That way it's explicit. 
+
+Flag enabled: `web-host` is set to the local addressable IP, and MDNS broadcasting is enabled
+",auchenberg,bajtos
+514,2015-01-06 05:47:16,"@DeTeam , thanks for contribution. 
+LGTM.
+I'll merge this pr in my next merge phase.
+",3y3,DeTeam
+513,2015-01-13 19:15:49,"What you said was correct, @bajtos - I was trying to access it over an SSH tunnel, and I think that was the URL. 
+
+I actually eventually came to a way to get in without using an SSH tunnel, so I think I could close this issue now. I had to forward some ports on each level and I forgot to do it on one of them, so I was unsure of why the connection was failing, seemingly at random.
+
+Sorry to open an issue over something silly!
+",seiyria,bajtos
+509,2015-01-01 00:30:43,"@bajtos , I added a pr that fixes this bug (#512)
+",3y3,bajtos
+506,2015-01-06 15:51:51,"@3y3 Yes I'm proposing to have a ""generic"" DevTool app, that is able to work with multiple targets, ex. chrome, firefox, node-inspector, PonyDebugger, etc.  The point here is that each ""back-end provider"" shouldn't include their own front-end, but focus on providing a backend that is compliant to the Chrome Remote Debugging protocol.
+
+What are the special needs of the node-inspector front-end? It's my understanding that you are using a pull of DevTools from blink, where you are overriding a few configurations, like toggling certain tabs. We should be able to find a way to avoid these overrides.
+
+@bajtos That's a good point. With the latest pull of DevTools from blink master, I'm seeing a few ""unsupported errors"" exceptions being thrown, but that should be solvable too.
+",auchenberg,bajtos
+506,2015-01-13 08:41:08,"@3y3 I think you misunderstood the intent of this issue. AFAIU, @auchenberg wants to allow both usages: to run the UI shipped inside Node Inspector, but also to use chrome-devtools-app as the front-end. Nobody is asking to remove the front-end folder from Node Inspector, at least not yet.
+",bajtos,auchenberg
+506,2015-01-13 14:27:43,"@bajtos , on my question
+
+> Are you propose to completely deprecate frontend folder in Node Inspector project?
+
+response
+
+> @3y3 Yes I'm proposing to have a ""generic"" DevTool app, that is able to work with multiple targets, ex. chrome, firefox, node-inspector, PonyDebugger, etc. The point here is that each ""back-end provider"" shouldn't include their own front-end, but focus on providing a backend that is compliant to the Chrome Remote Debugging protocol.
+
+This misinformed me.
+
+So, looking on some parts of `chrome-devtools-app` I think we can be fully compatible, but it needs to introduce extending API. @auchenberg please look at #492 in folder `front-end-node`. Here are some changes that we need to dinamically inject in `chrome-devtools-app` to be compatible.
+",3y3,bajtos
+506,2015-01-13 14:27:43,"@bajtos , on my question
+
+> Are you propose to completely deprecate frontend folder in Node Inspector project?
+
+response
+
+> @3y3 Yes I'm proposing to have a ""generic"" DevTool app, that is able to work with multiple targets, ex. chrome, firefox, node-inspector, PonyDebugger, etc. The point here is that each ""back-end provider"" shouldn't include their own front-end, but focus on providing a backend that is compliant to the Chrome Remote Debugging protocol.
+
+This misinformed me.
+
+So, looking on some parts of `chrome-devtools-app` I think we can be fully compatible, but it needs to introduce extending API. @auchenberg please look at #492 in folder `front-end-node`. Here are some changes that we need to dinamically inject in `chrome-devtools-app` to be compatible.
+",3y3,auchenberg
+506,2015-01-14 16:05:30,"Ah, it seems I misunderstood @auchenberg intent. @3y3 you were right in your previous [comment](#issuecomment-69647731). I agree with you that the time to remove front-end from Node Inspector has not come yet.
+
+However, until that time comes, I am personally ok with landing small tweaks that will allow chrome-devtools-app to debug Node apps via Node Inspector backend. That way @auchenberg can explore the concept and refine the implementation, so that when we decide to make the switch, the new solution will be already battle-tested.
+",bajtos,auchenberg
+502,2015-07-18 10:16:47,":+1: I'm using `bunyan`+`chalk` for nice console colored output, and log messages are unfortunately barely readable with node-inspector. I do agree with @bajtos, Striping ANSI control codes would be at least a good start (eg. drop coloring output).
+",mgcrea,bajtos
+495,2014-12-15 13:58:09,"@bajtos , I ignore all current fixes in frontend. You are free to land it any time.
+",3y3,bajtos
+492,2015-03-05 13:14:31,"Rebased to master.
+
+@jakub-g , can you please look at this pr. There exists bug for you.
+Now our inspector link is `http://examlpe.com:8080/debug?port=5858&ws=example.com:8080`
+This link doesn't work on Windows with `node-debug` command for reason of unescaped `&`.
+Original issue in `opener` https://github.com/domenic/opener/issues/9 (It will be nice, if you fix also this issue)
+
+But current issue for you - unhandled error event:
+
+
+
+@bajtos , now I will work on `saveLiveEdit`. Will be nice if you provide me some failure test.
+(But in current time I can live without it)
+
+@marcominetti, @auchenberg , I see that you already rebased to this pr. Any thoughts about `saveLiveEdit`?
+",3y3,bajtos
+492,2015-03-19 20:50:33,"Ok. I finish inspection of live edit. There is no new problems with this feature, i.e. it works for me on some scripts. But for some other (for example `periodicConsoleLog`) it doesn't work correctly (I can reproduce this behavior on 0.7.4), so this problem is out of scope of this pr (and maybe out of scope of node-inspector).
+
+So, I rebased pr to master. I also added fix for `repeatMessageCounter`.
+
+@bajtos , please review.
+
+> I started working on cleaning the UI from useless and not-working stuff
+
+@marcominetti , you can prepare this as next pr after frontend will be merged.
+So I think that `frontend` is ready to merge and we'll do it soon.
+",3y3,bajtos
+492,2015-03-19 20:50:33,"Ok. I finish inspection of live edit. There is no new problems with this feature, i.e. it works for me on some scripts. But for some other (for example `periodicConsoleLog`) it doesn't work correctly (I can reproduce this behavior on 0.7.4), so this problem is out of scope of this pr (and maybe out of scope of node-inspector).
+
+So, I rebased pr to master. I also added fix for `repeatMessageCounter`.
+
+@bajtos , please review.
+
+> I started working on cleaning the UI from useless and not-working stuff
+
+@marcominetti , you can prepare this as next pr after frontend will be merged.
+So I think that `frontend` is ready to merge and we'll do it soon.
+",3y3,marcominetti
+492,2015-03-24 12:45:51,"@jakub-g , good news thank you!
+",3y3,jakub-g
+492,2015-04-07 15:50:40,"hi @3y3, any news on latest feedback from @bajtos? 
+",marcominetti,bajtos
+492,2015-04-12 21:29:16,"@bajtos , so I rebased lot of commits for
+
+> This is very weird. extedModulesBy is reading ./front-end/inspector.json and here you are overwriting that file.
+
+All other changes I maked in fixups:
+
+> 1. Same messages are no longer grouped together. Is this because the front-end performs grouping now?
+> 2. clearMessages is no longer cleaning the cache. I am wondering why we cannot clear the cache? Is there a way how to access a cleared message from the UI? My concern is that the cache can grow too much during a longer debugging session.
+
+The second case was a bug - fixed in 71cb859
+
+Last two fixups is for
+
+> Is it worth adding a new method for this? IMO it's ok to define these overrides directly in the constructor.
+
+I'll squash fixups after review (or, if you want, before it).
+",3y3,bajtos
+492,2015-04-14 07:13:57,"@bajtos , ok I'll fix test for console API and merge this pr.
+",3y3,bajtos
+492,2015-04-17 11:42:09,"@marcominetti , I merged this pr. You are free to open your prs now! Please start from smaller =)
+",3y3,marcominetti
+492,2015-04-17 11:51:47,"@marcominetti , you can try next:
+If `node-inspector/node-inspector` is your `upstream` remote
+
+
+
+There you receive a list of your commits ahead of master. Comment all that is not a part of your changes
+
+
+
+So, you are synced with my outdated `frontend` and there can be some small conflicts during rebase that you'll need to fix manually.
+",3y3,marcominetti
+490,2014-12-11 12:04:38,"@bajtos , all fixed.
+",3y3,bajtos
+485,2014-12-08 12:46:23,"@bajtos , Hm... Releasing fails for me on `git-changelog`
+
+
+
+How I can see, the script don't create `/tmp/changelog`
+
+I use `tools/release.sh 0.8.1` from windows git-bash
+",3y3,bajtos
+485,2014-12-08 14:01:37,"@bajtos , please make this release. I see in `git-changelog` also `/dev/null`.. I'm not ready to replace it now =)
+",3y3,bajtos
+478,2014-12-01 10:07:02,"@coodoo , please open Dev Tools in `node-inspector` frontend and check any errors in console.
+
+If console don't contains errors, we will switch to next step.
+",3y3,coodoo
+475,2014-12-01 15:21:14,"@bajtos , fixed. I'm ready to merging it and releasing.
+",3y3,bajtos
+461,2014-12-20 13:03:35,"@pflannery , this is a completely different issue, can you post small example of code to reproduce this?
+",3y3,pflannery
+461,2014-12-29 22:09:51,"@sbrinkmann , @thedug , @dotnetCarpenter , @ekmartin , @acarl , @jkmuka , @Malet , @line23 , @ASh-Yezz , @pflannery please subscribe on [related node issue](https://github.com/joyent/node/issues/8948) to push up his priority.
+",3y3,pflannery
+449,2014-09-29 20:29:25,"@bajtos , unfortunately this is a timing issue - I restarted test and now it passed.
+I'm very interesting why 5 seconds are not enough to pass this test...
+What application does after printing `debugger listening on port ...` and before responding on `evaluate 'process.version'` event for 5 seconds and above?!
+",3y3,bajtos
+447,2014-09-29 11:34:38,"Hi @MadLittleMods, I am glad you figured it out yourself. Would you mind submitting a patch to update the documentation in README.md and describe how to debug `gulp` builds?
+
+> I misunderstood Node Inspector's capabilities and thought `console.log` calls showed up in the node-inspector console. I now now that it is only a REPL client and doesn't output the CMD prints.
+
+Redirecting `console.log` messages to the GUI is actually in our backlog - see #219.
+",bajtos,MadLittleMods
+447,2014-09-29 15:39:11,"Made a [pull request](https://github.com/node-inspector/node-inspector/pull/448) to add the documentation for Gulp. @bajtos 
+
+I can't wait for the `console.log` messages to be added! I would be highly interested in contributing to get this working as well but seeing that you have not done it yet, I am not sure on the complexity (`STDOUT` and `STDERR`, :P) - Edit: It looks like the pull you linked covers it already.
+",MadLittleMods,bajtos
+446,2015-01-04 03:01:07,"@bajtos ,Hi , I can not debug too, It just said: `$ debugger listening on port 5858`, but actually nothing happened and the chrome not opened when I run `$ coffee --nodejs --debug app.coffee`
+
+
+
+I use Node Inspector v0.8.1, Nodejs v0.10.35, CoffeeScript version 1.8.0.
+",TangMonk,bajtos
+446,2015-01-05 11:20:07,"@bajtos thanks ! :+1: 
+",TangMonk,bajtos
+446,2015-03-15 19:08:08,"@bajtos thanks a lot!
+",webzepter,bajtos
+445,2014-09-24 08:27:52,"@bajtos you were right, the problem is gone as of node v0.11.13.
+
+Do you think we should close this bug or keep it open for reference until 0.11 becomes stable?
+",jakub-g,bajtos
+441,2014-09-18 16:42:31,"I’ll incorporate the requested changes and recommit.  I have one day every two weeks to work on stuff like this.  Tomorrow is the day.
+
+On Sep 18, 2014, at 9:40 AM, Miroslav Bajtoš notifications@github.com wrote:
+
+> @bajtos , please confirm that you are ready to approve https support
+> 
+> Sure, no problem with that. It's probably better to wait with landing this PR until the config-changes are done (#436).
+> 
+> —
+> Reply to this email directly or view it on GitHub.
+",aikimcr,bajtos
+436,2014-09-05 13:28:37,"@bajtos ,
+
+> `node-inspector` accepts the same options as node-debug now, even though some of them are used by node-debug only.
+
+I can solve this by using [Config.filterNodeDebugOptions](https://github.com/3y3/node-inspector/blob/config/lib/config.js#L188-L201), but I specially allow to node-inspector to see full configuration, bacause now I work on GUI configuration system (I'll add new tab to Settings Screen) that needs to know about all options. I'll open discussion pr about GUI configuration on weekend with start small example.
+
+> Before this change, node-debug added some extra text to the help message (The [script] argument is resolved relative to the current working directory (etc.)). It is important to preserve it.
+
+It is preserved. Help information [is different for node-debug and node-inspector](https://github.com/3y3/node-inspector/blob/config/lib/config.js#L264-L276)
+
+I will try to divide it on parts on weekend, but I'm not sure what it's possible:
+
+Main target of commit ""Collect configuration in one place"", this place is `config.js`, therefore I removed configuration part from `node-debug`. Sinchronously I need to add this part to `config` and handle this options. [I need to collect script options for `node-debug` in one place](https://github.com/3y3/node-inspector/blob/config/bin/node-debug.js#L72), for this reason I add [script](https://github.com/3y3/node-inspector/blob/config/lib/config.js#L109-L119) option to configuration. Also for reason ""I need handle optins of `node-debug`"" I uses `yargs` in `config` and check the defaults for `node-debug`.
+
+Only `new help` can be excluded.
+
+I can divide it only on no working but logically isolated parts.
+",3y3,bajtos
+436,2014-09-16 13:39:54,"@bajtos , it's ready to review
+",3y3,bajtos
+436,2014-09-22 10:11:20,"@bajtos , it's ready to review.
+",3y3,bajtos
+436,2014-09-22 16:45:29,"> @bajtos , it's ready to review.
+
+What have you changed since the last review? I can't afford to review the whole patch after every change. In the future, could you please fix things in new commits and defer rebase/squash until the very end?
+",bajtos,bajtos
+432,2014-08-26 18:35:26,"Damage! I used 4pt line instead of 8pt.
+@dannycoates , @bajtos, please look that is best:
+![favicon](https://cloud.githubusercontent.com/assets/3931155/4049660/9f3795f4-2d4f-11e4-888d-a02ec328160d.png)
+
+![](https://cloud.githubusercontent.com/assets/3931155/4044569/e0b3d3e0-2d21-11e4-99fd-e0ff631934f7.png)
+",3y3,dannycoates
+432,2014-08-28 09:42:07,"@dannycoates , I also vote for version with thicker line. Sorry to trouble you, but could you switch the logo again.
+",3y3,dannycoates
+424,2014-08-22 19:44:39,"Thanks for the explanation, @bajtos. If I have time I may take a look at the code and see if this is something I can do as a pull request.
+",jamesmortensen,bajtos
+416,2014-12-23 09:40:32,"@bajtos 
+
+> > We need a sample program to reproduce the issue on our machine.
+
+Any program does
+
+> > Also try a recent Node v0.11 version and/or io.js v0.12 from github. It is very likely that the problem is V8-related and that it has been fixed in newer versions of V8.
+
+It worked in previous node-inspector versions, so it seems not V8-related?
+",cristiano-belloni,bajtos
+414,2014-08-18 20:26:27,"@Fodi69 , thanks for commit, it is reasonable. I'll merge at soon.
+",3y3,Fodi69
+398,2014-06-26 18:35:26,"@dannycoates , thank you!
+",3y3,dannycoates
+398,2014-06-27 06:07:56,"@bajtos , updating start delay for child processes to 500 makes tests more stable.
+",3y3,bajtos
+398,2014-06-27 08:37:21,"@bajtos , Ok. Can I notify watchers of #126 for testing full stack (Injector + Profiler + Heap Profiler) after I'll finish it, but before your review? (Is this good idea?)
+",3y3,bajtos
+398,2014-06-30 07:48:34,"Ok. My progress for this weekend:
+1. Injector API is stable, it works fine in Profiler API pr
+2. Profiler API pr is also ready to a review
+3. HeapProfiler API works fine, but here is not implemented `getObjectByHeapObjectId`.
+(This command works as `lookup` in context of heap snapshot).
+HeapProfiler can work without this command, but I prefer to implement it.
+Simplest implementation of this command can crash node process if HeapObjectId is link to internal v8 structure, therefor I need to inspect all valid value types that can be returned.
+After this pr will be done.
+4. @bajtos , if you understand that is `objectGroup` in terminology of V8, can you explain me? 
+If no - I need to start big research for this issue. 
+Next version of `v8-debug` will contain `mirror` method. It's a very simple way to get mirror object (70% of Console API will be deleted).
+In other words I solve one problem of Console pr, but get other one - `releaseObject` and `releaseObjectGroup` needs to be implemented, because now it needs to store objects in app scope instead of inspector scope.
+5. `v8-debug` works fine when app is paused, and have very simple API. It allow to resolve #396, #341, #340, (Maybe) #327, #222
+",3y3,bajtos
+398,2014-07-09 16:00:25,"> 1. @bajtos , if you understand that is objectGroup in terminology of V8, can you explain me? 
+>    If no - I need to start big research for this issue. 
+>    Next version of v8-debug will contain mirror method. It's a very simple way to get mirror object (70% of Console API will be deleted).
+
+This is my understanding: to work around the mirror cache being cleared every time the debugger resumes execution, the front-end is manually keeping track of which mirror objects are used by the front-end. When you dump DevTools protocol communication in Chrome, you'll see messages like `releaseObjectGroup` - that's a signal to the back-end to release all mirror objects associated with the given object group. Requests like `evaluate` and `evaluateOnCallFrame` include an option `objectGroup` to indicate which object group should be used to store the mirror objects from the response. The object group is a sort of an instance of mirror cache, except there can be multiple instances and their life-time is managed by front-end.
+
+There is also `releaseObject` method that can be used to release an individual object that is not associated with any object group.
+
+Does it makes sense? Let me know if you have more questions.
+",bajtos,bajtos
+398,2014-07-13 13:19:53,"> This is my understanding: to work around the mirror cache being cleared every time the debugger resumes execution, the front-end is manually keeping track of which mirror objects are used by the front-end. When you dump DevTools protocol communication in Chrome, you'll see messages like releaseObjectGroup - that's a signal to the back-end to release all mirror objects associated with the given object group. Requests like evaluate and evaluateOnCallFrame include an option objectGroup to indicate which object group should be used to store the mirror objects from the response. The object group is a sort of an instance of mirror cache, except there can be multiple instances and their life-time is managed by front-end.
+
+@bajtos , thanks for response, I also inspected this question and now I have a crazy idea to add to the project `InjectedScript` from webkit. But this is very complex issue, it deprecate the big part of code of current node-inspector `DebuggerClient` and `DebuggerAgent`. I'll open the new issue for this discussion. In any cases, after this commit, Profler API and HEAPProfiler API will ready to review.
+",3y3,bajtos
+395,2014-09-18 08:27:33,"@bajtos Yes, with 1x1 picture node-inspector works well.
+
+This means, that the problem is in large Buffer variable. It hangs even when I am not trying to inspect the Buffer's internals, but when I only have this Buffer in the current scope. Is it the expected behaviour of node-inspector?
+",strelga,bajtos
+385,2014-06-16 17:35:34,"@bajtos Thanks for the pointer!
+
+I'm not familiar with the project but I'll take a look once I finish reading the wiki pages and have some more free time.
+",UltCombo,bajtos
+385,2014-06-20 00:31:07,"My thoughts:
+- Should not give much thought about inconsistent line separators, they will have to be normalized as it is impossible to map each line separator between old source and new source code, seeing as line separators can be inserted and deleted via node inspector editor.
+- When the line separator style can't be determined (e.g. no line separators in old content or mixed line separators), Could default to [`os.EOL`](http://nodejs.org/api/os.html#os_os_eol). Another (slightly crazy) idea would be to use an [EditorConfig](http://editorconfig.org/) file's `end_of_line` setting, though supporting only a single property of EditorConfig seems rather unorthodox, and I wouldn't consider node inspector as an actual code editor. It would be more plausible to have a RC option which overrides the auto-detection.
+- Side-effects of taking an approach similar to @3y3's: I can't think of any possible side-effect seeing as literal line separators cannot appear inside string/regex literals (and [CR/LF/CRLF are normalized to LF in ES6 template strings](https://github.com/rwaldron/tc39-notes/blob/d5ac441f29812ee269c173c277ea34be88efa02a/es6/2013-09/sept-17.md#58-line-terminators-in-template-strings-should-they-be-normalized)). Correct me if I'm wrong.
+
+I would opt to not overcomplicate this, @3y3's solution seems sufficiently good for most use cases. Any thoughts, @bajtos?
+",UltCombo,bajtos
+385,2014-12-18 17:15:53,"@bajtos I'm on a late deadline working nearly 24/7 atm. Looks like I won't have time to contribute on GitHub until finishing this project.
+",UltCombo,bajtos
+377,2014-05-22 12:40:02,"Hi @apla, thank you for the pull request.
+
+I run your patch on my machine and it fixes one of the problems in Safari. However, Node Inspector still does not work, I am getting the following errors in the console:
+
+
+
+What version of Safari do you have? Do you have any plugins or extensions that can explain this difference?
+",bajtos,apla
+368,2014-05-22 11:41:47,"@bajtos , all fixed.
+",3y3,bajtos
+351,2014-04-19 14:16:23,"@bajtos , please see the build history on travis for this PR. It's very unstable.
+",3y3,bajtos
+351,2014-04-22 12:08:23,"> @bajtos , please see the build history on travis for this PR. It's very unstable.
+
+It takes quite long time to download the nodewebkit binary, that's probably the reason why the build sometimes fails.
+
+Few more thoughts:
+1. It seems the debugged process is not correctly terminated when node-webkit executable is not found. When I run node-debug multiple times, I started to get `Failed to open socket on port 5858, waiting 1000 ms before retrying`, which means there was another node process already listening on 5858.
+2. The path to node-webkit executable is wrong. This is what works for me: 
+   
+   
+3. Command-line option `-nw` is not user friendly. node-debug should either:
+   1. Always use node webkit when it is present. Use `open` when it was not found and print a warning, so that user knows there is a problem.
+   2. Or provide a configuration file where the user can set what browser he wants to use (`open`, `nw`, path-to-Opera, etc.)
+4. Since the nodewebkit is such a big module, it seems like a bad idea to make it a required dependency. Perhaps we can check if there is `nodewebkit` or `nw` executable available and print instructions how to install node webkit if it is not?
+
+What's your opinion? What looks like the best solution to _you_?
+",bajtos,bajtos
+351,2014-04-23 10:26:03,"@bajtos , please see this implementation.
+I deleted `nodewebkit` from dependencies and added dialog to install it to default directory.
+",3y3,bajtos
+351,2014-05-22 14:13:19,"@bajtos , please see current realisation.
+I don't include `nodewebkit` as dependence, instead of this I added `npm` dependence.
+If user want it can install `nodewebkit` with help of node-inspector.
+If this is good way, I will continue to work on it.
+",3y3,bajtos
+349,2014-06-16 15:46:24,"@3y3 @bajtos Thanks for bringing this to mind to me gentleman.  Looks like it is related to software on my machine (x3watch).  
+",benawabe896,bajtos
+347,2014-04-11 23:27:47,"Hi @bajtos 
+node-inspector@0.7.3
+Thanks
+",veyselsahin,bajtos
+346,2014-04-09 18:22:54,"@bajtos , also there is third way - integrate node-inspector with node-webkit ;-)
+",3y3,bajtos
+344,2014-08-09 07:10:15,"@bajtos It would be great if you had some time to review my comments in https://github.com/joyent/node/issues/7439 about this problem. Thank you!
+",misterdjules,bajtos
+344,2014-08-09 18:25:33,"> @bajtos It would be great if you had some time to review my comments in
+> joyent/node#7439 about this problem.
+
+I'm on vacation now, I will review your comments early next week. Thank you
+for looking into this issue!
+",bajtos,bajtos
+344,2014-08-10 06:31:41,"@bajtos Sorry for that and enjoy your vacation :) There's no hurry, I just wanted to make sure that the result of my investigation don't get lost in another issue. Thank you!
+",misterdjules,bajtos
+342,2014-04-08 07:22:04,"@bajtos , ready to merge.
+",3y3,bajtos
+339,2014-04-02 18:38:51,"@bajtos Thanks. I'm updating right now after finding the cause of the issue: https://github.com/npm/npm/issues/4587#issuecomment-39183795
+
+I'll close this issue in a few moments, once I have confirmed that updating `node >= v.0.10.16` & `npm > v1.3.6` fixes the problem.
+",rickhuizinga,bajtos
+338,2014-04-02 14:03:33,"@bajtos , Keep in mind what v8-profiler has js API and PR needs only .cc files from him.
+",3y3,bajtos
+338,2014-04-02 14:12:17,"@bajtos , also is important:
+V8 less that v3.22 has uncompatible API with node-inspector front-end. This stops me from support NodeJS v0.10
+",3y3,bajtos
+338,2014-10-16 12:33:28,"@bajtos , ready to review
+",3y3,bajtos
+337,2014-06-16 10:24:58,"@bajtos , ready to review.
+",3y3,bajtos
+337,2014-06-17 09:51:02,"Ok... Rebased.
+@bajtos , I restarted Travis testing 4 times and now it pass - this discouraging. (previous commit I restarted over 20 times)
+This is ready.
+",3y3,bajtos
+337,2014-07-19 21:07:41,"@bajtos , the problem is in node version. I need to fix v8-profiler for node 0.10.*
+",3y3,bajtos
+337,2014-07-21 00:16:26,"@bajtos , all rebased. Fixed error message. Some small cleanups. Ready to next step of review.
+
+In any cases full supporting of 0.10.\* is an issue of v8-profiler, but not of this commit. Now I don't know can I fix this problem or not. I prefer to find answer in future if it is possible, because 0.10.\* is a great part of node community and also because the next version of node debugger will be moved to another isolate, and this issue maybe will block profiling in 0.13.*. 
+I tried to manually switch to related Isolate, but it does not give me positive result. After some other small researches I'll start to search more experienced v8 developer for solving this issue or for closing it as unresolved.
+",3y3,bajtos
+337,2014-08-12 18:07:19,"@bajtos ,
+I inspected v0.10 issue and can concluse what it's a v8 or node specific:
+
+This is a simple test. Here I start profiling, do something in timeout loop, stop profiling and print resulted profiling tree. I don't use debug (other isolate) here, but tree is different for v0.11, v0.10 and **v0.10 with different start parameters (SAMPLING_RATE=10, REPEAT_COUNT=100)**
+
+#### TEST
+
+
+
+#### v0.10 OUTPUT
+
+
+
+#### v0.10 OUTPUT (WITH SAMPLING_RATE=10, REPEAT_COUNT=100)
+
+
+
+#### v0.11 OUTPUT
+
+
+
+I think we need to add something like this to README:
+
+---
+
+## Profiling
+
+Node Inspector support profiling for node version at least 0.10.
+Be careful, node v0.10.\* can miss part of profiling information. See (issue with description here).
+
+---
+
+Also we can call node team to help us describe this problem.
+",3y3,bajtos
+337,2014-09-05 07:53:05,"@bajtos, which is a correct style for single line `if` statement in node-inspector:
+
+
+
+
+
+
+
+?
+",3y3,bajtos
+336,2014-04-07 14:13:41,"@bajtos , I add fixes. Please see [BreakEventHandler L52](https://github.com/3y3/node-inspector/blob/94d97c4c9b44aa7993deec7172416f5d9ef98f5c/lib/BreakEventHandler.js#L52)
+I think this part is a big problem, I'll prefer to create something like this:
+
+
+",3y3,bajtos
+336,2014-04-16 14:14:44,"@bajtos , Is there a progress in discussion with Bradley Meck?
+",3y3,bajtos
+336,2014-04-21 07:49:08,"@bajtos , all was fixed. We wait for 7473 or continue this review without node changes?
+I added small changes in `BreakEventHandler` part - now I do not see a way to get the indeterminate state.
+",3y3,bajtos
+336,2014-04-22 13:50:24,"> @bajtos , all was fixed. We wait for 7473 or continue this review without node changes?
+
+I'd rather not wait for Node core changes, as it may take long time until they are landed.
+",bajtos,bajtos
+336,2014-04-22 22:09:13,"@bajtos , all fixed and ready to next round
+",3y3,bajtos
+335,2014-04-07 21:36:45,"I think I'm getting this same error on Node 0.8 on OSX 10.9.  I tried adding a console log but I'm having issues with console (unrelated to this issue).  So can someone else add this log and get some info for @bajtos ?
+",dmgreene,bajtos
+332,2014-03-24 13:00:42,"Hi @bajtos, thanks for the quick heads up. I looked up my npm version and it was at 1.2.18 on ubuntu (no more recent version provided). After upgrading it using npm install -g npm and removing the ubuntu provided one I didn't get this issue anymore. So it seemed to have been an npm issue.
+
+After updating npm I was able to install orion with any manual fiddling or other problems. Closing the issue.
+",bbroeksema,bajtos
+331,2014-03-21 16:44:51,"@bajtos , updated. Anything else?
+",3y3,bajtos
+330,2014-03-20 19:30:25,"Hi @dininski, thank you for the bug report and the pull request.
+
+The patch is going in the right direction, please see my line comments above for issues to fix.
+",bajtos,dininski
+328,2014-03-17 09:24:59,"> For now, you can debug your ES6 application by starting all components manually:
+
+@bajtos , And frontend will parse scripts?
+",3y3,bajtos
+328,2014-03-17 09:38:34,"> > For now, you can debug your ES6 application by starting all components manually:
+> 
+> @bajtos , And frontend will parse scripts?
+
+It looks so. At least the `let` keyword works fine in the DevTools in the latest stable version of the Chrome browser.
+
+> `node-debug test.js --harmony`
+> The same construction is not working?
+
+No, it does not work. Options after the script are passed as script arguments, not node arguments.
+
+Your code is will execute `node --debug=5858 --debug-brk test.js --harmony`.
+
+See the implementation of [node-debug](https://github.com/node-inspector/node-inspector/blob/bbf989ca5cf9bc8e979d4af4a0df3155553f8253/bin/node-debug.js) for more details.
+",bajtos,bajtos
+328,2014-03-17 10:10:58,"@bajtos , if you start to create PR please see also this [typo](https://github.com/node-inspector/node-inspector/blob/master/bin/node-debug.js#L187-L189)
+",3y3,bajtos
+326,2014-03-21 08:24:04,"@bajtos , Hm... Usage of yargs don't help in this situation. `rc` and `yargs` uses `minimist` as args parser and `--no` prefix is his feature.
+How about replace `--no-preload` to `preload` and etc. And update the documentation (describe usage of `no` prefix) and files that uses this options?
+Also I can add `yargs` as args parser this provide an access to aliases.
+What you think?
+",3y3,bajtos
+326,2014-04-07 13:18:32,"@bajtos , The problem with current documentation and new config option `preload=true`:
+- terminal `node-inspector no-preload` works fine. Configuration is `{preload: false}`
+- .rcconfig or ENV variable `no-preload=true` bad. Configuration is `{noPreload: true}`
+",3y3,bajtos
+326,2014-04-09 09:00:18,"> @bajtos , The problem with current documentation and new config option `preload=true`:
+> - terminal `node-inspector no-preload` works fine. Configuration is `{preload: false}`
+> - .rcconfig or ENV variable `no-preload=true` bad. Configuration is `{noPreload: true}`
+
+I see your point. Let's rename `no-preload` to `preload` completely, as you suggested earlier.
+
+The rc file should still support `noPreload` or `no-preload` for backwards compatibility (I am not sure which one is used). A warning could be printed when old key is encountered, to let users know they should use `preload` instead. That will allow us to remove the support of the old key (`no-preload` or `noPreload`) at some point in the future.
+
+It would be nice to describe the possibility of using `--no-preload` instead of `--preload=false` in the help, but I can live without that.
+
+Is this a reasonable solution?
+",bajtos,bajtos
+326,2014-04-10 19:59:53,"@bajtos , PR was updated. Please review.
+Also I see one strange point - why we need `config.isScriptHidden` but not `ScriptFileStorage.prototype.isScriptHidden`?
+",3y3,bajtos
+326,2014-04-13 10:02:58,"@bajtos , I removed all unrelated changes and changed tests.
+The next PR will be 'config cleanup'.
+",3y3,bajtos
+326,2014-04-22 20:20:28,"@bajtos , I checked your comments. Also I updated `README.md` and squashed all.
+",3y3,bajtos
+322,2014-03-14 06:40:49,"@bajtos , I planned that this will be my last commit before updating information on the 'Console Implementation' PR, but I think that JSHint is important. On next week you can wait first update for 'Console Implementation' and also for 'JSHint'.
+
+PR updated.
+",3y3,bajtos
+309,2014-02-19 18:34:10,"@bajtos , now this is a complex PR for #218.
+",3y3,bajtos
+309,2014-02-20 15:29:30,"@bajtos , how can i handle `ownProperties: false`.
+I use [this solution](http://src.chromium.org/blink/branches/chromium/1625/Source/core/inspector/InjectedScriptSource.js) for realisation. Where i go out of algorithm in context of node-inspector
+",3y3,bajtos
+309,2014-02-21 11:25:53,"@bajtos , all is ready, I also add some fixes.
+Subtype used to autoformatting in DevTools. Now in console arrays displayed inline.
+",3y3,bajtos
+309,2014-03-03 07:51:58,"@bajtos , can I wait review on this week?
+",3y3,bajtos
+309,2014-03-03 12:46:51,"> It's ok to add subtype: undefined, it will be discarded during JSON serialisation.
+
+@bajtos , It was my first solution, but it needs to multiple changes of tests where used `deep.equal`. If you are ready to approve this solution, I will change the tests and code.
+",3y3,bajtos
+309,2014-03-03 14:33:02,"> > It's ok to add subtype: undefined, it will be discarded during JSON serialisation.
+> 
+> @bajtos , It was my first solution, but it needs to multiple changes of tests where used `deep.equal`. If you are ready to approve this solution, I will change the tests and code.
+
+That's fine, at least it's clear that the subtype property is expected to exist (even if `undefined`).
+",bajtos,bajtos
+309,2014-03-04 13:54:32,"@bajtos , all fixed and ready to next review.
+",3y3,bajtos
+309,2014-03-05 19:46:56,"> How about displaying the prototype as a regular object? That way you can expand it and see all Date methods, etc. In the future will work `console.dir`
+
+@bajtos , I prefer to leave it as is. We can expand it in scope or watch window.
+
+Rebased.
+",3y3,bajtos
+309,2014-03-10 17:09:14,"@bajtos , is it ready, or anything else
+",3y3,bajtos
+296,2014-01-30 14:05:15,"@auchenberg Thank you for the pull request. The change looks generally good, see my line comment about a possible regression.
+",bajtos,auchenberg
+295,2014-01-29 06:11:03,"@bajtos  actually this happen just after updating to the latest version of node inspector prior to that it was working fine.
+wonder if the latest update break something causing this as this issue not happening on other instances.
+",burhanfarooq,bajtos
+294,2014-03-03 07:13:46,"@bajtos tried with v0.7.0 . Still nothing. Don't think this is a node-inspector issue though...
+",anlawande,bajtos
+293,2014-01-24 09:46:51,"Hello @pritambaral, thank you for the pull request. Please simplify the code in front-end-node/Overrides.js per my comment above and reword the commit message to follow [50/72 rule](https://github.com/node-inspector/node-inspector/wiki/Contributing#git-commitspatches). Note you should not create a new pull request for these changes, keep them in the current one instead (see [Addressing code review issues](https://github.com/node-inspector/node-inspector/wiki/Contributing#addressing-code-review-issues)).
+",bajtos,pritambaral
+286,2014-01-20 10:02:45,"Hi @ChrisWren,
+
+Thank you for the pull request.
+1. Files in front-end/ directory are coming from Chrome Developer Tools and they are completely replaced every time we upgrade to a newer version. All front-end patches are kept in a special file - [front-end-node/Overrides.js](https://github.com/node-inspector/node-inspector/blob/master/front-end-node/Overrides.js). You need to find a way how to implemented the reload there.
+2. Please add a short timeout before calling `location.reload()` to give the debugged application some time to (re)start. I would go for a value between 50ms to 200ms.
+",bajtos,ChrisWren
+286,2014-01-29 08:19:52,"@ChrisWren , you can also test #289 - it realises other solution of reloading:
+1) Backend waits to reconnecting of app
+2) Backend sends to frontend 'reloadInspector'
+In other words we don't have infinite reloading of page.
+",3y3,ChrisWren
+286,2014-01-30 08:06:46,"@ChrisWren the new commit looks better. There is one more thing to improve - your new `WebInspector.detached` should call he original function, so that the black overlay informing user about the problem is displayed until the page is reloaded.
+",bajtos,ChrisWren
+285,2014-01-20 09:56:37,"Hello @focusaurus, thank you for the pull request. Please improve the commit message to better describe the change, e.g. `Fixed typo in docs/embedding.md`.
+
+See also [Contributing Guide](https://github.com/node-inspector/node-inspector/wiki/Contributing#git-commitspatches).
+",bajtos,focusaurus
+282,2014-01-16 10:21:33,"@bajtos, no, isn't correct - how you can see in chnges, I removed `'Date: '` prefix .
+In last commit I update test
+",3y3,bajtos
+280,2014-01-16 10:53:58,"@bajtos Sorry for unrelated changes but this is work of gjslint.
+",3y3,bajtos
+273,2014-01-09 20:52:44,"@bajtos Looking at this now... DebuggerAgent. _doSetVariableValue in master no longer makes the call to `setVariable` that you reference in your comment. I see:
+
+
+
+Has this been fixed in master?
+",asalant,bajtos
+272,2014-01-07 23:28:55,"@pflannery @bajtos  I've been anticipating this fix for a bit so I patched the files manually on my local by looking at pflannery's commit. (Thanks for the fix :) )
+1. npm installed the latest v0.7.0-1 
+2. added the 1 line in lib/DebuggerClient.js and the 1 change in lib/Convert.js. based on 127955f6005c8cbd1c872d01e69149d54b9863ad
+
+It was running great (showing longer strings on the console) and then 30 min or so later I noticed it crashed with:
+
+
+
+So apparently there are situation(s) where args is not passed to DebuggerClient.prototype.request?
+will update if I can encounter this again. Perhaps we need:
+
+
+
+But I'm not running master, I'm running npm's v0.7.0-1 hand patched with 127955f, if that could make a difference. (looks probably the same to me)
+",bf0,pflannery
+272,2014-01-07 23:28:55,"@pflannery @bajtos  I've been anticipating this fix for a bit so I patched the files manually on my local by looking at pflannery's commit. (Thanks for the fix :) )
+1. npm installed the latest v0.7.0-1 
+2. added the 1 line in lib/DebuggerClient.js and the 1 change in lib/Convert.js. based on 127955f6005c8cbd1c872d01e69149d54b9863ad
+
+It was running great (showing longer strings on the console) and then 30 min or so later I noticed it crashed with:
+
+
+
+So apparently there are situation(s) where args is not passed to DebuggerClient.prototype.request?
+will update if I can encounter this again. Perhaps we need:
+
+
+
+But I'm not running master, I'm running npm's v0.7.0-1 hand patched with 127955f, if that could make a difference. (looks probably the same to me)
+",bf0,bajtos
+266,2014-01-20 20:33:06,"> Would love to see this implemented. @pmariano let me know if you don't have time to implement, otherwise I will watch this thread.
+
+@ChrisWren I'm kind o busy this week, so I'll just have some time to implement on next week. Feel free to implement it, just let me know if you get the task.
+",pmariano,ChrisWren
+266,2014-01-23 11:43:23,"@pmariano,  @coodoo , if you have time you can test one of pull requests that fixes this issue (#289, #286) 
+",3y3,coodoo
+264,2013-12-16 19:44:52,"Hi @dickhardt, 
+
+regarding unit-tests - what have you tried so far? Look at `it('excludes files to hide')`, you want to write a very similar test - just pass your new config option instead of the hidden files filter.
+
+See also [Contributing wiki](https://github.com/node-inspector/node-inspector/wiki/Contributing#testing).
+
+BTW, please don't open multiple pull requests for the same feature/patch. It's ok to add more commits and comments to the same pull request.
+",bajtos,dickhardt
+264,2013-12-17 18:09:54,"@dickhardt I apologise for confusing you. The point of my comments was to show some possible future directions, not adding more ""requirements"".
+
+What I am asking from you before accepting this pull request:
+1. Rename `--fast-load` to `--no-preload`, you seem to agree it's a good idea.
+2. Add a unit-test for this new feature as discussed earlier. The automated tests prevent regressions in the future (among other benefits).
+
+I truly appreciate the effort you have made by submitting this pull request. Let me know if you need more help on writing the unit-test.
+",bajtos,dickhardt
+264,2013-12-17 18:15:19,"I was not confused. I was wondering if I was fixing the right problem, or
+if there is an issue in how Node Inspector is preloading files. Is crawling
+my entire drive for *.js the desired behavior?
+
+On Tue, Dec 17, 2013 at 10:10 AM, Miroslav Bajtoš
+notifications@github.comwrote:
+
+> @dickhardt https://github.com/dickhardt I apologise for confusing you.
+> The point of my comments was to show some possible future directions, not
+> adding more ""requirements"".
+> 
+> What I am asking from you before accepting this pull request:
+> 1. Rename --fast-load to --no-preload, you seem to agree it's a good idea.
+> 2. Add a unit-test for this new feature as discussed earlier. The
+> automated tests prevent regressions in the future (among other benefits).
+> 
+> I truly appreciate the effort you have made by submitting this pull
+> request. Let me know if you need more help on writing the unit-test.
+> 
+> —
+> Reply to this email directly or view it on GitHubhttps://github.com/node-inspector/node-inspector/pull/264#issuecomment-30775322
+> .
+",dickhardt,dickhardt
+261,2013-12-16 14:55:10,"Hello @sergkr, thank you for reporting the issue.
+
+If you feel like hacking on this yourself, you can start by looking at `convert.v8RefToInspectorObject` in [lib/convert.js](https://github.com/node-inspector/node-inspector/blob/master/lib/convert.js#L69) to see if there is enough information coming from the V8 debugger.
+",bajtos,sergkr
+261,2013-12-17 04:44:24,"@bajtos, I'll be happy to contribute, but I need a bit of help getting set up.
+
+I was able to clone the repo and get it up and running (and I verified that all existing tests pass).  Now I'd like to figure out how I can use node-inspector to debug node-inspector (so that ideally, I could set a breakpoint in the convert.v8RefToInspectorObject function and investigate what information I have available to me when converting a Date).
+
+I'm going through the [Debugging the Debugger](https://github.com/node-inspector/node-inspector/wiki/Debugging-the-debugger) wiki article, which is generally great, but I'm having trouble with some of the steps in the ""Debugging the back-end"" section - and ultimately, I wasn't able to get the second node-inspector instance up and running.  I'm confused where some of those port numbers are coming from, and suspect the article might be a little out of date.
+
+Here are the parts I'm confused about:
+
+> 1. browse to (1) http://localhost:8124
+
+I'm assuming port 8124 is the port that test/hello.js is running on?  So this step is basically just running the original app, correct?  If so, I'm good so far.
+
+> 1. browse to (2) http://localhost:8080
+
+If I go to localhost:8000 directly, I just see a message that says ""Cannot GET /"".  Should this actually be: `localhost:8080/debug?port=5858`?  If so, I'm good so far.
+
+> 1. browse to (3) http://localhost:9090
+
+All right, so this is where I'm stuck.  Again, going to localhost:9090 just gets me ""Cannot GET /"", so I'm again assuming that should be `localhost:9090/debug?port=5858`.  However, when I go there, I get this:
+
+![9090](https://f.cloud.github.com/assets/766698/1761552/4bd78740-66d3-11e3-97c7-4232c6a08543.png)
+
+Well, there _is_ in fact another debugger client attached to port 5858 - that would be (2), which was started in step 3.  I thought I might try running (3) on another port instead, using the `--debug-port` command line option, so I tried doing a revised version of step 5:
+
+
+
+However, that doesn't seem to work - going to `http://127.0.0.1:9090/debug?port=5959` results in this:
+
+![5959](https://f.cloud.github.com/assets/766698/1761570/99893b22-66d4-11e3-808e-584f2de03677.png)
+
+What am I doing wrong?
+",sergkr,bajtos
+260,2014-08-19 14:40:39,"> debugger listening on port 5858
+> ue}}Content-Length: 101
+
+@bajtos , looks like ""Non ASCII characters problem"", I think this is resolved...
+",3y3,bajtos
+259,2013-12-11 14:23:06,"@bajtos Thanks for pointing out the native browser API to me. I added details about both `localStorage.clear()` and `localStorage.removeItem(item)`.
+",charandas,bajtos
+259,2013-12-11 14:57:17,"@bajtos Travis build failed on my last commit. The [log](https://travis-ci.org/node-inspector/node-inspector/jobs/15287071) doesn't show anything interesting related to the readme changes?
+",charandas,bajtos
+256,2013-12-03 01:31:41,"Thanks! @bajtos 
+",CatTail,bajtos
+255,2013-11-29 19:39:57,"@bajtos It's confusing because If I were to console.log `x` inside of `setTimeout`, it would print 5 because of the lexical scope.
+
+Why would the debugger also not traverse into the functions containing context when looking for a variable?
+",andrewjmead,bajtos
+254,2013-11-29 16:31:38,"Hello @CatTail, thank you for reporting a problem and submitting a fix. I am afraid the fix is not solving the root cause, possibly even creating new problems.
+
+First of all, take a look at the discussion in #191, especially this [comment](https://github.com/node-inspector/node-inspector/pull/191#discussion_r5660174):
+
+> (the naming scheme)
+> - config.json uses camel-case names only (this preserves compatibility with older installations)
+> - command-line arguments and RC files use dashed names only (this is the new way for the future)
+
+Looking at the current implementation, it seems like you should change `collectDefaultsFromDefinitions` to use dash-style keys, which is the style returned by `collectDefaultsFromJSONConfig()` and expected down the line in `rc()` defaults. Instead of changing `collectDefaultsFromJSONConfig()` to return camel-case keys.
+
+Back to your issue:
+
+> the order of key appear is unknow and I experience that my own configuration file in $HOME will be override by the global one.
+
+If I understand your change correctly, then your change will completely disable default values from config.json. It fixes the problem only because there will be no merging anymore.
+
+It would be very helpful if you could describe how to reproduce your problem. An automated unit-test would be even better.
+",bajtos,CatTail
+254,2013-12-02 13:48:52,"@bajtos Yeah, I just send another pull request :)
+",CatTail,bajtos
+245,2013-11-16 02:17:54,"@bajtos  Thanks for you reply...
+
+I had opened the URL `http://localhost:8080/debug?port=5858`  for the first time. and my chrome says `Error: connect ECONNREFUSED. Is node running with --debug port 5858?`
+
+then I change the default port in  `node-inspector\config.json` into `12023` (random number), but it make no sense.
+
+so I don't know where is my mistake.
+",freestyle21,bajtos
+243,2013-11-13 15:08:49,"@bajtos Approved.
+",Schoonology,bajtos
+242,2013-11-13 19:30:30,"Hi @ChrisWren,
+
+thank you for submitting a pull request. Unfortunately your change breaks existing code that is using functions exported in `index.js`.
+
+To run a Node Inspector instance in a new process, use
+
+
+
+The main file (`index.js`) is reserved for people that want to embed Node Inspector inside an existing Node process or access utility functions like URL builder. (Support for the former is not implemented yet, the idea is to export `lib/debug-server.js` and possibly `lib/config.js` too.)
+",bajtos,ChrisWren
+237,2015-09-01 19:09:52,"@bajtos 
+With `node-inspector@0.12.2` / `node@0.10.32` on Linux, it takes a long time to load initially, then takes _forever_ to proceed (after resuming from being paused on the first line), while logging these entries:
+
+
+
+(To get that output I had to hack one of the files as described in https://github.com/node-inspector/node-inspector/issues/671#issuecomment-114200212.)
+
+How do I:
+
+> [[disable] dispatch of this event in the front-end](https://github.com/node-inspector/node-inspector/issues/237#issuecomment-27399120)
+
+? And what consequences will that have?
+
+Is that what this [reference to `front-end/InspectorBackend.js`](https://github.com/node-inspector/node-inspector/issues/237#issuecomment-27286308) line 44 and 45 relates to? Please always make links like that to the permalink URL.
+",jmm,bajtos
+237,2015-09-24 00:37:04,"@bajtos Thanks, sorry for the delay replying. I'll have to poke around sometime. So that's probably just going to identify a bottleneck, but not actually work around it I guess.
+",jmm,bajtos
+236,2013-10-29 08:34:51,"Hi @badave, thank you for submitting a pull request. Please reword your commit messages to past tense - that's the style we use in Node Inspector.
+",bajtos,badave
+234,2015-03-10 10:23:46,"Hi @bajtos, I can definitely implement it in my weekends. :+1: 
+",marcominetti,bajtos
+234,2015-05-11 04:29:37,"@marcominetti Is this already implemented ? I'm getting the same error message.
+",yoshiokatsuneo,marcominetti
+234,2015-05-11 05:20:20,"@marcominetti Ah, I see. I'm looking forward to be merged to master.
+",yoshiokatsuneo,marcominetti
+229,2013-10-13 08:11:03,"Hi @ChrisWren, thank you for submitting your pull request.
+
+I like your Grunt module, it looks like a useful addition to Grunt workflow.
+
+However, Node Inspector's README is not the right place for documenting other modules like grunt-node-inspector. I would suggest you to copy the relevant part of Node Inspector's README to grunt-node-inspector's README and make the change there.
+
+As far as my understanding of Grunt and grunt-node-inspector goes, users cannot use commad-line arguments to configure Node Inspector started by grunt-node-inspector, they have to use grunt config object instead. In which case your proposed change would result in an misleading documentation.
+",bajtos,ChrisWren
+226,2013-10-02 18:37:33,"Hi @gkatsev, thank you for submitting your pull request. 
+
+Note we use past tense in commit messages, please fix your commit.
+
+Other than that, the change looks good.
+",bajtos,gkatsev
+224,2014-03-25 10:13:24,"@bajtos, yes. This is what I get:
+
+![screen shot 2014-03-25 at 07 06 58](https://f.cloud.github.com/assets/729870/2510341/52751f8e-b405-11e3-9876-6d2db7ec25b4.png)
+
+These info might help:
+
+
+",jansegre,bajtos
+223,2013-09-24 07:42:21,"Hi @ssafejava, thank you for the pull request.
+
+Your implementation goes in the right direction. There are few things to improve, see my comments above.
+
+Please update the commit message to the 50/72 format and use a past tense (see [wiki](https://github.com/node-inspector/node-inspector/wiki/Contributing#git-commitspatches) for details).
+
+Also add a unit-test verifying the new behaviour (hint: start by looking at `test/CallFramesProvider.js`). You can run the tests via `npm test`.
+",bajtos,ssafejava
+223,2013-09-24 08:04:48,"@bajtos Thanks for the pointers, I removed the `config` import & passed it down the chain to the CallFramesProvider. An extra test is in `CallFramesProvider.js`.
+",ssafejava,bajtos
+223,2013-09-24 17:22:39,"@ssafejava Thanks for addressing my comments. I am afraid I won't be able to finish the review until next week. Sorry for the delay.
+",bajtos,ssafejava
+222,2014-04-18 13:46:11,"@bajtos , I saw [this question](http://stackoverflow.com/questions/22360652/can-node-inspector-debug-an-app-without-pausing-it) on StackOverflow - can you target me to source file of webkit, where it injects this custom javascript code?
+",3y3,bajtos
+220,2014-08-12 19:43:43,"@bajtos , we can fix it by renaming `front-end/Popover.js` to `front-end/Popovers.js`. But I don't like to do changes in frontend...
+",3y3,bajtos
+220,2014-08-13 06:44:28,"@3y3 now that's interesting. What adblock did you test with?
+
+@soliton4 @gkatsev could you confirm that renaming solves the issue?
+
+> But I don't like to do changes in frontend...
+
+I don't like that either. But it's not that bad since it is only a file rename. If we keep it documented to make sure we don't forget to do the rename when we upgrade the front-end the next time, then I can live with that.
+",bajtos,gkatsev
+219,2014-01-03 04:09:08,"@bajtos, sorry for long absence.
+This is a simplest version.
+I'm ready to discussion. If this method of injection will be approved, I will fix issues in complex version. Then I will commit for new overview and finally I will write tests for pull request
+",3y3,bajtos
+219,2014-03-14 15:17:15,"@bajtos , now simple implimentation is one of unei tests of this commit ('Connect in debug-brk mode').
+You can start to overview this or wait some time. On weekend I will commit second part.
+Injector will be useful also in realisation of Heap profiler.
+",3y3,bajtos
+219,2014-11-15 16:14:49,"@bajtos , ready to review.
+
+For memory cleanup use `clearMessages` button. Can you propose other way to control memory?
+",3y3,bajtos
+219,2014-11-18 12:48:38,"> @bajtos , ready to review.
+
+Cool. I did a superficial review, the code looks good. Feel free to land it as it is.
+
+>  For memory cleanup use `clearMessages` button. Can you propose other way to control memory?
+
+You can limit the size of the cache to let's say 100 last items, but I don't think it's worth the effort.
+
+Is the cache cleared when Node Inspector detaches from the running process?
+",bajtos,bajtos
+206,2013-09-14 02:58:08,"@bajtos Thanks for the input, I will wait for your fix before supporting --hidden in [grunt-node-inspector](https://github.com/ChrisWren/grunt-node-inspector)!
+",ChrisWren,bajtos
+201,2014-01-15 23:29:48,":thumbsup: as @sergkr describes
+",doublerebel,sergkr
+193,2013-09-11 15:37:11,"@bajtos: No problem, glad to give a hand for such a valuable tool!
+
+I'll definitely give window.localStorage a look the next this should happen.  A friend suggested that this might occur if two browsers were simultaneously hitting the node-inspector server at the same time for the same running node instance when I mentioned the 104 Error message to him.  But I haven't been able to reproduce the behavior from such.
+
+Keep up the great work!
+",JELaVallee,bajtos
+189,2014-05-05 14:40:04,"Hi @wyattbiker, you post #364 Issue, please switch to #189 for discussion.
+
+> Would be nice to have an optional -title=
+> or if no title use the app name as the title.
+
+I think that best strategy will be grab name from package.json
+
+> I already located the opener.js as the file that opens up Chrome. I wonder if Chrome has a command line option to force a title.
+
+Opener is only one of ways to open Node Inspector. 
+For example I use the old style way `node-inspector app.js`. For this reason I think that best solution:
+- Add new command to [FrontendClient](https://github.com/node-inspector/node-inspector/blob/master/lib/FrontendClient.js) (like `updateTitle`)
+- Add handler for this command to [Overrides](https://github.com/node-inspector/node-inspector/blob/master/front-end-node/Overrides.js)
+
+How you can see it's not a difficult problem. I leave it for novice in Node Inspector. Are you want to be this novice and fix this issue? ;-)
+
+In any cases @bajtos is boss and you can wait his extended comment, but how I understand, it went on vacation.
+",3y3,bajtos
+187,2014-11-06 00:52:38,"I'm interested in working on this. @bajtos, Any suggestions on where to start?
+",fakewaffle,bajtos
+185,2013-09-26 01:48:25,"Hey @bajtos, what could I do to start work on this apart from just digging into all the prior art? 
+",ThisIsMissEm,bajtos
+184,2013-07-30 16:35:08,"Hi @pflannery, thanks for a bug report.
+
+I don't have bandwidth to deal with it now, I'll look at the issue later this week or next week.
+
+Miroslav
+",bajtos,pflannery
+175,2013-07-24 06:44:55,"Thanks for the info @bajtos .
+I like ~/node-inspector.json overridden by src/myapp/.node-inspector.json overridden by command line.
+
+hopefully devtools front-end will allow for saving of non .js in the near future.
+
+speaking of which, I had an idea which i'm guessing you already have had:
+it would be neat if chrome devtools had a ""tab"" for node-inspector, so don't have
+to open up a new window.  just shift-ctrl-j and there is the node inspector ""tab"" in
+the devtools, similar to how gruntjs devtools tab works:
+https://github.com/vladikoff/grunt-devtools
+
+thanks again for your work on node-inspector, it's awesome.
+",jots,bajtos
+170,2013-07-23 12:53:51,"@bajtos Thanks for the information.
+",ashimaathri,bajtos
+164,2013-06-10 15:39:18,"@bajtos node-inspector pauses normally for me in your fork
+",tjlahr,bajtos
+151,2013-04-04 16:40:09,"Ah that appears to work @focusaurus 
+",Niggler,focusaurus
+150,2013-07-24 10:04:21,"@bajtos, great news! Thank you.
+",denys,bajtos
+150,2013-07-24 13:06:59,"@bajtos, thank you!
+",sylvain-hamel,bajtos
+150,2013-07-24 14:51:15,"@bajtos: agreed, freaking awesome, thank you!!
+",aseemk,bajtos
+134,2013-08-15 04:02:30,"@bajtos Such a feature would be extremely nice (i've no time to code it though). Just on my wish list. Maybe something exists since posting this...
+",trusktr,bajtos
+126,2013-05-01 13:21:22,"Hey @dannycoates, how much money do you need to continue to support this project? If you setup a crowd-sourcing campaign I'd happily chip in. https://www.bountysource.com/ seems to work great for coding projects.
+
+For rewards you could do something like:
+- $50 get your name in the Backers.md file
+- $150 get your name in the Backers.md file, plus a shirt
+- $250 get your name and url in the Backers.md file, plus a shirt
+- $500 get your name, url, and a 140 char description in the Backers.md file, plus a shirt
+- $1000 get your logo as a link in the Backers.md file, plus a shirt
+
+Just spit-balling with the rewards, whatever works.
+",balupton,dannycoates
+126,2013-05-17 18:10:58,"@dannycoates :+1: not a bad idea! I'm from the Bountysource team, we also offer merchandise fulfillment. If you went with @balupton's reward suggestions, we could print the shirts and mail em for you too.
+",ccverg,dannycoates
+126,2013-05-17 18:20:05,"+1
+
+On Fri, May 17, 2013 at 1:10 PM, ccvergara notifications@github.com wrote:
+
+> @dannycoates https://github.com/dannycoates [image: :+1:] not a bad
+> idea! I'm from the Bountysource team, we also offer merchandise
+> fulfillment. If you went with @balupton https://github.com/balupton's
+> reward suggestions, we could print the shirts and mail em for you too.
+> 
+> —
+> Reply to this email directly or view it on GitHubhttps://github.com/dannycoates/node-inspector/issues/126#issuecomment-18077319
+> .
+
+## 
+
+Martin Murphy
+Whiteboard-IT
+http://whiteboard-it.com
+w: (205) 588-7102
+",soitgoes,dannycoates
+126,2013-07-24 11:19:58,"@bajtos I've just taken a look and it looks awesome what you guys have done.. My only question is, why not release it on NPM? I have nothing against StrongLoop, but I definitely don't want to use their pre-packaged version of node.js, sorry!
+
+EDIT: I stand corrected; you have updated the NPM version! Gratz! :smile: 
+",Siyfion,bajtos
+106,2013-09-17 21:02:04,"@bajtos could you expand on usage?
+
+I believe I've gotten the PID of a running node process (started without debug) via:
+
+`tasklist /FI ""IMAGENAME eq node.exe""`
+
+which returns , say `8196`
+
+I then launch the node REPL, and issue `process._debugProcess(8196)`
+
+I exit the REPL (can node-inspector be run from w/in the REPL? I haven't used the REPL enough to get it to work) and launch `node-inspector &`
+
+Then, launch Chrome with the URL.
+
+Is there an easier list of steps (the write-up could be shorter).
+",MichaelPaulukonis,bajtos
+100,2013-08-10 12:43:46,"@bajtos and its working flawless, thank you for this feature!
+
+If anyone is interested in a quick-start project that uses source maps with node-inspector(optionally with coffeescript files), checkout this [grunt task](https://github.com/tarruda/grunt-coffee-build) I just wrote.
+",tarruda,bajtos
+96,2013-08-27 08:58:25,"@bajtos it means it's still not really usable. I hope there's a way to fix it.
+",medikoo,bajtos
+30,2011-01-31 13:34:50,"@dannycoates Ahh, thanks for the tips!  You've built a wonderful debugging tool.  I can't thank you enough.
+",xavi-,dannycoates
+29,2013-12-30 21:52:47,"@bajtos It appears that the code in `/lib/convert.js` actually has nothing to do with it. After changing the limit to 1000 and generating a long string:
+
+![truncation](http://i.imgur.com/Po2dwM7.png)
+
+The same result occurs when removing the limit entirely.
+
+It appears as though some code deep inside the inspector itself is performing the truncation at 80 characters. I found [some reference to this in DebuggerClient](https://github.com/node-inspector/node-inspector/blob/master/lib/DebuggerClient.js#L127) when using `JSON.stringify`. Perhaps somebody who knows more about the inspector could help.
+",STRML,bajtos
+29,2013-12-31 05:48:54,"It looks like this is due to a default limitation in the v8 debugger. The default max string length is defined [here](https://github.com/v8/v8/blob/a3216d885fcfcb38a6eae301fe9680b82ccc3269/src/mirror-debugger.js#L164) which limits all String type response messages to 80 characters. The formatted message we see in the console is produced by v8 [here](https://github.com/v8/v8/blob/a3216d885fcfcb38a6eae301fe9680b82ccc3269/src/mirror-debugger.js#L564)
+
+Luckily there is a way to pass an option in the request message which can extend the message response length for Strings.
+
+I believe the change in Node inspector requires two things 
+1. We need to add a maxStringLength property value to this [object](https://github.com/node-inspector/node-inspector/blob/01cb658ce253bfbc4bedd8e72dc1ffe9c13ffa05/lib/DebuggerAgent.js#L366-L369)
+   ( V8 side of things handles this [here](https://github.com/v8/v8/blob/a3216d885fcfcb38a6eae301fe9680b82ccc3269/src/debug-debugger.js#L1429) )
+   Not sure what the max length should be set to but something like 1000 would be good enough and maybe a option in the config?
+2. we also need to change this [line](https://github.com/node-inspector/node-inspector/blob/01cb658ce253bfbc4bedd8e72dc1ffe9c13ffa05/lib/convert.js#L137) to become `description: String(result.value)` otherwise it will still output the limited text
+
+I tested this with my local node inspector and it worked :) 
+
+@bajtos I wanted to discuss point 2 above as I'm not sure what impact on other dependencies that change will have?
+",pflannery,bajtos
+29,2013-12-31 12:51:50,"@pflannery Thanks for your deep investigation. The proposed solutions looks good, I'd prefer to set maxStringLength to a higher value (10k or 100k) and do not add a new config option for now.
+
+As for the second point, the change should be fine. Just verify that the content of `result.value` indicates that the value is incomplete when V8 truncates the string, ideally in a new unit-test.
+
+This issue affects `RuntimeAgent` methods calling `evaluate` request too, the pull request should fix those too. Please consider extracting the shared code into a new method in `DebuggerClient` to prevent further code duplication.
+",bajtos,pflannery
+26,2014-07-25 21:23:28,"@dannycoates is there no way to set a conditional breakpoint then, without the user changing their os bindings so that control key doesn't cause a right-click in OSX?
+",laurelnaiad,dannycoates
+983,2017-03-10 10:12:04,@3y3  @bajtos @dannycoates ,hustxiaoc,bajtos
+983,2017-03-10 10:12:04,@3y3  @bajtos @dannycoates ,hustxiaoc,dannycoates
+956,2016-12-12 02:33:21,"@bajtos  Ready for review. If you have any concerns, please let me know.  :)
+",sparkleholic,bajtos
+930,2016-09-26 05:55:32,"@bajtos, @3y3
+First of all, thank you for this brilliant project which is very useful for developing node.js app.
+But it seems to be no changes over 6 months since Apr.
+I'm curious if this repo is not maintained anymore ?
+",sparkleholic,bajtos
+914,2017-01-17 10:25:56,"By the way, @3y3, @bajtos, @dannycoates, is the project is abandoned? Any alternatives/forks? Any plans to transfer maintenance?",Kreozot,bajtos
+914,2017-01-17 10:25:56,"By the way, @3y3, @bajtos, @dannycoates, is the project is abandoned? Any alternatives/forks? Any plans to transfer maintenance?",Kreozot,dannycoates
+835,2016-03-04 14:24:17,"Hello @dannycoates , can you grant me owner rights in `node-inspector` organization.
+I will intentionally add new sub projects in organization after releasing of plugin system, so it will be not reasonable to take you each time when I want to add new project.
+",3y3,dannycoates
+750,2015-11-14 03:34:00,"@zanemcca would this speed up load times?
+
+@3y3 @bajtos or someone can this be looked at?
+",DylanPiercey,bajtos
+748,2016-02-05 02:53:27,"So, from what I've observed, consistent with @bajtos 's comment [here](https://github.com/nodejs/node/issues/2546#issuecomment-135666573) (emphasis added):
+
+> I also think it's a waste of everybody's time when every debugger [...] has to reimplement (and keep maintaining) the same **DevTools->V8 protocol bridge**.
+
+`node-inspector` doesn't actually expose the WebKit / DevTools ""Remote Debugging API"". I've tried listening for events and sending commands with `chrome-remote-interface`, and neither worked (it did connect), I can only assume because it's only exposing the necessary APIs and then bridging them to the V8 Debugging Protocol.
+
+My best (ignorant) guess is that right now, `node-inspector`'s ""front-end"" is mimicking the actual WebKit Remote Debugging Protocol calls (e.g., when a breakpoint is set in the UI) with V8 Debugging Protocol calls, which is why it is impossible to set a breakpoint in the source mapped file (since it's purely a UI abstraction and has no parallel in the V8 Debugging Protocol).
+
+Thoughts?
+",CrabDude,bajtos
+705,2015-07-28 07:41:25,"@ackalker , thank you for contribution.
+PR is ready to merge, but I need @auchenberg feedback.
+
+@auchenberg , is this change sensible for you?
+",3y3,auchenberg
+696,2015-07-20 18:32:19,"@bajtos , I think this is important feature also in context of `*.es6`
+I vote up for configuration option.
+",3y3,bajtos
+694,2015-07-22 22:45:13,"@jakub-g , any thoughts?
+",3y3,jakub-g
+690,2015-06-30 13:13:54,"@bajtos , please review
+",3y3,bajtos
+683,2015-06-18 18:47:54,"@jarthorn , all files in `front-end` folder is copy-paste from webkit sources. So, I think this question should be retargetted to blink source. Anyway I'm not friendly with licensing theory (I know MIT and GPL, but I don't know what is the difference between them :smile: )
+@bajtos , any thoughts here?
+",3y3,bajtos
+677,2015-06-17 00:35:40,"@jkrems ,
+@marcominetti ,
+@bajtos ,
+
+please review this. This is a full implementaton of Network panel.
+",3y3,bajtos
+677,2015-06-17 00:35:40,"@jkrems ,
+@marcominetti ,
+@bajtos ,
+
+please review this. This is a full implementaton of Network panel.
+",3y3,marcominetti
+675,2015-06-12 00:17:56,"@bajtos , ready to review.
+",3y3,bajtos
+670,2015-06-10 12:57:44,"@bajtos , please review.
+",3y3,bajtos
+669,2015-06-10 12:43:30,"@bajtos , please review
+",3y3,bajtos
+647,2015-05-25 15:00:22,"@bajtos , work in progress. This is not ready to review.
+Big part of this pr will be deprecated.
+
+Thanks for targetting to `strong-data-uri`
+",3y3,bajtos
+647,2015-05-26 10:54:11,"@3y3 @bajtos is reasonable to include browserified version of strong-data-uri or any replacement at front-end too for the https://github.com/marcominetti/node-inspector/blob/fix-sourcemaps-alternative/front-end-node/main/MainOverrides.js#L48?
+",marcominetti,bajtos
+644,2015-05-13 21:25:15,"![screen shot 2015-05-13 at 2 19 30 pm](https://cloud.githubusercontent.com/assets/462228/7621420/9efcadec-f97b-11e4-99db-7579110f277f.png)
+
+I'm not really sure what is going on here. Also I am not 100% convinced this is a node-inspector problem. I figured I'd post this issue and someone can help determine that because it is really annoying:
+
+As you can see in the screen shot we have a breakpoint on 548 and inspector is paused on line 554. This is after hitting the play button when starting with `mocha --debug-brk`.
+
+@bajtos 
+## <bountysource-plugin>
+
+Want to back this issue? **[Post a bounty on it!](https://www.bountysource.com/issues/14720061-breaking-on-incorrect-line?utm_campaign=plugin&utm_content=tracker%2F195817&utm_medium=issues&utm_source=github)** We accept bounties via [Bountysource](https://www.bountysource.com/?utm_campaign=plugin&utm_content=tracker%2F195817&utm_medium=issues&utm_source=github).
+</bountysource-plugin>
+",ritch,bajtos
+643,2015-05-13 21:14:27,"
+
+I'm not sure how to reproduce this exactly, but these are the steps I took when the error occured:
+1. `mocha --debug-brk`
+2. `node-inspector`
+3. opened inspector in chrome
+4. set several break points
+5. ctrl+c on the mocha tab
+6. `mocha --debug-brk`
+7. refreshed inspector in chrome (blank screen for almost a minute)
+8. saw error (above) in node-inspector tab in terminal
+
+@bajtos 
+",ritch,bajtos
+637,2015-05-07 22:31:49,"@bajtos , looking on node 0.12 I found real reason why we can't previously pause on first line.
+This is because we don't receive `afterCompile` event, that registers scripts in ScriptManager.
+Isntead of this we receive `compileError` event every time.
+
+So in this pr I deprecate event caching feature in BreakEventHandler. 
+I implemented `_onBreak` as an async function, this provide more powerful control flow and allow me to asynchronously receive script source (if it needed) directly from `_onBreak`
+",3y3,bajtos
+637,2015-05-13 08:05:37,"Ping @bajtos . Is it possible to review it on this week and release 0.10.1?
+",3y3,bajtos
+630,2015-05-06 20:15:52,"I can't reproduce this behavior on Win8.1 with 0.12.2
+@bajtos , can you confirm this as bug on your Mac?
+",3y3,bajtos
+627,2015-05-14 13:02:49,"Ready to review. @bajtos .
+
+@marcominetti , your help in review is also interesting.
+",3y3,bajtos
+627,2015-05-14 13:02:49,"Ready to review. @bajtos .
+
+@marcominetti , your help in review is also interesting.
+",3y3,marcominetti
+626,2015-04-29 19:41:10,"Retargetted to @jakub-g.
+",3y3,jakub-g
+622,2015-04-22 08:39:38,"On node 0.12 we can't use any custom commands (like 'Console.enable') if we stopped on first line.
+This is a bug that can be fixed only in node source code.
+
+Here I delete complicated console wrapping - we don't need to send 'Console.enable' to wrap console now.
+
+This doesn't fixes initial problem. For example on 0.12 we can't get snapshot if we paused on first line. We need to send `continue` before using any custom command.
+
+@bajtos , please review.
+",3y3,bajtos
+618,2015-04-27 07:21:16,"I am proposing to drop `/debug` path from the URL and server the debugger UI directly on the root URL.
+
+
+
+@3y3 @auchenberg What's your opinion? Are you aware of any reason why the root URL may not work?
+",bajtos,auchenberg
+618,2015-04-27 09:47:14,"If @auchenberg agrees, I change this pr to drop it
+",marcominetti,auchenberg
+618,2015-05-29 09:42:58,"@marcominetti let's not wait for @auchenberg and move this patch forward. Could you please rework the code to serve the debugger at the root url, as discussed above?
+",bajtos,auchenberg
+614,2015-04-17 12:15:55,"Hello @iliakan .
+
+So, today I merged new frontend and I wait some small changes from @marcominetti .
+Now then we have new frontend, it is reasonable to extend our functionality by debugging promises, getters/setters and more other. This is a next big step. #450
+
+From small steps:
+There is a #560 , that fixes #597, and I hope, it will be merged on next week. (Can you test it and submit what it works?)
+
+Released 0.12.0 with new debugger system is a big problem not only for node inspector, but also for node (iojs/io.js/issues/858, iojs/io.js/issues/781). We have some native features `v8-debug` and `v8-profiler` that already compatible with `iojs` on compilation stage, but breaks compatibility on running from `node-debug` command on windows (iojs/io.js/issues/751)
+
+So I very wait for iojs/io.js/issues/751 it blocks lot of my work on iojs.
+",3y3,marcominetti
+614,2015-04-17 12:37:46,"Also we started discussion about new cli api and plugin system. #578 
+We communicate with @marcominetti in plugin system feature. Long time we were blocked for new features by `updating frontend` pr.
+
+In other words I work on node-inspector so intensively as it is possible - this is my main os project. Sometimes it has a higher priority than my main job =)
+",3y3,marcominetti
+610,2015-04-13 14:19:22,"As requested by @bajtos and noted by @dpwolfe in #534.
+",ELLIOTTCABLE,bajtos
+582,2015-03-10 11:09:43,"Hello, @marcominetti . I'm not sure that making `babel` a part of `node-inspector` is a right thing.
+But this is a good point to start extended discussion about plugins.
+For example, we have [one other](https://github.com/node-inspector/node-inspector/issues/502) feature issue, about highlighting `debug` module colors in console, but this is useful only for users that use `debug` module in their projects, so this can't be implemented as main part of node-inspector.
+
+I'd like to provide to users simple way to extend `ni` by plugins.
+This is a work on two-three fronts:
+1. frontend extension
+2. inspector backend extension
+3. [app extension]
+
+Your current pr takes only first part. So, how I see frontend extension mechanism:
+1. We can store all plugins in subdirectory with same name. Example:
+
+
+1. Each plugin has name in npm `node-inspector-<plugin name>`. Example `node-inspector-babel`
+2. Each plugin has `module.json`, like [this](https://github.com/3y3/node-inspector/blob/frontend/front-end-node/module.json), [inspector.json](https://github.com/3y3/node-inspector/blob/frontend/front-end-node/inspector.json) and optionally [protocol.json](https://github.com/3y3/node-inspector/blob/frontend/front-end-node/protocol.json). We need to compile extension structure on node-inspector startup, or for each new [ws session](https://github.com/node-inspector/node-inspector/blob/master/lib/debug-server.js#L20-L23)
+3. Add new paths to [express router](https://github.com/3y3/node-inspector/blob/frontend/lib/debug-server.js#L61-L64), like
+
+
+
+Where `compiled_in_memory_inspectorjson` is the result of something like this:
+
+
+
+So for example if we have `babel` plugin:
+`cd node-inspector/plugins/babel`
+`echo module.json`
+
+
+
+`BabelPlugin.js` is your current diff for overrides.
+
+`echo inspector.json`
+
+
+
+`echo protocol.json`
+
+
+
+And `compiled_in_memory_inspectorjson` is equal to:
+
+
+
+We need to compile same way `protocol.json`.
+
+So, @marcominetti , are you ready to implement plugin system? This work is relative to `frontend` pr. Unfortunately in current time I work on other `ni` issues, and can't finish `frontend` pr at soon, but I'm ready to review prs relative to it.
+So keep in mind that this is a discussion about plugins, and your thoughts are important.
+Welcome to discussion on [gitter](https://gitter.im/node-inspector/node-inspector)
+
+/cc @bajtos 
+",3y3,bajtos
+573,2015-02-28 22:10:24,"I vote up for this!
+@bajtos , thoughts?
+
+P.S. for last month I also want to add big banner on top of readme.md. Something like
+
+## PLEASE DON'T SEND ME EMAIL IF NODE-INSPECTOR DOESN'T WORK FOR YOU!!!
+",3y3,bajtos
+567,2015-02-23 23:27:25,"This is bug in `biased-opener`
+/cc @jakub-g 
+",3y3,jakub-g
+562,2015-02-19 13:51:52,"@bajtos, how about this?
+",3y3,bajtos
+560,2015-02-15 18:13:31,"We are not full compatible, but can use old features.
+
+@bajtos , please review.
+",3y3,bajtos
+534,2015-01-25 16:23:14,"Thanks for targetting node version. I can confirm the probem with 0.11.15.
+
+To @bajtos :
+The current problem - now we receive `debug` event when app started with `--debug-brk` flag, previously we only check that the application is paused. But the initial problem - we can receive a `debug` event before all sources have been downloaded, in this situation [BreakEventHandler._onBreak](https://github.com/node-inspector/node-inspector/blob/master/lib/BreakEventHandler.js#L66-L68) works incorrectly.
+
+I see two ways to fix this problem:
+1) Cache all incoming events from app, before all sources will loaded in ScriptManager. We already do same thing with all incoming from frontend. In this way I prefer to emit `resource-tree` event not from `PageAgent` but from `process`.
+2) Make `BreakEventHandler._onBreak` async and try to request source from app on the fly (with caching the response)
+
+Are you see the third?
+",3y3,bajtos
+528,2015-01-23 06:59:09,"Sorry for delay in review.
+This is a good stuff, I want to see it in node-inspector. I'm worried about stability of `biased-opener`, but how I can see `opener` itself also hasn't test coverage, so this replacement is equivalent in this context.
+
+/cc @bajtos 
+",3y3,bajtos
+520,2015-01-12 17:26:23,"Please try to reinstall. For me 0.8.2 was installed succesefully.
+
+@bajtos , please confirm.
+",3y3,bajtos
+515,2015-01-06 05:40:04,"@bajtos , please join to discussion.
+
+@auchenberg , thanks for contribution. This is interesting feature.
+
+>  Is there any reason why 127.0.0.1/0.0.0.0 currently is used?
+
+From time to time I know why we use `0.0.0.0` in `NODE_INSPECTOR_MODE` and `127.0.0.1` in `NODE_DEBUG_MODE`, but unfortunately now I can't remember this.
+
+> I had to change the default web-host to the local IP instead of 127.0.0.1, as the IP is needed in order to enable other clients to connect.
+
+Can you explain me more verbose this part. At first glance new IP detecting opens weak security risk. I prefer to have minimal network area in default configuration, but it's discussable.
+",3y3,bajtos
+510,2015-01-10 06:17:34,"@bajtos , I'm ready to merge this one and release 0.8.2
+
+Also I'm glad to notice that now we have prebuild binaries for Linux and OSX x64 (I'm ready to add x32 atoreleasing if it's needed)
+",3y3,bajtos
+493,2014-12-11 14:45:27,"@bajtos , please review.
+",3y3,bajtos
+492,2015-01-10 14:56:26,"@bajtos , tt's ready to test and review. I added `for tests` commit, because travis switch to 0.11.14 version by default, and we have prebuild binaries only for uncompatible 0.11.13 (I can't publish binaries for 0.11.14 automatically, because there is no win x64 release version). Also we wait 0.10.36.
+",3y3,bajtos
+492,2015-03-05 13:14:31,"Rebased to master.
+
+@jakub-g , can you please look at this pr. There exists bug for you.
+Now our inspector link is `http://examlpe.com:8080/debug?port=5858&ws=example.com:8080`
+This link doesn't work on Windows with `node-debug` command for reason of unescaped `&`.
+Original issue in `opener` https://github.com/domenic/opener/issues/9 (It will be nice, if you fix also this issue)
+
+But current issue for you - unhandled error event:
+
+
+
+@bajtos , now I will work on `saveLiveEdit`. Will be nice if you provide me some failure test.
+(But in current time I can live without it)
+
+@marcominetti, @auchenberg , I see that you already rebased to this pr. Any thoughts about `saveLiveEdit`?
+",3y3,jakub-g
+492,2015-03-05 13:14:31,"Rebased to master.
+
+@jakub-g , can you please look at this pr. There exists bug for you.
+Now our inspector link is `http://examlpe.com:8080/debug?port=5858&ws=example.com:8080`
+This link doesn't work on Windows with `node-debug` command for reason of unescaped `&`.
+Original issue in `opener` https://github.com/domenic/opener/issues/9 (It will be nice, if you fix also this issue)
+
+But current issue for you - unhandled error event:
+
+
+
+@bajtos , now I will work on `saveLiveEdit`. Will be nice if you provide me some failure test.
+(But in current time I can live without it)
+
+@marcominetti, @auchenberg , I see that you already rebased to this pr. Any thoughts about `saveLiveEdit`?
+",3y3,marcominetti
+492,2015-03-05 13:14:31,"Rebased to master.
+
+@jakub-g , can you please look at this pr. There exists bug for you.
+Now our inspector link is `http://examlpe.com:8080/debug?port=5858&ws=example.com:8080`
+This link doesn't work on Windows with `node-debug` command for reason of unescaped `&`.
+Original issue in `opener` https://github.com/domenic/opener/issues/9 (It will be nice, if you fix also this issue)
+
+But current issue for you - unhandled error event:
+
+
+
+@bajtos , now I will work on `saveLiveEdit`. Will be nice if you provide me some failure test.
+(But in current time I can live without it)
+
+@marcominetti, @auchenberg , I see that you already rebased to this pr. Any thoughts about `saveLiveEdit`?
+",3y3,auchenberg
+491,2014-12-10 10:13:26,"@bajtos , please review.
+",3y3,bajtos
+490,2014-12-10 10:09:03,"@bajtos , please review
+",3y3,bajtos
+489,2014-12-12 11:00:25,"I found a problem here: `opener` module doesn't work correctly with & symbol.
+So `http://127.0.0.1:8080/debug?port=5858&autoclose=true` will be replaced with `http://127.0.0.1:8080/debug?port=5858`
+
+@bajtos, please check this.
+",3y3,bajtos
+485,2014-12-07 23:11:31,"@bajtos , I added windows prebuild binaries in v8-profiler 5.2.1.
+We need to update this dependency and release node-inspector 0.8.1
+",3y3,bajtos
+475,2014-11-29 10:29:56,"Unfortunately I can't add test for `_lookupHeapObjectId` because I can't find in snapshot heapObjectId targetted to real object with properties.
+
+@bajtos , please review
+",3y3,bajtos
+465,2014-11-10 09:49:35,"Stop increasing the version in `package.json` after a release, do the change just before the next release.
+
+Add a shell script for making the release in one step.
+
+/to @3y3 please review
+/cc @sam-github This is addressing your [comment from Jun 19](https://github.com/node-inspector/node-inspector/commit/79b1d60270e8b2364c2b45510928c442c4c41b78#commitcomment-6737390).
+",bajtos,sam-github
+450,2014-10-02 09:28:20,"@bajtos , please look at this. This is not ready to review, but I need a discussion here.
+
+What happens here:
+- I copy `InjectedScriptSource` and `DebuggerScript` from Blink sources (branch 1625).
+  This is two main files which implements debugging protocol.
+- I add `InjectedScriptHost.js`, this is implementation of some functions stored in `V8InjectedScriptHostCustom.cpp` and used by `injectedScript`
+- Next step - I reimplement Runtime agent and some functions in Debugger agent to fix some issues:
+  - Now we can inspect:
+    - global variables when process not paused
+    - get/set properties
+    - big arrays (I don't test buffers)
+    - function raw scopes
+  - RegExp inspection info show `/abc/g` instead of `/abc/`
+
+I use something like this to debug this all:
+
+
+# ...but this commit has two problems
+## 1. It is very big
+
+I can try to divide it on parts like `Implemented Debugger.getBacktrace`, `Implemented Runtime.callFunctionOn`, `...`. But I'm not sure about that.
+## 2. It deprecates big part of tests
+
+This is a first in big series of pull requests, where I'll reimplement all agents to use WebKit protocol (this is relative to mail discussion, where Brandon Meck promises to implement this protocol in node)
+How you can see I deleted some incompatible tests, I would like to see on their place autogenerated tests based on `tools/protocol.json`
+
+Is there something with which you are disagree? Any ideas about changing structure of this commit, which can help you in review?
+",3y3,bajtos
+441,2014-09-10 07:53:45,"@bajtos , please confirm that you are ready to approve https support
+",3y3,bajtos
+441,2014-09-18 16:39:58,"> @bajtos , please confirm that you are ready to approve https support
+
+Sure, no problem with that. It's probably better to wait with landing this PR until the config-changes are done (#436).
+",bajtos,bajtos
+437,2014-09-05 08:35:22,"@bajtos , I'll merge this without review.
+",3y3,bajtos
+436,2014-09-03 21:19:21,"@bajtos , ready to review
+",3y3,bajtos
+432,2014-08-26 13:09:40,"Hello @dannycoates , please change logo of Node Inspector organization to
+
+![favicon](https://cloud.githubusercontent.com/assets/3931155/4044569/e0b3d3e0-2d21-11e4-99fd-e0ff631934f7.png)
+",3y3,dannycoates
+432,2014-08-26 18:35:26,"Damage! I used 4pt line instead of 8pt.
+@dannycoates , @bajtos, please look that is best:
+![favicon](https://cloud.githubusercontent.com/assets/3931155/4049660/9f3795f4-2d4f-11e4-888d-a02ec328160d.png)
+
+![](https://cloud.githubusercontent.com/assets/3931155/4044569/e0b3d3e0-2d21-11e4-99fd-e0ff631934f7.png)
+",3y3,bajtos
+431,2014-08-26 09:15:20,"The problem is [here](https://github.com/node-inspector/node-inspector/blob/master/lib/session.js#L62)
+
+@bajtos, at first sight this is a small fix, but I can't imagine the regression test.
+",3y3,bajtos
+426,2014-08-26 08:39:08,"> Thanks. How about add icon to Node Inspector organisation?
+
+That would be great. Can you make a larger version (420x420 pixels) of the logo?
+
+Please open a new issue and assign it to @dannycoates, as only organization owners can change the logo.
+",bajtos,dannycoates
+400,2014-07-01 20:06:33,"Application crashes when trying to inspect global.process.
+win8.1 x64, node 0.11.13 (for 0.10.\* all works fine)
+@bajtos , can you confirm this for Linux?
+",3y3,bajtos
+398,2014-06-26 12:53:58,"@bajtos , it's a very important pr, I need to finish cleanup at soon, but I have one problem - after I moved [v8-debug]() to node-inspector namespace, I missed potention to manegi it, I can't understand how it's happem ;-( Can you help me please.
+",3y3,bajtos
+398,2014-06-26 13:08:13,"> after I moved v8-debug to node-inspector namespace, I missed potention to manegi it, I can't understand how it's happem ;-( Can you help me please.
+
+That happens when you move the repo between github org. I am not an owner of node-inspector org thus I can't fix the permissions for you.
+
+@dannycoates could you please look into this? If I remember correctly, it's necessary to either fix security settings of `node-inspector` organization, or the `v8-debug` repository.
+",bajtos,dannycoates
+389,2014-06-17 19:11:30,"@bajtos , I need help here - I can't test this in OSX shell (is there other parsing rules for args?)
+",3y3,bajtos
+368,2014-05-22 10:52:29,"@bajtos , 
+All fixed.
+Rebased to HEAD.
+I get `/[A-Z].test(key)` reccomendation, `process.argv.indexOf(key)` don't work as expected
+I refactored `--nodejs`, but also add [Issue](https://github.com/chevex/yargs/issues/17) to yargs.
+
+Any comments about `Detecting Windows CMD files` ?
+",3y3,bajtos
+367,2014-05-12 13:04:09,"@bajtos , please mark it as bug or not. I'm ready to fix it in one minute in [this](https://github.com/node-inspector/node-inspector/pull/368) pr (Travis CI build fails - see the [reason](https://github.com/node-inspector/node-inspector/issues/369))
+",3y3,bajtos
+361,2014-04-24 10:22:52,"@bajtos , possible duplication of #327
+",3y3,bajtos
+360,2014-04-24 11:15:01,"@bajtos , Ready to review
+",3y3,bajtos
+360,2014-05-21 11:26:05,"@bajtos , 
+default `web-host` changes removed.
+Indentation fixed.
+`createScriptFileStorage` added
+rebased to HEAD
+",3y3,bajtos
+351,2014-04-18 13:47:36,"@bajtos , any comments?
+",3y3,bajtos
+337,2014-04-02 10:54:11,"@bajtos , I missed one correction - it works on v 0.11.
+I add checker at soon.
+",3y3,bajtos
+336,2014-04-02 10:43:30,"@bajtos , how you can see, I pushed some commits. Please start review from this, the second - Profiler API, and finally HeapProfiler API. Also you can review Console API. After first review and fixes I add tests.
+",3y3,bajtos
+323,2014-03-13 14:12:17,"@bajtos, how about add `.cmd` execution to node-debug?
+",3y3,bajtos
+323,2014-03-13 14:13:32,"@bajtos , L189 of node-debug.js is a typo?
+",3y3,bajtos
+321,2014-03-13 07:32:52,"@bajtos , updated. Travis fails 1st test on npm install.
+",3y3,bajtos
+310,2014-02-19 14:15:43,"Refactor lib/config and bin/inspector, split printHelpAndExit into
+two parts. The first part is building the help message and stays in
+lib/config as `config._describeOptions`. The second part (print and
+exit) is moved to bin/inspector.
+
+/to @sam-github Please review. Node Inspector uses ""rc"" for argv parsing, therefore we can't use optimist's ""alias"".
+/cc @3y3
+",bajtos,sam-github
+305,2014-02-17 19:06:15,"Add a CLI script `node-debug` that:
+1. Runs node-inspector.
+2. Runs the supplied script in debug mode or starts a REPL session
+3. Opens the user's browser, pointing it at the inspector.
+
+Add a CLI script `run-repl` (used by `node-debug`) that will load
+the module in CWD and start a REPL session.
+
+The script `node-debug` is friendly to embedders, error messages use the value of the env variable ""CMD"" when referring to $0.
+
+/to: @sam-github please review. I'll submit the documentation changes in a standalone pull request.
+
+The file node-debug.js is based on [strong-cli/lib/commands/debug.js](https://github.com/strongloop/strong-cli/blob/master/lib/commands/debug.js). The most notable difference is the naming of command-line arguments. I have decided to use the names that are already used by Node and Node Inspector (e.g. `--web-port` instead of `--port`, `--debug-brk` instead of `--suspend`). I have added aliases to keep backwards compatibility with `slc debug`.
+
+/cc: @sidorares @Krxtopher @jfirebaugh
+The script `node-debug` added by this pull request is replacing your modules [ni](https://github.com/sidorares/ni), [node-ndebug](https://github.com/resource/node-ndebug) and [node-debug](https://github.com/jfirebaugh/node-debug). Is there any feature that is implemented in your module and missing in node-inspector's node-debug?
+",bajtos,sam-github
+305,2014-02-18 08:21:32,"@sidorares Debugging mocha tests is easy:
+
+
+
+Supporting coffee script is more difficult, definitely out of scope of this pull request. Can you use `coffee -c -w` as a workaround for now?
+
+@sam-github Thanks for review. I have added a couple of commits and replied to the rest of the comments. Anything else to improve?
+",bajtos,sam-github
+296,2014-01-30 14:03:56,"@pritambaral Could you please check that this pull request is not breaking your use case?
+
+@gcochard @gdw2 Could you please check if this pull request fixes your problem?
+",bajtos,pritambaral
+289,2014-01-22 10:16:03,"@bajtos , I know that this realisation isn't so simple how described in #266, but this leaves opportunity to create in future a new dialog with list of processes able to connect 
+",3y3,bajtos
+275,2014-01-08 00:42:45,"@pflannery can you advise on your test ? Having trouble understanding why it passed previously and now fails because the string gets a ""...(length: 9999)"" suffix. https://travis-ci.org/node-inspector/node-inspector/builds/16561627
+
+Unless there was something else added to master the only difference should be 
+
+
+",bf0,pflannery
+258,2013-12-02 14:45:47,"Added a simple algorithm to decide what scriptId is expected depending
+on Node version.
+
+@Schoonology please review.
+",bajtos,Schoonology
+243,2013-11-13 08:09:18,"Added debug logs for devtools protocol and V8 debugger protocol.
+
+Set DEBUG=node-inspector:protocol:\* to enable.
+
+@Schoonology Please review. I am going to use these logs in my talk about internal architecture of Node Inspector.
+",bajtos,Schoonology
+235,2013-10-23 18:52:33,"Fixed debugger launcher to ignore ECONNRESET error when shutting down the
+session.
+
+@Schoonology  please review.
+",bajtos,Schoonology
+216,2013-09-19 15:28:23,"The upgraded front-end sends two requests to get a list of object properties,
+each request asking for a different set of variables. Because our back-end was
+ignoring request parameters, the same set of variables was returned twice.
+
+This commit fixes the immediate problem, without providing the full
+implementation of the new front-end feature.
+
+See node-inspector/node-inspector#213.
+
+@Schoonology please review. I'll fill a new issue (Enhancement) to get the proper implementation of getProperties & getInternalProperties.
+",bajtos,Schoonology
+212,2013-09-18 14:04:56,"Added a short description how to enable debugger in a running process
+on Windows.
+
+Related issue: #106
+
+@Schoonology please review.
+",bajtos,Schoonology
+211,2013-09-18 13:50:32,"Fixed `config.hidden` that was not working correctly.
+
+See also #206.
+
+@Schoonology please review.
+",bajtos,Schoonology
+207,2013-09-12 10:12:03,"Implemented support for data scheme URLs. This allows sourcemap files to be embedded in the sourceMappingURL in the generated js file.
+
+Fixes #204.
+
+@Schoonology Please review.
+",bajtos,Schoonology
+200,2013-08-20 11:21:57,"Fixed the bug #198 where Node Inspector crashed when a breakpoint was hit in a code
+run by eval(). This is happening in two cases:
+- Node Inspector calls eval() to get more information about the debugged
+  process. In certain circumstances it was possible that the debugger stopped
+  inside this code.
+- User types `debugger;` in the console panel.
+
+BreakEventHandler was changed to resume the execution in both cases, as if
+the sources were hidden.
+
+@Schoonology please review.
+",bajtos,Schoonology
+174,2013-07-23 08:50:58,"Fixed the way how we detect the main application file for two cases:
+  `node .` (run the local application)
+  `node --debug` (start an interactive REPL session)
+
+Fixed also other issues that prevented debugging of REPL sessions.
+
+@Schoonology please review
+",bajtos,Schoonology
+172,2013-07-22 08:01:06,"Added a startup hook that shows the main application file in case no files are opened.
+
+Created a public API for embedders, added function buildInspectorUrl().
+
+/cc: @Schoonology please review.
+
+Note: the first implementation was based on `#show={fileUrl}` parameter, therefore it was highly desirable to add a public API for embedders. After I have reworked the feature to always open the main file, the API is not that important, but it's still nice to have it.
+",bajtos,Schoonology
+130,2013-03-30 20:50:12,"Hi @dannycoates,
+
+Why this issue is closed now? is there a fix for this already? 
+
+@ravi sending the USR1 signal does not work, that was my first guess. Option #2 really not an option.
+",mexpolk,dannycoates
+126,2012-11-29 09:37:50,"Any comments? @dannycoates
+",corpix,dannycoates
+108,2013-09-02 09:34:21,"@dannycoates in the case where the server has crashed and is brought back up, is there a way for `node-inspector` to detect that the server has been restarted and resume debugging, so you don't have to reload the page to start debugging again?
+",spikebrehm,dannycoates

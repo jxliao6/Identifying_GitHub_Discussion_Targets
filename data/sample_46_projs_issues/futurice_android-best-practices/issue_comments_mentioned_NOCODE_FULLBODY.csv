@@ -1,0 +1,458 @@
+issue_num,datetime,body,login,mention_login
+130,2016-11-16 09:44:43,"@AlejandroHCruz Sure!
+",peter-tackage,AlejandroHCruz
+130,2016-11-24 21:21:12,"@josejavier @pabloper @AlejandroHCruz In the interests of not leaving this in review for too long, I've just merged this - if there's any issues they can be reworked via PR.",peter-tackage,josejavier
+130,2016-11-24 21:21:12,"@josejavier @pabloper @AlejandroHCruz In the interests of not leaving this in review for too long, I've just merged this - if there's any issues they can be reworked via PR.",peter-tackage,AlejandroHCruz
+129,2016-11-07 15:46:37,"@peter-tackage Thanks for the response, you are correct about Truth, and for me personally keeping your projects to use purely Google dependencies is a big yes. I have recently stumbled across Truth and found it very similar to using AssertJ (both using Hamcrest matchers). I have not noticed Truth power yet with Android, as I find AssertJ-Android is currently more geared towards Android. I would love to help adding Android specific extensions to Truth, it is however a big task and not a days work with my current schedule.
+
+Lastly please could you post back the link to the up to date testing section so I may familiarize myself with it. Much appreciated. 
+",KevinLeighCrain,peter-tackage
+129,2016-11-07 16:40:09,"@peter-tackage It is definitely a difficult task picking libraries as there is so many out there mostly bad but a lot of good ones, and my reasoning behind pure Google dependencies is that Google is there to stay, I am however open minded to try anything new, going to look at Agera, and try it out definitely! Thanks for the mention!
+",KevinLeighCrain,peter-tackage
+126,2016-10-16 20:54:46,"Thanks, @quangctkm9207. I obviously can't comment too much on the accuracy of the translation, but we're happy to have it translated if someone thinks it will help out other developers and wants to invest the time.
+",peter-tackage,quangctkm9207
+126,2016-10-16 23:16:59,"@khuongdv : Thank you for your comments. 
+1. In the translation, for common phrases or words, I have already left as the original version or give both Vietnamese and English phrases. For example, I have put the original sentence""best practices ... "" in brackets in addition to Vietnamese translation.
+2. I agree that is your personal feeling. However, this is really useful for many new developers in Vietnam. 
+@peter-tackage : Thank you for your feed back. Hope that it is helpful.
+",quangctkm9207,peter-tackage
+120,2016-08-02 13:32:41,"Hi @felipecaldas. Thanks for the feedback. We're currently in the process creating a new demo project with more real-world requirements. I would consider the current version deprecated for now, given the number of Android Gradle plugin and Android Studio releases since it was originally created, this probably explains the breakage you have found.
+",peter-tackage,felipecaldas
+120,2016-08-02 13:40:00,"Thanks @peter-tackage  ! I will await for the new update then. Looking forward to it! Cheers.
+",felipecaldas,peter-tackage
+119,2016-07-20 13:43:58,"Hi @lonely917. Thanks for the feedback. We're currently in the process of updating the demo project. I would consider it deprecated for now, given the number of Android Gradle plugin and Android Studio releases since it was originally created.
+",peter-tackage,lonely917
+118,2016-07-17 11:02:56,"Thanks, @ryanwholey. Could you please rebase your changes.
+",peter-tackage,ryanwholey
+118,2016-10-02 21:13:37,"@ryanwholey @rwholey-eb Your changes are fine, but this section has been updated in the other PRs, so there's a conflict to be resolved.
+",peter-tackage,ryanwholey
+116,2016-10-02 21:43:27,"@peter-tackage I agree. MockWebServer with its default dispatcher could be enough for most for the cases and makes you think more about the way/sequence you make network requests which may help in discovering some unexpected side effects.
+",djodjoni,peter-tackage
+115,2016-07-03 21:37:16,"First of all I am using Roboelectric and I hate it, but it is useful and I will share why :)
+
+there several statements here which are kind of too generic and not clear to me. 
+ @luciapayo roboelectric does not really make your tests that slow but probably the speed of development of those tests is slow, which is obvious. Also wrapping too much things will cost lots of time maintaining those wrappers.
+ @peter-tackage there is no excuse for boilerplate :) so better somebody else do it, I hope they respect the contract as I hope the millions version of Android does too :)
+@samiuelson dependency injection and mock should be used wisely and only if needed and too complicated other wise.
+
+There is not question about that Business logic should be done in a way that it has almost and preferably no external dependencies, however there is also Application Specific Business Logic, which needs to be tested as well.
+
+There is a bit confusion what is a Unit Test and the confusion is in 2 main points:
+1) the definition of a Unit. and and in OOP is should not strictly mean a single Class. This involeves tightly the granularity of writing tests, if you go too far you are probably coupling with implementations or some internal parts of your system that doesn't really need to be separately tested.
+2) the isolation of those tests. tests should be isolated in such a way that they do not interfere with each other. Isolating the Unit from its environment -> mocks -> (coupling with implementation , probability that it does not behave correctly in real environment). in other words we can still call them Unit tests without comlpete isolation.
+
+Having said that Unit Tests may involve some android components. 
+Some will say ""..well wrap those"", but this can be really costly for a line of code you may end up creating bunch of classes in different modules coupling with Android specifics anyway And still not covering the real UI test. What I learn from experience is that no-one care of your Unit Tests, they just want the app to run as in specs, its just you who needs to maintain those tests.
+
+So 'Unit Tests may involve some android components'. 
+
+Normally you should not mock 3rd party code(just the adapters connecting to it) as you don't know in detail how it works. Robolectric guys do exactly this and its pretty big one. They do an awesome job and yet I prefer test with a Real device using Espresso. The problem is using TDD and running tests constantly could be terribly slow so Roboelectric is of real help here. 
+
+So Roboelectric can be used for unit tests which involves android components and its way faster than Espresso (the fastest currently real UI framework)
+",djodjoni,peter-tackage
+115,2016-07-03 21:37:16,"First of all I am using Roboelectric and I hate it, but it is useful and I will share why :)
+
+there several statements here which are kind of too generic and not clear to me. 
+ @luciapayo roboelectric does not really make your tests that slow but probably the speed of development of those tests is slow, which is obvious. Also wrapping too much things will cost lots of time maintaining those wrappers.
+ @peter-tackage there is no excuse for boilerplate :) so better somebody else do it, I hope they respect the contract as I hope the millions version of Android does too :)
+@samiuelson dependency injection and mock should be used wisely and only if needed and too complicated other wise.
+
+There is not question about that Business logic should be done in a way that it has almost and preferably no external dependencies, however there is also Application Specific Business Logic, which needs to be tested as well.
+
+There is a bit confusion what is a Unit Test and the confusion is in 2 main points:
+1) the definition of a Unit. and and in OOP is should not strictly mean a single Class. This involeves tightly the granularity of writing tests, if you go too far you are probably coupling with implementations or some internal parts of your system that doesn't really need to be separately tested.
+2) the isolation of those tests. tests should be isolated in such a way that they do not interfere with each other. Isolating the Unit from its environment -> mocks -> (coupling with implementation , probability that it does not behave correctly in real environment). in other words we can still call them Unit tests without comlpete isolation.
+
+Having said that Unit Tests may involve some android components. 
+Some will say ""..well wrap those"", but this can be really costly for a line of code you may end up creating bunch of classes in different modules coupling with Android specifics anyway And still not covering the real UI test. What I learn from experience is that no-one care of your Unit Tests, they just want the app to run as in specs, its just you who needs to maintain those tests.
+
+So 'Unit Tests may involve some android components'. 
+
+Normally you should not mock 3rd party code(just the adapters connecting to it) as you don't know in detail how it works. Robolectric guys do exactly this and its pretty big one. They do an awesome job and yet I prefer test with a Real device using Espresso. The problem is using TDD and running tests constantly could be terribly slow so Roboelectric is of real help here. 
+
+So Roboelectric can be used for unit tests which involves android components and its way faster than Espresso (the fastest currently real UI framework)
+",djodjoni,luciapayo
+115,2016-07-03 21:37:16,"First of all I am using Roboelectric and I hate it, but it is useful and I will share why :)
+
+there several statements here which are kind of too generic and not clear to me. 
+ @luciapayo roboelectric does not really make your tests that slow but probably the speed of development of those tests is slow, which is obvious. Also wrapping too much things will cost lots of time maintaining those wrappers.
+ @peter-tackage there is no excuse for boilerplate :) so better somebody else do it, I hope they respect the contract as I hope the millions version of Android does too :)
+@samiuelson dependency injection and mock should be used wisely and only if needed and too complicated other wise.
+
+There is not question about that Business logic should be done in a way that it has almost and preferably no external dependencies, however there is also Application Specific Business Logic, which needs to be tested as well.
+
+There is a bit confusion what is a Unit Test and the confusion is in 2 main points:
+1) the definition of a Unit. and and in OOP is should not strictly mean a single Class. This involeves tightly the granularity of writing tests, if you go too far you are probably coupling with implementations or some internal parts of your system that doesn't really need to be separately tested.
+2) the isolation of those tests. tests should be isolated in such a way that they do not interfere with each other. Isolating the Unit from its environment -> mocks -> (coupling with implementation , probability that it does not behave correctly in real environment). in other words we can still call them Unit tests without comlpete isolation.
+
+Having said that Unit Tests may involve some android components. 
+Some will say ""..well wrap those"", but this can be really costly for a line of code you may end up creating bunch of classes in different modules coupling with Android specifics anyway And still not covering the real UI test. What I learn from experience is that no-one care of your Unit Tests, they just want the app to run as in specs, its just you who needs to maintain those tests.
+
+So 'Unit Tests may involve some android components'. 
+
+Normally you should not mock 3rd party code(just the adapters connecting to it) as you don't know in detail how it works. Robolectric guys do exactly this and its pretty big one. They do an awesome job and yet I prefer test with a Real device using Espresso. The problem is using TDD and running tests constantly could be terribly slow so Roboelectric is of real help here. 
+
+So Roboelectric can be used for unit tests which involves android components and its way faster than Espresso (the fastest currently real UI framework)
+",djodjoni,samiuelson
+111,2016-11-04 13:54:57,"@peter-tackage Do you think these -optimize thing could be one of these ""additional insights"" ?
+",wviana,peter-tackage
+101,2016-07-12 12:59:10,"@peter-tackage Done, PTAL :)
+",iverc,peter-tackage
+99,2016-02-25 20:40:04,"@peter-tackage agree with your points. But would extend the following items with the links to appropriate resources or detailed description:
+
+> - Use Mockito for mock definitions
+
+add link for Mockito; the recommendations how to mock objects and the check behaviour in the better/best way
+
+> - Use AssertJ for assertions.
+
+Link to AssertJ would be good and what are the advantages of that
+
+> - Add integration and UI tests once their business value is justified.
+
+not clear enough
+
+The other points are quite clear and could be added to the best practices.
+",dkhmelenko,peter-tackage
+99,2016-02-26 13:57:57,"@tomaszpolanski Agreed. Testing Rx is probably worth it's own section.
+",peter-tackage,tomaszpolanski
+96,2016-01-19 17:52:10,"@luisramalho, yes, fair points.
+
+I'm merging this version now, let's improve upon it later (when someone has the time and interest).
+",jonikarppinen,luisramalho
+94,2016-01-12 16:53:20,"@fbergr: thanks!
+",jonikarppinen,fbergr
+92,2016-06-18 11:36:13,"@kypeli You make some good counterpoints. Do you want to write a PR for this?
+",peter-tackage,kypeli
+91,2016-01-06 10:14:11,"Good stuff, @kypeli . What do you think about adding a sentence stating that you should only use it for debug build variants and not release?
+",peter-tackage,kypeli
+83,2015-11-12 05:40:37,"Hello @santong !
+
+So far ""standard"" architecture may be called MVP(Model View\* Presenter). Where is View stands more for a combination of contract interfaces that are also known as View Interfaces. Summing up, in Android environment mentioned stack treated more as MViVP(Model View Interface View Presenter).
+
+For more details take a look at [nice article](http://blog.sqisland.com/2015/11/mvp-missing-link.html) of @chiuki 
+
+In her article, she mentioned [Android lab](http://www.code-labs.io/codelabs/android-testing/#4) which in some extent can be treated as suggested or, maybe, an official architecture for majority apps.
+",tomkoptel,santong
+83,2015-11-12 06:06:37,"@tomkoptel Thank you very much. It troubled me for a long time. 
+",santong,tomkoptel
+83,2015-11-14 11:05:37,"@tomkoptel Thanks for useful information!
+",johnwatsondev,tomkoptel
+81,2015-11-08 18:24:28,"Hello @acrolink ! 
+
+Sorry for not pinpointing to the conrete solution, but the issue you are tackling can be resolved through the usage of the native code. The idea is to bundle your credentials inside native code that will be bind by JNI. This way you will ensure that strings won't be easily reverse engineered, as soon as they are part of binary files. Though, such approach complicates application code and requires from your side to build code for different platforms.
+",tomkoptel,acrolink
+80,2015-10-13 01:24:13,"Hi @blipinsk, thanks for your input. 
+I would consider the disregarding of `textAllCaps` by the Note 3 as buggy behavior and I would prefer to not let one (or a few) buggy devices dictate the general approach. To better handle this, I would propose -
+- Use ""natural"" capitalization in the string resource definitions as described.
+- Abstract the `Resources#getString()` method behind an interface.
+- Inject an appropriate preprocessor into the implementations of the interface to modify capitalization depending on device (default is no-op). 
+
+This would allow you to throw away specific workarounds if the buggy devices ever were fixed or were no longer a target device of your app.
+
+""Don't let buggy devices dictate your general approach"" - is something we should add to the guide.
+",peter-tackage,blipinsk
+77,2016-06-18 11:04:33,"@ilkka I would just say that we remove Roboletric from the template project. I wouldn't consider it a best practice.
+",peter-tackage,ilkka
+76,2015-08-31 13:12:44,"@jvah 您的中文还挺好的哈哈    我明晚按照您说的分成两个分别 commit ~
+",icodeu,jvah
+73,2015-08-05 11:03:47,"@aziflaj I have personally had good experiences with Schematic, hence mentioning it. I like that it is precompiled, as annotations are known to be slow on Dalvik. You can also easily inspect the resulting source code, which is just a typical ContentProvider. I did not try ProviGen yet, though it seems to be different in its approach of extending the library base classes.
+
+@tremerhl do you know how mature the Simple Provider is?
+",tehmou,aziflaj
+73,2015-08-05 11:35:46,"@tehmou  SimpleProvider is pretty young library, it also uses annotations to create database, hence you need to add `-keep` to your ProGuard. I've had good experience using it to create and interact with one db table, can't say anything with respect to it's efficiency with really complex data. 
+",iverc,tehmou
+71,2015-08-12 12:51:37,"@phadej I created new pull request with translation for Data Storage section. If you want I can resume this request instead of the new one!
+",iverc,phadej
+69,2015-08-17 07:36:58,"@peter-tackage [really?](https://github.com/square/okhttp/blob/master/pom.xml#L96)
+
+
+",Suvitruf,peter-tackage
+68,2015-09-26 16:55:00,"Thanks for the translation @GWillmann! If you could fix the minor issues (mostly typos) I've noted, then squash the commits and then it will then be good to merge.
+cheers.
+",peter-tackage,GWillmann
+68,2015-10-30 18:10:37,"Sorry for the delay @peter-tackage !
+I have fixed all the typos, it should be good to go.
+Cheers.
+",GWillmann,peter-tackage
+67,2015-07-17 07:29:45,"Hi @jonatasleon. New translations are most welcome! Just follow the structure of our other translations; https://github.com/futurice/android-best-practices/tree/master/translations and create a pull request so we can merge it once you are finished. Thanks for your interest!
+",peter-tackage,jonatasleon
+67,2015-08-09 10:36:45,"Created pull request with complete translation to Russian, including data storage section.
+@mike-stetsenko Article on habrahabr.ru has several misleading/wrong translations.
+",iverc,mike-stetsenko
+67,2015-08-12 14:36:23,"@mike-stetsenko  I didn't use that text to write my translation, but thank you for your advice. I will surely inform the author of article on habrahabr about his errors.
+",iverc,mike-stetsenko
+61,2016-06-18 13:29:33,"@jkdf2 Is this the single change to ""take"" vs ""make"" a decision? If so, rebase and I'll merge. 
+",peter-tackage,jkdf2
+49,2015-03-18 08:43:49,"I updated this PR to solve the main problem while keeping the build file simple. It seems we can't avoid the try-catch, but we don't have to throw exception (break the build) in catch; we can also just print a message.
+
+What do you think? @staltz @peter-tackage Feel free to tweak any wordings etc.
+
+(Or if you prefer a new clean branch & PR for this approach, just let me know.)
+",jonikarppinen,peter-tackage
+49,2015-03-18 08:43:49,"I updated this PR to solve the main problem while keeping the build file simple. It seems we can't avoid the try-catch, but we don't have to throw exception (break the build) in catch; we can also just print a message.
+
+What do you think? @staltz @peter-tackage Feel free to tweak any wordings etc.
+
+(Or if you prefer a new clean branch & PR for this approach, just let me know.)
+",jonikarppinen,staltz
+49,2015-03-18 10:29:54,"@staltz Switched to `logger.warning()`.
+",jonikarppinen,staltz
+49,2015-03-18 11:26:02,"@peter-tackage shall we merge?
+",staltz,peter-tackage
+48,2015-07-11 06:27:54,"@AizazAZ  Why so difficult setup for memory management? 
+
+So far there is no need to such complicated means. I suggest instead of your approach to track down memory leaks. Square has invented an excellent tool for this case. Take a look on this [leakcanary](https://github.com/square/leakcanary).
+",tomkoptel,AizazAZ
+42,2015-02-13 15:16:19,"Thanks @minsoopark !
+",staltz,minsoopark
+37,2014-12-17 13:32:42,"Hi @hkurokawa 
+
+> My current opinion is that it would be better to organize classes based on the screens they are related to.
+
+We have done both approaches: organizing classes by domain purpose, or organizing by type. We generally tend to organize by type (fragments together, adapters together), because it encourages us to write DRY code instead of just copy-pasting from one domain problem to another.
+",staltz,hkurokawa
+37,2014-12-18 03:33:49,"@staltz Thank you for your answer.  I see.  It is very likely that many fragment-specific or adapter-specific utils are created and I agree with you that it is better to put them into a package.  As I haven't yet met such problems so far, the knowledge was very helpful.
+
+Many thanks.
+",hkurokawa,staltz
+28,2014-11-21 09:52:28,"Hi @kaushikgopal , yes you are right, and we were anyway thinking of doing a ListView (or RecyclerView) in the template. We also want to change the API resource, probably we will build something on the Wikipedia API which is quite good for demonstrations and templates.
+",staltz,kaushikgopal
+27,2016-06-18 12:09:05,"@kaushikgopal It's been a while, but to answer your questions. Yes, we would recommend using `TestScheduler` and also `TestSubscriber` when testing apps written with Rx.
+
+For example, when testing MVVM we do the following when unit testing the ViewModel:
+- Keep ViewModel free of Android dependencies.
+- Mock collaborators using Mockito.
+- Use `TestScheduler` instances.
+- Test the ViewModel public API using `TestScheduler`, avoiding testing internal implementations.
+
+Using Blocking Observable for testing is flawed because the time based operations can't be accelerated. The unit test below will take an hour to run, which not ideal!
+
+
+
+I'm writing some articles at the moment that go into a bit more detail.
+",peter-tackage,kaushikgopal
+27,2016-06-19 16:03:40,"@kaushikgopal another issue with ``toBlocking` except the one that @peter-tackage mentioned is that you are prohibiting yourself from using `TestSubscriber`. Of course, the verification part in cool but without `TestSubscriber` one cannot easily test for backpressure support of your Observables.
+",jaggernod,kaushikgopal
+27,2016-06-19 16:03:40,"@kaushikgopal another issue with ``toBlocking` except the one that @peter-tackage mentioned is that you are prohibiting yourself from using `TestSubscriber`. Of course, the verification part in cool but without `TestSubscriber` one cannot easily test for backpressure support of your Observables.
+",jaggernod,peter-tackage
+26,2015-06-18 08:04:20,"I agree with @pimterry that Guava is not an issue. It offers a lot of goodies, which simplify development and I used for a lot of projects - the code become clearer with it (if use it reasonably of course). Maybe when we will have Java 8 Streams we can avoid Guava. 
+With the help of ProGuard and now Multidex support 65K will not be an issue.
+I posted a question more than two years ago on stackoverflow: http://stackoverflow.com/questions/14978699/is-it-a-good-idea-to-use-google-guava-library-for-android-development   about the same issue.
+",AlexanderKaraberov,pimterry
+25,2014-11-07 09:03:42,":+1: @recuutus could you send a PR with these advices added into the ""libraries"" section?
+",staltz,recuutus
+16,2014-11-03 09:34:48,"Confirmed that this is working. Thanks @recuutus :+1:
+",staltz,recuutus
+12,2014-11-21 09:50:30,"Hi @kaushikgopal I added some content about event buses in this commit: https://github.com/futurice/android-best-practices/commit/af80048afa4ca920f9b73c3a4a31e3454c01ff8b
+
+There's one solid project in our company that was built with greenrobot's EventBus, and it worked out well. But in general we tend to prefer an Rx-based architecture, which can have or not an Event Bus for communications. We let the developer choose.
+",staltz,kaushikgopal
+10,2014-10-29 16:42:42,"@jacobtabak I agree 100%. 
+
+This section sounded like it was written by the dev who wrote the Android Plugins for Eclipse. 
+Fragments are powerful and flexible no doubt. But they should not be seen as a silver bullet for every UI.
+",Wapples,jacobtabak
+10,2014-10-29 17:25:20,"Thanks @jacobtabak for the ""other side of the coin"" type of feedback. A couple of developers from our company gathered to discuss how a typical app should be structured, and we converged on a Fragment-based architecture. This is not to mean it's a silver bullet for every situation, and it's true the advice can be misleading. 
+
+The whole Activities vs Fragments vs custom is a hot debatable issue in the Android community, so we try to give a ""good enough"" starting point for new developers. We'll talk about this internally in our company, but we're open for PRs and suggestions on what to advise. 
+",staltz,jacobtabak
+9,2016-06-18 13:47:16,"@Diolor - I'm not sure why we didn't merge this at the time, but it looks like ViewServer has been superseded by [Hierarchy Viewer](https://developer.android.com/studio/profile/hierarchy-viewer-setup.html) for modern (ICS+) devices. If you'd like to update the PR to remove the ViewServer reference and recommend Hierarchy Viewer instead, I'd be happy to merge.
+",peter-tackage,Diolor
+9,2016-06-18 15:50:02,"@peter-tackage I assume this didn't get merge because the repo was best practices by only Futurice employees. I will just close this PR.
+",Diolor,peter-tackage
+130,2016-11-24 21:21:12,"@josejavier @pabloper @AlejandroHCruz In the interests of not leaving this in review for too long, I've just merged this - if there's any issues they can be reworked via PR.",peter-tackage,pabloper
+129,2016-11-06 18:13:15,@futurice Hey there! I have added best practices on asserting Android specific components in Android tests. Let me know what you like and your reasoning if you don't. Thanks!,KevinLeighCrain,futurice
+126,2016-10-16 23:16:59,"@khuongdv : Thank you for your comments. 
+1. In the translation, for common phrases or words, I have already left as the original version or give both Vietnamese and English phrases. For example, I have put the original sentence""best practices ... "" in brackets in addition to Vietnamese translation.
+2. I agree that is your personal feeling. However, this is really useful for many new developers in Vietnam. 
+@peter-tackage : Thank you for your feed back. Hope that it is helpful.
+",quangctkm9207,khuongdv
+118,2016-10-02 21:13:37,"@ryanwholey @rwholey-eb Your changes are fine, but this section has been updated in the other PRs, so there's a conflict to be resolved.
+",peter-tackage,rwholey-eb
+101,2016-06-18 13:01:51,"Thanks @tremerhl. Could you please make this just the Russian language changes (without the changes to the English language version).
+",peter-tackage,tremerhl
+99,2016-02-23 11:56:54,"Agreed @brave-warrior. This has been on my backlog for a while as the landscape has certainly changed since the initial version of this document.
+",peter-tackage,brave-warrior
+99,2016-02-23 12:13:20,"As a brief summary of my thoughts how to write tests:
+- Minimize explicit Android dependencies in your code through abstraction and separation of concerns. Android dependencies require you to use instrumentation tests, which are considerably slower than strictly Java (JVM) based tests.
+- Start with unit tests, driven by JUnit4.
+- Use Mockito for mock definitions
+- Use descriptive names for the unit test to aid in defining expected behavior.
+- Use good test structure: Arrange, Act, Assert.
+- Separate arrangement definitions into an ""arrange builder"" to improve test readability.
+- Use AssertJ for assertions.
+- Add integration and UI tests once their business value is justified.
+- Use PowerMock for mocking statics and final classes as a last resort.
+- Be aware that pure Java unit testing has its limits, and that writing specific Android tests still remains important in some cases - for example; database handling.
+
+@tomaszpolanski might have some input here too.
+",peter-tackage,tomaszpolanski
+99,2016-06-18 12:21:14,"@brave-warrior I'll be progressing the testing section update under #114 
+",peter-tackage,brave-warrior
+96,2016-01-13 21:42:17,"Yeah, what I did is a minimal change, just getting rid of the need for manual search, without changing stylistic conventions.
+
+I did consider adding subheaders, and for some parts ([Use styles](https://github.com/jonikarppinen/android-best-practices/blob/toc-links/README.md#styles), [colors.xml](https://github.com/jonikarppinen/android-best-practices/blob/toc-links/README.md#colorsxml)) it would definitely work & improve the structure. But in a way I like how some of the linked items—[like this](https://github.com/jonikarppinen/android-best-practices/blob/toc-links/README.md#methodlimitation)—now look (readability-wise); not sure if those would be better if the bold first sentence was turned into a subheader.
+
+The anchors aren't exactly _random_ btw, any more than the summary & text themselves. ;)
+
+I'd go with this for now, later adding finer-grained headings if someone's up for it. @peter-tackage, @staltz, any opinion?
+",jonikarppinen,peter-tackage
+96,2016-01-13 21:42:17,"Yeah, what I did is a minimal change, just getting rid of the need for manual search, without changing stylistic conventions.
+
+I did consider adding subheaders, and for some parts ([Use styles](https://github.com/jonikarppinen/android-best-practices/blob/toc-links/README.md#styles), [colors.xml](https://github.com/jonikarppinen/android-best-practices/blob/toc-links/README.md#colorsxml)) it would definitely work & improve the structure. But in a way I like how some of the linked items—[like this](https://github.com/jonikarppinen/android-best-practices/blob/toc-links/README.md#methodlimitation)—now look (readability-wise); not sure if those would be better if the bold first sentence was turned into a subheader.
+
+The anchors aren't exactly _random_ btw, any more than the summary & text themselves. ;)
+
+I'd go with this for now, later adding finer-grained headings if someone's up for it. @peter-tackage, @staltz, any opinion?
+",jonikarppinen,staltz
+83,2015-11-12 05:40:37,"Hello @santong !
+
+So far ""standard"" architecture may be called MVP(Model View\* Presenter). Where is View stands more for a combination of contract interfaces that are also known as View Interfaces. Summing up, in Android environment mentioned stack treated more as MViVP(Model View Interface View Presenter).
+
+For more details take a look at [nice article](http://blog.sqisland.com/2015/11/mvp-missing-link.html) of @chiuki 
+
+In her article, she mentioned [Android lab](http://www.code-labs.io/codelabs/android-testing/#4) which in some extent can be treated as suggested or, maybe, an official architecture for majority apps.
+",tomkoptel,chiuki
+75,2016-02-28 20:25:02,"I would suggest the following:
+- id should contain the prefix of the layout in which it exists. For example, inside the layout _activity_auth.xml_ all ids of controls will start with _activity_auth_;
+- id should contain clear description of the control and what it does. Like _connect_options_, _user_name_ etc.;
+- each id should have a suffix which defines the type of the control. For example, _btn_ for the Button (like _activity_auth_connect_btn_). 
+
+Like in any framework some controls become deprecated, another controls are introduced. That's why there is a sense to define the following basic suffixes for the controls:
+- _btn_ - button control (Button, RadioButton, ImageButton, CheckBox, custom button)
+- _txt_ - TextView control
+- _input_ - EditText or any input related control
+- _list_ - for list control (ListView, GridView, RecyclerView)
+- _selector_ / _spinner_ - for Spinner control
+
+I use such naming rules for a while and think they are quite convenient. They give an opportunity not to intersect ids between different layout. Also it's much easier to find related control by id inside the layout.
+
+@peter-tackage What do you think?
+",dkhmelenko,peter-tackage
+73,2015-08-05 11:03:47,"@aziflaj I have personally had good experiences with Schematic, hence mentioning it. I like that it is precompiled, as annotations are known to be slow on Dalvik. You can also easily inspect the resulting source code, which is just a typical ContentProvider. I did not try ProviGen yet, though it seems to be different in its approach of extending the library base classes.
+
+@tremerhl do you know how mature the Simple Provider is?
+",tehmou,tremerhl
+71,2015-08-12 12:00:29,"@tremerhl We just reviewed your translation and liked it, can you put it back?
+",phadej,tremerhl
+67,2015-08-12 14:13:55,"@tremerhl Why don't you write the author about it? He'll be very pleased and fix mistakes at once.
+Instead of this, you used his text and didn't inform him. Very nice
+",mike-stetsenko,tremerhl
+67,2015-08-12 15:18:20,"@tremerhl OK :thumbsup:
+",mike-stetsenko,tremerhl
+48,2015-03-05 08:16:37,"#################
+It's not regarding UI
+#################
+
+I am using Inheritance to release memory when my user leaves the UI. Here is what I am doing, you can hopefully get an idea of doing similar things with UI too. Please note that this approach can be drastically improved, waiting for some good suggestion :+1: 
+
+I have written an Interface in my AppContext that is Inherited from Application class.
+public class AppContext extends Application {
+private static List<IMemoryInfo> memInfoList = new ArrayList<AppContext.IMemoryInfo>();
+    public static abstract interface IMemoryInfo {
+        public void goodTimeToReleaseMemory();
+    }
+
+I have two static methods to register memory hungry activities.
+
+/**
+     \* 
+     \* @param implementor
+     \*            interested listening in memory events
+     */
+    public static void registerMemoryListener(IMemoryInfo implementor) {
+        memInfoList.add(implementor);
+    }
+
+
+
+Then I have a method that is called when the user Leaves the UI, it's different than on Pause(  )
+
+@Override
+    public void onTrimMemory(int level) {
+        super.onTrimMemory(level);
+
+
+
+Then I have an activity parent
+
+public class ActivityParent extends Activity implements AppContext.IMemoryInfo 
+protected ActivityParent child;
+
+@Override
+    public void goodTimeToReleaseMemory() {
+        Log.w(TAG, ""Low Memory, Relase Now !!!"");
+    }
+
+
+
+These just some code snippets for grasping the concept, I have also code here to show and hide dialog, dialog creation is expensive operation so I just keep them when I create one.
+
+You might be interested in ""Fast Rendering News Feed on Android"" https://code.facebook.com/posts/879498888759525/fast-rendering-news-feed-on-android/
+",AizazAZ,Override
+48,2015-03-05 08:16:37,"#################
+It's not regarding UI
+#################
+
+I am using Inheritance to release memory when my user leaves the UI. Here is what I am doing, you can hopefully get an idea of doing similar things with UI too. Please note that this approach can be drastically improved, waiting for some good suggestion :+1: 
+
+I have written an Interface in my AppContext that is Inherited from Application class.
+public class AppContext extends Application {
+private static List<IMemoryInfo> memInfoList = new ArrayList<AppContext.IMemoryInfo>();
+    public static abstract interface IMemoryInfo {
+        public void goodTimeToReleaseMemory();
+    }
+
+I have two static methods to register memory hungry activities.
+
+/**
+     \* 
+     \* @param implementor
+     \*            interested listening in memory events
+     */
+    public static void registerMemoryListener(IMemoryInfo implementor) {
+        memInfoList.add(implementor);
+    }
+
+
+
+Then I have a method that is called when the user Leaves the UI, it's different than on Pause(  )
+
+@Override
+    public void onTrimMemory(int level) {
+        super.onTrimMemory(level);
+
+
+
+Then I have an activity parent
+
+public class ActivityParent extends Activity implements AppContext.IMemoryInfo 
+protected ActivityParent child;
+
+@Override
+    public void goodTimeToReleaseMemory() {
+        Log.w(TAG, ""Low Memory, Relase Now !!!"");
+    }
+
+
+
+These just some code snippets for grasping the concept, I have also code here to show and hide dialog, dialog creation is expensive operation so I just keep them when I create one.
+
+You might be interested in ""Fast Rendering News Feed on Android"" https://code.facebook.com/posts/879498888759525/fast-rendering-news-feed-on-android/
+",AizazAZ,param
+12,2014-10-29 22:14:27,"I did! and looks pretty amazing. I remember seeing a very similar approach by @tehmou in the project https://github.com/tehmou/rx-android-architecture. I'm gathering some thoughts, ideas on that approach too.
+
+That being said, my intention was to point out the use of the ""event bus"" as a concept for communication rather than the use of the library RxJava. Sure RxJava could be used for the purpose of an event bus, but it would be interesting to call that out in the best-practices document (if that really is a practice observed at Futurice). Though the easiest implementation of an event bus is probably using Otto or similar.
+",kaushikgopal,tehmou
+6,2016-01-31 18:47:42,"I believe this issue can be closed . I notice all the links are now clickable after #96 commit was made.
+Good work @jonikarppinen 
+",jeradgodreault,jonikarppinen
+2,2014-08-07 12:01:48,"Maybe @markvoit or @jonikarppinen or both could share a few sentences about Proguard on the README.md ?
+
+The idea isn't an introduction or tutorial-ish, but really advices coming from battle experiences. That's all what's needed. 
+",staltz,markvoit
+2,2014-08-07 12:01:48,"Maybe @markvoit or @jonikarppinen or both could share a few sentences about Proguard on the README.md ?
+
+The idea isn't an introduction or tutorial-ish, but really advices coming from battle experiences. That's all what's needed. 
+",staltz,jonikarppinen

@@ -1,0 +1,1449 @@
+issue_num,datetime,body,login,mention_login
+855,2017-03-01 13:34:41,"@matt- Those are just `...`, not  
+<div style=""background:red"">
+## x
+</div>
+.
+
+<div style=""background:red"">
+## x
+</div>
+
+.
+```
+yields
+![4](https://cloud.githubusercontent.com/assets/1230531/23461790/9dc2f4ec-fe8b-11e6-96bc-b2b687b0def0.png)
+
+This behavior looks wrong to me. Am I missing anything obvious?
+",nerai,matt-
+852,2017-02-09 22:03:16,"@matt- Yeah, I can add a test for it.",jeremyblalock,matt-
+852,2017-02-10 18:27:42,"@matt- I updated the invalid link test / added a new one for the `decodeURIComponent` failure. 
+
+On another note, noticed that we are not quite following the recommended test setup as described in the documentation, though. I don't see `links.sanitize.html` in `tests/new`. And so when you run `node test --fix` it will delete this test case, which I'm guessing is not the desired behavior. Are we ditching the `test/original` / `test/new` structure in favor of just putting everything in `/test/tests`? Let me know, I can move the files around if necessary get the `node test --fix` working properly.",jeremyblalock,matt-
+852,2017-02-28 23:35:35,@matt- @chjj: any decision on this? This will produce the same behavior that github has in their markdown rendering support for data: urls.,jeremyblalock,matt-
+844,2017-02-14 01:04:21,"Heya @matt- 
+Can we expect a version bump out soon? We're interested in this fix and would like to avoid depending on a specific github commit if possible. ;)  ",paulirish,matt-
+756,2016-06-12 10:47:46,"@chjj Hey Jonathan, thanks a lot for your input. I know it can be hard to let go - I've been there. But it's not that you forgive your rights as the original author and repo owner. You still get the email for the PR and if something is not going the way you want it you can just speak up. By adding other contributors you will just share the load on the easy stuff. You can still veto bigger changes. Best case you got some contributor growing to understand the all the details of the code base. Just give it a leap of faith.
+
+And all is better than not fixing the security issue like it at the moment. So having at least one more contributor that also has access to npm would be fantastic.
+",tcurdt,chjj
+756,2016-06-13 10:34:43,"@chjj It's great that marked won't die. How will you choose maintainers? Public vote for them? Or your personal choice? 
+",lgg,chjj
+756,2016-06-14 21:21:40,"Hi @chjj,
+I submitted https://github.com/chjj/marked/issues/592 and would be happy to contribute a maintainer.  I am currently working for a security company building runtime data flow analysis in Node. I think I would be able to contribute. 
+",matt-,chjj
+756,2016-06-16 17:14:25,"I feel like given the popularity of `marked` we should definitely keep the project going and at least keep it maintained and suitable for use in other important projects!
+As for me I would be glad to help tidy up the issue list, review and merge pull requests, and work out some fixes as well (I have a pretty good understanding of most of the code by now).
+Many issues need to be closed or tagged, important fixes must be applied (e.g. the one by @matt-).
+
+There are also some feature requests that are legitimate but I am unsure whether they should be included in marked. I feel like we should set some guidelines about philosophy and future development.
+_For example_, what to do about automatically generated IDs for headers ( #664 ), inline links with parenthesis ( #619 #448 ), github task lists ( #689 )...
+
+We would also appreciate some kind of comment from @ChrisWren since he's been a maintainer for a long time. He's been pretty inactive on Github for a while so we'd understand if he is busy at the moment. Just givin' him a shout out.
+",Feder1co5oave,matt-
+756,2016-07-07 07:27:19,"@chjj Hey Jonathan, could you? Please.
+",tcurdt,chjj
+756,2016-07-07 22:55:23,"I've added @matt- and @parleur as contributors. Thank you guys for stepping up. This repo needs maintenance. Once we get something going here we can get a better idea of where the project is headed. You guys have full authority for merging PRs. Any major features (i.e. new syntax) should be thoroughly discussed in PRs first. I'll try to keep my eye on PRs that propose any new features and give my input, but I don't think I should be a dictator of this project anymore.
+
+I will be here to publish new versions in NPM once they're tagged.
+
+I apologize to everyone for the stagnation of this project over the past several months. I think we can pick up where I left off though.
+",chjj,matt-
+756,2016-07-07 23:19:44,"@chjj thanks. and awesome work on this library so far
+",SimonCropp,chjj
+756,2017-02-21 23:10:26,@chjj won't version bump or push out the currently merged stuff (including security issues). Our hands are tied. ,matt-,chjj
+756,2017-02-21 23:29:03,I guess having someone else being able to push to npm is more important than having access to this repo. Maybe @chjj could just do that?,tcurdt,chjj
+727,2017-02-21 23:22:20,@matt- you're right. @chjj seems to only works on [bcoin](https://github.com/bcoin-org/bcoin) now. That's why is switched to [markdown-it](https://github.com/markdown-it/markdown-it) instead. That is active and support [CommonMark](http://commonmark.org/).,noraj1337,matt-
+659,2015-09-11 07:25:33,"@chjj Could you please provide a reference? For me this seems to be not deprecated (e.g. on [HTML5 Spec](http://www.w3.org/TR/html5/browsers.html#valid-browsing-context-name-or-keyword) or [W3Schools](http://www.w3schools.com/tags/att_a_target.asp).
+
+Well of course there are lots of use cases where you want to open specific links (e.g. that were rendered via marked) in a new tab. For example I'm currently building a webapp where informations about documents are shown. These informations are written in Markdown and parsed with marked. However, if the user clicks on a link in the informations about a document he just wants to open that link in the foreground but don't want to leave the app completely (because he may want to open multiple documents). So in fact, this is a very important standard for me and I think for other too.
+",julmot,chjj
+659,2015-11-13 15:09:03,"@chjj 
+",julmot,chjj
+659,2017-01-18 03:37:30,"So, I need this and will be manually pulling code from this PR into a project.
+
+@chjj, if you need another use case, here's one: I'm working on a Sandstorm app package. Sandstorm runs web apps in a sandbox, and restricts their behavior in the frame in which they live. External links *only* work in Sandstorm apps if they open in a new tab, therefore, all links for this app must have this behavior.
+
+Code I am integrating from a non-Sandstorm version of this app uses marked.js, so in order for their code to work correctly in the Sandstorm version, I need this option.",ocdtrekkie,chjj
+642,2015-08-19 22:54:40,"@chjj Please be careful reviewing such PRs that break backwards compatibility.
+If necessary, bump the minor or major version for npm package. This rule broke many headings for everyone doing `npm install` in the last week or so.
+",nilgradisnik,chjj
+642,2015-10-01 01:33:52,"@chjj please reconsider re-opening this issue. GFM does allow for `##Header` (though strangly not in comments) in repo content: https://github.com/bmneely/spartacus/blob/master/README.md
+",bmneely,chjj
+618,2015-07-15 23:02:53,"Thanks for the response @chjj!
+
+In my case, the ""else"" I have in mind is likely other Jupyter and IPython developers. We use `marked` and `term.js` for the IPython notebook which is used by lots of researchers, scientists, and data scientists the world over. We'd prefer to help with existing community packages instead of creating complete forks ourselves.
+
+At least for me, I think some mentoring time is useful. I can start learning more about profiling the current implementation as well as against, e.g. [commonmark.js](https://github.com/jgm/commonmark.js).
+",rgbkrk,chjj
+618,2015-07-23 21:13:34,"@chjj What do you think about @Pomax as an additional maintainer?
+",rgbkrk,chjj
+616,2015-07-31 09:30:27,"@papandreou, your PR caused 2 tests to fail. I've reverted it to the old rule changing `[\s\S]+` to `[\s\S]*` which passes your added tests.
+",chjj,papandreou
+616,2015-07-31 09:51:48,"@papandreou, I modified the old rule to allow no text within the code fences, so now the tests you added pass, along with all the others.
+",chjj,papandreou
+592,2016-01-25 20:47:37,"@matt- any recommendation for alternatives?
+",alexkravets,matt-
+592,2016-01-26 10:01:46,"@matt- thanks a ton!
+",alexkravets,matt-
+592,2016-04-27 13:24:39,"@matt- Remarkable looks great (very very clean) but it's about 6x the size of Marked.  For some use-cases (client-side) it seems like Marked would be preferable on those grounds (though for anything else I'm probably going to be using remarkable given the focus on performance).
+",developit,matt-
+592,2016-06-03 15:46:51,"@matt- I was able to reproduce this in indeed. I may have been confused due to the fact that post-process links and images, mitigating this issue.
+",mvhenten,matt-
+592,2016-06-03 15:49:57,"@matt- sorry I work with @mvhenten and we thought it was resolved but it was only not affecting us due to post-processing. This is still a valid issue. Thanks for the test cases. 
+",timjrobinson,matt-
+592,2016-06-07 16:41:03,"@matt- You said that you made a fork - have you published in on npm? I agree with you that this module should never be used for any project if it has such a poor record of dealing with security issues, but there are already 1600 modules on npm that depend on it and having a version on npm with your patch applied would make it possible to quickly fix them (and who knows how many other modules that depend on those 1600) with a simple change of `require('marked')` to `require('marked-secure')` (or however your fork would be named) as a temporary fix before they can all be updated to use better markdown parsers.
+
+Having a security vulnerability in at least 1600 modules on npm even though a fix has been available **for over a year** now but the maintainer can't be bothered to click a merge button is a serious problem. The project may be dead in a sense that its original author doesn't care about it any more but it's anything but dead when you consider its usage:
+![](https://nodei.co/npm/marked.png?downloads=true&downloadRank=true&stars=true)
+![](https://nodei.co/npm-dl/marked.png)
+It's being used all over the place - [including the official Node.js website](https://david-dm.org/nodejs/nodejs.org) - it has 1.5 million downloads per month and growing.
+
+I found out about this issue today by a coincidence because I saw **""dependencies: insecure""** badge in the [readme](https://github.com/nodejs/nodejs.org/blob/master/README.md) of the https://nodejs.org/ website's [GitHub project](https://github.com/nodejs/nodejs.org), which was linked to [the nodejs.org entry on david-dm.org](https://david-dm.org/nodejs/nodejs.org) that had a big red **""SECURITY VULNERABILITIES IN DEPENDENCIES""** and a link to the [marked content-injection advisory](https://nodesecurity.io/advisories/marked_content-injection) on the Node Security Platform - which in turn included a link to this very pull request. If I hadn't clicked that badge I would probably never know about any security problems with that module - I would certainly never go through all the issues and PRs to find this one or #724 and know that this projects is dead and insecure, because there is not even a hint about any problem with that module in its readme on GitHub and npm
+",rsp,matt-
+592,2016-06-12 11:23:10,"Especially @matt- please check out https://github.com/chjj/marked/issues/756
+",tcurdt,matt-
+592,2016-07-13 14:52:37,"@matt- now that you're a maintainer can you merge / release this please :)
+",timjrobinson,matt-
+592,2016-07-29 18:16:36,"No reason to keep delaying on this, please merge @matt-
+",STRML,matt-
+592,2016-07-29 20:06:47,"@matt- Can you `npm version patch && npm publish` yourself or does it still have to be done by @chjj? The version on npm is still 0.3.5 published 12 months ago: https://www.npmjs.com/package/marked
+",rsp,matt-
+592,2016-07-30 03:07:41,"That is all @chjj
+
+On Friday, July 29, 2016, Rafał Pocztarski notifications@github.com wrote:
+
+> @matt- https://github.com/matt- Can you npm version patch && npm publish
+> yourself or does it still have to be done by @chjj
+> https://github.com/chjj? The version of npm is still 0.3.5 published 12
+> months ago: https://www.npmjs.com/package/marked
+> 
+> —
+> You are receiving this because you were mentioned.
+> Reply to this email directly, view it on GitHub
+> https://github.com/chjj/marked/pull/592#issuecomment-236280610, or mute
+> the thread
+> https://github.com/notifications/unsubscribe-auth/AAbr4sQX5-C4C_BdSAvsUq5sjg32a6Tdks5qal1agaJpZM4Eg7pd
+> .
+
+## 
+
+../matt
+",matt-,matt-
+592,2016-07-30 03:10:54,"@matt-, published. Great work guys.
+",chjj,matt-
+587,2017-01-05 23:02:51,"I write my notes in [VS Code](https://github.com/microsoft/vscode) using markdown. Every time I go to make a task list I expect GFM behavior, but alas, it never works. I'd love for VS Code to change, but I think they've made [it clear](https://github.com/Microsoft/vscode/issues/2175) that they won't. The state of this project is making me sad. Come on guys, get your act together, be a man, pass the baton and let people help.
+@matt- @chjj @parleur ",richarddavenport,chjj
+587,2017-01-06 18:00:12,@matt- Good to see you approve this PR. What are the next steps to get this merged? Thanks!,styfle,matt-
+547,2015-05-20 06:08:47,"@chjj any comments on this?
+",sventschui,chjj
+535,2016-03-27 21:03:30,"@chjj 
+
+Apparently [Mou](http://25.io/mou/) does, but most that actually support this consider themselves derivatives AFAICT [1], like Kramdown and MultiMarkdown.
+
+[1] This was only from a simple Google search, BTW. I'm not _that_ aware of the likely hundreds of implementations out there.
+",isiahmeadows,chjj
+528,2016-12-03 23:40:46,"First, congrats for this wonderful library!
+
+@chjj @patrickarlt Is there some news on this issue?
+
+I also have identical `<h2>` names and then the anchor links #examples / id are not unique, that's a problem.
+
+",josephernest,chjj
+497,2015-07-29 09:41:43,"@chjj can you help us? also see https://nodesecurity.io/advisories/marked_redos
+",iamstarkov,chjj
+416,2014-05-09 07:25:31,"@scottgonzalez you mean insert `<span id=""CURRENT_POSITION"">` ? That would break the markdown in certain cases unless we have parser information.
+
+E.g.: code block inside ordered list:
+
+
+
+The only reasonable strategies I can see without parser information are:
+1. insert at cursor
+2. insert on beginning of previous line (column 1)
+
+But:
+1. breaks as it becomes literal `&lt;` in the output
+2. breaks because it generates 2 ordered lists instead of one
+
+With parser information, we could reach the ideal output:
+
+
+
+Do you see another insertion strategy without parser information that would work in this case?
+
+Perhaps it is better if we also consider cursor column position in case someone does `a<br>b<br>c<br>...`
+",cirosantilli,scottgonzalez
+398,2014-04-28 17:16:49,"@jonathanong component.json use to be the config file for bower project. So this component.json had something to do with bower. Now component.json are deprecated in bower.
+
+@queckezz What? Your PR are welcome ;-)
+
+@chjj @wzr1337 Here is a PR that should satisfy most of your users https://github.com/chjj/marked/pull/402
+
+Thanks for this cool stuff! marked rocks!
+",clakech,chjj
+398,2014-04-28 17:16:49,"@jonathanong component.json use to be the config file for bower project. So this component.json had something to do with bower. Now component.json are deprecated in bower.
+
+@queckezz What? Your PR are welcome ;-)
+
+@chjj @wzr1337 Here is a PR that should satisfy most of your users https://github.com/chjj/marked/pull/402
+
+Thanks for this cool stuff! marked rocks!
+",clakech,wzr1337
+389,2014-04-24 09:03:34,"@isaacs, this appears to be related to #381. I have the fix on a separate branch (da05668dddfb799e75696fa280687749ccbc8b50), but I'll probably merge it once I verify it doesn't hurt performance as much as I thought.
+",chjj,isaacs
+387,2014-04-22 12:28:06,"@scottgonzalez 
+
+I know what @saighost said. 
+
+try code below
+
+
+
+and your program would hang.
+",alsotang,scottgonzalez
+378,2014-12-19 22:58:25,"Just ran into this one too. @ianstormtaylor have you found a workaround yet?  Doesn't seem like this one's being actively maintained anymore. 
+",rymohr,ianstormtaylor
+371,2014-05-03 18:00:55,"Thanks for the feedback @chjj. As I mentioned in the pull request, I'm not looking to argue for or against the current behavior of fenced code blocks on GitHub, or the motivation for this behavior. However, I managed to convince myself that making this particular change in marked would be a Good Thing :tm:, so I'll try to convert you as well. :)
+
+If we were designing Markdown today, and if GFM was a part of core Markdown -- I'd agree that the decision would be arbitrary (and I wouldn't be making this PR). However, Markdown has been around for a while, and GFM is just an extension.
+
+Bolding is a part of core Markdown and users' expectations are based on the same behavior across multiple Markdown implementations. Implementing bolding in the way you ""suggested"" would be contrary to every other existing implementation, and would probably be surprising for users.
+
+In contrast, fenced code blocks are available only in GFM, and users set their expectations mostly based on what they see on GitHub. On GitHub, fenced code blocks behave as suggested in this pull request. So, I'd argue that this isn't an arbitrary decision, but rather a decision that makes marked match how GFM already works and meet users' expectations. 
+
+Adding a special `live_editing` mode option to marked (which would trigger a match-even-if-unclosed behavior for all Markdown and GFM features) would be an interesting idea, but also unrelated to the motivation for this change.
+",izuzak,chjj
+366,2014-05-15 12:19:37,"@chjj I think it's time to close this and just tell people to manually encode the URLs using `%29` instead of `)`.
+",scottgonzalez,chjj
+366,2014-05-15 13:02:08,"@scottgonzalez, I've told people that before. It doesn't seem very effective. This is probably the second issue on this. GFM does do it, and I think it's unintelligent, but I'll try it and see how it goes. Maybe it won't hurt performance much and I'll be okay with it despite disagreeing with it philosophically.
+",chjj,scottgonzalez
+366,2014-05-15 21:37:36,"You can't ask people to encode urls, because they simply copy and paste urls from the address bar of a browser. :-(
+
+-Filippo
+
+On May 15, 2014, at 2:19 PM, Scott González wrote:
+
+> @chjj I think it's time to close this and just tell people to manually encode the URLs using %29 instead of ).
+> 
+> —
+> Reply to this email directly or view it on GitHub.
+",dedalozzo,chjj
+365,2014-03-24 13:13:34,"@scottgonzalez Well, the source code of strictdown.js is very like marked.js', and better organized. So I think it is helpful for anyone who want to enhance marked or make his/her customed marked.js or the like.
+
+I must admit I want to let the community know my project. If anyone is not happy to see such advertisement, please just close it for any reason. ;-) I didn't tend to say much here.
+",jakwings,scottgonzalez
+359,2014-05-03 21:44:13,"@ChrisWren how would one get around the issue of Marked not allowing custom tags?  Is there a way that Marked could be extended to have an API for custom tags?
+",acao,ChrisWren
+351,2014-02-17 13:09:54,"Awesome @lepture, I would love this to be finished and pulled in. I began writing this myself a couple of days ago (see also https://github.com/chjj/marked/issues/27#issuecomment-34661022) but couldn't wrap my head around some of the stuff and gave up the first attempt (JS noob here).
+",prashaantt,lepture
+351,2014-02-20 03:05:33,"This would be amazing @lepture and @chjj, I would love for this feature to be added as well. 
+",contactjiayi,lepture
+351,2014-02-23 13:56:36,"Put up a branch and added a few fixes (footnotes weren't working for two different reasons). I still want to play around with it a bit more.
+
+cc @lepture
+",chjj,lepture
+351,2014-02-24 02:21:37,"@chjj There is still work to do with the footnotes rendering. For example, multiple lines of one footnote. We should unindent each line, and parse the footnote again.
+
+Here is what I did in the Python fork https://github.com/lepture/mistune/blob/master/mistune.py#L691
+",lepture,chjj
+351,2014-02-24 07:09:15,"@lepture, oh, this doesn't handle (unindented) multiparagraph footnotes? I had my own branch written that accomplished this in a really sloppy way, but when I saw your code I assumed you did it a little bit better. I'll push my other branch now.
+",chjj,lepture
+351,2014-02-24 07:58:11,"@chjj I did it in my Python fork. Seems your solution is better, I'll merge it into mine.
+",lepture,chjj
+351,2014-02-24 09:22:46,"@chjj Use `footnote_start` and `footnote_end` is a good idea. But I think my way is more elegant now. It looks like **parsing list item**.
+
+https://github.com/lepture/mistune/commit/a1f925e3e3f5adbfc6117981ea6d03949b789638
+",lepture,chjj
+351,2014-02-26 07:56:35,"@chjj I'll sort out it soon, and send you my patch. I've finished the Python fork, and it works well.
+",lepture,chjj
+351,2014-04-23 16:25:35,"Hello @chjj, @lepture, do you guys have any update on this?
+",prashaantt,lepture
+351,2014-04-23 16:25:35,"Hello @chjj, @lepture, do you guys have any update on this?
+",prashaantt,chjj
+351,2014-04-28 10:02:25,"Hi @chjj, @lepture, any plans to merge this into `master`? I'm using the `feature-footnotes` branch successfully. 
+",hugovincent,lepture
+351,2014-04-28 10:02:25,"Hi @chjj, @lepture, any plans to merge this into `master`? I'm using the `feature-footnotes` branch successfully. 
+",hugovincent,chjj
+351,2014-05-31 11:28:59,"In case anybody's interested, I just [pushed an update](https://github.com/prashaantt/marked/commit/dc4a06b4c80e05f6a5b59771c80f4a94e9352689) to my clone of the `feature-footnotes` branch that sacrifices performance and breaks marked's linearity but does get indented multi-para footnotes working correctly with inline Markdown parsing. It basically works, but is still nowhere near the full functionality as given [here](http://rephrase.net/box/word/footnotes/syntax/).
+
+I tried @chjj's `footnotes` branch that attempts to do this better, but ran into rendering issues. I would be delighted if it could be finished officially once @chjj can spare some time.
+",prashaantt,chjj
+330,2014-02-11 20:47:43,"@jasonkarns,
+
+> There's no downside for marked.
+
+To be sure. This is a philisophical decision over anything else. Which is why, if it does get added, it's going to be an option.
+
+> HTML5 specifies two serializations: the lax, non-well-formed HTML serialization that we all expect browsers to 'just deal with' (and they do); and the XHTML serialization.
+
+I already mentioned in my post that the HTML5 spec allows for useless trailing slashes. The ""just deal with it"" approach is anything but. The SGML DTD for all versions of HTML prior to 5, specified self-closing elements non-ambiguously.  This is what SGML DTDs are for. It wasn't nonsensical like you're trying to portray. In HTML5, they stopped using a DTD altogether and stopped being SGML based. So rather than being SGML-based (HTML 1-4), or XML-based (XHTML 1-2), HTML5 became its own beast, with a complete specification describing every self-closing element in detail. This way, no browser would ever have to parse an SGML DTD (no browsers were doing this anyway!). The natural conclusion was _always_ to stop being SGML and become its own markup language.
+
+> As an additional aside, rendering valid XHTML puts less pressure on whatever HTML parser is being used to consume the output. Sure, the HTML5 spec defines explicitly how certain elements should be parsed, but that then requires the HTML parser to 100% completely follow the HTML5 spec. If marked renders valid XHTML, then it completely avoids any potential bugs the HTML parser may have.  With the hundreds or thousands of different HTML parsers out there, this change simply 1) reduces the chances for bad parsing 2) increases the number of parsers that can consume the output (to include all XML parsers). All at the expense of just a handful of bytes.
+
+Sorry, do you have any sources to back this up? Modern HTML parsers parse according to the HTML5 spec. The trailing slashes aren't helpful at all. As soon as they tokenize the ""<img"" tag, it already knows the element will be self-closing. The trailing slash if flat-out redundant. This was the whole point of HTML5, to pragmatically address this stuff. If anything, the trailing slash will only slow down the parser by a microsecond or two. In fact, this isn't even specific to HTML5 parsers, _all_ HTML parsers that did not properly parse SGML DTDs (which was pretty much all of them) operated this way. A list of self-closing tags was hardcoded in the parser. There never was and never will be a need for the trailing slash in HTML.
+
+@Acubed,
+
+> HTML is XML is EXI is the DOM.
+
+HTML is not XML. Where are you getting this from? XHTML was a poor attempt at making HTML XML-based instead of SGML-based. XHTML failed for a number of reasons, the most apparent was lack of support, but the downsides of XML also destroyed XHTML's chances of ever becoming dominant: the lack of incremental rendering was a huge one.
+
+> They're all different encodings of the same DOM.
+
+Well, marked doesn't produce DOM, it produces markup, so this is irrelevant.  You could make a completely new markup language tomorrow that produces a DOM, should marked support it?
+
+> And because of this, some of us want to use XML tools to process our
+> documents. Some of us (me) want to embed HTML in XML - for instance, Atom
+> feeds.
+
+Also curious, why would you bother embedding HTML directly in Atom? Why not just use a `<![CDATA[]]>` declaration? That's what it's there for. Especially when you know that the HTML might not be well-formed (say you have an atom feed for blog posts and comments).
+
+Example:
+
+
+
+That isn't even a work around. That's just best practice in general.
+
+> It's also far simpler and more consistent: The HTML syntax: 141 printed pages The XHTML syntax: 7 printed pages Which do you suppose I prefer?
+
+What you just pointed out is one of the main shortcomings of XML - it uses a dumb parser that throws on any syntax error instead of gracefully handling errors like it should. HTML5 is smart enough to take the time to specify graceful error handling and soforth.
+
+Defending XHTML at this point is useless. You're defending something that does not support graceful error handling or incremental rendering. Why would you ever want that rendering in a browser?
+
+> XHTML is absolutely not dead
+
+Yes, it is.
+
+> see http://www.w3.org/TR/html-polyglot/ for instance
+
+I'm well aware of polyglot documents. As I stated before, I used to be an X-phile, who eventually switched to using polyglot, until I came to my senses when I saw no tangible benefit for either.
+
+> XHTML lets you use things like RDFa and add new features arbitrarily (especially with full namespace support - something hard-coded into the HTML syntax, prohibiting forward compatibility).
+
+A couple years ago, you would be arguing that XBL2 and SVG could be _only_ be used in XHTML, but that all changed. Many XML-based specifications have been ported to HTML. SVG can be embedded in HTML now for example.
+
+Right now, I guess the best you can come up with is RDFa.
+
+I'll tentatively implement this as an option, but I'm not sure it should be an option since it is trivial to implement yourself with the renderer.
+",chjj,jasonkarns
+330,2014-02-12 02:48:42,"@chjj If XHTML is so dead why does it have an entire section in the HTML specification? Right after and _equal to_ the HTML syntax? HTML parsing still involves building up a DOM, which means putting elements in the correct XML namespace. Whether you like it or not, writing HTML is functionally writing XML. All major Web browsers for _years_ have been able to incrementally render XHTML - again, it's just a DOM serialization.
+
+The difference is that XML as a syntax is consistent. It fails early and fails fast. It's portable. It's more accessible. It's more secure.
+
+For some applications, HTML is great. It's domain specific, so many features make it easier to write free-form for user input. For these cases, I parse the HTML, sanitize the tags, and export XML.
+
+But some users even still prefer Markdown - it's even easier to write free-form. So I hope that my Markdown parser outputs valid XML.
+
+`<img/>` is 100% valid HTML. I'd suggest using that syntax, especially considering that the syntax is a standards-track TR.
+",awwright,chjj
+330,2014-02-12 05:15:41,"@chjj http://www.w3.org/TR/html-polyglot/ remains unimplemented. It is a Web standard - farther along in the standards track than the current work on HTML, I might add. That, RDFa, XForms, and other XHTML technologies are not only under active development, but active adoption, by myself and others in Semantic Web technologies.
+
+""I don't/wouldn't use it"" is no excuse at all.
+",awwright,chjj
+310,2016-09-16 03:54:46,"@chjj is this resolved? I just pulled v0.3.6 but I'm still seeing:
+
+![image](https://cloud.githubusercontent.com/assets/8988697/18574885/52f8d64e-7b9f-11e6-83fd-c2b7992199ac.png)
+
+with this code:
+
+
+",skipjack,chjj
+307,2013-12-10 16:03:11,"@lepture Some of my pages refered to http://rawgithub.com/chjj/marked/master/lib/marked.js directly.
+The code changes as the file in `master` changes.
+Personally I hope it's stable in that branch, with correct docs in the README.
+",jiyinyiyong,lepture
+307,2013-12-10 16:05:40,"I think we should revert the addition of renderer to the master readme until the code is published to npm. The readme should reflect the latest version on npm.
+
+—
+Sent from Mailbox for iPhone
+
+On Tue, Dec 10, 2013 at 8:03 AM, 题叶 notifications@github.com wrote:
+
+> @lepture Some of my pages refered to http://rawgithub.com/chjj/marked/master/lib/marked.js directly.
+> The code changes as the file in `master` changes.
+> 
+> ## Personally I hope it's stable in that branch, with correct docs in the README.
+> 
+> Reply to this email directly or view it on GitHub:
+> https://github.com/chjj/marked/issues/307#issuecomment-30240140
+",ChrisWren,lepture
+307,2013-12-10 23:13:29,"@ChrisWren I disagree. The README of a given branch or tag reflects the state of the code in this given branch or tag. Thus, if this feature is in the master branch, it should also be documented in the master's README.
+
+What I think, though, is that the master branch should reflect the latest, stable, published version; i.e., the latest tag. But I have not looked at this project long enough to really know how development & release processes work here :)
+",tvooo,ChrisWren
+307,2013-12-11 03:02:03,"@jiyinyiyong You can't rely the stability on master branch. You can use a given tagged version.
+
+@ChrisWren I don't think master means that it is published to npm, that is tag's job.
+",lepture,ChrisWren
+307,2013-12-11 03:43:23,"@ChrisWren https://npmjs.org/package/marked  this is the latest readme on npm.
+",lepture,ChrisWren
+307,2013-12-11 04:45:07,"@lepture Yes, I will change my rawgithub like to the stable tag.
+Related topic https://github.com/isagalaev/highlight.js/issues/331#issuecomment-30288799
+
+@ChrisWren for me, 1) Official site, 2) README, 3) npm
+",jiyinyiyong,lepture
+307,2013-12-11 04:45:07,"@lepture Yes, I will change my rawgithub like to the stable tag.
+Related topic https://github.com/isagalaev/highlight.js/issues/331#issuecomment-30288799
+
+@ChrisWren for me, 1) Official site, 2) README, 3) npm
+",jiyinyiyong,ChrisWren
+302,2014-02-17 08:28:00,"@chjj I am wondering why you revert the changes.
+",lepture,chjj
+301,2013-12-05 16:54:14,"@chjj Would you mind creating a new version tag with this feature in it?
+",tvooo,chjj
+280,2013-12-12 02:11:24,"@Mithgol I just cloned the repo and pulled master branch (for some reason the “test“ folder was omitted in the tarball), and tests still fail:
+
+
+$ npm test
+
+> marked@0.2.10 test /Library/GitHub/.../repos/duh/node_modules/marked
+> node test
+
+#1. amps_and_angles_encoding.text completed.
+#2. auto_links.text completed.
+#3. autolink_lines.text completed.
+#4. blockquote_list_item.text completed.
+#5. backslash_escapes.text completed.
+#6. blockquotes_with_code_blocks.text completed.
+#7. case_insensitive_refs.text completed.
+#8. code_blocks.text completed.
+#9. code_spans.text completed.
+
+#10. def_blocks.text failed at offset 20. Near: ""<blockquote><p>hello</p></blockquote><hr><blockquo"".
+
+
+Got:
+<blockquote><p>hello</p></blockquote><hr><blockquo
+
+
+Expected:
+<blockquote><p>hello[1]:hello</p></blockquote><hr>
+
+
+#11. double_link.text failed at offset 46. Near: "":<ahref=""http://example.com/""><ahref=""http://example.com/"">h"".
+
+
+Got:
+:<ahref=""http://example.com/""><ahref=""http://example.com/"">h
+
+
+Expected:
+:<ahref=""http://example.com/"">http://example.com/</a>.</p><p
+
+#12. escaped_angles.text completed.
+#13. gfm_break.breaks.text completed.
+
+#14. gfm_code_hr_list.text failed at offset 352. Near: "">foo<code>bar</code>bar:</p><p>erbfoo</p></li></ol></li><
+
+
+Expected:
+>foo<code>bar</code>bar:</p><pre><codeclass=""lang-erb"">foo--
+
+#15. gfm_del.text completed.
+#16. gfm_em.text completed.
+#17. gfm_links.text completed.
+#18. gfm_tables.text completed.
+#19. gfm_code.text completed.
+#20. hard_wrapped_paragraphs_with_list_like_lines.nogfm.text completed.
+#21. horizontal_rules.text completed.
+#22. hr_list_break.text completed.
+#23. inline_html_advanced.text completed.
+#24. inline_html_comments.text completed.
+#25. inline_html_simple.text completed.
+#26. lazy_blockquotes.text completed.
+#27. links_reference_style.text completed.
+#28. links_shortcut_references.text completed.
+#29. list_item_text.text completed.
+#30. literal_quotes_in_titles.text completed.
+#31. loose_lists.text completed.
+#32. links_inline_style.text completed.
+#33. main.text completed.
+#34. markdown_documentation_basics.text completed.
+#35. markdown_documentation_syntax.text completed.
+#36. nested_blockquotes.text completed.
+#37. nested_code.text completed.
+#38. nested_em.text completed.
+#39. nested_square_link.text completed.
+#40. not_a_link.text completed.
+#41. ordered_and_unordered_lists.text completed.
+#42. ref_paren.text completed.
+#43. same_bullet.text completed.
+#44. strong_and_em_together.text completed.
+#45. tabs.text completed.
+#46. text.smartypants.text completed.
+#47. tidyness.text completed.
+#48. toplevel_paragraphs.gfm.text completed.
+#49. tricky_list.text completed.
+46/49 tests completed successfully.
+3/49 tests failed. 
+
+
+HEAD is abce5d0, and I can confirm your commit shows up in the log.
+",jcayzac,Mithgol
+234,2013-08-24 10:52:35,"@Mithgol do you mean something like this?
+
+
+
+That may work but it's like doing the job twice and could be done with few simple regex without the aid of another module e.g.:
+
+
+
+The feature is quite easy to implement, there are only few things to handle with tests, tests generation and benchmarks.
+Anyway thank you for the suggestion!
+",lpinca,Mithgol
+234,2013-08-25 09:04:16,"As i already told you on IRC, i agree with your point of view.
+`<!CDATA[...]>` should be the natural way to deal with this kind of problem, and yes it's doesn't have sense to add XML support only because a particular XML parser doesn't play well with `CDATA`.
+
+On the other side, alternatives offer the ability to render XHMTL:
+- [robotskirt](https://github.com/benmills/robotskirt) allows you to pass `HTML_USE_XHTML` flag to the HTML renderer
+- [markdown-js](https://github.com/evilstreak/markdown-js)'s README explicitly states that it has the ability to output both HTML and XHTML (i haven't tested it personally)
+
+I ended up using [robotskirt](https://github.com/benmills/robotskirt) for this particular project, but i will certainly use `marked` in a future project where XHTML will be not needed or `<!CDATA[...]>` will work as intended.
+
+Thank you @chjj.
+",lpinca,chjj
+227,2014-04-24 07:55:01,"@chjj I agree with @amitport. Could we have an option that turns only this single pedantic behavior on?
+
+Advantages of the original:
+1. simpler: to remember and implement on editors.
+   - original: always use 4 spaces
+   - Marked: look at the line above, and copy the number of character before the first char of the list.
+   
+   First person experience with implementing in Vim. 
+2. The only other major engine that behaves like this is Kramdown:  GFM, Multimarkdown, Pandoc, Redcarpet and markdown-js all follow Markdown.pl on this one.
+
+This means that people coming from other engines to Marked will have problems. Tested with https://github.com/karlcow/markdown-testsuite/pull/34
+
+Same discussion for Kramdown: https://github.com/gettalong/kramdown/issues/121
+",cirosantilli,chjj
+227,2014-04-24 08:59:08,"@cirosantilli, I realize people do sometimes only want certain aspects of original markdown behavior. The `pedantic` option might be my subconscious way of passively aggressively punishing users who want poor markdown behavior (""if you want some of the bad stuff, you might as well take all of it"").
+
+I do want to split `pedantic` up into smaller options, but at the same time I don't want marked to become a mountain of configuration. I'll think about it.
+
+As for making this the default, it will be hard to convince myself. I really really _really_ dislike the original markdown list behavior and I think it's counterintuitive. I'm willing to bet most people actually instinctively used marked-like list syntax for indentation when using markdown for the first time. I don't have any real evidence for this, but I don't agree when you say it's simpler.
+",chjj,cirosantilli
+214,2013-08-03 00:27:52,"@chjj Thanks for your input.
+I figured out after hours of working;
+Since I'm a beginner for your work, I refered
+**Usage**
+- Example using all options:
+
+as a result, I set `sanitize: true`
+
+Obviously, it's not rendered because it's setup so.
+I'm afraid to say this is so confusing for beginner even having read the document.
+I know this option is `false` as default, but most people would just follow the example usage like me.
+
+Anyway, thanks for your great work, and the support!
+",kenokabe,chjj
+202,2013-08-04 10:08:48,"@Mithgol, I meant the issue: #201.
+",chjj,Mithgol
+201,2013-07-19 08:28:20,"@Mithgol according to Markdown documentation there needs to be a space character after the `#`, not combined. Also GitHub doesn't render that as a heading.
+
+Edit: for the example I was using GFM's newline support so it renders to paragraphs
+",jorilallo,Mithgol
+201,2013-08-02 18:43:53,"@chjj @ilsken Just for the sake of arguments, has anyone ever really used markdown.pl? I would stick with the documentation (which states ""# heading"") and common sense but that's just me. Having #hashtags and @mentions is pretty common with services.
+",jorilallo,chjj
+201,2014-10-12 10:44:06,"Oh, thank you @Mithgol really simple and beautifull!
+",elennaro,Mithgol
+199,2013-09-14 16:41:16,"I like this idea. I submitted a PR #247 a few days ago adding custom header markup support, but this is more extensible as it applies to all token types. I am willing to help out to make this PR work as I really want custom header support to get GitHub hover links on headers. I am going to spend some time today looking at the source in reference to @chjj's comment.
+",ChrisWren,chjj
+199,2013-09-15 15:48:34,"As I understand from the source code, the highlight option is the only async option. It seems that async highlight is used after Lexer.lex to perform [additional token processing](https://github.com/chjj/marked/blob/master/lib/marked.js#L1085-L1098) before Parser.parse is called on the tokens. If async highlighting isn't enabled, [these lines](https://github.com/chjj/marked/blob/master/lib/marked.js#L857-L863) of code are executed to do synchronous highlighting in the Parser.
+
+@chjj is the idea that we would keep all the preprocessing synchronous and then see if the user is using the asynchronous version of marked when calling Parser.parse synchronously or asynchronously?
+",ChrisWren,chjj
+193,2013-08-17 16:47:35,"As @ChrisWren said, you should pass arguments with 3 arity in order to do asynchronous stuff. Take a look at an API here
+https://github.com/chjj/marked#markedmarkdownstring-options-callback
+
+
+
+I'm writing this because I've just got the same error and looked around docs and issues.
+",smagch,ChrisWren
+181,2013-08-04 11:45:13,"@jasonkarns, I guess I should make this clear in the readme: test/new is for any test that isn't part of the original markdown test suite. test/original is only for the original markdown test suite. test/tests is where they both reside after being combined (and the markdown test suite being slightly altered) via the `node test --fix` script. It's not a problem. I can fix it.
+",chjj,jasonkarns
+180,2014-03-07 17:51:18,"@marfarma : Makes sense. Changed.
+
+@nrolland @scottgonzalez  : My fault to bring up the ""currency"" issue. It's clearly off-topic and let's return to supporting mathjax correctly.
+",summivox,scottgonzalez
+173,2013-06-17 11:32:56,"@Mithgol yah, I saw #117 and #129 would provide the same functionality except it has been open for several months with a concern on performance. I would gladly take the small perf hit on parsing by using #129. The addition of a single ternary here gets me over the hurdle I am currently facing, the rest of the rendering intercepts would just be nice to have.
+",phiggins42,Mithgol
+170,2013-07-03 07:33:09,"@lepture, no, I see what he is saying. You can do it your way, but then you'd have to set it up, no? Especially with my project, I need it to be work natively or I'm most likely not going to support it.
+",OscarGodson,lepture
+167,2013-06-04 14:40:37,"@lepture Did Robotskirt considered this problem and added feature for it?
+Options about disabling the indentation syntax are not found in the repo of Robotskirt :(
+",jiyinyiyong,lepture
+163,2013-08-02 17:36:28,"@scottgonzalez, yeah I suppose if this is the reason @minrk started this issue in the first place. While the current behavior doesn't follow markdown.pl exactly, it does agree with html. I wouldn't feel comfortable implementating this anyway.
+",chjj,scottgonzalez
+163,2013-08-02 17:36:28,"@scottgonzalez, yeah I suppose if this is the reason @minrk started this issue in the first place. While the current behavior doesn't follow markdown.pl exactly, it does agree with html. I wouldn't feel comfortable implementating this anyway.
+",chjj,minrk
+150,2013-05-29 00:33:56,"@chjj Do you want to do anything here?
+",scottgonzalez,chjj
+148,2013-05-29 00:40:35,"@scottgonzalez, I just wanted @chjj's or someone else permission before doing so. I don't know @chjj enough to say whether or not he would care about something like this. Can I take your comment as permission?
+",paranoiacblack,scottgonzalez
+144,2013-03-29 14:42:36,"@lepture thanks, very interesting
+
+@Mithgol certainly the first thing that came to mind, if a bit inelegant
+
+@sudhirj thanks; that's a great insight; and if not that, I could at least use that knowledge together with the lexer/parser access to do something spiffy.
+",katowulf,lepture
+144,2013-03-29 14:42:36,"@lepture thanks, very interesting
+
+@Mithgol certainly the first thing that came to mind, if a bit inelegant
+
+@sudhirj thanks; that's a great insight; and if not that, I could at least use that knowledge together with the lexer/parser access to do something spiffy.
+",katowulf,Mithgol
+141,2013-03-30 18:00:22,"I don't disagree with the sentiment regarding using spaces in python, and
+the fact that spaces are treated as 8 characters rankles me, but I cannot
+force others using tabs to change. (oh how I wish I could)
+
+@chjj I ended up doing that replacement
+
+On Saturday, March 30, 2013, Hsiaoming Yang wrote:
+
+> @Niggler https://github.com/Niggler Makefile is fair. But you should
+> use tab in python, it is not pep8 compatible. I hate tabs in Python.
+> 
+> —
+> Reply to this email directly or view it on GitHubhttps://github.com/chjj/marked/issues/141#issuecomment-15677404
+> .
+",Niggler,chjj
+141,2013-03-30 18:08:03,"Also @chjj based on my cursory reading of the spec, the tab character isn't supposed to be replaced by spaces. Is it tradition or can you point me to a spec which does mandate it?
+",Niggler,chjj
+141,2013-03-30 19:37:05,"@chjj so it is tradition :)  I kinda wish the markdown spec would mandate it (unless you consider markdown.pl to be the normative implementation)
+",Niggler,chjj
+140,2013-05-29 01:17:09,"@scottgonzalez wanted the version from https://github.com/chjj/marked/pull/139 to be pushed
+",Niggler,scottgonzalez
+139,2013-03-17 03:53:44,"@chjj can you push this to npm as well?  
+",Niggler,chjj
+130,2013-03-01 11:48:14,"@Mithgol this is not a todo list.
+",lepture,Mithgol
+129,2013-03-11 14:42:08,"@lepture interesting your work :-)
+I did testing based on your code. But it's not working
+
+**on node v0.8.16 & browser too**
+
+
+
+And README.md example on `renderer` branch in your github repo too
+
+
+",rhiokim,lepture
+129,2013-03-12 09:44:17,"@lepture thanks :)
+",rhiokim,lepture
+129,2013-03-22 18:55:00,"@lepture, have you benchmarked this? I've considered this before, but the overhead of so many function calls scares me. It doesn't seem like it would be a lot, but when you're calling those functions several thousands of times, it can add a lot of overhead. It all depends on whether v8 does some kind of function inlining optimization there. If the benchmarks check out, I'll merge it.
+",chjj,lepture
+129,2013-03-23 02:19:19,"@chjj Yes, I did the benchmark, it is slower, but not much. The convenience worth it.
+
+Before this pull request:
+
+
+
+With this pull request:
+
+
+
+On my Macbook Pro. Node v0.10.0
+",lepture,chjj
+129,2013-03-26 02:41:52,"@chjj ping ...
+",lepture,chjj
+129,2013-03-27 02:09:28,"@lepture fenced code block is wrong?
+please check my code & result.
+
+ javascript
+var marked = require('./index');
+
+var renderer = new marked.Renderer();
+
+renderer.blockcode = function(lang, code) { <------- do not called
+  console.log('code language: %s', lang);  
+}
+
+var parse = function(src, options) {
+  options = options || {};
+  return marked.parser(marked.lexer(src, options), options, renderer);
+};
+
+console.log(parse(''));
+
+
+**result**
+
+
+",rhiokim,lepture
+129,2013-03-27 02:48:13,"@rhiokim Maybe we need a built-in API to make things easier. But this should be done when @chjj merged this feature.
+",lepture,chjj
+129,2013-03-27 05:11:27,"Thanks so much! @lepture 
+I watching this feature, It's very important thing for evolution markdown
+And I hope merging this :-)
+",rhiokim,lepture
+129,2013-03-30 16:16:32,"@chjj I will add span level API when you accept this feature. I am using the block level renderer right now in my project, it is useful (like `sundown` does).
+
+We can publish an alpha version in `npm`:
+
+
+
+And do some experiment in this alpha channel. If you accept this feature, I will add the span level API. We still have time to debug it.
+",lepture,chjj
+129,2013-03-30 16:33:55,"@lepture, it's not a matter of writing it. Again, it's a matter of performance. I'll mess around with it and see if I can get decent benchmark times.
+",chjj,lepture
+129,2013-03-30 16:36:38,"@chjj It will certainly be slower than the current one. You need to weigh the performance and the convenience and find out the balance.
+
+Wait for the news.
+",lepture,chjj
+129,2013-03-30 16:58:33,"> @chjj It will certainly be slower than the current one.
+
+Yes. It's a question of how much slower. That's what I want to check.
+",chjj,chjj
+129,2013-04-14 11:15:02,"ping @chjj 
+
+Any idea now?
+",lepture,chjj
+129,2013-05-23 01:24:12,"ping @chjj 
+",lepture,chjj
+129,2013-06-02 00:07:33,"@chjj that's a good news.
+",lepture,chjj
+129,2013-07-06 11:44:30,"@chjj 
+
+> Sorry for putting this on hold for so long. I'll merge and revise this tonight I think.
+
+Will this be merged ?
+
+ping ....
+",lepture,chjj
+129,2013-07-24 02:19:26,"After implementing marked into one of my projects, the need for this has come up multiple times (inline stuff, rel=nofollow and target+_blank etc). @chjj :+1: for merging, I hope marked moves forward.
+",jorilallo,chjj
+129,2013-11-26 14:54:42,"@chjj would you be kind enough to consider merging this? Or suggest some other way to customize the output. I was surprised to find that marked doesn't have that support and ultimately ended up on this thread.
+
+@lepture span level support would make this feature-complete. Looking forward to it. This is awesome, thanks.
+",aleemb,lepture
+129,2013-11-26 14:54:42,"@chjj would you be kind enough to consider merging this? Or suggest some other way to customize the output. I was surprised to find that marked doesn't have that support and ultimately ended up on this thread.
+
+@lepture span level support would make this feature-complete. Looking forward to it. This is awesome, thanks.
+",aleemb,chjj
+129,2013-11-27 12:59:20,"@lepture think you could implement the span-level features to make this feature-complete?
+",aleemb,lepture
+129,2013-12-03 10:17:12,"Close now.
+
+@chjj when you are ready to accept this feature, please tell me. I would send another pull request.
+
+For now. I am going to maintain  https://github.com/lepture/markit
+",lepture,chjj
+129,2013-12-04 05:42:14,"Yeah, well. This is me breaking out of my shell. I believe the thing that made marked successful in the first place was the attention put on speed. marked does so many weird optimizations that I'm worried only I understand (not because I'm smart, but because I wrote them and I do stupidly-designed optimizations that no sane programmer would do).
+
+This is the largest pull request I've ever accepted for marked. So while it's partially true that I've been busy with work and couldn't accept this PR, it's also partially true that I've trained myself to be hesitant about large PRs: I'm worried people may make changes without realizing they're overlooking some esoteric optimization. I wrote marked while running benchmarks after every single change to a line. If I lose a few milliseconds, it's a tragedy to me.  I've come to terms with the fact that a renderer is a good idea (much thanks to @lepture for his contribution). Hopefully we can do the same thing with the lexer(s) without too much overhead.
+
+I've also just added @ChrisWren as a core committer for documentation. It's been an eventful night for marked.
+",chjj,lepture
+129,2013-12-04 05:55:21,"@chjj I've already added renderer in InlineLexer. https://github.com/lepture/markit
+
+I think you shouldn't merge this patch. Maybe I can send you another clean one.
+",lepture,chjj
+129,2013-12-04 05:59:12,"@lepture, I imagine you would prefer that functionality to be handled by the renderer? We can remove it. Being that it was never officially released in an npm verson, we arguably don't have to maintain backward compat. Although, I do worry about a lot of people who simply grab the latest HEAD for their clientside app.
+
+Anyway, maybe we could open a new issue for this.
+",chjj,lepture
+129,2013-12-04 06:01:18,"@lepture, open another pull request for this and the inline renderer. I'll take a look.
+",chjj,lepture
+129,2013-12-04 06:02:11,"@chjj I will start it at https://github.com/chjj/marked/commit/77352ec9fc65ae0250c8eb52eaca3236e55f7d3b
+",lepture,chjj
+129,2013-12-04 06:24:57,"@chjj could you please create a new branch at https://github.com/chjj/marked/commit/77352ec9fc65ae0250c8eb52eaca3236e55f7d3b
+
+I will send it to this branch. The master branch is a little mess.
+",lepture,chjj
+127,2015-05-11 19:23:55,"Thanks, this is perfect. This should be in marked.
+
+@lepture I love the renderer, but couldn't figure out how to make this work without forking. Any thoughts?
+",gkoberger,lepture
+126,2013-03-02 05:53:37,"@lepture I initially considered using custom render functions, but decided against it for two reasons:
+- Performance/complexity cost of replacing existing code with configurable function calls
+- Defining the functions is more than the single line config setting I was looking for, especially when working with multiple types of link.
+",tqc,lepture
+116,2016-05-02 11:58:37,"@chjj There should be an option available to set custom classes on some elements.
+",julmot,chjj
+114,2013-01-22 20:26:13,"@chjj no, it is for wiki only. 
+
+I can understand your concern, and believe all github-specific (or other) features should be in a plugin. I added this feature just because it is stupid to parse the whole text myself.
+
+#35 also looks like good start.
+",hlb,chjj
+111,2013-11-01 02:35:14,"Hi @leeoniya , @chjj
+does this feature implemented?
+it's pretty useful.
+
+I think we can just render
+ `[ ]` to `<input type=""checkbox"" disabled>`
+and render
+ `[x]` to `<input type=""checkbox"" disabled checked>`
+
+don't need to add any css class on `input` element.
+
+how do you think?
+",kindy,chjj
+107,2014-02-26 06:02:58,"Added a rough implementation for task lists that's been sitting in my todo list file for several months. Let's see how it works on master for now.
+
+cc @OscarGodson @walterdavis @Mithgol
+",chjj,Mithgol
+107,2014-05-06 16:56:01,"@chjj What was the reason for the revert?
+",evanwon,chjj
+107,2014-05-21 15:24:33,"+1 for unicode characters rather than checkboxes (for renderer default behaviour). Anyone can customize it to add checkboxes with the current api
+
+
+
+@chjj Maybe the implementation makes more sense thinking on a inline level method rather than a block level method? I've noticed the check marks can be ommited on any list items:
+- [x] Completed
+- [ ] Not Completed
+- Not a task at all
+- [x] Another task
+- Not a task at all
+
+This leads me to think marked doesn't need a new inline level method at all, featuring an enhancement to the current block-level [`listitem`](https://github.com/chjj/marked#block-level-renderer-methods)
+
+`listitem(string text, undefined|bool check)`
+
+That is
+- `true` for `[x]`
+- `false` for `[ ]`
+- `undefined` if _""checkmark""_ is not present or `gfm` is disabled or `whatever-option` is disabled
+
+Does this make sense?
+",laconbass,chjj
+87,2013-01-08 12:31:02,"@chjj Reading the code of `marked.setOptions`, its goal is to replace the default. But it would be more logical to merge it with the existing one there (otherwise the function does not add any value over `marked.defaults = {breaks: true}`). Currently, setting some defaults this way requires merging manually otherwise all other features become disabled (as `undefined` is falsy).
+
+and calltime options have the same issue: the [code using them](https://github.com/chjj/marked/blob/master/lib/marked.js#L97) does not merge them with the defaults. As soon as you define 1 option, you have to pass them all as defaults are discarded
+",stof,chjj
+87,2013-01-08 23:33:40,"@chjj : Nice code rewriting ! :)
+The ability to access `marked.defaults` amongst others is really nice.
+
+But as for `setOptions()`, it's still useless in its current form.. :)
+I don't think there is a great deal of risk breaking old code that would have relied on it.. 
+_but_ i can think of code relying on its current state that may break in the future if you add new options and defaults in a future version.
+Let's imagine that in marked 2.8 you add a plugin mechanism to add/remove support for Markdown syntax variants, and that the current marked state is now defined with these defaults 
+
+
+
+Old code using `setOptions()` but ignoring these `plugins` defaults will erase them and may break..!
+
+That why _just merging_ the options passed as parameters with the currently defined ones makes it a safer/more usefull approach..
+
+(ok.. my example is _very_ contrived.. but you see what i mean.. :))
+",zipang,chjj
+77,2013-05-29 01:24:08,"@chjj What's holding this up?
+",scottgonzalez,chjj
+77,2013-08-20 13:30:26,"+1 for this issue would be nice to have support for this. By the way thanks for the great work @chjj !
+",lbdremy,chjj
+74,2013-01-03 12:28:09,"So, I spent a little while fixing/optimizing/refactoring @kitsonk's implementation a little bit. I'm going to consider this feature experimental for a little while. You can disable it with the `tables` option. @kitsonk, thank you for the PR.
+",chjj,kitsonk
+74,2013-05-01 10:10:52,"@kitsonk I mean through markdown so some tables will be rendered bigger or smaller depending on width % set?
+
+I am basically thinking how good this will be for writing documents that have tables in them.
+",hahmed,kitsonk
+74,2013-05-01 10:19:34,"It isn't part of the standard it is based on, and for good reason.  Hard coding presentation in the markup doesn't allow flexibility when it renders.  The only potential imrpovement would be to allow the specification of a class for a table, but again, none of the standards out there specify that, so I suspect @chjj wouldn't be interested in adding it, though there are some other issues here that talk about allowing some form of customisation of the output.
+
+You can always use `<table>` if you need more flexibility.
+",kitsonk,chjj
+70,2012-09-03 10:34:47,"@chjj it appears to be, I didn't realise that it was there myself until looking at some of the marking being parsed by GFM in my repo.  I will look though the GFM code and make my patch match exactly what is supported by GFM as well as link the support to the GFM being enabled or not.  I will take a look at your other feedback as well.
+
+The following tables are supported by Markdown Extra Tables and also appear to be supported by GFM:
+
+
+
+and
+
+
+
+Which unescaped appear as:
+
+| Heading 1 | Heading 2 |
+| --- | --- |
+| Cell 1 | Cell 2 |
+| Cell 3 | Cell 4 |
+
+and 
+
+| Header 1 | Header 2 |
+| --- | --- |
+| Cell 1 | Cell 2 |
+| Cell 3 | Cell 4 |
+
+And it appears that it supports the alignment as well:
+
+
+
+renders as:
+
+| Header 1 | Header 2 | Header 3 | Header 4 |
+| :-: | --: | :-- | --- |
+| Cell 1 | Cell 2 | Cell 3 | Cell 4 |
+| Cell 5 | Cell 6 | Cell 7 | Cell 8 |
+
+@gjtorikian the PHP implementation did not support it, only span based lexing, therefore my attempt did not include block lexing.  I will take a look at the GFM implementation, realising it is there now and if it is, add it.  The problem is that there appears to be no support in the PHP implementation to identify an individual row as a block, where each new line is treated as an individual row.  reStructuredText supports this, but I haven't found a markdown ""standard"" for this.
+",kitsonk,chjj
+67,2013-01-10 02:47:13,"Nice one. Thanks, @chjj.
+",davidchambers,chjj
+66,2013-01-23 02:39:56,"@chjj [PHP Markdown Extra](http://michelf.ca/projects/php-markdown/extra/#markdown-attr) supports it, so as [Maruku](http://maruku.rubyforge.org/maruku.html), [kramdown](http://kramdown.rubyforge.org/).
+
+It exists because authors need to wrap a text block to apply some special style, ex, 
+
+
+",hlb,chjj
+66,2013-07-10 06:24:04,"Being compatible with PHP Markdown Extra (and several other existing implementations of this feature) is more important than a semantically better attribute value.
+
+However, @chjj, I suppose you could support `markdown=""whatever""` and thus cover both cases: `markdown=""1""` (for the compatibility) and `markdown=""markdown""` (for XHTML flavour).
+",Mithgol,chjj
+50,2012-08-20 13:49:00,"Thank you @chjj, looking forward to see `marked` supporting tables.
+
+I will release today a webapp markdown editor that uses `marked` to supply a preview.
+",danielfilho,chjj
+47,2013-01-07 16:05:39,"@chjj Would you accept a pull request if I added implement the async API?
+",fortes,chjj
+47,2013-01-08 23:12:11,"@chjj I'll take a crack at it when I get some spare cycles, and you can see what you think. I'm not interested in maintaining a fork, so if it's not something that will go into master, I'll come up with another solution for [fortes/enfield](http://github.com/fortes/enfield).
+
+Great work on marked, btw. Easily the best of the node.js markdown parsers.
+",fortes,chjj
+44,2012-05-11 19:24:49,"@chjj FWIW. I agree with your opinion here on automatic link insertion for GitHub specific links. If this were implemented we would probably need to somehow work around it for EpicEditor since it is not designed to be used specifically with GitHub.
+
+RE: https://github.com/OscarGodson/EpicEditor/pull/105
+",johnmdonahue,chjj
+43,2013-04-07 02:43:24,"@lazerscience @theron17 the renderer feature would be a good choice. cc @chjj #129 
+",lepture,chjj
+43,2013-04-07 07:39:39,"@chjj Thanks looks promising, will look into that!
+",lazerscience,chjj
+35,2013-03-01 07:49:46,"@lepture I don't think these are the same - you are customizing the output for each instance of a particular match vs specifying a unique helper or plugin independent of existing markdown matches.  If I wanted to customize a heading, I'd use CSS. 
+",potench,lepture
+27,2012-02-08 21:46:06,"I most definitely respect @chjj's choice here to keep marked small. It's much better than the urge to say ""yes I'll do this.""...and then never do it.
+
+I, too, however, would like to see more Markdown extension features, particularly those of Maruku. To that extent I've [created a new repo](https://github.com/gjtorikian/namp) to port these into Node.js. It's empty now but I'll start porting to ""standard"" Markdown features soon.
+",gjtorikian,chjj
+27,2012-02-15 02:35:09,"@chjj I've started [my own fork](https://github.com/gjtorikian/marked) to hook into the core Marked lib. I think having a plugin system is neat, but just being able to extend it at all is a great asset. 
+
+I'd be curious to know what you had in mind. Mine is obviously vary naïve. 
+",gjtorikian,chjj
+9,2011-12-10 06:08:10,"@mikeal, it's on a separate branch right now. It will land in npm eventually.
+",chjj,mikeal
+5,2013-07-25 17:41:35,"Hey @pvorb @chjj do you guys have a working example of how to ignore blocks of HTML data?
+",matsko,chjj
+5,2013-07-26 08:15:09,"@matsko What do you mean with ""blocks of HTML data"". Only selected blocks? Comment them out:
+
+
+",pvorb,matsko
+5,2013-07-26 08:17:56,"@matsko Setting [`sanitize`](https://github.com/chjj/marked#sanitize) to true will ignore all HTML input.
+",pvorb,matsko
+852,2017-02-28 23:35:35,@matt- @chjj: any decision on this? This will produce the same behavior that github has in their markdown rendering support for data: urls.,jeremyblalock,chjj
+844,2017-01-25 01:26:00,@chjj  I added this along the same lines as the javascript: xss. Can we version bump and push this?,matt-,chjj
+844,2017-02-14 01:25:17,No idea thats up to @chjj. I personally would love to see a bump to get this resolved. ,matt-,chjj
+844,2017-02-14 02:39:08,"k. thank you!
+
+@chjj can you add the other contributors here to the npm package so they can publish as well?
+
+",paulirish,chjj
+815,2017-03-06 22:47:53,"The `marked.min.js` file should be updated very quickly. **This is a high priority issue**. I'm seeing **a lot** of FLOSS using this file without knowing that they are vulnerable to #592. This issue is creating potential XSS in all of them.
+
+Please @chjj update it!",Framartin,chjj
+809,2016-12-04 18:54:19,Any news about this @chjj ? This would be super useful.,josephernest,chjj
+768,2016-08-02 14:22:00,"@chjj @matt- @parleur - This very small pull request will help rid Ember.js of some deprecation warnings, any attention would be much appreciated 👍
+",mdentremont,matt-
+768,2016-08-02 14:22:00,"@chjj @matt- @parleur - This very small pull request will help rid Ember.js of some deprecation warnings, any attention would be much appreciated 👍
+",mdentremont,chjj
+768,2016-09-02 13:50:07,"@chjj @matt- @parleur any chance this could be looked at?
+",mdentremont,matt-
+768,2016-09-02 13:50:07,"@chjj @matt- @parleur any chance this could be looked at?
+",mdentremont,chjj
+768,2016-09-15 18:24:55,"@chjj @matt- @parleur This has been open and ready to go for months, could you please take a look and merge?
+",mdentremont,matt-
+768,2016-09-15 18:24:55,"@chjj @matt- @parleur This has been open and ready to go for months, could you please take a look and merge?
+",mdentremont,chjj
+768,2016-10-17 14:15:10,"@matt- Thanks! ..you know you wanna hit that green button now, don't ya!
+",mdentremont,matt-
+756,2016-06-02 09:13:56,"@chjj Seems that you're busy with other projects.
+
+This repo has so many open pull requests and if marked would die it would be very sad.
+So please announce that you want to add some active maintainers for this tool.
+
+@ChrisWren @Feder1co5oave @summivox
+What do you think?
+",timaschew,chjj
+756,2016-06-02 09:13:56,"@chjj Seems that you're busy with other projects.
+
+This repo has so many open pull requests and if marked would die it would be very sad.
+So please announce that you want to add some active maintainers for this tool.
+
+@ChrisWren @Feder1co5oave @summivox
+What do you think?
+",timaschew,ChrisWren
+756,2016-06-12 01:57:33,"Given @chjj does not respond to email, twitter or github mentions - does anyone know if Is there a process to take over the npm namespace somehow?
+",tcurdt,chjj
+756,2016-06-16 17:14:25,"I feel like given the popularity of `marked` we should definitely keep the project going and at least keep it maintained and suitable for use in other important projects!
+As for me I would be glad to help tidy up the issue list, review and merge pull requests, and work out some fixes as well (I have a pretty good understanding of most of the code by now).
+Many issues need to be closed or tagged, important fixes must be applied (e.g. the one by @matt-).
+
+There are also some feature requests that are legitimate but I am unsure whether they should be included in marked. I feel like we should set some guidelines about philosophy and future development.
+_For example_, what to do about automatically generated IDs for headers ( #664 ), inline links with parenthesis ( #619 #448 ), github task lists ( #689 )...
+
+We would also appreciate some kind of comment from @ChrisWren since he's been a maintainer for a long time. He's been pretty inactive on Github for a while so we'd understand if he is busy at the moment. Just givin' him a shout out.
+",Feder1co5oave,ChrisWren
+739,2016-04-25 13:34:03,"@chjj any comments?
+",Turbo87,chjj
+739,2016-05-12 16:42:20,"@chjj friendly ping
+",stefanpenner,chjj
+739,2016-06-11 10:47:33,"@chjj feel free to reopen once this repo is maintained again 
+",Turbo87,chjj
+739,2016-07-08 18:14:28,"@Turbo87 could we reopen this now that there are new contributors on this repo (@matt- @parleur)
+",mdentremont,matt-
+727,2017-02-21 23:07:17,"Project is dying (https://github.com/chjj/marked/issues/724), @chjj please add maintainers !",noraj1337,chjj
+727,2017-02-21 23:22:20,@matt- you're right. @chjj seems to only works on [bcoin](https://github.com/bcoin-org/bcoin) now. That's why is switched to [markdown-it](https://github.com/markdown-it/markdown-it) instead. That is active and support [CommonMark](http://commonmark.org/).,noraj1337,chjj
+724,2016-02-24 08:33:41,"Yeah I believ it myself, but I want a comment from @chjj 
+",Snorlock,chjj
+694,2016-03-28 11:04:38,"It would be very helpful to have RTL support in Marked. What do you think @chjj ?
+",KayvanMazaheri,chjj
+682,2015-11-15 18:55:10,"I agree with what @scottgonzalez said here: https://github.com/chjj/marked/issues/417#issuecomment-42740178
+
+I chose to return `null` instead of an empty string in order to let the user know there's a problem, and that it's probably his fault.
+
+The `TypeError` is still thrown if a user calls manually `Lexer.lex` and then `Parser.parse`, but I think it's her/his business at this point.
+",Feder1co5oave,scottgonzalez
+656,2015-09-04 12:20:22,"@chjj 
+First of all, thanks for this project!
+But it seems you don't have enough time for this project, 
+may be someone can help you maintain this project?
+",valorkin,chjj
+655,2015-09-08 07:58:25,"@chjj 
+",julmot,chjj
+655,2015-09-11 06:56:47,":+1: When will it be available @chjj?
+",julmot,chjj
+655,2015-09-17 15:34:19,"Push!? @chjj @drmuey 
+",julmot,chjj
+650,2015-08-24 14:09:35,"Since #66 has been opened for quite some time and hasn't received neither acceptance nor rejection, I've decided to create an updated PR that is compatible with the current version of marked.
+
+Credit  goes to @boomyjee, @davidchambers and @Mithgol
+",hgGeorg,Mithgol
+626,2015-07-21 17:56:24,"This is a meta-issue. As of 2015-07-21, there are 215 open issues and 96 (!) open PRs. @chjj, are you interested in community help with maintaining marked? Some good first steps might be setting up the repo on CI to attach test pass/fail reports to PRs, triaging open issues / PRs, closing old issues, and asking for more eyes and hands. I'm happy to help with any of the above if you'd like.
+",jsdnxx,chjj
+625,2015-07-16 22:31:47,"Hi,
+
+At the moment, in a code block, if you have:
+
+
+
+It gets turned into:
+
+
+
+Regardless of what `sanitize` is.
+
+In https://github.com/chjj/marked/issues/160#issuecomment-18611040 @scottgonzalez suggested:
+
+
+
+Is there a case were `<code>` blocks should actually be escaped like that, really?
+
+Shouldn't this be the default behaviour, without hacking?
+Sorry I would have reopened #160  but couldn't.
+
+Merc.
+",mercmobily,scottgonzalez
+619,2015-07-23 17:28:08,"I have no expectation that @chjj will ever fix this, but it's most a bug stems from a bad assumption in https://github.com/chjj/marked/blob/master/lib/marked.js#L467, which is terminal: unless someone introduces a ""respect nesting"" operator to JavaScript's RegEx engine, it is impossible to user regular expressions in a way that properly deals with blocks/nesting.
+
+(which is why we typically don't parse structure syntax with regex, but with tokenizers instead)
+
+I was thinking of trying to fix this, but ""fix"" in this case means ""write a new parser that doesn't rely on regex"", and that's not happening. So: if you need links in which the URI contains `()`, don't use marked.js
+",Pomax,chjj
+618,2015-07-12 19:50:37,"This package is great! It would be nice to see additional maintainers come aboard that can help triage existing issues and PRs. After filing my own PRs and issues (with no commentary), I've noticed that :new: PRs and issues have come up without resolution.
+
+Would there be a path for adding additional maintainers to this package to help with outstanding PRs or issues?
+
+I'm happy to help and fairly well versed in working with lots of collaborators to a project while applying the direction of a project as best I can (in this case, sticking to the [philosophy behind marked](https://github.com/chjj/marked#philosophy-behind-marked)). Please let me know if I or others can help!
+
+/cc @chjj @ChrisWren @minrk @jdfreder
+",rgbkrk,chjj
+618,2015-07-12 19:50:37,"This package is great! It would be nice to see additional maintainers come aboard that can help triage existing issues and PRs. After filing my own PRs and issues (with no commentary), I've noticed that :new: PRs and issues have come up without resolution.
+
+Would there be a path for adding additional maintainers to this package to help with outstanding PRs or issues?
+
+I'm happy to help and fairly well versed in working with lots of collaborators to a project while applying the direction of a project as best I can (in this case, sticking to the [philosophy behind marked](https://github.com/chjj/marked#philosophy-behind-marked)). Please let me know if I or others can help!
+
+/cc @chjj @ChrisWren @minrk @jdfreder
+",rgbkrk,ChrisWren
+618,2015-07-12 19:50:37,"This package is great! It would be nice to see additional maintainers come aboard that can help triage existing issues and PRs. After filing my own PRs and issues (with no commentary), I've noticed that :new: PRs and issues have come up without resolution.
+
+Would there be a path for adding additional maintainers to this package to help with outstanding PRs or issues?
+
+I'm happy to help and fairly well versed in working with lots of collaborators to a project while applying the direction of a project as best I can (in this case, sticking to the [philosophy behind marked](https://github.com/chjj/marked#philosophy-behind-marked)). Please let me know if I or others can help!
+
+/cc @chjj @ChrisWren @minrk @jdfreder
+",rgbkrk,minrk
+618,2015-07-15 18:28:01,"Three days and no answer... @chjj i think this is a great offer!
+",mercmobily,chjj
+616,2015-07-30 21:27:09,"@chjj I don't understand why the test suite [removes all whitespace before comparing the actual and expected output](https://github.com/chjj/marked/blob/master/test/index.js#L115-L116). As you can see from my fumbling around with these highly whitespace-sensitive fixes here, it would have been a great help if the fixtures were matched exactly, and it would also make the error messages from the test suite much more readable.
+
+I'll happily contribute a rewrite of the test suite in that direction if you're interested.
+",papandreou,chjj
+613,2015-10-01 13:48:15,"@chjj any opinion on this?
+",matthewp,chjj
+592,2016-07-08 20:44:12,"@chjj responded to a call for maintainers https://github.com/chjj/marked/issues/756 
+",mvhenten,chjj
+592,2016-07-29 20:06:47,"@matt- Can you `npm version patch && npm publish` yourself or does it still have to be done by @chjj? The version on npm is still 0.3.5 published 12 months ago: https://www.npmjs.com/package/marked
+",rsp,chjj
+592,2016-07-30 03:07:41,"That is all @chjj
+
+On Friday, July 29, 2016, Rafał Pocztarski notifications@github.com wrote:
+
+> @matt- https://github.com/matt- Can you npm version patch && npm publish
+> yourself or does it still have to be done by @chjj
+> https://github.com/chjj? The version of npm is still 0.3.5 published 12
+> months ago: https://www.npmjs.com/package/marked
+> 
+> —
+> You are receiving this because you were mentioned.
+> Reply to this email directly, view it on GitHub
+> https://github.com/chjj/marked/pull/592#issuecomment-236280610, or mute
+> the thread
+> https://github.com/notifications/unsubscribe-auth/AAbr4sQX5-C4C_BdSAvsUq5sjg32a6Tdks5qal1agaJpZM4Eg7pd
+> .
+
+## 
+
+../matt
+",matt-,chjj
+587,2016-07-09 14:52:32,"@matt- @parleur Thank you for maintaining this project. I would love to +1 this PR.
+",ZackWard,matt-
+587,2017-01-05 23:02:51,"I write my notes in [VS Code](https://github.com/microsoft/vscode) using markdown. Every time I go to make a task list I expect GFM behavior, but alas, it never works. I'd love for VS Code to change, but I think they've made [it clear](https://github.com/Microsoft/vscode/issues/2175) that they won't. The state of this project is making me sad. Come on guys, get your act together, be a man, pass the baton and let people help.
+@matt- @chjj @parleur ",richarddavenport,matt-
+579,2015-05-08 09:15:35,"+1. 
+
+What if something is in `block` and in `inline`?
+
+---
+
+@chjj are you planning to merge this then since you closed #562? :smile: 
+",adam-lynch,chjj
+578,2015-11-04 23:31:39,"@buob @chjj doesn't appear to do anything currently.
+",amccloud,chjj
+573,2015-04-16 14:17:31,"@chjj is project dead and deprecated?
+",iamstarkov,chjj
+537,2015-01-25 23:40:00,"@chjj Could you publish to npm?
+",okuryu,chjj
+531,2014-12-24 11:39:31,"Hello Christopher,
+
+This lib is awesome but when I see there 176 open issues and 79 PR, I wonder if the project is still active.
+
+@chjj can you tell us what is the status of your project and what do you plan in a near future?
+",acemtp,chjj
+514,2016-03-10 19:10:21,"@chjj if you have a little time, please take a look on this issue :+1: 
+",brunowego,chjj
+496,2014-10-14 16:01:04,"Same thing happens with [wiredep](https://github.com/taptapship/wiredep) not being able to glob in marked. This is due to the lack of the correct bower.json file, which is [currently part of marked's master](https://github.com/chjj/marked/blob/master/bower.json), not being inside of a release tag.
+
+@chjj is it possible to please do a release of the latest code to a tag so that bower can more properly ingest marked without other scripts having to point to master?
+
+thanks,
+Scott
+",scottnath,chjj
+485,2014-09-10 18:29:27,"This really seems out of scope for marked, but I'll wait for @chjj to respond.
+",scottgonzalez,chjj
+485,2014-09-11 13:59:47,"I hear that. I just see a few markdown processors supporting meta data, and it's pretty useful to be able to include it.
+
+On Wed, Sep 10, 2014 at 2:29 PM, Scott González notifications@github.com
+wrote:
+
+> ## This really seems out of scope for marked, but I'll wait for @chjj to respond.
+> 
+> Reply to this email directly or view it on GitHub:
+> https://github.com/chjj/marked/issues/485#issuecomment-55160403
+",elliottregan,chjj
+485,2016-02-06 18:30:58,"FYI if people are still looking, @adam-lynch's comment [here](https://github.com/chjj/marked/issues/485#issuecomment-58087903) is _conceptually_ the way to go.
+
+In terms of _implementation_, [metalsmith](http://www.metalsmith.io/) is really great for this type of thing, and includes a [metalsmith-markdown](https://github.com/segmentio/metalsmith-markdown) plugin that is built on top of [marked](https://github.com/chjj/marked). When used in combination with [metalsmith-layouts](https://github.com/superwolff/metalsmith-layouts), you can do some really cool things.
+
+For example (in a `gulp` pipeline):
+
+
+
+`metalsmith-layouts` is **automatically** looking for the `file.frontMatter` property set internally by [gulp-front-matter](https://github.com/lmtm/gulp-front-matter), and using it to render [handlebars](http://handlebarsjs.com/) data for a fixed set of `layouts`.
+
+Example `markdown` (`myfile.md`):
+
+
+
+Example `handlebars` template used by `metalsmith-layouts` (`documentation.html`):
+
+
+
+Outputs (`myfile.html`):
+
+
+
+None of this would be possible without the work by @chjj and team, so thanks for that.
+
+I originally came here looking for answers, so hopefully this helps the next guy/gal.
+
+Cheers.
+",justinhelmer,chjj
+456,2015-03-10 19:40:43,"Is this still being looked at @chjj ?
+",F1LT3R,chjj
+449,2014-07-17 20:15:28,"I believe the newline is there for mere sake of readability of the generated html code. Let's hear if @chjj would like to give up a bit of readability in favor of better compatibility.
+",Feder1co5oave,chjj
+431,2014-08-11 01:18:16,"@paolocasarini Hey, I'm one of the two authors of `gitbook`.
+
+We forked `marked` as `kramed` (https://github.com/GitbookIO/kramed), the idea being to move towards `kramdown` support and also be able to move forward without having to wait on @chjj to merge PRs on `marked` (he's done awesome work up till now with, it just seems like he's busy with other more important things these days).
+
+Do you want to submit your PR to `kramed` (you'll need to make a few small modifications) and I'll happily merge it.
+
+Thanks !
+",AaronO,chjj
+425,2014-05-22 04:17:29,"@chjj I search the issues in marked,and found the same quetion like #379 #383 etc
+Is that true we can't add new lexer rules and do something we want using marked?But I think it is very important.
+I wanna write something like {{{test.html}}} in markdown file,and do something especial about these pattern,is there any way to do this?
+I don't know whether am I misunderstanding the issues I mentioned before.If I am right,can marked support this?thanks a lot!
+",weekeight,chjj
+418,2015-06-16 15:51:04,"Bump. @chjj?
+",xdumaine,chjj
+418,2017-01-30 23:25:17,@chjj Please merge this.,wells,chjj
+418,2017-02-26 04:12:21,@chjj please merge ;),ee7klt,chjj
+416,2014-05-09 12:04:33,"This really seems out of scope for marked, but I'll wait for @chjj to chime in. #338 would make it easy for you to do on your own though.
+",scottgonzalez,chjj
+379,2014-03-29 05:14:59,"@chjj The README doesn't specify how to add a new rule. Here's what I've tried:
+
+
+
+When my text input is `$$$`, the output is not `Three Dollars`. When I log `lexer.lex(text)` my input is identified as a `paragraph`, not `threeDollars`. How do I make my new rule work and how do I order which rules take precedence over others?
+
+Thanks for your help.
+",winduptoy,chjj
+368,2014-03-13 22:22:16,"I'm fairly certain marked only works in one direction. I doubt @chjj wants to bundle support for the other direction (even if only from tokens).
+",scottgonzalez,chjj
+359,2014-03-02 06:05:13,"@ChrisWren do you have any suggestions?
+",bvallelunga,ChrisWren
+356,2014-03-09 22:33:11,"It looks like @chjj hasn't done a release to npm since he fixed it. So... you're not crazy... and it is fixed... but you can't have the fix.
+",adam-p,chjj
+351,2014-02-17 08:22:11,"Footnotes feature. It looks like MultiMarkdown Footnotes Syntax:
+
+
+- http://daringfireball.net/2005/07/footnotes
+- https://github.com/fletcher/MultiMarkdown/wiki/MultiMarkdown-Syntax-Guide#wiki-footnotes
+- http://six.pairlist.net/pipermail/markdown-discuss/2005-August/001442.html
+- http://six.pairlist.net/pipermail/markdown-discuss/2005-August/001480.html
+
+Related Issue: https://github.com/chjj/marked/issues/27
+
+@chjj Have a review of this patch. I will add test cases soon.
+",lepture,chjj
+351,2014-02-18 13:01:52,"@prashaantt I am not sure that @chjj would agree with this feature. I'd like to implement the unfinished part when @chjj says yes.
+",lepture,chjj
+351,2014-02-20 03:05:33,"This would be amazing @lepture and @chjj, I would love for this feature to be added as well. 
+",contactjiayi,chjj
+348,2015-06-12 00:56:43,"@chjj Are there any concerns for not merging this issue?
+This improves inlining HTML a lot.
+",leesei,chjj
+339,2016-01-16 17:16:44,"In my particular case, where I already had to modify the renderer to properly highlight a code block ([known issue](https://github.com/chjj/marked/pull/418)), I just added another method to do just this.
+
+
+
+It takes advantage of the fact Marked parses images this way:
+
+
+
+
+
+Do note that you can't flip the two:
+
+
+
+
+
+---
+
+Although, most definitely +1 @SimonCropp on a ""useful renderer overrides"" list.
+
+@chjj What do you think of both of these (my idea and the ""useful renderer overrides"" list)?
+",isiahmeadows,chjj
+338,2014-04-22 10:22:56,"Guys, I'm giving up ( current code is soo hard to dig in and implementing this stuff would be a real... 5th wheel.
+
+@chjj , can you accept some major refactoring so I can implement this stuff? It will mostly affect `Lexer.prototype.token()`, changing the main loop (`while(src){...`), and separating token creation, like:
+
+
+
+instead of current implementation.
+",andrewtch,chjj
+321,2013-12-29 00:19:47,"I know there was a previous issue to setup Travis CI to run tests on all PRs/commits, but when I look at the [marked page on Travis](https://travis-ci.org/chjj/marked) I don't see any builds being run.
+
+@chjj can you go on travisci.org and make sure the repo is synced?
+",ChrisWren,chjj
+307,2013-12-09 21:04:30,"Yes, to be fair, the README.md @lucasmotta were looking at was probably of the master branch, whereas the Renderer feature is not implemented in 0.2.10.
+
+I asked @chjj in #301 to create a new version tag. By now, as I am using this feature, I have just checked out the master branch, but I would rather manage it nicely via npm and package.json.
+",tvooo,chjj
+307,2013-12-19 13:51:37,"ping @chjj 
+",lepture,chjj
+302,2013-12-04 12:05:38,"We have the opportunity to remove:
+- highlight
+- langPrefix
+- headerPrefix
+- heading IDs
+
+In favor of the new renderer.
+
+The downside to this (at least for 3 of them): lack of backward compatibility, and less convenience for users used to marked. While I did merge the renderer, I'm **tentatively** reimplementing a few of these options. I think the removal of these features should be discussed in another issue because it is a big decision.
+
+cc @lepture
+",chjj,lepture
+284,2015-06-30 22:40:40,"@chjj What would it take to get this merged?  I'd also like to see this fixed in Marked.
+",Sarev0k,chjj
+280,2013-12-12 12:16:46,"I have to admit have no idea when something has gone wrong.
+
+Initially I hoped I could find the failing commit in CI build history, but https://travis-ci.org/chjj/marked is empty; apparently @chjj has never logged to Travis CI to flip the CI switch to “on” position.
+",Mithgol,chjj
+278,2013-11-05 21:09:38,"I like @ChrisWren's solution here: https://github.com/chjj/marked/pull/181#issuecomment-23844696.  However it's achieved I think a simple interface for custom functions would provide users with as much power and flexibility as they need. And really, I'd prefer almost any solution over having marked.js make decisions about how to attributes to my markup.
+",jonschlinkert,ChrisWren
+269,2013-11-04 09:04:34,"@chjj would you be open to someone helping out with this project? If so, I'd like to throw my hat in.
+",jonschlinkert,chjj
+269,2014-07-15 12:02:19,"any progress? @chjj 
+",weekeight,chjj
+259,2014-04-07 16:33:14,"+1 @chjj please please please
+",xaka,chjj
+238,2013-09-23 14:14:21,"@chjj Have you had the opportunity to review this? 
+
+It would be great if this feature can be merged for use by the various `marked` dependants (like `npm` and many others).
+
+Github currently support emojis in all their markdown but they show up as unparsed codes in projects that pull the README.md's and use marked to parse them
+",Bartvds,chjj
+238,2014-01-29 11:53:18,"I've updated the PR so it would merge again:
+
+@chjj It would be cool if this could be considered for merging, so all downstream consumers can enjoy easy emoji replacement.
+
+The implementation is very basic (generic) so we could use it with whatever image hosting service you want (using the callback you can also filter specific codes).
+",Bartvds,chjj
+232,2013-08-16 11:13:22,"Hi @chjj
+## Changes
+- add options wysiwyg line break
+## add options wysiwyg line break
+
+wysiwyg is option for simply new line break like wysiwyg editor and  github issue.
+
+if wysiwyg is true : 
+
+
+#### Github Support this syntax on issue follow:
+
+Hi all.
+This is insanehong
+
+I'm currently at naver corp as a front-end engineer.
+bye see you.
+",insanehong,chjj
+228,2013-08-12 07:24:09,"@chjj Can you publish the latest code to npm?
+",fengmk2,chjj
+220,2013-08-30 05:05:58,"/ping @chjj 
+",Mithgol,chjj
+220,2013-12-04 06:07:05,"@chjj are you cool with this? I would like to see the status of tests for each PR and know if any are currently failing.
+",ChrisWren,chjj
+218,2013-08-05 00:14:53,"@chjj This is Standard markdown syntax. other markdown editor support this syntax rendering.
+
+plz hotfix! :-D
+",insanehong,chjj
+216,2013-08-07 15:20:34,"@chjj :+1: I support this change. It's a really basic but very important change. :)
+
+For a possible markdown it might be wise to just escape these underscores:
+
+
+",greduan,chjj
+207,2013-07-26 15:37:50,"Yea, i like the approach too. Being able to extend/customize token modification would be really nice
+
+Any word from @chjj (or someone in charge)?
+",leeola,chjj
+199,2013-07-27 10:06:43,"Indeed
+This pull request is more a proof of concept rather than real code, I don't expect it to be integrated as it is. 
+
+Now it only works for the callback version and when highlight is enabled. 
+
+I'm very new to this code base and I needed a quick solution, but if the idea and the approach are good I can try to spend more time and implement it correctly, including unit tests. 
+
+It would be nice to hear from @chjj as he's working as well on extensibility 
+",piuccio,chjj
+180,2014-07-07 05:08:15,"I'm interested in helping out to get this merged. @chjj if this was rebased would you consider merging it?
+",jmeas,chjj
+180,2014-07-23 00:47:46,"Quite suprised to see this attracting attention 1 year after I first wrote it.
+I did rebase this quite long ago but master has advanced since then. Rebasing doesn't make any more sense if master keep going ahead without merging this in.
+@chjj : would you mind giving a word on this?
+",summivox,chjj
+163,2013-08-02 17:20:56,"@chjj Is there any reason to keep this open now that #155 has been merged?
+",scottgonzalez,chjj
+158,2013-05-29 00:17:13,"This should be an easy fix. @chjj Do you want a PR for this?
+",scottgonzalez,chjj
+152,2013-05-29 00:30:33,"@chjj This seems like a pretty important fix :-)
+",scottgonzalez,chjj
+148,2013-04-13 18:49:58,"Hi @chjj, would you mind it if marked was hosted by CDNJS (https://github.com/cdnjs/cdnjs#cdnjs-script-repository)? I think this would make it more accessible for different development playgrounds like Plunker or jsFiddle. I'm also working on a project licensed under the APGLv3 license (https://github.com/galah-group/galah) and we'd like to avoid licensing and attribution issues from packaging your library with the project when, in reality, we just want to pull it from a reliable source similar to jQuery.
+
+Let me know if you have problems with this approach, and if there aren't, I could make the pull request to CDNJS for you if you want.
+",paranoiacblack,chjj
+148,2013-05-29 00:38:49,"@paranoiacblack I don't think cdnJS cares who sends pull requests, so you can add marked just as easily as @chjj can.
+",scottgonzalez,chjj
+148,2013-05-29 00:40:35,"@scottgonzalez, I just wanted @chjj's or someone else permission before doing so. I don't know @chjj enough to say whether or not he would care about something like this. Can I take your comment as permission?
+",paranoiacblack,chjj
+143,2013-03-20 09:09:13,"If we want to use [google-code-prettify](http://google-code-prettify.googlecode.com/svn/trunk/README.html) easily, we need to custom code block pre classname.
+
+Set `options.codeClass=""prettyprint""` and get `<pre class=""prettyprint"">` html result is pretty good.
+
+@chjj
+",fengmk2,chjj
+140,2013-05-29 01:37:50,"Yeah, so you're just waiting for 0.2.9. I asked @chjj about that this morning and he said he'll do a release very soon.
+",scottgonzalez,chjj
+131,2013-03-07 14:38:51,"I agree that would be a nice addition, currently just went with the default rendering of github. You can do a lot with some CSS and an empty anchor. But I guess some people would rather have id's on headings or perhaps an alternative inline element. I'll try to bug @chjj on IRC to review this stuff.
+",Swaagie,chjj
+129,2013-03-22 18:40:32,"@chjj Has any idea?
+",lepture,chjj
+129,2013-12-04 05:42:14,"Yeah, well. This is me breaking out of my shell. I believe the thing that made marked successful in the first place was the attention put on speed. marked does so many weird optimizations that I'm worried only I understand (not because I'm smart, but because I wrote them and I do stupidly-designed optimizations that no sane programmer would do).
+
+This is the largest pull request I've ever accepted for marked. So while it's partially true that I've been busy with work and couldn't accept this PR, it's also partially true that I've trained myself to be hesitant about large PRs: I'm worried people may make changes without realizing they're overlooking some esoteric optimization. I wrote marked while running benchmarks after every single change to a line. If I lose a few milliseconds, it's a tragedy to me.  I've come to terms with the fact that a renderer is a good idea (much thanks to @lepture for his contribution). Hopefully we can do the same thing with the lexer(s) without too much overhead.
+
+I've also just added @ChrisWren as a core committer for documentation. It's been an eventful night for marked.
+",chjj,ChrisWren
+127,2013-02-25 15:41:41,"@chjj: I'm not sure if you're interested in merging this feature, but I figured I would issue a pull request just in case.
+
+Our use-case: Our app has large blocks of technical content in the form of ordered lists and there is occasionally block-level content in the list items (tables, multiple paragraphs, etc). The block-level content breaks up the list, so when a list is resumed, the actual numbering from the input should be used instead of starting over at ""1"".
+
+I realize that the more semantically correct thing in this case would be to output a single list with the block-level content nested in it -- and this is possible with some markdown implementations (RedCarpet) but it places additional burden on the user to indent the block-level content beyond the indent of the list item it belongs in. Instead of going that route, this simple workaround gives the user more control and meets the user's expectations (I'm sure the end-users of our app would be surprised by markdown's default behavior -- as I was -- of ignoring the numbering from the input).
+
+I added tests for the option, which pass when it the option is enabled (but a couple of pre-existing OL tests fail when the option is enabled because they aren't expecting the `value` attribute in the output `<li>`s). When the option is disabled (the default), the only pre-existing tests that fail are the 4 that normally fail (10-14). I added a `preserveNumbering` condition to tests\index.js so the new tests are skipped if the option is disabled. When disabled, the new option has a negligible effect on benchmark performance. When enabled, it adds, on average, about 50-70 milliseconds to the test time on my machine (~2%).
+",prust,chjj
+110,2013-05-29 01:12:20,"@chjj Unless there's a different answer than ""you need to write some code"", this should just be closed.
+",scottgonzalez,chjj
+84,2012-10-04 13:01:27,"Hey @chjj ....
+
+We recently wrapped marked.js as a ruby gem for easy integration into rails apps.
+This is a similar approach to what https://github.com/rails/jquery-rails does for jquery.
+Our repo is at: https://github.com/eastmedia/marked-rails
+
+We'd be happy to maintain it - but out of deference wanted to offer you the opportunity to take over the repo if you were interested.
+",nodanaonlyzuul,chjj
+60,2013-05-29 01:27:59,"This is a pretty broad request. @chjj What are your thoughts on this? Do you want issues for specific features or will most of this be handled by the renderer?
+",scottgonzalez,chjj
+51,2012-11-27 11:44:01,"@chjj is there any plan to fix this issue ? It is rather annoying for me as I'm using marked in an editor preview whereas the Markedown will later be rendered server-side by Sundown (which handles the GFM line-breaks)
+",stof,chjj
+48,2012-05-21 15:09:49,"@chjj any thoughts on this?
+",jnordberg,chjj
+48,2012-06-03 00:25:30,"Consider this another vote for this feature — any interest in accepting the commit, @chjj?
+
+Dave
+",dherman,chjj
+35,2013-02-22 19:32:11,"Also, @chjj I have a quick question.
+Unrelated to the above commit some of the tests (10,11,14,19) in `master` are failing in node 0.8.8. 
+Do you want these updated or am I missing something?
+",potench,chjj
+35,2014-09-02 21:09:00,"I agree with the direction that the original change and the extensions that @potench proposed.  This is a great way to solve a bunch of problems, as all the +1's suggest.  The idea of supporting <!-- --> for compat makes me happy too, given that these plug-ins, by their very nature, are going to be site-dependent.
+
+Is there some prior art that the "":"" syntax for parameter-separation is mimicking?  I'd suggest two alternatives to that mechanism.  The first of which is to not do any parameter-breaking at all and make the add-on break down the parameter list if it needs to.
+
+If you really feel that a more sophisticated means would be helpful, then I'd say the argument should be treated as a query string.  I prefer that because:
+1. It's a well-known syntax
+2. It's flexible
+3. It has a known escaping language (e.g. what if you needed to have an argument with a colon in it?)
+4. It'd allow the plug-in to take a more flexible parameter list.  (I've been thinking about using this sort of thing to allow markdown to reference code samples; in that space so customers may want to reference samples with a line & file, sometimes by an ID, maybe by a file name and a region name, etc.)  With this sort of thing, you can enrich your plug-in without breaking compat with old versions pretty easily.
+
+Another nit: I'm not sure I like the switch to ""{"" from ""["".  I mean, I believe ""["" alone is wrong, because that overloads the hyperlink semantics in a way that might be confusing or conflicting.  But introducing a whole new character seems like too heavy a hammer.  Instead, I'd propose looking at the image inclusion syntax (`""![...]""`) as a model, because it does something generally similar.  My proposal for a character would be '$' because it's got some variable-substitution connotations that seem appropriate here.  So, for example `""$[youtube:g2FOLrC2e6E]""`, would be what I'd go for.
+
+Details aside, this is an important change, any hope of some progress here, @chjj ?  Anything I could do to help it along?
+",SteveBenz,chjj
+24,2012-01-31 23:54:44,"@chjj not interested?
+",pvorb,chjj
+8,2011-12-03 10:04:03,"Hmm, @dvv mentioned this the other day in a line comment. It looks like markdown.pl ensures a trailing \n for some reason, but I think you guys are right. It is ugly. I'll have marked slice off the trailing line feed.
+",chjj,dvv

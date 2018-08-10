@@ -1,0 +1,217 @@
+issue_num,datetime,body,login,mention_login
+106,2015-11-23 13:20:12,"@chris--jones :pray: :heart: thank you!
+",tobiasahlin,chris--jones
+104,2015-11-15 07:06:19,"@tobiasahlin can you please push this to http://www.jsdelivr.com/? Do you need a new package version? 
+",jarnoux,tobiasahlin
+104,2015-11-18 07:20:33,"@jarnoux Will do! Sorry for the delay :bow:
+",tobiasahlin,jarnoux
+104,2015-11-18 09:23:24,"@jarnoux 1.2.3 is now published with this change included, jsdelivr should detect it Real Soon™ :pray: 
+",tobiasahlin,jarnoux
+104,2015-11-26 09:00:19,"@tobiasahlin awesome, thanks!
+",jarnoux,tobiasahlin
+103,2015-11-02 07:55:23,"Hmm I wonder why the regex stopped working. Perhaps it's some change in Node v4. Thanks for finding it @chris--jones, do you think you could submit that as a separate PR?
+
+As for the animation I think @tobiasahlin will have to give his vote, considering he's the author, and CSS guru :smile: 
+",jmagnusson,chris--jones
+103,2015-11-04 13:58:27,"@chris--jones Thanks for this! I'm :+1: on what @jmagnusson said here, could you separate these two changes in to two separate PRs? Regex fix is an instant merge, but will need to look closer on the animation :sparkles::pray:
+",tobiasahlin,chris--jones
+103,2015-11-04 13:58:27,"@chris--jones Thanks for this! I'm :+1: on what @jmagnusson said here, could you separate these two changes in to two separate PRs? Regex fix is an instant merge, but will need to look closer on the animation :sparkles::pray:
+",tobiasahlin,jmagnusson
+103,2015-11-09 12:52:17,"@chris--jones Thanks.
+",jmagnusson,chris--jones
+103,2015-11-13 11:57:26,"@chris--jones Thank you! Happy travels! :raised_hands:
+",tobiasahlin,chris--jones
+101,2015-10-11 18:58:47,"@tobiasahlin I believe  https://github.com/tobiasahlin/SpinKit/commit/d45b25cf9f63c8c5fe7c1115ab2f921bc924319b commit never applied the ""easier to copy"" fix to the HTML/CSS examples, so it's not indentations but removed stars. And since 11-folding-cube was never added to spingkit.scss before, it's added in spinkit.css in this fork as well.
+",evgenyo,tobiasahlin
+101,2015-12-07 23:22:09,"@tobiasahlin No worries! Should be all fixed up :)
+",evgenyo,tobiasahlin
+101,2015-12-09 21:33:54,"@tobiasahlin Hello hello! I actually messed around with scale vs opacity, and personally preferred the blinking effect over shrinking because it gave me a loading vibe rather than just a pretty animation. Having said that, it's your project so you tell me what works with your vision best. I also changed the left/top/right/bottom movements to transform:translate as well. Let me know if there's anything else : )
+",evgenyo,tobiasahlin
+100,2015-09-07 08:31:42,"@coffee-cup :clap::clap: Clever!
+",tobiasahlin,coffee-cup
+85,2015-07-13 20:43:45,"@jmagnusson 
+
+![1398](https://cloud.githubusercontent.com/assets/211284/8660317/8f547be4-29b0-11e5-97be-4b7ad52eaa9e.gif)
+",tobiasahlin,jmagnusson
+85,2015-07-13 21:44:17,"@jmagnusson Feeling done, mind trying this out before I merge? :eyes: :heart:
+",tobiasahlin,jmagnusson
+83,2015-07-13 14:08:49,"@tobiasahlin To avoid this kind of problem in the future we could perhaps integrate the demo site within this repo. Feels a bit unnecessary to have both the `examples` folder with html examples, and your separate demo page.
+",jmagnusson,tobiasahlin
+83,2015-07-13 19:18:31,"@jmagnusson Agree, shouldn't really be any conflicts between these two. Will see if I can just pull this repo into the demo page. 
+
+(If we should remove anything though, we should kill the examples in this repo, since the demo page is driving a lot of traffic to the repo (if you look under https://github.com/tobiasahlin/SpinKit/graphs/traffic) - I'm all for doing that!)
+",tobiasahlin,jmagnusson
+81,2015-07-13 19:23:16,"@jmagnusson On it! :heart:
+",tobiasahlin,jmagnusson
+78,2015-05-26 13:57:07,"Thanks for the report you guys.
+
+I'm super busy these days though... do you think you can take a look at it @tobiasahlin?
+",jmagnusson,tobiasahlin
+78,2015-05-31 09:44:40,"@jmagnusson Will do! :heart::boom:
+",tobiasahlin,jmagnusson
+77,2015-02-03 07:18:51,"Dziękuję, @pkuczynski!
+",jmagnusson,pkuczynski
+67,2014-11-18 20:47:40,"@jmagnusson I saw that. Perfect. Thanks.
+",mehrdadrafiee,jmagnusson
+63,2014-09-15 06:32:22,"@tobiasahlin  ok.
+",amazingSurge,tobiasahlin
+59,2014-12-09 14:03:44,"I'm with @jmagnusson. We need to think ahead. Developers can implement e.g. Modernizr and do it themselves. No point in bloating this code. 
+",rkorebrits,jmagnusson
+59,2015-07-13 19:31:54,"@jmagnusson @rkorebrits Good point, killing this for now :fire:
+
+@AlexRebula afaik that should be enough, hope you got it to work eventually!
+",tobiasahlin,jmagnusson
+53,2014-09-12 20:20:34,"@tobiasahlin Yeah. I updated the animation and the element sizes. I think now it looks better than before. Thanks! :blush:
+
+**Now it looks like this:**
+![Animated GIF](https://cloud.githubusercontent.com/assets/6717303/4256553/6a2be956-3ab9-11e4-88b1-8c73c303678f.gif)
+",niklasravnsborg,tobiasahlin
+50,2014-09-11 20:28:16,"@jmagnusson Let's make this happen in the other PR :heart:
+",tobiasahlin,jmagnusson
+50,2014-09-11 23:01:02,"@jmagnusson Judging by your comment I totally prematurely closed this PR. Sorry about that :heart: Code review incoming.
+",tobiasahlin,jmagnusson
+48,2014-11-18 22:53:12,"Did you get anywhere with the implementation of this @tobiasahlin?
+",jmagnusson,tobiasahlin
+42,2014-05-26 07:45:08,"@tobiasahlin
+No, not my own project.   http://jsbin.com/rolepero/1/edit
+No Animation on Chrome, Safari and Opera 12, works on Opera 21 and FF 29
+(I'm still on Win XP ...)
+:beers: Fritz
+",FritzTheBlitz,tobiasahlin
+38,2014-05-21 23:14:59,"@ahmadhania Thanks! Love the spinner. Had some technical comments. Might need some more contrast for the dot as well (make it completely white?)
+",tobiasahlin,ahmadhania
+38,2014-05-24 08:15:21,"@tobiasahlin updates have made and your comments are taken into account, hope it's good now?
+",ahmadhania,tobiasahlin
+38,2014-05-25 13:45:10,"@ahmadhania Love the updates :zap: :heart:
+
+I found some more things! Once that's in, I'd love to get this merged :shipit: 
+",tobiasahlin,ahmadhania
+38,2014-05-31 10:37:58,"@tobiasahlin Changes requested has been made :)
+",ahmadhania,tobiasahlin
+38,2014-05-31 20:10:28,"@ahmadhania Awesome, great work on this! Thanks! :zap:
+
+![tumblr_mnygoxox801qhonq7o1_400](https://cloud.githubusercontent.com/assets/211284/3140014/19d74574-e8ff-11e3-9034-729a2911fb3a.gif)
+",tobiasahlin,ahmadhania
+38,2014-05-31 20:46:56,"WOW, thank you @tobiasahlin for accepting my loader to your SpinKit. I see that the demo page isn't updated with the latest additions to the kit.
+",ahmadhania,tobiasahlin
+38,2014-06-02 12:39:50,"@ahmadhania That's true, I'm working on bringing those over asap!
+",tobiasahlin,ahmadhania
+37,2014-05-10 17:49:10,"@zhanglun It is! And thanks! I'll get to it :)
+",tobiasahlin,zhanglun
+36,2014-08-05 09:08:24,"I think it'd be great to drop in via SASS/SCSS. 
+
+@tobiasahlin I know what you mean with reference to a Sandbox. But I think people love this a bit too much now :) Maybe having a separate project to the 'sandbox' version?
+",paulrose,tobiasahlin
+36,2014-09-11 19:27:00,"> Would be nice if some of the properties could be changed with SCSS-variables.
+
+This is true. All :sparkles: for this part. 
+
+@paulrose @nmccready Let's make it happen.
+
+@jmagnusson ~~In that PR :point_up:, I'm against deleting all the examples. Even though it's more code to maintain, I want to keep it easy to just copy paste, and previewing the animations. You mentioned that it's more complete than this PR though—is it anything you can help to fix here? Or give any pointers?~~ ←- Ignore all that, I was full of bullshit when I wrote it. Sorry :bow: 
+",tobiasahlin,jmagnusson
+36,2014-09-11 20:48:30,"@tobiasahlin if you look at my code you'll see that I've added:
+1. Variables
+2. Separated each spinner into it's own SCSS file. This enables you to easily include just the styles you want, without touching the source code at all.
+3. Removed all browser prefixes and let autoprefixer take care of this to decrease the risk of typos (and potentially reduce the file size of the generated CSS as browsers start to drop prefixes)
+4. The gulp tasks auto-generate the example HTML whenever the code changes
+
+Sure we can go with this PR instead, but like it says it's a starting point whilst #50 is basically good to merge and put in production.
+",jmagnusson,tobiasahlin
+36,2014-09-11 20:50:18,"@tobiasahlin  Let me know how you want to proceed .
+",nmccready,tobiasahlin
+36,2014-09-13 20:28:05,"@nmccready Closing this since @jmagnusson had already come really far with his PR (I totally missed that before), adding gulp as well (#62). As soon as that lands we can start polishing that implementation :sparkles:
+",tobiasahlin,jmagnusson
+35,2014-05-10 18:10:09,"@zhanglun Thanks for contributing!
+
+I think this is an interesting direction that could become awesome with some polish. Right now, it's a bit chunky. Maybe make it significantly thinner? Like 4-6px height in total? And somewhat shorter?
+",tobiasahlin,zhanglun
+35,2014-05-12 03:31:38,"@tobiasahlin I have deleted the old file,and add  new  effects, please check it out. 
+Thanks for your patience, and  sorry for my poor english.
+",zhanglun,tobiasahlin
+35,2014-05-12 12:32:27,"@zhanglun Wow! Love this new direction. If you fix the styling comment above for all animations (should make the file noticeable shorter, and easier to read), I'm happy to merge :boom:
+",tobiasahlin,zhanglun
+35,2014-05-24 20:05:07,"@zhanglun That's awesome! Thanks! :sparkles:
+",tobiasahlin,zhanglun
+31,2014-11-20 11:30:46,"@jmagnusson you could try with GenyMotion: they have free and very accurate Android emulators.
+
+I didn't have enough time to test the fix when I worked with the code, so I'm not 100% sure about the edge cases of such a change.
+",GregOriol,jmagnusson
+27,2014-01-30 21:51:38,"@tobiasahlin thanks! it was a fun little project messing with it, didn't expect a merge but hey a guy can try :P 
+",lance0,tobiasahlin
+24,2014-01-31 02:50:02,"@tobiasahlin Hmm, I'm not sure what is the exact definition of spinner.  Does it mean continuous movement?
+
+And I have updated to have a smooth minute hand progression.
+
+Thanks!
+",codingtwinky,tobiasahlin
+9,2013-12-20 01:36:10,"@tobiasahlin Happy to help!
+",fitz0019,tobiasahlin
+7,2013-12-19 17:56:11,"@MHM5000 Thanks! :sparkles: I cherry-picked this and expanded on it in #8 
+",tobiasahlin,MHM5000
+6,2013-12-18 08:48:44,"@tobiasahlin  okay...  Thanks for the suggestion...
+",nits,tobiasahlin
+120,2016-08-10 22:38:25,"@tobiasahlin I converted the first spinner to use mixins.  Let me know if you like this approach and I'll continue with the rest of them.
+",soumak77,tobiasahlin
+120,2016-08-20 04:41:00,"@tobiasahlin fyi this will be part of [Angular Base Apps 2.0](https://base-apps.github.io/angular-base-apps/latest/#!/loader) if you're wondering how these changes will be utilized
+",soumak77,tobiasahlin
+108,2015-11-23 13:35:21,"cc @jmagnusson 
+",tobiasahlin,jmagnusson
+107,2015-11-23 13:24:46,"cc @chris--jones @jmagnusson 
+",tobiasahlin,chris--jones
+107,2015-11-23 13:24:46,"cc @chris--jones @jmagnusson 
+",tobiasahlin,jmagnusson
+105,2015-11-18 09:19:29,"cc @jmagnusson 
+",tobiasahlin,jmagnusson
+104,2015-11-02 07:41:00,"Looks fine to me. What do you say, @tobiasahlin?
+",jmagnusson,tobiasahlin
+103,2015-11-02 07:55:23,"Hmm I wonder why the regex stopped working. Perhaps it's some change in Node v4. Thanks for finding it @chris--jones, do you think you could submit that as a separate PR?
+
+As for the animation I think @tobiasahlin will have to give his vote, considering he's the author, and CSS guru :smile: 
+",jmagnusson,tobiasahlin
+98,2015-08-17 14:01:37,"Fixes #97
+
+cc @jmagnusson @JobaDiniz
+",tobiasahlin,jmagnusson
+96,2015-08-14 07:50:42,"@strom Thanks for reporting! :bow::heart:
+
+> I believe the solution should be to remove `gulpfile.js` as the main file in package.json, because users aren't going to use the gulpfile from this project outside of developing.
+
+Sounds fair. @jmagnusson thoughts?
+",tobiasahlin,jmagnusson
+95,2015-08-06 12:57:40,"cc @jmagnusson
+",tobiasahlin,jmagnusson
+94,2015-07-26 12:12:22,"Fixes #93
+
+cc @jmagnusson 
+",tobiasahlin,jmagnusson
+85,2015-07-13 20:36:16,"Nothing should really change because of this, purely implementation details.
+
+cc @jmagnusson :eyes: 
+",tobiasahlin,jmagnusson
+84,2015-07-13 20:11:07,"It didn't really ever measure up with the other spinners. Let's make room for some new ones :boom: 
+
+cc @jmagnusson :eyes:
+",tobiasahlin,jmagnusson
+81,2015-05-05 12:53:07,"What's your thoughts @tobiasahlin?
+",jmagnusson,tobiasahlin
+81,2015-07-13 09:13:50,"Ping @tobiasahlin :wink:
+",jmagnusson,tobiasahlin
+78,2015-05-26 09:53:40,"Will have a look, thanks @KatelynL and @alexg313!
+
+(Possibly something that happened in the move to sass @jmagnusson?)
+",tobiasahlin,jmagnusson
+69,2014-11-18 20:43:28,"@tobiasahlin Will you take a look at this?
+",jmagnusson,tobiasahlin
+65,2014-11-16 13:12:45,"Confirmed. @tobiasahlin Do you have any idea what to do about this?
+",jmagnusson,tobiasahlin
+60,2014-09-11 20:41:26,"Related: #36 (it's essentially useless until this lands)
+
+cc @jmagnusson if you're interested
+",tobiasahlin,jmagnusson
+57,2014-09-13 20:25:47,"@nmccready Thanks for the advice :heart: @jmagnusson is actually adding gulp in the rewrite, so that's all :sparkles:
+
+Closing this PR since the issue is being fixed in the SASS port :point_up:
+",tobiasahlin,jmagnusson
+44,2014-05-25 22:40:45,"cc @zhanglun
+",tobiasahlin,zhanglun

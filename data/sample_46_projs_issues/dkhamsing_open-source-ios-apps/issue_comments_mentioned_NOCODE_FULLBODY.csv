@@ -1,0 +1,4477 @@
+issue_num,datetime,body,login,mention_login
+472,2017-03-21 16:52:12,@vpeschenkov you are awesome! thank you,dkhamsing,vpeschenkov
+466,2017-03-02 15:30:49,@vpeschenkov can you see if you can find / get screenshots for other projects? https://github.com/dkhamsing/open-source-ios-apps/issues/431 :),dkhamsing,vpeschenkov
+466,2017-03-03 18:13:06,"@dkhamsing Hi! Not sure about all projects, however I will add screenshots for some other projects.",vpeschenkov,dkhamsing
+436,2016-10-20 17:37:14,"@dkhamsing Updated!
+",ayushgoel,dkhamsing
+427,2016-09-17 19:55:46,"So, I'm in the process of changing usernames (trying a few). Imma close this till that's done.
+
+Thanks for the reply @scribblemaniac :)
+",reclaimer,scribblemaniac
+416,2016-08-25 15:49:38,"@matteocrippa definitely in the ios app, can we leave awesome-swift as is?
+",dkhamsing,matteocrippa
+416,2016-08-25 15:58:22,"@dkhamsing prob it would useful to have the same value in both for mapping, but It would break the actual app
+",matteocrippa,dkhamsing
+412,2016-08-23 21:16:10,"@dkhamsing no prob man!
+",CTKRocks,dkhamsing
+400,2016-08-14 18:09:57,"I would love to contribute, Im just getting my toe wet with html5 stuff so I probably wont be able to contribute much but I will keep my eye out for something that I think I can do. @dkhamsing  @scribblemaniac  is there already a git repository for this?
+",IndyBob2019,scribblemaniac
+400,2016-08-14 18:09:57,"I would love to contribute, Im just getting my toe wet with html5 stuff so I probably wont be able to contribute much but I will keep my eye out for something that I think I can do. @dkhamsing  @scribblemaniac  is there already a git repository for this?
+",IndyBob2019,dkhamsing
+400,2016-08-14 20:46:49,"Okay, the first version is [live](https://dkhamsing.github.io/open-source-ios-apps/). I will work on it more next weekend. It's not quite ready yet, but I would love any feedback.
+
+@IndyBob2019 Thanks for your interest! I have just added the code to the [gh-pages branch of this repository](https://github.com/dkhamsing/open-source-ios-apps/tree/gh-pages). You may find something that you can help with in the various TODOs scattered throughout the source right now.
+",scribblemaniac,IndyBob2019
+400,2016-08-24 15:46:47,"@scribblemaniac is there a better emoji to represent ""download on appstore"" because the iphone one makes it look like the project is for iphone
+",dkhamsing,scribblemaniac
+400,2016-08-24 15:52:28,"@dkhamsing [Download](http://fontawesome.io/icon/download/) or [Apple](http://fontawesome.io/icon/apple/) could work. Or we could just add the app store icon.
+",scribblemaniac,dkhamsing
+400,2016-09-02 14:21:51,"@scribblemaniac the theme switcher is pretty fancy
+would it make sense to save on selection ?
+",dkhamsing,scribblemaniac
+400,2016-09-02 17:46:37,"@hblegg Thanks!
+
+@dkhamsing Yeah, in hindsight that would be better. I'll change it soon.
+",scribblemaniac,hblegg
+400,2016-09-02 17:46:37,"@hblegg Thanks!
+
+@dkhamsing Yeah, in hindsight that would be better. I'll change it soon.
+",scribblemaniac,dkhamsing
+400,2016-10-08 02:46:12,"@scribblemaniac ^
+",dkhamsing,scribblemaniac
+400,2016-10-10 06:43:51,"@dkhamsing Good idea, I will experiment with that soon.
+
+P.S. You don't need to mention me every time 😉 I get notifications for everything in this project.
+",scribblemaniac,dkhamsing
+393,2016-08-05 18:26:04,"@scribblemaniac oops sorry have a good vacation
+",dkhamsing,scribblemaniac
+392,2016-08-24 15:44:04,"@scribblemaniac will be closing this unless we can get someone to translate
+",dkhamsing,scribblemaniac
+379,2016-07-18 14:39:44,"@dkhamsing I just fix it
+",Superbil,dkhamsing
+375,2016-07-14 21:42:39,"@etamity 
+can you include license info, thanks
+",dkhamsing,etamity
+375,2016-07-15 13:56:27,"@dkhamsing  I have added LICENSE file to the project, thanks for reminding.
+",etamity,dkhamsing
+368,2016-07-13 13:53:15,"@scribblemaniac thx, noted/updated
+",dkhamsing,scribblemaniac
+366,2016-07-12 15:08:46,"@dkhamsing I cannot find where the conflict is. But circleci, is saying there is a conflict?
+",michieriffic,dkhamsing
+366,2016-07-12 17:26:35,"Hi @dkhamsing sorry just got back. I was able to rebase it and fix conflict on my fork. Do I need to create a new pull request for this? :)
+",michieriffic,dkhamsing
+366,2016-07-12 17:34:02,"@dkhamsing I have fixed the conflicts already. But the pull request here isn't updating [michieriffic/open-source-ios-apps](https://github.com/michieriffic/open-source-ios-apps)
+
+Can you check my fork if I have missed anything? thx
+",michieriffic,dkhamsing
+366,2016-07-12 17:52:48,"@dkhamsing got another check failed. - 
+
+Issues :-(
+
+> Links 
+> 1. [L17]  http://zbar.sourceforge.net/ Connection reset by peer 
+> 2. [L37]  http://projectm.sourceforge.net/ Connection reset by peer 
+",michieriffic,dkhamsing
+366,2016-07-12 18:24:51,"@dkhamsing I noticed that the changes were already committed to Master but the app isn't listed on the Readme file. :)
+",michieriffic,dkhamsing
+363,2016-07-12 14:44:03,"@Wofiel do you know if the license is any of the following?
+
+""gpl-3.0"", ""lgpl-3.0"",  ""lgpl-2.1"", ""gpl-2.0"", ""agpl-3.0"" 
+",dkhamsing,Wofiel
+357,2016-07-11 20:24:32,"@dkhamsing rebased
+",kenmickles,dkhamsing
+351,2016-07-05 14:57:45,"@tirupati17 pls fill out the form above in the pull request template in the future
+thx
+",dkhamsing,tirupati17
+334,2016-06-13 08:21:30,"@dkhamsing imho if you switch only the URI at line 19 of https://github.com/matteocrippa/awesomeSwift-iOS-App/blob/master/appname/AwesomeSwiftAPI.swift it should work already fine
+",matteocrippa,dkhamsing
+334,2016-07-12 19:04:52,"@dkhamsing do you still need help on this? :)
+",michieriffic,dkhamsing
+334,2016-07-12 19:16:20,"@matteocrippa ikr! Any name suggestion? Btw, cool name for the ""Awesome Swift"". 
+
+@dkhamsing we just have to make sure, we don't look or act like an App Store. They don't approve that. :)
+",michieriffic,dkhamsing
+334,2016-07-12 19:16:20,"@matteocrippa ikr! Any name suggestion? Btw, cool name for the ""Awesome Swift"". 
+
+@dkhamsing we just have to make sure, we don't look or act like an App Store. They don't approve that. :)
+",michieriffic,matteocrippa
+334,2016-07-12 19:33:49,"@dkhamsing - what are the other possible attributes that can be listed to tags?
+
+tags: List of app attribute tags, use swift if the app is written in Swift
+",michieriffic,dkhamsing
+334,2016-07-12 20:00:37,"@michieriffic There are two tags at the moment, `swift` and `archive` (both as strings). If you need help understanding the structure, check out the [schema.json](https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/schema.json), it has all of the currently supported elements and a brief description for all of them.
+
+@dkhamsing I've noticed there were quite a few notifications from this project lately, sorry I haven't been able to help but I am currently traveling so I can't really work on this stuff much. Congrats on breaking 500 apps!! :cake:
+",scribblemaniac,michieriffic
+334,2016-07-12 20:00:37,"@michieriffic There are two tags at the moment, `swift` and `archive` (both as strings). If you need help understanding the structure, check out the [schema.json](https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/schema.json), it has all of the currently supported elements and a brief description for all of them.
+
+@dkhamsing I've noticed there were quite a few notifications from this project lately, sorry I haven't been able to help but I am currently traveling so I can't really work on this stuff much. Congrats on breaking 500 apps!! :cake:
+",scribblemaniac,dkhamsing
+334,2016-07-12 20:27:02,"@scribblemaniac thanks. What does 'archive' mean as a tag? thanks. :)
+",michieriffic,scribblemaniac
+334,2016-07-12 20:32:25,"@scribblemaniac no worries
+",dkhamsing,scribblemaniac
+334,2016-07-12 20:32:51,"@michieriffic Apps with the archive tag no longer build. Instead of being put in the main README.md, they are put in ARCHIVE.md. For the app, it could in my opinion be put in a separate section, grayed out, or just ignored entirely.
+",scribblemaniac,michieriffic
+334,2016-07-13 08:51:58,"@dkhamsing what do you think to improve the AwesomeSwift app in order to get data from both the two JSON, we already share format so we can easily reach that goal with a sort of swiss army knife app for devs.
+
+@michieriffic if you want you can have a look at this already existing (and open sourced) app that we use in [AwesomeSwift](https://github.com/matteocrippa/awesome-swift) - https://github.com/matteocrippa/awesomeSwift-iOS-App
+",matteocrippa,michieriffic
+334,2016-07-13 08:51:58,"@dkhamsing what do you think to improve the AwesomeSwift app in order to get data from both the two JSON, we already share format so we can easily reach that goal with a sort of swiss army knife app for devs.
+
+@michieriffic if you want you can have a look at this already existing (and open sourced) app that we use in [AwesomeSwift](https://github.com/matteocrippa/awesome-swift) - https://github.com/matteocrippa/awesomeSwift-iOS-App
+",matteocrippa,dkhamsing
+334,2016-07-13 12:01:52,"Forking or using @matteocrippa's app could be a starting point 
+",dkhamsing,matteocrippa
+334,2016-07-13 20:22:03,"@dkhamsing I think what @matteocrippa is suggesting is to combine both Awesome Swift and Open Source iOS as one app as it complements each other. Am I correct? 
+
+Actually, I have thought of this last night and saw a lot of Awesome List available which can be combined in one app. 
+
+Because the new Apple Guidelines is suggesting that if you're just making the same app and just changing its content, it's better to create one app. 
+
+> Apple Review Guidelines 4.3 
+> Don’t create multiple Bundle IDs of the same app. If your app has different versions for specific locations, sports teams, universities, etc., consider submitting a single app and provide the variations using in-app purchase. 
+
+The only thing about Awesome is that the list should be curated, while open source iOS is pulling all the possible open source iOS app available. 
+
+Overall, I've research possible design styles that would best suit the app. :)
+",michieriffic,matteocrippa
+334,2016-07-13 20:22:03,"@dkhamsing I think what @matteocrippa is suggesting is to combine both Awesome Swift and Open Source iOS as one app as it complements each other. Am I correct? 
+
+Actually, I have thought of this last night and saw a lot of Awesome List available which can be combined in one app. 
+
+Because the new Apple Guidelines is suggesting that if you're just making the same app and just changing its content, it's better to create one app. 
+
+> Apple Review Guidelines 4.3 
+> Don’t create multiple Bundle IDs of the same app. If your app has different versions for specific locations, sports teams, universities, etc., consider submitting a single app and provide the variations using in-app purchase. 
+
+The only thing about Awesome is that the list should be curated, while open source iOS is pulling all the possible open source iOS app available. 
+
+Overall, I've research possible design styles that would best suit the app. :)
+",michieriffic,dkhamsing
+334,2016-07-17 22:46:05,"@matteocrippa i'll try to make a version of my app first and see what I can integrate in from your app. I've seen your repo and you are using LeeGo for the UI and I prefer using the storyboard or doing the UI using Apple's Framework. :) 
+
+@dkhamsing are you ok with that? :)
+",michieriffic,dkhamsing
+334,2016-07-17 22:46:05,"@matteocrippa i'll try to make a version of my app first and see what I can integrate in from your app. I've seen your repo and you are using LeeGo for the UI and I prefer using the storyboard or doing the UI using Apple's Framework. :) 
+
+@dkhamsing are you ok with that? :)
+",michieriffic,matteocrippa
+334,2016-07-18 05:55:45,"@michieriffic if you can wait a couple of days I'll push a new version of the app in a separate branch that strip off the POC of LeeGo, making use of Storyboard and XIBs for max reusability and faster UI development.
+If you want in the meanwhile feel free to share a mockup of the idea so we can work in order to review that first and figure out how to implement.
+",matteocrippa,michieriffic
+334,2016-07-18 08:35:22,"@michieriffic if you want have a look at this https://github.com/matteocrippa/awesomeSwift-iOS-App/tree/feature/newUI I pushed an early setup, if you want have a look at CreditsViewController to figure out how to approach.
+
+In order to avoid merge issues, I strongly suggest to keep the storyboard as simple as possibile, but make use of XIBs
+",matteocrippa,michieriffic
+334,2016-07-25 23:45:01,"Cool! 👍 @matteocrippa I'll be sending the mockup now. I've use the same color palette as your previous app.
+",michieriffic,matteocrippa
+333,2016-06-13 08:23:26,"@scribblemaniac it should be fixed, for the app feel free to use the awesome swift one, you know we're using the same approach to generate the md file via json
+",matteocrippa,scribblemaniac
+333,2016-06-13 14:49:06,"@scribblemaniac you mean adding a switcher at the early page where the user can switch within different awesome repositories based on json version?
+",matteocrippa,scribblemaniac
+332,2016-06-13 05:45:49,"Thanks @dkhamsing 
+",flexih,dkhamsing
+325,2016-06-03 14:46:46,"@scribblemaniac hey we might as well support all the licenses listed here https://developer.github.com/v3/licenses/
+
+
+",dkhamsing,scribblemaniac
+308,2016-05-18 17:56:10,"Thx @matteocrippa, will merge shortly
+",dkhamsing,matteocrippa
+302,2016-05-16 15:30:50,"@nloveladyallen played with this and in the end, it looked lost in the noise because too many projects have itunes links 
+
+Thanks for the suggestion!
+",dkhamsing,nloveladyallen
+297,2016-05-13 17:28:08,"@peteog looking good Pete
+We have to fix some validation on our end but your entry will be merged
+",dkhamsing,peteog
+297,2016-05-13 17:37:49,"@peteog yeah no worries, we should support that
+",dkhamsing,peteog
+297,2016-05-13 18:35:00,"@peteog Added https://github.com/dkhamsing/open-source-ios-apps/commit/c92bed89c6707b5f74dd96790b1c3bf8a931ef41
+",dkhamsing,peteog
+295,2016-05-13 14:11:27,"@DeveloperACE  it doesn't matter tbh
+",kvnbautista,DeveloperACE
+295,2016-05-13 14:34:50,"@DeveloperACE can you fix the conflicts? If not I can help you do it
+",dkhamsing,DeveloperACE
+295,2016-05-13 16:30:35,"@DeveloperACE no no, it's ok
+
+What you said was right, do it over again
+
+Go to https://github.com/dkhamsing/open-source-ios-apps and edit contents.json again and add your entry
+
+I am closing this  
+",dkhamsing,DeveloperACE
+293,2016-05-13 13:07:16,"@dkhamsing you should make that clear in the readme...
+",DeveloperACE,dkhamsing
+293,2016-05-13 14:36:40,"@Skornos actually we now have a script to update stars (about once a month) so this will get resolved by itself later 😄 
+",dkhamsing,Skornos
+293,2016-05-13 20:11:41,"@Skornos  https://github.com/dkhamsing/open-source-ios-apps/commit/6b2bcefb7244df185a491dfd14fb07fae5d84d75#diff-04c6e90faac2675aa89e2176d2eec7d8L750
+",dkhamsing,Skornos
+284,2016-05-11 18:59:44,"@dkhamsing Okay
+",scribblemaniac,dkhamsing
+282,2016-05-12 21:08:32,"@dkhamsing I was thinking of making it an `archived` tag instead. Either would work.
+",scribblemaniac,dkhamsing
+282,2016-05-13 16:33:16,"@scribblemaniac @kvnbautista 
+
+To archive an app (no longer maintained or no longer working etc..), add the `tag` ""archive"" in contents.json
+
+Thx
+",dkhamsing,scribblemaniac
+278,2016-05-11 13:58:05,"@Romi08 
+thanks for the contribution, we're reviewing changing the structure of this project in #275 
+will try to merge this after that process 
+",dkhamsing,Romi08
+278,2016-05-11 16:08:44,"@Romi08 
+- Please look at the new process for adding an app https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+- Example: https://github.com/dkhamsing/open-source-ios-apps/pull/281/files
+- Should we add your fork or https://github.com/spritlesoftware/railscasts-on-appletv ??
+",dkhamsing,Romi08
+275,2016-05-11 04:14:11,"@scribblemaniac oh I see what you mean.. then we can leave it alone for now. thanks!
+",dkhamsing,scribblemaniac
+275,2016-05-11 04:16:09,"@scribblemaniac however the country seems to be relevant for a location / local app.. what do you think?
+",dkhamsing,scribblemaniac
+275,2016-05-11 19:00:56,"@scribblemaniac updated schema.json: `description` while preferred is not required https://github.com/dkhamsing/open-source-ios-apps/pull/275/commits/553309fab7c35270fbe147b0158ba79469b4776a
+",dkhamsing,scribblemaniac
+275,2016-05-11 19:03:13,"@dkhamsing got it thanks
+",scribblemaniac,dkhamsing
+274,2016-05-09 19:26:31,"@peteog thanks for the contribution, we're reviewing changing the structure of this project in #273 #275
+will try to merge this after that process 
+",dkhamsing,peteog
+274,2016-05-11 16:09:05,"@peteog 
+
+Please look at the new process for adding an app https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+Example: https://github.com/dkhamsing/open-source-ios-apps/pull/281/files
+",dkhamsing,peteog
+273,2016-05-11 03:38:48,"@scribblemaniac are you interested in helping to maintain this repo? if you are leave me your email 😉 
+",dkhamsing,scribblemaniac
+273,2016-05-11 05:25:31,"@dkhamsing I would be interested in that. You can contact me at [REDACTED]
+",scribblemaniac,dkhamsing
+273,2016-05-11 13:57:03,"@scribblemaniac will add you after `275` is merged, thanks!
+",dkhamsing,scribblemaniac
+273,2016-05-11 16:06:10,"@scribblemaniac you've been added!
+",dkhamsing,scribblemaniac
+273,2016-05-11 16:21:33,"@dkhamsing Thanks!
+",scribblemaniac,dkhamsing
+272,2016-05-08 03:52:12,"@kvnbautista hey it's ok to commit to master without a pull request
+thx
+",dkhamsing,kvnbautista
+271,2016-05-08 02:05:56,"There's a typo in territories @kvnbautista 
+",dkhamsing,kvnbautista
+271,2016-05-08 03:51:02,"@kvnbautista huh weird.. my bad.
+",dkhamsing,kvnbautista
+267,2016-05-10 20:20:44,"@scribblemaniac nice script
+",dkhamsing,scribblemaniac
+267,2016-05-10 23:32:22,"@dkhamsing Thanks :blush:
+",scribblemaniac,dkhamsing
+267,2016-05-10 23:34:23,"@scribblemaniac hope to merge your pull soon
+",dkhamsing,scribblemaniac
+262,2016-04-20 20:21:06,"@kvnbautista thx
+@chadkeck Thank you for contributing to `open-source-ios-apps` :wink:
+",dkhamsing,chadkeck
+260,2016-04-19 14:48:41,"@kvnbautista hi, any chance you can update this?
+",dkhamsing,kvnbautista
+259,2016-04-19 17:03:22,"@kvnbautista hey you next time, can you use 
+https://github.com/shubhsin/TechTatva-15 instead of 
+https://github.com/shubhsin/TechTatva-15.git 
+
+I just fixed it
+
+Also this was reported in the CI failure ❌ 
+",dkhamsing,kvnbautista
+248,2016-03-14 21:57:40,"@tailec thanks for the contribution, is there a way for you to update this pull to only show your addition? right now there are so many changes https://github.com/dkhamsing/open-source-ios-apps/pull/248/files
+
+must be something with your editor
+",dkhamsing,tailec
+236,2016-03-04 15:29:11,"@inix can you sort this entry, should be in alphabetical order
+",dkhamsing,inix
+219,2016-06-07 13:32:06,"@pjchavarria hey paul, the app was deleted?
+",dkhamsing,pjchavarria
+204,2016-01-26 15:32:13,"thanks @dkhamsing 
+",sger,dkhamsing
+188,2016-01-11 18:12:48,"@aaronbrethorst Thanks for the contribution, actually OneBusAway is already added under Tools https://github.com/dkhamsing/open-source-ios-apps#tools
+",dkhamsing,aaronbrethorst
+99,2015-07-31 18:26:18,"That's the spirit @jayhickey @dkhamsing I'm much obliged :+1: :100: 
+",stakes,jayhickey
+99,2015-07-31 18:26:18,"That's the spirit @jayhickey @dkhamsing I'm much obliged :+1: :100: 
+",stakes,dkhamsing
+89,2015-06-23 15:01:15,"Hey @kevinnguy, it is a good question
+
+Here are some examples
+- https://developer.apple.com/library/ios/samplecode/iPhoneCoreDataRecipes/Introduction/Intro.html
+- https://developer.apple.com/library/ios/samplecode/CoreDataBooks/Introduction/Intro.html
+- http://www.objc.io/issues/4-core-data/full-core-data-application/
+- http://www.raywenderlich.com/85578/first-core-data-app-using-swift :large_orange_diamond: 
+
+These were just from https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=core%20data%20example%20app
+
+I will see about adding a Core Data section
+",dkhamsing,kevinnguy
+89,2015-06-23 17:37:21,"Thanks for the response @dkhamsing!
+",kevinnguy,dkhamsing
+75,2015-05-01 00:01:04,"@dkhamsing please take a look again, it looks like a list but is an app actually :)
+",sanketfirodiya,dkhamsing
+74,2015-04-29 14:07:56,"Thanks @neonichu 
+",dkhamsing,neonichu
+69,2015-04-28 14:28:54,"Hey @xu6148152 - going to remove this for now.. pls resubmit when app is more complete and update the readme. thx
+",dkhamsing,xu6148152
+53,2015-04-07 15:43:11,"hey @pcqpcq i just sent out your invites :smile: looking forward to working with you
+",jeffreyjackson,pcqpcq
+53,2015-04-08 15:40:10,"1. I do think it is a good idea to do what we want with a organization.
+2. I think the problem what @dkhamsing and I are concerning should be the same. In fact, I wonder what does @dkhamsing think?
+",pcqpcq,dkhamsing
+35,2015-04-01 20:14:45,"@kostiakoval hey the two lists were merged :grin: 
+",dkhamsing,kostiakoval
+6,2015-01-27 14:34:03,"Thanks @bennyguitar 
+Will add em
+",dkhamsing,bennyguitar
+3,2015-01-27 14:26:10,"Thanks @ashfurrow 
+",dkhamsing,ashfurrow
+470,2017-03-20 12:14:04,"1. [x] Project URL: https://github.com/richardxyx/BoardBank
+2. [x] Update contents.json instead of README 
+3. [x] One project per pull request
+4. [x] Avoid iOS or open-source in description as it is assumed
+5. [x] Use this commit title format if applicable: Add app-name by @github-username
+6. [x] Use approved format for your entry",richardxyx,github-username
+469,2017-03-19 13:39:53,"Hello, the FreeOTP Authenticator source link redirect to a page to show the Fedorahosted project retirement.
+
+`{
+      ""title"": ""FreeOTP Authenticator"",
+      ""category-ids"": [
+        ""password""
+      ],
+      ""description"": ""Two-Factor Authentication"",
+      ""source"": ""https://fedorahosted.org/freeotp/browser/ios"",
+      ""itunes"": ""https://itunes.apple.com/app/freeotp/id872559395"",
+      ""license"": ""apache-2.0"",
+      ""date_added"": ""Fri Mar 11 08:00:19 2016 -0800"",
+      ""suggested_by"": ""@dkhamsing"",
+      ""screenshots"": [
+        ""http://a4.mzstatic.com/us/r30/Purple5/v4/66/8b/9c/668b9cf1-3502-3683-7787-ef450ef90019/screen696x696.jpeg""
+      ]
+    }`",RemyDCF,dkhamsing
+465,2017-02-21 15:32:01,"Add ios by @wwdc-family @3lvis 
+cc @krausefx 
+
+![](https://raw.githubusercontent.com/wwdc-family/design/master/Images/1.png)",dkhamsing,wwdc-family
+465,2017-02-21 15:32:01,"Add ios by @wwdc-family @3lvis 
+cc @krausefx 
+
+![](https://raw.githubusercontent.com/wwdc-family/design/master/Images/1.png)",dkhamsing,krausefx
+463,2017-02-18 02:14:00,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [x] Project URL: https://github.com/Nicholas714/Spin-Zone
+2. [x] Update contents.json instead of README 
+3. [x] One project per pull request
+4. [x] Avoid iOS or open-source in description as it is assumed
+5. [x] Use this commit title format if applicable: Add app-name by @github-username
+6. [x] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+            ""title"": ""Name of the app"",
+            ""category-ids"": [""Category id""],
+            ""description"": ""What this app does"",
+            ""source"": ""Link to source, usually GitHub"",
+            ""screenshots"": [""http://something.com/image.png""],
+            ""date_added"": ""Aug 6 2016"",
+            ""suggested_by"": ""@github_username""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",Nicholas714,github
+463,2017-02-18 02:14:00,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [x] Project URL: https://github.com/Nicholas714/Spin-Zone
+2. [x] Update contents.json instead of README 
+3. [x] One project per pull request
+4. [x] Avoid iOS or open-source in description as it is assumed
+5. [x] Use this commit title format if applicable: Add app-name by @github-username
+6. [x] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+            ""title"": ""Name of the app"",
+            ""category-ids"": [""Category id""],
+            ""description"": ""What this app does"",
+            ""source"": ""Link to source, usually GitHub"",
+            ""screenshots"": [""http://something.com/image.png""],
+            ""date_added"": ""Aug 6 2016"",
+            ""suggested_by"": ""@github_username""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",Nicholas714,github-username
+462,2017-02-09 20:00:06,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+
+1. [X] Project URL: https://github.com/nicolapps/4clock
+2. [X] Update contents.json instead of README 
+3. [X] One project per pull request
+4. [X] Avoid iOS or open-source in description as it is assumed
+5. [X] Use this commit title format if applicable: Add app-name by @github-username
+6. [X] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+            ""title"": ""Name of the app"",
+            ""category-ids"": [""Category id""],
+            ""description"": ""What this app does"",
+            ""source"": ""Link to source, usually GitHub"",
+            ""screenshots"": [""http://something.com/image.png""],
+            ""date_added"": ""Aug 6 2016"",
+            ""suggested_by"": ""@github_username""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->",RemyDCF,github
+462,2017-02-09 20:00:06,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+
+1. [X] Project URL: https://github.com/nicolapps/4clock
+2. [X] Update contents.json instead of README 
+3. [X] One project per pull request
+4. [X] Avoid iOS or open-source in description as it is assumed
+5. [X] Use this commit title format if applicable: Add app-name by @github-username
+6. [X] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+            ""title"": ""Name of the app"",
+            ""category-ids"": [""Category id""],
+            ""description"": ""What this app does"",
+            ""source"": ""Link to source, usually GitHub"",
+            ""screenshots"": [""http://something.com/image.png""],
+            ""date_added"": ""Aug 6 2016"",
+            ""suggested_by"": ""@github_username""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->",RemyDCF,github-username
+461,2017-02-07 04:26:34,"1. [x] Project URL:
+2. [x] Update contents.json instead of README 
+3. [x] One project per pull request
+4. [x] Avoid iOS or open-source in description as it is assumed
+5. [x] Use this commit title format if applicable: Add app-name by @github-username
+6. [x] Use approved format for your entry
+",Performador,github-username
+460,2017-01-26 17:43:48,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+
+1. [x] Project URL:
+2. [x] Update contents.json instead of README 
+3. [x] One project per pull request
+4. [x] Avoid iOS or open-source in description as it is assumed
+5. [x] Use this commit title format if applicable: Add app-name by @github-username
+6. [x] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+            ""title"": ""Name of the app"",
+            ""category-ids"": [""Category id""],
+            ""description"": ""What this app does"",
+            ""source"": ""Link to source, usually GitHub"",
+            ""screenshots"": [""http://something.com/image.png""],
+            ""date_added"": ""Aug 6 2016"",
+            ""suggested_by"": ""@github_username""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",paulsumit1993,github
+460,2017-01-26 17:43:48,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+
+1. [x] Project URL:
+2. [x] Update contents.json instead of README 
+3. [x] One project per pull request
+4. [x] Avoid iOS or open-source in description as it is assumed
+5. [x] Use this commit title format if applicable: Add app-name by @github-username
+6. [x] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+            ""title"": ""Name of the app"",
+            ""category-ids"": [""Category id""],
+            ""description"": ""What this app does"",
+            ""source"": ""Link to source, usually GitHub"",
+            ""screenshots"": [""http://something.com/image.png""],
+            ""date_added"": ""Aug 6 2016"",
+            ""suggested_by"": ""@github_username""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",paulsumit1993,github-username
+459,2017-01-26 00:59:11,"eCortex
+
+<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+
+1. [ ] Project URL:
+2. [ ] Update contents.json instead of README 
+3. [ ] One project per pull request
+4. [ ] Avoid iOS or open-source in description as it is assumed
+5. [ ] Use this commit title format if applicable: Add app-name by @github-username
+6. [ ] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+            ""title"": ""Name of the app"",
+            ""category-ids"": [""Category id""],
+            ""description"": ""What this app does"",
+            ""source"": ""Link to source, usually GitHub"",
+            ""screenshots"": [""http://something.com/image.png""],
+            ""date_added"": ""Aug 6 2016"",
+            ""suggested_by"": ""@github_username""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",myeramareddy,github
+459,2017-01-26 00:59:11,"eCortex
+
+<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+
+1. [ ] Project URL:
+2. [ ] Update contents.json instead of README 
+3. [ ] One project per pull request
+4. [ ] Avoid iOS or open-source in description as it is assumed
+5. [ ] Use this commit title format if applicable: Add app-name by @github-username
+6. [ ] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+            ""title"": ""Name of the app"",
+            ""category-ids"": [""Category id""],
+            ""description"": ""What this app does"",
+            ""source"": ""Link to source, usually GitHub"",
+            ""screenshots"": [""http://something.com/image.png""],
+            ""date_added"": ""Aug 6 2016"",
+            ""suggested_by"": ""@github_username""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",myeramareddy,github-username
+458,2017-01-19 02:09:03,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+
+1. [x] Project URL:
+2. [x] Update contents.json instead of README 
+3. [x] One project per pull request
+4. [x] Avoid iOS or open-source in description as it is assumed
+5. [x] Use this commit title format if applicable: Add app-name by @github-username
+6. [x] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+            ""title"": ""Name of the app"",
+            ""category-ids"": [""Category id""],
+            ""description"": ""What this app does"",
+            ""source"": ""Link to source, usually GitHub"",
+            ""screenshots"": [""http://something.com/image.png""],
+            ""date_added"": ""Aug 6 2016"",
+            ""suggested_by"": ""@github_username""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",vanyaland,github
+458,2017-01-19 02:09:03,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+
+1. [x] Project URL:
+2. [x] Update contents.json instead of README 
+3. [x] One project per pull request
+4. [x] Avoid iOS or open-source in description as it is assumed
+5. [x] Use this commit title format if applicable: Add app-name by @github-username
+6. [x] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+            ""title"": ""Name of the app"",
+            ""category-ids"": [""Category id""],
+            ""description"": ""What this app does"",
+            ""source"": ""Link to source, usually GitHub"",
+            ""screenshots"": [""http://something.com/image.png""],
+            ""date_added"": ""Aug 6 2016"",
+            ""suggested_by"": ""@github_username""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",vanyaland,github-username
+457,2017-01-16 19:57:06,"Sorry! I realized that I didn't link a proper screenshot when adding Potter Pics. Added it! 
+
+1. [x] Project URL: https://github.com/surayashivji/PotterPics
+2. [x] Update contents.json instead of README 
+3. [x] One project per pull request
+6. [x] Use approved format for your entry
+4. [x] Avoid iOS or open-source in description as it is assumed
+5. [x] Use this commit title format if applicable: Add app-name by @github-username
+
+<!-- Approved Format
+
+{
+            ""title"": ""Name of the app"",
+            ""category-ids"": [""Category id""],
+            ""description"": ""What this app does"",
+            ""source"": ""Link to source, usually GitHub"",
+            ""screenshots"": [""http://something.com/image.png""],
+            ""date_added"": ""Aug 6 2016"",
+            ""suggested_by"": ""@github_username""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",surayashivji,github
+457,2017-01-16 19:57:06,"Sorry! I realized that I didn't link a proper screenshot when adding Potter Pics. Added it! 
+
+1. [x] Project URL: https://github.com/surayashivji/PotterPics
+2. [x] Update contents.json instead of README 
+3. [x] One project per pull request
+6. [x] Use approved format for your entry
+4. [x] Avoid iOS or open-source in description as it is assumed
+5. [x] Use this commit title format if applicable: Add app-name by @github-username
+
+<!-- Approved Format
+
+{
+            ""title"": ""Name of the app"",
+            ""category-ids"": [""Category id""],
+            ""description"": ""What this app does"",
+            ""source"": ""Link to source, usually GitHub"",
+            ""screenshots"": [""http://something.com/image.png""],
+            ""date_added"": ""Aug 6 2016"",
+            ""suggested_by"": ""@github_username""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",surayashivji,github-username
+456,2017-01-15 20:59:33,"1. [x] Project URL: https://github.com/surayashivji/PotterPics
+2. [x] Update contents.json instead of README 
+3. [x] One project per pull request
+4. [x] Avoid iOS or open-source in description as it is assumed
+5. [x] Use this commit title format if applicable: Add app-name by @github-username
+6. [x] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+            ""title"": ""Name of the app"",
+            ""category-ids"": [""Category id""],
+            ""description"": ""What this app does"",
+            ""source"": ""Link to source, usually GitHub"",
+            ""screenshots"": [""http://something.com/image.png""],
+            ""date_added"": ""Aug 6 2016"",
+            ""suggested_by"": ""@github_username""
+}
+",surayashivji,github
+456,2017-01-15 20:59:33,"1. [x] Project URL: https://github.com/surayashivji/PotterPics
+2. [x] Update contents.json instead of README 
+3. [x] One project per pull request
+4. [x] Avoid iOS or open-source in description as it is assumed
+5. [x] Use this commit title format if applicable: Add app-name by @github-username
+6. [x] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+            ""title"": ""Name of the app"",
+            ""category-ids"": [""Category id""],
+            ""description"": ""What this app does"",
+            ""source"": ""Link to source, usually GitHub"",
+            ""screenshots"": [""http://something.com/image.png""],
+            ""date_added"": ""Aug 6 2016"",
+            ""suggested_by"": ""@github_username""
+}
+",surayashivji,github-username
+453,2016-12-21 19:12:42,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+
+1. [x] Project URL:
+2. [x] Update contents.json instead of README 
+3. [x] One project per pull request
+4. [x] Avoid iOS or open-source in description as it is assumed
+5. [ ] Use this commit title format if applicable: Add app-name by @github-username
+6. [x] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+            ""title"": ""Name of the app"",
+            ""category-ids"": [""Category id""],
+            ""description"": ""What this app does"",
+            ""source"": ""Link to source, usually GitHub"",
+            ""screenshots"": [""http://something.com/image.png""],
+            ""date_added"": ""Aug 6 2016"",
+            ""suggested_by"": ""@github_username""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",jkandzi,github
+453,2016-12-21 19:12:42,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+
+1. [x] Project URL:
+2. [x] Update contents.json instead of README 
+3. [x] One project per pull request
+4. [x] Avoid iOS or open-source in description as it is assumed
+5. [ ] Use this commit title format if applicable: Add app-name by @github-username
+6. [x] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+            ""title"": ""Name of the app"",
+            ""category-ids"": [""Category id""],
+            ""description"": ""What this app does"",
+            ""source"": ""Link to source, usually GitHub"",
+            ""screenshots"": [""http://something.com/image.png""],
+            ""date_added"": ""Aug 6 2016"",
+            ""suggested_by"": ""@github_username""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",jkandzi,github-username
+452,2016-12-02 12:43:01,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+
+1. [ ] Project URL:
+2. [ ] Update contents.json instead of README 
+3. [ ] One project per pull request
+4. [ ] Avoid iOS or open-source in description as it is assumed
+5. [ ] Use this commit title format if applicable: Add app-name by @github-username
+6. [ ] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+            ""title"": ""Name of the app"",
+            ""category-ids"": [""Category id""],
+            ""description"": ""What this app does"",
+            ""source"": ""Link to source, usually GitHub"",
+            ""screenshots"": [""http://something.com/image.png""],
+            ""date_added"": ""Aug 6 2016"",
+            ""suggested_by"": ""@github_username""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+
+",iAlexander,github
+452,2016-12-02 12:43:01,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+
+1. [ ] Project URL:
+2. [ ] Update contents.json instead of README 
+3. [ ] One project per pull request
+4. [ ] Avoid iOS or open-source in description as it is assumed
+5. [ ] Use this commit title format if applicable: Add app-name by @github-username
+6. [ ] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+            ""title"": ""Name of the app"",
+            ""category-ids"": [""Category id""],
+            ""description"": ""What this app does"",
+            ""source"": ""Link to source, usually GitHub"",
+            ""screenshots"": [""http://something.com/image.png""],
+            ""date_added"": ""Aug 6 2016"",
+            ""suggested_by"": ""@github_username""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+
+",iAlexander,github-username
+451,2016-11-27 15:03:17,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+
+1. [ ] Project URL:
+2. [ ] Update contents.json instead of README 
+3. [ ] One project per pull request
+4. [ ] Avoid iOS or open-source in description as it is assumed
+5. [ ] Use this commit title format if applicable: Add app-name by @github-username
+6. [ ] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+            ""title"": ""Name of the app"",
+            ""category-ids"": [""Category id""],
+            ""description"": ""What this app does"",
+            ""source"": ""Link to source, usually GitHub"",
+            ""screenshots"": [""http://something.com/image.png""],
+            ""date_added"": ""Aug 6 2016"",
+            ""suggested_by"": ""@github_username""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+
+",iAlexander,github
+451,2016-11-27 15:03:17,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+
+1. [ ] Project URL:
+2. [ ] Update contents.json instead of README 
+3. [ ] One project per pull request
+4. [ ] Avoid iOS or open-source in description as it is assumed
+5. [ ] Use this commit title format if applicable: Add app-name by @github-username
+6. [ ] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+            ""title"": ""Name of the app"",
+            ""category-ids"": [""Category id""],
+            ""description"": ""What this app does"",
+            ""source"": ""Link to source, usually GitHub"",
+            ""screenshots"": [""http://something.com/image.png""],
+            ""date_added"": ""Aug 6 2016"",
+            ""suggested_by"": ""@github_username""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+
+",iAlexander,github-username
+450,2016-11-27 14:20:29,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+
+1. [ ] Project URL:
+2. [ ] Update contents.json instead of README 
+3. [ ] One project per pull request
+4. [ ] Avoid iOS or open-source in description as it is assumed
+5. [ ] Use this commit title format if applicable: Add app-name by @github-username
+6. [ ] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+            ""title"": ""Name of the app"",
+            ""category-ids"": [""Category id""],
+            ""description"": ""What this app does"",
+            ""source"": ""Link to source, usually GitHub"",
+            ""screenshots"": [""http://something.com/image.png""],
+            ""date_added"": ""Aug 6 2016"",
+            ""suggested_by"": ""@github_username""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+
+",iAlexander,github
+450,2016-11-27 14:20:29,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+
+1. [ ] Project URL:
+2. [ ] Update contents.json instead of README 
+3. [ ] One project per pull request
+4. [ ] Avoid iOS or open-source in description as it is assumed
+5. [ ] Use this commit title format if applicable: Add app-name by @github-username
+6. [ ] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+            ""title"": ""Name of the app"",
+            ""category-ids"": [""Category id""],
+            ""description"": ""What this app does"",
+            ""source"": ""Link to source, usually GitHub"",
+            ""screenshots"": [""http://something.com/image.png""],
+            ""date_added"": ""Aug 6 2016"",
+            ""suggested_by"": ""@github_username""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+
+",iAlexander,github-username
+449,2016-11-23 09:53:54,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+
+1. [ ] Project URL:
+2. [ ] Update contents.json instead of README 
+3. [ ] One project per pull request
+4. [ ] Avoid iOS or open-source in description as it is assumed
+5. [ ] Use this commit title format if applicable: Add app-name by @github-username
+6. [ ] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+            ""title"": ""Name of the app"",
+            ""category-ids"": [""Category id""],
+            ""description"": ""What this app does"",
+            ""source"": ""Link to source, usually GitHub"",
+            ""screenshots"": [""http://something.com/image.png""],
+            ""date_added"": ""Aug 6 2016"",
+            ""suggested_by"": ""@github_username""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+
+",chauvincent,github
+449,2016-11-23 09:53:54,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+
+1. [ ] Project URL:
+2. [ ] Update contents.json instead of README 
+3. [ ] One project per pull request
+4. [ ] Avoid iOS or open-source in description as it is assumed
+5. [ ] Use this commit title format if applicable: Add app-name by @github-username
+6. [ ] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+            ""title"": ""Name of the app"",
+            ""category-ids"": [""Category id""],
+            ""description"": ""What this app does"",
+            ""source"": ""Link to source, usually GitHub"",
+            ""screenshots"": [""http://something.com/image.png""],
+            ""date_added"": ""Aug 6 2016"",
+            ""suggested_by"": ""@github_username""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+
+",chauvincent,github-username
+447,2016-11-09 16:42:24,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+
+1. [ ] Project URL:
+2. [ ] Update contents.json instead of README 
+3. [ ] One project per pull request
+4. [ ] Avoid iOS or open-source in description as it is assumed
+5. [ ] Use this commit title format if applicable: Add app-name by @github-username
+6. [ ] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+            ""title"": ""Name of the app"",
+            ""category-ids"": [""Category id""],
+            ""description"": ""What this app does"",
+            ""source"": ""Link to source, usually GitHub"",
+            ""screenshots"": [""http://something.com/image.png""],
+            ""date_added"": ""Aug 6 2016"",
+            ""suggested_by"": ""@github_username""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+
+",snazzware,github
+447,2016-11-09 16:42:24,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+
+1. [ ] Project URL:
+2. [ ] Update contents.json instead of README 
+3. [ ] One project per pull request
+4. [ ] Avoid iOS or open-source in description as it is assumed
+5. [ ] Use this commit title format if applicable: Add app-name by @github-username
+6. [ ] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+            ""title"": ""Name of the app"",
+            ""category-ids"": [""Category id""],
+            ""description"": ""What this app does"",
+            ""source"": ""Link to source, usually GitHub"",
+            ""screenshots"": [""http://something.com/image.png""],
+            ""date_added"": ""Aug 6 2016"",
+            ""suggested_by"": ""@github_username""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+
+",snazzware,github-username
+446,2016-11-01 00:49:31,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+
+1. [x] Project URL:
+2. [x] Update contents.json instead of README 
+3. [x] One project per pull request
+4. [x] Avoid iOS or open-source in description as it is assumed
+5. [x] Use this commit title format if applicable: Add app-name by @github-username
+6. [x] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+            ""title"": ""Name of the app"",
+            ""category-ids"": [""Category id""],
+            ""description"": ""What this app does"",
+            ""source"": ""Link to source, usually GitHub"",
+            ""screenshots"": [""http://something.com/image.png""],
+            ""date_added"": ""Aug 6 2016"",
+            ""suggested_by"": ""@github_username""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+
+",vanyaland,github
+446,2016-11-01 00:49:31,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+
+1. [x] Project URL:
+2. [x] Update contents.json instead of README 
+3. [x] One project per pull request
+4. [x] Avoid iOS or open-source in description as it is assumed
+5. [x] Use this commit title format if applicable: Add app-name by @github-username
+6. [x] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+            ""title"": ""Name of the app"",
+            ""category-ids"": [""Category id""],
+            ""description"": ""What this app does"",
+            ""source"": ""Link to source, usually GitHub"",
+            ""screenshots"": [""http://something.com/image.png""],
+            ""date_added"": ""Aug 6 2016"",
+            ""suggested_by"": ""@github_username""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+
+",vanyaland,github-username
+445,2016-11-01 00:30:07,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+
+1. [ ] Project URL:
+2. [ ] Update contents.json instead of README 
+3. [ ] One project per pull request
+4. [ ] Avoid iOS or open-source in description as it is assumed
+5. [ ] Use this commit title format if applicable: Add app-name by @github-username
+6. [ ] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+            ""title"": ""Name of the app"",
+            ""category-ids"": [""Category id""],
+            ""description"": ""What this app does"",
+            ""source"": ""Link to source, usually GitHub"",
+            ""screenshots"": [""http://something.com/image.png""],
+            ""date_added"": ""Aug 6 2016"",
+            ""suggested_by"": ""@github_username""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+
+Update from original",vanyaland,github
+445,2016-11-01 00:30:07,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+
+1. [ ] Project URL:
+2. [ ] Update contents.json instead of README 
+3. [ ] One project per pull request
+4. [ ] Avoid iOS or open-source in description as it is assumed
+5. [ ] Use this commit title format if applicable: Add app-name by @github-username
+6. [ ] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+            ""title"": ""Name of the app"",
+            ""category-ids"": [""Category id""],
+            ""description"": ""What this app does"",
+            ""source"": ""Link to source, usually GitHub"",
+            ""screenshots"": [""http://something.com/image.png""],
+            ""date_added"": ""Aug 6 2016"",
+            ""suggested_by"": ""@github_username""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+
+Update from original",vanyaland,github-username
+444,2016-11-01 00:25:34,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+
+1. [x] Project URL:
+2. [x] Update contents.json instead of README 
+3. [x] One project per pull request
+4. [x] Avoid iOS or open-source in description as it is assumed
+5. [x] Use this commit title format if applicable: Add app-name by @github-username
+6. [x] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+            ""title"": ""Name of the app"",
+            ""category-ids"": [""Category id""],
+            ""description"": ""What this app does"",
+            ""source"": ""Link to source, usually GitHub"",
+            ""screenshots"": [""http://something.com/image.png""],
+            ""date_added"": ""Aug 6 2016"",
+            ""suggested_by"": ""@github_username""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+
+",vanyaland,github
+444,2016-11-01 00:25:34,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+
+1. [x] Project URL:
+2. [x] Update contents.json instead of README 
+3. [x] One project per pull request
+4. [x] Avoid iOS or open-source in description as it is assumed
+5. [x] Use this commit title format if applicable: Add app-name by @github-username
+6. [x] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+            ""title"": ""Name of the app"",
+            ""category-ids"": [""Category id""],
+            ""description"": ""What this app does"",
+            ""source"": ""Link to source, usually GitHub"",
+            ""screenshots"": [""http://something.com/image.png""],
+            ""date_added"": ""Aug 6 2016"",
+            ""suggested_by"": ""@github_username""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+
+",vanyaland,github-username
+441,2016-10-27 15:06:45,"Credit goes to @leereilly's list https://github.com/leereilly/games
+#261
+",dkhamsing,leereilly
+439,2016-10-23 10:34:53,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [ ] Project URL:
+2. [ ] Update contents.json instead of README 
+3. [ ] One project per pull request
+4. [ ] Avoid iOS or open-source in description as it is assumed
+5. [ ] Use this commit title format if applicable: Add app-name by @github-username
+6. [ ] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+            ""title"": ""Name of the app"",
+            ""category-ids"": [""Category id""],
+            ""description"": ""What this app does"",
+            ""source"": ""Link to source, usually GitHub"",
+            ""screenshots"": [""http://something.com/image.png""],
+            ""date_added"": ""Aug 6 2016"",
+            ""suggested_by"": ""@github_username""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",tirupati17,github
+439,2016-10-23 10:34:53,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [ ] Project URL:
+2. [ ] Update contents.json instead of README 
+3. [ ] One project per pull request
+4. [ ] Avoid iOS or open-source in description as it is assumed
+5. [ ] Use this commit title format if applicable: Add app-name by @github-username
+6. [ ] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+            ""title"": ""Name of the app"",
+            ""category-ids"": [""Category id""],
+            ""description"": ""What this app does"",
+            ""source"": ""Link to source, usually GitHub"",
+            ""screenshots"": [""http://something.com/image.png""],
+            ""date_added"": ""Aug 6 2016"",
+            ""suggested_by"": ""@github_username""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",tirupati17,github-username
+438,2016-10-22 20:18:20,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [ ] Project URL:
+2. [ ] Update contents.json instead of README 
+3. [ ] One project per pull request
+4. [ ] Avoid iOS or open-source in description as it is assumed
+5. [ ] Use this commit title format if applicable: Add app-name by @github-username
+6. [ ] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+            ""title"": ""Name of the app"",
+            ""category-ids"": [""Category id""],
+            ""description"": ""What this app does"",
+            ""source"": ""Link to source, usually GitHub"",
+            ""screenshots"": [""http://something.com/image.png""],
+            ""date_added"": ""Aug 6 2016"",
+            ""suggested_by"": ""@github_username""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",tirupati17,github
+438,2016-10-22 20:18:20,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [ ] Project URL:
+2. [ ] Update contents.json instead of README 
+3. [ ] One project per pull request
+4. [ ] Avoid iOS or open-source in description as it is assumed
+5. [ ] Use this commit title format if applicable: Add app-name by @github-username
+6. [ ] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+            ""title"": ""Name of the app"",
+            ""category-ids"": [""Category id""],
+            ""description"": ""What this app does"",
+            ""source"": ""Link to source, usually GitHub"",
+            ""screenshots"": [""http://something.com/image.png""],
+            ""date_added"": ""Aug 6 2016"",
+            ""suggested_by"": ""@github_username""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",tirupati17,github-username
+437,2016-10-22 20:04:38,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [ ] Project URL:
+2. [ ] Update contents.json instead of README 
+3. [ ] One project per pull request
+4. [ ] Avoid iOS or open-source in description as it is assumed
+5. [ ] Use this commit title format if applicable: Add app-name by @github-username
+6. [ ] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+            ""title"": ""Name of the app"",
+            ""category-ids"": [""Category id""],
+            ""description"": ""What this app does"",
+            ""source"": ""Link to source, usually GitHub"",
+            ""screenshots"": [""http://something.com/image.png""],
+            ""date_added"": ""Aug 6 2016"",
+            ""suggested_by"": ""@github_username""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",tirupati17,github
+437,2016-10-22 20:04:38,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [ ] Project URL:
+2. [ ] Update contents.json instead of README 
+3. [ ] One project per pull request
+4. [ ] Avoid iOS or open-source in description as it is assumed
+5. [ ] Use this commit title format if applicable: Add app-name by @github-username
+6. [ ] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+            ""title"": ""Name of the app"",
+            ""category-ids"": [""Category id""],
+            ""description"": ""What this app does"",
+            ""source"": ""Link to source, usually GitHub"",
+            ""screenshots"": [""http://something.com/image.png""],
+            ""date_added"": ""Aug 6 2016"",
+            ""suggested_by"": ""@github_username""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",tirupati17,github-username
+432,2016-10-08 03:34:08,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [x] Project URL:
+2. [x] Update contents.json instead of README 
+3. [x] One project per pull request
+4. [x] Avoid iOS or open-source in description as it is assumed
+5. [x] Use this commit title format if applicable: Add app-name by @github-username
+6. [x] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+            ""title"": ""Name of the app"",
+            ""category-ids"": [""Category id""],
+            ""description"": ""What this app does"",
+            ""source"": ""Link to source, usually GitHub"",
+            ""screenshots"": [""http://something.com/image.png""],
+            ""date_added"": ""Aug 6 2016"",
+            ""suggested_by"": ""@github_username""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",cpo007,github
+432,2016-10-08 03:34:08,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [x] Project URL:
+2. [x] Update contents.json instead of README 
+3. [x] One project per pull request
+4. [x] Avoid iOS or open-source in description as it is assumed
+5. [x] Use this commit title format if applicable: Add app-name by @github-username
+6. [x] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+            ""title"": ""Name of the app"",
+            ""category-ids"": [""Category id""],
+            ""description"": ""What this app does"",
+            ""source"": ""Link to source, usually GitHub"",
+            ""screenshots"": [""http://something.com/image.png""],
+            ""date_added"": ""Aug 6 2016"",
+            ""suggested_by"": ""@github_username""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",cpo007,github-username
+431,2016-10-04 18:17:30,"Would appreciate If you can get screenshots for apps on this list 😄 
+
+A big thank you to @vpeschenkov for helping out :)
+
+- [x] github-issues
+- [ ] pokemon-map
+- [ ] appceleratorOMDB
+- [ ] Apple Developer Library
+- [ ] Apple WWDC 2015
+- [ ] GroceryList
+
+
+
+### cannot build :(
+
+- [ ] Jim
+- [ ] Arex
+- [ ] GrubbyWorm
+- [ ] Reusable Code
+- [ ] Github-Swift
+- [ ] Federal Data SDK
+- [ ] Alarm
+- [ ] HomeKit-Demo
+- [ ] Lister
+- [ ] RealmToDo
+- [ ] To Do List
+- [ ] GammaThingy
+- [ ] Swift-Demos
+- [ ] SwiftNote
+- [ ] SwiftRACGoogleImages
+- [ ] Contacts
+- [ ] ReactiveKitten
+- [ ] iCepa
+
+---
+
+### archive
+
+- [ ] Chess
+- [ ] Communiqué
+- [ ] Swift Off
+- [ ] Vim
+- [ ] wikiHow
+- [x] iOctocat
+- [x] LastFM
+- [x] Bancha
+- [x] PocketFlix
+- [x] Adler Planetarium Navigation & Tour
+- [x] AppSales-Mobile
+- [x] Cheddar
+- [x] Everest
+- [x] Mume
+- [x] Pancake
+- [x] Repo
+- [x] SudokuResolv
+
+---
+ 
+### n/a
+
+- [ ] open-source-android-apps
+- [ ] open-source-ios-apps archive
+- [ ] awesome-macOS
+
+
+---
+
+
+- [x] Reddit
+- [x] WatchSnake
+- [x] Movies
+- [x] Siesta GitHub Browser
+- [x] HeartControl
+- [x] MyAwesomeChecklist
+- [x] Mirror++
+- [x] Tether
+- [x] iCopyPasta
+- [x] Hidrate
+- [x] Nested Lists
+- [x] DVD Collection Tracker
+- [x] MetricTime
+- [x] RealmTasks
+- [x] Listr
+- [x] Startups - Mapped In Israel
+- [x] prankPro
+- [x] bar
+- [x] TextEthan
+- [x] MiamiSunglasses
+- [x] RKGist
+- [x] HealthKit~Swift
+- [x] UIExplorer
+- [x] TicTacToe
+- [x] 2048
+- [x] try swift nyc
+- [x] CodeCombat
+- [x] RWDevCon
+- [x] Coffee Timer
+- [x] CollageMaker
+- [x] ~~wat~~
+- [x] Connectivity Demo
+- [x] heartrate
+- [x] CloudKit
+- [x] CloudKit
+- [x] GoodNight
+- [x] SafariAutoLoginTest
+- [x] TrollDrop
+- [x] Knock
+- [x] WWDC Students
+- [x] Words
+- [x] Anypic
+- [x] Counter
+- [x] CloudKit-To-Do-List
+- [x] Abby's Cycle
+- [x] Open States
+- [x] SimpleAuth
+- [x] LobsterApp
+- [x] Product Kitty
+- [x] london-react
+- [x] Spacepics
+- [x] RetroArch
+- [x] iUAE
+- [x] MAME4iOS
+- [x] nds4ios
+- [x] DOSPad
+- [x] Aeropack
+- [x] Cryptose
+- [x] teh internets
+- [x] My First Memory
+- [x] Hostile Takeover
+- [x] Vapor Chat
+- [x] 2048
+- [x] Todo
+- [x] ForceSketch
+- [x] Calculator
+- [x] Facebook Login
+- [x] iTunes Catalog Search
+- [x] Currency Converter
+- [x] Finance
+- [x] Property Finder
+- [x] GitHub API Client
+- [x] Sudoku
+- [x] ActiveGS
+- [x] PPSSPP
+- [x] Fibonacc iClock
+- [x] Telemat-tvOS
+- [x] Prey
+- [x] Kodi
+- [x] Mini vMac
+- [x] Done
+- [x] WatchKit-Apps
+- [x] watchOS-2-Sampler
+- [x] Flickr-Search
+- [x] SwiftFlickrApp
+- [x] HackerNews
+- [x] iOS 8 Sampler
+- [x] iOS 9 Sampler
+- [x] StateRestorationDemo
+- [x] CardDecks
+- [x] Parse 2013 Developer Day
+- [x] Nortal TechDay 2015
+- [x] EventBlankApp
+- [x] Colloquy
+- [x] Wunderschnell
+- [x] Valio Con 2014 Schedule
+- [x] Coins
+- [x] littlego
+- [x] Five In A Row (五子棋)
+- [x] NaughtyKeyboard
+- [x] GeoTappy
+- [x] Layer-Parse
+- [x] SwiftWeather
+- [x] Plum-O-Meter
+- [x] Around Me
+- [x] Assemblies
+- [x] Hacker News app by jsdf
+- [x] RSS Reader
+- [x] CardsAgainst
+- [x] Dungeon Crawl
+- [x] movies
+- [x] GBA4iOS
+- [x] Twitch
+- [x] 2048
+- [x] Blink
+- [x] ReactiveSwiftFlickrSearch
+- [x] To do
+- [x] SwiftHub
+- [x] Sentiments
+- [x] UitzendingGemist by 4np
+- [x] Tweetometer
+- [x] FreeRDP
+- [x] CodeBucket
+- [x] Swift-Gif
+- [x] To Do List (Redux)
+- [x] Find My Bus NJ
+- [x] NBAreact
+- [x] Dono
+- [x] AlzPrevent
+- [x] LinkKeyboard
+- [x] remove extra screenshot for ad block fast 
+- [x] UitzendingGemist by jeffkreeftmeijer
+- [x] Calculator by noodlewerk
+- [x] Calculator by mukeshthawani
+- [x] CoolSpot
+- [x] FlickrWatch
+- [x] HighStreet
+- [x] Impulse
+- [x] KTPomodoro
+- [x] Natural Language Clock
+- [x] OnTime
+- [x] PhotoWatch
+- [x] Soon
+- [x] Watchman
+- [x] WatchNotes
+- [x] WatchPics
+- [x] WatchStocks
+- [x] BLEMeshChat
+- [x] Chats
+- [x] Mumble
+- [x] Rocket.Chat
+- [x] BlockParty
+- [x] Focus by Firefox
+- [x] Bequest
+- [x] Review Time
+- [x] MrCode
+- [x] Concentration game (翻翻看)
+- [x] Conway's Game of Life
+- [x] SceneKitFrogger
+- [x] Stick-Hero-Swift
+- [x] Hodor
+- [x] Slidden
+- [x] Doppio
+- [x] HopperBus
+- [x] iBeaconTasks
+- [x] Moves
+- [x] OwnTracks
+- [x] pathlogger
+- [x] PebCiti
+- [x] Swift-Walk-Tracker
+- [x] Smart Traveller (UberGuide)
+- [x] DoubanFM
+- [x] Filterpedia
+- [x] FreeStreamer
+- [x] Megabite
+- [x] PhotoBrowser
+- [x] PopcornTime
+- [x] Pugs
+- [x] Revolved
+- [x] ASCII Art Generator
+- [x] Swifteroid
+- [x] VoiceMemos
+- [x] NirZhihuDaily2.0
+- [x] TabDump
+- [x] Hackers
+- [x] LVMC
+- [x] Polls
+- [x] Starship
+- [x] ZeroStore
+- [x] Lucid Weather Clock
+- [x] Pocket Forecast
+- [x] RainMan
+- [x] SmileWeather
+- [x] Weather by jsphkhan
+- [x] BlogQuest
+- [x] Borrowed Books UFGRS
+- [x] ChineseZodiac
+- [x] Colo
+- [x] DeckRocket
+- [x] EmotionNote Diary
+- [x] OpenCB
+- [x] Phonetic
+- [x] Theseus
+- [x] TheReservist
+- [x] Malendar
+- [x] TrackMyTime
+- [x] how-much
+- [x] Paws
+- [x] NBA allyoop
+- [x] Den
+- [x] Dribbble
+- [x] Foreign Exchange
+- [x] Iceland Earthquakes
+- [x] newswatch
+- [x] PocketNode
+- [x] Songkick
+- [x] Weather by JakeLin
+- [x] BrewMobile
+- [x] HausClock
+- [x] Kiosk
+- [x] Rambler.Conferences
+- [x] RealmVideo
+- [x] RailsCasts
+- [x] Balloon Burst
+- [x] TSWeChat
+- [x] Chaty
+- [x] Neverlate
+- [x] Skeleton Key
+- [x] iLabyrinth
+- [x] Heredox
+- [x] Inkpad
+- [x] Wizard War
+- [x] Antidote
+- [x] Spika
+- [x] DownTube
+- [x] Obědář
+- [x] SwiftTextClock
+- [x] SwiftBlog
+- [x] SaveTheDot
+- [x] Tagger
+- [x] Themoji
+- [x] Post Manager
+- [x] RaceMe
+- [x] Facemotion",dkhamsing,vpeschenkov
+429,2016-10-02 12:22:50,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [ ] Project URL:
+2. [ ] Update contents.json instead of README 
+3. [ ] One project per pull request
+4. [ ] Avoid iOS or open-source in description as it is assumed
+5. [ ] Use this commit title format if applicable: Add app-name by @github-username
+6. [ ] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+            ""title"": ""Name of the app"",
+            ""category-ids"": [""Category id""],
+            ""description"": ""What this app does"",
+            ""source"": ""Link to source, usually GitHub"",
+            ""screenshots"": [""http://something.com/image.png""],
+            ""date_added"": ""Aug 6 2016"",
+            ""suggested_by"": ""@github_username""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+
+Dono is removed from the iTunes store. Will add the iTunes url back once it's online again :smile:
+",PanosSakkos,github
+429,2016-10-02 12:22:50,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [ ] Project URL:
+2. [ ] Update contents.json instead of README 
+3. [ ] One project per pull request
+4. [ ] Avoid iOS or open-source in description as it is assumed
+5. [ ] Use this commit title format if applicable: Add app-name by @github-username
+6. [ ] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+            ""title"": ""Name of the app"",
+            ""category-ids"": [""Category id""],
+            ""description"": ""What this app does"",
+            ""source"": ""Link to source, usually GitHub"",
+            ""screenshots"": [""http://something.com/image.png""],
+            ""date_added"": ""Aug 6 2016"",
+            ""suggested_by"": ""@github_username""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+
+Dono is removed from the iTunes store. Will add the iTunes url back once it's online again :smile:
+",PanosSakkos,github-username
+426,2016-09-10 23:09:39,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [ ] Project URL:
+2. [ ] Update contents.json instead of README 
+3. [ ] One project per pull request
+4. [ ] Avoid iOS or open-source in description as it is assumed
+5. [ ] Use this commit title format if applicable: Add app-name by @github-username
+6. [ ] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+            ""title"": ""Name of the app"",
+            ""category-ids"": [""Category id""],
+            ""description"": ""What this app does"",
+            ""source"": ""Link to source, usually GitHub"",
+            ""screenshots"": [""http://something.com/image.png""],
+            ""date_added"": ""Aug 6 2016"",
+            ""suggested_by"": ""@github_username""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",jmp9c,github
+426,2016-09-10 23:09:39,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [ ] Project URL:
+2. [ ] Update contents.json instead of README 
+3. [ ] One project per pull request
+4. [ ] Avoid iOS or open-source in description as it is assumed
+5. [ ] Use this commit title format if applicable: Add app-name by @github-username
+6. [ ] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+            ""title"": ""Name of the app"",
+            ""category-ids"": [""Category id""],
+            ""description"": ""What this app does"",
+            ""source"": ""Link to source, usually GitHub"",
+            ""screenshots"": [""http://something.com/image.png""],
+            ""date_added"": ""Aug 6 2016"",
+            ""suggested_by"": ""@github_username""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",jmp9c,github-username
+425,2016-09-09 20:09:05,"It would be great to be able to load all apps with a given `tag` on the webpage #400 
+- GrandCentralBoard: Hang a TV in your open space / team room to show everyone what's up & get them up to speed  
+  <details><summary>
+  
+  `swift` `alamofire` `rxswift` 🔥</summary>
+  
+    https://github.com/macoscope/GrandCentralBoard<br>  Added April 29, 2016<br>  License: [`gpl-3.0`](http://choosealicense.com/licenses/gpl-3.0/)
+  <div><img height='300' alt='GrandCentralBoard image 1' src='http://cdn.macoscope.com/blog/wp-content/uploads/2016/03/zegar_anim_1.gif'> 
+  </div>
+  </details>
+  </details> 
+
+In the example above, the tags would become
+
+[`swift`]() [`alamofire`]() [`rxswift`]()
+
+Continuing from #421.
+
+---
+
+@scribblemaniac can u help?
+",dkhamsing,scribblemaniac
+423,2016-09-08 21:56:30,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [x] Project URL:
+2. [x] Update contents.json instead of README 
+3. [x] One project per pull request
+4. [x] Avoid iOS or open-source in description as it is assumed
+5. [x] Use this commit title format if applicable: Add app-name by @github-username
+6. [x] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+            ""title"": ""Name of the app"",
+            ""category-ids"": [""Category id""],
+            ""description"": ""What this app does"",
+            ""source"": ""Link to source, usually GitHub"",
+            ""screenshots"": [""http://something.com/image.png""],
+            ""date_added"": ""Aug 6 2016"",
+            ""suggested_by"": ""@github_username""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",vanyaland,github
+423,2016-09-08 21:56:30,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [x] Project URL:
+2. [x] Update contents.json instead of README 
+3. [x] One project per pull request
+4. [x] Avoid iOS or open-source in description as it is assumed
+5. [x] Use this commit title format if applicable: Add app-name by @github-username
+6. [x] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+            ""title"": ""Name of the app"",
+            ""category-ids"": [""Category id""],
+            ""description"": ""What this app does"",
+            ""source"": ""Link to source, usually GitHub"",
+            ""screenshots"": [""http://something.com/image.png""],
+            ""date_added"": ""Aug 6 2016"",
+            ""suggested_by"": ""@github_username""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",vanyaland,github-username
+420,2016-09-01 11:42:48,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [x] Project URL: https://github.com/evgeniyd/Giraffe
+2. [x] Update contents.json instead of README 
+3. [x] One project per pull request
+4. [x] Avoid iOS or open-source in description as it is assumed
+5. [x] Use this commit title format if applicable: Add app-name by @github-username
+6. [x] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+            ""title"": ""Name of the app"",
+            ""category-ids"": [""Category id""],
+            ""description"": ""What this app does"",
+            ""source"": ""Link to source, usually GitHub"",
+            ""screenshots"": [""http://something.com/image.png""],
+            ""date_added"": ""Aug 6 2016"",
+            ""suggested_by"": ""@github_username""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",akaralar,github
+420,2016-09-01 11:42:48,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [x] Project URL: https://github.com/evgeniyd/Giraffe
+2. [x] Update contents.json instead of README 
+3. [x] One project per pull request
+4. [x] Avoid iOS or open-source in description as it is assumed
+5. [x] Use this commit title format if applicable: Add app-name by @github-username
+6. [x] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+            ""title"": ""Name of the app"",
+            ""category-ids"": [""Category id""],
+            ""description"": ""What this app does"",
+            ""source"": ""Link to source, usually GitHub"",
+            ""screenshots"": [""http://something.com/image.png""],
+            ""date_added"": ""Aug 6 2016"",
+            ""suggested_by"": ""@github_username""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",akaralar,github-username
+419,2016-09-01 20:27:13,"@rigobertomolina the branch has a conflict.. can u fix this? if not I can help you with that
+",dkhamsing,rigobertomolina
+416,2016-08-25 14:53:05,"`category` is now `category-ids`, always a list
+
+Close #411
+
+@scribblemaniac 
+",dkhamsing,scribblemaniac
+416,2016-08-25 15:14:05,"cc @matteocrippa 
+",dkhamsing,matteocrippa
+413,2016-08-24 03:04:03,"@matteocrippa @lfarah any thoughts 
+",dkhamsing,lfarah
+413,2016-08-24 03:04:03,"@matteocrippa @lfarah any thoughts 
+",dkhamsing,matteocrippa
+412,2016-08-23 21:11:40,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [ ] Project URL:
+2. [x] Update contents.json instead of README 
+3. [x] One project per pull request
+4. [ ] Avoid iOS or open-source in description as it is assumed
+5. [ ] Use this commit title format if applicable: Add app-name by @github-username
+6. [ ] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+            ""title"": ""Name of the app"",
+            ""category"": ""Category name"",
+            ""description"": ""What this app does"",
+            ""source"": ""Link to source, usually GitHub"",
+            ""screenshots"": [""http://something.com/image.png""],
+            ""date_added"": ""Aug 6 2016"",
+            ""suggested_by"": ""@github_username""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",CTKRocks,github
+412,2016-08-23 21:11:40,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [ ] Project URL:
+2. [x] Update contents.json instead of README 
+3. [x] One project per pull request
+4. [ ] Avoid iOS or open-source in description as it is assumed
+5. [ ] Use this commit title format if applicable: Add app-name by @github-username
+6. [ ] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+            ""title"": ""Name of the app"",
+            ""category"": ""Category name"",
+            ""description"": ""What this app does"",
+            ""source"": ""Link to source, usually GitHub"",
+            ""screenshots"": [""http://something.com/image.png""],
+            ""date_added"": ""Aug 6 2016"",
+            ""suggested_by"": ""@github_username""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",CTKRocks,github-username
+411,2016-08-23 18:47:24,"@scribblemaniac 
+1. I'm thinking of changing `category` so that all the values are lists
+2. Should it be renamed to `category-ids`
+
+More consistent
+Let me know what you think
+",dkhamsing,scribblemaniac
+410,2016-08-21 17:52:53,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [ ] Project URL:
+2. [ ] Update contents.json instead of README 
+3. [ ] One project per pull request
+4. [ ] Avoid iOS or open-source in description as it is assumed
+5. [ ] Use this commit title format if applicable: Add app-name by @github-username
+6. [ ] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+            ""title"": ""Name of the app"",
+            ""category"": ""Category name"",
+            ""description"": ""What this app does"",
+            ""source"": ""Link to source, usually GitHub"",
+            ""screenshots"": [""http://something.com/image.png""],
+            ""date_added"": ""Aug 6 2016"",
+            ""suggested_by"": ""@github_username""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",iliketurtlesbro,github
+410,2016-08-21 17:52:53,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [ ] Project URL:
+2. [ ] Update contents.json instead of README 
+3. [ ] One project per pull request
+4. [ ] Avoid iOS or open-source in description as it is assumed
+5. [ ] Use this commit title format if applicable: Add app-name by @github-username
+6. [ ] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+            ""title"": ""Name of the app"",
+            ""category"": ""Category name"",
+            ""description"": ""What this app does"",
+            ""source"": ""Link to source, usually GitHub"",
+            ""screenshots"": [""http://something.com/image.png""],
+            ""date_added"": ""Aug 6 2016"",
+            ""suggested_by"": ""@github_username""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",iliketurtlesbro,github-username
+409,2016-08-19 23:28:43,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [ ] Project URL: http://github.com/yavuz/Tenere
+2. [ ] Update contents.json instead of README 
+3. [ ] One project per pull request
+4. [ ] Avoid iOS or open-source in description as it is assumed
+5. [ ] Use this commit title format if applicable: Add app-name by @github-username
+6. [ ] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+            ""title"": ""Name of the app"",
+            ""category"": ""Category name"",
+            ""description"": ""What this app does"",
+            ""source"": ""Link to source, usually GitHub"",
+            ""screenshots"": [""http://something.com/image.png""],
+            ""date_added"": ""Aug 6 2016"",
+            ""suggested_by"": ""@github_username""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",yavuz,github
+409,2016-08-19 23:28:43,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [ ] Project URL: http://github.com/yavuz/Tenere
+2. [ ] Update contents.json instead of README 
+3. [ ] One project per pull request
+4. [ ] Avoid iOS or open-source in description as it is assumed
+5. [ ] Use this commit title format if applicable: Add app-name by @github-username
+6. [ ] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+            ""title"": ""Name of the app"",
+            ""category"": ""Category name"",
+            ""description"": ""What this app does"",
+            ""source"": ""Link to source, usually GitHub"",
+            ""screenshots"": [""http://something.com/image.png""],
+            ""date_added"": ""Aug 6 2016"",
+            ""suggested_by"": ""@github_username""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",yavuz,github-username
+408,2016-08-19 23:05:11,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [ ] Project URL:
+2. [ ] Update contents.json instead of README 
+3. [ ] One project per pull request
+4. [ ] Avoid iOS or open-source in description as it is assumed
+5. [ ] Use this commit title format if applicable: Add app-name by @github-username
+6. [ ] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+            ""title"": ""Name of the app"",
+            ""category"": ""Category name"",
+            ""description"": ""What this app does"",
+            ""source"": ""Link to source, usually GitHub"",
+            ""screenshots"": [""http://something.com/image.png""],
+            ""date_added"": ""Aug 6 2016"",
+            ""suggested_by"": ""@github_username""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",yavuz,github
+408,2016-08-19 23:05:11,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [ ] Project URL:
+2. [ ] Update contents.json instead of README 
+3. [ ] One project per pull request
+4. [ ] Avoid iOS or open-source in description as it is assumed
+5. [ ] Use this commit title format if applicable: Add app-name by @github-username
+6. [ ] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+            ""title"": ""Name of the app"",
+            ""category"": ""Category name"",
+            ""description"": ""What this app does"",
+            ""source"": ""Link to source, usually GitHub"",
+            ""screenshots"": [""http://something.com/image.png""],
+            ""date_added"": ""Aug 6 2016"",
+            ""suggested_by"": ""@github_username""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",yavuz,github-username
+406,2016-08-17 03:05:28,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [ ] Project URL:
+2. [ ] Update contents.json instead of README 
+3. [ ] One project per pull request
+4. [ ] Project added at the end of the list (a script sorts projects automatically)
+5. [ ] Avoid iOS or open-source in description as it is assumed
+6. [ ] Use this commit title format if applicable: Add app-name by @github-username
+7. [ ] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+  ""title"": ""Name of the app"",
+  ""category"": ""Category name"",
+  ""description"": ""What this app does"",
+  ""source"": ""Link to source, usually GitHub""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+
+merge forks
+",PlayApple,github-username
+405,2016-08-15 20:09:05,"Integrate @danger. 
+",dkhamsing,danger
+402,2016-08-10 11:36:57,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [x] Project URL:
+2. [x] Update contents.json instead of README 
+3. [x] One project per pull request
+4. [x] Project added at the end of the list (a script sorts projects automatically)
+5. [x] Avoid iOS or open-source in description as it is assumed
+6. [x] Use this commit title format if applicable: Add app-name by @github-username
+7. [x] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+  ""title"": ""Name of the app"",
+  ""category"": ""Category name"",
+  ""description"": ""What this app does"",
+  ""source"": ""Link to source, usually GitHub""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",kahopoon,github-username
+401,2016-08-10 11:28:11,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [x] Project URL:
+2. [x] Update contents.json instead of README 
+3. [x] One project per pull request
+4. [x] Project added at the end of the list (a script sorts projects automatically)
+5. [x] Avoid iOS or open-source in description as it is assumed
+6. [x] Use this commit title format if applicable: Add app-name by @github-username
+7. [ ] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+  ""title"": ""Name of the app"",
+  ""category"": ""Category name"",
+  ""description"": ""What this app does"",
+  ""source"": ""Link to source, usually GitHub""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",kahopoon,github-username
+400,2016-08-09 18:12:44,"WIP → https://dkhamsing.github.io/open-source-ios-apps/ by @scribblemaniac 🎉 
+
+---
+
+This is an extension of a suggestions made in #387.
+
+The idea is that instead of just generating a README for this repository that has a formatted list of all of the OS Apps, a webpage on this project's Github Pages branch is created to display the apps. With the added flexibility of HTML, CSS, and Javascript, people will be able to interact with our content like never before. Filters, searches, expandable content, video demonstrations, better theming, you name it!
+
+Obviously none of this will happen without work, so here is a very basic summary of what needs to be done:
+- [x] Language flags
+- [x] Theme switching (just swap the bootstrap stylesheets)
+- [x] Improve tooltip display
+- [x] Persistent settings
+- [x] Screenshots
+- [x] Parse markdown links
+- [x] Fix internal links scrolling too far
+- [x] Splash screen with loading bar
+- [x] Fix links to users in ""suggested by""
+- [x] Background refresh
+- [ ] Manual refresh
+- [ ] Search
+- [ ] Filtering
+- [ ] Logo (see #413)
+- [ ] Handle links in app descriptions
+- [ ] Improve accessibility
+- [ ] Sort order option
+- [ ] Optimization
+- [ ] Improve content (more tags, homepages, screenshots, etc. in the contents.json file)
+- [ ] Filter out archived items
+- [ ] Load projects for a particular `tag` (see #421)
+- [ ] Screenshot thumbnails
+- [ ] Refactor JS code
+- [ ] Documentation
+- [ ] Compress contents.json
+
+If anyone with UX experience is reading this, we would love your help. I can help with the programming and content portions later this month.
+
+@dkhamsing What is your position on this? Feel free to make improvements.
+",scribblemaniac,scribblemaniac
+400,2016-08-09 18:12:44,"WIP → https://dkhamsing.github.io/open-source-ios-apps/ by @scribblemaniac 🎉 
+
+---
+
+This is an extension of a suggestions made in #387.
+
+The idea is that instead of just generating a README for this repository that has a formatted list of all of the OS Apps, a webpage on this project's Github Pages branch is created to display the apps. With the added flexibility of HTML, CSS, and Javascript, people will be able to interact with our content like never before. Filters, searches, expandable content, video demonstrations, better theming, you name it!
+
+Obviously none of this will happen without work, so here is a very basic summary of what needs to be done:
+- [x] Language flags
+- [x] Theme switching (just swap the bootstrap stylesheets)
+- [x] Improve tooltip display
+- [x] Persistent settings
+- [x] Screenshots
+- [x] Parse markdown links
+- [x] Fix internal links scrolling too far
+- [x] Splash screen with loading bar
+- [x] Fix links to users in ""suggested by""
+- [x] Background refresh
+- [ ] Manual refresh
+- [ ] Search
+- [ ] Filtering
+- [ ] Logo (see #413)
+- [ ] Handle links in app descriptions
+- [ ] Improve accessibility
+- [ ] Sort order option
+- [ ] Optimization
+- [ ] Improve content (more tags, homepages, screenshots, etc. in the contents.json file)
+- [ ] Filter out archived items
+- [ ] Load projects for a particular `tag` (see #421)
+- [ ] Screenshot thumbnails
+- [ ] Refactor JS code
+- [ ] Documentation
+- [ ] Compress contents.json
+
+If anyone with UX experience is reading this, we would love your help. I can help with the programming and content portions later this month.
+
+@dkhamsing What is your position on this? Feel free to make improvements.
+",scribblemaniac,dkhamsing
+399,2016-08-09 15:09:51,"https://gist.github.com/anonymous/be788a5d82f40aedf29e8207f91e6b95 (using http://www.json2yaml.com/)
+
+@scribblemaniac what do you think
+",dkhamsing,scribblemaniac
+399,2016-08-09 15:17:24,"Note
+- `@username` ❗ not valid yml string
+- `""@username""` ✅ 
+
+http://stackoverflow.com/questions/19109912/do-i-need-quotes-for-strings-in-yaml
+
+> Use quotes if your value includes special characters, (e.g. :, {, }, [, ], ,, &, *, #, ?, |, -, <, >, =, !, %, @, ).
+",dkhamsing,username
+398,2016-08-08 15:29:08,"A collaborative list of open-source iOS, watchOS and tvOS apps, your [contribution](link here) is welcome 😄 
+
+| Projects | Twitter | Updated |
+| :-: | :-: | :-: |
+| 534 | [@opensourceios](https://twitter.com/) | August 8, 2016 |
+
+or 
+
+![](https://img.shields.io/badge/Projects-534-green.svg?style=social) ![](https://img.shields.io/badge/Updated-Aug  8, 2016-green.svg?style=social) [![](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&label=@opensourceios)](https://twitter.com/opensourceios) 
+
+or
+
+![](https://img.shields.io/badge/Projects-534-green.svg) [![](https://img.shields.io/badge/Twitter-@opensourceios-blue.svg)](https://twitter.com/opensourceios) ![](https://img.shields.io/badge/Updated-August  8,_2016-lightgrey.svg)
+
+or
+
+![](https://img.shields.io/badge/Projects-534-lightgrey.svg) [![](https://img.shields.io/badge/Twitter-@opensourceios-lightgrey.svg)](https://twitter.com/opensourceios) ![](https://img.shields.io/badge/Updated-August  8,_2016-lightgrey.svg)
+",dkhamsing,opensourceios-lightgrey
+398,2016-08-08 15:29:08,"A collaborative list of open-source iOS, watchOS and tvOS apps, your [contribution](link here) is welcome 😄 
+
+| Projects | Twitter | Updated |
+| :-: | :-: | :-: |
+| 534 | [@opensourceios](https://twitter.com/) | August 8, 2016 |
+
+or 
+
+![](https://img.shields.io/badge/Projects-534-green.svg?style=social) ![](https://img.shields.io/badge/Updated-Aug  8, 2016-green.svg?style=social) [![](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&label=@opensourceios)](https://twitter.com/opensourceios) 
+
+or
+
+![](https://img.shields.io/badge/Projects-534-green.svg) [![](https://img.shields.io/badge/Twitter-@opensourceios-blue.svg)](https://twitter.com/opensourceios) ![](https://img.shields.io/badge/Updated-August  8,_2016-lightgrey.svg)
+
+or
+
+![](https://img.shields.io/badge/Projects-534-lightgrey.svg) [![](https://img.shields.io/badge/Twitter-@opensourceios-lightgrey.svg)](https://twitter.com/opensourceios) ![](https://img.shields.io/badge/Updated-August  8,_2016-lightgrey.svg)
+",dkhamsing,opensourceios-blue
+398,2016-08-08 15:29:08,"A collaborative list of open-source iOS, watchOS and tvOS apps, your [contribution](link here) is welcome 😄 
+
+| Projects | Twitter | Updated |
+| :-: | :-: | :-: |
+| 534 | [@opensourceios](https://twitter.com/) | August 8, 2016 |
+
+or 
+
+![](https://img.shields.io/badge/Projects-534-green.svg?style=social) ![](https://img.shields.io/badge/Updated-Aug  8, 2016-green.svg?style=social) [![](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&label=@opensourceios)](https://twitter.com/opensourceios) 
+
+or
+
+![](https://img.shields.io/badge/Projects-534-green.svg) [![](https://img.shields.io/badge/Twitter-@opensourceios-blue.svg)](https://twitter.com/opensourceios) ![](https://img.shields.io/badge/Updated-August  8,_2016-lightgrey.svg)
+
+or
+
+![](https://img.shields.io/badge/Projects-534-lightgrey.svg) [![](https://img.shields.io/badge/Twitter-@opensourceios-lightgrey.svg)](https://twitter.com/opensourceios) ![](https://img.shields.io/badge/Updated-August  8,_2016-lightgrey.svg)
+",dkhamsing,opensourceios
+398,2016-08-08 17:51:25,"Preview:
+
+# Open-Source iOS Apps
+
+A collaborative list of open-source `iOS`, `watchOS` and `tvOS` apps, your [contribution](link here) is welcome 😄 
+
+![](https://img.shields.io/badge/Projects-534-green.svg) [![](https://img.shields.io/badge/Twitter-@opensourceios-blue.svg)](https://twitter.com/opensourceios) ![](https://img.shields.io/badge/Updated-August  8,_2016-lightgrey.svg)
+
+or 
+
+# Open-Source iOS Apps
+
+![](https://img.shields.io/badge/Projects-534-green.svg) [![](https://img.shields.io/badge/Twitter-@opensourceios-blue.svg)](https://twitter.com/opensourceios) ![](https://img.shields.io/badge/Updated-August  8,_2016-lightgrey.svg)
+
+A collaborative list of open-source `iOS`, `watchOS` and `tvOS` apps, your [contribution](link here) is welcome 😄 
+",dkhamsing,opensourceios-blue
+397,2016-08-08 09:14:46,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [ ] Project URL:
+2. [ ] Update contents.json instead of README 
+3. [ ] One project per pull request
+4. [ ] Project added at the end of the list (a script sorts projects automatically)
+5. [ ] Avoid iOS or open-source in description as it is assumed
+6. [ ] Use this commit title format if applicable: Add app-name by @github-username
+7. [ ] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+  ""title"": ""Name of the app"",
+  ""category"": ""Category name"",
+  ""description"": ""What this app does"",
+  ""source"": ""Link to source, usually GitHub""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",tirupati17,github-username
+396,2016-08-08 08:59:12,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [ ] Project URL:
+2. [ ] Update contents.json instead of README 
+3. [ ] One project per pull request
+4. [ ] Project added at the end of the list (a script sorts projects automatically)
+5. [ ] Avoid iOS or open-source in description as it is assumed
+6. [ ] Use this commit title format if applicable: Add app-name by @github-username
+7. [ ] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+  ""title"": ""Name of the app"",
+  ""category"": ""Category name"",
+  ""description"": ""What this app does"",
+  ""source"": ""Link to source, usually GitHub""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",tirupati17,github-username
+395,2016-08-08 08:20:46,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [ ] Project URL:
+2. [ ] Update contents.json instead of README 
+3. [ ] One project per pull request
+4. [ ] Project added at the end of the list (a script sorts projects automatically)
+5. [ ] Avoid iOS or open-source in description as it is assumed
+6. [ ] Use this commit title format if applicable: Add app-name by @github-username
+7. [ ] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+  ""title"": ""Name of the app"",
+  ""category"": ""Category name"",
+  ""description"": ""What this app does"",
+  ""source"": ""Link to source, usually GitHub""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",AndreyBaranchikov,github-username
+394,2016-08-07 14:07:48,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [x] Project URL:
+2. [x] Update contents.json instead of README 
+3. [x] One project per pull request
+4. [x] Project added at the end of the list (a script sorts projects automatically)
+5. [x] Avoid iOS or open-source in description as it is assumed
+6. [x] Use this commit title format if applicable: Add app-name by @github-username
+7. [x] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+  ""title"": ""Name of the app"",
+  ""category"": ""Category name"",
+  ""description"": ""What this app does"",
+  ""source"": ""Link to source, usually GitHub""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",vanyaland,github-username
+393,2016-08-05 13:41:38,"7b5labs has been down since Aug 3
+
+@scribblemaniac looks like the links we have for XPilot are down, can you find alternate links ?
+",dkhamsing,scribblemaniac
+393,2016-08-05 14:52:16,"Working on my vacation :sweat:
+
+I did a bit of searching, but found no alternative links. I did find some contact information so I could do that if need be, or we could just go straight to archiving it. I'm pretty sure the app still works though. It doesn't hurt to at least try this:
+
+@stealthboy Could you perhaps shed some light on what happened to 7b5labs.com and if an alternative place to access the source code for XPilot will be made available?
+",scribblemaniac,stealthboy
+392,2016-08-01 16:37:38,"Maybe we can secure at least one language translation effort before we start.. 
+
+@wg689 we are interesting in building support for multiple languages right from this project
+could you help with the Chinese translation? 
+",dkhamsing,wg689
+385,2016-07-26 07:22:18,"Thanks for taking the time to make contributing this straightforward :)
+1. [x] Project URL: https://github.com/jlnr/MovieDict
+2. [x] Update contents.json instead of README 
+3. [x] One project per pull request
+4. [x] Project added at the end of the list (a script sorts projects automatically)
+5. [x] Avoid iOS or open-source in description as it is assumed
+6. [x] Use this commit title format if applicable: Add app-name by @github-username
+7. [x] Use approved format for your entry
+",jlnr,github-username
+384,2016-07-24 20:59:00,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [x] Project URL: https://github.com/100mango/Celluloid
+2. [x] Update contents.json instead of README 
+3. [x] One project per pull request
+4. [x] Project added at the end of the list (a script sorts projects automatically)
+5. [x] Avoid iOS or open-source in description as it is assumed
+6. [x] Use this commit title format if applicable: Add app-name by @github-username
+7. [x] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+  ""title"": ""Name of the app"",
+  ""category"": ""Category name"",
+  ""description"": ""What this app does"",
+  ""source"": ""Link to source, usually GitHub""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",lfarah,github-username
+383,2016-07-23 23:11:08,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [ ] Project URL:
+2. [ ] Update contents.json instead of README 
+3. [ ] One project per pull request
+4. [ ] Project added at the end of the list (a script sorts projects automatically)
+5. [ ] Avoid iOS or open-source in description as it is assumed
+6. [ ] Use this commit title format if applicable: Add app-name by @github-username
+7. [ ] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+  ""title"": ""Name of the app"",
+  ""category"": ""Category name"",
+  ""description"": ""What this app does"",
+  ""source"": ""Link to source, usually GitHub""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",awarren124,github-username
+381,2016-07-22 15:35:37,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [x] Project URL:
+2. [x] Update contents.json instead of README 
+3. [x] One project per pull request
+4. [x] Project added at the end of the list (a script sorts projects automatically)
+5. [x] Avoid iOS or open-source in description as it is assumed
+6. [x] Use this commit title format if applicable: Add app-name by @github-username
+7. [x] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+  ""title"": ""Name of the app"",
+  ""category"": ""Category name"",
+  ""description"": ""What this app does"",
+  ""source"": ""Link to source, usually GitHub""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",fabienwarniez,github-username
+380,2016-07-22 05:54:08,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [ ] Project URL:
+2. [ ] Update contents.json instead of README 
+3. [ ] One project per pull request
+4. [ ] Project added at the end of the list (a script sorts projects automatically)
+5. [ ] Avoid iOS or open-source in description as it is assumed
+6. [ ] Use this commit title format if applicable: Add app-name by @github-username
+7. [ ] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+  ""title"": ""Name of the app"",
+  ""category"": ""Category name"",
+  ""description"": ""What this app does"",
+  ""source"": ""Link to source, usually GitHub""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",pacificsky,github-username
+377,2016-07-15 06:53:20,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [ ] Project URL:
+2. [ ] Update contents.json instead of README 
+3. [ ] One project per pull request
+4. [ ] Project added at the end of the list (a script sorts projects automatically)
+5. [ ] Avoid iOS or open-source in description as it is assumed
+6. [ ] Use this commit title format if applicable: Add app-name by @github-username
+7. [ ] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+  ""title"": ""Name of the app"",
+  ""category"": ""Category name"",
+  ""description"": ""What this app does"",
+  ""source"": ""Link to source, usually GitHub""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",TomekB,github-username
+376,2016-07-15 06:18:56,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [x] Project URL:
+2. [x] Update contents.json instead of README 
+3. [x] One project per pull request
+4. [x] Project added at the end of the list (a script sorts projects automatically)
+5. [x] Avoid iOS or open-source in description as it is assumed
+6. [x] Use this commit title format if applicable: Add app-name by @github-username
+7. [x] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+  ""title"": ""Name of the app"",
+  ""category"": ""Category name"",
+  ""description"": ""What this app does"",
+  ""source"": ""Link to source, usually GitHub""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+
+Add Upcoming Movies app
+",vanyaland,github-username
+375,2016-07-14 20:13:26,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [x] Project URL:
+2. [x] Update contents.json instead of README 
+3. [x] One project per pull request
+4. [x] Avoid iOS or open-source in description as it is assumed
+5. [ ] Use this commit title format if applicable: Add app-name by @github-username
+6. [ ] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+  ""title"": ""Name of the app"",
+  ""category"": ""Category name"",
+  ""description"": ""What this app does"",
+  ""source"": ""Link to source, usually GitHub""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",etamity,github-username
+373,2016-07-14 14:54:56,"Should tvOS and watchOS apps be removed from this list?
+
+it can be argued that watchOS apps are pretty tied to iOS apps but not tvOS really...
+
+@scribblemaniac @matteocrippa 
+",dkhamsing,scribblemaniac
+373,2016-07-14 14:54:56,"Should tvOS and watchOS apps be removed from this list?
+
+it can be argued that watchOS apps are pretty tied to iOS apps but not tvOS really...
+
+@scribblemaniac @matteocrippa 
+",dkhamsing,matteocrippa
+372,2016-07-14 12:46:36,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [x] Project URL: https://github.com/jbkuczma/NBAreact
+2. [x] Update contents.json instead of README 
+3. [x] One project per pull request
+4. [x] Project added at the end of the list (a script sorts projects automatically)
+5. [x] Avoid iOS or open-source in description as it is assumed
+6. [x] Use this commit title format if applicable: Add app-name by @github-username
+7. [x] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+  ""title"": ""Name of the app"",
+  ""category"": ""Category name"",
+  ""description"": ""What this app does"",
+  ""source"": ""Link to source, usually GitHub""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",jbkuczma,github-username
+371,2016-07-14 02:21:52,"Considering using `swift` or `Swift`  instead of 🔶
+What do you think ?
+
+@scribblemaniac @matteocrippa 
+",dkhamsing,scribblemaniac
+371,2016-07-14 02:21:52,"Considering using `swift` or `Swift`  instead of 🔶
+What do you think ?
+
+@scribblemaniac @matteocrippa 
+",dkhamsing,matteocrippa
+370,2016-07-13 14:53:00,"@Aghassi this issue will track adding https://github.com/findmybusnj/findmybusnj-swift
+",dkhamsing,Aghassi
+369,2016-07-12 16:12:49,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [x] Project URL: https://github.com/elpassion/DropColour-iOS
+2. [x] Update contents.json instead of README 
+3. [x] One project per pull request
+4. [x] Project added at the end of the list (a script sorts projects automatically)
+5. [x] Avoid iOS or open-source in description as it is assumed
+6. [x] Use this commit title format if applicable: Add app-name by @github-username
+7. [x] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+  ""title"": ""Name of the app"",
+  ""category"": ""Category name"",
+  ""description"": ""What this app does"",
+  ""source"": ""Link to source, usually GitHub""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",mateuszszklarek,github-username
+369,2016-07-12 16:14:05,"@dkhamsing I created a new one.
+",mateuszszklarek,dkhamsing
+367,2016-07-12 14:44:15,"Hi @dkhamsing,
+
+I don't know if it's more appropriate to use 'Added' vs 'Add' on the commit title? 
+'Add app-name by @github-username' -> 'Added app-name by @github-username'
+
+Makes more sense grammatically?  
+",michieriffic,github-username
+367,2016-07-12 14:44:15,"Hi @dkhamsing,
+
+I don't know if it's more appropriate to use 'Added' vs 'Add' on the commit title? 
+'Add app-name by @github-username' -> 'Added app-name by @github-username'
+
+Makes more sense grammatically?  
+",michieriffic,dkhamsing
+366,2016-07-12 14:31:49,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [x] Project URL:
+2. [x] Update contents.json instead of README 
+3. [x] One project per pull request
+4. [x] Project added at the end of the list (a script sorts projects automatically)
+5. [x] Avoid iOS or open-source in description as it is assumed
+6. [x] Use this commit title format if applicable: Add app-name by @github-username
+7. [x] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+  ""title"": ""Name of the app"",
+  ""category"": ""Category name"",
+  ""description"": ""What this app does"",
+  ""source"": ""Link to source, usually GitHub""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",michieriffic,github-username
+365,2016-07-12 13:38:43,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [x] Project URL: https://github.com/elpassion/DropColour-iOS
+2. [x] Update contents.json instead of README 
+3. [x] One project per pull request
+4. [x] Project added at the end of the list (a script sorts projects automatically)
+5. [x] Avoid iOS or open-source in description as it is assumed
+6. [x] Use this commit title format if applicable: Add app-name by @github-username
+7. [x] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+  ""title"": ""Name of the app"",
+  ""category"": ""Category name"",
+  ""description"": ""What this app does"",
+  ""source"": ""Link to source, usually GitHub""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",mateuszszklarek,github-username
+365,2016-07-12 13:43:34,"@dkhamsing Can you check my PR?
+",mateuszszklarek,dkhamsing
+364,2016-07-12 13:09:10,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [x] Project URL: https://github.com/elpassion/DropColour-iOS
+2. [x] Update contents.json instead of README 
+3. [x] One project per pull request
+4. [x] Project added at the end of the list (a script sorts projects automatically)
+5. [x] Avoid iOS or open-source in description as it is assumed
+6. [x] Use this commit title format if applicable: Add app-name by @github-username
+7. [x] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+  ""title"": ""Name of the app"",
+  ""category"": ""Category name"",
+  ""description"": ""What this app does"",
+  ""source"": ""Link to source, usually GitHub""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",mateuszszklarek,github-username
+359,2016-07-11 23:58:30,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [x] Project URL: https://github.com/danqing/2048
+2. [x] Update contents.json instead of README 
+3. [x] One project per pull request
+4. [x] Project added at the end of the list (a script sorts projects automatically)
+5. [x] Avoid iOS or open-source in description as it is assumed
+6. [x] Use this commit title format if applicable: Add app-name by @github-username
+7. [x] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+  ""title"": ""Name of the app"",
+  ""category"": ""Category name"",
+  ""description"": ""What this app does"",
+  ""source"": ""Link to source, usually GitHub""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",danqing,github-username
+358,2016-07-11 23:14:58,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [x] Project URL:
+2. [x] Update contents.json instead of README 
+3. [ ] One project per pull request
+4. [x] Project added at the end of the list (a script sorts projects automatically)
+5. [x] Avoid iOS or open-source in description as it is assumed
+6. [ ] Use this commit title format if applicable: Add app-name by @github-username
+7. [ ] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+  ""title"": ""Name of the app"",
+  ""category"": ""Category name"",
+  ""description"": ""What this app does"",
+  ""source"": ""Link to source, usually GitHub""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",tananaev,github-username
+357,2016-07-11 19:48:31,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [x] Project URL: https://github.com/kenmickles/unh_tvos
+2. [x] Update contents.json instead of README 
+3. [x] One project per pull request
+4. [x] Project added at the end of the list (a script sorts projects automatically)
+5. [x] Avoid iOS or open-source in description as it is assumed
+6. [x] Use this commit title format if applicable: Add app-name by @github-username
+7. [x] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+  ""title"": ""Name of the app"",
+  ""category"": ""Category name"",
+  ""description"": ""What this app does"",
+  ""source"": ""Link to source, usually GitHub""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",kenmickles,github-username
+356,2016-07-11 19:23:31,"1. [ ] Project URL:
+2. [x] Update contents.json instead of README 
+3. [x] One project per pull request
+4. [x] Project added at the end of the list (a script sorts projects automatically)
+5. [x] Avoid iOS or open-source in description as it is assumed
+6. [x] Use this commit title format if applicable: Add app-name by @github-username
+7. [x] Use approved format for your entry
+",JRock007,github-username
+355,2016-07-11 18:31:56,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [x] Project URL: https://github.com/zydeco/minivmac4ios
+2. [x] Update contents.json instead of README 
+3. [x] One project per pull request
+4. [x] Project added at the end of the list (a script sorts projects automatically)
+5. [x] Avoid iOS or open-source in description as it is assumed
+6. [x] Use this commit title format if applicable: Add app-name by @github-username
+7. [x] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+  ""title"": ""Name of the app"",
+  ""category"": ""Category name"",
+  ""description"": ""What this app does"",
+  ""source"": ""Link to source, usually GitHub""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",zydeco,github-username
+352,2016-07-06 13:37:00,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [x] Project URL:
+2. [x] Update contents.json instead of README 
+3. [x] One project per pull request
+4. [x] Project added at the end of the list (a script sorts projects automatically)
+5. [x] Avoid iOS or open-source in description as it is assumed
+6. [x] Use this commit title format if applicable: Add app-name by @github-username
+7. [x] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+  ""title"": ""Name of the app"",
+  ""category"": ""Category name"",
+  ""description"": ""What this app does"",
+  ""source"": ""Link to source, usually GitHub""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+
+…es from any Instagram account. Lists tasks for you to do in order to learn Swift - at three difficulty levels.
+",Sajjon,github-username
+351,2016-07-03 17:38:45,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [ ] Project URL:
+2. [ ] Update contents.json instead of README 
+3. [ ] One project per pull request
+4. [ ] Project added at the end of the list (a script sorts projects automatically)
+5. [ ] Avoid iOS or open-source in description as it is assumed
+6. [ ] Use this commit title format if applicable: Add app-name by @github-username
+7. [ ] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+  ""title"": ""Name of the app"",
+  ""category"": ""Category name"",
+  ""description"": ""What this app does"",
+  ""source"": ""Link to source, usually GitHub""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",tirupati17,github-username
+350,2016-07-02 15:16:33,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [x] Project URL:
+2. [x] Update contents.json instead of README 
+3. [x] One project per pull request
+4. [x] Project added at the end of the list (a script sorts projects automatically)
+5. [x] Avoid iOS or open-source in description as it is assumed
+6. [x] Use this commit title format if applicable: Add app-name by @github-username
+7. [x] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+  ""title"": ""Name of the app"",
+  ""category"": ""Category name"",
+  ""description"": ""What this app does"",
+  ""source"": ""Link to source, usually GitHub""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",vanyaland,github-username
+348,2016-07-02 09:15:24,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [ ] Project URL:
+2. [ ] Update contents.json instead of README 
+3. [ ] One project per pull request
+4. [ ] Project added at the end of the list (a script sorts projects automatically)
+5. [ ] Avoid iOS or open-source in description as it is assumed
+6. [ ] Use this commit title format if applicable: Add app-name by @github-username
+7. [ ] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+  ""title"": ""Name of the app"",
+  ""category"": ""Category name"",
+  ""description"": ""What this app does"",
+  ""source"": ""Link to source, usually GitHub""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",tirupati17,github-username
+346,2016-07-01 08:47:05,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [ ] Project URL:
+2. [ ] Update contents.json instead of README 
+3. [ ] One project per pull request
+4. [ ] Project added at the end of the list (a script sorts projects automatically)
+5. [ ] Avoid iOS or open-source in description as it is assumed
+6. [ ] Use this commit title format if applicable: Add app-name by @github-username
+7. [ ] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+  ""title"": ""Name of the app"",
+  ""category"": ""Category name"",
+  ""description"": ""What this app does"",
+  ""source"": ""Link to source, usually GitHub""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",tirupati17,github-username
+345,2016-07-01 08:42:35,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [ ] Project URL:
+2. [ ] Update contents.json instead of README 
+3. [ ] One project per pull request
+4. [ ] Project added at the end of the list (a script sorts projects automatically)
+5. [ ] Avoid iOS or open-source in description as it is assumed
+6. [ ] Use this commit title format if applicable: Add app-name by @github-username
+7. [ ] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+  ""title"": ""Name of the app"",
+  ""category"": ""Category name"",
+  ""description"": ""What this app does"",
+  ""source"": ""Link to source, usually GitHub""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",tirupati17,github-username
+343,2016-06-27 08:24:36,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [ ] Project URL:
+2. [x] Update contents.json instead of README 
+3. [ ] One project per pull request
+4. [ ] Project added at the end of the list (a script sorts projects automatically)
+5. [ ] Avoid iOS or open-source in description as it is assumed
+6. [ ] Use this commit title format if applicable: Add app-name by @github-username
+7. [ ] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+  ""title"": ""Name of the app"",
+  ""category"": ""Category name"",
+  ""description"": ""What this app does"",
+  ""source"": ""Link to source, usually GitHub""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+
+Updated number of stars for OctoPodium
+",nunogoncalves,github-username
+342,2016-06-24 00:51:55,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [x] Project URL: https://github.com/JakeLin/SaveTheDot
+2. [x] Update contents.json instead of README 
+3. [x] One project per pull request
+4. [x] Project added at the end of the list (a script sorts projects automatically)
+5. [x] Avoid iOS or open-source in description as it is assumed
+6. [x] Use this commit title format if applicable: Add app-name by @github-username
+7. [x] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+  ""title"": ""Name of the app"",
+  ""category"": ""Category name"",
+  ""description"": ""What this app does"",
+  ""source"": ""Link to source, usually GitHub""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",lfarah,github-username
+341,2016-06-22 01:11:23,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [X] Project URL: https://github.com/ryanipete/AmericanChronicle
+2. [X] Update contents.json instead of README 
+3. [X] One project per pull request
+4. [X] Project added at the end of the list (a script sorts projects automatically)
+5. [X] Avoid iOS or open-source in description as it is assumed
+6. [X] Use this commit title format if applicable: Add app-name by @github-username
+7. [X] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+  ""title"": ""Name of the app"",
+  ""category"": ""Category name"",
+  ""description"": ""What this app does"",
+  ""source"": ""Link to source, usually GitHub""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",ryanipete,github-username
+340,2016-06-17 10:47:05,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [x] Project URL: https://github.com/herrkaefer/CaseAssistant
+2. [x] Update contents.json instead of README 
+3. [x] One project per pull request
+4. [x] Project added at the end of the list (a script sorts projects automatically)
+5. [x] Avoid iOS or open-source in description as it is assumed
+6. [x] Use this commit title format if applicable: Add app-name by @github-username
+7. [x] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+  ""title"": ""Name of the app"",
+  ""category"": ""Category name"",
+  ""description"": ""What this app does"",
+  ""source"": ""Link to source, usually GitHub""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",herrkaefer,github-username
+339,2016-06-23 01:54:08,"@scribblemaniac should the timer category be renamed to clock? 
+",dkhamsing,scribblemaniac
+335,2016-06-15 03:25:31,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [ ] Project URL:
+2. [ ] Update contents.json instead of README 
+3. [x] One project per pull request
+4. [x] Project added at the end of the list (a script sorts projects automatically)
+5. [ ] Avoid iOS or open-source in description as it is assumed
+6. [ ] Use this commit title format if applicable: Add app-name by @github-username
+7. [ ] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+  ""title"": ""Name of the app"",
+  ""category"": ""Category name"",
+  ""description"": ""What this app does"",
+  ""source"": ""Link to source, usually GitHub""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",MrAdamBoyd,github-username
+332,2016-06-11 13:54:37,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [ ] Project URL:https://github.com/flexih/ABU
+2. [ ] Update contents.json instead of README 
+3. [ ] One project per pull request
+4. [ ] Project added at the end of the list (a script sorts projects automatically)
+5. [ ] Avoid iOS or open-source in description as it is assumed
+6. [ ] Use this commit title format if applicable: Add app-name by @github-username
+7. [ ] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+  ""title"": ""Name of the app"",
+  ""category"": ""Category name"",
+  ""description"": ""What this app does"",
+  ""source"": ""Link to source, usually GitHub""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",flexih,github-username
+327,2016-06-06 11:15:22,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [x] Project URL:
+2. [x] Update contents.json instead of README 
+3. [x] One project per pull request
+4. [x] Project added at the end of the list (a script sorts projects automatically)
+5. [x] Avoid iOS or open-source in description as it is assumed
+6. [x] Use this commit title format if applicable: Add app-name by @github-username
+7. [x] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+  ""title"": ""Name of the app"",
+  ""category"": ""Category name"",
+  ""description"": ""What this app does"",
+  ""source"": ""Link to source, usually GitHub""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",avikantz,github-username
+325,2016-06-03 04:54:40,"I think it would be nice to have a license attribute for apps. We don't necessarily have to display it in the generated README right now, but it could be useful in the future for a search filter or something like that.
+
+It could have a limited set of values like: `apache`, `bsd`, `gpl`, `lgpl`, `mit`, `mozilla`, `cddl`, `eclipse`, `public_domain` and `other` (based off of [OSI's ""Popular Licenses""](https://opensource.org/licenses))
+
+@dkhamsing Thoughts?
+",scribblemaniac,dkhamsing
+323,2016-06-02 14:47:46,"@scribblemaniac hey for the main kodi entry https://github.com/dkhamsing/open-source-ios-apps/commit/07f6376bf66f0d5df737d26e341c5f7a2a0c8e0d
+
+isn't that software you run on a computer?
+",dkhamsing,scribblemaniac
+320,2016-06-01 14:05:21,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [x] Project URL:
+2. [x] Update contents.json instead of README 
+3. [x] One project per pull request
+4. [x] Project added at the end of the list (a script sorts projects automatically)
+5. [x] Avoid iOS or open-source in description as it is assumed
+6. [x] Use this commit title format if applicable: Add app-name by @github-username
+7. [x] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+  ""title"": ""Name of the app"",
+  ""category"": ""Category name"",
+  ""description"": ""What this app does"",
+  ""source"": ""Link to source, usually GitHub""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+
+{
+     ""title"": ""SRGMediaPlayer-iOS"",
+     ""category"": ""Media"",
+     ""description"": ""The SRG Media Player library for iOS provides a simple way to add a universal audio / video player to any iOS application."",
+     ""source"": ""https://github.com/SRGSSR/SRGMediaPlayer-iOS.git""
+     }
+",inix,github-username
+319,2016-06-01 13:01:33,"@scribblemaniac do you know why this iTunes link fails to `json validate`?
+
+
+
+
+",dkhamsing,scribblemaniac
+317,2016-05-29 12:22:32,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [x] Project URL: https://github.com/omichde/Telemat-tvOS
+2. [x] Update contents.json instead of README 
+3. [x] One project per pull request
+4. [x] Project added at the end of the list (a script sorts projects automatically)
+5. [x] Avoid iOS or open-source in description as it is assumed
+6. [x] Use this commit title format if applicable: Add app-name by @github-username
+7. [x] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+  ""title"": ""Name of the app"",
+  ""category"": ""Category name"",
+  ""description"": ""What this app does"",
+  ""source"": ""Link to source, usually GitHub""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",omichde,github-username
+315,2016-05-24 18:09:57,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [x] Project URL: https://github.com/LunarFlash/Chaty
+2. [x] Update contents.json instead of README 
+3. [x] One project per pull request
+4. [x] Project added at the end of the list (a script sorts projects automatically)
+5. [x] Avoid iOS or open-source in description as it is assumed
+6. [x] Use this commit title format if applicable: Add app-name by @github-username
+7. [x] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+  ""title"": ""Name of the app"",
+  ""category"": ""Category name"",
+  ""description"": ""What this app does"",
+  ""source"": ""Link to source, usually GitHub""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",lfarah,github-username
+311,2016-05-23 23:17:13,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [X] Project URL:
+2. [X] Update contents.json instead of README 
+3. [X] One project per pull request
+4. [X] Project added at the end of the list (a script sorts projects automatically)
+5. [X] Avoid iOS or open-source in description as it is assumed
+6. [X] Use this commit title format if applicable: Add app-name by @github-username
+7. [X] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+  ""title"": ""Name of the app"",
+  ""category"": ""Category name"",
+  ""description"": ""What this app does"",
+  ""source"": ""Link to source, usually GitHub""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+
+Since I have contributor access I would normally just commit apps directly. Due to the obvious conflict of interest here however, I'll leave this decision to someone else.
+",scribblemaniac,github-username
+310,2016-05-19 14:25:26,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [x] Project URL:
+2. [x] Update contents.json instead of README 
+3. [x] One project per pull request
+4. [x] Project added at the end of the list (a script sorts projects automatically)
+5. [x] Use approved format for your entry
+6. [x] Avoid iOS or open-source in description as it is assumed
+7. [x] Use this commit title format if applicable: Add app-name by @github-username
+
+<!-- Approved Format
+
+{
+  ""title"": ""Name of the app"",
+  ""category"": ""Category name"",
+  ""description"": ""What this app does"",
+  ""source"": ""Link to source, usually GitHub""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+
+Spelled balloon correctly in this edit
+",rogersachan,github-username
+309,2016-05-19 08:56:13,"UitzendingGemist; it's a Dutch app, therefor the description is Dutch @kvnbautista
+https://github.com/4np/UitzendingGemist
+
+
+",iAmRenzo,kvnbautista
+307,2016-05-18 04:57:52,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [x] Project URL:
+2. [x] Update contents.json instead of README 
+3. [x] One project per pull request
+4. [x] Project added at the end of the list (a script sorts projects automatically)
+5. [x] Avoid iOS or open-source in description as it is assumed
+6. [x] Use this commit title format if applicable: Add app-name by @github-username
+7. [x] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+  ""title"": ""Name of the app"",
+  ""category"": ""Category name"",
+  ""description"": ""What this app does"",
+  ""source"": ""Link to source, usually GitHub""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",lfarah,github-username
+306,2016-05-17 09:41:39,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [x] Project URL:
+2. [x] Update contents.json instead of README 
+3. [x] One project per pull request
+4. [x] Project added at the end of the list (a script sorts projects automatically)
+5. [x] Avoid iOS or open-source in description as it is assumed
+6. [x] Use this commit title format if applicable: Add app-name by @github-username
+7. [x] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+  ""title"": ""Name of the app"",
+  ""category"": ""Category name"",
+  ""description"": ""What this app does"",
+  ""source"": ""Link to source, usually GitHub""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",lfarah,github-username
+305,2016-05-15 14:55:07,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [ ] Project URL:
+2. [ ] Update contents.json instead of README 
+3. [ ] One project per pull request
+4. [ ] Project added at the end of the list (a script sorts projects automatically)
+5. [ ] Avoid iOS or open-source in description as it is assumed
+6. [x] Use this commit title format if applicable: Add app-name by @github-username
+7. [ ] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+  ""title"": ""Name of the app"",
+  ""category"": ""Category name"",
+  ""description"": ""What this app does"",
+  ""source"": ""Link to source, usually GitHub""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",mirzaaghazadeh,github-username
+301,2016-05-13 19:40:50,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [x] Project URL: none
+2. [x] Update contents.json instead of README 
+3. [x] One project per pull request
+4. [x] Project added at the end of the list (a script sorts projects automatically)
+5. [x] Avoid iOS or open-source in description as it is assumed
+6. [x] Use this commit title format if applicable: Add app-name by @github-username
+7. [x] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+  ""title"": ""Name of the app"",
+  ""category"": ""Category name"",
+  ""description"": ""What this app does"",
+  ""source"": ""Link to source, usually GitHub""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",DeveloperACE,github-username
+297,2016-05-13 17:20:50,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [x] Project URL: https://github.com/peteog/Closebox
+2. [x] Update contents.json instead of README 
+3. [x] One project per pull request
+4. [x] Project added at the end of the list (a script sorts projects automatically)
+5. [x] Avoid iOS or open-source in description as it is assumed
+6. [x] Use this commit title format if applicable: Add app-name by @github-username
+7. [x] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+  ""title"": ""Name of the app"",
+  ""category"": ""Category name"",
+  ""description"": ""What this app does"",
+  ""source"": ""Link to source, usually GitHub""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",peteog,github-username
+297,2016-05-13 17:28:45,"@scribblemaniac hey buddy
+can you update the schema to allow this type of values for itunes
+
+https://itunes.apple.com/gb/app/closebox-find-closest-postbox/id556364813
+
+is this issue the `/gb` ? anyway, that is allowed
+",dkhamsing,scribblemaniac
+295,2016-05-13 13:46:28,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [x] Project URL: none. My personal website is www.adriancedwards.com
+2. [x] Update contents.json instead of README 
+3. [x] One project per pull request
+4. [x] Project added at the end of the list (a script sorts projects automatically)
+5. [x] Avoid iOS or open-source in description as it is assumed
+6. [x] Use this commit title format if applicable: Add app-name by @github-username
+7. [x] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+  ""title"": ""Name of the app"",
+  ""category"": ""Category name"",
+  ""description"": ""What this app does"",
+  ""source"": ""Link to source, usually GitHub""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",DeveloperACE,github-username
+294,2016-05-13 13:38:06,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [x] Project URL: none. my personal site is www.adriancedwards.com
+2. [x] Update contents.json instead of README 
+3. [x] One project per pull request
+4. [x] Project added at the end of the list (a script sorts projects automatically)
+5. [x] Avoid iOS or open-source in description as it is assumed
+6. [x] Use this commit title format if applicable: Add app-name by @github-username
+7. [x] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+  ""title"": ""Name of the app"",
+  ""category"": ""Category name"",
+  ""description"": ""What this app does"",
+  ""source"": ""Link to source, usually GitHub""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+",DeveloperACE,github-username
+293,2016-05-13 09:08:02,"<!-- Thanks for contributing to open-source-ios-apps 😊
+
+⚠️ Please do not edit the README, instead make changes to contents.json
+
+To create a new category, please open an issue (see CONTRIBUTING) -->
+
+<!-- When making an addition: -->
+1. [ ] Project URL:
+2. [ ] One project per pull request
+3. [ ] Project added at the end of the list (a script sorts projects automatically)
+4. [ ] Avoid iOS or open-source in description as it is assumed
+5. [ ] Use this commit title format if applicable: Add app-name by @github-username
+6. [ ] Use approved format for your entry
+
+<!-- Approved Format
+
+{
+  ""title"": ""Name of the app"",
+  ""category"": ""Category name"",
+  ""description"": ""What this app does"",
+  ""source"": ""Link to source, usually GitHub""
+}
+
+For more information, read https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+
+-->
+
+We got 100 stars! :D
+",Skornos,github-username
+285,2016-05-12 05:00:56,"I have added the json file as described in mail @dkhamsing, @kvnbautista.Thank u 
+",Romi08,kvnbautista
+285,2016-05-12 05:00:56,"I have added the json file as described in mail @dkhamsing, @kvnbautista.Thank u 
+",Romi08,dkhamsing
+284,2016-05-11 18:57:20,"@scribblemaniac moved misc. files to .github/ folder
+",dkhamsing,scribblemaniac
+282,2016-05-12 21:03:50,"@scribblemaniac thinking of adding ""archived"" apps to contents.json.. would a new field called `archived` with Boolean as value work ?
+",dkhamsing,scribblemaniac
+282,2016-05-13 16:33:16,"@scribblemaniac @kvnbautista 
+
+To archive an app (no longer maintained or no longer working etc..), add the `tag` ""archive"" in contents.json
+
+Thx
+",dkhamsing,kvnbautista
+281,2016-05-11 16:19:08,"1. [x] Project URL: https://github.com/BalestraPatrick/RealmVideo
+2. [x] One project per pull request
+3. [x] Insert the project in alphabetical order
+4. [x] Avoid iOS or open-source in description as it is assumed
+5. [x] Use this commit title format if applicable: Add app-name by @github-username
+6. [x] Use approved format for your entry
+
+<!-- Approved Format
+
+At minimum
+
+  {
+        ""title"": ""MrCode"",
+        ""category"": ""github"",
+        ""description"": ""GitHub iPhone app that can cache Markdown content"",
+        ""source"": ""https://github.com/haolloyin/MrCode"" // note, no comma on last line
+  }
+
+
+Optionally
+
+  {
+        ""title"": ""MrCode"",
+        ""category"": [""github"", ""parse""],
+        ""description"": ""GitHub iPhone app that can cache Markdown content"",
+        ""lang"": ""zho"",
+        ""source"": ""https://github.com/haolloyin/MrCode"",
+    ""homepage"": ""https://awesome-url"",
+        ""itunes"": ""https://itunes.apple.com/app/id1234567890"",
+        ""tags"": [""swift""],
+        ""stars"": 200
+  }
+
+-->
+",dkhamsing,github-username
+275,2016-05-11 16:12:09,"@kvnbautista there is now a new process for adding apps to this repo, it will be done through updating **contents.json** instead
+
+More info https://github.com/dkhamsing/open-source-ios-apps/blob/master/.github/CONTRIBUTING.md
+Example: https://github.com/dkhamsing/open-source-ios-apps/pull/281/files
+",dkhamsing,kvnbautista
+274,2016-05-09 19:24:52,"<!-- Thanks for contributing to open-source-ios-apps 😊 -->
+
+<!-- When making an addition: -->
+1. [x] Project URL: https://github.com/peteog/Closebox
+2. [x] One project per pull request
+3. [x] Insert the project in alphabetical order
+4. [x] Avoid iOS or open-source in description as it is assumed 
+5. [x] Use this commit title format if applicable: Add app-name by @github-username
+6. [x] Use approved format for your entry (use 🔶 for Swift projects)
+
+<!-- Approved Format 
+
+- App name: Short description 🔶
+- source url, i.e. https://github.com/username/project
+- https://itunes.apple.com/app/app-name/id-zzz
+
+or
+
+- [App name](source url): Short description 🔶
+-->
+",peteog,github-username
+273,2016-05-09 15:13:36,"@kvnbautista please do not add any projects to repo while we evaluate switching format (all data would be in json)
+
+thanks
+",dkhamsing,kvnbautista
+272,2016-05-08 02:30:00,"<!-- Thanks for contributing to open-source-ios-apps 😊 -->
+
+<!-- When making an addition: -->
+1. [x] Project URL: 
+2. [x] One project per pull request
+3. [x] Insert the project in alphabetical order
+4. [x] Avoid iOS or open-source in description as it is assumed 
+5. [x] Use this commit title format if applicable: Add app-name by @github-username
+6. [x] Use approved format for your entry (use 🔶 for Swift projects)
+
+<!-- Approved Format 
+
+- App name: Short description 🔶
+- source url, i.e. https://github.com/username/project
+- https://itunes.apple.com/app/app-name/id-zzz
+
+or
+
+- [App name](source url): Short description 🔶
+-->
+",kvnbautista,github-username
+269,2016-05-07 02:16:03,"<!-- Thanks for contributing to open-source-ios-apps 😊 -->
+
+<!-- When making an addition: -->
+1. [x] Project URL: 
+2. [x] One project per pull request
+3. [ ] Insert the project in alphabetical order
+4. [x] Avoid iOS or open-source in description as it is assumed 
+5. [x] Use this commit title format if applicable: Add app-name by @github-username
+6. [x] Use approved format for your entry (use 🔶 for Swift projects)
+
+<!-- Approved Format 
+
+- App name: Short description 🔶
+- source url, i.e. https://github.com/username/project
+- https://itunes.apple.com/app/app-name/id-zzz
+
+or
+
+- [App name](source url): Short description 🔶
+-->
+",WelkinXie,github-username
+268,2016-04-27 06:48:13,"1. [x] Project URL: https://github.com/vanyaland/ToThePenny
+2. [x] One project per pull request
+3. [x] Insert the project in alphabetical order
+4. [x] Avoid iOS or open-source in description as it is assumed 
+5. [x] Use this commit title format if applicable: Add app-name by @github-username
+6. [x] Use approved format for your entry (use 🔶 for Swift projects)
+",vanyaland,github-username
+266,2016-04-25 17:35:53,"<!-- Thanks for contributing to open-source-ios-apps 😊 -->
+
+<!-- When making an addition: -->
+1. [X] Project URL: https://github.com/kiliankoe/ParkenDD
+2. [X] One project per pull request
+3. [X] Insert the project in alphabetical order
+4. [X] Avoid iOS or open-source in description as it is assumed 
+5. [X] Use this commit title format if applicable: Add app-name by @github-username
+6. [X] Use approved format for your entry (use 🔶 for Swift projects)
+
+<!-- Approved Format 
+
+- App name: Short description 🔶
+- source url, i.e. https://github.com/username/project
+- https://itunes.apple.com/app/app-name/id-zzz
+
+or
+
+- [App name](source url): Short description 🔶
+-->
+
+Thanks for the list 😊
+",kiliankoe,github-username
+265,2016-04-22 15:10:03,"Simple to check @dkhamsing :)
+",jancborchardt,dkhamsing
+264,2016-04-22 12:11:29,"<!-- Thanks for contributing to open-source-ios-apps 😊 -->
+
+<!-- When making an addition: -->
+1. [x] One project per pull request
+2. [x] Insert the project in alphabetical order
+3. [x] Avoid iOS or open-source in description as it is assumed 
+4. [x] Use this commit title format if applicable: Add app-name by @github-username
+5. [x] Use approved format for your entry (use 🔶 for Swift projects)
+
+<!-- Approved Format 
+
+- App name: Short description 🔶
+- source url, i.e. https://github.com/username/project
+- https://itunes.apple.com/app/app-name/id-zzz
+
+or
+
+- [App name](source url): Short description 🔶
+-->
+",Skornos,github-username
+262,2016-04-20 20:21:06,"@kvnbautista thx
+@chadkeck Thank you for contributing to `open-source-ios-apps` :wink:
+",dkhamsing,kvnbautista
+258,2016-04-11 22:49:04,"<!-- Thanks for contributing to open-source-ios-apps 😊 -->
+
+<!-- When making an addition: -->
+1. [ ] One project per pull request
+2. [ ] Insert the project in alphabetical order
+3. [ ] Avoid iOS or open-source in description as it is assumed 
+4. [ ] Use this commit title format if applicable: Add app-name by @github-username
+5. [ ] Use approved format for your entry (use 🔶 for Swift projects)
+
+<!-- Approved Format 
+
+- App name: Short description 🔶
+- source url, i.e. https://github.com/username/project
+- https://itunes.apple.com/app/app-name/id-zzz
+
+or
+
+- [App name](source url): Short description 🔶
+-->
+",kvnbautista,github-username
+257,2016-04-11 22:45:17,"<!-- Thanks for contributing to open-source-ios-apps 😊 -->
+
+<!-- When making an addition: -->
+1. [ ] One project per pull request
+2. [ ] Insert the project in alphabetical order
+3. [ ] Avoid iOS or open-source in description as it is assumed 
+4. [ ] Use this commit title format if applicable: Add app-name by @github-username
+5. [ ] Use approved format for your entry (use 🔶 for Swift projects)
+
+<!-- Approved Format 
+
+- App name: Short description 🔶
+- source url, i.e. https://github.com/username/project
+- https://itunes.apple.com/app/app-name/id-zzz
+
+or
+
+- [App name](source url): Short description 🔶
+-->
+
+Line 173
+",kvnbautista,github-username
+257,2016-04-11 23:43:39,"@Bautistax hey looks like the indenting is off for the links
+
+see https://github.com/Bautistax/open-source-ios-apps/tree/patch-6#developer
+
+please update this, the other pulls and merge
+
+thanks 😄 
+",dkhamsing,Bautistax
+257,2016-04-11 23:55:26,"@Bautistax right now we use travis ci to validate links, if the links are unchanged, please add keyword `[ci skip]` in the commit to skip verification i.e. https://github.com/dkhamsing/open-source-ios-apps/commit/9eb52c50cdd81b2527006ffb4c891644f78b3b8f
+
+thanks 
+",dkhamsing,Bautistax
+253,2016-03-23 07:22:23,"Please add **Dungeon Crawl: Stone Soup** iOS port by @CliffsDover 
+
+[https://github.com/CliffsDover/crawl/tree/iOS_Release](https://github.com/CliffsDover/crawl/tree/iOS_Release)
+
+Thanks!
+",CliffsDover,CliffsDover
+252,2016-03-21 14:34:52,"<!-- Thanks for contributing to open-source-ios-apps 😊 -->
+
+<!-- When making an addition: -->
+1. [x] One project per pull request
+2. [x] Insert the project in alphabetical order
+3. [x] Avoid iOS or open-source in description as it is assumed 
+4. [x] Use this commit title format if applicable: Add app-name by @github-username
+5. [x] Use approved format for your entry (use 🔶 for Swift projects)
+
+<!-- Approved Format 
+
+- App name: Short description 🔶
+- source url, i.e. https://github.com/username/project
+- https://itunes.apple.com/app/app-name/id-zzz
+
+or
+
+- [App name](source url): Short description 🔶
+-->
+",ngs,github-username
+249,2016-03-14 22:08:54,"1. [x] One project per pull request
+2. [x] Insert the project in alphabetical order
+3. [x] Avoid iOS or open-source in description as it is assumed 
+4. [x] Use this commit title format if applicable: Add app-name by @github-username
+5. [x] Use approved format for your entry (use 🔶 for Swift projects)
+",tailec,github-username
+248,2016-03-14 21:53:01,"1. [x] One project per pull request
+2. [x] Insert the project in alphabetical order
+3. [x] Avoid iOS or open-source in description as it is assumed 
+4. [x] Use this commit title format if applicable: Add app-name by @github-username
+5. [x] Use approved format for your entry (use 🔶 for Swift projects)
+",tailec,github-username
+247,2016-03-14 14:00:13,"<!-- Thanks for contributing to open-source-ios-apps 😊 -->
+
+<!-- When making an addition: -->
+1. [x] One project per pull request
+2. [x] Insert the project in alphabetical order
+3. [x] Avoid iOS or open-source in description as it is assumed 
+4. [x] Use this commit title format if applicable: Add app-name by @github-username
+5. [x] Use approved format for your entry (use 🔶 for Swift projects)
+
+<!-- Approved Format 
+
+- App name: Short description 🔶
+- source url, i.e. https://github.com/username/project
+- https://itunes.apple.com/app/app-name/id-zzz
+
+or
+
+- [App name](source url): Short description 🔶
+-->
+",l800891,github-username
+245,2016-03-14 04:12:44,"<!-- Thanks for contributing to open-source-ios-apps 😊 -->
+
+<!-- When making an addition: -->
+1. [ ] One project per pull request
+2. [ ] Insert the project in alphabetical order
+3. [ ] Avoid iOS or open-source in description as it is assumed 
+4. [ ] Use this commit title format if applicable: Add app-name by @github-username
+5. [ ] Use approved format for your entry (use 🔶 for Swift projects)
+
+<!-- Approved Format 
+
+- App name: Short description 🔶
+- source url, i.e. https://github.com/username/project
+- https://itunes.apple.com/app/app-name/id-zzz
+
+or
+
+- [App name](source url): Short description 🔶
+-->
+
+https://github.com/l800891/Sakura-Fly
+I just open sourced it today. Available free on App Store
+",l800891,github-username
+244,2016-03-13 21:59:44,"<!-- Thanks for contributing to open-source-ios-apps 😊 -->
+
+<!-- When making an addition: -->
+1. [x] One project per pull request
+2. [x] Insert the project in alphabetical order
+3. [x] Avoid iOS or open-source in description as it is assumed 
+4. [x] Use this commit title format if applicable: Add app-name by @github-username
+5. [x] Use format below for your entry (use 🔶 for Swift projects)
+
+<!-- 
+- App name: Short description 🔶
+- source url, i.e. https://github.com/username/project
+- https://itunes.apple.com/app/app-name/id-zzz
+
+or
+
+- [App name](source url): Short description 🔶
+-->
+",eejahromi,github-username
+241,2016-03-06 17:07:21,"<!-- Thanks for contributing to open-source-ios-apps 😊 -->
+
+<!-- When making an addition: -->
+1. [x] One project per pull request
+2. [x] Insert the project in alphabetical order
+3. [x] Avoid iOS or open-source in description as it is assumed :-)
+4. [x] Use this commit title format if applicable: Add app-name by @github-username
+5. [x] Follow the following template (use 🔶 for Swift projects)
+
+<!-- 
+  - App name: Short description 🔶
+  - source url, i.e. https://github.com/username/project
+  - https://itunes.apple.com/app/app-name/id-zzz
+
+or
+
+- [App name](source url): Short description 🔶
+-->
+",XabierGoros,github-username
+189,2016-01-13 15:42:32,"via @aaronbrethorst 
+",dkhamsing,aaronbrethorst
+184,2016-01-05 16:03:57,"https://github.com/wrutkowski/Lucid-Weather-Clock with post on Medium: https://medium.com/@wrutkowski/lucid-weather-clock-954f6ce8bd0e
+",wrutkowski,wrutkowski
+162,2015-12-14 15:25:13,"- Add Adblock Plus by @adblockplus, close #161
+- Mume project was deleted 
+
+> https://travis-ci.org/dkhamsing/open-source-ios-apps/builds/96763135
+> 404: https://github.com/coderyi/Mume 
+",dkhamsing,adblockplus
+124,2015-10-12 16:04:41,"@Bautistax next time, could you create a new issue ? :smile: 
+",dkhamsing,Bautistax
+99,2015-07-31 15:02:41,"Thanks
+cc @stakes
+",dkhamsing,stakes
+89,2015-06-22 17:44:29,"Hi everyone, I was wondering if any of you guys know of any open sourced iOS apps that utilizes Core Data. I'm learning how to use Core Data and would like to learn its best practices. Thanks!
+
+P.S. sorry if making an issue is inappropriate. Figured this would be the best way to ask a question. Thanks for your hard work @dkhamsing! 
+",kevinnguy,dkhamsing
+81,2015-05-19 08:33:29,"cc @owncloud
+",dkhamsing,owncloud
+60,2015-04-09 17:23:33,"hey @dkhamsing - just moving things around where it makes sense
+",jeffreyjackson,dkhamsing
+53,2015-04-06 19:04:00,"hey @dkhamsing I made you an owner of that organization too
+",jeffreyjackson,dkhamsing
+34,2015-03-23 20:42:42,"Via https://github.com/sanketfirodiya/sample-watchkit-apps, thanks @sanketfirodiya 
+#28
+",dkhamsing,sanketfirodiya
+31,2015-03-20 17:13:44,"Hey @dkhamsing - take a look at this [repo](http://github.com/pcqpcq/open-source-android-apps)
+",jeffreyjackson,dkhamsing
+28,2015-03-28 17:31:28,"Thanks @Bautistax, LayerPlayer has been added a few days ago 6a0a643
+",dkhamsing,Bautistax
+8,2015-01-28 14:36:57,"Nice contribution from @bemyeyes 
+",dkhamsing,bemyeyes
+4,2015-01-27 04:20:34,"Thanks for putting this list together, @dkhamsing!
+",jpsim,dkhamsing
+3,2015-01-27 03:15:47,"Hey @orta @ashfurrow @1aurabrown
+1. Is Eidolon on the App Store?
+2. What's the name  of the app (what's the bundle display name)?
+
+Thanks
+",dkhamsing,orta
+3,2015-01-27 03:15:47,"Hey @orta @ashfurrow @1aurabrown
+1. Is Eidolon on the App Store?
+2. What's the name  of the app (what's the bundle display name)?
+
+Thanks
+",dkhamsing,ashfurrow
+2,2015-01-27 03:03:45,"Thanks @soffes 
+",dkhamsing,soffes

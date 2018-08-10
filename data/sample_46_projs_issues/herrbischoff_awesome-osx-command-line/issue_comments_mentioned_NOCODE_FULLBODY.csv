@@ -1,0 +1,188 @@
+issue_num,datetime,body,login,mention_login
+160,2017-03-10 08:33:05,"@paulmelnikow why would that be relevant? Does any external project depend on that link being updated?
+
+The author responded to the thread mentioned earlier, let's see if he wants to continue maintaining the project or not. ",antoineco,paulmelnikow
+160,2017-03-10 19:45:30,"Thanks for your comment, @sorin-ionescu. That's what I figured. The sheer amount of notifications the sole maintainer of a popular open source project gets is staggering. If Real Life™ issues of any kind take the focus away for some time, getting back on top is an almost impossible task.
+
+I view this as resolved and will leave the original repo in place as in all likelihood the changes made in other forks will be merged back into it with the help of additional volunteers.",herrbischoff,sorin-ionescu
+160,2017-03-10 20:02:40,"Chapeau to your gut feeling @herrbischoff 
+
+And good to see you around again @sorin-ionescu ",dritter,herrbischoff
+160,2017-03-10 20:02:40,"Chapeau to your gut feeling @herrbischoff 
+
+And good to see you around again @sorin-ionescu ",dritter,sorin-ionescu
+156,2017-03-16 13:29:11,@herrbischoff Title has been capitalized.,caillou,herrbischoff
+142,2017-02-18 06:07:04,@herrbischoff Can I ask why you're against Electron-based apps? ,sifex,herrbischoff
+117,2016-10-28 02:57:28,"@herrbischoff it's released;)
+",napcae,herrbischoff
+117,2016-11-02 16:21:57,"@jdickey: A valid and interesting point. I am not particularly partial to jumping on any new development. Long term however, this makes sense as Apple has officially renamed Mac OS X to macOS, for better or worse.
+",herrbischoff,jdickey
+117,2016-11-02 18:36:45,"@jdickey Almost a [third on Sierra, 40% on El Capitan](https://www.gosquared.com/global/mac/sierra/#beta). I think it's safe to say that we can ignore Yosemite, since command line users are power users and have updated systems.
+",napcae,jdickey
+117,2016-11-03 11:46:52,"@napcae. Right. We're an El Capitan shop and have no expectation to even touch Sierra until 10.12.2+ reduces the support panic to normal levels _and_ all our critical tools support it. Neither of those conditions yet apply. Did they change the name of El Capitan and we just didn't notice? _That_ was my point.
+",jdickey,napcae
+116,2016-11-10 12:38:39,"@bmalynovytch: Any luck?
+",herrbischoff,bmalynovytch
+114,2016-06-27 19:50:26,"@herrbischoff Seems good now.
+",kutsan,herrbischoff
+110,2016-11-20 01:37:57,"@herrbischoff, are there any other changes you'd like me to make?
+",unixorn,herrbischoff
+97,2016-02-29 19:27:50,"@herrbischoff how about now? I made changes (squashed).
+",alundiak,herrbischoff
+83,2015-12-04 01:14:49,"@herrbischoff NP about the late reply. I added a few more Finder control functions in #87. Let me know if you want any changes in the TOC format I used.
+",unixorn,herrbischoff
+81,2015-11-06 18:12:46,"Hi there! Thanks for the kind words. I feel that an OS X command line list is not quite the right place for additions like yours. That being said, I have come across a lot of questions and material that could benefit from a nicely curated list. Therefore, @mischah, I hope you excuse my enthusiasm in setting up such a list myself: https://github.com/herrbischoff/awesome-command-line-apps
+
+It's very, very basic right now, but I will keep adding interesting material to it.
+
+Please feel free to add to your hearts' content. And since @mischah is the originator of that idea (or at least the spark that finally lit the fuse), I'll gladly add you as a collaborator with full push privileges if you're interested.
+",herrbischoff,mischah
+81,2015-11-06 18:50:03,"Uhm … You ripped my idea without checking my Github repos to see if I already set up this list :open_mouth: 
+
+Here is my list: https://github.com/mischah/awesome-cli-apps
+
+>  Therefore, @mischah, I hope you excuse my enthusiasm in setting up such a list myself: https://github.com/herrbischoff/awesome-command-line-apps
+
+Sorry, that’s feels kinda lame to me. :unamused:
+
+Now we have two lists with the same purpose in the making. Which doesn’t make sense.
+",mischah,mischah
+81,2015-11-06 19:24:45,"@mischah: You're still very welcome to contribute. The existing lists appear very fragmented, partial and sometimes even confusing to me. For me it's not about the GitHub ""stars"" or the recognition — whatever that means — because that's fleeting and unsubstantial. I just want to build a list that I wish I came about when I was searching. So, how about building that together?
+",herrbischoff,mischah
+81,2015-11-06 19:51:55,"@aharris88: Renaming it and strengthening its focus would surely go a long way.
+",herrbischoff,aharris88
+81,2015-11-06 19:54:07,"@aharris88 Count me in. Let’s continue over there.
+",mischah,aharris88
+81,2015-11-06 20:08:40,"@mischah  Sounds good. Thanks.
+",aharris88,mischah
+79,2015-11-04 17:58:08,"Fixed the capitalization and moved the snippet to alpha order, @herrbischoff 
+",unixorn,herrbischoff
+58,2015-10-29 15:12:35,"@rprimus: Indeed. Missed that.
+
+@maximveksler: Please fix. Also, double-check what I've asked in my [previous comment](https://github.com/herrbischoff/awesome-osx-command-line/pull/58#issuecomment-152082229).
+",herrbischoff,rprimus
+58,2015-10-29 15:12:35,"@rprimus: Indeed. Missed that.
+
+@maximveksler: Please fix. Also, double-check what I've asked in my [previous comment](https://github.com/herrbischoff/awesome-osx-command-line/pull/58#issuecomment-152082229).
+",herrbischoff,maximveksler
+58,2015-10-29 17:33:20,"Thanks for the catch @rprimus.
+
+@herrbischoff - yes, zsh is installed with brew. El Capitan won't let you edit /bin so my homebrew is set to /usr/local/bin which is not enabled by default Apple /etc/shells setup.
+",maximveksler,herrbischoff
+58,2015-10-29 17:33:20,"Thanks for the catch @rprimus.
+
+@herrbischoff - yes, zsh is installed with brew. El Capitan won't let you edit /bin so my homebrew is set to /usr/local/bin which is not enabled by default Apple /etc/shells setup.
+",maximveksler,rprimus
+58,2015-11-03 23:19:46,"@unixorn: That's exactly been my experience on every OS X version including El Capitan. The only time I had to add something to `/etc/shells` was when using a newer Bash version, which is kind of logical given that OS X ships with a default version installed.
+
+I'd like to hear other voices about their experience before merging this change. I'm still not convinced that having to add it manually is expected behavior.
+",herrbischoff,unixorn
+58,2015-11-04 00:16:42,"@herrbischoff Thinking back, I may have set my shell to brew's zsh using System Preferences instead of `chsh`, so that isn't necessarily a useful data point.
+",unixorn,herrbischoff
+58,2015-11-04 10:07:09,"@unixorn: Thanks for your input.
+",herrbischoff,unixorn
+44,2015-10-24 21:25:02,"@vinkla: Nice work. I'm wondering though why the badge still shows that the build is failing although it is passing.
+
+Apart from that little hiccup, I think we should test both at least `setup.sh`, `brew.sh` and the sourcing of the `aliases` and `function` files. If all of them go smoothly, this would account for the most basic code glitches like missing colons, quotes and the like. It would also make sure that all Homebrew formulas are available and installing correctly.
+
+I suppose you removed the pre-sudo check because Travis would otherwise complain, correct?
+
+This automation is going to be a treat when finally set up. ;)
+",herrbischoff,vinkla
+44,2015-10-24 21:32:01,"@herrbischoff The reason it show failing is because I pointed it against the `master` branch. 
+",vinkla,herrbischoff
+43,2015-10-25 07:05:23,"@herrbischoff what about pull request validation? For correct style and script? I can write some code for style check btw.
+",G07cha,herrbischoff
+43,2015-10-25 18:36:37,"@G07cha: That would indeed be nice. You can send a PR to the `travis` branch so @vinkla, you and I can take a look. Thanks!
+",herrbischoff,G07cha
+39,2015-10-29 15:43:00,"@gfpacheco: Does my last suggestion work?
+",herrbischoff,gfpacheco
+39,2016-03-30 15:44:01,"@herrbischoff please re-open, adding .plist didn't work for me either. @ryanshuck solutions works though
+",mindfulmonk,ryanshuck
+39,2016-03-30 15:44:01,"@herrbischoff please re-open, adding .plist didn't work for me either. @ryanshuck solutions works though
+",mindfulmonk,herrbischoff
+35,2015-10-23 07:49:52,"@vinkla: Interesting idea. Travis does support Mac OS as a testing target. However, writing effective tests for simple configuration changes could prove to be challenging, as there is usually no output. Also, Hardware-related tests will probably be impossible.
+",herrbischoff,vinkla
+35,2015-10-24 18:26:05,"Alright, @vinkla: as of now you have push access to the repository. Use it wisely! ;)
+
+I have set up a new branch `setup-files` for us to work with. I believe the structure should be self-explanatory. I use Vim as my main code editor so the files are tailored to this environment. To spare yourself and others the pain of having to adjust editor settings manually, there is also an `.editorconfig` file. Which should (given the correct plugin for your code editor is installed) adjust the code formatting automatically.
+
+I believe the files should ultimately be in a separate folder which contains its own `README.md` with basic information about their intent and instructions on how to use them.
+
+Let's see what we can create! I'm especially looking forward to how the Travis tests will run. They are set to run only when a `.travis.yml` file is present. So as soon as you add one, it's go time.
+",herrbischoff,vinkla
+27,2015-10-21 00:49:46,"@herrbischoff good call, updated the title :)
+",rileyjshaw,herrbischoff
+22,2015-10-21 01:52:36,"@plessbd: Intriguing idea. Let me sleep on it. 
+",herrbischoff,plessbd
+22,2015-10-21 08:14:48,"@boneskull, good question, my opinion is to set link with short description, like:
+`[.plist file](https://gist.github.com/your-gist)`
+But @herrbischoff may have different opinion so let's wait for him.
+",G07cha,herrbischoff
+22,2015-10-21 08:14:48,"@boneskull, good question, my opinion is to set link with short description, like:
+`[.plist file](https://gist.github.com/your-gist)`
+But @herrbischoff may have different opinion so let's wait for him.
+",G07cha,boneskull
+22,2015-12-03 23:44:37,"To finally resolve this long-running PR, I have decided with 479cd58 to add a new file `launchagents.md` and put the submission (along with the correct image link) in there. I have also done the same for functions. It would be a shame for the good and creative ideas to go to waste, so feel free to contribute in those files. This should keep things neat and tidy while still being comprehensive and useful.
+
+@boneskull: If you're interested, I can delete the entry so you can re-add it for proper attribution. Let me know.
+",herrbischoff,boneskull
+22,2015-12-04 05:23:30,"@herrbischoff not necessary. thanks!
+",boneskull,herrbischoff
+21,2015-10-21 06:47:39,"@herrbischoff, it's ok becouse you already unloaded service, if you will load service back and try unload again, it will unload without any message, if you unload second time it will give you same message as you accrued.
+Btw, I'm think that redirect to `/dev/null` is unnecessary too
+",G07cha,herrbischoff
+21,2015-10-21 13:56:21,"@G07cha: Thanks, I thought as much. I should really get more sleep. ;)
+
+@vinkla: Thanks. Merging.
+",herrbischoff,G07cha
+21,2015-10-21 13:56:21,"@G07cha: Thanks, I thought as much. I should really get more sleep. ;)
+
+@vinkla: Thanks. Merging.
+",herrbischoff,vinkla
+10,2015-10-18 15:23:37,"@vinkla: Thanks for the pointer. I will close this then.
+",herrbischoff,vinkla
+3,2015-10-16 12:49:01,"There you go! 
+
+Thanks for creating this list @herrbischoff 
+",willywos,herrbischoff
+160,2017-03-03 15:32:50,"I see recent commits in the original repo from February and March, so this does not seem to be abandoned. Given the popularity of the source, I don't see a reason to link to a very young fork.
+
+Maybe @sorin-ionescu himself can shed some light on this. If he's on board with the new community fork, I will merge this.",herrbischoff,sorin-ionescu
+160,2017-03-09 17:13:11,"I'm going to give @sorin-ionescu until the end of the month to reply with a short comment on the current state of his project. If there is no word from him, the community fork will will added in its place. Should I forget this, please feel free to remind me in April.",herrbischoff,sorin-ionescu
+160,2017-03-10 15:53:06,"Prezto is not abandoned, but it has been neglected publically for a year. I want to give write access to several volunteers. There are several forks, which need to be reconciled.
+
+A GitHub notification subject line starts with `[user/repository]`, which often does not even fit in the threads column row of an email client, for example `Re: [herrbischoff/awesome-osx-command-li...`, let alone the issue title. I have hundreds of notification threads on Prezto alone. So, using GitHub notifications to get a hold of someone's attention is not effective. I wish @facastagnini or someone else that commented in https://github.com/sorin-ionescu/prezto/issues/1239 had sent me an email.",sorin-ionescu,facastagnini
+124,2016-12-24 19:42:44,"Another alternative people may want to consider is [`mas`](https://github.com/mas-cli/mas) by @argon and team.
+
+Once `mas` is installed, `mas list` will list all application installed from the App Store in formatted columns for app ID number and app name/version. You can, for example, create this file on a system where you've signed into the App Store with
+
+
+
+That snippet is now part of my standard ""get-a-clean-system-up"" script.",jdickey,argon
+97,2016-01-21 23:44:09,"Tested on my Mac OS since Yosemite till now (10.11.3).
+
+<img width=""948"" alt=""screenshot 2016-02-29 20 29 03"" src=""https://cloud.githubusercontent.com/assets/2131633/13406311/0c1df15a-df23-11e5-842f-49425ccb5e05.png"">
+
+@herrbischoff please review.
+",alundiak,herrbischoff
+96,2016-01-21 20:45:56,"@herrbischoff please review, and merge if such suggestion make sense for this repo.
+",alundiak,herrbischoff
+92,2016-02-29 11:54:31,"This was just added by @vinkla in PR #102. Thanks for letting me know.
+",herrbischoff,vinkla
+81,2015-11-06 19:33:04,"> The existing lists appear very fragmented, partial and sometimes even confusing to me.
+
+You’re right. But the guy maintaining »Awesome CLI« knows about the problems and is asking for help.
+
+→ https://github.com/aharris88/awesome-cli/issues/14
+
+> So, how about building that together?
+
+Or we both could contribute to the existing one and help @aharris88 to make a proper awesome list out of his awesome list.
+",mischah,aharris88
+44,2015-10-24 19:46:15,"@herrbischoff I don't know which setup we want to use but in this PR we test the `setup.sh` script and see how well it performs on OS X 10.9, 10.10 and 10.11. Let me know what you think about this.
+",vinkla,herrbischoff
+43,2015-10-25 18:36:37,"@G07cha: That would indeed be nice. You can send a PR to the `travis` branch so @vinkla, you and I can take a look. Thanks!
+",herrbischoff,vinkla
+19,2015-10-20 15:47:26,"That might be better, what do you think @herrbischoff?
+",vinkla,herrbischoff

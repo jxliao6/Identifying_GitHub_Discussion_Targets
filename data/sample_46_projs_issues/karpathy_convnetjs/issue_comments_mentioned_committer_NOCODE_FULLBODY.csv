@@ -1,0 +1,71 @@
+issue_num,datetime,body,login,mention_login
+53,2016-01-27 06:50:14,"@karpathy - That didn't work for me. This is because the ""y"" variable in the train function is a structure ({dim: i, val:x}, not an Array, in the case of the deep-q-learning example.
+",DrGlennn,karpathy
+53,2016-01-27 06:50:17,"hey @karpathy – that actually doesn't fix the problem.
+
+You can get rid of the warning by changing this line in `deepqlearn.js#254`:
+
+
+
+to
+
+
+
+Though, I'm not sure if this breaks anything or not.
+",nemo,karpathy
+33,2015-05-31 11:28:21,"@pavelpep should it be `<image_channels` rather than `<3` [here](https://github.com/karpathy/convnetjs/blob/72b4719f6b7bf1ce460549a9b2c2070a7e653bc6/demo/js/images-demo.js#L24) and [here](https://github.com/karpathy/convnetjs/blob/72b4719f6b7bf1ce460549a9b2c2070a7e653bc6/demo/js/images-demo.js#L60)?
+
+Thanks for the work! 
+(Should I do a pull request if I spot such error?)
+",cbovar,pavelpep
+33,2015-05-31 18:32:33,"@cbovar nice catch! You are correct, it should be `<image_channels` instead of `<3`
+",pavelpep,cbovar
+32,2015-04-17 03:02:05,"@karpathy I've been playing around with Typed Objects and to me it seems to best way to use Typed Objects would be to have a `VolType` class that extends `StructType`. This would allow Vols to be very memory efficient and performant, and allow efficient arrays of Vols. Sounds pretty good to me :smile:.
+
+This is a (broken) implementation of `VolType`:
+
+
+
+The VolType class could be used like this:
+
+
+
+The above would be equivalent to calling:
+
+
+
+Typed Objects allows multidimensional typed arrays, so the `add()`, `set()` and `get()` methods wouldn't be needed, same goes for `addGrad()`, `setGrad()` and `getGrad()`.
+
+`cloneAndZero()` is also not needed, because another instance of a VolType is used instead. `clone()` is replaced as well, as passing a Vol to an instance of VolType would perform a clone.
+
+The only huge downside to this is the Typed Objects are only available in Firefox beta builds, and as they are a part of the ECMAScript 7 standard, they won't be standardised until as late as September 2016. I'm sure Typed Objects could be polyfilled (just as SIMD and Typed Arrays can, just with lesser performance), but one would have to be written from scratch.
+",thomasfoster96,karpathy
+13,2015-11-29 21:51:25,"@karpathy Just wondering if there's been any progress on this, as I haven't been able to find much else about it online. 
+
+I'd like to use your deep q learning code to try and train an agent on Go, as most of the necessary additional code is already available online in javascript, but I'm not sure how slow training would be without the speedup of a gpu.
+",ssampang,karpathy
+13,2016-02-17 16:37:22,"Wanted to post a quick update here, for interested parties. I've [fully converted](http://waylonflinn.github.io/DeepBeliefSDK/) the jetpac demo to use weblas, producing close to a 2x speedup. The `GEMM` function, in particular, is about 4x faster.
+
+The key to this speedup was a combination of the factors that @mdda outlines above. Namely: transposing the second matrix, full packing of RGBA elements and using a single GPU instruction (`dot`) to process four elements at a time.
+
+A good next step here might be to convert the work @karpathy links to above to make use of this, and see if more impressive speedups ensue. If no one else steps in to take up the torch, I'll likely start on it in the next few days.
+",waylonflinn,karpathy
+61,2016-01-24 16:04:51,"Hello, Andrej @karpathy 
+
+I think here should be (1-this.drop_prob). Let's consider probability = 0.1 - we should drop 10% and after that scale weights only slightly onto 0.9.
+
+WBR,
+Dmitriy
+",avdmitry,karpathy
+52,2015-09-30 22:51:43,"@karpathy, I've corrected a typographical error in the documentation of the [convnetjs](https://github.com/karpathy/convnetjs) project. You should be able to merge this pull request automatically. However, if this was intentional or if you enjoy living in linguistic squalor, please let me know and [create an issue](https://github.com/thoppe/orthographic-pedant/issues/new) on my home repository.
+",orthographic-pedant,karpathy
+46,2015-08-26 23:21:22,"@littledan As far as I know, probably not to the former and yes to the latter.
+
+A bit of background: The convnetjs library works using Vols, which are objects with two properties, `w` and `dw`, which are both three-dimensional arrays, as well as three other properties `sx`, `sy` and `depth`, which hold the sizes of the arrays.
+
+Currently the Vols are objects and the `w` and `dw` properties are one-dimensional arrays, with `set(sx, sy, depth)`, `get(sx, sy, depth)`, `set_grad(sx, sy, depth)` and `get_grad(sx, sy, depth)` methods used to set and get values in the `w` and `dw` properties (see [this file](https://github.com/karpathy/convnetjs/blob/master/src/convnet_vol.js)). This method is awfully slow, and in some places the methods to figure out the offset of a given element (`sx`, `sy`, `depth`) are manually inlined for speed.
+
+This pull request changes this by instead having a [`VolType` constructor](https://github.com/thomasfoster96/convnetjs/blob/master/src/structures/vol.js), from which different `Vol`s of the same dimensions can be created. Using the Firefox Nightly implementation of Typed Objects, it was possible to use the underlying ArrayBuffer of the Vols (and even their individual properties) to create a Float64Array view of the `w` and `dw` arrays and then use the SIMD load/store methods to parallelize calculations (see [this code](https://github.com/thomasfoster96/convnetjs/blob/master/src/layers/convlayer.js#L60)), as well as use nicer, faster array indexing( `myVol.w[0][2][1]` instead of `myVol.get(0, 2, 1)` and have the performance benefits of things being explicitly typed.
+
+Note that I wrote most of this code a few months ago and only cleaned it up a little the other day to open the pull request to see what @karpathy thought of the approach (as per #32 Andrej would like an easy way to create tensors in JS) - I probably wrote this using out of date drafts for SIMD.
+",thomasfoster96,karpathy

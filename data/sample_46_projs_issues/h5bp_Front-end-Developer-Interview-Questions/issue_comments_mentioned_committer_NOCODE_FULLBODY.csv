@@ -1,0 +1,472 @@
+issue_num,datetime,body,login,mention_login
+372,2017-02-08 04:17:14,@karmeljuk Welcome PR to improve translations and speak in English.,appleboy,karmeljuk
+351,2016-03-28 08:57:21,"@yanni4night Thanks
+",appleboy,yanni4night
+346,2016-02-24 20:21:51,"@jacopotarantino Thanks for the PR! 
+I'm a bit on the fence about it personally - we don't have any questions related to syntax errors currently, but at the same time I suspect this might be interpreted as a bit of a trick question in the context of an interview. Thoughts @darcyclarke @appleboy?
+",richgilbank,jacopotarantino
+346,2016-02-24 23:11:21,"@richgilbank no worries :). I wasn't 100% sure it fit the theme of the list but it felt worth submitting. If I may, here's a little backstory:
+
+It suddenly hit me the other day that I had no idea what that would do because I'd never tried it(an empty `if` statement would be pretty strange). I tried it out to check what would happen and then asked a few coworkers what they thought. The varied responses I got from them made me think this is a good interview question.
+
+The point of asking the question in an interview is more to see how much detail a person can give in response and how they might justify their response. So while someone more astute like yourself might know/assume that it's a syntax error they will hopefully be able to describe why it's a syntax error and one can ask a followup question about what happens to the process/execution flow. Or someone less thoughtful like myself might assume that it is valid JavaScript (because why not) and describe to the interviewer how the content(lack thereof) of the parens is evaluated and what happens with the final value. Maybe dig into type coercion a bit as a followup.
+
+There's probably another dimension to this but I haven't thought of it yet. Anyway, that's the process that lead to the PR.
+",jacopotarantino,richgilbank
+343,2016-02-09 08:16:01,"@tgfjt Thanks
+",appleboy,tgfjt
+337,2015-12-14 07:11:25,"@zushenyan Thanks.
+",appleboy,zushenyan
+334,2016-03-16 19:34:28,"@diogosilvaferreira  I'm starting to feel like this question, and it's topic, in general, is becoming legacy. It's great to understand what the doctype does but the nuances of legacy browser modes and legacy markup standards is fairly irrelevant these days. I appreciate the attention to detail here so I probably will merge this in, but I'm just making a note that we may want do a pass at some of these questions at some point and put them into a new category (ie. `legacy` or similar)
+",darcyclarke,diogosilvaferreira
+324,2015-10-05 12:47:18,"@pacMakaveli Thanks.
+",appleboy,pacMakaveli
+322,2015-09-11 15:05:32,"@carlosliu Thanks.
+",appleboy,carlosliu
+318,2015-08-15 16:24:53,"@dermatobia Thanks.
+",appleboy,dermatobia
+313,2016-03-16 19:14:38,"@strugee Sorry for the wait on this PR, can you rebase?
+",darcyclarke,strugee
+311,2015-07-16 18:02:32,"@darcyclarke Nah. Bad translations reflect bad on the project. Maybe we should try to get reviewers that know the language before merging PRs.
+",arthurvr,darcyclarke
+311,2015-07-16 18:05:58,"@arthurvr Nah? o_O 
+",darcyclarke,arthurvr
+306,2015-06-03 13:19:01,"@zeitiger Thanks.
+",appleboy,zeitiger
+298,2015-05-22 03:41:49,"Looks good @zeitiger! Can you update your branch so we can merge? There's been changes to master since you made your initial pull request. A pull/merge should fix that up.
+",darcyclarke,zeitiger
+298,2015-05-22 03:57:16,"@zeitiger rebase master on your current branch.
+
+
+",appleboy,zeitiger
+298,2015-06-03 11:55:26,"@zeitiger Thanks for picking this up! Though you can just make the edit to this PR, in fact.
+",arthurvr,zeitiger
+295,2015-05-14 19:17:19,":+1:, Thanks @syymza!
+",richgilbank,syymza
+291,2015-04-27 01:04:21,"@CheungJ Thanks.
+",appleboy,CheungJ
+290,2015-07-27 18:15:27,"@arthurvr @darcyclarke @richgilbank 
+I'm sorry for the delayed response. I just read the notification today.
+
+Thanks
+",populationtwo,richgilbank
+290,2015-07-27 18:15:27,"@arthurvr @darcyclarke @richgilbank 
+I'm sorry for the delayed response. I just read the notification today.
+
+Thanks
+",populationtwo,darcyclarke
+290,2015-07-27 18:15:27,"@arthurvr @darcyclarke @richgilbank 
+I'm sorry for the delayed response. I just read the notification today.
+
+Thanks
+",populationtwo,arthurvr
+289,2015-04-18 04:11:08,"@mathieuhays Thanks.
+",appleboy,mathieuhays
+284,2015-06-02 16:28:45,"@darcyclarke @arthurvr Sorry for my late reply. Sure, I will break up these questions and resolve the conflicts.
+",MaximKhlobystov,arthurvr
+284,2015-07-28 02:31:35,"@darcyclarke Done.
+",MaximKhlobystov,darcyclarke
+282,2015-04-28 16:02:19,"LGTM. Thanks for this @jacopotarantino!
+",richgilbank,jacopotarantino
+281,2015-04-07 18:01:17,"@darcyclarke Good point. But I would add, the question what is the purpose of it. Why this is important and what are the benefits of it.
+",marcobiedermann,darcyclarke
+280,2015-04-07 17:57:07,"@darcyclarke Maybe you could come up with a better question. Sorry a am not a native speaker.
+I mean, how to load in content? Use an iframe for this? Load it via ajax? What are the differences? The are the pros and cons of each technique. When to use what? Which one is better for SEO?
+Something like that.
+",marcobiedermann,darcyclarke
+276,2015-03-20 00:41:18,"Thanks @tjwudi! 
+
+I'm not entirely sure what the best place is for a question like this, since it encompasses numerous concepts - HTTP chunking could fit into the network section, client-side rendering of XHR-fetched data could fall under JS, and we probably have enough questions already to break out into a new performance-oriented section. 
+
+Thoughts @darcyclarke @arthurvr?
+",richgilbank,tjwudi
+273,2015-03-07 18:27:26,"你好 @appleboy 先问问, 没有冒犯之意, 你应该能认识中文吧? ( hi, can you read chinese? if not, skip this comment )
+@hawx1993 收集整理前端面试题列, 我认为其中有些条目, 如 iframe 使用场景优劣性, js 深度拷贝等, 可适合 PR. 你能帮忙做一下吗? 或是由 @hawx1993 来做?
+",penVC,appleboy
+271,2015-03-14 20:47:56,"Great, thanks @mmhan! 
+And thanks @arthurvr for the ping :smile_cat: 
+",richgilbank,mmhan
+271,2015-03-14 20:47:56,"Great, thanks @mmhan! 
+And thanks @arthurvr for the ping :smile_cat: 
+",richgilbank,arthurvr
+271,2015-03-14 20:49:23,"> Great, thanks @mmhan! 
+
+Well then why did you closed this PR?
+",arthurvr,mmhan
+270,2015-03-19 01:35:53,"@phanan I _do_ like the idea of leaving it a bit more open-ended. Mind updating the PR to your latter suggestion? Thanks! 
+
+> What are HTTP actions? List all HTTP actions that you know, and explain them.
+",richgilbank,phanan
+269,2015-02-26 01:27:29,"@phanan Good points. Translations are tricky right now as they've all been done kind of piecemeal without much thought or organization. It would be good to have a more standardized way of contributing translations going forward as well as creating a build process for generating the markdown file along with any kind of website.
+
+My initial thoughts are to have all the questions moved into a JSON data store and generate both a simple, single-page, website and the markdown file from that. 
+",darcyclarke,phanan
+269,2015-03-19 21:45:46,"> It's not well known but we do have a Github Page that is just a nicer looking version of the markdown file at http://h5bp.github.io/Front-end-Developer-Interview-Questions/. 
+
+@darcyclarke Added the site to the project's description:
+
+![](https://cloud.githubusercontent.com/assets/1223565/6741604/99e98ab0-ce91-11e4-9762-1820c0d40810.png)
+",alrra,darcyclarke
+265,2015-02-25 15:12:02,"@phanan Here's my original blog post from _February 9th, 2012_ http://darcyclarke.me/development/front-end-job-interview-questions/ The questions looked a lot different back then...
+
+And yea, that question originates from this document it seems... so you can put a date/timestamp on it going back to _at least_ February 9th, 2012.
+",darcyclarke,phanan
+257,2015-02-13 03:49:12,"Agree @richgilbank :+1: 
+",appleboy,richgilbank
+257,2015-02-25 16:27:52,"@TheDerek I'm not sure what you're referring to but your feedback sounds a bit off-topic (unless someone has removed the comment you were replying to).
+
+---
+
+@matachines We won't be including any library-specific content in the future (ie. jQuery, Angular, Polymer, Ember, Backbone, Underscore, Node, Express etc.). Native implementations and general concepts, patterns and architecture questions are different. 
+
+---
+
+@phanan my hope is that we'll always be able to maintain a single file by improving organization/navigation as we grow bigger.
+
+---
+
+@richgilbank I agree. With _30+_ questions, that section does seem a bit `.length`y :wink: Although, the **CSS** section isn't too far behind, so we may need to consider it as well (or _very_ soon). 
+
+**Initial Feedback:**
+The terms `language`, `usage` and `implementation` don't sound succinct enough to me. `Usage` and `implementation`, specifically, sound like the same topic/too similar. That said, I may need to see the division, as you have it in mind, to appreciate the different correlations and what will go where. It may make sense to start a Pull Request now with the changes you think work and we can discuss the verbage and categorization more there.
+
+**Alternative Suggestion:**
+I had once thought of splitting up all the sections into context-specific sub-categories like: `What`, `Where`, `When`, `Why`, `How` and `Explain`. Most questions fit nicely into these categories already and this approach would help guide phrasing for future additions (ie. someone would know exactly `what` goes `where`). It definitely has the potential to add a lot of sub-categories and spreading out content but it's just a thought. 
+
+I'm definitely open to any other suggestions in terms of sub-categorization. A simple reorg, grouping similar questions/phrasing, might also help with discovery.
+",darcyclarke,richgilbank
+257,2015-02-25 16:27:52,"@TheDerek I'm not sure what you're referring to but your feedback sounds a bit off-topic (unless someone has removed the comment you were replying to).
+
+---
+
+@matachines We won't be including any library-specific content in the future (ie. jQuery, Angular, Polymer, Ember, Backbone, Underscore, Node, Express etc.). Native implementations and general concepts, patterns and architecture questions are different. 
+
+---
+
+@phanan my hope is that we'll always be able to maintain a single file by improving organization/navigation as we grow bigger.
+
+---
+
+@richgilbank I agree. With _30+_ questions, that section does seem a bit `.length`y :wink: Although, the **CSS** section isn't too far behind, so we may need to consider it as well (or _very_ soon). 
+
+**Initial Feedback:**
+The terms `language`, `usage` and `implementation` don't sound succinct enough to me. `Usage` and `implementation`, specifically, sound like the same topic/too similar. That said, I may need to see the division, as you have it in mind, to appreciate the different correlations and what will go where. It may make sense to start a Pull Request now with the changes you think work and we can discuss the verbage and categorization more there.
+
+**Alternative Suggestion:**
+I had once thought of splitting up all the sections into context-specific sub-categories like: `What`, `Where`, `When`, `Why`, `How` and `Explain`. Most questions fit nicely into these categories already and this approach would help guide phrasing for future additions (ie. someone would know exactly `what` goes `where`). It definitely has the potential to add a lot of sub-categories and spreading out content but it's just a thought. 
+
+I'm definitely open to any other suggestions in terms of sub-categorization. A simple reorg, grouping similar questions/phrasing, might also help with discovery.
+",darcyclarke,phanan
+254,2015-02-05 14:23:27,"@marcobiedermann :+1: 
+",appleboy,marcobiedermann
+253,2015-02-05 12:42:06,"Thanks @marcobiedermann 
+",richgilbank,marcobiedermann
+249,2015-02-04 03:21:37,"I'm all for it, but would like to change `property hacks` into `selector hacks` or just `hacks` following @darcyclarke's suggestion.
+",phanan,darcyclarke
+244,2015-01-30 09:58:06,"@phanan was correct. The original phrasing that referenced normalize/resets was attributed to an answer.
+",darcyclarke,phanan
+242,2015-01-31 05:09:43,"+1 for removing jQuery question. The same reason with @phanan 
+",appleboy,phanan
+242,2015-02-04 16:24:21,"Shouldn't we close this question now that jQuery has been removed? Calling for @darcyclarke and @appleboy.
+",phanan,darcyclarke
+242,2015-02-04 16:24:21,"Shouldn't we close this question now that jQuery has been removed? Calling for @darcyclarke and @appleboy.
+",phanan,appleboy
+242,2015-02-17 23:06:44,"Apologize for the delay, I admit I'm playing a bit of `catch` up on this discussion. I'm happy to see we `all` agreed to `reject` library-specific API implementations. I `promise` we'll be better off in the long run for doing that. I'm also `always` glad to see that we're (as a community) not in a `race` to add more questions just for the sake of it; Vetting ideas/topics first and `then` formulating questions around those is the ideal workflow. 
+
+That said, to `resolve` this `pending` issue I'm in favour of `settling` on @richgilbank's proposal. It `fullfills` the primary criteria of an overarching question on _Promises_. 
+
+If no one else has suggestions or editions to that `then` someone should make a PR with Rich's suggestion.
+",darcyclarke,richgilbank
+242,2015-02-17 23:11:07,"@darcyclarke Awful. Just awful. :stuck_out_tongue_closed_eyes: 
+PR added.
+",richgilbank,darcyclarke
+242,2015-02-19 03:43:27,"Chit-chat (I know the issue is closed): I was reading @darcyclarke's comment from Gmail and asking myself ""What the heck with these monospace stuff?"" And then I was like ""Whoa... Just... Whoa...""
+",phanan,darcyclarke
+242,2015-02-19 04:33:20,"How can I stop getting emails from all of u
+
+On February 18, 2015, at 7:44 PM, Phan An notifications@github.com wrote:
+
+Chit-chat (I know the issue is closed): I was reading @darcyclarke's comment from Gmail and asking myself ""What the heck with these monospace stuff?"" And then I was like ""Whoa... Just... Whoa...""
+
+—
+Reply to this email directly or view it on GitHub.￼
+",masterE,darcyclarke
+241,2015-01-29 09:28:03,"@phanan Good question. Waiting for @richgilbank @darcyclarke opinion.
+",appleboy,phanan
+241,2015-01-29 16:21:35,"@richgilbank While I had `DOMContentLoaded` in mind for this question too, my only concern is it would be too open and easy -- `DOMContentLoaded` is rather self-explanatory. 
+
+What I like about this question, too, is it's more of a tricky one. For example, one could change it into _What is the difference between `window.load` and `window.ready`?_ and see if the interviewee sees the trap there ;)
+",phanan,richgilbank
+241,2015-01-29 17:52:58,"Works for me. Thanks @phanan
+",richgilbank,phanan
+240,2015-01-29 09:34:09,"@richgilbank agree.
+",appleboy,richgilbank
+239,2015-01-29 01:53:14,"@richgilbank :+1: 
+",appleboy,richgilbank
+233,2015-01-23 16:44:20,"@septyaman thanks.
+",appleboy,septyaman
+233,2015-01-23 18:25:43,"Amazing, thanks for this @septyaman!
+",richgilbank,septyaman
+228,2015-01-21 01:58:04,"@kanet77 Thanks.
+",appleboy,kanet77
+219,2015-01-12 15:56:19,"@andreisebastianc Thanks.
+",appleboy,andreisebastianc
+218,2015-01-10 14:22:36,"@mttrs Thanks
+",appleboy,mttrs
+216,2014-12-30 04:59:21,"@yograterol Thanks.
+",appleboy,yograterol
+215,2015-01-07 03:45:02,"Hi @darcyclarke, 
+Thank you! After I read over your project a few times, I began to think of it as exactly the way you described.  It's a really useful resource. I appreciate your follow up.
+",Techfolio,darcyclarke
+214,2014-12-28 15:38:14,"@marcker Nice work. 
+",appleboy,marcker
+212,2014-12-26 13:13:37,"@tom76kimo :+1: 
+",appleboy,tom76kimo
+209,2015-01-06 13:12:32,"@isdampe Thanks.
+",appleboy,isdampe
+208,2015-01-07 00:34:29,"@darcyclarke Yes, if it seems like a worthy question.
+
+@tarzak also for SEO
+",amerikan,darcyclarke
+207,2014-12-24 03:08:18,"@ryanmjacobs Thanks.
+",appleboy,ryanmjacobs
+206,2014-12-29 11:13:49,"+1 to the answer of @appleboy boy. It's what I gave, but more readable.
+",arthurvr,appleboy
+206,2014-12-29 21:36:20,"@arthurvr I believe you're going too deep. `typeof b === 'undefined'` seems to be enough here, question about plus operator seems to be separate issue in JS, this question might be used to trigger discussion.
+",cy6erskunk,arthurvr
+203,2014-12-23 16:36:29,"Indeed. I agree with @richgilbank on this. It's too project/IDE specific. Something like `Give some example files to include in your .gitignore?` maybe?
+",arthurvr,richgilbank
+203,2015-01-09 06:38:47,"Perhaps try rewording this to something more general about setting up a project as @arthurvr and @richgilbank have noted.
+",darcyclarke,richgilbank
+203,2015-01-09 06:38:47,"Perhaps try rewording this to something more general about setting up a project as @arthurvr and @richgilbank have noted.
+",darcyclarke,arthurvr
+197,2014-12-23 16:26:42,"Agree with @richgilbank, it's **front-end** interview questions.
+",arthurvr,richgilbank
+192,2014-12-23 01:37:50,"@crissdev Thanks.
+",appleboy,crissdev
+191,2014-12-22 11:11:31,"@pborreli Thanks.
+",appleboy,pborreli
+190,2014-12-19 01:53:06,"@ginna-baker Nice works. Thanks.
+",appleboy,ginna-baker
+189,2014-12-18 08:36:27,"@minamarkham Thanks :+1: 
+",appleboy,minamarkham
+188,2015-01-09 05:47:12,"Agree with @richgilbank. I think this is too similar a question.
+",darcyclarke,richgilbank
+187,2014-12-11 08:01:09,"@raphaelfabeni Thanks.
+",appleboy,raphaelfabeni
+185,2014-12-09 01:58:54,"@AurelioDeRosa Thanks.
+",appleboy,AurelioDeRosa
+182,2014-12-07 02:04:39,":+1: Thanks @AurelioDeRosa 
+",appleboy,AurelioDeRosa
+182,2014-12-07 02:06:20,"You're welcome @appleboy
+",AurelioDeRosa,appleboy
+176,2014-10-07 15:58:45,"Thanks for the PR @dz1984 
+And for the review @appleboy!
+",richgilbank,dz1984
+176,2014-10-07 15:58:45,"Thanks for the PR @dz1984 
+And for the review @appleboy!
+",richgilbank,appleboy
+175,2014-10-22 23:22:03,"Thanks @ptomasroos! 
+",richgilbank,ptomasroos
+174,2014-09-02 13:38:32,"Thanks @kubum!
+",richgilbank,kubum
+171,2014-08-19 20:03:40,"@rimager Thanks for the PR! Unfortunately though, I think this is pretty much covered with question 4 (`Talk about your preferred development environment. (OS, Editor, Browsers, Tools etc.)`). I'm not really a fan of `IDE` either, given some are simple text editors. 
+
+How would you feel about changing the existing question to something like `What is your preferred development environment (OS, Editor, Browsers, Tools etc.)?`? That would at least make that question match the format of the others.
+",richgilbank,rimager
+171,2014-08-20 15:35:49,"Thanks @rimager, no need for a new PR - I'm going to accept it from here to keep documentation of the discussion.
+",richgilbank,rimager
+170,2014-08-15 19:49:58,"@bdrinc Thanks for the PR!  it looks like this is a translation of https://github.com/darcyclarke/Front-end-Developer-Interview-Questions/pull/166, is that correct? If that's the case, would you be open to aligning the question more to the discussion in there?
+",richgilbank,bdrinc
+169,2014-08-15 16:22:23,"Thanks @mrecachinas!
+",richgilbank,mrecachinas
+165,2014-08-13 21:17:46,"Thanks @nestor783!
+",darcyclarke,nestor783
+165,2014-08-13 21:23:23,"@darcy @nestor783 my Spanish isn't great, but some of these look wrong.
+![](http://cl.ly/image/270i2Z3Z1J3C/Screen%20Shot%202014-08-13%20at%205.22.19%20PM.png)
+![](http://cl.ly/image/3F2R1O3N1j07/Screen%20Shot%202014-08-13%20at%205.22.52%20PM.png)
+",richgilbank,nestor783
+163,2014-08-13 18:09:01,"@redwanhh This seems pretty basic, unless there's something specific you're asking for. Can you clarify if that's the case?
+",richgilbank,redwanhh
+163,2014-08-14 01:16:18,"@redwanhh You may want to change the wording to just ""What is the difference between an ID and a Class?"". As @richgilbank said, it is pretty basic but also important to know.
+",darcyclarke,richgilbank
+163,2014-08-14 01:16:18,"@redwanhh You may want to change the wording to just ""What is the difference between an ID and a Class?"". As @richgilbank said, it is pretty basic but also important to know.
+",darcyclarke,redwanhh
+161,2014-08-14 02:08:47,"agree with @darcyclarke 
+",appleboy,darcyclarke
+157,2014-08-10 05:26:20,"Sorry @appleboy, just pushed some updates. Can you rebase this?
+",richgilbank,appleboy
+157,2014-08-10 06:23:52,"@richgilbank Done. Please review again.
+",appleboy,richgilbank
+153,2014-08-10 13:15:51,"@mattiasw Looks like this needs a rebase. We've also just pushed some changes, if you don't mind adding those in as well. Thanks :)
+",richgilbank,mattiasw
+148,2014-07-14 19:24:23,"Hey @NkS90! Thanks for the contribution. Unfortunately, I think this question already gets covered under the following: 
+
+> Do your best to describe the process from the time you type in a website's URL to it finishing loading on your screen.
+",darcyclarke,NkS90
+148,2014-07-15 12:54:29,"@darcyclarke My bad! I didn't notice. Thanks :)
+",NkS90,darcyclarke
+148,2014-07-15 15:46:40,"@darcyclarke Personally I think this question is too big, maybe It can be more specific. 
+",tjwudi,darcyclarke
+144,2014-05-30 14:24:30,"Wicked! Love this @bivald 
+",darcyclarke,bivald
+143,2014-05-30 14:24:57,"Less extreme #ftw. Thanks @wolever!
+",darcyclarke,wolever
+110,2014-01-16 15:59:21,"Unfortunately, I'm not fluent in Bulgarian. If you've got some time @NikolayIT, or anyone else, feel free to make a Pull Request with an _in progress_ or even complete translation. 
+",darcyclarke,NikolayIT
+82,2013-10-11 17:16:10,"Hey @demoive, yea. I'm trying to keep that section limited to the original people that started this document. Contributors going forward are recognized through merged branches (ie. commits). If you could remove yourself and keep the one line question removal, I can merge this in.
+",darcyclarke,demoive
+82,2013-10-11 17:22:29,"@darcyclarke, done.
+
+One follow-up question: when you say ""commits"" is not what I did with #68 and #79? (Just curious).
+",demoive,darcyclarke
+79,2013-10-11 16:48:57,"Thanks @darcyclarke! I submitted an additional PR (#82) just to add me as a contributor and remove a now duplicate question.
+",demoive,darcyclarke
+68,2013-07-24 02:38:24,"Appreciate the contributions @demoive! I left some comments, if you could check them out and make some changes that would be awesome.
+",darcyclarke,demoive
+68,2013-09-04 12:10:39,"Hey @darcyclarke, there are some followup questions to your comments for some of the lines above. Can you go through them so that I can make the final pull request with the final changes? Thanks!
+",demoive,darcyclarke
+53,2013-04-17 07:14:09,"@darcyclarke Fixed now. Sorry for that.
+",wibron,darcyclarke
+23,2012-10-02 01:55:16,"@hemanth were you thinking of something more involved then just gh-pages as @paulirish suggests? You mentioned something about selecting questions. 
+
+I can buy a domain sometime tomorrow after I've had a word with the crew (that shall not be named) about a good name. For now, I've set up the gh-page: http://darcyclarke.github.com/Front-end-Developer-Interview-Questions/
+",darcyclarke,paulirish
+23,2012-10-03 11:02:35,"@darcyclarke Well, count me in for anything :) 
+@paulirish LOL nice domain name! One more mothereffing sites! `wc -c` said `50` :+1:
+",hemanth,paulirish
+23,2012-10-03 11:02:35,"@darcyclarke Well, count me in for anything :) 
+@paulirish LOL nice domain name! One more mothereffing sites! `wc -c` said `50` :+1:
+",hemanth,darcyclarke
+11,2015-06-09 22:15:31,"@darcyclarke Cool, I'll remove it.
+",bengrunfeld,darcyclarke
+346,2016-02-24 20:21:51,"@jacopotarantino Thanks for the PR! 
+I'm a bit on the fence about it personally - we don't have any questions related to syntax errors currently, but at the same time I suspect this might be interpreted as a bit of a trick question in the context of an interview. Thoughts @darcyclarke @appleboy?
+",richgilbank,darcyclarke
+346,2016-02-24 20:21:51,"@jacopotarantino Thanks for the PR! 
+I'm a bit on the fence about it personally - we don't have any questions related to syntax errors currently, but at the same time I suspect this might be interpreted as a bit of a trick question in the context of an interview. Thoughts @darcyclarke @appleboy?
+",richgilbank,appleboy
+318,2015-08-15 12:20:48,"Just fixing typo.
+Issue raised here: https://github.com/h5bp/Front-end-Developer-Interview-Questions/pull/311#commitcomment-12723009
+
+cc: @rhonyabdullah / @appleboy 
+",dermatobia,appleboy
+311,2015-07-16 17:52:42,"That'll be too bad, because I think it is very beneficial to non-english readers out there. Yes, maybe it will eventually get outdated and all, but I think it's still better to have something than nothing at all. 
+
+Also, I think that's the nature of open source though, or maybe I'm just more forgiving precisely because it is really based on public contribution.
+
+Having said that, lemme cc @septyaman who initially contributed to this, and seems like he reads Indonesian. Perhaps he could give a quick glance through :smile: 
+",dermatobia,septyaman
+309,2015-07-16 12:27:04,"@arthurvr changed the same in the PR.
+",gauravmuk,arthurvr
+303,2015-05-27 17:38:10,"### h5bp/Front-end-Developer-Interview-Questions now has a Chat Room on Gitter
+
+@darcyclarke has just created a chat room. You can visit it here: [https://gitter.im/h5bp/Front-end-Developer-Interview-Questions](https://gitter.im/h5bp/Front-end-Developer-Interview-Questions?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&content=body_link).
+
+This pull-request adds this badge to your README.md:
+
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/h5bp/Front-end-Developer-Interview-Questions?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=body_badge)
+
+If my aim is a little off, please [let me know](https://github.com/gitterHQ/readme-badger/issues).
+
+Happy chatting.
+
+PS: [Click here](https://gitter.im/settings/badger/opt-out) if you would prefer not to receive automatic pull-requests from Gitter in future.
+",gitter-badger,darcyclarke
+284,2015-06-02 16:28:45,"@darcyclarke @arthurvr Sorry for my late reply. Sure, I will break up these questions and resolve the conflicts.
+",MaximKhlobystov,darcyclarke
+282,2015-04-27 15:58:31,"Accidentally closed. @darcyclarke @arthurvr looks good to merge?
+",jacopotarantino,darcyclarke
+282,2015-04-27 15:58:31,"Accidentally closed. @darcyclarke @arthurvr looks good to merge?
+",jacopotarantino,arthurvr
+277,2015-04-25 09:12:10,"@cch5ng Thanks for letting us know, it's outdated indeed. The team is working on a better system: https://github.com/h5bp/Front-end-Developer-Interview-Questions/issues/269.
+
+@darcyclarke If you have five minutes, can you update the branch for now?
+",arthurvr,darcyclarke
+276,2015-03-20 00:41:18,"Thanks @tjwudi! 
+
+I'm not entirely sure what the best place is for a question like this, since it encompasses numerous concepts - HTTP chunking could fit into the network section, client-side rendering of XHR-fetched data could fall under JS, and we probably have enough questions already to break out into a new performance-oriented section. 
+
+Thoughts @darcyclarke @arthurvr?
+",richgilbank,darcyclarke
+276,2015-03-20 00:41:18,"Thanks @tjwudi! 
+
+I'm not entirely sure what the best place is for a question like this, since it encompasses numerous concepts - HTTP chunking could fit into the network section, client-side rendering of XHR-fetched data could fall under JS, and we probably have enough questions already to break out into a new performance-oriented section. 
+
+Thoughts @darcyclarke @arthurvr?
+",richgilbank,arthurvr
+269,2015-02-25 17:21:57,"Last week, while being interviewed on [the changelog podcast](http://thechangelog.com/143/), I was asked _why this project doesn't have a proper website_. It's not well known but we do have a Github Page that is just a nicer looking version of the markdown file at http://h5bp.github.io/Front-end-Developer-Interview-Questions/. 
+
+I've also been asked countless times about what questions a _""Junior""_ or a _""Senior""_ Developer should know or be asked from this document. Terminology like this, of course, can be polarizing. Everyone's concept of a _Junior_ or _Senior_ Developer is different and every role has it's own specific challenges and knowledge requirements. Although those specific labels aren't helpful, I've begun to think that including **meta-data** and having the ability to **label** questions would be infinitely helpful for discoverability.
+
+Sub-categorization is already being talked about in @richgilbank's issue #257, although I think we need to think about this a bit more broadly. Currently, we're extremely limited in how we can format and showcase content based on using only a markdown file. That said, I think there's a serious need to broaden the horizons of this project and **build a proper website**. 
+
+The [HTML5 Please](http://html5please.com/) site is a good example of the kind of labelling/filtering we could add to questions to make search/discoverability much easier. But that's just the beginning. 
+
+Thoughts, feedback and suggestions are welcomed. 
+",darcyclarke,richgilbank
+265,2015-02-24 14:57:23,"The original question 
+
+> What are the limitations when serving XHTML pages?
+
+~~is believed to be taken from [here](http://www.skilledup.com/articles/html-html5-interview-questions-answers/) (along with several others)~~ (EDITED: I couldn't be more wrong, as corrected by @darcyclarke below). While there's nothing wrong with it, I believe it has the protential to extract more about a candidate skills and knowledge if he's asked to compare HTML and XHTML instead. 
+
+Just my $0.02. Would be happy if you guys can correct me.
+",phanan,darcyclarke
+264,2015-02-23 15:07:25,"Closes https://github.com/h5bp/Front-end-Developer-Interview-Questions/issues/263 
+cc @phanan 
+",richgilbank,phanan
+258,2015-02-13 17:43:11,"Howdy from The Changelog!
+
+Sorry for a last minute ask, but @darcyclarke any chance you'd be open to come on The Changelog today at 3pm CT via Skype to talk about this project?
+
+We had a last minute guest cancellation for today's show, and we were already linking this project up in [the next issue of Weekly](http://thechangelog.com/weekly/) that ships tomorrow -- so we thought, why not get them on the podcast!
+
+You might have heard of our show, but if not -- The Changelog is a podcast covering what's fresh and new in open source. Listen to the show here http://thechangelog.com/podcast/ or here http://5by5.tv/changelog
+
+Looking forward to talking to ya!
+
+Adam, EIC
+",adamstac,darcyclarke
+255,2015-02-05 12:58:51,"@appleboy mind confirming this is as-expected?
+",richgilbank,appleboy
+244,2015-01-30 04:17:32,"Hmm, we used to have a mention of this, looks like it was removed with https://github.com/h5bp/Front-end-Developer-Interview-Questions/commit/e9082f27e7252aacdfc8410b4301e32100d27bc1. @darcyclarke do you recall what the opposition was to this? 
+",richgilbank,darcyclarke
+241,2015-01-29 09:28:03,"@phanan Good question. Waiting for @richgilbank @darcyclarke opinion.
+",appleboy,richgilbank
+241,2015-01-29 09:28:03,"@phanan Good question. Waiting for @richgilbank @darcyclarke opinion.
+",appleboy,darcyclarke
+241,2015-01-29 15:57:08,"I'd actually be inclined to go the other direction with this (`addEventListener`) for the reasons @darcyclarke mentioned in https://github.com/h5bp/Front-end-Developer-Interview-Questions/issues/230. How would you feel about changing it to something along the lines of:
+_What is the difference between the window's `load` event and `DOMContentLoaded`?_
+",richgilbank,darcyclarke
+238,2015-01-29 00:53:58,"""As a potential employer I whant my coders to know how to quickly find out if a certain Browser/Version combination supports a certain web technique.""
+
+Rebase to https://github.com/h5bp/Front-end-Developer-Interview-Questions/pull/193
+cc: @doertedev @darcyclarke 
+",richgilbank,darcyclarke
+234,2015-01-25 01:59:14,"Thanks @appleboy :)
+",richgilbank,appleboy
+220,2015-01-23 18:39:03,"Thanks for the contribution, but I'm with @andycole on this one. @darcyclarke and I have discussed this a few times and the outcome has typically been that adding questions specific to  MV\* frameworks would rapidly grow beyond the scope of this project (which frameworks are worthwhile?). They also aren't fundamental skills, and different companies will have different tools and workflows, so having a solid understanding of the basics is the only thing we can really expect. 
+",richgilbank,darcyclarke
+184,2014-12-04 07:39:17,"cc @darcyclarke 
+",appleboy,darcyclarke
+179,2014-10-22 23:13:10,"@darcyclarke Any objections? 
+
+Closes https://github.com/darcyclarke/Front-end-Developer-Interview-Questions/issues/178
+cc: @ericnjanga @olipo186
+",richgilbank,darcyclarke
+157,2014-08-10 05:06:38,"cc @darcyclarke 
+",appleboy,darcyclarke
+156,2014-08-02 03:12:55,"cc @darcyclarke 
+",appleboy,darcyclarke
+156,2014-08-10 04:52:55,"@darcyclarke Thanks.
+",appleboy,darcyclarke
+79,2013-09-26 10:26:51,"Based on the feedback from @darcyclarke, these are the updates to my original suggestions in [pull request #68](https://github.com/darcyclarke/Front-end-Developer-Interview-Questions/pull/68) (which seems to have gone cold).
+",demoive,darcyclarke
+46,2013-03-22 21:06:58,"Oh man.. didn't see that PR. @schuer did a better job. Closing this issue. 
+",PascalPrecht,schuer
+23,2012-09-28 06:42:07,"Would it be useful to make a uber cool site out of these questions? 
+[We might select the best answer as well ;) ]
+
+@darcyclarke Do you have any plans of creating a website with these? If not I'm very eager to help! 
+",hemanth,darcyclarke

@@ -1,0 +1,95 @@
+issue_num,datetime,body,login,mention_login
+47,2016-08-23 15:02:46,"Hi @jwagner, I apologize, I did mean to file this on smartcrop-node and instead filed it here. Oops!
+",tolmasky,jwagner
+41,2016-06-28 09:42:53,"OH. Thank you @jwagner 
+",trannamit95,jwagner
+33,2016-02-21 11:11:39,"@jwagner To integrate face detection in smartcrop.js, you can refer to this js lib:https://trackingjs.com/ ,maybe it can help you
+",shinebay,jwagner
+33,2016-03-02 17:59:27,"Hey @shinebay tracking.js looks pretty cool. My current plan is to make smartcrop.js expandable and then create a face detection plugin. 
+",jwagner,shinebay
+33,2016-05-03 08:55:20,"@ajbogh it can already do that by setting minScale.
+",jwagner,ajbogh
+33,2016-05-03 13:55:07,"@jwagner thanks! I'll check it out.
+",ajbogh,jwagner
+33,2016-06-25 22:20:52,"@ajbogh I might change that image if I find something fitting with a permissive license. Most of my people photography is personal and constantly using [pictures of myself](https://29a.ch/2016/06/25/smartcrop-1) gets old too. :)
+
+In a way I even find it good to start with an example that displays the weakness of these face detection libraries. It seems that they have been trained on mugshots rather than actual photographs of people. :)
+",jwagner,ajbogh
+17,2015-11-10 21:18:04,"I agree with you @koenpunt I don't like this wrapping javascript libraries in gems either. But if there are people who like that, who am I to judge. ;)
+
+Added it to the README, thanks!
+",jwagner,koenpunt
+16,2015-10-20 17:28:12,"@IonicaBizau thanks for the fix. :)
+",jwagner,IonicaBizau
+16,2015-10-20 17:58:25,"@jwagner You're welcome! Nice project!
+",IonicaBizau,jwagner
+13,2015-10-20 17:27:22,"@lipis Thanks for the PR but I don't want to change the coding style for this project at the moment. I realize that my style/use of whitespace is a bit nonstandard and in some cases messy. But if I switch to another style I want to make an educated decision - but that's not a priority right now. 
+
+I hope you understand.
+",jwagner,lipis
+12,2015-10-17 00:03:33,"Hey @billymoon,
+
+This library does not crop images or find focal points it just returns possible crops. So it is about areas not points.
+
+I'm not really convinced that the focus point approach is a good idea but I didn't look at it in too much detail. If you want to try to combine smartcrop with jquery-focuspoint you could just feed the centroid of the best crop returned from smartcrop into focuspoint. Something like:
+
+
+
+I don't think this belongs into smartcrop itself, so I'm closing this issue. But if you have more questions feel free to ping me.
+",jwagner,billymoon
+10,2015-10-15 08:06:25,"Hey @harikt,
+
+Smartcrop.js does not detect faces, it detects human skin color. The cat is a bit too white for that.
+The other factors are the sharpness of the image regions and their saturation. The cat is quite low in these too. That's why it is 'not detected'/not always cropped nicely.
+
+Smartcrop.js is heuristic so it won't always work. This is one of these cases.
+
+Still, thanks for letting me know!
+",jwagner,harikt
+10,2015-10-15 12:02:27,"Thank you @jwagner for the fast reply.
+
+Thanks for the explanations also.
+",harikt,jwagner
+9,2015-10-16 13:52:07,"@jwagner does that explanation still hold even though I disabled `edgeDetect` and `saturationDetect` for that first image?
+",mynameisfiber,jwagner
+9,2015-10-16 16:23:36,"@mynameisfiber I'm not quite sure what you did there and how you disabled it and arrived at that turquoise debug output. My guess is you just commented the function calls out. The score buffer starts out as a copy of the color buffer so you ended up with the actual rgb values in the 'score buffer', and in this case yes, you have successfully biased the algorithm towards people of a brighter skin complexion. But this is simply because your change did not do what you intended.
+
+If I set the edge and saturation values to zero and set the edge weight to zero (normally the algorithm avoids putting interesting features like skin at the edges, which in case of the woman would be the neck) it crops out the woman.
+
+So yes I think it stills holds.
+",jwagner,mynameisfiber
+5,2014-09-29 22:07:42,"@diegocr Yeah, I wanted to return a promise, but I didn't want to include a particular promise library or force people to use one, so I went with a simple callback that the user can easily wrap in a promise if he desires to do so. Now with ES6 promises taking shape that could be an interesting API to support out of the box.
+
+There is an overhead which certainly can be a problem with workers. Just using the event loop to break the blocking sections apart in an optimized way does not have much of a performance impact at all in my experience.
+",jwagner,diegocr
+25,2015-11-29 17:24:39,"Hola! @sabinmarcu has created a [ZenHub](http://www.zenhub.io) account for the **jwagner** organization. ZenHub is the leading team collaboration and project management solution built for GitHub.
+
+---
+#### How do I use ZenHub?
+
+To get set up with ZenHub, all you have to do is **[download the browser extension](http://www.zenhub.io)** and log in with your GitHub account. Once you do, you’ll get access to ZenHub’s complete feature-set immediately.
+#### What can ZenHub do?
+
+ZenHub adds a series of enhancements directly inside the GitHub UI:
+- Real-time, customizable task boards for GitHub issues;
+- Burndown charts, estimates, and velocity tracking based on GitHub Milestones;
+- Personal to-do lists and task prioritization;
+- “+1” button for GitHub issues and comments;
+- Drag-and-drop file sharing;
+- Time-saving shortcuts like a quick repo switcher.
+### [Add ZenHub to GitHub](https://www.zenhub.io)
+
+_Still curious? See [more ZenHub features](http://www.zenhub.io/features) or read [user reviews](https://chrome.google.com/webstore/detail/zenhub-for-github/ogcgkffhplmphkaahpmffcafajaocjbd/reviews). This issue was written by your friendly ZenHub bot, posted by request from @sabinmarcu._
+
+![ZenHub Board](https://cloud.githubusercontent.com/assets/8771909/11153956/233ac4a8-89f1-11e5-94b1-1569d3f38b4d.png)
+",sabinmarcu,sabinmarcu
+16,2015-10-20 11:10:29,"@imi40 Hmm, what? :thought_balloon: 
+",IonicaBizau,imi40
+10,2015-10-15 05:19:55,"Hi @jwagner , 
+
+Good work. I was trying on the test bed an image and it seems the cat is not detected.
+
+Attaching image for reference. What I was trying was reducing the width and height also, the cat's face was not detected.
+
+![cat](https://cloud.githubusercontent.com/assets/120454/10505379/5ed2cdd6-732a-11e5-8b7a-c0150d4421a0.jpeg)
+",harikt,jwagner

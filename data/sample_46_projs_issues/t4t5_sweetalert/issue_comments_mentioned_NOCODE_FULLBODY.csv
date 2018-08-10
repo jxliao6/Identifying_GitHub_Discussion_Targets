@@ -1,0 +1,1449 @@
+issue_num,datetime,body,login,mention_login
+674,2017-03-10 16:34:33,"Hi @avatarr 
+
+I think you confuse https://github.com/t4t5/sweetalert and https://limonte.github.io/sweetalert2/
+
+If you get true instead of html parsed, you use sweetalert2 so you must setting like this : 
+
+",ajoah,avatarr
+674,2017-03-11 16:55:22,@ajoah Thank you for your help and I have solved,avatarr,ajoah
+673,2017-03-16 16:00:03,"Hi @linkerr! It seems like this repo is currently inactive, so I made [sweetalert2](https://github.com/limonte/sweetalert2). 
+
+The content in SweetAlert2 has `word-break: break-word` by default",limonte,linkerr
+656,2017-02-08 11:01:51,@jeffmath I switched to https://github.com/limonte/sweetalert2 to solve that,Zorgatone,jeffmath
+630,2017-01-23 01:41:54,"Hey @geodeveloper
+
+Do you have a callback function after the input swal?
+
+If so, I assume you have another swal as the success message, which has its own settings (none of which are inherited by its parent). You would have to redeclare the `showCancelbutton` property.",fallen-rve,geodeveloper
+630,2017-01-24 16:27:09,"Hi @fallen-rve,
+Yes I have a callback function. I've took the example of input from official sweetalert website and just added the default config on top. Take a look here --> https://jsfiddle.net/a836z9xv/ so you can see the bug.
+
+Thanks for your time.",geodeveloper,fallen-rve
+630,2017-01-29 00:54:40,"@geodeveloper gotcha!
+
+That is the expected behavior of `setDefaults`. If you set the `setDefaults` property, it'll apply to all of your SweetAlerts, regardless if it's the shorthand or longhand versions.
+
+From the documentation:
+> If you end up using a lot of the same settings when calling SweetAlert, you can use setDefaults at the start of your program to set them once and for all!
+
+Let me know if that clears it up.
+
+Thanks!",fallen-rve,geodeveloper
+612,2016-09-06 03:26:26,"@teddymail  cancelButtonColor这个参数并不存在，仅仅存在confirmButtonColor这个参数，你可以查看[中文版文档](http://www.mishengqiang.com/sweetalert/)，如果你非常想使用sweetalert，我建议你使用[sweetalert2](https://github.com/limonte/sweetalert2/)，sweetalert2是有cancelButtonColor这个参数的。
+",mishengqiang,teddymail
+609,2016-09-06 03:42:06,"@souzamarcos I suggest you use [sweetalert2](https://github.com/limonte/sweetalert2)
+",mishengqiang,souzamarcos
+609,2016-09-10 19:25:12,"Thanks @mishengqiang. I'll use
+",souzamarcos,mishengqiang
+587,2016-06-13 10:25:18,"Thanks @limonte, the fiddle doesn't seem to be working, but I can see now how it works :)
+",Creationsphere,limonte
+575,2016-04-21 18:42:41,"Thx a lot @limonte ... that's awesome!
+",rafaelcastrocouto,limonte
+575,2016-04-25 13:27:07,"@limonte thanks!
+",huglester,limonte
+574,2016-04-18 20:32:54,"@eterry1388 I somehow missed that's where all the action is now. :)
+",littlekid,eterry1388
+571,2016-04-26 06:29:01,"@diego-vieira Sorry, the project isn't dead. I just haven't had time to go through pull requests and issues lately.
+
+sweetalert2 was forked before v1.0, so the structure of the project is quite different. This doesn't necessarily mean that it's not a good alternative. If there's a feature in there that you need, you should of course use it.
+
+It kinda bugs med that it's called sweetalert2 though, since that makes it sound like it's a natural progression of this project, even though I'm planning a 2.0 release later this year...
+
+Anyways, free software, do what you like. Just wanted to say sorry for being unresponsive, and that I'm planning on becoming more active soon.
+
+If there are any good candidates to help med maintain the project, please let me know!
+",t4t5,diego-vieira
+571,2016-04-26 11:10:17,"hello @t4t5 thank you so much for getting back to us and my apologies for saying that. Open source is both a gift and a curse, that's why collaborators are here for.
+
+I know that sometimes we need to focus on something else and it's always a good choice to invite collaborators.
+
+Perhaps we could merge your repo with sweetalert2?
+
+Cheers
+",diego-vieira,t4t5
+570,2016-04-20 07:26:10,"@eterry1388 is this repo not active? 😕 
+",muratbsts,eterry1388
+570,2016-04-21 08:36:43,"@eterry1388 okay. I'll create pr at limonte/sweetalert2 as one commit. Thanks for notice.
+",muratbsts,eterry1388
+568,2016-05-04 08:00:19,"Hi @jacobsee! It seems like this repo is currently inactive, so I made [sweetalert2](https://github.com/limonte/sweetalert2). 
+
+In swal2 you can handle escape key and outside click like this:
+
+
+",limonte,jacobsee
+562,2016-04-01 07:47:07,"Okay. Thanks for clarifying @GGG-KILLER :+1: 
+",kevgathuku,GGG-KILLER
+543,2016-08-10 13:32:01,"@ekv88 I've tried this (also .sweet-overlay, as I want to disable the transparent black page overlay) in both jQuery (after stating the sweetalert) and in CSS, but it doesn't do anything at all.
+",paddotk,ekv88
+541,2016-05-01 19:55:45,"@limonte All good, but that's not related to this PR in any way.
+",StephanBijzitter,limonte
+539,2017-01-20 13:32:16,@NeXTs this issue was fixed a long time ago in https://github.com/limonte/sweetalert2,chekovsky,NeXTs
+539,2017-01-20 13:35:01,@chekovsky Yeah I saw but on my current big project sweetalert is used and it's not that easy to migrate in my case,NeXTs,chekovsky
+538,2016-04-21 14:00:11,"Hi, same error here with firefox only (Safari and Chrome do not seem to report the error)
+
+Did you fix it @MichaelJCole or do you still have the error ? 
+",YannDanthu,MichaelJCole
+530,2017-02-20 04:25:16,Thanks @t4t5 i understood your point and @lancedouglas1 thanks for your swal-form link ...,sunilsmith,t4t5
+530,2017-02-20 04:25:16,Thanks @t4t5 i understood your point and @lancedouglas1 thanks for your swal-form link ...,sunilsmith,lancedouglas1
+526,2016-02-28 15:05:16,"@Buom01 Thank you bro. I'll try this solution.
+",FelipeArruda,Buom01
+522,2016-02-22 13:37:19,"Great.
+That will help! :)
+Closing now!
+Thanks @funchiat and @lancedouglas1 
+",sagargulati,lancedouglas1
+522,2016-02-22 13:37:19,"Great.
+That will help! :)
+Closing now!
+Thanks @funchiat and @lancedouglas1 
+",sagargulati,funchiat
+521,2017-02-25 14:27:25,@unfomo1 Were you able to solve that problem?,goktugerce,unfomo1
+520,2017-02-20 04:36:39,@Jimmaki may i know how you did that with swal ?,sunilsmith,Jimmaki
+520,2017-02-20 11:17:55,"@sunilsmith 
+
+As you can see [here](https://jimmydance.com/dance-studios.html) I copy and paste the whole FOOTER section (html) in the TEXT field of SWAL.
+
+Example:
+swal({title: ""Your message has been sent!!""  , 
+text: ""<footer><a href=\""anylink.com\"" target=\""_blank\"" class=\""// I added a sprite image like spr3-wslogo\""></a></footer>"", 
+
+*Don't forget to escape special characters
+
+Let me know if it works",Jimmaki,sunilsmith
+499,2015-12-18 14:49:35,"@fiote Could you compress this and add it to the minified version?
+",ghost,fiote
+492,2016-05-03 16:43:32,"thanks @fracz
+sweetalert2 is awesome and looks it all fit my needs.
+thank you guys
+",senseluo,fracz
+485,2015-12-08 10:48:07,"@estivalet about 'If I add a delay in the execution it works as expected', would you like to tell me how to add the delay? I am encountering the problem these days, and I can not fix it. I am very glad to find that you have solution. Please kindly share it with me. Thank you!
+
+I have described my similar problem in protractor resp, https://github.com/angular/protractor/issues/2770
+",wubin1989,estivalet
+485,2015-12-23 16:12:59,"@sundling, you just saved me a real headache, thanks! :+1: 
+",jsrn,sundling
+479,2016-03-30 04:35:35,"+1
+@Groonya nice github placeholder image,
+way too smooth
+",rnjailamba,Groonya
+473,2016-06-22 10:18:52,"@rmosolgo Dude.. that UI is amazing. Would you mind showing me a demo ?! God damn, I love it.
+",EduardJS,rmosolgo
+472,2015-11-19 15:57:13,"@inctor, @Charlex I wrote up a guide on how to use the code addition I wrote to do this at #457. Because it adds on top of the existing sweetalert library, it doesn't require merging into the project/updating the library code. If you have thoughts to make it better let me know.
+",kentmw,inctor
+472,2015-11-19 22:26:33,"@kentmw Hero. I'll give it a go and see if I run into any pain.
+",charlex,kentmw
+469,2016-01-21 11:23:55,"@smythey21 when using it like this:
+
+
+
+the modal is still displayed outside the container.
+
+I'm more interested if you were successful to test it in an acceptance test?
+",ryrych,smythey21
+457,2015-11-19 08:28:45,"@kentmw What's the possibility of you making a new release with this fix in it, so it's possible to handle multiple Swal-popups after eachother?
+Prolly not as a PR, since they won't be merged anyways likely, but maybe a guide, on how to use your above code instead? Is it just copy/paste into the SWAL js file?
+",inctor,kentmw
+457,2015-11-19 14:45:18,"@inctor I'll write up a guide in the next 15 minutes or so and update the service to the one I'm currently using as to remove some of the original bugs.
+",kentmw,inctor
+457,2015-11-20 05:04:17,"@kentmw Thanks so much. Fixed my issue of needing to present one alert after another.
+",Tatsh,kentmw
+457,2016-01-27 21:10:06,"@QuakePhil do you mind posting the sequential swalService.swal invocations?
+",kentmw,QuakePhil
+457,2016-03-18 17:47:27,"@kentmw you are awesome man!! Thanks a lot!!
+
+Your wrapper saved my ass. A few notes. As @QuakePhil mentioned there is an issue if there are multiple alerts in the queue, each with nested responses for confirm/cancel.
+
+In order to deal with this I am closing the parent swal using the ID immediately after the child is created. And in order to pair this Parent (question) - Child(response) scenario, I have made a tiny modification in the wrapper to append all new swals at the beginning of the array/queue and not at the end.
+
+This works with single requests as well. So, consider the following scenario in order to show how the alerts are created:
+
+
+
+And here is how the alerts will be displayed to the user:
+
+
+
+If you have any questions let me know.
+
+Once again thanks a lot man, the wrapper did an awesome work.
+",koullislp,QuakePhil
+457,2016-03-18 17:47:27,"@kentmw you are awesome man!! Thanks a lot!!
+
+Your wrapper saved my ass. A few notes. As @QuakePhil mentioned there is an issue if there are multiple alerts in the queue, each with nested responses for confirm/cancel.
+
+In order to deal with this I am closing the parent swal using the ID immediately after the child is created. And in order to pair this Parent (question) - Child(response) scenario, I have made a tiny modification in the wrapper to append all new swals at the beginning of the array/queue and not at the end.
+
+This works with single requests as well. So, consider the following scenario in order to show how the alerts are created:
+
+
+
+And here is how the alerts will be displayed to the user:
+
+
+
+If you have any questions let me know.
+
+Once again thanks a lot man, the wrapper did an awesome work.
+",koullislp,kentmw
+457,2016-03-18 17:59:25,"@koullislp I'm glad it was useful :) Do you mind posting your modifications? I'll update my original post after taking a look at it.
+",kentmw,koullislp
+457,2016-03-18 18:21:44,"@kentmw 
+
+Only one word changed in your code:
+
+
+
+And the way I am calling it:
+
+
+",koullislp,kentmw
+456,2015-10-08 09:09:39,"@henryg0mez So if I understand things correctly, the problem is that your form gets submitted even though you haven't entered any input? 
+
+Is this really a problem with SweetAlert? Keep in mind that the only recommended way to handle user inputs through swal is by using `type: input`. Everything else with custom HTML should be considered a ""hack"".
+
+If your form submits even though it's empty, I can only guess that the problem lies within the  `myForm.valid()`-function.
+
+And when it comes to ""I am not sure that anything actually happens on submit. When submit is clicked, a php file is called through AJAX that should send an email"", well, you should be able to just log your stuff in the PHP console to check if it went through or not. Can't really help you anymore than this. :)
+",t4t5,henryg0mez
+456,2015-10-08 09:52:18,"@t4t5 - yes, the email did submit at first until I modified the code in an attempt to stop the send function if nothing was typed in the fields.
+
+Surely there has to be a way to stop SweetAlert from submitting the form and verify there are actually valid values entered in the fields? I would really like to get form validation working on Swal. Otherwise I am looking at using Wordpress' Contact Form 7 with pop-up as a work around.
+",henryg0mez,t4t5
+440,2015-10-20 09:47:28,"@t4t5 It's just a convention. Some of projects (eg. React, Redux) put source code (es6, es7) in `src`, compiled es5 in `lib`, umd and minified files in `dist`.
+",chentsulin,t4t5
+440,2015-10-20 10:00:17,"@chentsulin Oh I see. Seems like a good convention. Merging now.
+",t4t5,chentsulin
+440,2015-10-20 11:14:47,"@t4t5 why a `.npmignore` in the published module (1.1.1)?
+
+
+
+`lib` in `.npmignore` will break this module. Must remove it.
+",chentsulin,t4t5
+440,2015-10-20 17:25:43,"@chentsulin :+1:  @t4t5 
+",chibicode,chentsulin
+440,2015-10-20 17:25:43,"@chentsulin :+1:  @t4t5 
+",chibicode,t4t5
+440,2015-10-20 20:21:21,"+1 to what @chentsulin is saying. we're getting `Module not found: Error: Cannot resolve module 'sweetalert'`because package.json is pointing to `lib`, but `lib` is being ignored: http://cl.ly/image/2j1T0b2y461D
+",adamrneary,chentsulin
+440,2015-10-21 06:12:12,"My bad, there is still one more thing I forgot:
+
+https://github.com/t4t5/sweetalert/blob/master/dev/sweetalert.es6.js#L68
+
+@t4t5 Can we just add a `export default` here? This one works in CommonJS env (tested in webpack).
+",chentsulin,t4t5
+440,2015-10-21 09:23:09,"@chentsulin lol, really bumping those version numbers today. Everything working now? :)
+",t4t5,chentsulin
+440,2015-10-21 10:07:42,"@t4t5 It works great now. Your help was greatly appreciated !!!
+",chentsulin,t4t5
+440,2015-10-21 10:10:49,"@chentsulin Oh I did nothing, thank YOU good sir for helping out! :grinning: 
+",t4t5,chentsulin
+440,2015-10-21 19:44:22,"@t4t5 thank you!
+",chibicode,t4t5
+434,2015-11-19 02:59:15,"@gremz @t4t5  I had the same issue. I looked in the source to see if I customize but couldn't find a non hacky way to custom the plugin itself. So I settled for a hacky way in my own code :-) If you are using jquery something like this works fine.
+
+
+",hraynaud,gremz
+419,2015-08-05 10:49:02,"Hi @tidet! Are you sure it's not a problem with PHP? Have you tried echoing the same string straight into the HTML page?
+",t4t5,tidet
+419,2015-08-05 10:57:19,"Hey @t4t5 - yes at this part there's no PHP Output.. PHP is just down in the AJAX Call. I've tried it anyway, with PHP (without alert) it works, yes.
+",tidet,t4t5
+419,2015-08-05 10:59:23,"@tidet Oh sorry, I misread the code. :)
+
+Alright then, have you added the UTF8 charset to your head?
+
+
+",t4t5,tidet
+419,2015-08-05 11:04:04,"@tidet Hmm, weird. I honestly don't know what it could be then. I tried creating a JSFiddle with the same special characters and it seems to work fine: http://jsfiddle.net/t4t5/51mazdub/1/
+",t4t5,tidet
+415,2016-02-26 11:50:33,"@Wixely Sorry, i wanted to tell you about click on cancel button.
+",artyomLisovskij,Wixely
+415,2016-02-26 11:52:41,"@Wixely click cancel button and function which goanna exec only on success will exec.
+",artyomLisovskij,Wixely
+409,2015-07-29 16:45:26,"@t4t5 Agreed. If you want to be generous, this is a stop-gap (i.e. it's a hack). I was trying to think of more elegant way to do this, but everything more structured felt less flexible.
+
+If I can help, let me know.
+",samhavens,t4t5
+409,2015-07-29 18:02:36,"@samhavens What do you think of being able to add your SweetAlert markup directly in the DOM? Like this:
+
+
+
+This would obviously be hidden by default thanks to the SweetAlert CSS. Then you can open it by passing a jQuery element or a DOM node to the swal-function:
+
+
+
+The idea is that as long as you follow some conventions when writing your HTML, you get the SweetAlert-functionality for free.
+
+I think it would solve a lot of problems that people have with ""over-customizing"", like adding a third button, implementing a form... etc.
+",t4t5,samhavens
+409,2015-07-29 18:09:17,"@t4t5 I think that's a good solution. Currently isn't there only one sweet
+alert object, and it gets modified every time it pops up? Will having
+multiples around throw anything off?
+
+On Wed, Jul 29, 2015 at 11:02 AM, Tristan Edwards notifications@github.com
+wrote:
+
+> @samhavens https://github.com/samhavens What do you think of being able
+> to add your sweetalert markup directly in the DOM? Like this:
+> 
+> <div class=""sweet-alert"" id=""delete-modal"">
+>   <h2>Deleted!</h2>
+>   <p>Your file was deleted!</p>
+>   <button class=""confirm"">OK</button>
+> </div>
+> 
+> And then open if by passing a jQuery element or a DOM node to the
+> swal-function:
+> 
+> swal($('#delete-modal'));
+> 
+> I think it would solve a lot of problems that people have with
+> ""over-customizing"", like adding a third button, implementing a form... etc.
+> 
+> —
+> Reply to this email directly or view it on GitHub
+> https://github.com/t4t5/sweetalert/pull/409#issuecomment-126042433.
+",samhavens,samhavens
+409,2015-07-29 18:09:17,"@t4t5 I think that's a good solution. Currently isn't there only one sweet
+alert object, and it gets modified every time it pops up? Will having
+multiples around throw anything off?
+
+On Wed, Jul 29, 2015 at 11:02 AM, Tristan Edwards notifications@github.com
+wrote:
+
+> @samhavens https://github.com/samhavens What do you think of being able
+> to add your sweetalert markup directly in the DOM? Like this:
+> 
+> <div class=""sweet-alert"" id=""delete-modal"">
+>   <h2>Deleted!</h2>
+>   <p>Your file was deleted!</p>
+>   <button class=""confirm"">OK</button>
+> </div>
+> 
+> And then open if by passing a jQuery element or a DOM node to the
+> swal-function:
+> 
+> swal($('#delete-modal'));
+> 
+> I think it would solve a lot of problems that people have with
+> ""over-customizing"", like adding a third button, implementing a form... etc.
+> 
+> —
+> Reply to this email directly or view it on GitHub
+> https://github.com/t4t5/sweetalert/pull/409#issuecomment-126042433.
+",samhavens,t4t5
+409,2015-07-29 18:11:05,"@samhavens Yup, that's the problem we need to solve. ;) Maybe add an `original`-class to the current sweetAlert or something to distinguish it from the rest.
+",t4t5,samhavens
+409,2015-07-29 18:19:38,"@t4t5 Maybe this: if you pass in a string to swal(), it's behavior is
+unchanged. If you want swal() to function as a modal, you set a new
+parameter, content, to the selector of the div you want to use in the swal
+object? I think there could still be only one then.
+
+On Wed, Jul 29, 2015 at 11:11 AM, Tristan Edwards notifications@github.com
+wrote:
+
+> @samhavens https://github.com/samhavens Yup, that's the problem we need
+> to solve. ;) Maybe add an original-class to the current sweetAlert or
+> something to distinguish it from the rest.
+> 
+> —
+> Reply to this email directly or view it on GitHub
+> https://github.com/t4t5/sweetalert/pull/409#issuecomment-126045471.
+",samhavens,samhavens
+409,2015-07-29 18:19:38,"@t4t5 Maybe this: if you pass in a string to swal(), it's behavior is
+unchanged. If you want swal() to function as a modal, you set a new
+parameter, content, to the selector of the div you want to use in the swal
+object? I think there could still be only one then.
+
+On Wed, Jul 29, 2015 at 11:11 AM, Tristan Edwards notifications@github.com
+wrote:
+
+> @samhavens https://github.com/samhavens Yup, that's the problem we need
+> to solve. ;) Maybe add an original-class to the current sweetAlert or
+> something to distinguish it from the rest.
+> 
+> —
+> Reply to this email directly or view it on GitHub
+> https://github.com/t4t5/sweetalert/pull/409#issuecomment-126045471.
+",samhavens,t4t5
+409,2015-08-15 10:33:17,"@t4t5 I think that having the markup and the parameters (via the data-\* attributes) of the modal in the html would be really cool.
+Then to open an alert you would have to pass the alert id to the `swal()` function.
+
+Example:
+
+
+
+
+
+Would add a cancel button then show the modal by adding it the class ""current-sweetalert-modal"" (to avoid collision with others current classes that the user could have in it's `CSS`.
+",SkyzohKey,t4t5
+409,2015-08-27 07:47:48,"We could recommend/use a [client-side templating engine](http://garann.github.io/template-chooser/) to structure it all. I personally favour React.js because it supports type validation out of the box when you pass in properties to a component, but of course anything else could work. 
+
+I think the only problem with this solution might be that this would require a significant rewrite. Specifically, `sweetalert-dev.js` has a `switch` statement with an object case that simply updates the default params, rather than let you define your own. Like @t4t5 mentions, there is only one SweetAlert box that keeps getting updated each time. We need a way to 'subclass' objects - to have a base `SweetAlert` object that simply checks the `type` argument supplied, and then calls the template involved. 
+
+One way to do this - and the one I think would be most painless, given how extensive SweetAlert is - would be to have a function called `registerTemplate()`, which registers a template in a store accessible to `swal`. `swal` would then check the `type` argument on being invoked against an internal list -`success`,`input`,`error`,`warning` - and, if not found, default to passing all other arguments to the template and somehow render it. I think `_sweetAlertInitialize$getModal$getOverlay$getInput$setFocusStyle$openModal$resetInput$fixVerticalPosition` might be able to handle the rendering, although I'd have to take a closer look at it, I'm not sure.
+",AkshatM,t4t5
+398,2017-01-13 07:30:52,"@maeishoj same is happening here, did you find out?",lucascaton,maeishoj
+391,2015-09-18 19:31:25,"@fxghqc removing event handlers in the callback works for me. Can this be included in the main code to prevent this bug?
+",ecwyne,fxghqc
+391,2017-01-03 20:08:40,"That will be really great @EduardJS Thank you for that.
+
+For now I am using the solution from @JustinWinthers in another thread:
+
+
+REF: https://github.com/t4t5/sweetalert/issues/127",Mr-Anonymous,EduardJS
+391,2017-02-24 19:30:23,"@Mr-Anonymous 
+update
+
+> var _swalclose=window.swal.close;
+	var _swal = window.swal;
+	window.swal = function(){
+		var previousWindowKeyDown = window.onkeydown;
+		_swal.apply(this, Array.prototype.slice.call(arguments, 0));
+		window.onkeydown = previousWindowKeyDown;
+	};
+	window.swal.close=function(){
+		_swalclose.apply(this);
+	};",edwin1217,Mr-Anonymous
+391,2017-02-25 15:45:31,"@elasticsteve If you pay attention to the other threads on this repo you will notice this one is not maintained anymore.
+
+There is another repo called [SweetAlert2](https://limonte.github.io/sweetalert2/), which you should really port your apps towards.
+
+If you still want to use this version though, the only solution is this one. I forgot to make a PR.. didn't have enough time. @edwin1217's solution is the one you should go with.",EduardJS,elasticsteve
+391,2017-02-25 15:45:31,"@elasticsteve If you pay attention to the other threads on this repo you will notice this one is not maintained anymore.
+
+There is another repo called [SweetAlert2](https://limonte.github.io/sweetalert2/), which you should really port your apps towards.
+
+If you still want to use this version though, the only solution is this one. I forgot to make a PR.. didn't have enough time. @edwin1217's solution is the one you should go with.",EduardJS,edwin1217
+391,2017-02-25 15:51:41,@edwin1217's solution is nearly the same i have posted in thread #127 a while ago.,kosst,edwin1217
+391,2017-02-26 02:14:38,"@kosst Yes, your solution is much better, because with the one from @edwin1217 the default Enter key action for OK and error messages (input text modals) wouldn't work.
+
+Here again what's working for me best:
+
+",elasticsteve,edwin1217
+391,2017-02-26 02:14:38,"@kosst Yes, your solution is much better, because with the one from @edwin1217 the default Enter key action for OK and error messages (input text modals) wouldn't work.
+
+Here again what's working for me best:
+
+",elasticsteve,kosst
+390,2015-10-30 01:49:49,"@firsara I agree if we are talking about accepting the confirmation.
+It should work very much the same as an alert, the focus is on the accepting element, it should do the same in the modal.
+",jaymiejones86,firsara
+368,2016-02-06 06:13:50,"@moshfeu how can i use the new ability?
+",ferchoslim,moshfeu
+368,2016-02-07 10:20:26,"@moshfeu You just need to run the ""gulp"" command. For the official repo, I'm a bit reluctant to just adding more and more features as object params, so I'm going to look into using some kind of templating system to let people customise their alerts more. 
+",t4t5,moshfeu
+368,2016-09-12 03:27:50,"@moshfeu When there is more than one alert in a page,some problem happen. https://plnkr.co/edit/xXefAOo4uPQfX8iGL4w6?p=preview
+",thyhates,moshfeu
+368,2016-10-10 08:01:29,"@thyhates  What problems? Can you explain?
+",moshfeu,thyhates
+368,2016-10-10 09:04:38,"@moshfeu In the Plunker, first click ""show 1"",then click ""show 2"", it show the same btns as ""show 1"".
+Then refresh page,if you first click ""show 2"",then click ""show 1"",it show the same btns as ""show 2"".
+",thyhates,moshfeu
+359,2015-06-17 05:50:08,"@injaon Nope :( i was hopping that the this bug should be fixed when i post this...
+",usamamashkoor,injaon
+352,2015-06-26 09:27:53,"@moazam1 For your specific case, you need to do a callback as an additional parameter after the options object:
+
+
+
+It doesn't need to do anything, but using a function like:
+
+
+
+Allows you to respond manually and do something else.
+
+Makes sense, as if you don't have a handler, how are you going to close the alert otherwise.
+",twss,moazam1
+350,2015-05-25 17:35:16,"@t4t5 ?
+",tushariscoolster,t4t5
+339,2015-04-28 11:31:04,"As @zauni says, you can use the callback method to control the flow of your app. Event though it might look a little ugly, there's sadly no way around this as far as I know. Closing.
+",t4t5,zauni
+334,2015-06-18 02:42:08,"Without @TomTasche pull request. I noticed it'll work if you set on `closeOnConfirm` and `closeOnCancel` to false.
+",thejae,TomTasche
+331,2015-07-28 01:58:07,"@PommeVerte ,
+
+The line of CSS you mention is in there, however, if you wrap your input in form tags, and have styling like `form input {display:block}` that should take precedence.
+
+There is another problem putting form fields in using `html: true`, because everything in `text` gets wrapped in `<p>...</p>`, and it is invalid to have form elements inside `p` tags. I fixed this locally by switching the `p` tags for divs. I will fork and submit a pull request; you are welcome to checkout my fork.
+",samhavens,PommeVerte
+329,2015-08-26 08:29:56,"Thank you @bryce-gibson, it works perfectly!
+
+Do you think you can bring your fixed to @t4t5 to merge in its branch 0.5 to have an ""official"" 0.5.1 available on npm ?
+",GreatWizard,bryce-gibson
+319,2015-04-01 10:59:55,"@t4t5 - Can the second swal function confirm have a callback function? doesn't seem to work to me.
+",mp3il,t4t5
+319,2016-06-10 14:04:32,"@t4t5 Hey thanks for SweetAlert :) I found the solution for this issue and sharing it below.
+I know its old but i found the solution so i hope it helps anyone.
+
+@mp3il @azlannohara @masteradhoc The problem is the shorthand in the closure. You can do the required(Reload after clicking on ""Okay"" that appears after successful deletion) by using the below code: 
+
+
+",introwit,masteradhoc
+319,2016-06-10 14:04:32,"@t4t5 Hey thanks for SweetAlert :) I found the solution for this issue and sharing it below.
+I know its old but i found the solution so i hope it helps anyone.
+
+@mp3il @azlannohara @masteradhoc The problem is the shorthand in the closure. You can do the required(Reload after clicking on ""Okay"" that appears after successful deletion) by using the below code: 
+
+
+",introwit,t4t5
+319,2016-06-10 14:04:32,"@t4t5 Hey thanks for SweetAlert :) I found the solution for this issue and sharing it below.
+I know its old but i found the solution so i hope it helps anyone.
+
+@mp3il @azlannohara @masteradhoc The problem is the shorthand in the closure. You can do the required(Reload after clicking on ""Okay"" that appears after successful deletion) by using the below code: 
+
+
+",introwit,azlannohara
+319,2016-06-10 14:04:32,"@t4t5 Hey thanks for SweetAlert :) I found the solution for this issue and sharing it below.
+I know its old but i found the solution so i hope it helps anyone.
+
+@mp3il @azlannohara @masteradhoc The problem is the shorthand in the closure. You can do the required(Reload after clicking on ""Okay"" that appears after successful deletion) by using the below code: 
+
+
+",introwit,mp3il
+314,2015-03-19 16:09:31,"As @parterburn said, just use `inputType` and you should be good to go! Also, feel free to check out the [SweetAlert tutorial](https://www.ludu.co/lesson/how-to-use-sweetalert) if you're unsure how to use the input features.
+",t4t5,parterburn
+312,2015-05-30 01:49:47,"@cosio55 I replaced `myFunction()` with console.log('done') and it works correctly. Maybe the problem is with the `myFunction()`. Try to use console.log and see if it works.
+",xming13,cosio55
+312,2015-06-01 18:11:26,"I am using it on Meteor using this great package https://github.com/kevohagan/meteor-sweetalert so after further debugging I think the problem is on the version the package is currently using, so I will look for a way to update the version of the package, thanks @xming13 !
+",cosio55,xming13
+302,2015-04-29 10:56:48,"I'm agree with @chriscct7, a loading like the android fork will be just awesome!
+",GeekPress,chriscct7
+299,2015-03-19 17:00:56,"@mcblum Yeah, clicking ""Cancel"" and clicking outside now behaves exactly the same (as it should be really). I guess we should add an option to make them separate though since it might be useful as you pointed out!
+",t4t5,mcblum
+299,2015-09-18 16:36:49,"This would be a great feature as I am also hoping to be able to click outside the alert and have it dismiss without running the the cancel function. Any updates? @t4t5 
+",Codemax999,t4t5
+289,2015-03-19 15:29:39,"Fixed in v0.5.0! Hope you replace your ugly prompt modals with SweetAlerts now @bulkan ;)
+",t4t5,bulkan
+285,2015-04-14 19:44:31,"@andrey-bahrachev That doesn't answer my problem though since I am not calling swal in in the callback so i would disagree my issue is still open.
+",DmitrySumaroka,andrey-bahrachev
+285,2015-07-08 20:48:22,"@includeleec you saved my bacon, thanks
+",smartsdesign,includeleec
+285,2015-09-22 09:06:28,"@DmitrySumaroka I use a dirty trick that works:
+
+
+
+Hope it helps! ;)
+",thomasphansen,DmitrySumaroka
+273,2015-02-26 11:17:03,"The solution of @wizou works for me.
+",sabatesduran,wizou
+273,2015-03-23 23:54:21,"Had the same issue, only broken in ie8 - ie9 and 10 worked fine.
+:+1: for the solution of @wizou, worked for me.
+",mar3les,wizou
+254,2015-01-19 09:33:48,"@dock21 tested it with firefox 35, seems to work fine. Can you test with the latest release if you still have this issue?
+",adi-ads,dock21
+254,2015-01-21 13:19:33,"@dock21 I think you just forgot to put the option `timer`, didn't you? Here's an example:
+
+
+",dhyegofernando,dock21
+254,2015-02-05 13:34:06,"@dhyegofernando 
+What he is saying is that it is closing by itself after 2 seconds, and he doesn't want it to.
+",alexbowers-tecmark,dhyegofernando
+254,2015-02-05 16:08:58,"My bad. I saw a little quickly.
+
+---
+
+Just like @adi-ads tested in the Firefox 35 so did I and I haven't found any issue. It works fine.
+@dock21 could you reproduce it in a JSFiddle project?
+",dhyegofernando,adi-ads
+254,2015-02-05 16:08:58,"My bad. I saw a little quickly.
+
+---
+
+Just like @adi-ads tested in the Firefox 35 so did I and I haven't found any issue. It works fine.
+@dock21 could you reproduce it in a JSFiddle project?
+",dhyegofernando,dock21
+254,2015-03-19 17:27:03,"This can be closed as a wontfix. This issue was that @dock21 thought swal() was a blocking JS command like alert() is.
+",parterburn,dock21
+253,2015-03-30 01:49:47,"@maddy2308  - you have too many clicks going on. It does work.
+Check out this fiddle: https://jsfiddle.net/g8j1acv4/
+
+Only thing I changed was took out your first document.click and changed it to document.ready.
+",joenorton,maddy2308
+253,2015-04-01 11:23:35,"As @joenorton points out, this is what `closeOnConfirm: false` is for. I do agree that it is a little unintuitive though, so if anyone has a solution to the problem, I'd be glad to add it!
+
+@maddy2308, the problem with your fiddle is that `$('button')` is too ambiguous, so the swal's buttons are also invoked. If you change it too `$('body > button')` it should work.
+",t4t5,joenorton
+253,2015-04-01 11:23:35,"As @joenorton points out, this is what `closeOnConfirm: false` is for. I do agree that it is a little unintuitive though, so if anyone has a solution to the problem, I'd be glad to add it!
+
+@maddy2308, the problem with your fiddle is that `$('button')` is too ambiguous, so the swal's buttons are also invoked. If you change it too `$('body > button')` it should work.
+",t4t5,maddy2308
+253,2015-09-22 10:00:26,"I also suffered from this issue, and I do believe this needs to be changed.
+
+@t4t5 Without looking at the source code, we can assume the following:
+
+
+
+An easy solution to solve this issue would be as follows:
+
+
+
+This will allow `C` to invoke any amount of new dialogs, with very little modification needed to the current codebase.
+",StephanBijzitter,t4t5
+253,2016-11-30 17:03:57,"@t4t5 Please take a look on my report and solutions, if you approve I can do the fix!",iget-master,t4t5
+251,2015-01-12 14:40:53,"@adi-ads seems like this repo is inactive now, I fixed this and added some additional features to [sweetalert2](https://github.com/limonte/sweetalert2).
+",limonte,adi-ads
+251,2015-01-12 17:48:27,"@limonte both repository have the same code for MouseEvents (pasting the code below)
+
+if (MouseEvent) {
+        // Up-to-date approach
+        var mevt = new MouseEvent('click', {
+          view: window,
+          bubbles: false,
+          cancelable: true
+        });
+        node.dispatchEvent(mevt);
+      } 
+
+So your code would have the same error for this specific case as well.
+",adi-ads,limonte
+251,2015-01-13 09:47:40,"@adi-ads thank you again! Fixed now in [sweetalert2](https://github.com/limonte/sweetalert2), https://github.com/limonte/sweetalert2/commit/d8b619675aed6c258de7b8e651bb2c72f93c5f43
+",limonte,adi-ads
+251,2015-01-14 21:02:28,"I agree with @adi-ads ! @limonte
+",Turqueso,adi-ads
+251,2015-01-14 21:02:28,"I agree with @adi-ads ! @limonte
+",Turqueso,limonte
+250,2015-01-10 11:54:56,"@grimalschi I fixed this and added some other additional options in [sweetalert2](https://github.com/limonte/sweetalert2).
+",limonte,grimalschi
+249,2015-01-09 23:44:53,"@danilo-valente seems like this repo is inactive now, I added this option and some additional features to [sweetalert2](https://github.com/limonte/sweetalert2).
+",limonte,danilo-valente
+249,2015-01-10 14:58:09,"@limonte Nice! Thanks for the quick reply. I'll check it out.
+",danilo-valente,limonte
+249,2015-03-19 20:49:52,"@parterburn @TranquilMarmot Thanks, I'm closing this one then.
+",danilo-valente,TranquilMarmot
+249,2015-03-19 20:49:52,"@parterburn @TranquilMarmot Thanks, I'm closing this one then.
+",danilo-valente,parterburn
+247,2015-01-08 19:30:25,"@pascalwacker I added this feature and some other additional options in [sweetalert2](https://github.com/limonte/sweetalert2).
+",limonte,pascalwacker
+247,2015-01-08 22:49:54,"Hi @limonte nice work (:  
+
+But how can you trigger a close event in your sweetalert2 plugin? In my case, I'd like to show an overlay with a ""well done"" or ""oops..."" message and perform an ajax request in the background. Once the data comes back from the server and is passed to the DOM, the modal should close itself. As I can't predict how long the ajax request will need, I can't use the timer function.
+
+Btw. on line 258 you have an error:  
+`params.allowEscapeKey = arguments[0].allowEscapeKey !== undefined ? arguments[0].showConfirmButton : defaultParams.allowEscapeKey;`  
+
+should be:  
+`params.allowEscapeKey = arguments[0].allowEscapeKey !== undefined ? arguments[0].allowEscapeKey : defaultParams.allowEscapeKey;`  
+(there's `arguments[0].showConfirmButton` in there). If you tell me how I can fetch your fork, I'd fix it my self ;)
+",pascalwacker,limonte
+247,2015-01-09 09:30:53,"@pascalwacker thank you! I fixed that copy-paste typo and added ""execute the done function if the modal is closed by the timer"" in v.0.1.0 of [sweetalert2](https://github.com/limonte/sweetalert2).
+
+Also I'll publish example of handling axaj request in example page soon. Will notify you here.
+",limonte,pascalwacker
+247,2015-01-09 09:56:58,"@limonte cool (: I'm looking forward to then.  
+
+General question about github: Can I also fork your version of sweetalert and contribute directly to that one?
+",pascalwacker,limonte
+244,2015-01-08 11:34:48,"@apzentral I added this feature and some other additional options in [sweetalert2](https://github.com/limonte/sweetalert2).
+",limonte,apzentral
+244,2015-02-12 06:14:50,"Thanks @apzentral !
+",lorensr,apzentral
+241,2014-12-30 11:48:38,"@sicklyman, sorry about my honest opinion but... why don't you contribute to the project, as it is open and it seems you understand about the topic, as you are going to style your own modals? 
+",taxpayer,sicklyman
+240,2015-01-08 11:35:14,"@dreadjr I added this feature and some other additional options in [sweetalert2](https://github.com/limonte/sweetalert2).
+",limonte,dreadjr
+240,2015-01-09 17:09:57,"nice i'll check it out.
+
+On Thu, Jan 8, 2015 at 3:35 AM, limonte notifications@github.com wrote:
+
+> @dreadjr https://github.com/dreadjr I added this feature and some other
+> additional options in sweetalert2 https://github.com/limonte/sweetalert2
+> .
+> 
+> —
+> Reply to this email directly or view it on GitHub
+> https://github.com/t4t5/sweetalert/pull/240#issuecomment-69168218.
+",dreadjr,dreadjr
+233,2015-01-10 22:56:22,"@omnilight I added this feature and some other additional options in [sweetalert2](https://github.com/limonte/sweetalert2).
+",limonte,omnilight
+226,2015-01-09 09:04:46,"@mwakerman I added this feature and some other additional options in [sweetalert2](https://github.com/limonte/sweetalert2).
+",limonte,mwakerman
+224,2015-01-08 11:50:20,"@MBing I added this feature and some other additional options in [sweetalert2](https://github.com/limonte/sweetalert2).
+",limonte,MBing
+218,2015-01-10 23:43:15,"@assafshp I fixed this and added some other additional options in [sweetalert2](https://github.com/limonte/sweetalert2).
+",limonte,assafshp
+217,2015-01-10 22:54:33,"@peterjosling I fixed this and added some other additional options in [sweetalert2](https://github.com/limonte/sweetalert2).
+",limonte,peterjosling
+216,2015-01-18 19:13:01,"I've added a Gulp file now for simpler, and more consistent, minification. Thanks for your contributions @peterjosling :)
+",t4t5,peterjosling
+214,2015-01-08 11:50:27,"@Willian-Zhang I added this feature and some other additional options in [sweetalert2](https://github.com/limonte/sweetalert2).
+",limonte,Willian-Zhang
+211,2015-01-19 10:55:16,"@jwaala you can pass a custom icon as well
+",adi-ads,jwaala
+210,2015-01-19 07:18:42,"As @malcolmocean said, the template is the problem, they should be more restrictive with their `important!` values. :) Glad you found a solution though. Closing.
+",t4t5,malcolmocean
+201,2014-12-24 13:34:32,"I did the same thing @ethryx, this should be merged asap!
+",fabiowitt,ethryx
+201,2015-02-18 21:36:55,"@t4t5 may you please provide a use case for swal.close()?
+
+Thanks!
+",IvoPereira,t4t5
+200,2014-11-26 14:47:58,"@esecules your solution is a little bit ugly and requires jQuery, but true - should works :-)
+
++1 for @aliemre 
+",artursmolarek,aliemre
+200,2014-11-26 14:47:58,"@esecules your solution is a little bit ugly and requires jQuery, but true - should works :-)
+
++1 for @aliemre 
+",artursmolarek,esecules
+200,2014-12-03 11:54:46,"@aliemre I define swal as an object and always use the timer key as a workaround for this.
+The screens shouldn't be up that long anyway.. 
+
+
+
+In other cases I use [modals](http://getbootstrap.com/javascript/#modals)
+or
+the Angular [modals](http://mgcrea.github.io/angular-strap/##modals)
+",MBing,aliemre
+200,2014-12-03 12:04:50,"@MBing In a project, I rather not to use more than one modal in perspective of complexity. Also, timer is not a good solution for my goal (Ajax requests). You may not ~~prefer~~ predict the duration of a process. So, an event handler will be inevitable (I think).
+",aliemre,MBing
+200,2014-12-03 12:15:16,"@aliemre I am using both in my project. Simple stuff with swal and more complex with modals. Didn't know you had ajax requests. I am using sweetalert with ajax requests when the promise gets returned on a login or logout inside a login service. Works like a charm, the timer only starts when the ajax request is finished and depending on the data I get back it changes the content. Of course I don't know anything about your project or goal. So I assume it might be best to work with the event handler. ;)
+",MBing,aliemre
+200,2014-12-13 09:25:26,"Indeed @mwakerman . Actually, my purpose was to use sweet alert as a process notifier. In that case, we cannot assume the time that is needed. So, an event handler should be added.
+",aliemre,mwakerman
+200,2014-12-13 09:49:10,"I think what @leifcr is saying is that he generates a new very brief ""1 millisecond"" timer which ""cancels"" the existing timer. Again, adding the cancel alert functionality in my commit was about 3 lines of trivial code and is blocking and doesn't rely on the event queue.
+",mwakerman,leifcr
+200,2014-12-14 22:56:05,"I agree, that a close event would be better, as @mwakerman is right, that it will be on the event queue, since the function does use setTimeout. if its `swal('close')` or swal.cancel is up to @t4t5 to choose. 
+",leifcr,mwakerman
+200,2014-12-24 13:27:35,"Anyone found a better solution then @leifcr  or @esecules ?
+",fabiowitt,esecules
+200,2014-12-24 13:27:35,"Anyone found a better solution then @leifcr  or @esecules ?
+",fabiowitt,leifcr
+200,2016-11-28 07:47:54,@MacgyverMartins thanks : Try it: swal.close(); works,KalanaPerera,MacgyverMartins
+200,2017-02-10 00:14:40,"By default, it provides the **closeOnConfirm** and **closeOnCancel** parameters that can be set to true or false. Set to true it will close immediately after the click on button. If you want to close just after processing the callback function you can use **swal.close()**, As @MacgyverMartins  quoted above",ggwebdev,MacgyverMartins
+199,2014-11-12 08:50:27,"As @technofreaky said, you can redirect using JavaScript. Here's a similar example: https://github.com/t4t5/sweetalert/issues/168
+",t4t5,technofreaky
+199,2016-01-28 19:19:56,"@fabianchoxD  Good Job !
+",Jpsstack,fabianchoxD
+199,2017-03-20 17:53:43,"@fabianchoxD thanks, it works.",MAbdulHalim,fabianchoxD
+197,2015-01-06 04:25:20,"this is what i'm looking for. nice work @kraeki.
+
++1 merge this.
+",wayou,kraeki
+192,2014-12-13 21:08:40,"@antoniobrandao thanks!
+",taromero,antoniobrandao
+192,2015-01-05 20:39:17,"@antoniobrandao - Great solution!
+",mdwhatcott,antoniobrandao
+192,2015-01-15 18:19:43,"@limonte good job mate, will check it out
+",antoniobrandao,limonte
+186,2014-11-11 02:31:03,"@michaelbollig, thanks very much. you just save my day
+",look416,michaelbollig
+178,2016-12-16 22:53:25,"@camelCaseD, have you updated the repository with that fix?",sergeevabc,camelCaseD
+178,2016-12-16 23:17:07,"@sergeevabc I cannot confirm based on the project I was using this for, because it is inactive and not maintained.",camelCaseD,sergeevabc
+177,2014-12-08 12:11:47,"@sylouuu You can just use CSS for now..
+The class for the confirm button is 'confirm'. 
+
+
+
+I have a forked repo with this option, I have made a PR of this at #224. My repo is over [here](https://github.com/MBing/sweetalert) The **showConfirmButton** parameter default is **true**.
+
+
+",MBing,sylouuu
+177,2015-01-09 23:48:46,"@sylouuu seems like this repo is inactive now, I added this option and some additional features to [sweetalert2](https://github.com/limonte/sweetalert2).
+",limonte,sylouuu
+174,2015-02-11 13:32:32,"Fixed in v0.4.2. Thanks @sushantdhiman!
+",t4t5,sushantdhiman
+172,2014-10-30 22:19:43,"@zuofei Of course, you can add option showCancelButton: true.
+
+Example:
+
+
+",mkoczka,zuofei
+172,2014-10-30 22:29:19,"@mkoczka 
+
+Got it. Thank you!
+",zuofei,mkoczka
+172,2014-11-05 11:50:56,"@parterburn These are not issues related to prompt feature. I created another issue which address this problem here - #190 
+",mkoczka,parterburn
+172,2014-11-06 13:57:37,"@jobsamuel  It's just example. You don't need to use another alert in callback. You can do anything you want after prompt is confirmed.
+",mkoczka,jobsamuel
+172,2014-11-06 23:18:52,"Now I see @mkoczka! Thanks for the clarification :+1:  
+",jobsamuel,mkoczka
+170,2014-11-03 08:33:41,"Really nice job @pedant! I'll definitely link to it in the readme! :)
+",t4t5,pedant
+170,2014-11-04 03:12:31,"Thanks a lot @t4t5 ! Is there any plan for sweetalert update recently?
+",pedant,t4t5
+169,2015-01-13 11:58:53,"@JesperKrejbergPetersen it seems like this repo is inactive now, I fixed this and added some additional features to [sweetalert2](https://github.com/limonte/sweetalert2), https://github.com/limonte/sweetalert2/commit/d8b619675aed6c258de7b8e651bb2c72f93c5f43
+",limonte,JesperKrejbergPetersen
+161,2015-01-20 11:33:43,"Imagesize is now fixed. The animation stuff is cool, but I think I'm going to use another implementation for a future version. Thanks for your contribution @dimd13!
+",t4t5,dimd13
+160,2014-10-27 17:31:47,"I am running into the same issue too, and really need this fixed if possible. Not sure if it's happening on IE10 or lower though. Can anyone else confirm?
+
+@sumeetkpatel how are you detecting IE11? Or IE [all] if other versions are affected? I will have to run with that workaround for now...
+",amaisano,sumeetkpatel
+160,2014-10-28 14:15:02,"Thanks @sumeetkpatel - good old browser sniffing. Really hoping the author is able to patch this soon. I've just made it easier on myself and made all my swal() popups use a 1-hour timer, regardless of browser.
+",amaisano,sumeetkpatel
+160,2014-10-28 17:28:31,"@christianrondeau would you mind changing or modifying the title of this issue to include Internet Explorer 9, 11? I suspect that is the core issue here, and not Windows Phone exclusively. Thanks.
+",amaisano,christianrondeau
+160,2014-11-04 15:42:32,"@mkoczka patch worked for me as well. Thanks.
+",doapp-ryanp,mkoczka
+160,2015-01-19 07:25:08,"This has been implemented. Thanks @mkoczka!
+",t4t5,mkoczka
+158,2014-10-25 17:32:28,"@lipis I'm adding more files to ignore and remove the sass folder
+",camilonova,lipis
+157,2015-01-08 11:53:09,"@camilonova I removed fonts import in [sweetalert2](https://github.com/limonte/sweetalert2).
+",limonte,camilonova
+153,2014-10-26 20:47:30,"Wow. I completely overlooked that example. Thank you very much. @t4t5 
+",prestonbrown,t4t5
+151,2015-02-20 18:18:24,"@t4t5 I'd like to see this configurable. I use the tool to prompt with ""are you sure?"" on dangerous actions, so being able to explicitly require a click would be beneficial.
+",ceejayoz,t4t5
+151,2015-03-02 16:19:38,"@ceejayoz I just modified it to cancel when you hit the enter button.
+",design1online,ceejayoz
+151,2016-01-14 14:01:02,"@design1online how did you change it?
+",wagneramaral,design1online
+151,2016-02-08 22:06:22,"@wagneramaral sorry it was a long time ago and I ended up going with [Toastr](https://github.com/CodeSeven/toastr) instead since it had more flexibility and could do multiple messages at the same time. Basically the idea is that you don't fire the cancel handler when the keycode is the enter key.
+
+`var onButtonEvent = function onButtonEvent(e) {
+    if (e.keyCode != 13) {
+      return _handleButton$handleConfirm$handleCancel.handleButton(e, params, modal);
+    }
+  };`
+",design1online,wagneramaral
+147,2014-11-12 00:21:38,"@slneufeld +1
+",aliemre,slneufeld
+146,2015-01-08 11:53:42,"@lipis I added this feature and some other additional options in [sweetalert2](https://github.com/limonte/sweetalert2).
+",limonte,lipis
+142,2014-10-25 17:14:02,"@lipis can you update your PR to remove conflicts.
+
++1 on this merge, less code to maintain is better.
+",camilonova,lipis
+141,2015-03-09 15:58:13,"Hey @prateekvarma, I actually have updated to the current masterbranch version (or any version after https://github.com/limonte/sweetalert2/commit/f05f05de7ed5d810c5857e28ff4eea7068a5e634)  on master branch and it seems that now you can just use $(document).ready() to initialize a sweetAlert. 
+",jkrup,prateekvarma
+140,2014-10-25 17:17:46,"@lipis can you close this. #158 should be more complete.
+",camilonova,lipis
+139,2014-10-20 11:46:53,"@t4t5 Ups, it's fixed now, there was a problem due using the same instance when creating a new popup. Please check it again, and thanks for the support :)
+",zzarcon,t4t5
+136,2014-10-20 14:54:56,"@SiliticX thx for the workaround
+",rdubigny,SiliticX
+133,2017-01-31 09:10:46,@sweco-semmod Sweetalert2 at https://github.com/limonte/sweetalert2 have an option to focus cancel.,emilv,sweco-semmod
+132,2015-01-12 16:29:16,"@jack126guy It seems like this repo is inactive now, I fixed this and added some additional features to [sweetalert2](https://github.com/limonte/sweetalert2).
+",limonte,jack126guy
+129,2014-10-16 21:08:37,"I agree with @samacs that html is not a type of dialog, it is a different feature completely. I could want to make an error dialog with html within. Unfortunately I don't think that the project owner wants to allow HTML in the alerts at all.
+",pomartel,samacs
+129,2014-10-16 21:16:12,"Well, if that's the case, @pomartel lets fork it and add the feature -.-
+",samacs,pomartel
+129,2014-10-17 02:34:47,"@huytd that should probably apply to the title as well.
+",pomartel,huytd
+129,2014-10-23 17:28:37,"@vmitchell85 I think the main use case for html in the alert is to add links in the text or basic styling tags. I don't see what's the added value of stripping html tags. Why not let the developer choose what he wants to put in his alerts?
+",pomartel,vmitchell85
+129,2014-10-24 13:01:56,"@pomartel - I wasn't advocating not using HTML, I am 100% for HTML... my concern is that if you put enough items into the alert and the window is small you currently can't scroll (as I've downloaded this code change and tested)
+",vmitchell85,pomartel
+129,2014-12-03 10:45:47,"Same error as @Ashwinning  : did you managed to fix it ?
+",kai23,Ashwinning
+129,2015-01-08 11:54:17,"@huytd I added this feature and some other additional options in [sweetalert2](https://github.com/limonte/sweetalert2).
+",limonte,huytd
+127,2015-08-31 13:50:39,":+1: . This should get some priority.
+
+The fix by @jayquest seems to work.
+",ajanini,jayquest
+127,2015-09-02 07:12:37,"To implement the fix by @jayquest without changing the library, I used the following code:
+
+var previousWindowKeyDown = window.onkeydown;
+swal({
+  title: 'Are you sure?',
+  closeOnConfirm: false,
+  closeOnCancel: false
+}, function (isConfirm) {
+  window.onkeydown = previousWindowKeyDown;
+  if (isConfirm) {
+    swal('Deleted!', 'Your imaginary file has been deleted.', 'success');
+  } else {
+    swal('Cancelled', 'Your imaginary file is safe :)', 'error');
+  }
+});
+",amoralidad,jayquest
+127,2015-09-09 20:52:52,"To expand on @amoralidad 's fix you can use this to include only once after you include the sweet alert library in your project and it will decorate the swal service so your code and the library stays unobstructed (without coding the fix above in every call) until a permanent fix is made.  
+
+
+",JustinWinthers,amoralidad
+127,2015-10-08 09:22:18,"Yup, the workaround of @JustinWinthers works fine!
+",mattiasnordqvist,JustinWinthers
+127,2015-11-04 22:46:50,"The workaround of @amoralidad worked for me. Thanks!
+",dbedoya,amoralidad
+127,2015-11-23 18:29:43,"thanks @jayquest... @t4t5 please fix this in master branch!
+",daton89,jayquest
+127,2016-08-25 16:48:20,"@JustinWinthers , using your code breaks the `type: 'input'`. When trying to click on ""Cancel"" button to close the dialog, it says `swal.showInputError is not a function`.
+
+For an example, go to `http://clubcare.no/dashboard` and tap on `Glemt passord` ( forgot password ) 
+
+Removing your function makes it work again. Any ideas on how to get rid of this behavior ? Thank you! 
+",EduardJS,JustinWinthers
+127,2016-09-16 19:27:44,"@jayquest Thank you for fixing this issue.
+",viralpandya,jayquest
+127,2017-01-04 13:25:31,"Hi @JustinWinthers
+
+I tried your suggestion to fix this tabbing issue after SweetAlert opens. It fixed the issue, however I started getting this error when I try to close the Sweetalert using `swal.close();` when the `cancel` button is clicked:
+
+
+
+This is similar to what @EduardJS said above. Is there a way to get them working? I feel we got so close but due to this error, I had to remove your suggested code. Any help will be great. 
+
+Cheers,
+Neel.",Mr-Anonymous,JustinWinthers
+127,2017-01-04 13:25:31,"Hi @JustinWinthers
+
+I tried your suggestion to fix this tabbing issue after SweetAlert opens. It fixed the issue, however I started getting this error when I try to close the Sweetalert using `swal.close();` when the `cancel` button is clicked:
+
+
+
+This is similar to what @EduardJS said above. Is there a way to get them working? I feel we got so close but due to this error, I had to remove your suggested code. Any help will be great. 
+
+Cheers,
+Neel.",Mr-Anonymous,EduardJS
+127,2017-01-11 01:41:36,"The simplest possible solution based on the workaround of @JustinWinthers that I could found (without modifying the library), is to hook only into the `swal.close` function and set the `window.onkeydown` to the previous `window.onkeydown` event handler: 
+
+
+
+or in my case even simpler:
+
+
+
+With this workaround it is now also possible to use the Enter and Escape keys in the dialog. 
+
+The error messages mentioned by @Mr-Anonymous and @EduardJS also no longer occur.
+
+",kosst,Mr-Anonymous
+127,2017-01-11 01:41:36,"The simplest possible solution based on the workaround of @JustinWinthers that I could found (without modifying the library), is to hook only into the `swal.close` function and set the `window.onkeydown` to the previous `window.onkeydown` event handler: 
+
+
+
+or in my case even simpler:
+
+
+
+With this workaround it is now also possible to use the Enter and Escape keys in the dialog. 
+
+The error messages mentioned by @Mr-Anonymous and @EduardJS also no longer occur.
+
+",kosst,JustinWinthers
+127,2017-01-11 01:41:36,"The simplest possible solution based on the workaround of @JustinWinthers that I could found (without modifying the library), is to hook only into the `swal.close` function and set the `window.onkeydown` to the previous `window.onkeydown` event handler: 
+
+
+
+or in my case even simpler:
+
+
+
+With this workaround it is now also possible to use the Enter and Escape keys in the dialog. 
+
+The error messages mentioned by @Mr-Anonymous and @EduardJS also no longer occur.
+
+",kosst,EduardJS
+127,2017-01-13 21:09:50,"@kosst Perfect. Thank you so much for sharing that. I tried your code and it works perfect. Thank you so much!! 
+
+Cheers,
+Neel.",Mr-Anonymous,kosst
+124,2014-10-16 22:32:06,"@littleneotrix It works for me (Firefox 32) if you embed it in a jQuery .ready() handler:
+
+
+",jack126guy,littleneotrix
+124,2014-10-17 11:38:29,"Strange @jack126guy ,
+for me it's not working when I put it like that in .ready() handler.
+That's why I'm doing it (if needed), with setTimeout.
+",littleneotrix,jack126guy
+118,2014-10-16 09:00:31,"@kodypeterson nice! Keep us posted :+1: 
+",Martinspire,kodypeterson
+118,2015-01-19 07:52:56,"I'm closing this for now. If @kodypeterson or someone else releases something, I'll add it to ""Related projects"", but it's not on the current SweetAlert roadmap.
+",t4t5,kodypeterson
+115,2014-10-16 12:13:13,"Hey, @sylouuu ,
+If you want I can send you my own version of this script. I took & developed this 'timer' feature by myself.
+I don't know why the developer removed this feature, but if you want you can use mine till he'll
+get it back, and you won't need to do any changes in your code because in his previous version
+I saw he called the method 'timer', so did I.
+",littleneotrix,sylouuu
+115,2014-10-16 12:15:26,"Thank you @littleneotrix, I'd like to get your version, could you upload it on pastebin or something?
+
+Bests
+",sylouuu,littleneotrix
+115,2014-10-16 12:19:42,"@sylouuu ,
+Here you go :)
+http://pastebin.com/AUsYfWPJ
+",littleneotrix,sylouuu
+115,2014-10-21 18:02:37,"@littleneotrix That feature has never been on the official repo as far as I know. Are you sure you weren't using a fork? However, it will be implemented in the next version (wohoo!)
+",t4t5,littleneotrix
+115,2014-10-21 18:05:22,"@t4t5 ,
+well yes, I downloaded it from the main page because I saw it was recently updated (back then),
+so i downloaded to check what's new and I saw it has the 'timer' attribute.
+After a day i went back to download it, I saw it updated again in that same day & noticed it was removed.
+",littleneotrix,t4t5
+113,2015-03-19 17:22:42,"@t4t5 I disagree, Cancel is not always an ""ignore"" action, but this can already be accomplished with CSS passing the customClass attribute. This gives you full styling over both buttons depending on the CSS class you pass.
+
+
+
+
+",parterburn,t4t5
+111,2015-04-03 17:34:39,"@babeuloula that's the Android fork. It's not possible on the JS version
+",chriscct7,babeuloula
+105,2015-04-23 22:07:58,"Is this still working? When I `require('sweetalert')` I get back an empty object...
+
+**EDIT:** It looks like this broke with version `1.0.0-beta` but it works with `0.5.0`. @t4t5 this issue should likely be reopened.
+",idolizesc,t4t5
+104,2014-10-12 09:19:05,"Thanks @littleneotrix. Exactly, I was trying to prompt the sweet alert while the bootstrap modal was opened and your solution totally works, but in my app I needed to leave it that way, this is why I had to comment the code.
+",ramysa,littleneotrix
+104,2015-02-26 18:26:36,"I ran into the same issue and came up with a decent way of handling it. I basically hide the modal, show swal, and on confirm bring back the modal. If one is using magnific popup for example, the code would look similar to this:
+
+
+
+This is basically what @littleneotrix was talking about. I just didn't catch his explanation at first and figured I would give a more detailed example. I find it to be an elegant enough solution for my use case.
+
+For those asking, I don't think there is much that the developers can do to fix this problem. Double modals and callbacks are hefty.
+",jbh,littleneotrix
+103,2014-10-14 18:51:32,"@oitozero - ngSweetAlert works like a charm! thanks!
+",SeanPlusPlus,oitozero
+103,2014-10-14 21:51:03,"@oitozero, ngSweetAlert worked for me too. Thanks! 
+Thank you @blaiprat too for the tip and helping understand the issue.
+",ruairitobrien,blaiprat
+103,2014-10-14 21:51:03,"@oitozero, ngSweetAlert worked for me too. Thanks! 
+Thank you @blaiprat too for the tip and helping understand the issue.
+",ruairitobrien,oitozero
+103,2014-10-14 22:02:15,"@SeanPlusPlus @ruairitobrien 
+Awesome. :+1: 
+
+Just released a new version to reflect changes in sweetalert (0.2.0).
+",oitozero,SeanPlusPlus
+103,2014-10-14 22:02:15,"@SeanPlusPlus @ruairitobrien 
+Awesome. :+1: 
+
+Just released a new version to reflect changes in sweetalert (0.2.0).
+",oitozero,ruairitobrien
+99,2014-10-18 19:27:23,"@pomartel thanks sir!!!
+",zzarcon,pomartel
+97,2014-10-22 17:45:49,"@diegocouto On `page:load` you're calling `window.sweetAlertInitialize`?
+
+The example listed in #76 uses a function called `initSweet`, but this PR introduces the `sweetAlertInitialize` function.
+",caleb,diegocouto
+97,2014-10-22 17:57:07,"Thanks, @caleb! You're completely right. I was only updating the sweet-alert file. It works like a charm now.
+",diegocouto,caleb
+97,2015-01-14 09:46:59,"@pomartel done! https://github.com/limonte/sweetalert2/commit/f05f05de7ed5d810c5857e28ff4eea7068a5e634
+",limonte,pomartel
+93,2014-10-13 11:41:02,"This is cool! I've fixed the issue @virgo79 mentioned with a closeOnCancel-parameter and also made sure it's backwards compatible by making the parameter in the callback function optional (if omitted, the function will only be executed for the ""Confirm""-button as usual)!
+",t4t5,virgo79
+93,2014-10-16 09:25:36,"Nice work @t4t5!
+",blaiprat,t4t5
+92,2015-01-08 11:54:52,"@bmcalister I added this feature and some other additional options in [sweetalert2](https://github.com/limonte/sweetalert2).
+",limonte,bmcalister
+90,2015-02-22 18:30:07,"@t4t5 is there anything we can do to help with integrating this feature?
+",Pezmc,t4t5
+90,2015-03-01 20:26:26,"> I want to make some changes though so you're going to have to wait just a little longer. 
+
+@t4t5 Which changes were you going to make? [Anxiously awaiting this :)]
+",jprichardson,t4t5
+90,2015-03-15 11:10:42,"@t4t5 I added the ability to specify a default value when first opening the prompt in this commit: https://github.com/lvillani/sweetalert/commit/8e62aa724f8a67ff07dca1eb6064c8289d226d43
+",lvillani,t4t5
+85,2015-01-08 11:55:47,"@Turqueso I removed `@import` in [sweetalert2](https://github.com/limonte/sweetalert2).
+",limonte,Turqueso
+83,2014-10-20 15:10:23,"@mkoczka  your PR can't be merged anymore!
+",rdubigny,mkoczka
+83,2014-10-22 08:07:17,"@t4t5 I don't mean to hurge you but is there a chance to get this merged anytime soon?
+",rdubigny,t4t5
+78,2015-11-11 11:48:18,"I had this same error. version 1.0.1 (or so the package.json says). I was refactoring sweetAlert to an Angular service for reuse.
+
+For me the issue was solved by just wrapping the `swal` call in a function:
+function() {
+   swal();
+}
+
+Something to do with the scope of `this` I think. I guess this is a similar solution as wrapping it in a `setTimeout()` as @BernhardBezdek did. Except that that also puts calling the function at the end of the queue. But - at least in my case - it wasn't an asynchronous issue.
+
+Luckily Ecmascript 6 solved this weird Javascript behaviour with `this`. Now to wait until all browsers support it (or setup that polyfill/transpilation environment).
+",bartvanderwal,BernhardBezdek
+77,2014-10-15 15:54:10,"I agree with @pomartel, the ability to set default options outside of the plugin file would be cool. Having to edit the lib file makes updates more tedious, and prevents the ability to use a public CDN. Currently I'm just handling it with a function that has default attributes, merges in the custom attributes from the parameters, and calls `swal`. It works, but would be cool to have it baked in!
+
+Great plugin, this seriously makes UI much more awesome.
+",alkrauss48,pomartel
+77,2014-10-18 16:13:22,"@zzarcon yes, I think your implementation is better than mine. Let's hope it gets merged!
+",pomartel,zzarcon
+77,2014-10-18 16:16:24,"@pomartel thanks man! Right now I'm waiting some feedback of @t4t5. I also hope that this will be merged because it's very tedious to pass the defaults parameters for each new alert :) 
+",zzarcon,t4t5
+77,2014-10-18 16:16:24,"@pomartel thanks man! Right now I'm waiting some feedback of @t4t5. I also hope that this will be merged because it's very tedious to pass the defaults parameters for each new alert :) 
+",zzarcon,pomartel
+75,2015-01-08 11:55:57,"@markusboehme I added this feature and some other additional options in [sweetalert2](https://github.com/limonte/sweetalert2).
+",limonte,markusboehme
+75,2015-01-08 18:52:18,"Thanks for telling as well as for your effort, @limonte!
+",markusboehme,limonte
+67,2015-02-11 15:54:18,"Thanks @t4t5 & @danreeves 
+",cailloumajor,t4t5
+66,2014-10-08 17:01:12,"@jrsteele23  I noticed this as well. I have forked the repo to fix. 
+",Bccorb,jrsteele23
+54,2014-10-07 05:52:48,"Thank you @daver182 - your temporary solution worked fine! Thank you @t4t5 - I'll check if it works now
+",omnidan,t4t5
+54,2014-10-07 05:52:48,"Thank you @daver182 - your temporary solution worked fine! Thank you @t4t5 - I'll check if it works now
+",omnidan,daver182
+53,2014-10-07 09:11:52,"@blackfyre Thanks! That worked for me too.
+",omnidan,blackfyre
+53,2015-03-31 21:34:53," I tested with a standalone html page, and it works without setTimeout and without using the jQuery ready function. Maybe it's the way/order of the the js scripts. cc: @cordoval.
+",leftdevel,cordoval
+35,2014-10-12 13:56:46,"I'm not going to add this to the project, since I don't like having too many global variables (and especially not if they have generic names). But as @ISNIT0 showed, it's very simple to add your own alias if needed. :)
+",t4t5,ISNIT0
+33,2014-10-07 05:21:21,"Agreed with @dblandin, it's best to keep the solution simple. :) Fixed through PR #50. Thanks for the heads up though @ramirovjr!
+",t4t5,dblandin
+33,2014-10-07 05:21:21,"Agreed with @dblandin, it's best to keep the solution simple. :) Fixed through PR #50. Thanks for the heads up though @ramirovjr!
+",t4t5,ramirovjr
+32,2014-10-03 19:33:07,"@mizterp I don't think this is necessary.
+",ImBobby,mizterp
+32,2014-10-04 08:07:27,"Thanks for the explanation @AlexKvazos! I do want the example page to display the font correctly even without setting up a local server, however seeing as the fonts are loaded via http in example.css already, that will work anyway. So yeah, it does indeed make sense to omit the protocol in this file so that it works for sites that are using SSL. Thanks @mizterp!
+",t4t5,mizterp
+32,2014-10-04 08:07:27,"Thanks for the explanation @AlexKvazos! I do want the example page to display the font correctly even without setting up a local server, however seeing as the fonts are loaded via http in example.css already, that will work anyway. So yeah, it does indeed make sense to omit the protocol in this file so that it works for sites that are using SSL. Thanks @mizterp!
+",t4t5,AlexKvazos
+25,2014-10-02 23:32:39,"@ElliottRoche `border-box` brings in the alert box by about 8 pixels. If you're looking for a quick fix:
+
+
+",lokimeyburg,ElliottRoche
+24,2014-10-07 05:31:23,"Fixed in version 0.1.1 through \n. Thanks for the suggestion @djm61!
+",t4t5,djm61
+22,2015-05-30 16:04:17,"Thanks @djm61! @t4t5 This could be closed now. I added a Pullrequest for this to add the Link into Readme (#369)
+",masteradhoc,djm61
+21,2014-10-02 18:48:14,"@FrancisStokes cool ... thanks :smiley: 
+",doggy8088,FrancisStokes
+15,2014-10-07 15:26:33,"Ok, conflicts should be gone now :) Thanks for the heads up @LasseRafn 
+",green-arrow,LasseRafn
+12,2014-10-03 22:07:12,"@t4t5 - Directives are used for anything that manipulates the DOM or otherwise displays stuff.
+
+@devanp92 Are you thinking something like 
+       >  button sweetalert=""mytext"" /> 
+instead of 
+       > button onClick=""Javascript:swat('mytext');"" /> 
+ or what is the use case? In most cases I use alerts for notifications from my javascript code, not from my html templates.
+",pilavdzic,t4t5
+12,2014-10-03 22:07:12,"@t4t5 - Directives are used for anything that manipulates the DOM or otherwise displays stuff.
+
+@devanp92 Are you thinking something like 
+       >  button sweetalert=""mytext"" /> 
+instead of 
+       > button onClick=""Javascript:swat('mytext');"" /> 
+ or what is the use case? In most cases I use alerts for notifications from my javascript code, not from my html templates.
+",pilavdzic,devanp92
+11,2014-10-03 06:02:14,"@t4t5 OK, actually the focus thing makes sense, since the modal elements are being hidden and not removed. Storing the state of document.activeElement and restoring it on close should be sufficient to stop that behaviour. The 2nd pull wasn't a duplicate, it had a 1 line fix for the tab problem (preventing default tab action when the modal is open), but I forgot to close the first PR so I  can see why it wasn't obvious.
+
+@pomeh I don't know what @t4t5 's stance on this is, but personally I think the blocking parts of the vanilla alert are the worst parts about it, and one of the reasons that I would want to use something else. A modern piece of web software shouldn't be trying to lock a user.
+",FrancisStokes,t4t5
+11,2014-10-03 06:02:14,"@t4t5 OK, actually the focus thing makes sense, since the modal elements are being hidden and not removed. Storing the state of document.activeElement and restoring it on close should be sufficient to stop that behaviour. The 2nd pull wasn't a duplicate, it had a 1 line fix for the tab problem (preventing default tab action when the modal is open), but I forgot to close the first PR so I  can see why it wasn't obvious.
+
+@pomeh I don't know what @t4t5 's stance on this is, but personally I think the blocking parts of the vanilla alert are the worst parts about it, and one of the reasons that I would want to use something else. A modern piece of web software shouldn't be trying to lock a user.
+",FrancisStokes,pomeh
+11,2014-10-03 18:24:19,"@FrancisStokes Agreed on the blocking, I don't like it either. :)
+It seems like there was a small querySelector bug which screwed up the tabbing for me when I tested earlier. I pushed a quick fix to the keyboard-shortcuts branch just now. 
+
+The things that are still weird now based on my tests are:
+- Pressing enter right after a modal is shown just relaunches the modal (imo, the confirm-button should be selected by default so that you can quickly dismiss it by pressing enter)
+- If you tab to a confirm-button that has a function attached to it, clicking enter seems to call the function twice.
+
+I don't have time to dig into this any deeper right now unfortunately, but hopefully it can be solved soon!
+",t4t5,FrancisStokes
+11,2014-10-05 09:23:11,"The solution provided by @nixta seems to have done the trick, so I went ahead and merged that one. Thanks to everyone who contributed to this feature! :)
+",t4t5,nixta
+9,2015-05-30 15:57:43,"Hi there ( and @t4t5 soory for the late test!)
+Just tested this issue. If im on the sweetalert homepage and open a regular alert, no scrolling able. If i open an sweet alert im able to scroll and even press another button while an alert is open.
+
+So the Problem with your code:
+body {
+    touch-action: none;
+    height: 100%;
+    overflow: hidden;
+}
+
+is, that im now not even able to zoom in the page at all. Thats not that great..
+See : https://jsfiddle.net/hyoLyjwc/1/ and https://jsfiddle.net/hyoLyjwc/1/embedded/result/ at WP8
+",masteradhoc,t4t5
+2,2014-10-01 08:30:57,"@adamterlson I guess it's best to get rid of the jQuery dependency as soon as possible and then continue from there. Would be awesome to support promises after that!
+",t4t5,adamterlson
+2,2014-10-01 14:51:42,"@connyay Yeah - I don't think I would have run jshint or JsFormat on someone else's code (certainly not in the same PR as something else I'm working on).  There's nothing wrong with a stylistic PR, but it comes across as petty/presumptive when you do it in the same commit as a material change.  Instead of being ""hey, I made this pass jshint - what do you think?"", it says ""clearly a _professional_ would have used the same style as me, so I'm just going to presume that mine is better and change it without talking about it.""  I understand that that wasn't your intention, but that's how it reads.
+
+Congrats on your first PR!
+",appsforartists,connyay
+2,2014-10-01 14:53:22,"@appsforartists  :+1: 
+",connyay,appsforartists
+667,2017-02-20 15:13:51,"Hello ! 
+@line 66 there are 2 'webkit-transition ' with bad validation 
+
+**webkit-transition** need to be **-webkit-transition**
+
+For people using Visual Studio and Strong typing :)
+
+Thanks! ",stddd,line
+652,2017-01-20 13:07:39,@t4t5 Please accept this PR asap,NeXTs,t4t5
+651,2017-01-16 09:38:11,"Here's my css config:
+
+If I do `@import ""sweetalert/dist/sweetalert.css"";` in the css file, the style will have prefix and suffix, which will be something like `src-style__sweetalert__lkafr` and all the stylings are broken.
+
+Is there any way to correctly import the css file using webpack?
+",yinanfang,import
+625,2016-10-08 09:13:33,"Hi @t4t5 I have used Your Library thanks it's Awesome 👍 , it have small HTML issue I have fixed, please check this PR.  
+",baladkb,t4t5
+625,2016-10-17 05:47:41,"Hi @t4t5 Did you had a chance to check this [PR](https://github.com/t4t5/sweetalert/pull/625/commits/00155069421d4f9abdee515446fcc67052bee6be)? 
+",baladkb,t4t5
+625,2016-12-01 07:44:43,@t4t5 thanks :),baladkb,t4t5
+596,2016-07-08 04:45:21,"@keyframes showSweetAlert {
+  ...
+  100% {
+    transform: scale(1);
+    -webkit-transform: scale(1); } }
+
+change to:
+
+@keyframes showSweetAlert {
+  ...
+  100% {
+    transform: scale(1) rotate(1deg);
+    -webkit-transform: scale(1) rotate(1deg); } }
+",angular-moon,keyframes
+592,2016-06-27 13:11:02,"- There are PR that are ready to merge for over 1 year and also nearly 2 year old open issues.
+- Also the last code update is nearly 8 months ago.
+- There is even a fork, that is under active support by @limonte (https://github.com/limonte/sweetalert2)
+
+So will this project continue in near future?
+
+If not, how about adding a badge that this repository is [INACTIVE]?
+More about this: https://helloanselm.com/2013/handle-deprecated-unmaintained-repositories
+",CodeBrauer,limonte
+592,2016-09-02 22:18:19,"To quote from #571
+
+> ## @t4t5 commented on 26 Apr 2016
+> 
+> The project isn't dead. I just haven't had time to go through pull requests and issues lately.
+> 
+> sweetalert2 was forked before v1.0, so the structure of the project is quite different. This doesn't necessarily mean that it's not a good alternative. If there's a feature in there that you need, you should of course use it.
+> 
+> It kinda bugs me that it's called sweetalert2 though, since that makes it sound like it's a natural progression of this project, even though I'm planning a 2.0 release later this year...
+> 
+> Anyways, free software, do what you like. Just wanted to say sorry for being unresponsive, and that I'm planning on becoming more active soon.
+> 
+> If there are any good candidates to help me maintain the project, please let me know!
+",Potherca,t4t5
+582,2016-05-16 13:52:59,"Margin missing for @media screen with width less than 500px
+",mumairofficial,media
+570,2016-04-20 14:58:11,"@muratbastas The last commit was 6 months ago, there are 177 open issues, and 56 open merge requests.  So yes, it does appear to be a neglected project.
+",eterry1388,muratbastas
+542,2016-04-12 14:31:37,"@t4t5 
+",StephanBijzitter,t4t5
+541,2016-02-23 17:29:40,"@t4t5 PR ready
+",StephanBijzitter,t4t5
+541,2016-05-03 07:30:26,"@StephanBijizitter Thanks! Will add in v1.1.4!
+",t4t5,StephanBijizitter
+494,2015-12-12 23:14:40,"this may not be robust solution but this is how we are implementing now @Charlex 
+
+
+",lorvent,Charlex
+493,2016-07-18 08:57:03,"thanks @Zexorz  will have a look
+",scorpionhiccup,Zexorz
+472,2015-11-19 15:57:13,"@inctor, @Charlex I wrote up a guide on how to use the code addition I wrote to do this at #457. Because it adds on top of the existing sweetalert library, it doesn't require merging into the project/updating the library code. If you have thoughts to make it better let me know.
+",kentmw,Charlex
+446,2016-01-24 20:06:20,":+1: I also have a need for this. 
+
+@t4t5, any chance we could get a `showLoaderOnCancel` option? I have a case where I need to make an AJAX call on confirm and a different AJAX call on cancel and it would be great if the behavior of the buttons was consistent. 
+",blazeworx,t4t5
+440,2015-09-05 15:20:45,"- build js files from `es6` to `es5` into `lib` folder
+- change `commonjs` entry point to `lib/sweetalert.js`
+
+Fix #417 
+@t4t5 
+Please checkout this, thx!
+
+If everything is ok, please merge and bump the version. Thanks for your great work on this lib.
+",chentsulin,t4t5
+440,2015-09-24 23:02:46,"@t4t5 Any chance of getting this reviewed?
+",idolize,t4t5
+440,2015-10-16 22:49:42,":+1:  @t4t5 
+",chibicode,t4t5
+440,2015-10-18 14:45:58,"@t4t5 :+1: +1
+",neighborhood999,t4t5
+440,2015-10-19 07:28:59,"@t4t5 Any update on this?
+",chentsulin,t4t5
+434,2015-11-19 02:59:15,"@gremz @t4t5  I had the same issue. I looked in the source to see if I customize but couldn't find a non hacky way to custom the plugin itself. So I settled for a hacky way in my own code :-) If you are using jquery something like this works fine.
+
+
+",hraynaud,t4t5
+433,2015-09-16 03:17:03,"@t4t5 maybe a queue could be added to more closely replicate the native alert?
+",gremz,t4t5
+423,2015-08-24 07:15:59,"@rafael-renan-pacheco 
+
+I think you can use some of the  [online css compressors](http://csscompressor.com/) alternatively
+
+In your project you can use [Gulp](https://github.com/murphydanger/gulp-minify-css) or [Grunt](https://github.com/gruntjs/grunt-contrib-cssmin)
+",acedesigns,rafael-renan-pacheco
+423,2015-08-24 16:20:41,"cc @t4t5 
+",chekovsky,t4t5
+421,2015-10-22 17:39:40,":+1:  for this, need it in a current project. @t4t5 any chance we could get this merged in?
+",blazeworx,t4t5
+413,2015-12-11 11:46:08,"Pleeeeeeasse remove the inline styles!! I think it's a major issue. Everybody needs to restyle sweetalert who is using it seriously.
+
+I'm using sass & bootstrap, so I would only need something like this:
+
+.sweet-alert button.confirm {
+    @extend .btn-primary;
+}
+.sweet-alert button.cancel {
+    @extend .btn-default;
+}
+
+instead of copying pages of css code from bootstrap and setting !important everywhere (which is an easy-to-avoid anti-pattern) to do the same.
+",anatolibarski,extend
+391,2016-06-22 10:08:03,"Is there any fork of this bug I can work with ? I am not sure how to use @xiaouze88's commit.
+I'm having annoying issues regarding this bug as well.
+",EduardJS,xiaouze88
+391,2017-01-03 20:08:40,"That will be really great @EduardJS Thank you for that.
+
+For now I am using the solution from @JustinWinthers in another thread:
+
+
+REF: https://github.com/t4t5/sweetalert/issues/127",Mr-Anonymous,JustinWinthers
+381,2015-06-18 07:25:52,"@thejae 
+@nixta 
+@theodorejb 
+How this plug-in when click delete the parameter setting and background, so as to realize the function of removing？
+Trouble to inform, thank you
+",meisanggou,nixta
+381,2015-06-18 07:25:52,"@thejae 
+@nixta 
+@theodorejb 
+How this plug-in when click delete the parameter setting and background, so as to realize the function of removing？
+Trouble to inform, thank you
+",meisanggou,theodorejb
+381,2015-06-18 07:25:52,"@thejae 
+@nixta 
+@theodorejb 
+How this plug-in when click delete the parameter setting and background, so as to realize the function of removing？
+Trouble to inform, thank you
+",meisanggou,thejae
+333,2015-08-26 03:33:06,"@mateuszjarewaski clearly you had no idea what you are doing because you'd know that rawgit.com is in no way affiliated with GitHub
+",chriscct7,mateuszjarewaski
+329,2015-04-10 16:13:20,"Hi @t4t5 ,
+
+I'm testing your plugin which is quite cool, so far I love it.
+
+But I'm facing an issue on IE8 (I know, some of our client still use it...), but anyways the error is
+
+Webpage error details
+
+User Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET4.0C; .NET4.0E)
+Timestamp: Fri, 10 Apr 2015 16:07:24 UTC
+
+Message: This command is not supported.
+Line: 861
+Char: 5
+Code: 0
+URI: http://localhost/content/vendor/sweetalert/lib/sweet-alert.js
+
+This is the function in question
+
+
+
+This is the code I'm using to show up the message
+
+
+
+This works fine on all other browsers I tested (Chrome, Safari, Firefox)
+
+Thanks in advance
+",fedegiust,t4t5
+329,2015-08-26 08:29:56,"Thank you @bryce-gibson, it works perfectly!
+
+Do you think you can bring your fixed to @t4t5 to merge in its branch 0.5 to have an ""official"" 0.5.1 available on npm ?
+",GreatWizard,t4t5
+277,2015-02-24 12:47:36,"Hi @t4t5 , any chance to see it merged ?
+
+Thx !
+",jucrouzet,t4t5
+251,2015-01-14 12:07:40,"brilliant!
+
+It might be worth to have a chat with @t4t5 to get you added as a repository maintainer moving forward and merging the versions together as well.
+",adi-ads,t4t5
+238,2015-02-11 11:15:34,"Sweetalert has already been published, here: https://www.npmjs.com/package/sweetalert
+
+However, it's not published by @t4t5 and it's outdated.
+",danreeves,t4t5
+237,2014-12-21 10:08:52,"When I was reading through the example code, fixed 3 things:
+- Fixed missing semicolon.
+- A lowercase doctype is perfectly fine, and is more consistent with the other html code.
+- A double charset declaration was included (the ""old"" way, and in https://github.com/t4t5/sweetalert/commit/f5cc61bd0bdf5b84889ae6e880ad1a3c53cfd15f @simonVansuyt included the ""new"" way).
+",arthurvr,simonVansuyt
+200,2014-12-14 22:56:05,"I agree, that a close event would be better, as @mwakerman is right, that it will be on the event queue, since the function does use setTimeout. if its `swal('close')` or swal.cancel is up to @t4t5 to choose. 
+",leifcr,t4t5
+200,2015-01-08 20:09:40,"@aly006  I added `showConfirmButton` option and some other additional features in [sweetalert2](https://github.com/limonte/sweetalert2).
+",limonte,aly006
+186,2014-11-04 07:13:22,"Same issue with me, any progress on this @t4t5 
+",nirajmchauhan,t4t5
+178,2016-12-16 23:25:58,"By the way, @t4t5, the author of Sweetalert, has been active on Twitter all these years. And neglected us.",sergeevabc,t4t5
+160,2014-10-28 05:49:44,"@atwixtor 
+
+
+",sumeetkpatel,atwixtor
+146,2014-10-24 20:54:56,"@SiDChik do you want to resolve the merge conflicts?
+",lipis,SiDChik
+141,2015-03-09 15:15:14,"Thank you so much @mazlix , the onload popup works perfect when i included your sweet-alert.js file. The only problem is that now, the HTML, the timer and other functions are not working. How can we fix it? 
+Many thanks in advance!
+",prateekvarma,mazlix
+141,2015-03-09 16:56:58,"Thank you for the quick reply, @mazlix . I'm afraid something is wrong there - The version of the file ""limonte@f05f05d""  still does not implement the HTML. And the latest version of it does not work at all. It'll be a great help if you could fix it!
+",prateekvarma,mazlix
+139,2014-10-19 09:24:50,"@t4t5 will be great if you can take a look to this PR, thanks in advance :D 
+",zzarcon,t4t5
+136,2014-10-28 16:39:35,"@t4t5 could this be as part of the project?
+",camilonova,t4t5
+129,2014-10-17 01:18:04,"Yeah, you guys are right. It should be another option (`allowHtml`), I'm sooooo lazzzyyyyy :dancer: 
+I see @t4t5 put the `escapeHtml` everywhere, may be he wanted to prevent XSS attack or something. 
+How do I change my submited pull request? Or just make another pull request?
+",huytd,t4t5
+127,2015-11-23 18:29:43,"thanks @jayquest... @t4t5 please fix this in master branch!
+",daton89,t4t5
+115,2014-10-21 18:23:21,"@t45 and is it possible to hide all buttons (cancel and confirm)?
+
+Bests
+",sylouuu,t45
+103,2014-10-13 21:27:14,"@schris12 check [ngSweetAlert](https://github.com/oitozero/ngSweetAlert/). maybe it can help
+",oitozero,schris12
+97,2014-10-20 21:56:22,"This would be awesome to get merged!  Also, amazing job @t4t5!  My alerts never looked so good :)
+",willcosgrove,t4t5
+97,2014-10-23 22:30:33,"@t4t5 I see you merged the `sweetAlertInitialize()` method which is very nice of you since we can now use the lib with Turbolinks. But I now think this should be done with the same naming convention as for setting the default parameters. So I updated my pull request and the initialize method should now be called `swal.init()`. I think it makes it more consistent with the way it now works.
+",pomartel,t4t5
+97,2015-01-13 19:47:59,"@limonte How about this one? :-)
+",pomartel,limonte
+93,2014-10-09 14:03:11,"I've seen multiple pull requests adding an extra parameter for the cancel. But like @pomartel suggest on pull #18 , just passing `true` on accept, `false`, on cancel should be enough and cleaner.
+
+So it would be like 
+
+
+",blaiprat,pomartel
+90,2014-11-24 12:13:36,"@t4t5 just wondering that do you have any plan to merge this feature?
+
+I personally like it very much :)
+",hszcg,t4t5
+85,2014-10-08 15:47:08,"Using @import on stylesheets is not recommended for High Performance Web Sites, maybe it is better to use web safe fonts leaving the custom fonts to who ever needs them for their proyects
+
+Fix #57 
+",Turqueso,import
+85,2015-01-08 11:55:47,"@Turqueso I removed `@import` in [sweetalert2](https://github.com/limonte/sweetalert2).
+",limonte,import
+81,2014-10-08 12:22:03,"Hi @ViperXd 
+
+You can configure it by setting allowOutsideClick to true.
+
+
+
+Check out some of the configuration at the bottom of the [page](http://tristanedwards.me/sweetalert) :)
+",xming13,ViperXd
+67,2015-02-11 15:54:18,"Thanks @t4t5 & @danreeves 
+",cailloumajor,danreeves
+57,2014-10-06 15:20:24,"Using @import on stylesheets is not recommended for High Performance Web Sites, maybe it is better to use web safe fonts leaving the custom fonts to who ever needs them for their proyects
+",Turqueso,import
+53,2015-03-31 21:17:35,"I think the problme is a setTimeout because sweetalert does not have it seems an even to listen upon document ready? i am finding out that if i settimeout the call it works. cc @leftdevel
+",cordoval,leftdevel
+24,2014-10-03 17:23:55,"@t4t5 I didn't minified the code, because I don't know which minifier you're using.
+I updated the examples too.
+",ramirovjr,t4t5
+22,2015-05-30 16:04:17,"Thanks @djm61! @t4t5 This could be closed now. I added a Pullrequest for this to add the Link into Readme (#369)
+",masteradhoc,t4t5
+7,2014-10-01 12:58:49,"@t4t5 You will have to run
+
+`bower register sweetalert https://github.com/t4t5/sweetalert` 
+
+More info [here](http://bower.io/docs/creating-packages/) if you are not familiar.
+",connyay,t4t5
+6,2014-10-01 11:46:09,"@t4t5 Not sure what browsers you want to support.
+
+With this pull if someone wanted IE8 support they would need something like this in the page
+
+
+",connyay,t4t5
+4,2014-10-01 14:49:17,"If @t4t5 is interested, I'd be happy to work on this one.
+",AlexKvazos,t4t5
+3,2014-10-02 04:27:51,"@t4t5 I closed this pull and I have another staged with a native promise implementation.  One question though: how would you like to implement [the polyfill](https://github.com/jakearchibald/es6-promise)?  Or perhaps, no polyfill and instead only return a promise if there's native support?
+",adamterlson,t4t5

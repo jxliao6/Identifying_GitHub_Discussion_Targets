@@ -1,0 +1,164 @@
+issue_num,datetime,body,login,mention_login
+130,2016-11-24 21:21:12,"@josejavier @pabloper @AlejandroHCruz In the interests of not leaving this in review for too long, I've just merged this - if there's any issues they can be reworked via PR.",peter-tackage,josejavier
+129,2016-11-07 15:46:37,"@peter-tackage Thanks for the response, you are correct about Truth, and for me personally keeping your projects to use purely Google dependencies is a big yes. I have recently stumbled across Truth and found it very similar to using AssertJ (both using Hamcrest matchers). I have not noticed Truth power yet with Android, as I find AssertJ-Android is currently more geared towards Android. I would love to help adding Android specific extensions to Truth, it is however a big task and not a days work with my current schedule.
+
+Lastly please could you post back the link to the up to date testing section so I may familiarize myself with it. Much appreciated. 
+",KevinLeighCrain,peter-tackage
+129,2016-11-07 16:40:09,"@peter-tackage It is definitely a difficult task picking libraries as there is so many out there mostly bad but a lot of good ones, and my reasoning behind pure Google dependencies is that Google is there to stay, I am however open minded to try anything new, going to look at Agera, and try it out definitely! Thanks for the mention!
+",KevinLeighCrain,peter-tackage
+126,2016-10-16 20:54:46,"Thanks, @quangctkm9207. I obviously can't comment too much on the accuracy of the translation, but we're happy to have it translated if someone thinks it will help out other developers and wants to invest the time.
+",peter-tackage,quangctkm9207
+126,2016-10-16 23:16:59,"@khuongdv : Thank you for your comments. 
+1. In the translation, for common phrases or words, I have already left as the original version or give both Vietnamese and English phrases. For example, I have put the original sentence""best practices ... "" in brackets in addition to Vietnamese translation.
+2. I agree that is your personal feeling. However, this is really useful for many new developers in Vietnam. 
+@peter-tackage : Thank you for your feed back. Hope that it is helpful.
+",quangctkm9207,peter-tackage
+120,2016-08-02 13:40:00,"Thanks @peter-tackage  ! I will await for the new update then. Looking forward to it! Cheers.
+",felipecaldas,peter-tackage
+116,2016-10-02 21:43:27,"@peter-tackage I agree. MockWebServer with its default dispatcher could be enough for most for the cases and makes you think more about the way/sequence you make network requests which may help in discovering some unexpected side effects.
+",djodjoni,peter-tackage
+115,2016-07-03 21:37:16,"First of all I am using Roboelectric and I hate it, but it is useful and I will share why :)
+
+there several statements here which are kind of too generic and not clear to me. 
+ @luciapayo roboelectric does not really make your tests that slow but probably the speed of development of those tests is slow, which is obvious. Also wrapping too much things will cost lots of time maintaining those wrappers.
+ @peter-tackage there is no excuse for boilerplate :) so better somebody else do it, I hope they respect the contract as I hope the millions version of Android does too :)
+@samiuelson dependency injection and mock should be used wisely and only if needed and too complicated other wise.
+
+There is not question about that Business logic should be done in a way that it has almost and preferably no external dependencies, however there is also Application Specific Business Logic, which needs to be tested as well.
+
+There is a bit confusion what is a Unit Test and the confusion is in 2 main points:
+1) the definition of a Unit. and and in OOP is should not strictly mean a single Class. This involeves tightly the granularity of writing tests, if you go too far you are probably coupling with implementations or some internal parts of your system that doesn't really need to be separately tested.
+2) the isolation of those tests. tests should be isolated in such a way that they do not interfere with each other. Isolating the Unit from its environment -> mocks -> (coupling with implementation , probability that it does not behave correctly in real environment). in other words we can still call them Unit tests without comlpete isolation.
+
+Having said that Unit Tests may involve some android components. 
+Some will say ""..well wrap those"", but this can be really costly for a line of code you may end up creating bunch of classes in different modules coupling with Android specifics anyway And still not covering the real UI test. What I learn from experience is that no-one care of your Unit Tests, they just want the app to run as in specs, its just you who needs to maintain those tests.
+
+So 'Unit Tests may involve some android components'. 
+
+Normally you should not mock 3rd party code(just the adapters connecting to it) as you don't know in detail how it works. Robolectric guys do exactly this and its pretty big one. They do an awesome job and yet I prefer test with a Real device using Espresso. The problem is using TDD and running tests constantly could be terribly slow so Roboelectric is of real help here. 
+
+So Roboelectric can be used for unit tests which involves android components and its way faster than Espresso (the fastest currently real UI framework)
+",djodjoni,peter-tackage
+111,2016-11-04 13:54:57,"@peter-tackage Do you think these -optimize thing could be one of these ""additional insights"" ?
+",wviana,peter-tackage
+101,2016-07-12 12:59:10,"@peter-tackage Done, PTAL :)
+",iverc,peter-tackage
+99,2016-02-25 20:40:04,"@peter-tackage agree with your points. But would extend the following items with the links to appropriate resources or detailed description:
+
+> - Use Mockito for mock definitions
+
+add link for Mockito; the recommendations how to mock objects and the check behaviour in the better/best way
+
+> - Use AssertJ for assertions.
+
+Link to AssertJ would be good and what are the advantages of that
+
+> - Add integration and UI tests once their business value is justified.
+
+not clear enough
+
+The other points are quite clear and could be added to the best practices.
+",dkhmelenko,peter-tackage
+96,2016-01-19 17:52:10,"@luisramalho, yes, fair points.
+
+I'm merging this version now, let's improve upon it later (when someone has the time and interest).
+",jonikarppinen,luisramalho
+94,2016-01-12 16:53:20,"@fbergr: thanks!
+",jonikarppinen,fbergr
+92,2016-06-18 11:36:13,"@kypeli You make some good counterpoints. Do you want to write a PR for this?
+",peter-tackage,kypeli
+91,2016-01-06 10:14:11,"Good stuff, @kypeli . What do you think about adding a sentence stating that you should only use it for debug build variants and not release?
+",peter-tackage,kypeli
+73,2015-08-05 11:35:46,"@tehmou  SimpleProvider is pretty young library, it also uses annotations to create database, hence you need to add `-keep` to your ProGuard. I've had good experience using it to create and interact with one db table, can't say anything with respect to it's efficiency with really complex data. 
+",iverc,tehmou
+69,2015-08-17 07:36:58,"@peter-tackage [really?](https://github.com/square/okhttp/blob/master/pom.xml#L96)
+
+
+",Suvitruf,peter-tackage
+68,2015-09-26 16:55:00,"Thanks for the translation @GWillmann! If you could fix the minor issues (mostly typos) I've noted, then squash the commits and then it will then be good to merge.
+cheers.
+",peter-tackage,GWillmann
+68,2015-10-30 18:10:37,"Sorry for the delay @peter-tackage !
+I have fixed all the typos, it should be good to go.
+Cheers.
+",GWillmann,peter-tackage
+61,2016-06-18 13:29:33,"@jkdf2 Is this the single change to ""take"" vs ""make"" a decision? If so, rebase and I'll merge. 
+",peter-tackage,jkdf2
+49,2015-03-18 08:43:49,"I updated this PR to solve the main problem while keeping the build file simple. It seems we can't avoid the try-catch, but we don't have to throw exception (break the build) in catch; we can also just print a message.
+
+What do you think? @staltz @peter-tackage Feel free to tweak any wordings etc.
+
+(Or if you prefer a new clean branch & PR for this approach, just let me know.)
+",jonikarppinen,peter-tackage
+49,2015-03-18 08:43:49,"I updated this PR to solve the main problem while keeping the build file simple. It seems we can't avoid the try-catch, but we don't have to throw exception (break the build) in catch; we can also just print a message.
+
+What do you think? @staltz @peter-tackage Feel free to tweak any wordings etc.
+
+(Or if you prefer a new clean branch & PR for this approach, just let me know.)
+",jonikarppinen,staltz
+49,2015-03-18 10:29:54,"@staltz Switched to `logger.warning()`.
+",jonikarppinen,staltz
+49,2015-03-18 11:26:02,"@peter-tackage shall we merge?
+",staltz,peter-tackage
+42,2015-02-13 15:16:19,"Thanks @minsoopark !
+",staltz,minsoopark
+37,2014-12-18 03:33:49,"@staltz Thank you for your answer.  I see.  It is very likely that many fragment-specific or adapter-specific utils are created and I agree with you that it is better to put them into a package.  As I haven't yet met such problems so far, the knowledge was very helpful.
+
+Many thanks.
+",hkurokawa,staltz
+27,2016-06-19 16:03:40,"@kaushikgopal another issue with ``toBlocking` except the one that @peter-tackage mentioned is that you are prohibiting yourself from using `TestSubscriber`. Of course, the verification part in cool but without `TestSubscriber` one cannot easily test for backpressure support of your Observables.
+",jaggernod,peter-tackage
+25,2014-11-07 09:03:42,":+1: @recuutus could you send a PR with these advices added into the ""libraries"" section?
+",staltz,recuutus
+16,2014-11-03 09:34:48,"Confirmed that this is working. Thanks @recuutus :+1:
+",staltz,recuutus
+9,2016-06-18 15:50:02,"@peter-tackage I assume this didn't get merge because the repo was best practices by only Futurice employees. I will just close this PR.
+",Diolor,peter-tackage
+130,2016-11-24 21:21:12,"@josejavier @pabloper @AlejandroHCruz In the interests of not leaving this in review for too long, I've just merged this - if there's any issues they can be reworked via PR.",peter-tackage,pabloper
+96,2016-01-13 21:42:17,"Yeah, what I did is a minimal change, just getting rid of the need for manual search, without changing stylistic conventions.
+
+I did consider adding subheaders, and for some parts ([Use styles](https://github.com/jonikarppinen/android-best-practices/blob/toc-links/README.md#styles), [colors.xml](https://github.com/jonikarppinen/android-best-practices/blob/toc-links/README.md#colorsxml)) it would definitely work & improve the structure. But in a way I like how some of the linked items—[like this](https://github.com/jonikarppinen/android-best-practices/blob/toc-links/README.md#methodlimitation)—now look (readability-wise); not sure if those would be better if the bold first sentence was turned into a subheader.
+
+The anchors aren't exactly _random_ btw, any more than the summary & text themselves. ;)
+
+I'd go with this for now, later adding finer-grained headings if someone's up for it. @peter-tackage, @staltz, any opinion?
+",jonikarppinen,peter-tackage
+96,2016-01-13 21:42:17,"Yeah, what I did is a minimal change, just getting rid of the need for manual search, without changing stylistic conventions.
+
+I did consider adding subheaders, and for some parts ([Use styles](https://github.com/jonikarppinen/android-best-practices/blob/toc-links/README.md#styles), [colors.xml](https://github.com/jonikarppinen/android-best-practices/blob/toc-links/README.md#colorsxml)) it would definitely work & improve the structure. But in a way I like how some of the linked items—[like this](https://github.com/jonikarppinen/android-best-practices/blob/toc-links/README.md#methodlimitation)—now look (readability-wise); not sure if those would be better if the bold first sentence was turned into a subheader.
+
+The anchors aren't exactly _random_ btw, any more than the summary & text themselves. ;)
+
+I'd go with this for now, later adding finer-grained headings if someone's up for it. @peter-tackage, @staltz, any opinion?
+",jonikarppinen,staltz
+75,2016-02-28 20:25:02,"I would suggest the following:
+- id should contain the prefix of the layout in which it exists. For example, inside the layout _activity_auth.xml_ all ids of controls will start with _activity_auth_;
+- id should contain clear description of the control and what it does. Like _connect_options_, _user_name_ etc.;
+- each id should have a suffix which defines the type of the control. For example, _btn_ for the Button (like _activity_auth_connect_btn_). 
+
+Like in any framework some controls become deprecated, another controls are introduced. That's why there is a sense to define the following basic suffixes for the controls:
+- _btn_ - button control (Button, RadioButton, ImageButton, CheckBox, custom button)
+- _txt_ - TextView control
+- _input_ - EditText or any input related control
+- _list_ - for list control (ListView, GridView, RecyclerView)
+- _selector_ / _spinner_ - for Spinner control
+
+I use such naming rules for a while and think they are quite convenient. They give an opportunity not to intersect ids between different layout. Also it's much easier to find related control by id inside the layout.
+
+@peter-tackage What do you think?
+",dkhmelenko,peter-tackage
+12,2014-10-29 22:14:27,"I did! and looks pretty amazing. I remember seeing a very similar approach by @tehmou in the project https://github.com/tehmou/rx-android-architecture. I'm gathering some thoughts, ideas on that approach too.
+
+That being said, my intention was to point out the use of the ""event bus"" as a concept for communication rather than the use of the library RxJava. Sure RxJava could be used for the purpose of an event bus, but it would be interesting to call that out in the best-practices document (if that really is a practice observed at Futurice). Though the easiest implementation of an event bus is probably using Otto or similar.
+",kaushikgopal,tehmou
+6,2016-01-31 18:47:42,"I believe this issue can be closed . I notice all the links are now clickable after #96 commit was made.
+Good work @jonikarppinen 
+",jeradgodreault,jonikarppinen
+2,2014-08-07 12:01:48,"Maybe @markvoit or @jonikarppinen or both could share a few sentences about Proguard on the README.md ?
+
+The idea isn't an introduction or tutorial-ish, but really advices coming from battle experiences. That's all what's needed. 
+",staltz,markvoit
+2,2014-08-07 12:01:48,"Maybe @markvoit or @jonikarppinen or both could share a few sentences about Proguard on the README.md ?
+
+The idea isn't an introduction or tutorial-ish, but really advices coming from battle experiences. That's all what's needed. 
+",staltz,jonikarppinen

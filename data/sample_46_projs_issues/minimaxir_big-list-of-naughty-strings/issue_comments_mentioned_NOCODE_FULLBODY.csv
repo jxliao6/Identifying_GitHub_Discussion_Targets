@@ -1,0 +1,127 @@
+issue_num,datetime,body,login,mention_login
+144,2017-02-16 10:34:39,"@ChipWolf To be honest, we shouldn't need the copyright date in the first place since it's not bound to US law in any states if @minimaxir is American, so we could just remove it all together",Phineas,ChipWolf
+123,2017-01-20 15:47:27,It is there because it is true. We're trying to communicate with you @GTP95,ChipWolf,GTP95
+117,2017-02-28 12:51:03,"@ColorXJH This is not an appropriate type of conversation for this thread. In fact, attempting personal conversations and asking to move to QQ is so off-topic for a GitHub Issues thread that many projects will ban you.
+
+I suggest you explore the world of programming-related [IRC](https://en.wikipedia.org/wiki/IRC) channels instead. (And be sure to read any rules listed or linked in each channel's topic line.)",ssokolow,ColorXJH
+117,2017-02-28 13:32:01,@ssokolow thank you very much,ColorXJH,ssokolow
+111,2017-02-27 08:28:54,"The EICAR [intended use page](http://www.eicar.org/86-0-intended-use.html) states, ""Any anti-virus product that supports the EICAR test file should detect it in any file providing that the file starts with the following 68 characters, and is exactly 68 bytes long:"" (and the EICAR test string follows immediately after that text).
+
+So if including the EICAR test string causes the blns.txt file to be detected by anti-virus software, then that software is **NOT** complying with the EICAR recommendations (which say, in essence, ""Only detect this string if it's the only thing in the file"").
+
+However, I wouldn't be at all surprised to find that there DOES exist quite a bit of anti-virus software that isn't behaving correctly, and flags a file containing the EICAR string *plus other content before and after it* as being a virus. If that's the case, then I'm :-1: on @ChipWolf's suggestion to include it.",rmunn,ChipWolf
+111,2017-02-27 12:16:16,"@ChipWolf - This is the second time you've stated that the EICAR test string is (already?) in the blns. (Once here, and once in PR #133). Where is it? I don't see it anywhere in [blns.txt](https://github.com/minimaxir/big-list-of-naughty-strings/blob/8a115584931e0aef2965d8f2b6ab212a08a93a4c/blns.txt) or [blns.json](https://github.com/minimaxir/big-list-of-naughty-strings/blob/8a115584931e0aef2965d8f2b6ab212a08a93a4c/blns.json).",rmunn,ChipWolf
+111,2017-02-27 17:36:41,"@rmunn I must have been mistaken. Removed those comments
+It's either that or someone rebased it out",ChipWolf,rmunn
+100,2017-01-16 09:19:41,@Euphe Careful UI design. It really depends on the specific case.,ssokolow,Euphe
+100,2017-01-17 21:17:21,"@JC5 
+
+You'd be surprised. For example, Fanfiction.net's got this stupid overzealous string sanitization which silently strips all percent signs from input, so a chapter containing ""I'm 100% woman"" would become ""I'm 100 woman"" without a single warning.
+
+The punctuation used in ""plaintext"" emotes has its own [scunthorpe problem](https://en.wikipedia.org/wiki/Scunthorpe_problem).",ssokolow,JC5
+86,2016-02-10 21:18:02,"@romuald: No, it isn’t.
+
+
+",charmander,romuald
+81,2015-10-29 06:00:24,"@minimaxir Note that when the list changes, cd to naughtystrings and run ""go generate"", then commit the changes to the generated file in naughtystrings/internal. (Must have go installed to use ""go generate"" unfortunately; hopefully that won't be much of a burden. Or I guess Go users can periodically run it for you and send a PR; in that case, it would be good to add a note in the README about it.
+",willfaught,minimaxir
+81,2015-10-29 07:18:00,"Thank you for fixes @willfaught and for creating this Go package.
+",matrixik,willfaught
+81,2015-10-29 07:30:59,"My pleasure! Thanks again for the feedback @matrixik.
+",willfaught,matrixik
+81,2015-10-29 07:46:28,"@minimaxir I should also add that the generate command at the top of naughtystrings/naughtystrings.go is this: `go-bindata -ignore \.git\S* -ignore LICENSE -ignore README\.md -ignore blns\.base64\.txt -ignore blns\.txt -ignore package\.json -o internal/resource.go -nocompress -pkg internal ..`. Note that the command has to explicitly list all the files you _don't_ want added as a resource to the binary from the big-list-of-naughty-strings directory. If you add any new files to the big-list-of-naughty-strings directory (that's the `..` part), you'll have to exclude them in that command too. It's very unfortunate, but the `go-bindata` command only supports exclusion right now. Hopefully I or someone else can add inclusion flags to it some time so the generate command doesn't have to be as brittle as this.
+",willfaught,minimaxir
+70,2015-09-10 13:54:56,"I came here to say the same thing.
+
+@minimaxir It's quite easy:
+
+
+",eins78,minimaxir
+59,2015-08-19 22:39:29,"Yeah, actually no offense to @cirosantilli but, especially knowing there's [already a separate file for this](https://github.com/cirosantilli/china-dictatorship#words-%E4%B9%A6%E7%B1%8D), I'm going to take that line out - the point of the Scunthorpe problem is supposed to be the inadvertent impact of things you _didn't mean_ to censor, not the impact of being _subjected_ to censorship.
+",stuartpb,cirosantilli
+59,2015-08-20 07:26:21,"@stuartpb I though it over, but I'd rather have the 502 which has greater impact because:
+- Google `cirosantilli` leads directly to my website page which contains all my projects
+- the front page is notoriously useless, with only 5 projects
+",cirosantilli,stuartpb
+46,2015-08-19 19:37:07,"@stuartpb To quote the link you just cited (emphasis mine):
+
+> **The Unicode Standard permits the BOM in UTF-8**,[2] but does not require or recommend its use.[3] Byte order has no meaning in UTF-8,[4] so its only use in UTF-8 is to signal at the start that the text stream is encoded in UTF-8. **The BOM may also appear when UTF-8 data is converted from other encodings that use a BOM. The standard also does not recommend removing a BOM when it is there**, so that round-tripping between encodings does not lose information, and so that code that relies on it continues to work.[5][6]
+",ssokolow,stuartpb
+46,2015-08-19 20:08:37,"@ssokolow Sure, I'm not saying it shouldn't be included in the corpus - just that it shouldn't be treated as a bug that occurs ""by naively concatenating files together"" (or that it shouldn't be stripped by anything that isn't expected to round-trip its exact input between encodings). Its root cause is software that adds a BOM to UTF-8, at _any_ point. See the text immediately following your excerpt:
+
+> The IETF recommends that if a protocol either (a) always uses UTF-8, or (b) has some other way to indicate what encoding is being used, then it ""SHOULD forbid use of U+FEFF as a signature.""[7]
+",stuartpb,ssokolow
+46,2015-08-19 20:16:46,"@stuartpb However, that does not apply to many web applications because they accept ""plaintext"" generated by Microsoft applications or Google Docs.
+
+> Even so, Microsoft compilers[9] and interpreters, and many pieces of software on Microsoft Windows such as Notepad will not correctly read UTF-8 text unless it has only ASCII characters or it starts with the BOM, and will add a BOM to the start when saving text as UTF-8. Google Docs will add a BOM when a Microsoft Word document is downloaded as a plain text file.
+",ssokolow,stuartpb
+46,2015-08-19 20:27:52,"@ssokolow Sure - we're talking about two different parts of the RFC, which apply to two different scenarios. If your data round-trips encodings without metadata, stripping the BOM is a bug; if it doesn't, _keeping_ it is a bug.
+",stuartpb,ssokolow
+46,2015-08-19 20:35:15,"@stuartpb My point was that, ""The presence of a BOM anywhere in UTF-8 is a bug."" sounded like you might have been misinterpreting the way this case should be tested and, when you clarified, it still felt like you might have been misinterpreting... just in how the standard applied to the applications in question rather than what the standard said... something I no longer think.
+",ssokolow,stuartpb
+16,2015-08-11 18:38:45,"What if you are using blns to test a project which you don't have access to the database? For example, some companies have third party QA testers that might not have access to the database - so creating a table wouldn't allow them to verify if it was successful or not due to the fact they are testing the project as if it was a black-box. 
+
+However some sort of destructive action (so update or drop) could allow that QA tester to verify that it was successful. Updating another person's username, or completely removing them from a system that would show them in the UI would be a way for them to do so.
+
+I do agree with @carbontwelve on that testing using these strings should be done in the testing environment.
+",06b,carbontwelve
+16,2015-08-12 08:16:28,"> Dropping a table is like checking a gun without bullets. It should not work, but just don't put it against your head while testing.
+
+Well that was much more eloquent than my comment. I agree with @ro31337 that there are additional SQL strings that belong in this list; due to there there being many SQL injection attack vectors.
+",carbontwelve,ro31337
+16,2016-02-16 18:22:02,"@mattgrande To be fair, @arisada does have a point.
+
+Just because this shouldn't be used on production systems doesn't mean it should go out of its way to be harmful when there are more benign proof-of-concept cases available to choose from.
+",ssokolow,arisada
+16,2016-02-16 18:22:02,"@mattgrande To be fair, @arisada does have a point.
+
+Just because this shouldn't be used on production systems doesn't mean it should go out of its way to be harmful when there are more benign proof-of-concept cases available to choose from.
+",ssokolow,mattgrande
+6,2015-08-10 20:04:04,"@jomo Yep! For example trying to store most Emoji in MySQL will be a world of hurt too which I find really interesting.
+",donatj,jomo
+146,2017-02-20 10:00:02,Shout out to @davbo for starting this with #127,buckett,davbo
+144,2017-02-16 10:34:39,"@ChipWolf To be honest, we shouldn't need the copyright date in the first place since it's not bound to US law in any states if @minimaxir is American, so we could just remove it all together",Phineas,minimaxir
+129,2017-01-20 04:56:59,@jude1924 what?,Plazmaz,jude1924
+129,2017-01-20 05:00:28,@jude1924 why would I give you bitcoin?,Plazmaz,jude1924
+111,2017-01-16 14:04:00,"https://en.wikipedia.org/wiki/EICAR_test_file
+
+standard string that is interpreted as virus by anti-virus software:
+
+    X5O!P%@AP[4\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*
+",jachymb,AP
+111,2017-02-27 08:37:03,"Wouldn't that be like :-1:-ing a test for ""UTF-8 file containing BOM in a position other than the first two bytes"" because some badly-written text-processing utilities can't handle it?
+
+I don't **want** to forget to feed embedded EICAR strings through my functional tests because it might catch a case where all it takes to DoS a site is for some troll to post the EICAR string in a comment, setting off some non-compliant traffic scanner appliance.
+
+(eg. The troll posts it from home and then everyone visiting the site from work or other more heavily managed networks gets blocked. It's bad enough that there was so much trouble using custom fonts (eg. icon fonts) because network security appliances tended to strip the CORS headers needed for cross-domain `@font-face`.)
+
+Until it showed up here, it never even occurred to me that something like the EICAR string might exist. Imagine how many other developers like me will continue to show up after this discussion has faded from memory.",ssokolow,font-face
+81,2015-10-27 19:04:18,"Thanks for the feedback, @matrixik!
+",willfaught,matrixik
+81,2015-10-27 22:59:06,"@minimaxlr I'm waiting for @matrixik to reply.
+",willfaught,minimaxlr
+81,2015-10-27 22:59:06,"@minimaxlr I'm waiting for @matrixik to reply.
+",willfaught,matrixik
+81,2015-10-28 23:23:20,"Addressed @matrixik's feedback.
+",willfaught,matrixik
+70,2015-09-08 17:11:50,"@minimaxir I saw that there is a `package.json`, but there isn't actually a NPM package attached to it. Would you mind publishing it to NPM?
+",DaAwesomeP,minimaxir
+61,2015-08-20 23:39:33,"﷽
+U+FDFD
+ARABIC LIGATURE BISMILLAH AR-RAHMAN AR-RAHEEM
+Note: This single character is incredibly wide because it’s a ligature of 19 printable characters.
+
+ﷺ
+U+FDFA
+ARABIC LIGATURE SALLALLAHOU ALAYHE WASALLAM
+Note: Although this character isn’t as wide as the one above, it decomposes to 18 characters using Unicode normalization form NFKD or NFKD, while the character above remains 1 character.
+
+Thanks to @yipe for the idea:
+https://twitter.com/yipe/status/634082978868690944
+",patch,yipe
+59,2015-08-19 19:08:14,"六四事件 法轮功 纳米比亚 威视 is from @cirosantilli's Stack Overflow profile (his GitHub profile appears to be broken again).
+
+Bernie Sanders, Democratic Socialist is from https://www.reddit.com/r/SandersForPresident/comments/3gl7uc/the_mobile_app_yikyak_automatically_downvotes/ctz5p7o?context=2
+
+All others are from https://en.wikipedia.org/wiki/Scunthorpe_problem
+",stuartpb,cirosantilli

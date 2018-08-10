@@ -1,0 +1,1527 @@
+issue_num,datetime,body,login,mention_login
+667,2017-03-22 14:59:23,"@nodiscc Your self-hosting solution at https://github.com/nodiscc/srv01 is very intresting, thanks for sharing the link. I'am working on something compareable see https://github.com/return42/handsOn.
+
+handsOn was created for german users, the description is in german: http://return42.github.io/handsOn
+
+But I guess, with a little bash knowledge, reading the scripts https://github.com/return42/handsOn/tree/master/scripts and with a look at the templates https://github.com/return42/handsOn/tree/master/templates everyone will see how my setups are made.",return42,nodiscc
+667,2017-03-23 07:46:09,"@nodiscc: As I wrote, handsOn is for german audience. It focus on *productivity AND education*, describing the setups in detail to give the audiance a chance to admin in a different context. It's far from what sovereign is (no plug&play character). I gave the link to show how my service-setups are / if someone is intrested e.g to see how to place *this or that* service behind an apache instance (your speach: ""feel free to borrow ideas from my""). If there is nothing for you, leaf it.
+
+Anyway, thanks for your hints. Good point, I have to lint my scripts ;) ...  BTW:
+ 
+> ShellCheck does not attempt to figure out runtime or dynamic assignments like with `source` ...
+
+.. one reason for the *hundreds* of errors :o",return42,nodiscc
+667,2017-03-26 15:43:50,@nodiscc Oh nice. Thanks for pointing this out.,cstich,nodiscc
+640,2017-01-14 21:10:17,@ariddell i better get acquainted with github a bit more then :) no clue at the moment,JayBeRayBearGun,ariddell
+639,2017-01-12 15:03:24,@Peyphour please submit a PR,morenoh149,Peyphour
+637,2017-01-24 19:27:08,"@Dosenpfand thanks for investigating. I would really like to see us move away from postgrey and then ensure that rspamd's greylisting is enabled and working.
+
+If you want to do more work towards this or take a stab at a PR, I'll happily help test it on my own installation and help get it merged.",lukecyca,Dosenpfand
+637,2017-02-04 11:53:20,@lukecyca Unfortunately I will not have time to work on this in the foreseeable future. Additionally I kept disabled postgrey the last month and did not see any spam hitting my inbox.,Dosenpfand,lukecyca
+635,2016-12-28 16:06:49,"I've been testing this by putting it in my personal `~/.dovecot.sieve` since I didn't want to roll out this change to the other mail users I have just yet.
+
+Nevertheless this is working perfectly. Thank you, @hippich!",lukecyca,hippich
+634,2017-02-03 18:17:11,@ariddell sounds good. Open a new issue or pull request for that!,lukecyca,ariddell
+632,2016-12-10 23:39:41,@lukecyca  https://github.com/sovereign/sovereign/pull/634,OKNoah,lukecyca
+615,2016-12-12 18:35:00,"@ariddell Hmm... yes. My hunch is that the right long term move for personal mail, cardav, caldav, filesync, etc. etc. is to setup a docker ecosystem that revolves around an ldap/auth service, announces services (etcd, consul, docker service links, ...), and potentially utilizes a shared filesystem (local host filesystem volume, ceph, nfs, torus, glusterfs ... )
+
+Each component would be responsible for it's own upgrade path, installation, etc. Could be run either on a single host, ala dokku, or across a kubernetes cluster.
+
+That's mighty different from the current sovereign architecture and I think would require a totally separate project.",cromulus,ariddell
+615,2016-12-12 18:47:38,"Back on topic, perhaps we could add a section to the README listing mature alternatives to the roles that are currently supported in sovereign. For example, Baïkal could be mentioned as a replacement for (a part of) owncloud. Seafile and Syncthing could also be mentioned. What do you think about this @cimm?",ariddell,cimm
+610,2016-10-30 10:00:01,"PR #598 also forces the pull.  @hippich Are you interested in using that PR?  It would be nice to get some testing on it before we integrate.
+",mikeashley,hippich
+604,2016-10-22 09:04:19,"@lukecyca There are two things going on.  First, I couldn't reproduce the problem as you reported it.  The install runs clean for me.  Second, when I run the initialize task from the command line on my test server, I do get the warning reported by your Ansible run.
+
+So I need to address the warning but first I would like to understand why my testing doesn't reproduce your report.  Can you tell me what version of Ansible you are running?  I am wondering if you are running a more paranoid deployment setup.
+",mikeashley,lukecyca
+601,2016-10-30 13:34:30,"Remember, @mikeashley this is not openVZ only, it's also VMWare, which is a full virtualization, it does not use the local kernel. I'll do my best to find some time to set up a physical debian box and test it out.
+
+@Titan-C I tried to troubleshoot the playbook but it's a mess. The most you can do with it is get back the output of commands sent to the server with `-v` flag, and if you set the ENV  `ANSIBLE_KEEP_REMOTE_FILES=1`, `~deploy/.ansible/tmp/*` will not be removed. However, as far as I'm concerned those two are as useless as can be. Nothing in the command output shows me an error, and the temp files are a mess of auto-generated python scripts. So I gave up because it would take an insane amount of time to try to untangle that. Meaning you're better off manually installing each piece of software that failed to properly deploy. sovereign is a good starting point, it saves you some time, but that's where it stops.
+",working-name,mikeashley
+601,2016-10-30 13:34:30,"Remember, @mikeashley this is not openVZ only, it's also VMWare, which is a full virtualization, it does not use the local kernel. I'll do my best to find some time to set up a physical debian box and test it out.
+
+@Titan-C I tried to troubleshoot the playbook but it's a mess. The most you can do with it is get back the output of commands sent to the server with `-v` flag, and if you set the ENV  `ANSIBLE_KEEP_REMOTE_FILES=1`, `~deploy/.ansible/tmp/*` will not be removed. However, as far as I'm concerned those two are as useless as can be. Nothing in the command output shows me an error, and the temp files are a mess of auto-generated python scripts. So I gave up because it would take an insane amount of time to try to untangle that. Meaning you're better off manually installing each piece of software that failed to properly deploy. sovereign is a good starting point, it saves you some time, but that's where it stops.
+",working-name,Titan-C
+598,2017-01-13 12:49:41,"@mikeashley @wsteitz how can I help in getting this into core? I am a newbie in Ansible, but at least can help with testing (not with documentation, English and writing are two my weak points as well). ",akovalyov,mikeashley
+598,2017-01-13 12:49:41,"@mikeashley @wsteitz how can I help in getting this into core? I am a newbie in Ansible, but at least can help with testing (not with documentation, English and writing are two my weak points as well). ",akovalyov,wsteitz
+595,2016-10-17 23:54:09,"Thanks @carljm. My fix has been merged so I consider this resolved.
+",lukecyca,carljm
+586,2016-08-11 21:05:00,"Thanks @oskapt . Do there need to be any changes on the jessie branch?
+",ariddell,oskapt
+586,2016-08-11 21:48:20,"@ariddell It isn't tested on Jessie, but it's configured to work on all three. I'm running it on Ubuntu. Someone should run it just to make sure I didn't miss anything - afaict the only difference is the repository path.
+",oskapt,ariddell
+586,2016-09-09 09:10:13,"@oskapt I think this PR is headed in a good direction.  Do you have any interest in reworking it for the jessie branch?  I don't know if anybody will champion it for wheezy.  If you are not interested I will probably pick it up.
+",mikeashley,oskapt
+577,2016-07-14 21:46:22,"Hi @oskapt . Thanks for all these PRs. Have you looked at the jessie branch? It's quite a bit ahead of master and perhaps might benefit from these changes.
+",ariddell,oskapt
+577,2016-08-08 21:09:45,"Thanks for the PR. I was on vacation for the last 4 weeks however @mikeashley  and @ariddell are also comitters.
+",neuhaus,mikeashley
+577,2016-08-08 21:09:45,"Thanks for the PR. I was on vacation for the last 4 weeks however @mikeashley  and @ariddell are also comitters.
+",neuhaus,ariddell
+576,2016-07-13 17:18:23,"@carljm - My thought here is that users changing passwords updates the database (if I use the roundcube plugin, which is what I'll be poking at next). If passwords are already in the database, then I just need to not clobber them. That's a _lot_ less work than having some external setup that grabs the password, encrypts it, puts it in Ansible, and then runs Ansible to update the database. Users also expect their password change to be instantaneous. Even if I update the database directly, then extract those passwords and update Ansible, it's clunky. Now my mailserver is updating my sovereign repository, and for most users, the Ansible configuration doesn't live on the mailserver. Git, SSH, push permissions...what I have here is far easier to manage.
+",oskapt,carljm
+576,2016-07-13 17:25:45,"@oskapt yeah, I get your thinking, and I've wrestled back and forth with this same question. But it still seems to me that there's some conceptual inconsistency in this PR. Right now, as you say, ""config is god,"" in every aspect. Whatever's in the config is guaranteed to match what's actually used (assuming you've run Ansible.)
+
+After this PR, ""config is kinda-sorta-mostly-god, but only in terms of which records exist, not necessarily in terms of their data attributes -- various things could be changed directly in the database and will then not match your config, and that inconsistency could persist indefinitely."" I understand why that seems useful for passwords, but it definitely doesn't seem like an improvement in terms of simplicity or clarity of the mental model.
+
+I wonder if there'd be some way to do this that applied _only_ to password hashes, and removed password hashes from the Ansible config entirely? I just really don't like the idea of having stuff in Ansible that is permanently out-of-sync and misleading.
+",carljm,oskapt
+576,2016-07-13 18:02:29,"@carljm It's a dilemma, for sure. I've run sovereign for ~2y at home, where my wife doesn't care if she can't change her password. I'm deploying it for a small office environment now, and they _do_ care. The workflow now with Fastmail is I set them up and give them their initial password and then tell them to change it. If they forget it, I can go back and reset it. I see this change for sovereign as the same logic. I set your initial password in the config and you change it. From that point on the password hash is ignored, as I believe _it should be_. I could add a `force: True` flag that would act as a password reset, so that the ""setting and resetting of passwords"" is still within the sysadmin domain, whether it's Ansible or some other tool.
+
+In this configuration there is no other tool, so enabling Ansible to act like any other admin/management tool for passwords seems like the right move.
+
+I don't know whose decision it is to merge or not merge these things - I'm just handing them over because they seem useful. I'm running them all in production, and they all solve specific problems I've encountered w/ sovereign.
+
+FYI - I fixed the index issue with virtual aliases. I've only tested it on Postgres 9.1. If someone can test the IF/THEN for 9.4, that would be great. Otherwise w/ 9.5 it solves itself.
+",oskapt,carljm
+576,2016-07-13 18:44:40,"@oskapt I'm not a maintainer/committer, so the merge decision isn't up to me :-) Definitely appreciate you sharing your work back!
+",carljm,oskapt
+576,2016-08-09 12:51:22,"I appreciate how this solves a real problem. It does, however, as @carljm  points out, run contrary to the idea of the ansible configuration specifying precisely the desired state of the server.
+
+edit: correct @mention
+",ariddell,carljm
+576,2016-08-10 08:42:45,"@oskapt I appreciate the effort you put into this.  Thank you.  Could you separate the problem(s) you are trying to solve from your implementation?  @carljm is making some good points, for example, about alternative and probably more robust ways of addressing the race condition that exists when rerunning the mailserver role concurrent with mail delivery.  As for password management, I want to be sure I understand what you're trying to accomplish.  I suggest opening two separate issues, and let's work through it there so we can document the thinking.
+",mikeashley,oskapt
+576,2016-08-10 08:42:45,"@oskapt I appreciate the effort you put into this.  Thank you.  Could you separate the problem(s) you are trying to solve from your implementation?  @carljm is making some good points, for example, about alternative and probably more robust ways of addressing the race condition that exists when rerunning the mailserver role concurrent with mail delivery.  As for password management, I want to be sure I understand what you're trying to accomplish.  I suggest opening two separate issues, and let's work through it there so we can document the thinking.
+",mikeashley,carljm
+557,2016-05-09 08:49:20,"I agree with @carljm.  We shouldn't run the import script unconditionally.  I've seen such import scripts unconditionally drop tables if they already exist.  This would not be good if replaying a playbook on a system that has been running for a while.
+
+Before making a change, we should understand what really happened.  Can the problem be reproduced in a test setup?
+",mikeashley,carljm
+557,2016-05-17 15:23:48,"Sorry for the delayed reply, guys. I cannot confirm what actually happened, but I think @carljm is correct. The [OpenDMARC schema](http://apt-browse.org/browse/ubuntu/trusty/universe/amd64/opendmarc/1.2.0+dfsg-1/file/usr/share/doc/opendmarc/schema.mysql) is using `IF NOT EXISTS` clauses, so what's the problem of running it unconditionally? The SQL engine will handle the potential conflict.
+",tomasbedrich,carljm
+557,2016-12-22 19:10:18,@tomasbedrich thanks for the workaround,nfedyashev,tomasbedrich
+554,2016-05-03 00:08:04,"@tomasbedrich This is looking better. Since you're proposing we run the renewal check daily, I want to be sure: the pre-hook and post-hook only run if the certificates need to be renewed, correct?  It looks that way from the log you posted.  Have you (or @carljm?) done any more checking to be sure about the semantics of those options?
+",mikeashley,tomasbedrich
+554,2016-05-03 00:08:04,"@tomasbedrich This is looking better. Since you're proposing we run the renewal check daily, I want to be sure: the pre-hook and post-hook only run if the certificates need to be renewed, correct?  It looks that way from the log you posted.  Have you (or @carljm?) done any more checking to be sure about the semantics of those options?
+",mikeashley,carljm
+548,2016-04-25 08:37:09,"@Dosenpfand This is a good update to the README.  Please squash the commit, and I'll merge it in.
+",mikeashley,Dosenpfand
+548,2016-04-26 07:39:29,"@mikeashley done
+",Dosenpfand,mikeashley
+539,2016-03-24 14:43:26,"@neuhaus I had tried with the readme first but the first step it is saying `1. Get a wildcard SSL certificate` where its using the file `roles/common/files/wildcard_private.key` but that file and folder is not yet available. From here starts the confusion.
+",itsazzad,neuhaus
+535,2016-04-06 07:18:23,"Looks good to me.  @neuhaus, any other comments?
+",mikeashley,neuhaus
+533,2016-04-05 18:16:19,"@neuhaus This PR doesn't change the fact that Apache is stopped before running the letsencrypt client, it just moves that logic directly into the `gencert` script instead of having it in Ansible.
+
+The LE config that @mikeashley set up uses the `standalone` letsencrypt plugin, which runs its own webserver, thus it needs ports 80/443 available, thus we have to shut down our Apache first.
+
+It might be worth considering whether we should instead use the `apache` or `webroot` plugin, and have our own Apache instance serve the LetsEncrypt confirmation stuff. Then we wouldn't need to bounce it. I'm guessing @mikeashley might have more insight as to why he didn't choose that route.
+
+See http://letsencrypt.readthedocs.org/en/latest/using.html#plugins for more on the available LE plugins.
+
+I can (and will) add a comment into the `gencert` script clarifying the above.
+",carljm,neuhaus
+533,2016-04-06 07:15:01,"I think these are good changes and should be merged.  @neuhaus ?
+
+Issue #509 suggests not bouncing Apache.  We agreed this is the right thing to do.  We're just waiting for a patch from me or somebody else to make it happen.
+",mikeashley,neuhaus
+527,2016-11-28 15:34:13,"I am getting 
+
+`/decrypted/dspam/junk_training.sh: line 19: syntax error near unexpected token `|'
+/decrypted/dspam/junk_training.sh: line 19: `domains=({{ domain_list.stdout_lines|join(' ') }})'`
+
+But I want to make sure that I am installing this properly. Did you indicate that all the files should go in the mailserver directory (the appropriate places). I noticed you had a main.yml that I cannot figure out where to put. I had manually added everything first to test it out but I don't think that the domain_list is incorrect...
+
+@oskapt if you could give me some 10 second advice I would be super appreciative as I think this is a huge essentiall addon
+",shaneonabike,oskapt
+527,2016-11-28 16:18:29,@oskapt The spam training is a great addition. Could you have a look at PR #617 / issue #611 ? Are you proposing the same thing with your gist?,neuhaus,oskapt
+526,2016-03-11 14:33:21,"@ariddell I have looked through all your changes. This would be a great improvement to sovereign.
+",Yannik,ariddell
+526,2016-03-11 16:31:13,"Thanks for removing the openvpn part, great work, @ariddell!
+",Yannik,ariddell
+526,2016-04-22 12:44:21,"(Line comments have been addressed)
+
+This is indeed ""only a small part of addressing resuability"", as @mikeashley puts it. The title of the PR is perhaps too ambitious. I would love to do more.
+
+I find that inter-dependencies like postgres are difficult to deal with in ansible. I haven't seen a satisfactory solution really (although some of @drybjed's tricks in https://github.com/debops/debops are interesting). My sense is you need some sort of key-value store to register what roles have been successfully run. I'm not sure sovereign's quite ready for that. It might be easier, in practice, to remove the inter-dependencies with role-specific databases.
+",ariddell,mikeashley
+526,2016-04-22 13:07:31,"@ariddell You are exactly right, some way to store a state in Ansible (which is inherently stateless by design) so that it can be carried over between the playbook executions, either in the same `ansible-playbook` run, or on subsequent runs, is needed to get full idempotency. In DebOps, I'm doing this using Ansible local facts stored on remote hosts (a JSON data structure with key/value data relevant to a particular role).
+
+In the case of PostgreSQl support, which is done by the [debops.postgresql_server](http://docs.debops.org/en/latest/ansible/roles/ansible-postgresql_server/docs/getting-started.html) role on the server side, and [debops.postgresql](http://docs.debops.org/en/latest/ansible/roles/ansible-postgresql/docs/getting-started.html) role on the client side, I use Ansible local facts to pass the relevant data between two roles. The default variables are not good for this, because when a role is not included in the play, its variables are not ""loaded"" by Ansible. Other forms of variables available in Ansible are either not modifable through Ansible inventory, or the inventory itself which should be left under user control.
+
+If you wonder why there are two PostgreSQL roles (and MariaDB, and similar), this allows an easy setup where the database server is on one host and clients that access the database are on another host(s).
+
+As for remembering what roles have been executed before... I don't think that's really needed. You just need to ensure that each role is idempotent, and using the playbook, run your roles in the correct order. For example, my application roles don't really care if `nginx` role has been executed or not, they expect the webserver to just be there when it's needed.
+",drybjed,ariddell
+526,2016-04-25 08:22:54,"I recommend we take this PR, but it would be good to get a look from one more committer.  @neuhaus or @jplock or @lukecyca?
+
+Documentation still needs updated.  Also, has this been tested?  @ariddell are you sure about password migration?  People upgrading their Debian 7 servers would need to do this.
+",mikeashley,ariddell
+526,2016-04-25 12:52:13,"I have tested this. I'll do some additional testing about the password
+migration when I write the docs.
+
+On 04/25, Mike Ashley wrote:
+
+> I recommend we take this PR, but it would be good to get a look from one more committer.  @neuhaus or @jplock or @lukecyca?
+> 
+> Documentation still needs updated.  Also, has this been tested?  @ariddell are you sure about password migration?  People upgrading their Debian 7 servers would need to do this.
+> 
+> ---
+> 
+> You are receiving this because you were mentioned.
+> Reply to this email directly or view it on GitHub:
+> https://github.com/sovereign/sovereign/pull/526#issuecomment-214203423
+",ariddell,ariddell
+526,2016-05-21 16:23:02,"@ariddell Are you ready for this to be merged? If so, I'll do a final review and likely do some testing.
+",mikeashley,ariddell
+526,2016-05-21 20:19:57,"It's ready except for documentation updates. I'm going to try to test it
+fully this week and write the docs.
+
+On 05/21, Mike Ashley wrote:
+
+> @ariddell Are you ready for this to be merged? If so, I'll do a final review and likely do some testing.
+> 
+> ---
+> 
+> You are receiving this because you were mentioned.
+> Reply to this email directly or view it on GitHub:
+> https://github.com/sovereign/sovereign/pull/526#issuecomment-220786773
+",ariddell,ariddell
+526,2016-05-29 20:42:11,"Regarding secrets, I like the way @ariddell has done it.  It makes the secrets available to me in text files on my local machine without any fanfare.  I can commit them to my private branch.  I can easily copy them to use when logged into my server.
+
+I tested all roles except tarsnap.  The variable `irc_timezone` got dropped accidentally.  I submitted a PR to @ariddell to correct it.  Once this PR is updated, I'll merge it.  We'll need some guidance on the wiki on how to migrate passwords in the .yml files to text files in the `secret` directory.
+",mikeashley,ariddell
+525,2016-07-03 08:59:59,"@ariddell #526 was merged.  Can you confirm whether this PR is ready to go or update it?
+",mikeashley,ariddell
+507,2016-04-22 12:14:39,"I'm not able to reproduce the debconf problems I encountered while upgrading from Wheezy to Jessie when doing a clean install.  The debconf tasks in `roundcube.yml` run fine.  They update the configuration database correctly.
+
+I don't think it's worth the effort to root cause and find a fix for a problem that only occurs on upgrades.  I suggest instead we document the workaround on the wiki.
+
+@neuhaus Any opinions on this?  I think this PR is still our best proposal for how to use the packaged distribution of roundcube correctly.
+",mikeashley,neuhaus
+507,2016-06-04 14:27:26,"@mikeashley Thank you! Your workaround helped resolve the problem, and all is fine.
+
+I was looking at the diff between the file created by manual install and the one generated by sovereign's templates, and I couldn't pin down the problem. But at least I have a working setup, so thank you.
+",aminb,mikeashley
+504,2016-03-07 20:43:02,"@ariddell a reputable source is at http://mywiki.wooledge.org/ParsingLs but I guess keeping `ls` is fine as long as it's not demonstrably broken in this case.
+",nodiscc,ariddell
+504,2016-03-07 20:54:46,"I think it is definitely something worth changing either to use `find` or to use the Google method. @nodiscc do you want to submit a PR?
+",ariddell,nodiscc
+504,2016-03-07 22:41:23,"@ariddell why not? Using `find`, and the `$(command)` notation instead of backticks would be cleaner. I would also use `set -o errexit` so that the script exits with non-zero return code if something goes wrong. This way the ansible task would fail and the user would be notified. Is this ok?
+",nodiscc,ariddell
+504,2016-03-09 18:26:08,"Finally tested this live. Everything appears to be working. Thanks again @mikeashley 
+",ariddell,mikeashley
+487,2016-03-05 19:43:13,"No problem @ariddell 
+This is done and I also added a todo on `.travis.yml`
+",spk,ariddell
+482,2016-02-19 08:27:53,"@neuhaus Using a GPG key to encrypt the backup RSA key is an excellent idea! That just solved my problem with implementing HPKP in a somewhat sane way, thank you. :-)
+",drybjed,neuhaus
+476,2016-02-06 10:46:40,"@neuhaus I am delaying rebasing the jessie LE branch until this is resolved.
+",mikeashley,neuhaus
+476,2016-02-11 14:16:30,"@neuhaus would you mind merging? (merging non-minor PRs oneself is a faux pas by convention, right?)
+",ariddell,neuhaus
+476,2016-02-11 14:38:41,"@ariddell Not at all! It's a good convention.
+",neuhaus,ariddell
+471,2016-01-28 13:40:32,"Ok, I've cherry-picked everything #476. @neuhaus, mind having a look?
+",ariddell,neuhaus
+468,2016-01-19 14:29:23,"@neuhaus that looks good. It looks like both encfs and ext4 leak the same information (# files, permissions, approximate sizes) but that ext4 is in the kernel and will enjoy, I would assume, a greater likelihood of long-term support.
+",ariddell,neuhaus
+468,2016-05-19 21:33:13,"@ariddell Is this still a problem on Digital Ocean?  I'm not seeing any problems with it on Linode with Debian 8.1.
+",mikeashley,ariddell
+462,2016-01-19 08:28:44,"@neuhaus the time I can devote to this is limited, but I will add documentation once the role is well tested. For now, I don't know of a nice way to migrate the data. Radicale and Owncloud technically don't collide, you can run them at the same time. The question is whether you want to tolerate the feature overlap in a standard installation. 
+To develop, I am using vagrant / debian78. I am still waiting for progress on the letsencrypt role to start deploying on live servers.
+
+Radicale works well on Android (davdroid), iOS and OS X. As for Thunderbird, I don't think it will work (then again, I have not found any Caldav / Carddav implementation that works well with Thunderbird).
+Please have a look at the Radicale user documentation for specific clients:
+http://radicale.org/user_documentation/
+",simontretter,neuhaus
+462,2016-03-11 11:37:15,"@neuhaus Here you go. This is untested as I am traveling. 
+
+I very much dislike mixing different package management software and having to package myself. In this instance, I see no other option. 
+",simontretter,neuhaus
+462,2016-03-11 13:06:43,"@neuhaus I removed it.
+",simontretter,neuhaus
+462,2016-09-09 09:52:53,"@mikeashley There still is some work needed. First problem as mentioned is that to have consistency through all supported linux flavours, we would need to use the pip version. I would want to avoid that (or at least wait for a proposal on how to update pip installed packages). 
+
+Any suggestions on how to handle this? I would put some more work in next week to test the recent radicale version and then give you a more qualified answer.
+",simontretter,mikeashley
+462,2016-10-01 14:44:32,"@mikeashley here is an update. This installs radicale via apt on Ubuntu >=16. Debian and older Ubuntu versions get the pip variant. I had to switch from the database backend to the filesystem one because that seems to be the only reliable one. Does /decrypted/radicale seem like a good spot to put the data? I also integrated radicale with apache. This means radicale now goes through https://dav.mydomain.com on port 443 and apache handles TLS. 
+
+I tested in on Debian wheezy syncing between Evolution and davdroid. 
+All you need to know is to get started: 
+https://dav.mydomain.com/yourusername/nameofaddressbooktocreate
+https://dav.mydomain.com/yourusername/nameofcalendartocreate
+
+Now what's left to do is to properly implement the apache authentication to replace the radicale one. And maybe use fail2ban for it.
+
+http://radicale.org/user_documentation/#idauthentication
+
+@neuhaus Bitteschön. everything is on radicale 1.1.1 now. 
+",simontretter,mikeashley
+462,2016-10-01 14:44:32,"@mikeashley here is an update. This installs radicale via apt on Ubuntu >=16. Debian and older Ubuntu versions get the pip variant. I had to switch from the database backend to the filesystem one because that seems to be the only reliable one. Does /decrypted/radicale seem like a good spot to put the data? I also integrated radicale with apache. This means radicale now goes through https://dav.mydomain.com on port 443 and apache handles TLS. 
+
+I tested in on Debian wheezy syncing between Evolution and davdroid. 
+All you need to know is to get started: 
+https://dav.mydomain.com/yourusername/nameofaddressbooktocreate
+https://dav.mydomain.com/yourusername/nameofcalendartocreate
+
+Now what's left to do is to properly implement the apache authentication to replace the radicale one. And maybe use fail2ban for it.
+
+http://radicale.org/user_documentation/#idauthentication
+
+@neuhaus Bitteschön. everything is on radicale 1.1.1 now. 
+",simontretter,neuhaus
+462,2016-10-28 06:06:51,"I don't want to take this thread too far off topic, but as someone planning to get sovereign up and running, I was wondering what is causing people's mistrust of ownCloud. @neuhaus and @mikeashley, can you shed some light for me? Thanks!
+",simonplend,mikeashley
+462,2016-10-28 06:06:51,"I don't want to take this thread too far off topic, but as someone planning to get sovereign up and running, I was wondering what is causing people's mistrust of ownCloud. @neuhaus and @mikeashley, can you shed some light for me? Thanks!
+",simonplend,neuhaus
+451,2016-01-16 13:54:12,"Just a reminder: this PR is currently going to be merged into master (rather than the jessie branch). It seems like there's agreement it should be merged into the jessie branch.
+
+When this is done I'm ready to test it + the jessie branch. Thanks for all your work on this @mikeashley.
+",ariddell,mikeashley
+451,2016-01-16 15:37:03,"@neuhaus I appreciate the detailed review.  Thank you!
+
+Next push of this PR will be based on the jessie branch unless there are objections.
+",mikeashley,neuhaus
+451,2016-01-17 18:35:41,"I rebased onto the jessie branch.  Also, these last seven commits address feedback from @neuhaus.  I haven't yet tried invoking the LE client in a way that avoids having to stop Apache.
+",mikeashley,neuhaus
+451,2016-02-06 14:54:20,"Any more input?  I am tempted to prototype the nginx path to see it looks cleaner.
+
+@ariddell I am curious to know what problems the current redirect handling has caused in the past.
+",mikeashley,ariddell
+451,2016-02-06 15:11:15,"For example, #360 and #425. I wouldn't say these are necessarily
+""problems"" but I do think these are annoyances which would be
+ameliorated by clearly separating the task of redirecting from 80
+to 443 from the task of serving content on 443. It's hard to separate
+the tasks any more than by having different programs do them. It's also
+a separation which is consistent with the way nginx is often used.
+
+On 02/06, Mike Ashley wrote:
+
+> Any more input?  I am tempted to prototype the nginx path to see it looks cleaner.
+> 
+> @ariddell I am curious to know what problems the current redirect handling has caused in the past.
+> 
+> ---
+> 
+> Reply to this email directly or view it on GitHub:
+> https://github.com/sovereign/sovereign/pull/451#issuecomment-180781696
+",ariddell,ariddell
+451,2016-02-06 15:13:58,"I also love the idea (implicit, I realize) that port 80 is no longer for
+serving traffic but really it's just a dedicated port for
+""communicating"" with an ACME service like Let's Encrypt.
+
+On 02/06, Mike Ashley wrote:
+
+> Any more input?  I am tempted to prototype the nginx path to see it looks cleaner.
+> 
+> @ariddell I am curious to know what problems the current redirect handling has caused in the past.
+> 
+> ---
+> 
+> Reply to this email directly or view it on GitHub:
+> https://github.com/sovereign/sovereign/pull/451#issuecomment-180781696
+",ariddell,ariddell
+451,2016-02-06 17:43:37,"@neuhaus A think a bug with your recommended approach is that the initial certificate generation will fail, because the roles that put down the virtual host configurations have not run yet.  It will succeed on the second and subsequent runs of the playbook.
+",mikeashley,neuhaus
+451,2016-02-06 18:22:12,"@ariddell Ha!  #360 burned me on the blog role virtual host changes for LE as well.
+",mikeashley,ariddell
+451,2016-02-06 18:38:07,"@mikeashley if no VirtualHost is configured in Apache it should use the default host. As long as the `Alias` is configured there, it will work.
+
+@aridell I don't mind switching to nginx completely, but I'm not fond of using two different pieces of HTTP server software on one machine. It just wastes RAM (which is the most expensive resource on a rented server). It also doubles the attack surface. Apache is perfectly capable of serving this redirect (as is nginx, of course).
+
+We can try to get rid of all `VirtualHost` instances on port 80 and use `mod_redirect` on the default instance listening on port 80 to do the redirects in a generic way and an `Alias` to serve the ACME files if you guys prefer that.
+
+That said, I'm not the one who is implementing this feature so if you love this idea, don't mind my babbling.
+",neuhaus,mikeashley
+445,2016-02-17 12:36:49,"This still needs some work. @Friz-zy you mentioned you would split this into different PRs. Looking forward to them.
+",ariddell,Friz-zy
+440,2015-12-08 21:37:12,"Thanks @danmilon. It's great to have these examples.
+
+DebOps looks interesting. I do like the repo per role approach. I'm still not entirely clear on how you deal with interdependencies. If DebOps is any guide, it will be some work to break apart our roles into standalone roles.
+",ariddell,danmilon
+440,2016-01-18 10:41:54,"@neuhaus That would be good, but would it be ok to keep such support on a separate branch?
+",mikeashley,neuhaus
+440,2016-01-18 10:48:58,"@mikeashley I don't see why not
+",neuhaus,mikeashley
+440,2016-03-07 10:03:33,"@Yannik How does the current approach reduce the number of people who can use and contribute to the sovereign packages?
+You can just activate the roles you want and deploy it. Same for changes.
+",neuhaus,Yannik
+440,2016-03-07 10:07:18,"@neuhaus Most people using ansible will simply add a dependency to a specific role their `requirements.yml` and then add the necessary variables to their host_vars/group_vars/playbook to use a role. This is not possible with sovereign. The roles are very tightly coupled at the moment which makes using them even harder. A separation of concerns into individual repos would help with this naturally.
+",Yannik,neuhaus
+440,2016-03-07 11:01:23,"To quote @conorsch (and @danmilon @KyleOndy @lukecyca):
+
+> For what it's worth, I follow this repo because I believe in the project, but I'm not currently using any of the roles because they're all bundled up together. That batteries-included bundle structure goes against the grain of how Ansible is designed to work—particularly with respect to roles.
+> 
+> Consider this a +1 for splitting up the roles. It's then much easier to support multiple versions of a distro, since you're mostly importing different package lists, or swapping different config lines according to ansible_distribution_version.
+
+I do like the project, but I am unable to use any of the roles because of the current monolithic structure of the project. And many people seem to be in the same situation. Having software reusable is the right approach in 99% of the cases. 
+I don't see a strong argument for a monolithic structure in sovereign.
+",Yannik,danmilon
+440,2016-03-07 11:01:23,"To quote @conorsch (and @danmilon @KyleOndy @lukecyca):
+
+> For what it's worth, I follow this repo because I believe in the project, but I'm not currently using any of the roles because they're all bundled up together. That batteries-included bundle structure goes against the grain of how Ansible is designed to work—particularly with respect to roles.
+> 
+> Consider this a +1 for splitting up the roles. It's then much easier to support multiple versions of a distro, since you're mostly importing different package lists, or swapping different config lines according to ansible_distribution_version.
+
+I do like the project, but I am unable to use any of the roles because of the current monolithic structure of the project. And many people seem to be in the same situation. Having software reusable is the right approach in 99% of the cases. 
+I don't see a strong argument for a monolithic structure in sovereign.
+",Yannik,lukecyca
+440,2016-03-07 15:55:07,"I agree with @mikeashley in that I don't think we should break apart the roles.  There's nothing preventing users from excluding roles using tags.  We could also define ansible `meta` properties to manage which roles depend on other roles if needed.
+",jplock,mikeashley
+440,2016-03-07 16:02:41,"@carljm that's basically what I do as well.  I've got a personal private fork of sovereign with my local modifications (like `vars/user.yml`) that I periodically pull from upstream.  I've then commented out the services that I definitely don't want to use (like `newebe`) and then re-run the playbooks.  I don't want to have to keep lots of repos up to date or use git modules personally.
+",jplock,carljm
+440,2016-03-07 16:14:15,"I'll think about making a POC (using the `requirements.yml` approach mentioned by @Yannik) just so folks could see what it might look like. In practice, I do what @jplock describes but I'd like to also add one or two custom roles and it's hard to do that with the existing setup.
+",ariddell,Yannik
+440,2016-03-07 16:14:15,"I'll think about making a POC (using the `requirements.yml` approach mentioned by @Yannik) just so folks could see what it might look like. In practice, I do what @jplock describes but I'd like to also add one or two custom roles and it's hard to do that with the existing setup.
+",ariddell,jplock
+440,2016-03-07 16:15:26,"@ariddell Why is it hard to add custom roles with the existing setup?
+",carljm,ariddell
+440,2016-03-07 18:46:49,"@mikeashley re LE support, one oddity I noticed is that the README mentions setting the `subdomains` var in `vars/user.yml`, but no such var exists or is referenced anywhere. As far as I can tell, the top-level `{{ domain }}` is the only one included in the LE cert request? See https://github.com/sovereign/sovereign/blob/jessie/roles/common/tasks/letsencrypt.yml#L34
+
+Not sure if this is an actual problem (the cert seems to be working for SMTP and IMAP at least, so far, even at the `mail.` subdomain) or just a documentation inconsistency.
+",carljm,mikeashley
+440,2016-03-07 22:37:27,"@carljm The documentation is out of date.  It documents the penultimate design that I was able to simplify.  We'll need to correct the README.  Thanks for the catch!
+",mikeashley,carljm
+440,2016-03-07 22:40:40,"@mikeashley PR submitted in #514.
+",carljm,mikeashley
+439,2015-12-05 12:38:40,"@Friz-zy on another note, do you have a working openvpn config for jessie? We're missing that.
+",ariddell,Friz-zy
+432,2016-10-03 20:03:34,"OK, postgres has been taken care of.
+The only thing that still uses MySQL is OpenDMARC, and we want to get rid of having two DB servers so I don't expect the MySQL installation to move to the ""common"" roles, instead I think it will disappear. Closing. Thanks for the PR, @wsteitz !
+",neuhaus,wsteitz
+429,2015-12-14 16:37:08,"I found an [old bug](https://community.openvpn.net/openvpn/ticket/334): looks like ios client doesn't understand *-mtu options. Unfortunately I don't have an ios for tests...
+I think in your case you can only disable it.
+@ariddell, should we add a comment into config about IOS?
+",Friz-zy,ariddell
+429,2015-12-16 12:19:34,"I agree with @neuhaus
+",Friz-zy,neuhaus
+429,2015-12-16 12:41:11,"Great, @Friz-zy, will you submit a PR?
+",ariddell,Friz-zy
+427,2016-01-17 18:17:45,"@neuhaus Done!
+",sread,neuhaus
+426,2015-12-12 12:50:57,"Hey @ariddell :-) Ironically, Sovereign was one of the catalysts for making DebOps - I just wanted to do it better ;P
+
+Current `debops.pki` available in the `master` branch was my first attempt at making any sort of Public Key Infrastructure, and it shows. It's like a house of cards, you change one thing and everything falls apart. I wrote it almost a year ago, and always planned to redo it after some time, when I found out what worked and what didn't. Now I'm ready to write it again, this time better and easier to control, and with more bells and whistles like ACME.
+
+There is no ""DebOps ACME"" role, the ACME support will be incorporated into `debops.pki`. The reason is, not all hosts that can be managed by DebOps are expected to be reachable by the Let's Encrypt CA over the Internet, and I still want them to use TLS connections. So the support for different types of certificates will be kind of stackable - by default the internal certificates will be used, if ACME are present they will be preferred, and any external certificates provided by the user via a script will take precedence (think their own company PKI infrastructure).
+
+Don't think of the set of certificates signed by Let's Encrypt as only for the webserver, it's a mistake. X.509 certificates are agnostic. You just need to make sure that you provide them in a standardized location and configure your various services to use them. Coincidentally, that's what `debops.pki` aims to do, to make a stable and known environment for other roles to use certificates. For example path to where certificates are stored is saved as an Ansible local fact, which other Ansible roles can use to configure certificate support in their services. That way, I don't need to worry about `nginx` role maintaining its own set, it just hooks up to `debops.pki` infrastructure if it's present, automatically.
+
+As for using Sovereign with DebOps roles... One issue might be heavy use of role dependencies in roles like `debops.nginx` or similar. I'm currently in the middle of refactoring things to move ""hard"" role dependencies into [the corresponding playbook](https://github.com/debops/debops-playbooks/tree/master/playbooks/service) of each role - after that you could use them in Sovereign without much issue, apart from handling missing firewall support, for example. But it will take some time, other things like ACME took precedence. You can right now disable `debops.nginx` role dependencies by setting `nginx_dependencies: False` in the Ansible inventory, that way they will be just skipped.
+",drybjed,ariddell
+425,2015-12-10 10:03:07,"Does changing fqdn.conf to ""ServerName localhost"" also fix the issue for you, @lukecyca ?
+",neuhaus,lukecyca
+422,2015-11-03 20:03:11,"@spk May I ask in what case this would break? Trying to learn more about ansible and your patch looks fine to me.
+",nodiscc,spk
+422,2015-11-03 21:31:12,"Hi @nodiscc, it does not break anything but even if this not changed the `dest` ansible will see as changed every time we play the playbook, it should be idempotent if not change has been made.
+Maybe there is a solution on the Internet
+",spk,nodiscc
+422,2015-11-03 21:47:57,"@nodiscc I've submitted another PR, thanks for the question it help me to fix the problem!
+",spk,nodiscc
+415,2016-02-29 08:39:08,"Hi @winks, any updates on this?
+",neuhaus,winks
+414,2015-09-27 12:08:19,"I concur with @nodiscc - if we name the roles after the software, it makes it easier to manage several alternatives.
+",neuhaus,nodiscc
+414,2015-09-27 19:37:59,"I agree with @ariddell in that we should just update the `jessie` branch to the latest as that will eventually be merged into `master`.
+",jplock,ariddell
+408,2015-08-20 06:50:09,"@TheFu I believe that @ariddell is not suggesting that the playbooks should default to the root user, but simply that rather than enforce the usage of a user called ""deploy"", you should be able to choose which non privileged user you want.
+",nicbarker,ariddell
+408,2015-08-20 12:32:16,"Right, I think the question is this: should using `deploy` be a
+requirement (as it is now) or a strong recommendation?
+Also -- how insecure _is_ the default Digital Ocean setup (and the one
+enforced by sovereign, IIRC)? You have a root login but it's ssh public
+key only.  Surely if someone compromises _your ssh key_ figuring out the
+username you're using to login is pretty trivial, right? Or am I missing
+something?
+
+On 08/19, Nic Barker wrote:
+
+> @TheFu I believe that @ariddell is not suggesting that the playbooks should default to the root user, but simply that rather than enforce the usage of a user called ""deploy"", you should be able to choose which non privileged user you want.
+> 
+> ---
+> 
+> Reply to this email directly or view it on GitHub:
+> https://github.com/sovereign/sovereign/issues/408#issuecomment-132909955
+",ariddell,ariddell
+407,2015-09-08 01:09:15,"@hippich no need to close it IMHO. There are still issues with OpenDMARC and your PR fixes at least one(the missing python-mysqldb package required by ansible).
+",miloshadzic,hippich
+407,2015-09-09 15:46:49,"@mccutchen I saw it. I actually tried to rework OpenDMARC for postgres but it's too much work.
+",miloshadzic,mccutchen
+406,2015-09-13 14:31:11,"I added a wiki page for this to help people out. Maybe we could add something to the README also just to flag this or at least tell people to head to the [wiki](https://github.com/sovereign/sovereign/wiki/Apache-Stapling-%28Compatibility-only-with-Apache-2.4%29) if they are having issues. 
+
+@hippich do you think you could provide more info on the wiki if people want to upgrade their apache. I want to do that but was curious as to whether I needed to upgrade my PHP also. I suspect not right?
+",shaneonabike,hippich
+406,2015-11-18 11:53:26,"What @sread said. I run into this issue also. @al3x what is the proposed sollution for jessie? I can send a PR.
+",danmilon,sread
+406,2015-11-24 13:46:53,"Thanks @danmilon, have you tested it on wheezy and something else?
+",neuhaus,danmilon
+401,2015-08-19 16:14:27,"Not sure if you're still working on this, @ariddell, but yes, `/etc/ufw/before.rules` is where I'd put the iptables rules. See here for an example: https://github.com/conorsch/ansible-digitalocean-vpn/blob/master/configure-server/files/ufw_before.rules
+",conorsch,ariddell
+401,2015-09-14 17:59:06,"@ariddell The forwarding gets enabled here: https://github.com/conorsch/ansible-digitalocean-vpn/blob/master/configure-server/tasks/ufw.yml#L21 You're right that the role allows general forwarding of packets—that's a lazy hack, and precisely why I'm interested in getting a more stable and reusable role working as part of sovereign, so I can borrow it. =) 
+
+Regarding the dnsmasq service restart, I haven't tested my role thoroughly for leakage, so let's test further before removing.
+",conorsch,ariddell
+401,2017-02-06 18:34:52,"@neuhaus @ariddell Consider this for inclusion: https://github.com/Stouts/Stouts.openvpn
+
+It seems the pragma for sovereign is to commit roles directly to version control, rather than use submodules or galaxy requirements, so it may not be trivial to incorporate. That said, if it saves you any time writing custom openvpn logic, have at it!",conorsch,ariddell
+401,2017-02-06 18:34:52,"@neuhaus @ariddell Consider this for inclusion: https://github.com/Stouts/Stouts.openvpn
+
+It seems the pragma for sovereign is to commit roles directly to version control, rather than use submodules or galaxy requirements, so it may not be trivial to incorporate. That said, if it saves you any time writing custom openvpn logic, have at it!",conorsch,neuhaus
+399,2015-12-10 11:26:35,"@neuhaus This was just something I noticed. I personally prefer how the DebOps project does things so I am not using sovereign. I opened issues for Apache and Postfix.
+",ypid,neuhaus
+397,2015-07-16 16:44:28,"@jplock I think that's theoretically possible, given its dependency on OpenDBX (from [the docs](http://www.trusteddomain.org/opendmarc/README)):
+
+> To compile and operate, this package requires the following:
+> - OpenDBX (http://www.linuxnetworks.de/doc/index.php/OpenDBX) which acts as a middleware layer between OpenDMARC and your SQL backend of choice
+
+But the schema and OpenDMARC config that's already committed in this repo assume MySQL and I couldn't find any useful info on using Postgres instead.  [This unanswered question on the mailing list](http://www.trusteddomain.org/pipermail/opendmarc-users/2013-October/000194.html) from 2013 is the only reference I could find, though maybe someone else around here has some expertise and/or better Google-fu than me!
+",mccutchen,jplock
+380,2015-06-04 20:09:53,"Thumbs up from me!
+
+-Sven
+
+> Am 04.06.2015 um 20:03 schrieb Alex Payne notifications@github.com:
+> 
+> I'm concerned about becoming a bottleneck for future work on Sovereign. I'd like to move the project to the https://github.com/sovereign organization that @lukecyca grabbed a while ago, and in the process add some other maintainers who can push changes to master without waiting for my approval.
+> 
+> Right now, @lukecyca is the only other maintainer, and he's also quite busy. I'd like to invite @neuhaus, @ariddell, @synchrone, @jplock, @lvillani and whoever else would like to put their hands up to join as maintainers.
+> 
+> Sound good? Any objections?
+> 
+> —
+> Reply to this email directly or view it on GitHub.
+",neuhaus,lukecyca
+380,2015-06-04 20:09:53,"Thumbs up from me!
+
+-Sven
+
+> Am 04.06.2015 um 20:03 schrieb Alex Payne notifications@github.com:
+> 
+> I'm concerned about becoming a bottleneck for future work on Sovereign. I'd like to move the project to the https://github.com/sovereign organization that @lukecyca grabbed a while ago, and in the process add some other maintainers who can push changes to master without waiting for my approval.
+> 
+> Right now, @lukecyca is the only other maintainer, and he's also quite busy. I'd like to invite @neuhaus, @ariddell, @synchrone, @jplock, @lvillani and whoever else would like to put their hands up to join as maintainers.
+> 
+> Sound good? Any objections?
+> 
+> —
+> Reply to this email directly or view it on GitHub.
+",neuhaus,jplock
+380,2015-06-04 20:12:23,"Let's use this opportunity to set up some guidelines for everything that is added to the master branch. 
+My suggestion: Commits should be tested on Debian stable and Ubuntu LTS.
+
+-Sven
+
+> Am 04.06.2015 um 20:03 schrieb Alex Payne notifications@github.com:
+> 
+> I'm concerned about becoming a bottleneck for future work on Sovereign. I'd like to move the project to the https://github.com/sovereign organization that @lukecyca grabbed a while ago, and in the process add some other maintainers who can push changes to master without waiting for my approval.
+> 
+> Right now, @lukecyca is the only other maintainer, and he's also quite busy. I'd like to invite @neuhaus, @ariddell, @synchrone, @jplock, @lvillani and whoever else would like to put their hands up to join as maintainers.
+> 
+> Sound good? Any objections?
+> 
+> —
+> Reply to this email directly or view it on GitHub.
+",neuhaus,lukecyca
+380,2015-06-04 20:12:23,"Let's use this opportunity to set up some guidelines for everything that is added to the master branch. 
+My suggestion: Commits should be tested on Debian stable and Ubuntu LTS.
+
+-Sven
+
+> Am 04.06.2015 um 20:03 schrieb Alex Payne notifications@github.com:
+> 
+> I'm concerned about becoming a bottleneck for future work on Sovereign. I'd like to move the project to the https://github.com/sovereign organization that @lukecyca grabbed a while ago, and in the process add some other maintainers who can push changes to master without waiting for my approval.
+> 
+> Right now, @lukecyca is the only other maintainer, and he's also quite busy. I'd like to invite @neuhaus, @ariddell, @synchrone, @jplock, @lvillani and whoever else would like to put their hands up to join as maintainers.
+> 
+> Sound good? Any objections?
+> 
+> —
+> Reply to this email directly or view it on GitHub.
+",neuhaus,jplock
+380,2015-06-04 20:12:23,"Let's use this opportunity to set up some guidelines for everything that is added to the master branch. 
+My suggestion: Commits should be tested on Debian stable and Ubuntu LTS.
+
+-Sven
+
+> Am 04.06.2015 um 20:03 schrieb Alex Payne notifications@github.com:
+> 
+> I'm concerned about becoming a bottleneck for future work on Sovereign. I'd like to move the project to the https://github.com/sovereign organization that @lukecyca grabbed a while ago, and in the process add some other maintainers who can push changes to master without waiting for my approval.
+> 
+> Right now, @lukecyca is the only other maintainer, and he's also quite busy. I'd like to invite @neuhaus, @ariddell, @synchrone, @jplock, @lvillani and whoever else would like to put their hands up to join as maintainers.
+> 
+> Sound good? Any objections?
+> 
+> —
+> Reply to this email directly or view it on GitHub.
+",neuhaus,neuhaus
+380,2015-06-04 21:04:27,"Sure! re: @neuhaus, perhaps it might be a good time to write a `CONTRIBUTING.md` (which github will show users submitting PRs)? For more elaborate examples, there's zeromq's ""Development Process"" http://rfc.zeromq.org/spec:22 and OpenStack's Hacking guidelines: http://docs.openstack.org/developer/hacking/
+",ariddell,neuhaus
+380,2015-06-05 02:44:19,"I've completed the migration to the new GitHub organization. Thanks again for grabbing that, @lukecyca.
+
+I've sent invitations to the contributors who've posted in this thread. I'm going to leave the issue open for several more days to let others put their hands up if they'd also like to be considered for the commit bit.
+
+@ariddell: we now have a `CONTRIBUTING.md` document. I don't think it'll end up being as exhaustive as OpenStack's, but right now it's just a stub.
+",al3x,ariddell
+380,2015-06-05 02:44:19,"I've completed the migration to the new GitHub organization. Thanks again for grabbing that, @lukecyca.
+
+I've sent invitations to the contributors who've posted in this thread. I'm going to leave the issue open for several more days to let others put their hands up if they'd also like to be considered for the commit bit.
+
+@ariddell: we now have a `CONTRIBUTING.md` document. I don't think it'll end up being as exhaustive as OpenStack's, but right now it's just a stub.
+",al3x,lukecyca
+380,2015-06-05 03:04:14,"Great work, @al3x! I like that our org's identicon looks a bit like a castle turret. I guess that's as good a pictogram for ""Sovereign"" as any.
+
+![](https://avatars2.githubusercontent.com/u/6289855)
+",lukecyca,al3x
+380,2015-06-05 22:07:37,"@al3x Thanks for the invite! Since I've been inactive for a while, though, I prefer to submit contributions ""the usual way"" by forcing my stuff to go through review via pull requests so as to avoid making more harm than good :wink: 
+",lvillani,al3x
+380,2016-02-19 16:23:28,"@ariddell thankfully opened issue #501 for this
+",neuhaus,ariddell
+374,2015-05-30 17:26:40,"@Yannik Thanks for taking the time to leave these useful reports.
+",ariddell,Yannik
+374,2015-05-30 18:10:27,"Yes indeed! Lots to work on in the coming days.
+
+> On May 30, 2015, at 10:26, Allen Riddell notifications@github.com wrote:
+> 
+> @Yannik Thanks for taking the time to leave these useful reports.
+> 
+> —
+> Reply to this email directly or view it on GitHub.
+",al3x,Yannik
+374,2015-06-03 08:33:35,"@Yannik Thank you for opening this issue.
+If there is an active man-in-the-middle attack (such as stripping STARTTLS), the clients must be configured to enforce STARTTLS, otherwise the attacker can talk plain text to the client and use STARTTLS while talking to the server.
+
+That said, I think adding the submission port is The Right Thing.
+",neuhaus,Yannik
+374,2015-06-04 20:59:19,"@neuhaus Yeah, that's true. We need something like HSTS for smtp :)
+",Yannik,neuhaus
+374,2016-02-06 15:41:56,"@Yannik Until we have HSTS for smtp, what are the practical consequences of simply disabling/firewalling submissions on port 25 (but still allowing them on 587). I realize this is a bad idea -- but is it a horrible idea?
+",ariddell,Yannik
+372,2015-06-08 23:50:57,"I got the same errors as @jplock when I upgraded my box to the current master head. I had to upgrade dovecot using wheezy-backports:
+
+
+
+Then I re-ran the playbook.
+
+Not a huge deal if we're moving to Jessie soon, but master is unfortunately broken right now.
+",lukecyca,jplock
+372,2015-06-09 09:15:00,"I ran the playbook including @al3x's fix, but now I'm unable to retrieve mail, either through IMAP or Roundcube. `mail.err` reports `fatal: no SASL authentication mechanisms` and `roundcube/errors` reports `IMAP Error: Login failed for.... Could not connect to ssl://127.0.0.1:993: Connection refused in /usr/share/roundcube/program/lib/Roundcube/rcube_imap.php on line 184 (POST /?_task=login&_action=login)`
+
+Any ideas? (I'm still on wheezy) Thanks.
+",iboxifoo,al3x
+372,2015-06-09 09:17:25,"@iboxifoo Try removing the line with ""ssl_dh_parameters_length = 2048"" from your dovecot ssl config file `/etc/dovecot/conf.d/10-ssl.conf`
+Then restart dovecot (run `sudo service dovecot restart`)
+Which version of dovecot is installed on your system now? Check using `dpkg -l dovecot-core`
+",neuhaus,iboxifoo
+372,2015-06-09 09:22:15,"@neuhaus That did the trick! Any implications in commenting out line? Thanks
+",iboxifoo,neuhaus
+372,2015-06-09 09:26:58,"@iboxifoo You should eventually put it back in when you upgrade to Dovecot 2.2+ (which comes with Debian Jessie for example).
+Without it you are using 1024 bit DH params which are considered weak.
+You can read all about it at https://weakdh.org/
+",neuhaus,iboxifoo
+372,2015-06-09 09:31:11,"got it. thanks so much.
+
+> On Jun 9, 2015, at 2:27 AM, Sven Neuhaus notifications@github.com wrote:
+> 
+> @iboxifoo You should eventually put it back in when you upgrade to Dovecot 2.2+ (which comes with Debian Jessie for example).
+> Without it you are using 1024 bit DH params which are considered weak.
+> You can read all about it at https://weakdh.org/
+> 
+> —
+> Reply to this email directly or view it on GitHub.
+",iboxifoo,iboxifoo
+372,2015-06-13 10:05:51,"OK, I hope it's fixed now in commit 8b5ed21e3892caacd28fe4fd13368ea3f27f6b9f.
+The dovecot-solr package was also affected.
+@jplock Thanks for reporting this.
+",neuhaus,jplock
+366,2015-12-02 13:04:46,"Isn't sudo installed by default? If not, @cimm please submit a pull request :+1: 
+",neuhaus,cimm
+366,2015-12-02 13:07:18,"@neuhaus Was testing it on Debian 8, not 7 as it says in the README, my bad. Sorry.
+",cimm,neuhaus
+360,2016-09-16 12:57:32,"I wonder if Apache still has the problem originally described in this issue?  I was not able to reproduce it, and I set my fqdn to `ServerName {{ domain }}`.  @ariddell Do you know what version of Apache you were running when you reported this?
+",mikeashley,ariddell
+345,2015-01-21 09:17:59,"@lvillani thanks for the comment, I don't think so it can create any problem as here it will just save the defined rule. Can you please tell me, what kind of problem it can create if they work along. Thanks
+",arbabnazar,lvillani
+345,2015-01-21 19:10:41,"@ariddell thanks, definitely look into this and will update it. regards
+",arbabnazar,ariddell
+345,2015-03-22 05:37:45,"@al3x, you want me to remove the iptables-persistent or use it with ufw. Please elaborate. Thanks
+",arbabnazar,al3x
+344,2015-03-21 04:06:58,"For Roundcube, I use:
+
+
+
+and it works just fine.
+
+For my iPhone, however, I use:
+
+
+
+and it works just fine.
+
+Don't know if it helps but this is what works for me:
+- Roundcube version 1.1.0
+- OwnCloud version 8.0.2
+
+(I manually upgraded both)
+
+@al3x Do you use something else for webmail or do you not use webmail at all? (just curious)
+",norm2k,al3x
+344,2015-04-01 19:49:17,"@norm2k, I just upgraded to Owncloud 8.0.2, and it doesn't help, unfortunately. I do use Outlook/Windows Mobile for all my mail, but sometimes I am in the unfortunate position of having to check/respond to my mail through Roundcube. In those days, not having my contacts at hand does cause me some trouble.
+
+@al3x, If it's not too much of a trouble, we can just leave this issue open for a while, and I'll try to find some time to figure out what's causing this.
+",balajisivaraman,al3x
+341,2015-02-25 18:47:14,"@neuhaus Please do submit a PR :sunglasses: 
+",al3x,neuhaus
+334,2015-01-15 18:26:18,"Agreed. Thanks for reviewing, @neuhaus.
+",al3x,neuhaus
+332,2014-11-17 11:22:52,"Thanks for the fix @apsanz. Looks perfect.
+",ariddell,apsanz
+331,2015-01-15 16:51:27,"@mariusv I'd really like to merge your PR. Would you mind adding the conditional logic to the existing template?
+",al3x,mariusv
+331,2015-01-15 17:28:58,"@al3x , yep..sorry, I was a bit bussy. Done..removed duplicated template and added logic for Ubuntu as in my tests all Ubuntu have the same path
+",mariusv,al3x
+326,2014-11-10 20:31:46,"@ariddell true, it's just that I'm not very comfortable to send all documents they require (passport + national id). Being able to have separated certs for each domain/service I could create them for free and without any document, but just with the domain verification
+",xdmx,ariddell
+321,2014-11-04 22:50:24,"@neuhaus yep! i didn't finish though, just looked through the mailserver parts that are relevant to me.
+
+@al3x sorry about my initial reply btw, it was poorly worded and I edited it shortly after, but if you only saw the GitHub email I apologize for the lackluster wording it had!
+",taoeffect,al3x
+321,2014-11-04 22:50:24,"@neuhaus yep! i didn't finish though, just looked through the mailserver parts that are relevant to me.
+
+@al3x sorry about my initial reply btw, it was poorly worded and I edited it shortly after, but if you only saw the GitHub email I apologize for the lackluster wording it had!
+",taoeffect,neuhaus
+319,2014-11-06 09:49:05,"@mikeashley Check out the branch https://github.com/neuhaus/sovereign/tree/patch-1
+I took your changes and made the necessary modifications for Ubuntu support. I can't add my commit to this pull request, so I've send a pull request to you instead (https://github.com/mikeashley/sovereign/pull/2 )
+",neuhaus,mikeashley
+318,2014-11-04 15:52:48,"This PR makes sovereign consistent with itself (using port 465 throughout), so it's merge-able.
+
+I agree that 587 is more correct and that we should switch to it. @neuhaus, could open an issue to that effect (and submit a pull request if you are inclined).
+",lukecyca,neuhaus
+299,2014-11-02 16:28:57,"@philandstuff Yes, I'd absolutely include a monitoring-only Apache virtual host.
+",al3x,philandstuff
+297,2014-11-03 04:29:18,"@al3x It might sound strange but I actually switched from Debian 7.6 fresh installation to Ubuntu. Just because I had the same error there. But running the task encfs did not help to get rid of it. I did another clean install with Debian. This time ran into another issue with the mail server telling me that the database backend could not be reached. Because of this randomness I switched to Ubuntu. Here everything seems to be working nice besides encfs. Before this project I was running mailinabox which also had problems. It was because of the advanced partition layout my hoster delivers after a clean install. Perhaps the same applies here? That is my partition layout:
+- /dev/md2 1008G 2.1G 955G 1% /
+- none 4.0K 0 4.0K 0% /sys/fs/cgroup
+- udev 7.7G 4.0K 7.7G 1% /dev
+- tmpfs 1.6G 588K 1.6G 1% /run
+- none 5.0M 0 5.0M 0% /run/lock
+- none 7.7G 0 7.7G 0% /run/shm
+- none 100M 0 100M 0% /run/user
+- /dev/md1 488M 69M 394M 15% /boot
+- /dev/md3 1.7T 75M 1.7T 1% /home
+
+It should be about the same for Debian. 
+",razem-io,al3x
+274,2014-08-06 01:38:49,"@tilsammans: Thanks for that clarification.  Do you run the playbook again with only the mail role enabled?
+",the-solipsist,tilsammans
+274,2014-08-06 13:44:41,"@tilsammans If other roles are enabled, wouldn't they override changes that have been made since the last time they were run?  Wouldn't this mean that _all kinds of changes_ (including adding a new IRC chan to ZNC, changing of a user's password in Prosody, etc.) will have to be done through a Ansible rather than through the interface that software provides?
+",the-solipsist,tilsammans
+270,2014-07-24 19:43:46,"@ariddell According to documentation ""(not all methods are available on all platforms)"". Indeed, by looking at the source code it appears to be a thin wrapper over the crypt (3) POSIX function. POSIX 2008.1 says ""The encrypt() function shall provide access to an implementation-defined encoding algorithm."" Glibc on Linux allows callers to put a special string (e.g. ""$1$"", ""$5$"") at the beginning of the salt string to select the algorithm. As I interpret it, the specification allows basically everyone to do as they see fit.
+",lvillani,ariddell
+233,2016-10-24 01:40:29,"@neuhaus I never got around to segregating the Etherpad build into a separate branch. The commit with the bulk of the changes is https://github.com/jcamins/sovereign/commit/f377adacdccee244e22108b46ed1248e120177f9 though.
+",jcamins,neuhaus
+218,2014-04-11 00:10:41,"@PajamaSoft If your main account (named ""deploy"" by default) has sudo privileges you should be able to do `sudo su` and get in. Other than that I'm not sure.
+
+@nstanke The error in the roundcube logs doesn't seem too helpful – just the following repeated several time:
+
+
+",jgillman,nstanke
+216,2014-04-09 18:43:19,"I agree with @nstanke on this one.  I'd prefer a stable system over apache 2.4 honestly.  Let me hunt around to see if we have any other options.
+",jplock,nstanke
+214,2014-04-11 15:54:50,"@lukecyca Can you elaborate on your process? Assuming tarsnap, what exactly do you extract? Do you replace any files, etc? A detailed process would be VERY much appreciated :)
+",DomenicF,lukecyca
+211,2014-04-05 03:53:23,"@jplock Ah - my mistake. I must've forked sovereign prior to your commit. A merge from upstream master brought in your changes. I'll test them soon, but I suspect they'll sort my problem. Thanks.
+",qnm,jplock
+190,2014-03-20 21:33:25,"@nstanke `/etc/ssl/certs/wildcard_combined.pem` should be a copy of `/etc/ssl/certs/wildcard_ca.pem`, correct?
+",jgillman,nstanke
+190,2014-03-21 02:30:03,"@lukecyca Self signed using the instructions in the `README.textile`.
+
+The first time I didn't understand what ""Common Name"" was and just put in my own name. Oddly, this worked, though I would get browser errors saying that the domain didn't match what was on the cert. That's what I was trying to fix when I recreated it, this time using a wildcard for my domain: `*.gil.mn`
+
+(FYI, gil.mn is not using SSL. I only have it on for RoundCube and other services)
+",jgillman,lukecyca
+190,2014-04-10 19:50:53,"@nstanke @bryanjswift Awesome! This fixed the SSL issue for me as well, though in upgrading I now have a disconnected database as I was using the old sovereign which used MySQL. I will open a new issue for that as I have no idea how to upgrade/migrate.
+",jgillman,bryanjswift
+190,2014-04-10 19:50:53,"@nstanke @bryanjswift Awesome! This fixed the SSL issue for me as well, though in upgrading I now have a disconnected database as I was using the old sovereign which used MySQL. I will open a new issue for that as I have no idea how to upgrade/migrate.
+",jgillman,nstanke
+184,2014-03-09 23:07:13,"I'll just mention that plain IMAP login isn't working for me either, but that might be a separate issue, since this is the first time I'm trying and I might be trying wrong credentials (user field with/out `@example.com` etc.)
+
+Also, @jplock's recent commit 1bd900bfae touched some of the roundcube user/pass stuff, might it be related?
+",yuvadm,jplock
+184,2014-03-09 23:16:25,"IMAP seems to be working fine for me @yuvadm, so your issues there are maybe related to something else.
+",iboxifoo,yuvadm
+183,2014-03-25 22:17:23,"@nstanke Sadly I do not and I have no experience with Ansible. I configured it manually. I started with PHP-Push-2, realized that didn't work with Owncloud, and then moved to this. I can help you with configuring it though, spent many hours being quite frustrated with it.
+
+One big thing, you authenticate with ""user@domain.com"" to IMAP but you use ""user"" for Owncloud over CalDAV/CardDAV. PHP-Push-2 only can receive one set of credentials. To fix this I recommend opening up the source files for caldav.php and carddav_0c5.php under backend and putting in a regex to get just the local part of the email, something like ([^@]+) and use that as the username. This also means that your Owncloud and Dovecot passwords must be in sync.
+",T3hUb3rK1tten,nstanke
+178,2014-03-04 21:17:00,"Hi @nstanke it's a known issue: #116. If you remove the directory, re-run the playbook it should be back in working order.
+",tilsammans,nstanke
+178,2014-03-04 21:50:11,"Fixed. Thanks for your help @tilsammans.
+",nstanke,tilsammans
+171,2014-02-25 17:49:03,"@nstanke that's the error I was getting _before_ I submitted this change. Did you run the playbook before merging this change with an error? The playbook does not detect/cleanup the previous 302 HTML response. Will you look at the contents of /root/z-push-2.1.1-1788.tar.gz and see if it is an HTML file?
+",bryanjswift,nstanke
+171,2014-02-25 18:00:56,"@bryanjswift okay, just fixed it by deleting /root/z-push-2.1.1-1788.tar.gz and running the playbook again. Thank's for your help and fast response.
+",nstanke,bryanjswift
+171,2014-02-25 18:21:27,"@nstanke my pleasure, glad we were able to resolve quickly.
+",bryanjswift,nstanke
+169,2014-04-01 14:29:09,"This is resolved in the same way that @jsravn mentions. However, there's a problem with this method: if tarsnap fails, postgres won't be started again until it is manually started. Also, if the backup takes a long time, postgres will be down for quite some time.
+
+Postgres being down isn't just a ""I can't access services"" issue, it's actually needed for email receipt (spam checks hit the database). So postgres being down is kind of a big deal.
+
+I think pgdump would be a much better solution.
+",jimrollenhagen,jsravn
+167,2014-02-05 21:08:14,"@ariddell did you set up your TXT records to match what's inside of the default txt file in /etc/opendkim/keys/DOMAIN ? I'm writing a wiki guide, should have basic stuff done by later tonight but I'm hoping some devs can help with it as well: https://github.com/al3x/sovereign/wiki/Setting-up-on-DigitalOcean-with-Debian-7-%28IMCOMPLETE%29
+",DomenicF,ariddell
+156,2014-02-02 15:36:31,"I'm running the exact same setup as @nstanke and I also see the same message
+",jplock,nstanke
+150,2014-01-27 16:39:07,"Agreed that this should not be exposed to the Internet. It should be available only to localhost (and hence via an ssh tunnel as @do3cc suggested) or perhaps via the VPN.
+",lukecyca,do3cc
+149,2014-01-27 23:54:11,"@Korni22 I just destroyed my digitalocean instance and tried to reproduce the error but failed. There is one critical difference between my config and this one here, for debugging reasons I added a statement to ensure that the postgresql server got restarted. If you reboot your instance and rerun the script, does it still fail at the same step?
+",do3cc,Korni22
+149,2014-02-03 11:00:32,"@Korni22 can you update the README with the documentation of how to check for potential locales problems?
+I think running perl -v would show if there is a locales problem and the reconfigure locales would fix it. This should be part of setting up the server before ansible is run, and I guess this is limited to servers with customized debians, like on strato.
+",do3cc,Korni22
+149,2014-02-03 19:40:40,"@Korni22 Great idea.
+",al3x,Korni22
+148,2014-01-27 22:20:32,"This looks very promising, @do3cc. However, I think it would be even more maintainable if you replaced lines 17 - 27 of `roles/common/templates/etc_shorewall_rules.j2` with a templated list, moving those lines into the Ansible role itself.
+",al3x,do3cc
+148,2014-02-28 09:18:03,"Hi @lukecyca unfortunately no. I don't know if I will come to this, my focus shifted to using ansible with a lot more and more modular roles. It is more probable that I extract some parts of here into a role usable in the galaxy.
+",do3cc,lukecyca
+148,2014-05-07 23:05:04,"I'm +1 to @jplock. Fewer services to administer on the Sovereign side means less complexity overall.
+",al3x,jplock
+143,2014-02-21 22:09:49,"@stephenjamieson @al3x well, that didn't take long. https://github.com/jewel/clearskies
+",tilsammans,al3x
+130,2016-10-08 22:07:08,"This thread seems to have run its course.  I am going to close it but like @neuhaus would welcome a PR from someone interested in seeing it added.
+",mikeashley,neuhaus
+126,2014-01-09 15:13:10,"I updated the method used (and squashed the commit) to reflect @lukecyca's suggestion.
+
+There's more discussion to be had on this topic, and I concur that a wiki page describing the various tradeoffs might be in place, and in that case I'd like to see a reference from the README to that page.
+",yuvadm,lukecyca
+126,2014-01-12 23:07:20,"Thank you for the contribution, @yuvadm.
+",al3x,yuvadm
+115,2014-01-12 23:13:45,"@brucespang Anything further on this? I don't see this behavior on my VPS.
+",al3x,brucespang
+110,2014-02-02 21:29:35,"@mpdehaan Thanks for the heads-up re: Galaxy. I've tried out a few of the roles there and I can see it being a very useful resource. (Great work with the Ansible re-branding BTW).
+
+As @lukecyca says I've been investigating how to 'Dockerise' Sovereign. This is currently a work in progress (see #99). The plan is to host Docker images for components of Sovereign on a Docker registry. These will be updated when application updates are available and can then be pulled by each Sovereign server. Ansible will still be an important part of this process but the roles will  be much simpler as most of the configuration will then be in Docker containers.
+
+It would be possible to put the relevant roles on Galaxy but I'm not sure if these would be that useful to other Galaxy users?
+
+With regard to making it easy for Sovereign users to choose which applications to install, I'm currently of the opinion that commenting out roles is a reasonable approach given the target demographic of Sovereign. I can't see how Galaxy would make this any easier or more elegant. (But I might be missing something!)
+
+Any thoughts / suggestions gratefully received.
+",keybits,lukecyca
+110,2014-08-01 20:59:54,"This issue has been open a long time. I'd like to resolve it.
+
+I'm inclined to agree with @adrinux. For better or worse, the components of Sovereign are fairly coupled. I'm not sure that breaking them into Galaxy roles would make life better for Sovereign users or developers, and I'm not sure those roles would have much use to anyone trying to use them outside of Sovereign's context.
+
+Also, Galaxy is still in beta. I've already spent many hours on Sovereign and I'd prefer not to spend my time refactoring its roles against an API that may yet change.
+",al3x,adrinux
+110,2014-08-02 19:06:59,"Fair enough, this was originally opened to just be a suggestion.
+
+(The beta is mostly just a label - nothing is really changing in any
+greatly significant ways soon, we just have to remove the sticker)
+
+On Fri, Aug 1, 2014 at 5:00 PM, Alex Payne notifications@github.com wrote:
+
+> This issue has been open a long time. I'd like to resolve it.
+> 
+> I'm inclined to agree with @adrinux https://github.com/adrinux. For
+> better or worse, the components of Sovereign are fairly coupled. I'm not
+> sure that breaking them into Galaxy roles would make life better for
+> Sovereign users or developers, and I'm not sure those roles would have much
+> use to anyone trying to use them outside of Sovereign's context.
+> 
+> Also, Galaxy is still in beta. I've already spent many hours on Sovereign
+> and I'd prefer not to spend my time refactoring its roles against an API
+> that may yet change.
+> 
+> —
+> Reply to this email directly or view it on GitHub
+> https://github.com/al3x/sovereign/issues/110#issuecomment-50934173.
+",mpdehaan,adrinux
+106,2014-01-01 17:42:55,"@lukecyca I understand, thanks and I will try it.
+",do3cc,lukecyca
+105,2013-12-17 20:37:09,"Thanks for reporting this, @catern.
+
+Did you run it all at once? Or did you by chance do it in batches (interrupting and restarting it)?
+
+I ask because the [task that copies the import.sql into place](https://github.com/al3x/sovereign/blob/master/roles/mailserver/tasks/postfix.yml#L20) notifies a handler to run the import. If you interrupt the playbook before that handler runs, it won’t import. Worse, the task won’t notify the handler on subsequent runs of the playbook because the import.sql file already be there.
+
+You could test this by deleting `/etc/postfix/import.sql` on your server, and re-running the playbook. You should see it copy the file over again _and_ import it a little later in the playbook.
+
+Assuming that’s the case, we could improve this by forcing the handler to run right after the copy.
+",lukecyca,catern
+105,2014-01-12 23:08:45,"@bryanjswift: we just merged a pull request that moves Sovereign from MySQL to PostgreSQL. Could you please see if you have the same issue on Postgres and, if so, reopen with any diagnostic output? Thanks!
+",al3x,bryanjswift
+99,2014-07-02 21:23:22,"@al3x Apologies for the lack of updates on this. With current commitments I don't see me being able to take this forward.
+
+It's incredible to see how far Docker has come, and the tooling and stability definitely makes this much more feasible than six months ago. Hopefully someone else may take up the challenge.
+",keybits,al3x
+99,2014-07-03 12:29:40,"@neuhaus No disk/memory overhead worth mentioning imho.
+",denibertovic,neuhaus
+99,2015-03-05 10:05:50,"@neuhaus I'm using it everywhere...and haven't had issues. 
+",denibertovic,neuhaus
+97,2013-11-23 01:13:54,"@pdebruic that would be awesome. Let me know if I can lend a hand.
+",lukecyca,pdebruic
+97,2013-11-29 15:30:54,"@al3x That's a good question. It seems I did the following in my playbook that are not currently present in sovereign:
+- Explicitly setting the server's timezone
+- Installing and configuring unattended-upgrades for security updates (would address issue #92)
+- Deploy/main_user_name user configured for passwordless sudo
+  - Following sovereign's ""prep the server"" instructions, my playbook creates that user, sets up the ssh keys, and configures passwordless sudo. 
+  - For this to work, `sshpass` is needed so ansible can run as root using the `--user root --ask-pass` parameters. I have instructions on how to install this via homebrew in my readme.
+- Configure logwatch to email daily server logs
+
+I'm happy to add these to sovereign somewhere in the custom role (??) and submit pull requests if you'd like.
+",robfeldmann,al3x
+97,2013-12-17 20:51:14,"- We got logwatch in #102.
+- Unattended Upgrades has an open issue already: #92 (contribution welcome)
+
+@PajamaSoft: I like your suggestion of providing a means to bootstrap the deploy user, and also to set the timezone. If it can slim down the manual steps in the README, that would be great. Please submit a PR if you’re so inclined. The common role is indeed where those would belong.
+
+@stephenjamieson: `ossec` would be awesome. If you’re interested in working on that, open a new issue for discussion, or just submit a PR.
+
+@pdebruic: I believe everything else is already in Sovereign. Have I missed anything?
+",lukecyca,pdebruic
+88,2013-11-10 20:37:13,"Nice, thanks @jlund.
+",al3x,jlund
+86,2013-11-11 20:26:52,"@boothead this is fantastic. Thanks!
+
+Unfortunately I had made some other commits which were conflicting with this, but I've merged it manually. I also addressed @al3x's comments.
+",lukecyca,boothead
+86,2013-11-11 20:26:52,"@boothead this is fantastic. Thanks!
+
+Unfortunately I had made some other commits which were conflicting with this, but I've merged it manually. I also addressed @al3x's comments.
+",lukecyca,al3x
+86,2013-11-15 01:28:47,"Awesome improvements, @boothead! It makes me incredibly happy that people are using this and now you've made it even easier. Nicely done. I love open source.
+",jlund,boothead
+83,2013-11-09 16:38:32,"@al3x: Here's a simple syntax check script. Go to Travis CI and enable this repo, then merge this PR.
+
+I am familiar with Travis and it's free, but if you prefer Circle CI, I have no objections.
+
+I would still like to do full testing on the playbook, but it will take more work to figure out so this will have to do for now.
+",lukecyca,al3x
+76,2013-10-29 15:16:47,"This gets rid of the error, but still doesn't set up ufw to start at boot. I would prefer conditionally calling `ufw logging off` on Debian 7. And then running `ufw --force enable` unconditionally. That way we would avoid the error altogether.
+
+Since I'm the only one actually affected by this, I don't mind making the change, if everyone agrees on that solution.
+
+@ariddell thanks for your help troubleshooting this by installing a whole new distro!
+",lukecyca,ariddell
+73,2013-10-28 00:51:08,"Interesting. I switched my server over to it and didn't run into that issue.
+
++1 to @ariddell's suggestion of `ignore_errors` as a temporary solution.
+",al3x,ariddell
+73,2013-10-28 03:36:00,"@al3x: ansible may be skipping the task for you because the previous task checks if `ufw status` reports that it's running (which it is, depending on the timing). However, if you log in and try `/etc/init.d/ufw start` you may find that it skips it, which means it will also skip it on boot. If you run `ufw disable` and `ufw --force enable`, you should see the error. (If you don't, then I'm seriously mistaken in my assessment!)
+
+Another workaround for us is to disable ufw logging by issuing a task to run `ufw logging off`. Logging is broken either way, but at least then it would start cleanly.
+",lukecyca,al3x
+66,2013-11-05 22:19:43,"@boothead Here's an example: https://gist.github.com/al3x/7327347
+",al3x,boothead
+58,2016-09-29 19:43:24,"@jplock Hi guy, i'm planning to develop a product based on your source code. Do you still working on this?
+",huytiki,jplock
+46,2014-01-12 23:16:16,"I'm no longer seeing this behavior. How about you, @lukecyca?
+",al3x,lukecyca
+45,2013-11-22 18:29:04,"Since applying these changes I'm seeing spam (mail with `X-DSPAM-Result: Spam` headers) show up in my inbox. @lukecyca, how about you?
+",al3x,lukecyca
+45,2013-11-23 01:16:55,"@al3x I haven't had that problem. `X-DSPAM-Result: Spam` is going directly to the `Spam` subfolder for me.
+
+Could you capture a relevant segment of `/var/log/mail.log` and post it or email it to me?
+",lukecyca,al3x
+43,2014-02-11 04:44:02,"@knitatoms: I like cgit too.
+
+@tilsammans: gitbucket looks nice but I'm concerned about adding another memory-hungry JVM process (in addition to Lucene, which we use for email search).
+",al3x,tilsammans
+42,2015-02-25 18:54:07,"Not to sound like a broken record, but: I'm open to a pull request. Apache httpd has worked well for most Sovereign users. As @ariddell pointed out, higher-memory VPS instances have come down in price.
+",al3x,ariddell
+42,2016-03-11 23:49:58,"I'm curious to know what people think of switching from Apache to Nginx, more than a year later after the last comment on this issue.
+
+It was mentioned in the LetsEncrypt discussion over at #451, and also with PR #526 aiming to modularize sovereign I thought it might be a good time to give this a second thought.
+
+From what I've gathered, @ariddell is in favor of switching to Nginx, and @neuhaus doesn't mind it.
+
+I'd like to see what everyone thinks of this.
+
+P.S. I'm using Nginx on my server (along with owncloud) and can probably help with some of the virtual host files.
+",aminb,ariddell
+42,2017-03-12 20:35:00,"@al3x I totally understand that there are reasons for you not to solve this issue not by yourself.
+
+However, if I interpreted your comment correctly, *closing* this issue was not what you really intended to do. Because you are actually *open* to get this issue solved. So as this issue *isn't rejected nor solved* it should be still open so nobody can misinterpret the state of this issue (as rejected or closed).
+
+PS: independent from that I just wanted to mention that it's absolutely awesome what you've done",alexanderadam,al3x
+32,2014-01-10 03:43:18,"@al3x do you want the postgres only branch or the mix?
+",ssoriche,al3x
+32,2014-01-10 19:10:44,"The Postgres-only branch, please.
+
+## 
+
+Alex Payne
+
+> On Jan 9, 2014, at 19:43, Shawn Sorichetti notifications@github.com wrote:
+> 
+> @al3x do you want the postgres only branch or the mix?
+> 
+> —
+> Reply to this email directly or view it on GitHub.
+",al3x,al3x
+31,2013-09-19 15:27:37,"@bcachet It might be worth checking around the Postfix mailing list.
+",al3x,bcachet
+31,2013-09-22 04:28:51,"The `*_CAfile` parameters are not quite right after this change. I've studied the postfix docs some more ([this page](http://www.postfix.org/TLS_README.html) is especially detailed) and here are the relevant parts:
+
+### [smtp_tls_CAfile](http://www.postfix.org/postconf.5.html#smtp_tls_CAfile)
+
+> A file containing CA certificates of root CAs trusted to sign either remote SMTP server certificates or intermediate CA certificates.
+
+In other words, this is the set of all the CAs in the world from which our server will recognize certificates. When our server tries to send email to gmail.com, gmail's smtpd will present a cert signed by GeoTrust. Unless we have GeoTrust in our list of recognized CAs, we won't be able to validate gmail's cert.
+This should be set to `smtp_tls_CAfile = /etc/ssl/certs/ca-certificates.crt`
+
+### [smtpd_tls_CAfile](http://www.postfix.org/postconf.5.html#smtpd_tls_CAfile)
+
+> A file containing (PEM format) CA certificates of root CAs trusted to sign either remote SMTP client certificates or intermediate CA certificates.
+
+This is similar to above, but since it's for `smtpd`, it is used to validate client certs from clients connecting to our smtpd server.
+
+> By default (see smtpd_tls_ask_ccert), client certificates are not requested, and smtpd_tls_CAfile should remain empty.
+
+Since we are not using client certs in this configuration, we have no use for this line.
+
+### [smtpd_tls_cert_file](http://www.postfix.org/postconf.5.html#smtpd_tls_CAfile)
+
+This is correct after @bcachet's fix, however...
+
+> To enable a remote SMTP client to verify the Postfix SMTP server certificate, the issuing CA certificates must be made available to the client. You should include the required certificates in the server certificate file, the server certificate first, then the issuing CA(s) (bottom-up order).
+
+So this should actually be our cert, followed by the rest of the cert chain. Otherwise, you'll notice you get `Verify return code: 21 (unable to verify the first certificate)` when you test with `openssl s_client -connect mail.example.com:465`.
+
+I have (erroneously) made my `/etc/ssl/certs/wildcard_ca.pem` be the whole chain (since there was multiple TODO placeholders in there), which is why this was working for me.
+
+I'll submit another pull request to clear these things up, and try to make the docs more explicit to prevent people from making the same mistake I did.
+",lukecyca,bcachet
+18,2013-09-05 00:54:50,"@bcachet Is your password hash similar to this:
+
+
+
+I used the following command to generate the hash
+
+
+
+You need to include the full hash, including the $6 at the beginning which signifies the hashing algorithm.
+",jordanbrock,bcachet
+15,2014-01-21 21:30:41,"@al3x - still waiting on employer approval :( I promise it was a really quick fix, however, so I'd say to just go ahead with it.
+",abl,al3x
+8,2014-01-16 08:06:19,"@cji any chance you could submit that pull request?
+
+@al3x hop you don't mind me going through the issues too. :smile_cat: 
+",tilsammans,al3x
+8,2014-01-16 08:06:19,"@cji any chance you could submit that pull request?
+
+@al3x hop you don't mind me going through the issues too. :smile_cat: 
+",tilsammans,cji
+6,2013-08-28 01:24:07,"@al3x Ah, that makes more sense. The products page just has ""free trial""
+everywhere.
+
+On 28/08/13 11:14 AM, Alex Payne wrote:
+
+> @vertis https://github.com/vertis Please see
+> https://www.duosecurity.com/editions and note the free Personal edition.
+> 
+> —
+> Reply to this email directly or view it on GitHub
+> https://github.com/al3x/sovereign/issues/6#issuecomment-23383529.
+",vertis,al3x
+6,2014-03-24 16:40:38,"The more stuff we can integrate with a MFA solution, the better. Whatever route gets us more coverage.
+
+-- 
+Alex Payne
+@al3x
+
+From: Justin Plock notifications@github.com
+Reply: al3x/sovereign reply@reply.github.com
+Date: March 23, 2014 at 21:37:11
+To: al3x/sovereign sovereign@noreply.github.com
+Cc: Alex Payne al3x@al3x.net
+Subject:  Re: [sovereign] Two-factor Auth (#6)  
+
+Do we want Duo integrated with just ssh or with PAM? I'm not sure of the implementations on email and whatnot if we go the full PAM route.
+
+—
+Reply to this email directly or view it on GitHub.
+",al3x,al3x
+634,2016-12-11 05:10:28,@lukecyca Fixed those typos.,OKNoah,lukecyca
+621,2016-11-21 13:05:31,"MySQL is not being dumped in  `sovereign/roles/tarsnap/files/tarsnap.sh`, so this database does not get backed up at the moment.
+
+Thanks to @cimm for bringing this to our attention in his PR #615 ",neuhaus,cimm
+604,2016-10-18 00:37:37,"[This wiki page](https://github.com/sovereign/sovereign/wiki/Migrating-from-Debian-7-to-Debian-8) suggests that webmail is not currently functional in the jessie branch (now master) but PR #590 has been merged and the README suggests that webmail is indeed functional.
+
+I don't personally use webmail on my main Sovereign install. Paging @mikeashley who worked on that PR. :)
+",lukecyca,mikeashley
+595,2016-09-29 06:02:33,"After upgrading to Jessie, I am not able to get rmilter to work. I get these messages in `/var/log/mail.log`:
+
+
+
+I noticed that the rmilter process is still using a unix socket, but from #521 it sounds like the intention is to use a tcp socket.
+
+
+
+Perhaps `/etc/rmilter.conf` needs to be specified by ansible. Better yet, perhaps we should put all configuration overrides in `rmilter.conf.local` or `rmilter.conf.d`.
+
+@carljm could you have a look and clarify? I can prep a PR if you can clarify what should be done.
+",lukecyca,carljm
+595,2016-10-14 08:47:54,"> So the issue is that postfix running smtpd in a chroot can't reach the rmilter unix domain socket?
+
+In #521, @carljm explains why he chose to use a TCP socket, which I think is probably fine. At least, that's not what I'm trying to change here.
+
+The issue here is that the configuration for rmilter appears to still try to use the UNIX socket, which is contradictory to the comments in #521, etc.
+
+It's probably a simple fix. I just wanted to run it by @carljm for clarification prior to making the change in case I'm missing something.
+",lukecyca,carljm
+560,2016-05-30 20:29:31," @Yannik do you have any thoughts about @JasperWallace's comment and/or this PR?
+",ariddell,Yannik
+533,2016-04-05 18:16:19,"@neuhaus This PR doesn't change the fact that Apache is stopped before running the letsencrypt client, it just moves that logic directly into the `gencert` script instead of having it in Ansible.
+
+The LE config that @mikeashley set up uses the `standalone` letsencrypt plugin, which runs its own webserver, thus it needs ports 80/443 available, thus we have to shut down our Apache first.
+
+It might be worth considering whether we should instead use the `apache` or `webroot` plugin, and have our own Apache instance serve the LetsEncrypt confirmation stuff. Then we wouldn't need to bounce it. I'm guessing @mikeashley might have more insight as to why he didn't choose that route.
+
+See http://letsencrypt.readthedocs.org/en/latest/using.html#plugins for more on the available LE plugins.
+
+I can (and will) add a comment into the `gencert` script clarifying the above.
+",carljm,mikeashley
+526,2016-04-25 08:22:54,"I recommend we take this PR, but it would be good to get a look from one more committer.  @neuhaus or @jplock or @lukecyca?
+
+Documentation still needs updated.  Also, has this been tested?  @ariddell are you sure about password migration?  People upgrading their Debian 7 servers would need to do this.
+",mikeashley,lukecyca
+526,2016-04-25 08:22:54,"I recommend we take this PR, but it would be good to get a look from one more committer.  @neuhaus or @jplock or @lukecyca?
+
+Documentation still needs updated.  Also, has this been tested?  @ariddell are you sure about password migration?  People upgrading their Debian 7 servers would need to do this.
+",mikeashley,jplock
+526,2016-04-25 08:22:54,"I recommend we take this PR, but it would be good to get a look from one more committer.  @neuhaus or @jplock or @lukecyca?
+
+Documentation still needs updated.  Also, has this been tested?  @ariddell are you sure about password migration?  People upgrading their Debian 7 servers would need to do this.
+",mikeashley,neuhaus
+526,2016-04-25 12:52:13,"I have tested this. I'll do some additional testing about the password
+migration when I write the docs.
+
+On 04/25, Mike Ashley wrote:
+
+> I recommend we take this PR, but it would be good to get a look from one more committer.  @neuhaus or @jplock or @lukecyca?
+> 
+> Documentation still needs updated.  Also, has this been tested?  @ariddell are you sure about password migration?  People upgrading their Debian 7 servers would need to do this.
+> 
+> ---
+> 
+> You are receiving this because you were mentioned.
+> Reply to this email directly or view it on GitHub:
+> https://github.com/sovereign/sovereign/pull/526#issuecomment-214203423
+",ariddell,lukecyca
+526,2016-04-25 12:52:13,"I have tested this. I'll do some additional testing about the password
+migration when I write the docs.
+
+On 04/25, Mike Ashley wrote:
+
+> I recommend we take this PR, but it would be good to get a look from one more committer.  @neuhaus or @jplock or @lukecyca?
+> 
+> Documentation still needs updated.  Also, has this been tested?  @ariddell are you sure about password migration?  People upgrading their Debian 7 servers would need to do this.
+> 
+> ---
+> 
+> You are receiving this because you were mentioned.
+> Reply to this email directly or view it on GitHub:
+> https://github.com/sovereign/sovereign/pull/526#issuecomment-214203423
+",ariddell,jplock
+526,2016-04-25 12:52:13,"I have tested this. I'll do some additional testing about the password
+migration when I write the docs.
+
+On 04/25, Mike Ashley wrote:
+
+> I recommend we take this PR, but it would be good to get a look from one more committer.  @neuhaus or @jplock or @lukecyca?
+> 
+> Documentation still needs updated.  Also, has this been tested?  @ariddell are you sure about password migration?  People upgrading their Debian 7 servers would need to do this.
+> 
+> ---
+> 
+> You are receiving this because you were mentioned.
+> Reply to this email directly or view it on GitHub:
+> https://github.com/sovereign/sovereign/pull/526#issuecomment-214203423
+",ariddell,neuhaus
+501,2016-02-19 12:40:07,"@mikeashley has done an epic amount of high quality work on the Let's Encrypt scheme/role and on getting the jessie branch working. I'd like to propose that he be made a contributor to sovereign.
+
+cc: @al3x, @lukecyca, @neuhaus, @jplock
+",ariddell,mikeashley
+501,2016-02-19 12:40:07,"@mikeashley has done an epic amount of high quality work on the Let's Encrypt scheme/role and on getting the jessie branch working. I'd like to propose that he be made a contributor to sovereign.
+
+cc: @al3x, @lukecyca, @neuhaus, @jplock
+",ariddell,lukecyca
+501,2016-02-19 12:40:07,"@mikeashley has done an epic amount of high quality work on the Let's Encrypt scheme/role and on getting the jessie branch working. I'd like to propose that he be made a contributor to sovereign.
+
+cc: @al3x, @lukecyca, @neuhaus, @jplock
+",ariddell,al3x
+501,2016-02-19 12:40:07,"@mikeashley has done an epic amount of high quality work on the Let's Encrypt scheme/role and on getting the jessie branch working. I'd like to propose that he be made a contributor to sovereign.
+
+cc: @al3x, @lukecyca, @neuhaus, @jplock
+",ariddell,jplock
+501,2016-02-19 12:40:07,"@mikeashley has done an epic amount of high quality work on the Let's Encrypt scheme/role and on getting the jessie branch working. I'd like to propose that he be made a contributor to sovereign.
+
+cc: @al3x, @lukecyca, @neuhaus, @jplock
+",ariddell,neuhaus
+491,2016-02-13 12:52:32,"I would like @al3x to weigh in on intent.  Some brief googling fails to turn up how to configure this to use postgres, and the man pages are all about mysql for report generation.  Seems like the two options are 1) drop opendmarc, and 2) revert to using mysql and install it.
+",mikeashley,al3x
+462,2016-02-17 12:42:56,"This is the first new role in awhile. Personally, I'd like to use this role rather than owncloud.
+
+What about making this the first standalone galaxy role, sovereign-radicale. @lukecyca raised this issue recently here https://github.com/sovereign/sovereign/issues/440#issuecomment-162928760.
+",ariddell,lukecyca
+427,2015-12-05 17:03:12,"I can definitely do that, but before i do: a lot of the changes in this branch by @al3x from Sept (e.g. 69abd70297a89051c3caa40b304dc134c53d048d) are already incompatible with Wheezy as far as I can tell. So perhaps we can clarify the goals of each branch / long term...
+",sread,al3x
+425,2015-11-04 20:30:51,"I'm finding that my blog isn't accessible via http, only via https. The intended behaviour is to issue a redirect to https, as well as a `Strict-Transport-Security` to tell the browser to use https for subsequent requests to the hostname. I suspect this hid the issue from me for a long time.
+
+To test your own site: `curl -v example.com`. Expected behaviour is to get a 301 redirect, but actual behaviour is a 403 Forbidden.
+
+I've isolated the issue to the status vhost used for monitoring apache, originally added last year by @philandstuff. If I disable that vhost, it works as intended again.
+
+I have a handful of other local modifications, so I'd appreciate it anyone else can try reproduce this issue. This could be the issue that @almereyda was describing in #250.
+",lukecyca,philandstuff
+406,2015-11-18 11:53:26,"What @sread said. I run into this issue also. @al3x what is the proposed sollution for jessie? I can send a PR.
+",danmilon,al3x
+401,2015-07-27 12:37:23,"Since I need to use openvpn for another project, I thought I'd get started on this one. I think most of the needed changes are just systemd related (e.g., starting dnsmasq needs to be handled by systemd)
+
+One thing I'm not sure about is where the openvpn firewall rules should be put. Is `/etc/rc.local` the place for them? Would putting them in `/etc/ufw/before.rules` make more sense? @jlund
+
+For reference, this is the current rc.local
+
+
+",ariddell,jlund
+385,2015-06-13 08:41:51,"Hello @al3x 
+
+just wondering - why do you use the dhoppe boxes for the jessie branch instead of the box-cutter ones?
+",neuhaus,al3x
+381,2015-06-05 12:45:04,"I guess @al3x will fix our access rights when he's woken up. :-)
+",neuhaus,al3x
+380,2015-06-04 18:03:19,"I'm concerned about becoming a bottleneck for future work on Sovereign. I'd like to move the project to the https://github.com/sovereign organization that @lukecyca grabbed a while ago, and in the process add some other maintainers who can push changes to `master` without waiting for my approval.
+
+Right now, @lukecyca is the only other maintainer, and he's also quite busy. I'd like to invite @neuhaus, @ariddell, @synchrone, @jplock, @lvillani and whoever else would like to put their hands up to join as maintainers.
+
+Sound good? Any objections?
+",al3x,lukecyca
+380,2015-06-04 18:03:19,"I'm concerned about becoming a bottleneck for future work on Sovereign. I'd like to move the project to the https://github.com/sovereign organization that @lukecyca grabbed a while ago, and in the process add some other maintainers who can push changes to `master` without waiting for my approval.
+
+Right now, @lukecyca is the only other maintainer, and he's also quite busy. I'd like to invite @neuhaus, @ariddell, @synchrone, @jplock, @lvillani and whoever else would like to put their hands up to join as maintainers.
+
+Sound good? Any objections?
+",al3x,synchrone
+380,2015-06-04 18:03:19,"I'm concerned about becoming a bottleneck for future work on Sovereign. I'd like to move the project to the https://github.com/sovereign organization that @lukecyca grabbed a while ago, and in the process add some other maintainers who can push changes to `master` without waiting for my approval.
+
+Right now, @lukecyca is the only other maintainer, and he's also quite busy. I'd like to invite @neuhaus, @ariddell, @synchrone, @jplock, @lvillani and whoever else would like to put their hands up to join as maintainers.
+
+Sound good? Any objections?
+",al3x,ariddell
+380,2015-06-04 18:03:19,"I'm concerned about becoming a bottleneck for future work on Sovereign. I'd like to move the project to the https://github.com/sovereign organization that @lukecyca grabbed a while ago, and in the process add some other maintainers who can push changes to `master` without waiting for my approval.
+
+Right now, @lukecyca is the only other maintainer, and he's also quite busy. I'd like to invite @neuhaus, @ariddell, @synchrone, @jplock, @lvillani and whoever else would like to put their hands up to join as maintainers.
+
+Sound good? Any objections?
+",al3x,jplock
+380,2015-06-04 18:03:19,"I'm concerned about becoming a bottleneck for future work on Sovereign. I'd like to move the project to the https://github.com/sovereign organization that @lukecyca grabbed a while ago, and in the process add some other maintainers who can push changes to `master` without waiting for my approval.
+
+Right now, @lukecyca is the only other maintainer, and he's also quite busy. I'd like to invite @neuhaus, @ariddell, @synchrone, @jplock, @lvillani and whoever else would like to put their hands up to join as maintainers.
+
+Sound good? Any objections?
+",al3x,lvillani
+380,2015-06-04 18:03:19,"I'm concerned about becoming a bottleneck for future work on Sovereign. I'd like to move the project to the https://github.com/sovereign organization that @lukecyca grabbed a while ago, and in the process add some other maintainers who can push changes to `master` without waiting for my approval.
+
+Right now, @lukecyca is the only other maintainer, and he's also quite busy. I'd like to invite @neuhaus, @ariddell, @synchrone, @jplock, @lvillani and whoever else would like to put their hands up to join as maintainers.
+
+Sound good? Any objections?
+",al3x,neuhaus
+380,2015-06-04 20:09:53,"Thumbs up from me!
+
+-Sven
+
+> Am 04.06.2015 um 20:03 schrieb Alex Payne notifications@github.com:
+> 
+> I'm concerned about becoming a bottleneck for future work on Sovereign. I'd like to move the project to the https://github.com/sovereign organization that @lukecyca grabbed a while ago, and in the process add some other maintainers who can push changes to master without waiting for my approval.
+> 
+> Right now, @lukecyca is the only other maintainer, and he's also quite busy. I'd like to invite @neuhaus, @ariddell, @synchrone, @jplock, @lvillani and whoever else would like to put their hands up to join as maintainers.
+> 
+> Sound good? Any objections?
+> 
+> —
+> Reply to this email directly or view it on GitHub.
+",neuhaus,synchrone
+380,2015-06-04 20:09:53,"Thumbs up from me!
+
+-Sven
+
+> Am 04.06.2015 um 20:03 schrieb Alex Payne notifications@github.com:
+> 
+> I'm concerned about becoming a bottleneck for future work on Sovereign. I'd like to move the project to the https://github.com/sovereign organization that @lukecyca grabbed a while ago, and in the process add some other maintainers who can push changes to master without waiting for my approval.
+> 
+> Right now, @lukecyca is the only other maintainer, and he's also quite busy. I'd like to invite @neuhaus, @ariddell, @synchrone, @jplock, @lvillani and whoever else would like to put their hands up to join as maintainers.
+> 
+> Sound good? Any objections?
+> 
+> —
+> Reply to this email directly or view it on GitHub.
+",neuhaus,ariddell
+380,2015-06-04 20:09:53,"Thumbs up from me!
+
+-Sven
+
+> Am 04.06.2015 um 20:03 schrieb Alex Payne notifications@github.com:
+> 
+> I'm concerned about becoming a bottleneck for future work on Sovereign. I'd like to move the project to the https://github.com/sovereign organization that @lukecyca grabbed a while ago, and in the process add some other maintainers who can push changes to master without waiting for my approval.
+> 
+> Right now, @lukecyca is the only other maintainer, and he's also quite busy. I'd like to invite @neuhaus, @ariddell, @synchrone, @jplock, @lvillani and whoever else would like to put their hands up to join as maintainers.
+> 
+> Sound good? Any objections?
+> 
+> —
+> Reply to this email directly or view it on GitHub.
+",neuhaus,lvillani
+380,2015-06-04 20:09:53,"Thumbs up from me!
+
+-Sven
+
+> Am 04.06.2015 um 20:03 schrieb Alex Payne notifications@github.com:
+> 
+> I'm concerned about becoming a bottleneck for future work on Sovereign. I'd like to move the project to the https://github.com/sovereign organization that @lukecyca grabbed a while ago, and in the process add some other maintainers who can push changes to master without waiting for my approval.
+> 
+> Right now, @lukecyca is the only other maintainer, and he's also quite busy. I'd like to invite @neuhaus, @ariddell, @synchrone, @jplock, @lvillani and whoever else would like to put their hands up to join as maintainers.
+> 
+> Sound good? Any objections?
+> 
+> —
+> Reply to this email directly or view it on GitHub.
+",neuhaus,neuhaus
+380,2015-06-04 20:12:23,"Let's use this opportunity to set up some guidelines for everything that is added to the master branch. 
+My suggestion: Commits should be tested on Debian stable and Ubuntu LTS.
+
+-Sven
+
+> Am 04.06.2015 um 20:03 schrieb Alex Payne notifications@github.com:
+> 
+> I'm concerned about becoming a bottleneck for future work on Sovereign. I'd like to move the project to the https://github.com/sovereign organization that @lukecyca grabbed a while ago, and in the process add some other maintainers who can push changes to master without waiting for my approval.
+> 
+> Right now, @lukecyca is the only other maintainer, and he's also quite busy. I'd like to invite @neuhaus, @ariddell, @synchrone, @jplock, @lvillani and whoever else would like to put their hands up to join as maintainers.
+> 
+> Sound good? Any objections?
+> 
+> —
+> Reply to this email directly or view it on GitHub.
+",neuhaus,synchrone
+380,2015-06-04 20:12:23,"Let's use this opportunity to set up some guidelines for everything that is added to the master branch. 
+My suggestion: Commits should be tested on Debian stable and Ubuntu LTS.
+
+-Sven
+
+> Am 04.06.2015 um 20:03 schrieb Alex Payne notifications@github.com:
+> 
+> I'm concerned about becoming a bottleneck for future work on Sovereign. I'd like to move the project to the https://github.com/sovereign organization that @lukecyca grabbed a while ago, and in the process add some other maintainers who can push changes to master without waiting for my approval.
+> 
+> Right now, @lukecyca is the only other maintainer, and he's also quite busy. I'd like to invite @neuhaus, @ariddell, @synchrone, @jplock, @lvillani and whoever else would like to put their hands up to join as maintainers.
+> 
+> Sound good? Any objections?
+> 
+> —
+> Reply to this email directly or view it on GitHub.
+",neuhaus,ariddell
+380,2015-06-04 20:12:23,"Let's use this opportunity to set up some guidelines for everything that is added to the master branch. 
+My suggestion: Commits should be tested on Debian stable and Ubuntu LTS.
+
+-Sven
+
+> Am 04.06.2015 um 20:03 schrieb Alex Payne notifications@github.com:
+> 
+> I'm concerned about becoming a bottleneck for future work on Sovereign. I'd like to move the project to the https://github.com/sovereign organization that @lukecyca grabbed a while ago, and in the process add some other maintainers who can push changes to master without waiting for my approval.
+> 
+> Right now, @lukecyca is the only other maintainer, and he's also quite busy. I'd like to invite @neuhaus, @ariddell, @synchrone, @jplock, @lvillani and whoever else would like to put their hands up to join as maintainers.
+> 
+> Sound good? Any objections?
+> 
+> —
+> Reply to this email directly or view it on GitHub.
+",neuhaus,lvillani
+380,2016-02-09 14:21:12,"If @mikeashley is interested in commit privilege, I think he deserves it by now :-)
+",neuhaus,mikeashley
+345,2015-01-21 08:58:47,"@al3x @jlund @boothead @lukecyca @jplock @lvillani , please review the changes, hope this will help. 
+Thanks
+- Install the iptables-persistent to save the iptables rule instead of adding it to the rc.local
+- Get the result of iptables -L -v command and register the result so that we can add and save the iptables rules if it doesn't have them already
+- Instead of copy the rc.local as template, adding the dnsmasq service's restart line in it becasue may be there are another lines in it and accidently the provided template overwrite those lines on the production server
+- Change the prompt message 
+",arbabnazar,lukecyca
+345,2015-01-21 08:58:47,"@al3x @jlund @boothead @lukecyca @jplock @lvillani , please review the changes, hope this will help. 
+Thanks
+- Install the iptables-persistent to save the iptables rule instead of adding it to the rc.local
+- Get the result of iptables -L -v command and register the result so that we can add and save the iptables rules if it doesn't have them already
+- Instead of copy the rc.local as template, adding the dnsmasq service's restart line in it becasue may be there are another lines in it and accidently the provided template overwrite those lines on the production server
+- Change the prompt message 
+",arbabnazar,boothead
+345,2015-01-21 08:58:47,"@al3x @jlund @boothead @lukecyca @jplock @lvillani , please review the changes, hope this will help. 
+Thanks
+- Install the iptables-persistent to save the iptables rule instead of adding it to the rc.local
+- Get the result of iptables -L -v command and register the result so that we can add and save the iptables rules if it doesn't have them already
+- Instead of copy the rc.local as template, adding the dnsmasq service's restart line in it becasue may be there are another lines in it and accidently the provided template overwrite those lines on the production server
+- Change the prompt message 
+",arbabnazar,jlund
+345,2015-01-21 08:58:47,"@al3x @jlund @boothead @lukecyca @jplock @lvillani , please review the changes, hope this will help. 
+Thanks
+- Install the iptables-persistent to save the iptables rule instead of adding it to the rc.local
+- Get the result of iptables -L -v command and register the result so that we can add and save the iptables rules if it doesn't have them already
+- Instead of copy the rc.local as template, adding the dnsmasq service's restart line in it becasue may be there are another lines in it and accidently the provided template overwrite those lines on the production server
+- Change the prompt message 
+",arbabnazar,jplock
+345,2015-01-21 08:58:47,"@al3x @jlund @boothead @lukecyca @jplock @lvillani , please review the changes, hope this will help. 
+Thanks
+- Install the iptables-persistent to save the iptables rule instead of adding it to the rc.local
+- Get the result of iptables -L -v command and register the result so that we can add and save the iptables rules if it doesn't have them already
+- Instead of copy the rc.local as template, adding the dnsmasq service's restart line in it becasue may be there are another lines in it and accidently the provided template overwrite those lines on the production server
+- Change the prompt message 
+",arbabnazar,lvillani
+345,2015-01-21 08:58:47,"@al3x @jlund @boothead @lukecyca @jplock @lvillani , please review the changes, hope this will help. 
+Thanks
+- Install the iptables-persistent to save the iptables rule instead of adding it to the rc.local
+- Get the result of iptables -L -v command and register the result so that we can add and save the iptables rules if it doesn't have them already
+- Instead of copy the rc.local as template, adding the dnsmasq service's restart line in it becasue may be there are another lines in it and accidently the provided template overwrite those lines on the production server
+- Change the prompt message 
+",arbabnazar,al3x
+328,2014-11-08 20:14:08,"So what we need is to, as @al3x pointed out, actually begin splitting up Sovereign into separate modules the can be used individually or as part of a ""Sovereign Package"". That last part is the hard part to figure out, and @PiPeep had some suggestions (see his comments there).
+",taoeffect,al3x
+306,2014-10-18 06:50:36,"I believe that @neuhaus has corrected many issues with getting Sovereign running on Ubuntu 14.04. He'd be the best person to check with.
+",the-solipsist,neuhaus
+306,2014-10-18 19:19:53,"## I'm not running Ubuntu 12.04 anywhere, so I can't really support it. If you have concrete issues I can try to help though.
+
+Von unterwegs
+
+> Am 18.10.2014 um 08:50 schrieb the-solipsist notifications@github.com:
+> 
+> I believe that @neuhaus has corrected many issues with getting Sovereign running on Ubuntu 14.04. He'd be the best person to check with.
+> 
+> —
+> Reply to this email directly or view it on GitHub.
+",neuhaus,neuhaus
+293,2014-08-16 17:54:54,"The two `python3` commands in the README for generating password hashes don't seem to be working. I'm using Python 3.3.2 on OS X. When I try them with ""password"", the first one gives just a salt (I think). The second one crashes.
+
+
+
+@ariddell, it looks like you worked on these commands. Could you have a look and let me know if I'm doing something wrong?
+
+Also, it would be good to use `getpass` so that users aren't compelled to leave their password cleartext in their bash history! Something like:
+
+
+",lukecyca,ariddell
+239,2014-05-09 22:20:16,"Hi @al3x,
+
+  Here is my submission for Newebe (more infos here: #228).
+It sets up three daemons:
+- Newebe: a Python program that runs the Newebe instance.
+- CouchDB: The database used by Newebe.
+- Supervisor: a process manager in Python that manages the Newebe daemon.
+
+It adds a configuration to Apache2: 
+- a reverse proxy between newebe.{{soevereign_domain}}:443 and localhost:8282.
+
+I hope everything is ok. Tell me if I must change something.
+
+Regards,
+
+Frank
+",gelnior,al3x
+217,2014-04-10 00:48:05,"While playing around with #216, I had set up the jessie repo and accidentally tried to run the playbooks.  This breaks all sorts of stuff since the packages are so much newer in jessie.  To prevent the playbooks from breaking for other people, I was thinking of locking in the specific apt versions of all of the packages (especially for things like roundcube).  Then we can upgrade them later on without fear that a rouge repo will break things.
+
+Thoughts?  /cc @lukecyca @al3x 
+",jplock,lukecyca
+217,2014-04-10 00:48:05,"While playing around with #216, I had set up the jessie repo and accidentally tried to run the playbooks.  This breaks all sorts of stuff since the packages are so much newer in jessie.  To prevent the playbooks from breaking for other people, I was thinking of locking in the specific apt versions of all of the packages (especially for things like roundcube).  Then we can upgrade them later on without fear that a rouge repo will break things.
+
+Thoughts?  /cc @lukecyca @al3x 
+",jplock,al3x
+216,2014-04-09 15:57:34,"The one issue I see with doing this though is if we add the jessie repo, its going to want to install a lot of packages from there instead of preferring the wheezy versions.
+
+@lukecyca or @al3x, any opinions?
+",jplock,lukecyca
+216,2014-04-09 15:57:34,"The one issue I see with doing this though is if we add the jessie repo, its going to want to install a lot of packages from there instead of preferring the wheezy versions.
+
+@lukecyca or @al3x, any opinions?
+",jplock,al3x
+216,2014-04-09 17:24:27,"Maybe it's time to roll forward a release of Debian? Sovereign is coming up on a year old in several months.
+
+## 
+
+Alex Payne
+
+> On Apr 9, 2014, at 8:57, Justin Plock notifications@github.com wrote:
+> 
+> The one issue I see with doing this though is if we add the jessie repo, its going to want to install a lot of packages from there instead of preferring the wheezy versions.
+> 
+> @lukecyca or @al3x, any opinions?
+> 
+> —
+> Reply to this email directly or view it on GitHub.
+",al3x,lukecyca
+216,2014-04-09 17:24:27,"Maybe it's time to roll forward a release of Debian? Sovereign is coming up on a year old in several months.
+
+## 
+
+Alex Payne
+
+> On Apr 9, 2014, at 8:57, Justin Plock notifications@github.com wrote:
+> 
+> The one issue I see with doing this though is if we add the jessie repo, its going to want to install a lot of packages from there instead of preferring the wheezy versions.
+> 
+> @lukecyca or @al3x, any opinions?
+> 
+> —
+> Reply to this email directly or view it on GitHub.
+",al3x,al3x
+207,2014-03-30 14:25:11,"libpam-dev didn't exist for some people so switching to libpam0g-dev instead.  This should fix the issue @nstanke was having on #199
+",jplock,nstanke
+200,2014-03-29 14:36:38,"@al3x or @lukecyca, is this something we want to do, or just continue using the certificates as we are today?
+",jplock,lukecyca
+200,2014-03-29 14:36:38,"@al3x or @lukecyca, is this something we want to do, or just continue using the certificates as we are today?
+",jplock,al3x
+195,2014-03-27 22:58:41,"Looks like good work, and 2FA is something we really need. I’m not crazy about relying on a third-party cloud-based service to do it though. Seems antithetical to sovereign.
+
+I’d much prefer to do this using the google auth pam module, which is compatible with a variety of smart-phone tokens (including Google Authenticator) as well as hardware tokens (such as from [Feitian](http://www.ftsafe.com/product/otp)). I’ve been using this setup for years (not with sovereign, though).
+
+I’ll let @al3x make the call on this.
+",lukecyca,al3x
+116,2014-01-17 01:57:27,"@jplock apparently ran into this issue simply from a reboot. Perhaps we need to look into preventing services from starting at boot, and rather wait until the playbook mounts the encfs again.
+",lukecyca,jplock
+98,2014-01-06 03:35:37,"Fixed by @markpasc in #124.
+",lukecyca,markpasc
+73,2013-10-27 22:14:43,"Following @ariddell's contribution, I switched my server to use `ufw` instead of `ferm`, and ran into this problem:
+
+
+
+I logged in and ran it manually, and got a different error:
+
+
+
+The firewall _is_ running and operating properly, but the `enable` command fails to mark itself as enabled in `/etc/ufw/ufw.conf`, so it fails to start at boot (which I think is a problem).
+
+Upon further investigation, it seems there is a [bug](https://bugs.launchpad.net/ufw/+bug/1065297) whereby ufw logging is incompatible with our version of iptables. A fix has been committed, but it's not fixed in the version we're using (0.31.1-2). 
+
+If we turn logging off, this bug goes away and the `enable` command works fully, but I'm not sure that's a good solution.
+",lukecyca,ariddell
+70,2013-10-13 16:56:08,"This pull request is an attempt to resolve https://github.com/al3x/sovereign/issues/65.
+
+/cc @lukecyca
+",hectcastro,lukecyca
+42,2016-03-11 23:49:58,"I'm curious to know what people think of switching from Apache to Nginx, more than a year later after the last comment on this issue.
+
+It was mentioned in the LetsEncrypt discussion over at #451, and also with PR #526 aiming to modularize sovereign I thought it might be a good time to give this a second thought.
+
+From what I've gathered, @ariddell is in favor of switching to Nginx, and @neuhaus doesn't mind it.
+
+I'd like to see what everyone thinks of this.
+
+P.S. I'm using Nginx on my server (along with owncloud) and can probably help with some of the virtual host files.
+",aminb,neuhaus
+37,2013-09-23 18:47:34,"I think these are leftovers from @al3x local setup:
+
+./roles/mailserver/files/etc_dovecot_conf.d_20-imap.conf:  postmaster_address = postmaster@syntax.cc
+./roles/mailserver/templates/etc_dovecot_conf.d_15-lda.conf.j2:postmaster_address = postmaster@syntax.cc
+",lbsnrs,al3x
+36,2013-09-22 07:55:49,"I fixed up the remaining certificate-related issues from #34 and #26. It now correctly verifies the cert when connecting with `openssl s_client -connect mail.lukecyca.com:993` (and also port 465), and also shows `Trusted TLS connection established` in `mail.log` when connecting out to other mail servers.
+
+@bcachet, can you test these out and confirm that they work for you as well?
+
+I wanted to write up some more explicit instructions on what exactly goes in each cert file, and ended up adding similar detail for the other manual setup steps. @al3x, feel free to copy edit. :)
+",lukecyca,bcachet
+36,2013-09-22 07:55:49,"I fixed up the remaining certificate-related issues from #34 and #26. It now correctly verifies the cert when connecting with `openssl s_client -connect mail.lukecyca.com:993` (and also port 465), and also shows `Trusted TLS connection established` in `mail.log` when connecting out to other mail servers.
+
+@bcachet, can you test these out and confirm that they work for you as well?
+
+I wanted to write up some more explicit instructions on what exactly goes in each cert file, and ended up adding similar detail for the other manual setup steps. @al3x, feel free to copy edit. :)
+",lukecyca,al3x

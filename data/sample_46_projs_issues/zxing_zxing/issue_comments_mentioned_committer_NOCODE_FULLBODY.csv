@@ -1,0 +1,248 @@
+issue_num,datetime,body,login,mention_login
+756,2017-02-19 02:35:41,"@srowen, yes, you're correct, whoops. I'm currently porting the 1D barcode code to JavaScript as part of extending [Schibum/barcode.js](https://github.com/Schibum/barcode.js/) to also work with 1D barcodes which is why I noticed this. Having the array be too large was causing a failure because of a for loop over the patterns running into uninitialized values (NaN). Since arrays in JavaScript are dynamic by making it 9 instead of 10 it still worked because the array just expanded to 10 and I didn't notice. Too many late nights, not enough coffee.
+
+I'll fix pull request to change it to 10.",dsanders11,srowen
+725,2016-12-20 09:56:52,"@srowen Android has a strict rule that you shouldn't perform long running executions on the main thread, this essentially follows that principle and offloads `camera.open()` to background worker thread, I can add more improvements on this where in I also offload `camera.release()` to this worker thread. Blocking the UI thread is a no no in my book, also the difference in User experience is that of between heaven and earth. You can run the apk on your device and have a look yourself. There is a 50-100 frames drop due to the `camera.open` call which is removed in this PR.",bhargavms,srowen
+725,2016-12-24 18:12:18,"@srowen any updates on this? Can you at least explain why you are adamant about not having this feature put in? I mean it doesn't beak anything, and it actually improves activity launch speed, I have tested this on more than 10 manufacturer devices (including samsung) and it works perfectly normal. May I know whats keeping you apprehensive?",bhargavms,srowen
+725,2017-01-02 06:01:52,"@srowen from my personal testing I have observed that the scan speed deteriorates due to this change, could you hopefully shed some light on why this might happen? I will update the PR with a fix, as far as I can observer that is the only issue I have encountered so far with the change.",bhargavms,srowen
+725,2017-01-06 14:24:08,"@srowen Well the reason I'm suggesting this change is because I've gotten complaints from users that the app stutters when opening the QrScanner (CaptureActivity). 
+On old devices `Camera.open()` takes more than 100ms which creates a bad user experience. This change smooths it out.
+Anyway like you said a change like this has to be backed up by lot of testing, the reason I gave the PR is in hopes of getting some help in testing and possibly fixing the qr scan speed which I'm not able to figure out.",bhargavms,srowen
+682,2016-10-04 16:19:08,"@srowen, Actually it happens less frequently, if you test for so many time, then you can face this issue. If you again send app to background and again bring it to front then it again works.
+
+Anyways, what is the use of that setting option ? I don't find any difference whether it is on or off ?
+",BS987,srowen
+663,2016-08-31 13:08:45,"
+
+—You are receiving this because you authored the thread.Reply to this email directly, view it on GitHub, or mute the thread.
+
+{""api_version"":""1.0"",""publisher"":{""api_key"":""05dde50f1d1a384dd78767c55493e4bb"",""name"":""GitHub""},""entity"":{""external_key"":""github/zxing/zxing"",""title"":""zxing/zxing"",""subtitle"":""GitHub repository"",""main_image_url"":""https://cloud.githubusercontent.com/assets/143418/17495839/a5054eac-5d88-11e6-95fc-7290892c7bb5.png"",""avatar_image_url"":""https://cloud.githubusercontent.com/assets/143418/15842166/7c72db34-2c0b-11e6-9aed-b52498112777.png"",""action"":{""name"":""Open in GitHub"",""url"":""https://github.com/zxing/zxing""}},""updates"":{""snippets"":[{""icon"":""PERSON"",""message"":""@srowen in #663: This is an invalid QR code. Look at the trimmed edges. It may eventually be scanned, but that's the problem.""}],""action"":{""name"":""View Issue"",""url"":""https://github.com/zxing/zxing/issues/663#issuecomment-243752945""}}}
+",leoaran,srowen
+662,2016-10-21 03:29:34,"@srowen 
+there  are two library, which named library1 and library2.  library1 contain the  compile 'com.google.zxing:core:3.2.1'  library2 contain compile 'me.dm7.barcodescanner:zxing:1.9'. 
+but the library which name is 'me.dm7.barcodescanner:zxing:1.9' contain the com.google.zxing  too.
+project use library1 and library2 ,when i gradle assembleRelease the project, log the follow error:
+- What went wrong:
+  Execution failed for task ':app:transformClassesWithJarMergingForRelease'.
+  > com.android.build.api.transform.TransformException: java.util.zip.ZipException                                  : duplicate entry: com/google/zxing/aztec/AztecDetectorResult.class
+
+do you have some method to fix this problem?
+",chaozaiai,srowen
+654,2017-01-15 10:54:20,Thanks @PedPak I merged this at last after a rebase. ,srowen,PedPak
+644,2016-08-12 11:07:51,"@srowen: I feel competent to modify [DecoderResult](https://github.com/zxing/zxing/blob/master/core/src/main/java/com/google/zxing/common/DecoderResult.java#L28) to add a getRawBytesBitSize() method, but not to modify (and test) [decode.jspx](https://github.com/zxing/zxing/blob/master/zxingorg/src/main/webapp/w/decoderesult.jspx) and whatever else might be needed to make use of getRawBytesBitSize(); thus the change would not be so directly useful, when changing the polarity of filler bits for Aztec code is easier and immediately useful.
+
+Also, if I go the getRawBytesBitSize() path, I hesitate between:
+- a third DecoderResult creator allowing to specify RawBytesBitSize;
+- keeping the existing two creators, and adding a setRawBytesBitSize() for internal use;
+- modifying at least one of the existing two creators to add a RawBytesBitSize parameter, and modifying the few uses;
+- while I'm at changing the syntax of creator(s), unifying the two existing ones;
+- so many other options, including instead adding a getRawBits() returning a BitArray (an existing but non-native type), or a new similar type internally based on a byte array so that getRawBytes() could return just that array.
+
+Independently: where should what getRawBytes() actually returns for Aztec code be documented?
+",fgrieu,srowen
+617,2016-06-23 10:33:05,"Hi @srowen ,
+
+Thank you for your reply and for the great work with the Zxing project.
+
+I am running my own copy of zxing.org but I do not keep it up when I am not using it so I couldn ask for support on a dead server. My final implementation will work only with my copy.
+
+The problem I am facing is probably with the requests that zxing.org accepts. Does it accept XHR calls? How can I apply this fix [(link)](https://github.com/swagger-api/swagger-editor/blob/master/docs/cors.md) on my copy ?
+
+Thank you in advance.
+",trifwnas,srowen
+617,2016-06-27 20:23:35,"Hi @srowen ,
+
+XHR is basically AJAX.
+
+I am writing to let you know that I have figured out how to communicate with my own copy of zxing.org and it seems that probably the one which is hosted in zxing.org does not accept CORS (Cross-Origin Resource Sharing) or maybe it allows specific urls but not the one I was trying from.
+
+Thank you for your help anyways.
+",trifwnas,srowen
+587,2016-04-30 17:11:34,"@srowen  its better to update docs for newbies .
+Thanks
+",mushahidh,srowen
+578,2016-05-09 14:11:39,"@tanelihuuskonen thanks for checking this out! I agree that a corner case in the driver is likely as I've never run into this exception before or since. What checks should I perform on the preview frame received from the camera to validate it before passing it into the QRCodeReader? Or would it be better to make no assumptions about the preview frame and just catch the exception in the rare case that the frame is invalid?
+",akwizgran,tanelihuuskonen
+576,2016-12-15 01:20:29,"@srowen I debugged the code, and found that when rotating the screen such as 180 degree, the activity did not invoke the onResume() method, so camera parameters were not been resetting, so we often got wrong surface preview when rotating.
+**So the key to solve this problem is catching this event and resetting camera parameters.**
+I give one solution,it may not be a perfect one,but it is workable。
+1. add inner clase in CaptureActivity.class 
+
+2.add in onCreate()
+`
+3.add in orientation setting of onResume()
+
+4.add in onPause()
+",GuoJinyu,srowen
+574,2016-04-05 03:08:35,"@srowen so, if i want to scan  UPC_E UPC_A QR_CODE format at the same time, how can i do that?  it seems zxing decode the qr code as a barcode, so it return a random number, what do you mean a  non-photo image?  can you explain that..... i am sorry for my bad english.
+",vagrant1991,srowen
+571,2016-03-17 10:44:51,"@srowen My mistake. We are using the ZXing library for scanning QR codes in Android. In essence it's like this:
+
+
+
+The `Log.d()` line at the end prints the raw string that was in the QR code. Basically if we scan a QR code that contains a JSON string, some devices produce the JSON string with extraneous characters while some don't.
+",manabreak,srowen
+571,2016-03-17 10:47:58,"@srowen I'm not sure I follow. The output of the decoding varies from device to device when the input and the whole codebase remains the same.
+",manabreak,srowen
+571,2016-03-17 11:04:11,"@srowen They are not part of the QR code.
+",manabreak,srowen
+571,2016-03-17 11:15:27,"@srowen You can try any QR code generator and type the JSON I mentioned.
+",manabreak,srowen
+513,2015-12-04 18:55:51,"@srowen so it's at least the correct place to notify about (alleged) bugs of the Zxing Barcode Scanner App, isn't it? I'll will try to build that, too, and perhaps I can find a way to add more than one event.
+
+At least the syntax (of the ics file) is correct. So it should be possible to add more than one event. This may indeed be difficult with respect to the ""receiving"" app like calendar. Perhaps you can help...
+
+thanks.
+",Wikinaut,srowen
+484,2016-01-02 14:35:29,"Hi @srowen 
+Seems the camera rotation is correct now, but the preview rotation is still wrong, see the screenshot in attachment.
+
+Can we fix it? Thanks 
+
+![screenshot_20160102-222715](https://cloud.githubusercontent.com/assets/1770466/12074763/a9a55a40-b1a0-11e5-98bd-abba5f250df6.png)
+",nekolab,srowen
+481,2015-10-19 07:59:12,"@mmagician OK though you can use `git rebase -i HEAD~N` to squash the last N commits you made in your branch into 1, and then `git push --force ...` to update the existing branch and PR.
+",srowen,mmagician
+469,2015-10-05 13:13:46,"@loikki I added support for String arguments to most encode hints, including this one.
+https://github.com/zxing/zxing/commit/a6707cb4407ebe771e1b81ae2cab0e136c548b25
+",srowen,loikki
+452,2017-03-21 22:48:02,"@srowen  Would like this as well. 
+Any chance to have this feature in the near future?",maverick74,srowen
+449,2015-09-01 10:02:52,"Nice analysis, thanks @graug . If it's a problem in the generator, then yes that's the place to take it up, unless someone can argue that the decoder is supposed to handle this situation. In the meantime yes that's a decent hack you could apply.
+",srowen,graug
+449,2015-09-01 12:01:49,"Thx @srowen . In this case the problem is the generator, but it could potentially happen (though very unlikely) that the zxing decoder erroneously detects additional rows after the actual barcode rows. I don't have a PDF417 spec, so I don't know how the decoder is supposed to handle this case. If we abide by the general rules for communication, we should be very strict in what we generate, but lenient in what we accept. So I guess we should probably accept the presented barcode and decode it, despite the garbage at the end. I've created a pull request.
+",graug,srowen
+434,2015-07-27 19:51:46,"Thanks @srowen. I've posted a question in the mailing list. Yes, after cropping, the barcode is scanned easily. With the red lines in frame, the code will not scan. I will take a look at the idea of adding UV to the luminance to see what happens to the output.
+",nealsanche,srowen
+399,2015-06-08 06:20:41,"@srowen I used the webbased encoding at https://zxing.appspot.com/generator, selected ""contact information"" encoded as ""meCard"". I put ""+4935100000000"" into the phone number field. 
+
+The result is lacking the ""+"" sign for international prefix: 
+
+MECARD:N:meCard;TEL:4935100000000;;
+
+http://zxing.org/w/chart?cht=qr&chs=350x350&chld=L&choe=UTF-8&chl=MECARD%3AN%3AmeCard%3BTEL%3A4935100000000%3B%3B
+
+If I encode as vCard, its working fine:
+
+BEGIN:VCARD
+VERSION:3.0
+N:meCard
+TEL:+4935100000000
+END:VCARD 
+
+http://zxing.org/w/chart?cht=qr&chs=350x350&chld=L&choe=UTF-8&chl=BEGIN%3AVCARD%0AVERSION%3A3.0%0AN%3AmeCard%0ATEL%3A%2B4935100000000%0AEND%3AVCARD
+",dsp76,srowen
+380,2015-05-13 17:13:56,"@srowen After following the issues on this repo for a few weeks, might I offer the suggestion that the README be updated to clearly state at the top that this project is in maintenance mode? And the limitations on what pull requests will be accepted and what issues addressed?
+",ocdtrekkie,srowen
+380,2015-05-13 17:28:01,"@srowen Ah, I didn't see that. (Hence the reason for the suggestion in the README, where bold or large print is near impossible to miss when visiting a repo.) When opening an issue, GitHub merely presents a link to the guidelines, which I'm guessing most people don't click on. ;)
+
+Just my passing thought. :) I'm actually really glad to see quality apps like this in a very stable position rather than changing frequently. It's been a reliable companion to every device I've had since 2009.
+",ocdtrekkie,srowen
+357,2015-04-22 09:42:43,"@srowen no. Few months ago I just need to work with theirs sdk with shitty license validation.
+",sosite,srowen
+327,2015-03-11 13:08:05,"@srowen thx for reply
+So there is no way to use zxing barcode scanner without top and bottom menu and action bar?
+Why does it need action bar?
+Maybe with some other view implementation it can be possible?
+",Venzon,srowen
+302,2015-06-10 12:34:56,"@srowen I am also using 4.7.3
+
+My app uses two triggers of this URL, each often scanning the same qr code.
+My use case is exactly the same as @kckam describes.
+
+First and second work fine, but going back to first again, and it repeats the second.  Unless I used this modified URL.  Or this app was updated on play within the last couple of hours.
+",orolyn,srowen
+287,2017-03-18 20:12:28,"The zxing decoder does **not** support ECI with Data Matrix, as evident by the code:
+
+
+
+at zxing/core/src/main/java/com/google/zxing/datamatrix/decoder/DecodedBitStreamParser.java
+
+It looks like @msva was correct in reporting this issue. As zxing does support ECI and auto UTF-8 detection for QR, it should be simple to add these capabilities to the Data Matrix decoder. @srowen,  please re-open this issue.",eladts,srowen
+273,2014-12-19 14:19:15,"@srowen Fair enough, I wasn't too sure about that myself. Anyway, I've made the requested change.
+",Benjamin-Dobell,srowen
+232,2014-10-08 14:32:56,"@stevepeak Which files do you mean? I don't want to ignore `com.google` as that is this project's namespace.
+",srowen,stevepeak
+232,2014-10-19 15:37:43,"@srowen checking in to see how your experience with Codecov is going? Look forward to hearing from you. Thanks
+",stevepeak,srowen
+226,2014-09-18 06:01:21,"@srowen Thank you for your answer.
+
+@srowen  I'm from china and I'm chinese. 
+
+@srowen  How to use zxing to generate QRcode in C++ ？
+",aixiaoxianggithub,srowen
+194,2016-03-07 14:20:03,"Hello Sean Owen @srowen , I got the same problem and I'd like to know whether this issue will be fixed in short term in your library. Thank you very much.
+",ngfx,srowen
+111,2016-06-16 08:37:12,"@srowen I think I might find a way to support portrait mode.
+Here is my steps:
+1.I cloned the latest code from version 4.7.6
+2.Removing ""android:screenOrientation=""sensorLandscape"""" in [AndroidManifest.xml](https://github.com/zxing/zxing/blob/master/android/AndroidManifest.xml#L60)
+2.Removing lines from 172 to 176 in [CaptureActivity.java](https://github.com/zxing/zxing/blob/master/android/src/com/google/zxing/client/android/CaptureActivity.java#L172) to support both landscape and portrait
+3.Changing portrait preview size by changing code in [CameraConfigurationUtils.java](https://github.com/zxing/zxing/blob/master/android-core/src/main/java/com/google/zxing/client/android/camera/CameraConfigurationUtils.java#L276)
+like this:
+
+
+
+4.Putting the ""framingRectInPreview"" rect center in the camera resolution screen by changing code in [CameraManager.java](https://github.com/zxing/zxing/blob/master/android/src/com/google/zxing/client/android/camera/CameraManager.java#L253) like this:
+
+> 
+
+I test those code with my phone and it works fine.
+",liyzay,srowen
+111,2016-11-28 03:24:05,"@srowen 
+I think the most important point to support for Android portrait mode is rotating the YUV preview frame data array, because the preview frame you get is only relative to the camera's orientation (always landscape at nearly all of Android phones) which has no relation to the screen's orientation.
+So this is my steps to support portrait mode in version 4.7.7:
+1. Removing ""android:screenOrientation=""sensorLandscape"" in [AndroidManifest.xml](https://github.com/zxing/zxing/blob/master/android/AndroidManifest.xml#L47) 
+2. Changing lines from 172 to 176 in [CaptureActivity.java](https://github.com/zxing/zxing/blob/master/android/src/com/google/zxing/client/android/CaptureActivity.java#L172)  to support both landscape and portrait
+`
+3. Changing lines from 327 to 329 in [CameraConfigurationUtils.java](https://github.com/zxing/zxing/blob/master/android-core/src/main/java/com/google/zxing/client/android/camera/CameraConfigurationUtils.java#L327) to get proper aspectRatio in accordence with screen orientation
+
+4. Changing  lines from 266 to 269 in [CameraManager.java](https://github.com/zxing/zxing/blob/master/android/src/com/google/zxing/client/android/camera/CameraManager.java#L266) to get precise preview rectangle for camera.
+
+5. Changing  lines from 47 to 48 in [PreviewCallback.java](https://github.com/zxing/zxing/blob/master/android/src/com/google/zxing/client/android/camera/PreviewCallback.java#L47) to send proper width and height of preview frame
+
+6. Adding lines between 76 and 77 in [DecodeHandler.java](https://github.com/zxing/zxing/blob/master/android/src/com/google/zxing/client/android/DecodeHandler.java#L76) to rotate data when portrait
+
+7. To support portrait mode perfectly, you should also do this follow my comment in [this issue](https://github.com/zxing/zxing/issues/576)
+
+Above-mentioned code modify has been tested on both 1D and 2D code and works good in my two Android phones with back camera.
+
+BTW, I have published an Android scanner library by simplifying this Android project [SimpleZXing](https://github.com/GuoJinyu/SimpleZXing) ",GuoJinyu,srowen
+111,2016-12-15 02:08:51,"@srowen sorry for my careless, I just modify my comment above and it can work properly.",GuoJinyu,srowen
+102,2014-03-27 15:35:08,"@srowen I see that the build is still failing.. however the local tests I ran succeeded... anyway I can track this?
+",angelnar87,srowen
+21,2014-03-24 15:18:57,"@srowen It shouldn't really matter which algorithm we use. The papers I found about both algorithms show that they produce the same results. More test cases for error correction and especially for missing values would be much appreciated. I might be able to produce a few myself, once the code is there.
+",graug,srowen
+664,2016-09-02 16:19:48,"See https://github.com/zxing/zxing/issues/644
+CC @fgrieu 
+",srowen,fgrieu
+560,2016-02-15 07:11:05,"@srowen This pull request resolves a race condition seen in printing output in the command line runner. I'm not entirely sure why this occurs, but presumably the multithreaded execution of the command line runner can cause the `println` calls to be executed out of order. This is apparently something that [can happen with println in multithreaded execution](http://stackoverflow.com/questions/19460987/why-is-system-out-prinln-out-of-order).
+
+I found this occurs in two cases in my OS X environment. The first was when one of the input files is a symlink to another of input files. The second was when the files had very recently been written to disk by another program. I'm guessing in both cases, the data is already in memory, making the race condition more likely. The goofy output looks like this:
+
+
+
+Note that the points from the first file were printed while printing the points from the second file.
+
+In order to avoid the race condition, I wrote the output using a `StringWriter` for each file, printing the output for each file when it's ready. My understanding is that `System.out.println` synchronizes the output buffer, so this should be a safe operation. 
+## Testing
+
+I tested this out with the following two runs below. The example files were this QR code, and a symlink to it:
+![text1](https://cloud.githubusercontent.com/assets/123110/13041668/2e645404-d36e-11e5-9ac8-1e78fdd686a6.png)
+### This branch
+
+
+### Compiled from 1fbefcac3146bf61efadb2d5da428b0f559d630c
+
+
+
+The output from those runs can be seen in [this gist.](https://gist.github.com/lucaswiman/e88775bc8b29c439258a)
+",lucaswiman,srowen
+409,2015-07-02 12:23:43,"@srowen Could i have some reply please ?
+",Vigi0303,srowen
+351,2015-04-10 00:49:27,"@srowen BarcodeScanner latest release scan these well!
+",dawncold,srowen
+226,2014-09-18 03:06:42,"@srowen   why close?
+",aixiaoxianggithub,srowen
+129,2014-04-29 07:53:32,"Well it's a bit too late, but I just realized that this was fixed a week ago (@srowen) by removing lazy initialization entirely in 391e85ea51c9e4073d6dc2ff41cfcc400cf3bfb0. I was working against v3.0.0 while developing this fix. Closing this PR, although the description might still be a helpful reference for anyone else who experienced exceptions or corruption.
+",jameswald,srowen

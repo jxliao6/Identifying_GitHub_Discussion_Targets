@@ -1,0 +1,572 @@
+issue_num,datetime,body,login,mention_login
+3476,2017-03-02 12:32:29,"Thanks for your contribution @Danter7 
+I'll merge this, but you'll also have to bump the `blueimp-load-image ` optional dependency to version `2.12.2`, else there won't be a separate `scale` module.",blueimp,Danter7
+3475,2017-02-24 13:15:39,"Thanks for your contribution @autopulated 
+
+That was actually an issue in [JavaScript Load Image](https://github.com/blueimp/JavaScript-Load-Image/commit/57e634af79738c46b25df71a12282763721a072c)  and has been fixed with version `v2.12.2`.
+
+Regarding the closed issue tracker:
+This was a deliberate decision as the number of support requests drowned out any deliberate issue reports and made maintaining this project a full-time project.
+Pull requests still allow constructive contributions like yours, so I prefer this approach.",blueimp,autopulated
+3474,2017-02-09 17:29:21,"Thanks for your contribution, @evil-shrike.
+To not break compatibility with old browsers (supported by older jQuery Versions), I've added a change that only uses `JSON.parse` if it's available, else `jQuery.parseJSON`.",blueimp,evil-shrike
+3472,2017-02-02 20:28:26,"Thanks for your pull request @flobee.
+Unfortunately I don't see the benefit of those contributions.
+Maybe this would be better suited in a fork?
+If there's an exact topic that this set of changes is about, I'll gladly add it to the Wiki. ",blueimp,flobee
+3471,2017-02-02 19:37:11,"Thanks @gabn88 
+This is better suited for the Wiki, so I've added it to the list of forks here:
+https://github.com/blueimp/jQuery-File-Upload/wiki#forks",blueimp,gabn88
+3470,2017-01-13 16:36:04,"Thanks for your contribution, @rlucha!",blueimp,rlucha
+3468,2017-01-13 16:30:51,Thanks @bowlofeggs ,blueimp,bowlofeggs
+3465,2016-12-20 12:21:03,Thanks @exabugs !,blueimp,exabugs
+3464,2016-11-20 14:54:10,"Thanks @tribut.
+There's a separate file where I fixed this issue.
+",blueimp,tribut
+3462,2016-11-07 14:06:18,"Thanks for your contribution, @saurabh-sharma 
+
+Unfortunately, I don't think this is a good approach, as you only limit the number of parts in the multipart POST message, which doesn't have any perceivable benefit.
+Users can still send an arbitrary number of files by sending multiple POST requests for example.
+Without any user identification, it will not be possible to limit the number of files uploaded.
+
+If you need to limit the number of files users can upload, you can already do this with the current version of the PHP library.
+By making use of the options `user_dirs` and `max_number_of_files` you can effectively limit the number of files an individual user can upload.
+",blueimp,saurabh-sharma
+3462,2016-11-07 17:09:57,"Thanks for the reply @blueimp 
+
+I am not talking about the max number of files that can be uploaded in a directory, but I did mean about enforcing 1 file limit per upload, which can't be trusted from the client side! User can just fiddle the script and just skip the single file upload limit.
+
+I agree with you on this one:
+
+> Users can still send an arbitrary number of files by sending multiple POST requests for example.
+> Without any user identification, it will not be possible to limit the number of files uploaded.
+> 
+> If you need to limit the number of files users can upload, you can already do this with the current version of the PHP library.
+
+User can upload any no. of files (which can be restricted with the way you mentioned in above comment)
+
+#3462 just adds an option for single file upload (I know it can be restricted from the front end using this process https://github.com/blueimp/jQuery-File-Upload/wiki/Frequently-Asked-Questions#how-to-limit-the-file-selection-so-users-can-only-select-one-file) to be restricted from backend as well.
+
+And trust me, the front end option mentioned in the link above does not work with drag and drops at all.
+
+And apart from all this, can you just enable the `issues` options for this repo? There's another serious vulnerability (And I want to emphasise on vulnerability) which needs attention.
+",saurabh-sharma,blueimp
+3461,2016-11-05 13:01:49,"@CQPosts @madeureka 
+Please do not misuse the pull request features.
+
+And please understand that I do not offer any support for this project anymore:
+https://github.com/blueimp/jQuery-File-Upload#support
+",blueimp,CQPosts
+3461,2016-11-05 13:01:49,"@CQPosts @madeureka 
+Please do not misuse the pull request features.
+
+And please understand that I do not offer any support for this project anymore:
+https://github.com/blueimp/jQuery-File-Upload#support
+",blueimp,madeureka
+3459,2016-10-26 12:15:32,"Thanks @niksy !
+",blueimp,niksy
+3457,2016-10-17 08:18:28,"Thanks, @AllSeeingEye !
+",blueimp,AllSeeingEye
+3456,2016-10-02 17:29:25,"Thanks for your contribution, @timwiel 
+I've added your repository to the wiki (under forks).
+
+I hope it's fine for you that I prefer your work as a fork, as I don't see an imminent need to add the randomised file names feature to the master branch.
+
+I'm only maintaining this project and will not develop it any further.
+This is especially true regarding the server-side code, which originally was only meant as a simple demonstration (see e.g. the [first version](https://github.com/blueimp/jQuery-File-Upload/blob/9b22fc143f5f25c00fdf7ef177db0a99e7133378/example/upload.php) ).
+
+Thanks a lot though!
+",blueimp,timwiel
+3455,2016-10-02 17:14:45,"Thanks a lot for your contribution, @richard512 
+
+Those are all nice features and I've added your repository to the [wiki](https://github.com/blueimp/jQuery-File-Upload/wiki) (under forks).
+
+I hope it's fine for you that I prefer your work as a fork, as I want to keep my maintainer workload small and adding video thumbnail support would open up another swath of potential issues.
+
+Thanks a lot though!
+",blueimp,richard512
+3454,2016-07-31 20:04:34,"Thanks, @headlessme!
+",blueimp,headlessme
+3453,2016-07-31 19:51:09,"Thanks for your contribution and sorry for the late reply, @timmetj 
+",blueimp,timmetj
+3452,2016-06-15 08:02:50,"Thanks for your contribution, @steve3d 
+However, there's absolutely no need to include the code snippet you added inside of this library.
+Simply add it into a new file and include it in your HTML documents.
+",blueimp,steve3d
+3451,2016-06-11 14:09:30,"Thanks, @remicollet 
+",blueimp,remicollet
+3449,2016-06-08 11:58:06,"Thanks for your contribution, @akvadrako.
+I prefer to let the UI code handle the display of error messages and don't see a necessary need to explain the lack of video preview.
+Thanks for your understanding.
+",blueimp,akvadrako
+3446,2016-05-27 12:19:28,"Thanks for your contribution, @akvadrako.
+
+I've added some comments to the updated files.
+
+Could you elaborate on separating the AMD and node.js package formats jQuery-style?
+",blueimp,akvadrako
+3446,2016-06-30 14:32:13,"Would love to see this merged also.
+
+@akvadrako couple of notes:
+- Since you’re referencing `angular` and `blueimp-load-image`, I suppose those should be defined as `dependencies` of this project?
+- Why do you explictly reference `blueimpl-load-image/js/load-image` instead of `blueimp-load-image`? That package already exports module which can be consumed?
+",niksy,akvadrako
+3446,2016-08-29 10:59:22,"@akvadrako are you still working on this?
+If there's no reply to my requested changes I'll close this in the next couple of days.
+",blueimp,akvadrako
+3445,2016-05-23 13:11:42,"Thanks @mcdado 
+",blueimp,mcdado
+3444,2016-05-20 09:54:00,"Thanks @orhanveli.
+",blueimp,orhanveli
+3440,2016-05-01 18:32:48,"Thanks, @georgemillo!
+",blueimp,georgemillo
+3439,2016-04-29 12:23:40,"Thanks for your contribution, @hashmode.
+However, this option is unnecessary, as it's already possible to keep modified versions only, as the original itself is listed in the image versions:
+https://github.com/blueimp/jQuery-File-Upload/blob/master/server/php/UploadHandler.php#L133
+",blueimp,hashmode
+3439,2016-04-29 14:07:45,"@blueimp , thanks for the reply. I had seen that part, and I anticipated that if I skip the empty version - the original will not be saved. So, e.g. if we have these options
+
+
+
+I thought it would create only these 2 files: `upload_dir/small/image.jpg` and `upload_dir/large/image.jpg`. However I end up having one more `upload_dir/image.jpg` file - which is the original. I also tried to make the empty `''` version as one of my files by having
+
+
+
+However, though it crops the main image by `800x800` as provided, but it exists as `upload_dir/image.jpg` and NOT as `upload_dir/large/image.jpg`. And one more thing: in response object for the last case I see only `smallUrl => 'upload_dir/small/image.jpg'` - I mean the large image's url is not provided.
+
+So, my initial goal is to have e.g. 2 image versions with given dimensions in their corresponding folders - and no original image. Am I missing something ?
+
+Thanks
+",hashmode,blueimp
+3437,2016-04-11 21:52:15,"Thanks, @TeLiXj!
+",blueimp,TeLiXj
+3435,2016-04-11 17:41:04,"Thanks, @mattiasw!
+",blueimp,mattiasw
+3434,2016-04-11 21:48:43,"Thanks for your contribution, @servocoder.
+
+Am I correct in the assumption that this issue mainly affects 32bit Windows servers?
+
+And could you confirm that, instead of using the curl workaround, the following function (cop+pasted from a php.net comment) will also fix the issue on those platforms?
+
+
+
+Taken from http://php.net/manual/en/function.filesize.php#115792
+",blueimp,servocoder
+3434,2016-08-29 10:59:46,"@servocoder Are you still working on this?
+",blueimp,servocoder
+3433,2016-02-26 11:16:51,"Thanks @Herst !
+",blueimp,Herst
+3432,2016-02-24 16:38:00,"Thanks @rhymes!
+",blueimp,rhymes
+3431,2016-02-24 18:44:24,"Thanks @ThomasLandauer!
+",blueimp,ThomasLandauer
+3430,2016-02-24 18:40:20,"Thanks for the contribution, @ningliu.
+",blueimp,ningliu
+3424,2016-02-24 18:58:30,"Hi @atealxt, thanks for your contribution.
+
+I read your blog post and I think that's a very interesting approach to the problem.
+I think a more fitting description would be ""server processing estimate"", as it's the processing on the server (or servers) that we don't get additional progress events on.
+
+The server processing of images is the reason I usually display an animated progress bar, as this way the user still has an indication that something is going on.
+
+I think your approach is interesting and valid as well, so I've added a link to your blog post to the [wiki](https://github.com/blueimp/jQuery-File-Upload/wiki#customization-how-tos).
+
+Since not all implementations will have this processing time, I prefer not to include those changes in the master though.
+Thanks for your understanding!
+",blueimp,atealxt
+3423,2015-10-31 03:27:13,":-1:  @ToreOlavKristiansen I would rather suggest an enhancement, where the developer can configure the active prefix by choosing between ""decimal"" and ""binary"".
+https://en.wikipedia.org/wiki/Binary_prefix
+https://en.wikipedia.org/wiki/Metric_prefix#Decimal_prefix
+",websafe,ToreOlavKristiansen
+3423,2015-10-31 12:49:32,"@ToreOlavKristiansen I still think that this is wrong. It should use the IEC units with powers of 1024 and the SI prefixes with powers of 1000.
+
+If you like to have the same number values as the Windows Explorer, _please_ use the correct units.
+I would rather explain to curious end-users why there's an extra ""i"" in the unit than make false claims about internationally standardized units.
+",patlkli,ToreOlavKristiansen
+3422,2016-02-24 18:15:24,"Thanks for your contribution, @istem and sorry for the late reaction.
+",blueimp,istem
+3418,2015-09-13 11:20:43,"Thanks for your contribution, @jeff1326.
+
+Unfortunately at the moment I will only merge new features that cannot be handled without this change.
+
+Although your callback functionality would certainly be useful, this could also be handled with the current version.
+You could e.g. override the `handle_file_upload` method in a subclass and call the original method in the subclass method. 
+
+In my opinion, the file path shouldn't be a property of the file object, as it's not metadata related to the file itself, but only useful for operations on server-side.
+",blueimp,jeff1326
+3417,2015-08-28 20:37:41,"Thanks for the contribution, @majornista!
+",blueimp,majornista
+3416,2015-08-25 15:49:09,"Thanks again for your contribution, @fabiogermann.
+With the latest stable AngularJS version it seems the progress apply isn't even necessary so I removed that callback.
+",blueimp,fabiogermann
+3414,2015-08-10 19:25:50,"Thanks, @fabiogermann!
+",blueimp,fabiogermann
+3412,2015-08-05 16:28:12,"Thanks for your contribution, @TrueDrago.
+I created a separate fix, as the bower-json validation also had issues with the multiple CSS and JS files listed in the `main` property.
+",blueimp,TrueDrago
+3406,2015-07-08 16:07:48,"@blueimp I really need your help. I tried looking for solution everywhere but could not find anything. May be you can help. It may be very basic but it is just not working for me.
+
+I implemented database implementation of blueim/jQuery-file-upload. Everything is working fine but the problem is, the form shows all uploaded files. I want it to show only that images which are related to a particular post, tried different solution but it is just not working for me.
+
+I think related code changes might be in this function
+
+
+
+I tried to change the select query just so it can pull one particular image but it is not working for me. Can you please help or guide me in the right direction? Thanks
+",hammadkhan,blueimp
+3405,2015-07-05 19:11:35,"I think originally I intended `jquery.ui.widget` to be a named module, as other jQuery projects might potentially include it as well.
+
+That's also why there's an npm package of the same name, that I admittedly didn't maintain for a long time:
+https://www.npmjs.com/package/jquery.ui.widget
+
+RequireJS should definitely work as well with the updated path, as that's how the local scripts are included in the other JS files.
+
+Thanks for your contribution, @palcu!
+",blueimp,palcu
+3405,2015-07-07 08:30:51,"Thanks for the report, @dbrugne.
+I've released a new version reverting the change.
+
+Sorry @palcu, I should have tested my assumptions regarding RequireJS.
+We'll have to find another workaround for the issue with WebPack.
+",blueimp,dbrugne
+3405,2015-07-07 08:30:51,"Thanks for the report, @dbrugne.
+I've released a new version reverting the change.
+
+Sorry @palcu, I should have tested my assumptions regarding RequireJS.
+We'll have to find another workaround for the issue with WebPack.
+",blueimp,palcu
+3405,2015-07-10 22:01:56,"@palcu @blueimp simple workaround for WebPack is to disable AMD:
+
+https://www.npmjs.com/package/imports-loader#disable-amd
+",evoyy,palcu
+3405,2015-07-10 22:01:56,"@palcu @blueimp simple workaround for WebPack is to disable AMD:
+
+https://www.npmjs.com/package/imports-loader#disable-amd
+",evoyy,blueimp
+3405,2016-04-26 08:38:30,"The same `Module not found: Error: Cannot resolve module 'jquery.ui.widget'` error is happening to me when using webpack. When I add `jquery.ui.widget` to my dependencies in `package.json`, it works. `jquery.ui.widget`'s `package.json` only misses `""main"": ""jquery.ui.widget.js""` to make it work.
+
+@blueimp Shouldn't `jquery.ui.widget` be part of the plugin's dependencies in `package.json`?
+",orthes,blueimp
+3405,2016-04-26 13:09:09,"@orthes:
+Technically yes, `jquery.ui.widget` is a dependency.
+
+However, the jQuery UI project does not use NPM as a package manager, so there was never an official version of `jquery.ui.widget` available.
+The [one on NPM](https://www.npmjs.com/package/jquery.ui.widget) was actually published by myself and is unmaintained.
+
+The official version of `jquery.ui.widget` also didn't support AMD originally, which is why a version with AMD support was shipped as part of this repository instead.
+",blueimp,orthes
+3404,2015-06-28 12:35:55,"@tons:
+Thanks for your contribution.
+While I won't include this feature in the master branch, I think it could be a good addition to the Wiki.
+I've re-enabled public write access so feel free to add a tutorial page.
+
+@atfc2015:
+Sorry but I don't provide any private services for my open source projects at the moment.
+",blueimp,tons
+3403,2015-06-28 12:39:11,"Thanks @pquentin !
+",blueimp,pquentin
+3397,2015-05-27 13:54:01,"@hippobpinh1:
+Please do not spam the pull request comments.
+
+Please read this on your support options:
+https://github.com/blueimp/jQuery-File-Upload#support
+
+I'll answer you this one time, but again, please stop spamming (as I've had to delete three of your other misplaced comments). Check out this option, it defines the max file size of images to load for the preview feature:
+https://github.com/blueimp/jQuery-File-Upload/wiki/Options#loadimagemaxfilesize
+",blueimp,hippobpinh1
+3397,2015-05-27 14:03:18,"@blueimp  i'm sorry i think my post it's not submit. Thank you very much @blueimp :). Now I very very happy when you answer my question.Its working now. I like youuuuuuuuuuuuuuuuu.
+",hippobpinh1,blueimp
+3396,2015-05-18 07:51:06,"Thanks @guag!
+",blueimp,guag
+3392,2015-05-20 12:21:38,"@miohtama Seems to be that adding new issue is similar with pull request here.
+Do they have any issue tracker page?
+",itsazzad,miohtama
+3392,2015-05-20 13:16:51,"Sorry, but I've decided that I won't accept donations of any kind anymore.
+
+@itsazzad:
+Please see https://github.com/blueimp/jQuery-File-Upload#support
+",blueimp,itsazzad
+3388,2015-02-05 07:47:26,"Thanks for your contribution, @twlz0ne 
+",blueimp,twlz0ne
+3381,2015-01-01 17:06:29,"Thanks for your contribution, @ivankravchenko.
+
+However, the existing `ForceType` directive already prevents execution of any script files (PHP, Perl, Python, Ruby, etc.):
+https://github.com/blueimp/jQuery-File-Upload/blob/master/server/php/files/.htaccess#L4
+
+See also:
+https://github.com/blueimp/jQuery-File-Upload/wiki/Security#php
+",blueimp,ivankravchenko
+3381,2015-01-12 20:37:47,"Thanks @jm-hi-heg.
+Shows to serve that everyone needs to test security measures against their own setup.
+In my Apache+PHP setups, the ForceType directive already prevented script execution, so I was not aware of the critical security issue in other environments.
+Hopefully, `SetHandler default-handler` will work for all other setups.
+",blueimp,jm-hi-heg
+3374,2014-12-19 22:35:10,"Thanks for your contribution, @paulgv.
+It is possible to override any header in the `fileuploadsend` callback, by modifying the `data.headers` map.
+Therefore I don't see a pressing need to add another option.
+",blueimp,paulgv
+3366,2014-12-19 22:45:11,"Thanks for your contribution, @plieven and sorry for my late reply.
+For the moment I've decided that the decision of calculating and displaying the average bitrate instead can be done by a consumer of the API and doesn't require an update of the core library.
+",blueimp,plieven
+3362,2014-10-13 19:31:54,"Thanks for your contribution, @AndrewEastwood :+1: 
+",blueimp,AndrewEastwood
+3358,2014-09-26 19:02:05,"Thanks for the contribution, @DeveloperKid.
+While I usually don't add additional server-side upload handlers, if you provide a link (the github project page?) I can add it to the Wiki.
+",blueimp,DeveloperKid
+3331,2014-09-01 21:01:35,"Thanks for your contribution, @darknessm0404!
+",blueimp,darknessm0404
+3328,2014-08-30 09:48:40,"Thanks for your contribution, @dokinoki.
+At the moment I would prefer if you could add your code and setup and usage examples to the Wiki.
+",blueimp,dokinoki
+3258,2014-07-21 19:03:30,"Thanks for your contribution, @tkleinhakisa ! :+1: 
+",blueimp,tkleinhakisa
+3169,2014-05-26 22:03:10,"Thanks for your contribution, @truongminh.
+However this would always download the complete source file in the client-browser, which can be several megabytes for each image, just for the preview thumbnail.
+Therefore I don't recommend this change.
+Also, ImageMagick is not required, the PHP version for example also supports the GD library:
+https://github.com/blueimp/jQuery-File-Upload/blob/master/server/php/UploadHandler.php#L99
+",blueimp,truongminh
+3144,2014-05-14 21:41:12,"Thanks for your contribution, @jamesvl !
+I was long reluctant to add namespace support since it's only supported since PHP 5.3.
+But your code is clean and people can still use older releases if needed.
+",blueimp,jamesvl
+2926,2014-02-05 03:51:06,"Thanks for your contribution, @etruong42 
+I don't plan on supporting Firefox add-ons as clients, so at the moment won't incorporate any specific  code for this platform.
+However I'm interested what your use case for this addition is?
+",blueimp,etruong42
+2926,2014-02-05 12:25:02,"@blueimp The use case is loading the jQuery File Upload plugin from a Firefox add on. And in that case, `window.Blob.prototype` is undefined, which I suspect is for security reasons.
+
+Even if you weren't hoping to officially support Firefox add ons, I thought that this patch would be a net win for cases where the environment, for whatever reason, has `window.Blob` defined but not `window.Blob.prototype`; and in that case, the JavaScript application crashes unless we wrap the plugin in a `try...catch`.
+",etruong42,blueimp
+2771,2013-11-28 17:00:30,"Thanks, @andrewks777 , for your contribution.
+Although I do think that transliteration can be a useful feature, I believe that there must be better solutions on a windows host to keep the original filename.
+
+Please see the FAQ entry here:
+https://github.com/blueimp/jQuery-File-Upload/wiki/Frequently-Asked-Questions#is-there-a-problem-uploading-files-with-non-ascii-characters-php-windows-server
+",blueimp,andrewks777
+2740,2013-11-15 13:22:28,"Thanks for your contribution, @ottens.
+I've released a new version based on your pull request (slightly refactored and with a unit test added).
+",blueimp,ottens
+2740,2013-12-03 18:15:01,"@ottens, thanks for adding the limitMultiFileUploadSize option. I needed it too and the solution I came up with was not as elegant.
+",dougdomeny,ottens
+2722,2013-11-06 16:00:06,"Thanks @dougdomeny, performance improvements are always very welcome! :)
+",blueimp,dougdomeny
+2701,2014-02-17 17:19:39,"I'm seeing this exact same issue, but was able to solve it.
+
+Here is the scenario (code examples reduced for brevity):
+
+I have a ""parent"" controller declared using ui-router like so
+
+
+
+In my controller I have:
+
+
+
+In my view I have the form similar to the demo:
+
+The `$scope.queue` variable within the fileupload directive appears as empty when loading the page even thou the `$http.get` function actually sets it. I believe this is because it's not inherited form the parent controller.
+
+**NOTE:** _notice that there is no controller declaration in the form tag; the controller is supposed to be declared for the whole view in the ui-router setup._
+
+
+
+I saw the same behavior as @srigi where the parent scope is not being inherited
+![reports-2-2](https://f.cloud.github.com/assets/6163102/2187433/40922648-97f6-11e3-8eec-bbed535cb06b.png)
+![reports-5](https://f.cloud.github.com/assets/6163102/2187435/4306e88c-97f6-11e3-9823-01e6b5217d02.png)
+
+.
+
+The way I fixed this is by implicitly telling the form which controller to use:
+
+
+
+When I do this, the scope is inherited correctly
+
+![reports-4](https://f.cloud.github.com/assets/6163102/2187469/bdcd41ce-97f6-11e3-9d7e-a051a4fc05dc.png)
+
+![reports-6](https://f.cloud.github.com/assets/6163102/2187472/c0cbba0e-97f6-11e3-8382-cc33d66ce5d6.png)
+
+maybe this sheds a bit more light on the subject.
+",hectorvs-gxg,srigi
+2607,2013-10-01 06:44:45,"@blueimp We plan to use jQuery-File-Upload via composer package manager not for server side implementation, but for client-side one. That's how we can keep your plugin as an external dependency and have an up-to-date version of the plugin.
+Proposed PR does not require updating `composer.json` after each release. Composer will handle it automatically. All you need is to register at https://packagist.org/ and add a service hook to the Github.
+Thanks in advance
+",maxromanovsky,blueimp
+2585,2013-09-11 14:13:18,"Thanks for your contribution, @denis-sokolov.
+
+Unfortunately, I won't merge your code for the following reasons:
+- The code in your new if block is meaningless, as toUpperCase doesn't affect the value of the string itself, but returns the new value:
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
+- method should not be used as name for an input field, as it collides with the method property of the form.
+  If you really need to set it, you should define the type.
+  Although it would help to check for a valid string here, I think this is unnecessary clutter, as it should only fail in rare edge cases and can easily be remedied by setting the type explicitly.
+",blueimp,denis-sokolov
+2585,2013-09-11 15:15:45,"The fact that I didn't assign the value to the variable is just a stupid oversight. :)
+But thanks for kindly explaining it.
+
+As for your decision to not fix the issue, may I carefully suggest you review it once more?
+There is nothing in the spec that disallows such a name.
+In fact, the [spec clearly states](http://developers.whatwg.org/association-of-controls-and-forms.html#attr-fe-name):
+
+> Any non-empty value for name is allowed [..]
+
+I find it quite likely that such a ubiqutous name as `method` might be used by other developers.
+The error that is currently thrown is highly unusual and comes from inside of your upload library.
+Do you think that preventing such a possible issue is not useful at all, @blueimp?
+",denis-sokolov,blueimp
+2442,2013-07-18 17:20:32,"Thanks for your contribution, @jesucarr ! :)
+",blueimp,jesucarr
+2164,2013-05-01 12:09:50,"I like the feature but think the implementation could use some more work. 
+
+@blueimp, I feel like I'll break chunked uploads if I overload `get_file_name` because I can't clearly make out what `get_unique_filename` is doing. Have you got any advice on how to easily allow random filenames? Much appreciated
+",ncatanchin,blueimp
+2094,2014-01-16 16:07:15,"@silence-cube:
+Yes, localization has been incorporated into the basic plugin, albeit with a slightly different approach as what @cibernox originally suggested in his pull request.
+It's even possible to override the translation function to provide your own translation framework:
+https://github.com/blueimp/jQuery-File-Upload/blob/master/js/jquery.fileupload.js#L144
+",blueimp,silence-cube
+2094,2014-01-16 16:07:15,"@silence-cube:
+Yes, localization has been incorporated into the basic plugin, albeit with a slightly different approach as what @cibernox originally suggested in his pull request.
+It's even possible to override the translation function to provide your own translation framework:
+https://github.com/blueimp/jQuery-File-Upload/blob/master/js/jquery.fileupload.js#L144
+",blueimp,cibernox
+2094,2015-12-29 17:29:03,"@blueimp do you mean https://github.com/blueimp/jQuery-File-Upload/blob/master/js/jquery.fileupload.js#L176?
+
+I am wondering how to use the `i18n` function with the second parameter `context`. Can you give a simple example?
+",dzhuang,blueimp
+1939,2012-12-16 13:01:56,"Thanks for your contribution, @mdornseif .
+However, I don't think this is the best approach for this issue.
+
+To limit parallel requests to the server, you can make use of the built-in option **limitConcurrentUploads** and set it to the desired number of parallel requests.
+
+To make sure the uploads are done in order, you can set the built-in option **sequentialUploads** to _true_.
+",blueimp,mdornseif
+1933,2012-12-12 21:23:40,"Thanks for your contribution, @MiguelCarranza .
+However, there is no need for another option, as you can adjust the headers via the **send** callback:
+
+
+",blueimp,MiguelCarranza
+1933,2013-09-19 06:16:57,"@MiguelCarranza Could you share the code you used to integrate with parse.com?
+",torlanco,MiguelCarranza
+1919,2012-12-09 22:45:44,"Thanks for your contribution, @mvhenten.
+I'm aware of this bug in mobile Safari, however there is a server-side solution which doesn't require any client-side hacks:
+Sending the following header (whcih is included in the provided server-side upload handlers) prevents this issue:
+
+
+",blueimp,mvhenten
+1919,2012-12-09 22:53:40,"Hi, thanks. We basically serve that header for all appropriate GET's but
+never for POST ( since of course spec says POST must never be cached )
+We have a mostly custom implementation/backend ( Perl based ) so I never
+looked at the backend code.
+Wish I had tough, this has cost me a lot of hours debugging. Will see if we
+can set the header, it's a nicer hack :0)
+
+On Sun, Dec 9, 2012 at 11:45 PM, Sebastian Tschan
+notifications@github.comwrote:
+
+> Thanks for your contribution, @mvhenten https://github.com/mvhenten.
+> I'm aware of this bug in mobile Safari, however there is a server-side
+> solution which doesn't require any client-side hacks:
+> Sending the following header (whcih is included in the provided
+> server-side upload handlers) prevents this issue:
+> 
+> Cache-Control: no-cache
+> 
+>  —
+> Reply to this email directly or view it on GitHubhttps://github.com/blueimp/jQuery-File-Upload/pull/1919#issuecomment-11177314.
+",mvhenten,mvhenten
+1127,2012-10-31 16:40:52,"@blueimp - This seems like a good option.  If people don't want to do use it they don't have to put the data-confirm attribute on the link tag, and then they never see the confirmations.  I personally am having difficulty implementing the example you linked to in above.
+",batter,blueimp
+148,2012-05-18 08:51:51,"Using the headers option like this:
+
+
+
+Seems to do the trick for file uploads, however the header is not attached in the destroy action (when clicking the delete button). It seems that the _getAJAXSettings() method is not invoked inside the destroy() handler. @blueimp ?
+",etdsoft,blueimp
+148,2013-05-02 17:43:57,"@blueimp Could you provide an example of how to implement your suggestion for using URL parameters for iframe upload?  Finding it difficult to adapt your example of extending options for Delete.  Much appreciated.
+",jedierikb,blueimp
+3404,2015-06-28 12:35:55,"@tons:
+Thanks for your contribution.
+While I won't include this feature in the master branch, I think it could be a good addition to the Wiki.
+I've re-enabled public write access so feel free to add a tutorial page.
+
+@atfc2015:
+Sorry but I don't provide any private services for my open source projects at the moment.
+",blueimp,atfc2015
+3378,2014-12-19 22:24:36,"Thanks for your contribution, @Aszze!
+",blueimp,Aszze
+3374,2015-03-16 22:04:54,"@egojab Sorry for the delay, I just noticed your post ! I edited my question on Stack Overflow with some more information, I hope it helps ;)
+",paulgv,egojab
+3370,2014-12-27 08:59:39,"@blueimp here is a chance to make a beautiful xmas gift :)
+",nervo,blueimp
+1865,2012-11-17 20:47:45,"Thanks for your contribution, @amelard.
+
+However, it was already possible to delay the printing of the result content.
+If you override the initialize method, you can call the public **get**, **post** and **delete** methods with _false_ as first parameter, to prevent printing the result (or sending any headers). Those methods return the unencoded result content.
+
+You can then make use of the **generate_response** method to print the result and the headers:
+
+
+
+With the latest commit (a706781bd6b4abd8c0be36c356c99169d76ba758) I've also wrapped the **header**, **echo** and **readfile** calls in object methods which allows extending classes to handle the response.
+
+The $index variable you removed for the validation method might be used if someone wants to validate differently depending on the index of the uploaded file, although this is admittedly unlikely.
+",blueimp,amelard
+1865,2012-11-17 21:07:21,"That's great's news thank you very much for adding the wrappers!
+
+I'm trying to wrap your code in a symfony2 bundle without touching your
+code but I need to have a sr0 name ie UploadHandler.php do you mind
+changing the name of the file or adding a symlink?
+Le 17 nov. 2012 21:47, ""Sebastian Tschan"" notifications@github.com a
+écrit :
+
+> Thanks for your contribution, @amelard https://github.com/amelard.
+> 
+> However, it was already possible to delay the printing of the result
+> content.
+> If you override the initialize method, you can call the public _get_, *
+> post\* and _delete_ methods with _false_ as first parameter, to prevent
+> printing the result (or sending any headers). Those methods return the
+> unencoded result content.
+> 
+> You can then make use of the _generate_response_ method to print the
+> result and the headers:
+> 
+> <?phprequire('upload.class.php');
+> class CustomUploadHandler extends UploadHandler {
+>     protected function initialize() {
+>         switch ($_SERVER['REQUEST_METHOD']) {
+>             // ...
+>             case 'POST':
+>                 $content = $this->post(false);
+>                 // Do something with the $content object
+>                 // and then print it to the output stream:
+>                 $this->generate_response($content);
+>                 break;
+>             // ...
+>         }
+>     }}
+> $upload_handler = new CustomUploadHandler();
+> 
+> With the latest commit (a706781https://github.com/blueimp/jQuery-File-Upload/commit/a706781bd6b4abd8c0be36c356c99169d76ba758)
+> I've also wrapped the _header_, _echo_ and _readfile_ calls in object
+> methods which allows extending classes to handle the response.
+> 
+> The $index variable you removed for the validation method might be used if
+> someone wants to validate differently depending on the index of the
+> uploaded file, although this is admittedly unlikely.
+> 
+> —
+> Reply to this email directly or view it on GitHubhttps://github.com/blueimp/jQuery-File-Upload/pull/1865#issuecomment-10478733.
+",mylen,amelard
+942,2012-03-02 04:04:07,"Actually, I had issues specifically with loading vendor/query.ui.widget as I don't want it to be there (got an existing folder structure I really care about).
+
+It seems like the paths configuration doesn't work with this [kind of relative path](https://github.com/blueimp/jQuery-File-Upload/blob/master/js/jquery.fileupload.js#L21).
+
+Turns out I don't know if it's a bug, a feature from require.js or just me doing something wrong, missing something from the doc. I'll ask @jrburke about this one.
+
+Here's a gist with the confs I tried : https://gist.github.com/1955536
+
+I agree about jQuery, special case but I also saw some bugs with this one... 
+",ZeeAgency,jrburke

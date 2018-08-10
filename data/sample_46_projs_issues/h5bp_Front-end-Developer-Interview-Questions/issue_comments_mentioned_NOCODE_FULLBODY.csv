@@ -1,0 +1,3180 @@
+issue_num,datetime,body,login,mention_login
+372,2017-02-08 04:17:14,@karmeljuk Welcome PR to improve translations and speak in English.,appleboy,karmeljuk
+371,2016-11-23 12:53:14,"@bala-me  I suppose there it worth to add question about comparison / difference cookies / LS ( sadly not all dev's which I interviewed can cover that question )
+
+And I'm not sure that it's for JS section. Maybe General questions? ( except you're asking about API of LS/SS -- but there are few methods only )",vvscode,bala-me
+370,2016-11-10 08:36:06,"@vvscode , you need to put 0x to make it work in the console as it is a hex number. Actually, after answered this question, 2 of my interviewers just wanted to know how I would deal with this strange question, they didn't expect me to anwser it right so they accepted it as a good solution :smile: 
+",thovo,vvscode
+368,2016-09-24 19:29:52,"@leeoniya  You're right. But you can use something and don't know how other people call that patterns/solution. And if it's the case - the only thing that you know - that gut didn't met the term. But it **doesn't mean** that he doesn't know that pattern. 
+
+Finally - both of this functions ( and many others ) - just common solutions for common tasks. And you can solve  the same tasks with the same ( or other ) methods even have no idea that someone already done it - just cause you need it here and know.
+
+My position - ask about terms show you knowledge of that terms. Not knowledge of the salt/base or terms meaning
+",vvscode,leeoniya
+361,2016-07-12 09:26:03,"@theaemarie I met some teams in last month where guys asked this question. But there they talk about projects with old codebase and enterprise applications ( which still work on IE7 - I don't know why )
+",vvscode,theaemarie
+351,2016-03-28 08:57:21,"@yanni4night Thanks
+",appleboy,yanni4night
+348,2016-09-24 19:35:21,"@schwolf  for me that are two different questions. 
+
+And asking about `bubbling` - I'll be glad to hear  both about bubbling/capturing. Difference in last param for adding event handler ( which show which phase should we use to catch event). Knowledge about the fact that not all event bubble up (Non-bubbling events )
+",vvscode,schwolf
+348,2016-11-15 23:10:32,"@vvscode can you elaborate on why those two questions are  different for you?
+
+In my opinion your expectations of what a candidate should know are all in scope of ""Explain event delegation"" question and the ""Describe event bubbling"" does not include anything new. I am curious about your point of view. 
+",DzikowskiW,vvscode
+348,2016-11-16 05:55:23,"@DzikowskiW I suppose that I already discover that )) When I read question `Explain event delegation` - I wait talk about the fact, that events can bubble up, and as it follows we can capture events on some parent element, which difference it means etc. And sure it's related to events bubbling.
+
+But if you ask me about `event bubbling/capturing` - I'll say you about two phases of event processing ( capturing - down / bubbling - up ), how it allow to manipulate with order of handlers, what is good practice/ what is not ( what we shouldn't use capturing phases without special reasons ), about fact, that not all events bubble up , etc. And delegation is only the special case of usage of bubbling, so you or listen about in the end, or I just miss that fact, cause it's not what about you ask. 
+
+Out of scope, but another example of such pair: - You can ask me `what is closure?` and `How to save context on creating callbacks ( meaning something like`var that = this;`and usage of`that` in callback ) - there are two different questions ( related - yes, but not similar )
+",vvscode,DzikowskiW
+348,2016-11-16 08:04:36,"@vvscode thank you for clearing this up, I can see your point now and you convinced me 
+",DzikowskiW,vvscode
+346,2016-02-24 20:21:51,"@jacopotarantino Thanks for the PR! 
+I'm a bit on the fence about it personally - we don't have any questions related to syntax errors currently, but at the same time I suspect this might be interpreted as a bit of a trick question in the context of an interview. Thoughts @darcyclarke @appleboy?
+",richgilbank,jacopotarantino
+346,2016-02-24 23:11:21,"@richgilbank no worries :). I wasn't 100% sure it fit the theme of the list but it felt worth submitting. If I may, here's a little backstory:
+
+It suddenly hit me the other day that I had no idea what that would do because I'd never tried it(an empty `if` statement would be pretty strange). I tried it out to check what would happen and then asked a few coworkers what they thought. The varied responses I got from them made me think this is a good interview question.
+
+The point of asking the question in an interview is more to see how much detail a person can give in response and how they might justify their response. So while someone more astute like yourself might know/assume that it's a syntax error they will hopefully be able to describe why it's a syntax error and one can ask a followup question about what happens to the process/execution flow. Or someone less thoughtful like myself might assume that it is valid JavaScript (because why not) and describe to the interviewer how the content(lack thereof) of the parens is evaluated and what happens with the final value. Maybe dig into type coercion a bit as a followup.
+
+There's probably another dimension to this but I haven't thought of it yet. Anyway, that's the process that lead to the PR.
+",jacopotarantino,richgilbank
+343,2016-02-09 08:16:01,"@tgfjt Thanks
+",appleboy,tgfjt
+342,2016-03-16 19:39:12,"@RattanPriya Maybe you should add a separate question specifically around _async_ and _defer_ instead of removing a fairly well-rounded question on best practices. Furthermore, the last part of that question actually allows a candidate to talk about _async_ and _defer_ if they know about those (ie. _""Do you know any exceptions?""_)
+",darcyclarke,RattanPriya
+338,2016-03-13 07:43:15,"@hongbinc  Please see http://www.w3fools.com/
+",odv,hongbinc
+338,2016-08-25 12:31:34,"@igregson I still recommend _The Good Parts_ to beginners in addition to more recent resources including most mentioned above since it is somewhat dated info. It still provides some well-thought-out information about why and why not to do certain things with JavaScript.
+",silkster,igregson
+337,2015-12-14 07:11:25,"@zushenyan Thanks.
+",appleboy,zushenyan
+334,2016-03-16 19:34:28,"@diogosilvaferreira  I'm starting to feel like this question, and it's topic, in general, is becoming legacy. It's great to understand what the doctype does but the nuances of legacy browser modes and legacy markup standards is fairly irrelevant these days. I appreciate the attention to detail here so I probably will merge this in, but I'm just making a note that we may want do a pass at some of these questions at some point and put them into a new category (ie. `legacy` or similar)
+",darcyclarke,diogosilvaferreira
+333,2015-11-05 16:22:16,"@ambeer Looks like this PR is to merge your changes into the `richgilbank-patch-1` branch. Mind closing this and opening a new one targeting the `master` branch?
+",richgilbank,ambeer
+333,2017-01-23 01:01:35,@ambeer Please rebase this PR.,appleboy,ambeer
+332,2016-03-16 19:30:31,"@hemstreet  I think the syntax you propose and what you imply is a bit misleading. For all intents and purposes, people consider `{ }` to be an object literal (not and array). This seems more like a trick question, which I tend to think are bad ideas when interviewing people. 
+
+If you'd like to reformat this question to be something more like _""What are some differences between objects and arrays?""_ it may work better.
+",darcyclarke,hemstreet
+324,2015-10-05 12:47:18,"@pacMakaveli Thanks.
+",appleboy,pacMakaveli
+322,2015-09-11 15:05:32,"@carlosliu Thanks.
+",appleboy,carlosliu
+321,2015-09-10 09:25:07,"@tokyoish Thanks.
+",appleboy,tokyoish
+318,2015-08-15 16:24:53,"@dermatobia Thanks.
+",appleboy,dermatobia
+313,2016-03-16 19:14:38,"@strugee Sorry for the wait on this PR, can you rebase?
+",darcyclarke,strugee
+311,2015-07-16 18:02:32,"@darcyclarke Nah. Bad translations reflect bad on the project. Maybe we should try to get reviewers that know the language before merging PRs.
+",arthurvr,darcyclarke
+311,2015-07-16 18:05:58,"@arthurvr Nah? o_O 
+",darcyclarke,arthurvr
+306,2015-06-03 13:19:01,"@zeitiger Thanks.
+",appleboy,zeitiger
+298,2015-05-22 03:41:49,"Looks good @zeitiger! Can you update your branch so we can merge? There's been changes to master since you made your initial pull request. A pull/merge should fix that up.
+",darcyclarke,zeitiger
+298,2015-05-22 03:57:16,"@zeitiger rebase master on your current branch.
+
+
+",appleboy,zeitiger
+298,2015-06-03 11:55:26,"@zeitiger Thanks for picking this up! Though you can just make the edit to this PR, in fact.
+",arthurvr,zeitiger
+295,2015-05-14 19:17:19,":+1:, Thanks @syymza!
+",richgilbank,syymza
+291,2015-04-27 01:04:21,"@CheungJ Thanks.
+",appleboy,CheungJ
+290,2015-05-05 01:37:37,"@populationtwo  can you rebase? We've made some merges and they've unfortunately made this out-of-date.
+",darcyclarke,populationtwo
+290,2015-05-14 12:15:18,"ping @populationtwo
+",arthurvr,populationtwo
+290,2015-06-01 18:37:23,"@populationtwo ping ;)
+",arthurvr,populationtwo
+290,2015-06-08 14:20:21,"@populationtwo I'm going to close this for now as there haven't been any updates here in a while. Feel free to reopen if you get a chance to rebase.
+",richgilbank,populationtwo
+290,2015-07-27 18:15:27,"@arthurvr @darcyclarke @richgilbank 
+I'm sorry for the delayed response. I just read the notification today.
+
+Thanks
+",populationtwo,richgilbank
+290,2015-07-27 18:15:27,"@arthurvr @darcyclarke @richgilbank 
+I'm sorry for the delayed response. I just read the notification today.
+
+Thanks
+",populationtwo,darcyclarke
+290,2015-07-27 18:15:27,"@arthurvr @darcyclarke @richgilbank 
+I'm sorry for the delayed response. I just read the notification today.
+
+Thanks
+",populationtwo,arthurvr
+289,2015-04-18 04:11:08,"@mathieuhays Thanks.
+",appleboy,mathieuhays
+288,2015-05-05 01:37:07,"@MihaylovNikitos can you rebase? We've made some merges and they've unfortunately made this out-of-date.
+",darcyclarke,MihaylovNikitos
+288,2015-05-22 14:15:17,"@MihaylovNikitos Also, can you clarify _where_ you're asking what those values are? i.e. At the end of (inside) the `change` function, vs the end of the snippet?
+",richgilbank,MihaylovNikitos
+288,2015-05-30 07:41:23,"ping @MihaylovNikitos 
+",arthurvr,MihaylovNikitos
+288,2015-06-08 14:18:26,"@MihaylovNikitos I'm going to close this for now due to the inactivity - feel free to reopen when you get a chance to rebase and answer the above question. 
+",richgilbank,MihaylovNikitos
+284,2015-06-02 16:28:45,"@darcyclarke @arthurvr Sorry for my late reply. Sure, I will break up these questions and resolve the conflicts.
+",MaximKhlobystov,arthurvr
+284,2015-07-28 02:31:35,"@darcyclarke Done.
+",MaximKhlobystov,darcyclarke
+282,2015-04-28 16:02:19,"LGTM. Thanks for this @jacopotarantino!
+",richgilbank,jacopotarantino
+281,2015-04-07 18:01:17,"@darcyclarke Good point. But I would add, the question what is the purpose of it. Why this is important and what are the benefits of it.
+",marcobiedermann,darcyclarke
+280,2015-04-07 17:57:07,"@darcyclarke Maybe you could come up with a better question. Sorry a am not a native speaker.
+I mean, how to load in content? Use an iframe for this? Load it via ajax? What are the differences? The are the pros and cons of each technique. When to use what? Which one is better for SEO?
+Something like that.
+",marcobiedermann,darcyclarke
+277,2015-04-25 09:12:10,"@cch5ng Thanks for letting us know, it's outdated indeed. The team is working on a better system: https://github.com/h5bp/Front-end-Developer-Interview-Questions/issues/269.
+
+@darcyclarke If you have five minutes, can you update the branch for now?
+",arthurvr,cch5ng
+276,2015-03-20 00:41:18,"Thanks @tjwudi! 
+
+I'm not entirely sure what the best place is for a question like this, since it encompasses numerous concepts - HTTP chunking could fit into the network section, client-side rendering of XHR-fetched data could fall under JS, and we probably have enough questions already to break out into a new performance-oriented section. 
+
+Thoughts @darcyclarke @arthurvr?
+",richgilbank,tjwudi
+274,2015-03-11 10:54:12,"> It's a right to left language like Arabic. It will be readable on github anyway, but not looking nice. Any experience with that? 
+
+@omidfi Just wrap everything in the `README.md` file with `<div dir=""rtl"" lang=""fa""> ... </div>`
+",alrra,omidfi
+273,2015-03-07 18:27:26,"你好 @appleboy 先问问, 没有冒犯之意, 你应该能认识中文吧? ( hi, can you read chinese? if not, skip this comment )
+@hawx1993 收集整理前端面试题列, 我认为其中有些条目, 如 iframe 使用场景优劣性, js 深度拷贝等, 可适合 PR. 你能帮忙做一下吗? 或是由 @hawx1993 来做?
+",penVC,hawx1993
+273,2015-03-07 18:27:26,"你好 @appleboy 先问问, 没有冒犯之意, 你应该能认识中文吧? ( hi, can you read chinese? if not, skip this comment )
+@hawx1993 收集整理前端面试题列, 我认为其中有些条目, 如 iframe 使用场景优劣性, js 深度拷贝等, 可适合 PR. 你能帮忙做一下吗? 或是由 @hawx1993 来做?
+",penVC,appleboy
+273,2015-03-08 02:46:00,"@penJunTan 
+
+如果要增加面試題目，請直接發 PR，大家可以一起討論，是否加入官方的 Readme，這部份就由 @hawx1993 來決定哪些題目適合放入官方 Repo，這邊需要大家審核才可以放入，不是我一個人可以決定的。
+",appleboy,hawx1993
+272,2015-04-07 18:11:46,"Thanks @mohsen1! We're mulling over some ideas on how to fix this and I think sections codes would definitely help. That said, we also need to be concerned about the potential deletion and reordering of questions. I think some kind of unique id will have to be used to maintain the most accuracy and sanity going forward.
+",darcyclarke,mohsen1
+271,2015-03-14 20:47:56,"Great, thanks @mmhan! 
+And thanks @arthurvr for the ping :smile_cat: 
+",richgilbank,mmhan
+271,2015-03-14 20:47:56,"Great, thanks @mmhan! 
+And thanks @arthurvr for the ping :smile_cat: 
+",richgilbank,arthurvr
+271,2015-03-14 20:49:23,"> Great, thanks @mmhan! 
+
+Well then why did you closed this PR?
+",arthurvr,mmhan
+270,2015-03-19 01:35:53,"@phanan I _do_ like the idea of leaving it a bit more open-ended. Mind updating the PR to your latter suggestion? Thanks! 
+
+> What are HTTP actions? List all HTTP actions that you know, and explain them.
+",richgilbank,phanan
+269,2015-02-26 01:27:29,"@phanan Good points. Translations are tricky right now as they've all been done kind of piecemeal without much thought or organization. It would be good to have a more standardized way of contributing translations going forward as well as creating a build process for generating the markdown file along with any kind of website.
+
+My initial thoughts are to have all the questions moved into a JSON data store and generate both a simple, single-page, website and the markdown file from that. 
+",darcyclarke,phanan
+269,2015-03-19 21:45:46,"> It's not well known but we do have a Github Page that is just a nicer looking version of the markdown file at http://h5bp.github.io/Front-end-Developer-Interview-Questions/. 
+
+@darcyclarke Added the site to the project's description:
+
+![](https://cloud.githubusercontent.com/assets/1223565/6741604/99e98ab0-ce91-11e4-9762-1820c0d40810.png)
+",alrra,darcyclarke
+265,2015-02-25 15:12:02,"@phanan Here's my original blog post from _February 9th, 2012_ http://darcyclarke.me/development/front-end-job-interview-questions/ The questions looked a lot different back then...
+
+And yea, that question originates from this document it seems... so you can put a date/timestamp on it going back to _at least_ February 9th, 2012.
+",darcyclarke,phanan
+257,2015-02-13 03:49:12,"Agree @richgilbank :+1: 
+",appleboy,richgilbank
+257,2015-02-25 16:27:52,"@TheDerek I'm not sure what you're referring to but your feedback sounds a bit off-topic (unless someone has removed the comment you were replying to).
+
+---
+
+@matachines We won't be including any library-specific content in the future (ie. jQuery, Angular, Polymer, Ember, Backbone, Underscore, Node, Express etc.). Native implementations and general concepts, patterns and architecture questions are different. 
+
+---
+
+@phanan my hope is that we'll always be able to maintain a single file by improving organization/navigation as we grow bigger.
+
+---
+
+@richgilbank I agree. With _30+_ questions, that section does seem a bit `.length`y :wink: Although, the **CSS** section isn't too far behind, so we may need to consider it as well (or _very_ soon). 
+
+**Initial Feedback:**
+The terms `language`, `usage` and `implementation` don't sound succinct enough to me. `Usage` and `implementation`, specifically, sound like the same topic/too similar. That said, I may need to see the division, as you have it in mind, to appreciate the different correlations and what will go where. It may make sense to start a Pull Request now with the changes you think work and we can discuss the verbage and categorization more there.
+
+**Alternative Suggestion:**
+I had once thought of splitting up all the sections into context-specific sub-categories like: `What`, `Where`, `When`, `Why`, `How` and `Explain`. Most questions fit nicely into these categories already and this approach would help guide phrasing for future additions (ie. someone would know exactly `what` goes `where`). It definitely has the potential to add a lot of sub-categories and spreading out content but it's just a thought. 
+
+I'm definitely open to any other suggestions in terms of sub-categorization. A simple reorg, grouping similar questions/phrasing, might also help with discovery.
+",darcyclarke,TheDerek
+257,2015-02-25 16:27:52,"@TheDerek I'm not sure what you're referring to but your feedback sounds a bit off-topic (unless someone has removed the comment you were replying to).
+
+---
+
+@matachines We won't be including any library-specific content in the future (ie. jQuery, Angular, Polymer, Ember, Backbone, Underscore, Node, Express etc.). Native implementations and general concepts, patterns and architecture questions are different. 
+
+---
+
+@phanan my hope is that we'll always be able to maintain a single file by improving organization/navigation as we grow bigger.
+
+---
+
+@richgilbank I agree. With _30+_ questions, that section does seem a bit `.length`y :wink: Although, the **CSS** section isn't too far behind, so we may need to consider it as well (or _very_ soon). 
+
+**Initial Feedback:**
+The terms `language`, `usage` and `implementation` don't sound succinct enough to me. `Usage` and `implementation`, specifically, sound like the same topic/too similar. That said, I may need to see the division, as you have it in mind, to appreciate the different correlations and what will go where. It may make sense to start a Pull Request now with the changes you think work and we can discuss the verbage and categorization more there.
+
+**Alternative Suggestion:**
+I had once thought of splitting up all the sections into context-specific sub-categories like: `What`, `Where`, `When`, `Why`, `How` and `Explain`. Most questions fit nicely into these categories already and this approach would help guide phrasing for future additions (ie. someone would know exactly `what` goes `where`). It definitely has the potential to add a lot of sub-categories and spreading out content but it's just a thought. 
+
+I'm definitely open to any other suggestions in terms of sub-categorization. A simple reorg, grouping similar questions/phrasing, might also help with discovery.
+",darcyclarke,richgilbank
+257,2015-02-25 16:27:52,"@TheDerek I'm not sure what you're referring to but your feedback sounds a bit off-topic (unless someone has removed the comment you were replying to).
+
+---
+
+@matachines We won't be including any library-specific content in the future (ie. jQuery, Angular, Polymer, Ember, Backbone, Underscore, Node, Express etc.). Native implementations and general concepts, patterns and architecture questions are different. 
+
+---
+
+@phanan my hope is that we'll always be able to maintain a single file by improving organization/navigation as we grow bigger.
+
+---
+
+@richgilbank I agree. With _30+_ questions, that section does seem a bit `.length`y :wink: Although, the **CSS** section isn't too far behind, so we may need to consider it as well (or _very_ soon). 
+
+**Initial Feedback:**
+The terms `language`, `usage` and `implementation` don't sound succinct enough to me. `Usage` and `implementation`, specifically, sound like the same topic/too similar. That said, I may need to see the division, as you have it in mind, to appreciate the different correlations and what will go where. It may make sense to start a Pull Request now with the changes you think work and we can discuss the verbage and categorization more there.
+
+**Alternative Suggestion:**
+I had once thought of splitting up all the sections into context-specific sub-categories like: `What`, `Where`, `When`, `Why`, `How` and `Explain`. Most questions fit nicely into these categories already and this approach would help guide phrasing for future additions (ie. someone would know exactly `what` goes `where`). It definitely has the potential to add a lot of sub-categories and spreading out content but it's just a thought. 
+
+I'm definitely open to any other suggestions in terms of sub-categorization. A simple reorg, grouping similar questions/phrasing, might also help with discovery.
+",darcyclarke,phanan
+257,2015-09-20 00:09:30,"@marlun78 I don't believe it's necessary to add ES6 questions. Creativity from the candidate should be expected instead (you can solve problems like the fizzbuzz one with ES6, for example. It's a beautiful solution with ES6 btw, it'd be lovely to see the candidate use it alone).
+",diessica,marlun78
+254,2015-02-05 14:23:27,"@marcobiedermann :+1: 
+",appleboy,marcobiedermann
+253,2015-02-05 12:42:06,"Thanks @marcobiedermann 
+",richgilbank,marcobiedermann
+249,2015-02-04 03:21:37,"I'm all for it, but would like to change `property hacks` into `selector hacks` or just `hacks` following @darcyclarke's suggestion.
+",phanan,darcyclarke
+244,2015-01-30 09:58:06,"@phanan was correct. The original phrasing that referenced normalize/resets was attributed to an answer.
+",darcyclarke,phanan
+242,2015-01-31 05:09:43,"+1 for removing jQuery question. The same reason with @phanan 
+",appleboy,phanan
+242,2015-02-04 16:24:21,"Shouldn't we close this question now that jQuery has been removed? Calling for @darcyclarke and @appleboy.
+",phanan,darcyclarke
+242,2015-02-04 16:24:21,"Shouldn't we close this question now that jQuery has been removed? Calling for @darcyclarke and @appleboy.
+",phanan,appleboy
+242,2015-02-17 23:06:44,"Apologize for the delay, I admit I'm playing a bit of `catch` up on this discussion. I'm happy to see we `all` agreed to `reject` library-specific API implementations. I `promise` we'll be better off in the long run for doing that. I'm also `always` glad to see that we're (as a community) not in a `race` to add more questions just for the sake of it; Vetting ideas/topics first and `then` formulating questions around those is the ideal workflow. 
+
+That said, to `resolve` this `pending` issue I'm in favour of `settling` on @richgilbank's proposal. It `fullfills` the primary criteria of an overarching question on _Promises_. 
+
+If no one else has suggestions or editions to that `then` someone should make a PR with Rich's suggestion.
+",darcyclarke,richgilbank
+242,2015-02-17 23:11:07,"@darcyclarke Awful. Just awful. :stuck_out_tongue_closed_eyes: 
+PR added.
+",richgilbank,darcyclarke
+242,2015-02-19 03:43:27,"Chit-chat (I know the issue is closed): I was reading @darcyclarke's comment from Gmail and asking myself ""What the heck with these monospace stuff?"" And then I was like ""Whoa... Just... Whoa...""
+",phanan,darcyclarke
+242,2015-02-19 04:33:20,"How can I stop getting emails from all of u
+
+On February 18, 2015, at 7:44 PM, Phan An notifications@github.com wrote:
+
+Chit-chat (I know the issue is closed): I was reading @darcyclarke's comment from Gmail and asking myself ""What the heck with these monospace stuff?"" And then I was like ""Whoa... Just... Whoa...""
+
+—
+Reply to this email directly or view it on GitHub.￼
+",masterE,darcyclarke
+242,2015-02-19 10:06:38,"@masterE By [unsubscribing](https://help.github.com/articles/unsubscribing-from-conversations/)
+",arthurvr,masterE
+241,2015-01-29 09:28:03,"@phanan Good question. Waiting for @richgilbank @darcyclarke opinion.
+",appleboy,phanan
+241,2015-01-29 16:21:35,"@richgilbank While I had `DOMContentLoaded` in mind for this question too, my only concern is it would be too open and easy -- `DOMContentLoaded` is rather self-explanatory. 
+
+What I like about this question, too, is it's more of a tricky one. For example, one could change it into _What is the difference between `window.load` and `window.ready`?_ and see if the interviewee sees the trap there ;)
+",phanan,richgilbank
+241,2015-01-29 17:52:58,"Works for me. Thanks @phanan
+",richgilbank,phanan
+240,2015-01-29 09:34:09,"@richgilbank agree.
+",appleboy,richgilbank
+239,2015-01-29 01:53:14,"@richgilbank :+1: 
+",appleboy,richgilbank
+233,2015-01-23 16:44:20,"@septyaman thanks.
+",appleboy,septyaman
+233,2015-01-23 18:25:43,"Amazing, thanks for this @septyaman!
+",richgilbank,septyaman
+228,2015-01-21 01:58:04,"@kanet77 Thanks.
+",appleboy,kanet77
+226,2015-01-20 20:41:54,"@normanbrobinson Thanks for submitting this, we've been lacking a11y questions IMO. I've added a few notes/questions, mind clarifying those or cleaning them up? 
+",richgilbank,normanbrobinson
+226,2015-01-20 21:09:27,"Happy to assist. Apologies whilst I get into a regular review of the
+project and try to make project-appropriate changes; there is so much depth
+to this topic that is very hard to over simplify without confusing
+usability with accessibility.
+
+On Tue, Jan 20, 2015 at 3:42 PM, Rich Gilbank notifications@github.com
+wrote:
+
+> @normanbrobinson https://github.com/normanbrobinson Thanks for
+> submitting this, we've been lacking a11y questions IMO. I've added a few
+> notes/questions, mind clarifying those or cleaning them up?
+> 
+> —
+> Reply to this email directly or view it on GitHub
+> https://github.com/h5bp/Front-end-Developer-Interview-Questions/pull/226#issuecomment-70728912
+> .
+
+## 
+
+(703) 942 9569 google voice 24x7
+""You have access to the greatest source of knowledge in the universe.""
+""Well, I do talk to myself sometimes."" ~ The Invasion of Time (1978)
+",normanbrobinson,normanbrobinson
+226,2015-01-25 09:01:40,"@normanbrobinson Based on the discussions in-line, I think there's a few revisions that need to be made before we can merge this. It would also be great if you could re-title your pull request to reflect the changes your wishing to make (see [Contributing](https://github.com/h5bp/Front-end-Developer-Interview-Questions/blob/master/CONTRIBUTING.md) for more details).
+",darcyclarke,normanbrobinson
+226,2015-02-17 23:19:35,"@normanbrobinson This branch is now too far out of date to be merged cleanly. If you could rebase or merge and clean up/fix up this branch, that would be great. I'm going to close this PR for now though but can reopen once those changes are made or you can make a new one if you'd like.
+",darcyclarke,normanbrobinson
+226,2015-02-18 02:27:16,"Sorry - had two deaths in the family - will (re)do asap
+
+On Tue, Feb 17, 2015 at 6:20 PM, Darcy Clarke notifications@github.com
+wrote:
+
+> @normanbrobinson https://github.com/normanbrobinson This branch is now
+> too far out of date to be merged cleanly. If you could rebase or merge and
+> clean up/fix up this PR that would be great. I'm going to close this PR for
+> now though but can reopen once those changes are made or you can make a new
+> PR if you'd like.
+> 
+> —
+> Reply to this email directly or view it on GitHub
+> https://github.com/h5bp/Front-end-Developer-Interview-Questions/pull/226#issuecomment-74776993
+> .
+
+## 
+
+(703) 942 9569 google voice 24x7
+""You have access to the greatest source of knowledge in the universe.""
+""Well, I do talk to myself sometimes."" ~ The Invasion of Time (1978)
+",normanbrobinson,normanbrobinson
+220,2015-01-23 18:39:03,"Thanks for the contribution, but I'm with @andycole on this one. @darcyclarke and I have discussed this a few times and the outcome has typically been that adding questions specific to  MV\* frameworks would rapidly grow beyond the scope of this project (which frameworks are worthwhile?). They also aren't fundamental skills, and different companies will have different tools and workflows, so having a solid understanding of the basics is the only thing we can really expect. 
+",richgilbank,andycole
+219,2015-01-12 15:56:19,"@andreisebastianc Thanks.
+",appleboy,andreisebastianc
+218,2015-01-10 14:22:36,"@mttrs Thanks
+",appleboy,mttrs
+216,2014-12-30 04:59:21,"@yograterol Thanks.
+",appleboy,yograterol
+215,2015-01-06 07:50:38,"Hey @Techfolio! Thanks for the great tip! That said, the original emphasis of this project was around questions, not answers. It works better as a starting point for people to investigate relevant topics and think critically. If we start to fill in the blanks for folks and define answers then we open up the flood gates and invite criticism over correctness. The few answers that you may or may not have seen should be removed (if there are any left in the document right now).
+
+> As an aside: **""3 Ways To Decrease Page Load""** is actually a great title for a blog post (if you are inclined to write a bit).
+",darcyclarke,Techfolio
+215,2015-01-07 03:45:02,"Hi @darcyclarke, 
+Thank you! After I read over your project a few times, I began to think of it as exactly the way you described.  It's a really useful resource. I appreciate your follow up.
+",Techfolio,darcyclarke
+214,2014-12-28 15:38:14,"@marcker Nice work. 
+",appleboy,marcker
+212,2014-12-26 13:13:37,"@tom76kimo :+1: 
+",appleboy,tom76kimo
+209,2015-01-06 13:12:32,"@isdampe Thanks.
+",appleboy,isdampe
+208,2015-01-07 00:34:29,"@darcyclarke Yes, if it seems like a worthy question.
+
+@tarzak also for SEO
+",amerikan,tarzak
+208,2015-01-07 00:34:29,"@darcyclarke Yes, if it seems like a worthy question.
+
+@tarzak also for SEO
+",amerikan,darcyclarke
+207,2014-12-24 03:08:18,"@ryanmjacobs Thanks.
+",appleboy,ryanmjacobs
+206,2014-12-29 09:20:10,"@nb If I got your answer, my question would be: what basically `_.curry` function does and could you write a basic implementation of this function?
+",cy6erskunk,nb
+206,2014-12-29 10:03:22,"@cy6erskunk Good point. 
+",appleboy,cy6erskunk
+206,2014-12-29 11:13:49,"+1 to the answer of @appleboy boy. It's what I gave, but more readable.
+",arthurvr,appleboy
+206,2014-12-29 19:33:07,"@cy6erskunk Thanks, that’s a great followup interview question and of course, an applicant should be prepared to know both what currying is and how to implement a rough version. Which is true for any external code we’re using, anyway.
+",nb,cy6erskunk
+206,2014-12-29 21:36:20,"@arthurvr I believe you're going too deep. `typeof b === 'undefined'` seems to be enough here, question about plus operator seems to be separate issue in JS, this question might be used to trigger discussion.
+",cy6erskunk,arthurvr
+206,2014-12-30 04:19:32,"agree with @cy6erskunk 
+",appleboy,cy6erskunk
+204,2015-01-09 06:00:00,"@doertedev You haven't responded in a while, so I'm going to go ahead and close this. Please let me know if/why you feel this should be added. Thanks!
+",richgilbank,doertedev
+203,2014-12-23 16:36:29,"Indeed. I agree with @richgilbank on this. It's too project/IDE specific. Something like `Give some example files to include in your .gitignore?` maybe?
+",arthurvr,richgilbank
+203,2015-01-09 06:38:47,"Perhaps try rewording this to something more general about setting up a project as @arthurvr and @richgilbank have noted.
+",darcyclarke,richgilbank
+203,2015-01-09 06:38:47,"Perhaps try rewording this to something more general about setting up a project as @arthurvr and @richgilbank have noted.
+",darcyclarke,arthurvr
+197,2014-12-23 16:26:42,"Agree with @richgilbank, it's **front-end** interview questions.
+",arthurvr,richgilbank
+196,2015-01-09 05:51:32,"Hey @doertedev, if you can fix the type, rebase and then squash your commits, we'll try and merge this question in.
+",darcyclarke,doertedev
+196,2015-01-29 20:41:50,"@doertedev Seems like you screwed thing up with this PR. Can you take a look?
+",arthurvr,doertedev
+192,2014-12-23 01:37:50,"@crissdev Thanks.
+",appleboy,crissdev
+191,2014-12-22 11:11:31,"@pborreli Thanks.
+",appleboy,pborreli
+190,2014-12-19 01:53:06,"@ginna-baker Nice works. Thanks.
+",appleboy,ginna-baker
+189,2014-12-18 08:36:27,"@minamarkham Thanks :+1: 
+",appleboy,minamarkham
+188,2014-12-11 23:54:40,"@dok thanks for the PR, but I feel it's pretty similar to the question immediately above it (""Do your best to describe the process from the time you type in a website's URL to it finishing loading on your screen""). Any chance you could try rewording that one to include navigating to a page _and_ straight-up loading (i.e. accounting for the Referrer header)?
+",richgilbank,dok
+188,2015-01-09 05:47:12,"Agree with @richgilbank. I think this is too similar a question.
+",darcyclarke,richgilbank
+187,2014-12-11 08:01:09,"@raphaelfabeni Thanks.
+",appleboy,raphaelfabeni
+185,2014-12-09 01:58:54,"@AurelioDeRosa Thanks.
+",appleboy,AurelioDeRosa
+182,2014-12-07 02:04:39,":+1: Thanks @AurelioDeRosa 
+",appleboy,AurelioDeRosa
+182,2014-12-07 02:06:20,"You're welcome @appleboy
+",AurelioDeRosa,appleboy
+176,2014-10-07 15:58:45,"Thanks for the PR @dz1984 
+And for the review @appleboy!
+",richgilbank,dz1984
+176,2014-10-07 15:58:45,"Thanks for the PR @dz1984 
+And for the review @appleboy!
+",richgilbank,appleboy
+175,2014-10-22 23:22:03,"Thanks @ptomasroos! 
+",richgilbank,ptomasroos
+174,2014-09-02 13:38:32,"Thanks @kubum!
+",richgilbank,kubum
+173,2014-08-20 17:54:41,"Thanks @edsoto!
+",richgilbank,edsoto
+171,2014-08-19 20:03:40,"@rimager Thanks for the PR! Unfortunately though, I think this is pretty much covered with question 4 (`Talk about your preferred development environment. (OS, Editor, Browsers, Tools etc.)`). I'm not really a fan of `IDE` either, given some are simple text editors. 
+
+How would you feel about changing the existing question to something like `What is your preferred development environment (OS, Editor, Browsers, Tools etc.)?`? That would at least make that question match the format of the others.
+",richgilbank,rimager
+171,2014-08-20 15:35:49,"Thanks @rimager, no need for a new PR - I'm going to accept it from here to keep documentation of the discussion.
+",richgilbank,rimager
+170,2014-08-15 19:49:58,"@bdrinc Thanks for the PR!  it looks like this is a translation of https://github.com/darcyclarke/Front-end-Developer-Interview-Questions/pull/166, is that correct? If that's the case, would you be open to aligning the question more to the discussion in there?
+",richgilbank,bdrinc
+169,2014-08-15 16:22:23,"Thanks @mrecachinas!
+",richgilbank,mrecachinas
+167,2014-08-13 21:17:29,"Hey @bluepyro! Thanks for the PR. Can you make sure this translation follows the same conventions as the others and lives in it's own folder inside the `Translations` directory? If you can make that change that would be awesome.
+",darcyclarke,bluepyro
+166,2014-08-14 01:14:20,"Hey @ernerock, thanks for the pull request! I'm not sure if the translation is correct but it seems like you're asking what language someone thinks is best to learn in 2014. I don't know if that's necessarily that helpful, even as a fun question. Maybe ask something like ""Are you interested in, or know, any other programming languages other than JavaScript?""
+",darcyclarke,ernerock
+165,2014-08-13 21:17:46,"Thanks @nestor783!
+",darcyclarke,nestor783
+165,2014-08-13 21:23:23,"@darcy @nestor783 my Spanish isn't great, but some of these look wrong.
+![](http://cl.ly/image/270i2Z3Z1J3C/Screen%20Shot%202014-08-13%20at%205.22.19%20PM.png)
+![](http://cl.ly/image/3F2R1O3N1j07/Screen%20Shot%202014-08-13%20at%205.22.52%20PM.png)
+",richgilbank,nestor783
+163,2014-08-13 18:09:01,"@redwanhh This seems pretty basic, unless there's something specific you're asking for. Can you clarify if that's the case?
+",richgilbank,redwanhh
+163,2014-08-14 01:16:18,"@redwanhh You may want to change the wording to just ""What is the difference between an ID and a Class?"". As @richgilbank said, it is pretty basic but also important to know.
+",darcyclarke,richgilbank
+163,2014-08-14 01:16:18,"@redwanhh You may want to change the wording to just ""What is the difference between an ID and a Class?"". As @richgilbank said, it is pretty basic but also important to know.
+",darcyclarke,redwanhh
+161,2014-08-14 02:08:47,"agree with @darcyclarke 
+",appleboy,darcyclarke
+157,2014-08-10 05:26:20,"Sorry @appleboy, just pushed some updates. Can you rebase this?
+",richgilbank,appleboy
+157,2014-08-10 06:23:52,"@richgilbank Done. Please review again.
+",appleboy,richgilbank
+153,2014-08-10 13:15:51,"@mattiasw Looks like this needs a rebase. We've also just pushed some changes, if you don't mind adding those in as well. Thanks :)
+",richgilbank,mattiasw
+148,2014-07-14 19:24:23,"Hey @NkS90! Thanks for the contribution. Unfortunately, I think this question already gets covered under the following: 
+
+> Do your best to describe the process from the time you type in a website's URL to it finishing loading on your screen.
+",darcyclarke,NkS90
+148,2014-07-15 12:54:29,"@darcyclarke My bad! I didn't notice. Thanks :)
+",NkS90,darcyclarke
+148,2014-07-15 15:46:40,"@darcyclarke Personally I think this question is too big, maybe It can be more specific. 
+",tjwudi,darcyclarke
+145,2014-05-30 14:24:00,"Thanks @tsevdos!
+",darcyclarke,tsevdos
+144,2014-05-30 14:24:30,"Wicked! Love this @bivald 
+",darcyclarke,bivald
+143,2014-05-30 14:24:57,"Less extreme #ftw. Thanks @wolever!
+",darcyclarke,wolever
+130,2014-03-02 16:12:03,"Hi @joom, i saw this pull request right now but i sent my translation, too. :) I looked your translation and it has some missing questions. Can you look my pull to check translation? Because i added missing questions, sections, ..etc. It can be good for correct translation.
+",Sly777,joom
+114,2014-01-10 22:02:13,"Hey @markyun, maybe you can merge some of those questions into the original markdown file (`README.md`) of this repo. Feel free to make a Pull Request. I'd love to see some new questions added.
+",darcyclarke,markyun
+110,2014-01-16 15:59:21,"Unfortunately, I'm not fluent in Bulgarian. If you've got some time @NikolayIT, or anyone else, feel free to make a Pull Request with an _in progress_ or even complete translation. 
+",darcyclarke,NikolayIT
+82,2013-10-11 17:16:10,"Hey @demoive, yea. I'm trying to keep that section limited to the original people that started this document. Contributors going forward are recognized through merged branches (ie. commits). If you could remove yourself and keep the one line question removal, I can merge this in.
+",darcyclarke,demoive
+82,2013-10-11 17:22:29,"@darcyclarke, done.
+
+One follow-up question: when you say ""commits"" is not what I did with #68 and #79? (Just curious).
+",demoive,darcyclarke
+79,2013-10-11 16:48:57,"Thanks @darcyclarke! I submitted an additional PR (#82) just to add me as a contributor and remove a now duplicate question.
+",demoive,darcyclarke
+68,2013-07-24 02:38:24,"Appreciate the contributions @demoive! I left some comments, if you could check them out and make some changes that would be awesome.
+",darcyclarke,demoive
+68,2013-09-04 12:10:39,"Hey @darcyclarke, there are some followup questions to your comments for some of the lines above. Can you go through them so that I can make the final pull request with the final changes? Thanks!
+",demoive,darcyclarke
+53,2013-04-17 07:14:09,"@darcyclarke Fixed now. Sorry for that.
+",wibron,darcyclarke
+46,2013-03-22 17:54:48,"Hey @PascalPrecht, looks like we just landed another German version last night (https://github.com/darcyclarke/Front-end-Developer-Interview-Questions/tree/master/German). If there's any issues with that one, please make a PR to update the specific issues. Otherwise, I'll most likely close this without merge.
+",darcyclarke,PascalPrecht
+23,2012-10-02 01:55:16,"@hemanth were you thinking of something more involved then just gh-pages as @paulirish suggests? You mentioned something about selecting questions. 
+
+I can buy a domain sometime tomorrow after I've had a word with the crew (that shall not be named) about a good name. For now, I've set up the gh-page: http://darcyclarke.github.com/Front-end-Developer-Interview-Questions/
+",darcyclarke,paulirish
+23,2012-10-02 01:55:16,"@hemanth were you thinking of something more involved then just gh-pages as @paulirish suggests? You mentioned something about selecting questions. 
+
+I can buy a domain sometime tomorrow after I've had a word with the crew (that shall not be named) about a good name. For now, I've set up the gh-page: http://darcyclarke.github.com/Front-end-Developer-Interview-Questions/
+",darcyclarke,hemanth
+23,2012-10-03 11:02:35,"@darcyclarke Well, count me in for anything :) 
+@paulirish LOL nice domain name! One more mothereffing sites! `wc -c` said `50` :+1:
+",hemanth,paulirish
+23,2012-10-03 11:02:35,"@darcyclarke Well, count me in for anything :) 
+@paulirish LOL nice domain name! One more mothereffing sites! `wc -c` said `50` :+1:
+",hemanth,darcyclarke
+11,2014-07-20 16:28:44,"Just wanted to add my agreement with @blg002 - best practice is a fickle thing. From the 10 different answer available by Googling, only 1 or 2 would be passable in an interview. If you added answers, it would give a general direction for junior devs to follow. 
+",bengrunfeld,blg002
+11,2015-06-09 18:26:43,"@bengrunfeld I generally look down on this practice and don't want to promote people posting ""answers"" to this repo or even in issues. Please refer to [my comment](https://github.com/h5bp/Front-end-Developer-Interview-Questions/pull/215#issuecomment-68835978) on issue #215 if that's not clear.
+",darcyclarke,bengrunfeld
+11,2015-06-09 22:15:31,"@darcyclarke Cool, I'll remove it.
+",bengrunfeld,darcyclarke
+357,2016-06-24 08:26:24,"<?php
+
+// function debug_log() {
+//     if (false) {
+//         return;
+//     }
+//     static $fp = 0;
+//     if ($fp === 0) {
+//         $logpath = '/home/work/search/view-ui/log/disp_graph_filter.log';//日志名称
+//         $fp = fopen($logpath, 'a');
+//     } 
+//     $traces = debug_backtrace();
+//     $trace = count($traces) > 1 ? $traces[1] : $traces[0];
+//     $log_msg = date('Y-m-d H:i:s') . ': [' . $trace['function'] . ' '. basename($trace['file']) . ' ' .$trace['line'] . ']';
+//     foreach(func_get_args() as $arg) {
+//         if (is_string($arg)) {
+//             $log_msg .= $arg . ' ';
+//         } else {
+//             $log_msg .= var_dump($arg) . ' ';
+//         }
+//     }
+//     fwrite($fp, $log_msg . ""\n"");
+// }
+/**
+- 
+- @desc General出图策略
+- @author chenhuailiang@baidu.com
+  *
+  */
+  class DispGraphFilter extends Strategy {
+  const HIT_IMAGE_SEARCH_ALADIN = 1;      //< 图片搜索阿拉丁
+  const HIT_VIDEO_SEARCH_ALADIN = 2;      //< 视频搜索阿拉丁
+  const HIT_OTHER_IMAGE_ALADIN = 3;       //< 其他带图的阿拉丁
+  
+  //< 出图时不再展现图文标
+  private function disable_general_pic(&$item) {
+      if (isset($item['dispData']['general_pic']['url'])) {
+          unset($item['dispData']['general_pic']['hasPicType']);
+      }
+      // debug_log('disable_general_pic');
+      return true;
+  }
+  //< 不出图. 小流量实验, 对比组加上tag
+  private function disable_general_image(&$arrItem, $add_tag, $reason=""unspecified"") {
+      if (isset($arrItem ['dispData'] ['backup_template']) && !empty($arrItem ['dispData'] ['backup_template'])) {
+          $arrItem ['dispData'] ['templateName'] = trim($arrItem ['dispData'] ['backup_template']);
+      }
+      // } else {
+      //     $arrItem ['dispData'] ['templateName'] = $arrFilterConfs ['defaultTplName'];
+      // }
+      if (isset($arrItem['dispData']['general_pic']['url']) ) {
+          unset($arrItem['dispData']['general_pic']['url']);
+      }
+      if($add_tag === true) {
+          $arrItem ['dispData'] ['fake_imge_show'] = ""fake_imge_show"";
+      }
+      // debug_log('disable_general_image.' . ($add_tag ? ""no_tag"" : ""add_tag"") . ' reason:' . $reason);
+      return true;
+  }
+  //< 获取不同位置(左上, 左下, 右边)广告展现的数目
+  //< 广告id决定了展现位置, 对应关系参考
+  //< https://svn.baidu.com/ps/se/trunk/fe/tpl/www/src/page/baidu/baidu/page.tpl
+  public function get_ads_count($ecresult) {
+      $ads = array(""left_top"" => 0, ""left_bottom"" => 0, ""right"" => 0);
+      if(!is_array($ecresult['ecResultItem']) || empty($ecresult['ecResultItem']) ) {
+          return $ads;
+      }
+      $left_top_ids = array(119 => 1, 204 => 1, 656 => 1, 213 => 1, 664 => 1);
+      $left_bottom_ids = array(217 => 1);
+      $right_ids = array(120 => 1, 542 => 1, 657 => 1, 1 => 1, 2 => 1, 14 => 1, 91 => 1);
+      foreach ( $ecresult['ecResultItem'] as $index => $item) {
+          if(isset($left_top_ids[$item[""id""] ] ) ) {
+              $ads[""left_top""]++;
+              continue;
+          }
+          if(isset($left_bottom_ids[$item[""id""] ] ) ) {
+              $ads[""left_bottom""]++;
+              continue;
+          }
+          if(isset($right_ids[$item[""id""] ]) ) {
+              $ads[""right""]++;
+              continue;
+          }
+      }
+      return $ads;
+  }
+  
+  //< 全流量出图限制
+  private function default_strategy($index, $ads, $aladin, $no_img_if_ad) {
+      $keep_img = array('keep' => true, 'add_tag' => false, 'reason' => 'default');
+      // //< 避让左上广告
+      if ( $ads[""left_top""] > 0 && $no_img_if_ad == 1) {
+          $keep_img['keep'] = false;
+          $keep_img['reason'] = 'left-top advertisement';
+          return $keep_img;
+      }
+      //< 避让出图阿拉丁
+      $img_aladin_cnt = 0;
+      foreach ($aladin as $res => $pos) {
+          foreach($pos as $ind => $type) {
+              if($type === ""kefu"") {
+                  $img_aladin_cnt = $img_aladin_cnt + 1;
+              }
+          }
+      }
+      if ($img_aladin_cnt > 0) {
+          $keep_img['keep'] = false;
+          $keep_img['reason'] = 'img_aladin=' . $img_aladin_cnt;
+          return $keep_img;
+      }
+      //< 2-4 不出图
+      if ($index == 1 || ( $index >= 5 && $index <= 10)) {
+          $keep_img['keep'] = true;
+          $keep_img['reason'] = 'position=' . $index;
+          return $keep_img;
+      } else {
+          $keep_img['keep'] = false;
+          $keep_img['reason'] = 'position=' . $index;
+          return $keep_img;
+      }
+  }
+  
+  public function keep_url_image($sample_variable, $index, $ads, $aladin, $no_img_if_ad) {
+      $keep_img = array('keep' => true, 'add_tag' => false, 'reason' => 'default');
+      //< 全放开
+      if($sample_variable == 1) {
+          $keep_img['reason'] = ""all_easy as sample_variable="" .$sample_variable;  
+          return $keep_img;
+      }
+  
+  
+  
+  }
+  
+  //< 获取出图的阿拉丁
+  public function get_image_aladin($arrData, $arrFilterConfs) {
+      $aladin = array();
+  
+  
+  
+  }
+  
+  const FROM_ALADIN = 0;
+  const FROM_AC      = 1;
+  
+  private function keep_single_image_baike(&$arrData)
+  {
+      $image_baike = array();
+  
+  
+  
+  }
+  
+  public function get_sample_variable($arrData, $exp_name) {
+      $sample_variable = 0;
+      //for small flow
+      $arrSample = Util::getConf('/sample_variable', 'sample_variable/' . $exp_name);
+      if (is_array($arrData ['uiData'] ['queryInfo'] ['samplingId']) && !empty($arrData ['uiData'] ['queryInfo'] ['samplingId']) && is_array($arrSample) && !empty($arrSample)) {
+          $arrSids = $arrData ['uiData'] ['queryInfo'] ['samplingId'];
+          $arrSids = array_flip($arrSids);
+          foreach ($arrSample ['Contexted'] as $arrTemp) {
+              if (isset($arrSids [$arrTemp ['sampling_id']])) {
+                  if ($arrTemp ['value'] >= 1 && $arrTemp ['value'] <= 10000) {
+                      $sample_variable = $arrTemp ['value'];
+                      break;
+                  }
+              }
+          }
+      }
+      return $sample_variable;
+  }
+  
+  private function get_group($arrData, $strResult, &$group)
+  {
+      if (!( is_array($arrData ['uiData'] [$strResult] ['item']) && !empty($arrData ['uiData'] [$strResult] ['item'] ) ) ) {
+          return;
+      }
+  
+  
+  
+  }
+  
+  //< 加框出图策略
+  private function group_results_proc(&$arrData) {
+      //< 获取加框结果
+      $group = array();
+      $this->get_group($arrData, 'leftResult', $group);
+      $this->get_group($arrData, 'asResult',   $group);
+  
+  
+  
+  }
+  private function disable_burst(&$arrData, $group) {
+      foreach($group as $id => $item) {
+          $from = $item['from'];
+          $index = $item['index'];
+          unset($arrData['uiData'][$from]['item'][$index]['burstFlag']);
+      }
+  }
+  
+  //<
+  private function disable_key(&$item, $conf_key) {
+      $keys = explode (""."", $conf_key);
+      if(count($keys) == 0) {
+          return false;
+      }
+      $value = &$item;
+      foreach ( $keys as $key) {
+          if(! isset($value[$key]) ) {
+              return false;
+          }
+          $value = &$value[$key];
+      }
+      $value = """";
+      return true;
+  }
+  
+  public function run(&$arrData, $arrConf) {
+      $time_start = Volatile::microtime(true) \* 1000;
+      if (empty($arrData) || !is_array($arrData)) {
+          return false;
+      }
+      $arrFilterConfs = Util::getConf('/graph_filter', 'GRAPH_FILTER');
+      if (!is_array($arrFilterConfs) || empty($arrFilterConfs) || empty($arrFilterConfs ['result']) || empty($arrFilterConfs ['SRCID']) || empty($arrFilterConfs ['defaultTplName']) || empty($arrFilterConfs ['check_aladin']) || empty($arrFilterConfs ['filter_result'])) {
+          return false;
+      }
+  
+  
+  
+  }
+  
+  private function is_xunzhi($item) {
+      $xunzhi = false;
+      $src_id = $item['src_id'];
+      // 寻址阿拉丁
+      if($item['queue'] == 'asResult' && $item['from'] == 'SP' && ($src_id == 10789 || $src_id == 15883 || $src_id ==  14515) ) {
+          $xunzhi = true;
+      }
+      // 自然结果取寻址策略位和模板判断
+      if($item['queue'] == 'asResult' && $item['from'] == 'AS') {
+          //< 寻址队列
+          if( $this->get_strategy_bit($item['strategy'], self::$XUNZHI_STRATEGY['id'], self::$XUNZHI_STRATEGY['bit']) ) {
+              $xunzhi = true;
+          }
+          if( $this->get_strategy_bit($item['strategy'], self::$XUNZHI_ALADIN['id'], self::$XUNZHI_ALADIN['bit']) ) {
+              $xunzhi = true;
+          }
+          if( $item['template'] == 'se_st_guanwang' ) {
+              $xunzhi = true;
+          }
+      }
+      return $xunzhi;
+  }
+  
+  // 寻址需求第一条URL预加载
+  private function add_preload(&$arrData, $results) {
+      foreach($results as $id => $item) {
+          $xunzhi = $this->is_xunzhi($item);
+          if($xunzhi) {
+              $arrItem = &$arrData['uiData'][$item['queue']]['item'][$item['index']];
+              if($item['from'] === 'SP') {
+                  $arrItem['dispData']['resultData']['tplData']['comm_preload'] = 1;
+              } else {
+                  $arrItem['dispData']['comm_preload'] = 1;
+              }
+          }
+          break;
+      }
+  }
+  
+  //< 获取结果的模板名
+  private function get_item_template($item) {
+  
+  
+  
+  }
+  
+  //< 获取结果的策略位
+  private function get_item_strategy_bits($item) {
+      return isset($item['urls']['asUrls']['strategys']) ? $item['urls']['asUrls']['strategys'] : """";
+  }
+  
+  //< 获取策略位
+  private function get_strategy_bit($strategy_bits, $id, $bit)
+  {
+      if(!isset($strategy_bits[$id]) ) {
+          return false;
+      }
+      $bits = str_pad(decbin(intval($strategy_bits[$id])), 32, ""0"", STR_PAD_LEFT);
+      return $bits[31 - $bit] === ""1"";
+  }
+  
+  //< 策略位
+  //< @refer http://wiki.babel.baidu.com/twiki/bin/view/Ps/Searcher/%E7%AD%96%E7%95%A5%E4%BD%8D%E4%BD%BF%E7%94%A8%E7%BB%9F%E8%AE%A1
+  private static $XUNZHI_STRATEGY = array(""id"" => 2, ""bit"" => 31);
+  private static $XUNZHI_ALADIN   = array(""id"" => 4, ""bit"" => 6);
+  // private static $DISP_AS_IMAGE   = array(""id"" => 0, ""bit"" => 16 );
+  private static $DISP_AS_IMAGE   = array(""id"" => 4, ""bit"" => 8 );
+  
+  private function get_all_results($arrData) {
+      $results = array();
+      $strResults = array(1 => ""leftResult"", 2 => ""asResult"");
+      $pos = 1;
+  
+  
+  
+  }
+  //< 计算哪些位置出图
+  private function calc_disp_image_pos($results) {
+      $disable_pos = array();
+  
+  
+  
+  }
+  
+  //< 出图文标不出图
+  private function disable_general_pic_if_image(&$arrData)
+  {
+      $res = 'asResult';
+      foreach ($arrData ['uiData'] [$res] ['item'] as $intItemIndex => &$arrItem) {
+          $this->disable_general_pic($arrItem);
+  
+  
+  
+  }
+  
+  //< 根据 $pos['keep'] 保留or去掉图片
+  private function disable_specify_pos(&$arrData, $results, $disable_pos)
+  {
+      foreach($disable_pos as $id => $pos) {
+          $item = $results[$pos['id']];
+          $arrItem = &$arrData['uiData'][$item['queue']]['item'][$item['index']];
+  
+  
+  
+  }
+  }
+",EwanEvan,desc
+357,2016-06-24 08:26:24,"<?php
+
+// function debug_log() {
+//     if (false) {
+//         return;
+//     }
+//     static $fp = 0;
+//     if ($fp === 0) {
+//         $logpath = '/home/work/search/view-ui/log/disp_graph_filter.log';//日志名称
+//         $fp = fopen($logpath, 'a');
+//     } 
+//     $traces = debug_backtrace();
+//     $trace = count($traces) > 1 ? $traces[1] : $traces[0];
+//     $log_msg = date('Y-m-d H:i:s') . ': [' . $trace['function'] . ' '. basename($trace['file']) . ' ' .$trace['line'] . ']';
+//     foreach(func_get_args() as $arg) {
+//         if (is_string($arg)) {
+//             $log_msg .= $arg . ' ';
+//         } else {
+//             $log_msg .= var_dump($arg) . ' ';
+//         }
+//     }
+//     fwrite($fp, $log_msg . ""\n"");
+// }
+/**
+- 
+- @desc General出图策略
+- @author chenhuailiang@baidu.com
+  *
+  */
+  class DispGraphFilter extends Strategy {
+  const HIT_IMAGE_SEARCH_ALADIN = 1;      //< 图片搜索阿拉丁
+  const HIT_VIDEO_SEARCH_ALADIN = 2;      //< 视频搜索阿拉丁
+  const HIT_OTHER_IMAGE_ALADIN = 3;       //< 其他带图的阿拉丁
+  
+  //< 出图时不再展现图文标
+  private function disable_general_pic(&$item) {
+      if (isset($item['dispData']['general_pic']['url'])) {
+          unset($item['dispData']['general_pic']['hasPicType']);
+      }
+      // debug_log('disable_general_pic');
+      return true;
+  }
+  //< 不出图. 小流量实验, 对比组加上tag
+  private function disable_general_image(&$arrItem, $add_tag, $reason=""unspecified"") {
+      if (isset($arrItem ['dispData'] ['backup_template']) && !empty($arrItem ['dispData'] ['backup_template'])) {
+          $arrItem ['dispData'] ['templateName'] = trim($arrItem ['dispData'] ['backup_template']);
+      }
+      // } else {
+      //     $arrItem ['dispData'] ['templateName'] = $arrFilterConfs ['defaultTplName'];
+      // }
+      if (isset($arrItem['dispData']['general_pic']['url']) ) {
+          unset($arrItem['dispData']['general_pic']['url']);
+      }
+      if($add_tag === true) {
+          $arrItem ['dispData'] ['fake_imge_show'] = ""fake_imge_show"";
+      }
+      // debug_log('disable_general_image.' . ($add_tag ? ""no_tag"" : ""add_tag"") . ' reason:' . $reason);
+      return true;
+  }
+  //< 获取不同位置(左上, 左下, 右边)广告展现的数目
+  //< 广告id决定了展现位置, 对应关系参考
+  //< https://svn.baidu.com/ps/se/trunk/fe/tpl/www/src/page/baidu/baidu/page.tpl
+  public function get_ads_count($ecresult) {
+      $ads = array(""left_top"" => 0, ""left_bottom"" => 0, ""right"" => 0);
+      if(!is_array($ecresult['ecResultItem']) || empty($ecresult['ecResultItem']) ) {
+          return $ads;
+      }
+      $left_top_ids = array(119 => 1, 204 => 1, 656 => 1, 213 => 1, 664 => 1);
+      $left_bottom_ids = array(217 => 1);
+      $right_ids = array(120 => 1, 542 => 1, 657 => 1, 1 => 1, 2 => 1, 14 => 1, 91 => 1);
+      foreach ( $ecresult['ecResultItem'] as $index => $item) {
+          if(isset($left_top_ids[$item[""id""] ] ) ) {
+              $ads[""left_top""]++;
+              continue;
+          }
+          if(isset($left_bottom_ids[$item[""id""] ] ) ) {
+              $ads[""left_bottom""]++;
+              continue;
+          }
+          if(isset($right_ids[$item[""id""] ]) ) {
+              $ads[""right""]++;
+              continue;
+          }
+      }
+      return $ads;
+  }
+  
+  //< 全流量出图限制
+  private function default_strategy($index, $ads, $aladin, $no_img_if_ad) {
+      $keep_img = array('keep' => true, 'add_tag' => false, 'reason' => 'default');
+      // //< 避让左上广告
+      if ( $ads[""left_top""] > 0 && $no_img_if_ad == 1) {
+          $keep_img['keep'] = false;
+          $keep_img['reason'] = 'left-top advertisement';
+          return $keep_img;
+      }
+      //< 避让出图阿拉丁
+      $img_aladin_cnt = 0;
+      foreach ($aladin as $res => $pos) {
+          foreach($pos as $ind => $type) {
+              if($type === ""kefu"") {
+                  $img_aladin_cnt = $img_aladin_cnt + 1;
+              }
+          }
+      }
+      if ($img_aladin_cnt > 0) {
+          $keep_img['keep'] = false;
+          $keep_img['reason'] = 'img_aladin=' . $img_aladin_cnt;
+          return $keep_img;
+      }
+      //< 2-4 不出图
+      if ($index == 1 || ( $index >= 5 && $index <= 10)) {
+          $keep_img['keep'] = true;
+          $keep_img['reason'] = 'position=' . $index;
+          return $keep_img;
+      } else {
+          $keep_img['keep'] = false;
+          $keep_img['reason'] = 'position=' . $index;
+          return $keep_img;
+      }
+  }
+  
+  public function keep_url_image($sample_variable, $index, $ads, $aladin, $no_img_if_ad) {
+      $keep_img = array('keep' => true, 'add_tag' => false, 'reason' => 'default');
+      //< 全放开
+      if($sample_variable == 1) {
+          $keep_img['reason'] = ""all_easy as sample_variable="" .$sample_variable;  
+          return $keep_img;
+      }
+  
+  
+  
+  }
+  
+  //< 获取出图的阿拉丁
+  public function get_image_aladin($arrData, $arrFilterConfs) {
+      $aladin = array();
+  
+  
+  
+  }
+  
+  const FROM_ALADIN = 0;
+  const FROM_AC      = 1;
+  
+  private function keep_single_image_baike(&$arrData)
+  {
+      $image_baike = array();
+  
+  
+  
+  }
+  
+  public function get_sample_variable($arrData, $exp_name) {
+      $sample_variable = 0;
+      //for small flow
+      $arrSample = Util::getConf('/sample_variable', 'sample_variable/' . $exp_name);
+      if (is_array($arrData ['uiData'] ['queryInfo'] ['samplingId']) && !empty($arrData ['uiData'] ['queryInfo'] ['samplingId']) && is_array($arrSample) && !empty($arrSample)) {
+          $arrSids = $arrData ['uiData'] ['queryInfo'] ['samplingId'];
+          $arrSids = array_flip($arrSids);
+          foreach ($arrSample ['Contexted'] as $arrTemp) {
+              if (isset($arrSids [$arrTemp ['sampling_id']])) {
+                  if ($arrTemp ['value'] >= 1 && $arrTemp ['value'] <= 10000) {
+                      $sample_variable = $arrTemp ['value'];
+                      break;
+                  }
+              }
+          }
+      }
+      return $sample_variable;
+  }
+  
+  private function get_group($arrData, $strResult, &$group)
+  {
+      if (!( is_array($arrData ['uiData'] [$strResult] ['item']) && !empty($arrData ['uiData'] [$strResult] ['item'] ) ) ) {
+          return;
+      }
+  
+  
+  
+  }
+  
+  //< 加框出图策略
+  private function group_results_proc(&$arrData) {
+      //< 获取加框结果
+      $group = array();
+      $this->get_group($arrData, 'leftResult', $group);
+      $this->get_group($arrData, 'asResult',   $group);
+  
+  
+  
+  }
+  private function disable_burst(&$arrData, $group) {
+      foreach($group as $id => $item) {
+          $from = $item['from'];
+          $index = $item['index'];
+          unset($arrData['uiData'][$from]['item'][$index]['burstFlag']);
+      }
+  }
+  
+  //<
+  private function disable_key(&$item, $conf_key) {
+      $keys = explode (""."", $conf_key);
+      if(count($keys) == 0) {
+          return false;
+      }
+      $value = &$item;
+      foreach ( $keys as $key) {
+          if(! isset($value[$key]) ) {
+              return false;
+          }
+          $value = &$value[$key];
+      }
+      $value = """";
+      return true;
+  }
+  
+  public function run(&$arrData, $arrConf) {
+      $time_start = Volatile::microtime(true) \* 1000;
+      if (empty($arrData) || !is_array($arrData)) {
+          return false;
+      }
+      $arrFilterConfs = Util::getConf('/graph_filter', 'GRAPH_FILTER');
+      if (!is_array($arrFilterConfs) || empty($arrFilterConfs) || empty($arrFilterConfs ['result']) || empty($arrFilterConfs ['SRCID']) || empty($arrFilterConfs ['defaultTplName']) || empty($arrFilterConfs ['check_aladin']) || empty($arrFilterConfs ['filter_result'])) {
+          return false;
+      }
+  
+  
+  
+  }
+  
+  private function is_xunzhi($item) {
+      $xunzhi = false;
+      $src_id = $item['src_id'];
+      // 寻址阿拉丁
+      if($item['queue'] == 'asResult' && $item['from'] == 'SP' && ($src_id == 10789 || $src_id == 15883 || $src_id ==  14515) ) {
+          $xunzhi = true;
+      }
+      // 自然结果取寻址策略位和模板判断
+      if($item['queue'] == 'asResult' && $item['from'] == 'AS') {
+          //< 寻址队列
+          if( $this->get_strategy_bit($item['strategy'], self::$XUNZHI_STRATEGY['id'], self::$XUNZHI_STRATEGY['bit']) ) {
+              $xunzhi = true;
+          }
+          if( $this->get_strategy_bit($item['strategy'], self::$XUNZHI_ALADIN['id'], self::$XUNZHI_ALADIN['bit']) ) {
+              $xunzhi = true;
+          }
+          if( $item['template'] == 'se_st_guanwang' ) {
+              $xunzhi = true;
+          }
+      }
+      return $xunzhi;
+  }
+  
+  // 寻址需求第一条URL预加载
+  private function add_preload(&$arrData, $results) {
+      foreach($results as $id => $item) {
+          $xunzhi = $this->is_xunzhi($item);
+          if($xunzhi) {
+              $arrItem = &$arrData['uiData'][$item['queue']]['item'][$item['index']];
+              if($item['from'] === 'SP') {
+                  $arrItem['dispData']['resultData']['tplData']['comm_preload'] = 1;
+              } else {
+                  $arrItem['dispData']['comm_preload'] = 1;
+              }
+          }
+          break;
+      }
+  }
+  
+  //< 获取结果的模板名
+  private function get_item_template($item) {
+  
+  
+  
+  }
+  
+  //< 获取结果的策略位
+  private function get_item_strategy_bits($item) {
+      return isset($item['urls']['asUrls']['strategys']) ? $item['urls']['asUrls']['strategys'] : """";
+  }
+  
+  //< 获取策略位
+  private function get_strategy_bit($strategy_bits, $id, $bit)
+  {
+      if(!isset($strategy_bits[$id]) ) {
+          return false;
+      }
+      $bits = str_pad(decbin(intval($strategy_bits[$id])), 32, ""0"", STR_PAD_LEFT);
+      return $bits[31 - $bit] === ""1"";
+  }
+  
+  //< 策略位
+  //< @refer http://wiki.babel.baidu.com/twiki/bin/view/Ps/Searcher/%E7%AD%96%E7%95%A5%E4%BD%8D%E4%BD%BF%E7%94%A8%E7%BB%9F%E8%AE%A1
+  private static $XUNZHI_STRATEGY = array(""id"" => 2, ""bit"" => 31);
+  private static $XUNZHI_ALADIN   = array(""id"" => 4, ""bit"" => 6);
+  // private static $DISP_AS_IMAGE   = array(""id"" => 0, ""bit"" => 16 );
+  private static $DISP_AS_IMAGE   = array(""id"" => 4, ""bit"" => 8 );
+  
+  private function get_all_results($arrData) {
+      $results = array();
+      $strResults = array(1 => ""leftResult"", 2 => ""asResult"");
+      $pos = 1;
+  
+  
+  
+  }
+  //< 计算哪些位置出图
+  private function calc_disp_image_pos($results) {
+      $disable_pos = array();
+  
+  
+  
+  }
+  
+  //< 出图文标不出图
+  private function disable_general_pic_if_image(&$arrData)
+  {
+      $res = 'asResult';
+      foreach ($arrData ['uiData'] [$res] ['item'] as $intItemIndex => &$arrItem) {
+          $this->disable_general_pic($arrItem);
+  
+  
+  
+  }
+  
+  //< 根据 $pos['keep'] 保留or去掉图片
+  private function disable_specify_pos(&$arrData, $results, $disable_pos)
+  {
+      foreach($disable_pos as $id => $pos) {
+          $item = $results[$pos['id']];
+          $arrItem = &$arrData['uiData'][$item['queue']]['item'][$item['index']];
+  
+  
+  
+  }
+  }
+",EwanEvan,author
+357,2016-06-24 08:26:24,"<?php
+
+// function debug_log() {
+//     if (false) {
+//         return;
+//     }
+//     static $fp = 0;
+//     if ($fp === 0) {
+//         $logpath = '/home/work/search/view-ui/log/disp_graph_filter.log';//日志名称
+//         $fp = fopen($logpath, 'a');
+//     } 
+//     $traces = debug_backtrace();
+//     $trace = count($traces) > 1 ? $traces[1] : $traces[0];
+//     $log_msg = date('Y-m-d H:i:s') . ': [' . $trace['function'] . ' '. basename($trace['file']) . ' ' .$trace['line'] . ']';
+//     foreach(func_get_args() as $arg) {
+//         if (is_string($arg)) {
+//             $log_msg .= $arg . ' ';
+//         } else {
+//             $log_msg .= var_dump($arg) . ' ';
+//         }
+//     }
+//     fwrite($fp, $log_msg . ""\n"");
+// }
+/**
+- 
+- @desc General出图策略
+- @author chenhuailiang@baidu.com
+  *
+  */
+  class DispGraphFilter extends Strategy {
+  const HIT_IMAGE_SEARCH_ALADIN = 1;      //< 图片搜索阿拉丁
+  const HIT_VIDEO_SEARCH_ALADIN = 2;      //< 视频搜索阿拉丁
+  const HIT_OTHER_IMAGE_ALADIN = 3;       //< 其他带图的阿拉丁
+  
+  //< 出图时不再展现图文标
+  private function disable_general_pic(&$item) {
+      if (isset($item['dispData']['general_pic']['url'])) {
+          unset($item['dispData']['general_pic']['hasPicType']);
+      }
+      // debug_log('disable_general_pic');
+      return true;
+  }
+  //< 不出图. 小流量实验, 对比组加上tag
+  private function disable_general_image(&$arrItem, $add_tag, $reason=""unspecified"") {
+      if (isset($arrItem ['dispData'] ['backup_template']) && !empty($arrItem ['dispData'] ['backup_template'])) {
+          $arrItem ['dispData'] ['templateName'] = trim($arrItem ['dispData'] ['backup_template']);
+      }
+      // } else {
+      //     $arrItem ['dispData'] ['templateName'] = $arrFilterConfs ['defaultTplName'];
+      // }
+      if (isset($arrItem['dispData']['general_pic']['url']) ) {
+          unset($arrItem['dispData']['general_pic']['url']);
+      }
+      if($add_tag === true) {
+          $arrItem ['dispData'] ['fake_imge_show'] = ""fake_imge_show"";
+      }
+      // debug_log('disable_general_image.' . ($add_tag ? ""no_tag"" : ""add_tag"") . ' reason:' . $reason);
+      return true;
+  }
+  //< 获取不同位置(左上, 左下, 右边)广告展现的数目
+  //< 广告id决定了展现位置, 对应关系参考
+  //< https://svn.baidu.com/ps/se/trunk/fe/tpl/www/src/page/baidu/baidu/page.tpl
+  public function get_ads_count($ecresult) {
+      $ads = array(""left_top"" => 0, ""left_bottom"" => 0, ""right"" => 0);
+      if(!is_array($ecresult['ecResultItem']) || empty($ecresult['ecResultItem']) ) {
+          return $ads;
+      }
+      $left_top_ids = array(119 => 1, 204 => 1, 656 => 1, 213 => 1, 664 => 1);
+      $left_bottom_ids = array(217 => 1);
+      $right_ids = array(120 => 1, 542 => 1, 657 => 1, 1 => 1, 2 => 1, 14 => 1, 91 => 1);
+      foreach ( $ecresult['ecResultItem'] as $index => $item) {
+          if(isset($left_top_ids[$item[""id""] ] ) ) {
+              $ads[""left_top""]++;
+              continue;
+          }
+          if(isset($left_bottom_ids[$item[""id""] ] ) ) {
+              $ads[""left_bottom""]++;
+              continue;
+          }
+          if(isset($right_ids[$item[""id""] ]) ) {
+              $ads[""right""]++;
+              continue;
+          }
+      }
+      return $ads;
+  }
+  
+  //< 全流量出图限制
+  private function default_strategy($index, $ads, $aladin, $no_img_if_ad) {
+      $keep_img = array('keep' => true, 'add_tag' => false, 'reason' => 'default');
+      // //< 避让左上广告
+      if ( $ads[""left_top""] > 0 && $no_img_if_ad == 1) {
+          $keep_img['keep'] = false;
+          $keep_img['reason'] = 'left-top advertisement';
+          return $keep_img;
+      }
+      //< 避让出图阿拉丁
+      $img_aladin_cnt = 0;
+      foreach ($aladin as $res => $pos) {
+          foreach($pos as $ind => $type) {
+              if($type === ""kefu"") {
+                  $img_aladin_cnt = $img_aladin_cnt + 1;
+              }
+          }
+      }
+      if ($img_aladin_cnt > 0) {
+          $keep_img['keep'] = false;
+          $keep_img['reason'] = 'img_aladin=' . $img_aladin_cnt;
+          return $keep_img;
+      }
+      //< 2-4 不出图
+      if ($index == 1 || ( $index >= 5 && $index <= 10)) {
+          $keep_img['keep'] = true;
+          $keep_img['reason'] = 'position=' . $index;
+          return $keep_img;
+      } else {
+          $keep_img['keep'] = false;
+          $keep_img['reason'] = 'position=' . $index;
+          return $keep_img;
+      }
+  }
+  
+  public function keep_url_image($sample_variable, $index, $ads, $aladin, $no_img_if_ad) {
+      $keep_img = array('keep' => true, 'add_tag' => false, 'reason' => 'default');
+      //< 全放开
+      if($sample_variable == 1) {
+          $keep_img['reason'] = ""all_easy as sample_variable="" .$sample_variable;  
+          return $keep_img;
+      }
+  
+  
+  
+  }
+  
+  //< 获取出图的阿拉丁
+  public function get_image_aladin($arrData, $arrFilterConfs) {
+      $aladin = array();
+  
+  
+  
+  }
+  
+  const FROM_ALADIN = 0;
+  const FROM_AC      = 1;
+  
+  private function keep_single_image_baike(&$arrData)
+  {
+      $image_baike = array();
+  
+  
+  
+  }
+  
+  public function get_sample_variable($arrData, $exp_name) {
+      $sample_variable = 0;
+      //for small flow
+      $arrSample = Util::getConf('/sample_variable', 'sample_variable/' . $exp_name);
+      if (is_array($arrData ['uiData'] ['queryInfo'] ['samplingId']) && !empty($arrData ['uiData'] ['queryInfo'] ['samplingId']) && is_array($arrSample) && !empty($arrSample)) {
+          $arrSids = $arrData ['uiData'] ['queryInfo'] ['samplingId'];
+          $arrSids = array_flip($arrSids);
+          foreach ($arrSample ['Contexted'] as $arrTemp) {
+              if (isset($arrSids [$arrTemp ['sampling_id']])) {
+                  if ($arrTemp ['value'] >= 1 && $arrTemp ['value'] <= 10000) {
+                      $sample_variable = $arrTemp ['value'];
+                      break;
+                  }
+              }
+          }
+      }
+      return $sample_variable;
+  }
+  
+  private function get_group($arrData, $strResult, &$group)
+  {
+      if (!( is_array($arrData ['uiData'] [$strResult] ['item']) && !empty($arrData ['uiData'] [$strResult] ['item'] ) ) ) {
+          return;
+      }
+  
+  
+  
+  }
+  
+  //< 加框出图策略
+  private function group_results_proc(&$arrData) {
+      //< 获取加框结果
+      $group = array();
+      $this->get_group($arrData, 'leftResult', $group);
+      $this->get_group($arrData, 'asResult',   $group);
+  
+  
+  
+  }
+  private function disable_burst(&$arrData, $group) {
+      foreach($group as $id => $item) {
+          $from = $item['from'];
+          $index = $item['index'];
+          unset($arrData['uiData'][$from]['item'][$index]['burstFlag']);
+      }
+  }
+  
+  //<
+  private function disable_key(&$item, $conf_key) {
+      $keys = explode (""."", $conf_key);
+      if(count($keys) == 0) {
+          return false;
+      }
+      $value = &$item;
+      foreach ( $keys as $key) {
+          if(! isset($value[$key]) ) {
+              return false;
+          }
+          $value = &$value[$key];
+      }
+      $value = """";
+      return true;
+  }
+  
+  public function run(&$arrData, $arrConf) {
+      $time_start = Volatile::microtime(true) \* 1000;
+      if (empty($arrData) || !is_array($arrData)) {
+          return false;
+      }
+      $arrFilterConfs = Util::getConf('/graph_filter', 'GRAPH_FILTER');
+      if (!is_array($arrFilterConfs) || empty($arrFilterConfs) || empty($arrFilterConfs ['result']) || empty($arrFilterConfs ['SRCID']) || empty($arrFilterConfs ['defaultTplName']) || empty($arrFilterConfs ['check_aladin']) || empty($arrFilterConfs ['filter_result'])) {
+          return false;
+      }
+  
+  
+  
+  }
+  
+  private function is_xunzhi($item) {
+      $xunzhi = false;
+      $src_id = $item['src_id'];
+      // 寻址阿拉丁
+      if($item['queue'] == 'asResult' && $item['from'] == 'SP' && ($src_id == 10789 || $src_id == 15883 || $src_id ==  14515) ) {
+          $xunzhi = true;
+      }
+      // 自然结果取寻址策略位和模板判断
+      if($item['queue'] == 'asResult' && $item['from'] == 'AS') {
+          //< 寻址队列
+          if( $this->get_strategy_bit($item['strategy'], self::$XUNZHI_STRATEGY['id'], self::$XUNZHI_STRATEGY['bit']) ) {
+              $xunzhi = true;
+          }
+          if( $this->get_strategy_bit($item['strategy'], self::$XUNZHI_ALADIN['id'], self::$XUNZHI_ALADIN['bit']) ) {
+              $xunzhi = true;
+          }
+          if( $item['template'] == 'se_st_guanwang' ) {
+              $xunzhi = true;
+          }
+      }
+      return $xunzhi;
+  }
+  
+  // 寻址需求第一条URL预加载
+  private function add_preload(&$arrData, $results) {
+      foreach($results as $id => $item) {
+          $xunzhi = $this->is_xunzhi($item);
+          if($xunzhi) {
+              $arrItem = &$arrData['uiData'][$item['queue']]['item'][$item['index']];
+              if($item['from'] === 'SP') {
+                  $arrItem['dispData']['resultData']['tplData']['comm_preload'] = 1;
+              } else {
+                  $arrItem['dispData']['comm_preload'] = 1;
+              }
+          }
+          break;
+      }
+  }
+  
+  //< 获取结果的模板名
+  private function get_item_template($item) {
+  
+  
+  
+  }
+  
+  //< 获取结果的策略位
+  private function get_item_strategy_bits($item) {
+      return isset($item['urls']['asUrls']['strategys']) ? $item['urls']['asUrls']['strategys'] : """";
+  }
+  
+  //< 获取策略位
+  private function get_strategy_bit($strategy_bits, $id, $bit)
+  {
+      if(!isset($strategy_bits[$id]) ) {
+          return false;
+      }
+      $bits = str_pad(decbin(intval($strategy_bits[$id])), 32, ""0"", STR_PAD_LEFT);
+      return $bits[31 - $bit] === ""1"";
+  }
+  
+  //< 策略位
+  //< @refer http://wiki.babel.baidu.com/twiki/bin/view/Ps/Searcher/%E7%AD%96%E7%95%A5%E4%BD%8D%E4%BD%BF%E7%94%A8%E7%BB%9F%E8%AE%A1
+  private static $XUNZHI_STRATEGY = array(""id"" => 2, ""bit"" => 31);
+  private static $XUNZHI_ALADIN   = array(""id"" => 4, ""bit"" => 6);
+  // private static $DISP_AS_IMAGE   = array(""id"" => 0, ""bit"" => 16 );
+  private static $DISP_AS_IMAGE   = array(""id"" => 4, ""bit"" => 8 );
+  
+  private function get_all_results($arrData) {
+      $results = array();
+      $strResults = array(1 => ""leftResult"", 2 => ""asResult"");
+      $pos = 1;
+  
+  
+  
+  }
+  //< 计算哪些位置出图
+  private function calc_disp_image_pos($results) {
+      $disable_pos = array();
+  
+  
+  
+  }
+  
+  //< 出图文标不出图
+  private function disable_general_pic_if_image(&$arrData)
+  {
+      $res = 'asResult';
+      foreach ($arrData ['uiData'] [$res] ['item'] as $intItemIndex => &$arrItem) {
+          $this->disable_general_pic($arrItem);
+  
+  
+  
+  }
+  
+  //< 根据 $pos['keep'] 保留or去掉图片
+  private function disable_specify_pos(&$arrData, $results, $disable_pos)
+  {
+      foreach($disable_pos as $id => $pos) {
+          $item = $results[$pos['id']];
+          $arrItem = &$arrData['uiData'][$item['queue']]['item'][$item['index']];
+  
+  
+  
+  }
+  }
+",EwanEvan,refer
+346,2016-02-24 20:21:51,"@jacopotarantino Thanks for the PR! 
+I'm a bit on the fence about it personally - we don't have any questions related to syntax errors currently, but at the same time I suspect this might be interpreted as a bit of a trick question in the context of an interview. Thoughts @darcyclarke @appleboy?
+",richgilbank,darcyclarke
+346,2016-02-24 20:21:51,"@jacopotarantino Thanks for the PR! 
+I'm a bit on the fence about it personally - we don't have any questions related to syntax errors currently, but at the same time I suspect this might be interpreted as a bit of a trick question in the context of an interview. Thoughts @darcyclarke @appleboy?
+",richgilbank,appleboy
+338,2015-12-18 05:48:31,"@rags4developer Professional Javascript for Web Developers by Nicholas C. Zakas is a great book, it covers almost all aspects of JS. You Don't Know JS series is awesome and highly recommended as well. 
+",xthilakx,rags4developer
+318,2015-08-15 12:20:48,"Just fixing typo.
+Issue raised here: https://github.com/h5bp/Front-end-Developer-Interview-Questions/pull/311#commitcomment-12723009
+
+cc: @rhonyabdullah / @appleboy 
+",dermatobia,appleboy
+318,2015-08-15 12:20:48,"Just fixing typo.
+Issue raised here: https://github.com/h5bp/Front-end-Developer-Interview-Questions/pull/311#commitcomment-12723009
+
+cc: @rhonyabdullah / @appleboy 
+",dermatobia,rhonyabdullah
+312,2015-07-16 18:28:03,"Can't confirm myself, but from Gitter:
+
+> I do agree about the translations. The terrible russian translation really reflects bad on the project, for example. It even simply contains incorrect information and answers.
+
+cc @robbbz
+",arthurvr,robbbz
+311,2015-07-16 11:09:17,"Thanks for doing this! :star: 
+
+@h5bp/frontend-interview We should probably require some kind of review process before merging translations. This isn't the only bad one. In fact given how hard it is to maintain translations and that some are super outdated I'd rather see us removing them all.
+",arthurvr,h5bp
+311,2015-07-16 17:52:42,"That'll be too bad, because I think it is very beneficial to non-english readers out there. Yes, maybe it will eventually get outdated and all, but I think it's still better to have something than nothing at all. 
+
+Also, I think that's the nature of open source though, or maybe I'm just more forgiving precisely because it is really based on public contribution.
+
+Having said that, lemme cc @septyaman who initially contributed to this, and seems like he reads Indonesian. Perhaps he could give a quick glance through :smile: 
+",dermatobia,septyaman
+309,2015-07-16 12:27:04,"@arthurvr changed the same in the PR.
+",gauravmuk,arthurvr
+303,2015-05-27 17:38:10,"### h5bp/Front-end-Developer-Interview-Questions now has a Chat Room on Gitter
+
+@darcyclarke has just created a chat room. You can visit it here: [https://gitter.im/h5bp/Front-end-Developer-Interview-Questions](https://gitter.im/h5bp/Front-end-Developer-Interview-Questions?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&content=body_link).
+
+This pull-request adds this badge to your README.md:
+
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/h5bp/Front-end-Developer-Interview-Questions?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=body_badge)
+
+If my aim is a little off, please [let me know](https://github.com/gitterHQ/readme-badger/issues).
+
+Happy chatting.
+
+PS: [Click here](https://gitter.im/settings/badger/opt-out) if you would prefer not to receive automatic pull-requests from Gitter in future.
+",gitter-badger,darcyclarke
+284,2015-06-01 18:34:47,"Hey @gthacoder still interested in picking this up?
+",arthurvr,gthacoder
+284,2015-06-02 16:28:45,"@darcyclarke @arthurvr Sorry for my late reply. Sure, I will break up these questions and resolve the conflicts.
+",MaximKhlobystov,darcyclarke
+284,2015-06-08 14:21:44,"@gthacoder Any ETA on when you might be able to tackle this? 
+",richgilbank,gthacoder
+284,2015-07-16 18:28:34,"@gthacoder Still see a conflict. Can you try one more time?
+",darcyclarke,gthacoder
+282,2015-04-27 15:58:31,"Accidentally closed. @darcyclarke @arthurvr looks good to merge?
+",jacopotarantino,darcyclarke
+282,2015-04-27 15:58:31,"Accidentally closed. @darcyclarke @arthurvr looks good to merge?
+",jacopotarantino,arthurvr
+282,2015-04-27 16:10:25,"punting the merge to @h5bp/frontend-interview but it looks better now :D Thanks for working on this!
+",arthurvr,h5bp
+277,2015-04-25 09:12:10,"@cch5ng Thanks for letting us know, it's outdated indeed. The team is working on a better system: https://github.com/h5bp/Front-end-Developer-Interview-Questions/issues/269.
+
+@darcyclarke If you have five minutes, can you update the branch for now?
+",arthurvr,darcyclarke
+276,2015-03-20 00:41:18,"Thanks @tjwudi! 
+
+I'm not entirely sure what the best place is for a question like this, since it encompasses numerous concepts - HTTP chunking could fit into the network section, client-side rendering of XHR-fetched data could fall under JS, and we probably have enough questions already to break out into a new performance-oriented section. 
+
+Thoughts @darcyclarke @arthurvr?
+",richgilbank,darcyclarke
+276,2015-03-20 00:41:18,"Thanks @tjwudi! 
+
+I'm not entirely sure what the best place is for a question like this, since it encompasses numerous concepts - HTTP chunking could fit into the network section, client-side rendering of XHR-fetched data could fall under JS, and we probably have enough questions already to break out into a new performance-oriented section. 
+
+Thoughts @darcyclarke @arthurvr?
+",richgilbank,arthurvr
+273,2015-03-08 02:46:00,"@penJunTan 
+
+如果要增加面試題目，請直接發 PR，大家可以一起討論，是否加入官方的 Readme，這部份就由 @hawx1993 來決定哪些題目適合放入官方 Repo，這邊需要大家審核才可以放入，不是我一個人可以決定的。
+",appleboy,penJunTan
+271,2015-03-14 20:22:05,"@h5bp/frontend-interview ping
+",arthurvr,h5bp
+269,2015-02-25 17:21:57,"Last week, while being interviewed on [the changelog podcast](http://thechangelog.com/143/), I was asked _why this project doesn't have a proper website_. It's not well known but we do have a Github Page that is just a nicer looking version of the markdown file at http://h5bp.github.io/Front-end-Developer-Interview-Questions/. 
+
+I've also been asked countless times about what questions a _""Junior""_ or a _""Senior""_ Developer should know or be asked from this document. Terminology like this, of course, can be polarizing. Everyone's concept of a _Junior_ or _Senior_ Developer is different and every role has it's own specific challenges and knowledge requirements. Although those specific labels aren't helpful, I've begun to think that including **meta-data** and having the ability to **label** questions would be infinitely helpful for discoverability.
+
+Sub-categorization is already being talked about in @richgilbank's issue #257, although I think we need to think about this a bit more broadly. Currently, we're extremely limited in how we can format and showcase content based on using only a markdown file. That said, I think there's a serious need to broaden the horizons of this project and **build a proper website**. 
+
+The [HTML5 Please](http://html5please.com/) site is a good example of the kind of labelling/filtering we could add to questions to make search/discoverability much easier. But that's just the beginning. 
+
+Thoughts, feedback and suggestions are welcomed. 
+",darcyclarke,richgilbank
+265,2015-02-24 14:57:23,"The original question 
+
+> What are the limitations when serving XHTML pages?
+
+~~is believed to be taken from [here](http://www.skilledup.com/articles/html-html5-interview-questions-answers/) (along with several others)~~ (EDITED: I couldn't be more wrong, as corrected by @darcyclarke below). While there's nothing wrong with it, I believe it has the protential to extract more about a candidate skills and knowledge if he's asked to compare HTML and XHTML instead. 
+
+Just my $0.02. Would be happy if you guys can correct me.
+",phanan,darcyclarke
+264,2015-02-23 15:07:25,"Closes https://github.com/h5bp/Front-end-Developer-Interview-Questions/issues/263 
+cc @phanan 
+",richgilbank,phanan
+258,2015-02-13 17:43:11,"Howdy from The Changelog!
+
+Sorry for a last minute ask, but @darcyclarke any chance you'd be open to come on The Changelog today at 3pm CT via Skype to talk about this project?
+
+We had a last minute guest cancellation for today's show, and we were already linking this project up in [the next issue of Weekly](http://thechangelog.com/weekly/) that ships tomorrow -- so we thought, why not get them on the podcast!
+
+You might have heard of our show, but if not -- The Changelog is a podcast covering what's fresh and new in open source. Listen to the show here http://thechangelog.com/podcast/ or here http://5by5.tv/changelog
+
+Looking forward to talking to ya!
+
+Adam, EIC
+",adamstac,darcyclarke
+257,2015-02-25 16:27:52,"@TheDerek I'm not sure what you're referring to but your feedback sounds a bit off-topic (unless someone has removed the comment you were replying to).
+
+---
+
+@matachines We won't be including any library-specific content in the future (ie. jQuery, Angular, Polymer, Ember, Backbone, Underscore, Node, Express etc.). Native implementations and general concepts, patterns and architecture questions are different. 
+
+---
+
+@phanan my hope is that we'll always be able to maintain a single file by improving organization/navigation as we grow bigger.
+
+---
+
+@richgilbank I agree. With _30+_ questions, that section does seem a bit `.length`y :wink: Although, the **CSS** section isn't too far behind, so we may need to consider it as well (or _very_ soon). 
+
+**Initial Feedback:**
+The terms `language`, `usage` and `implementation` don't sound succinct enough to me. `Usage` and `implementation`, specifically, sound like the same topic/too similar. That said, I may need to see the division, as you have it in mind, to appreciate the different correlations and what will go where. It may make sense to start a Pull Request now with the changes you think work and we can discuss the verbage and categorization more there.
+
+**Alternative Suggestion:**
+I had once thought of splitting up all the sections into context-specific sub-categories like: `What`, `Where`, `When`, `Why`, `How` and `Explain`. Most questions fit nicely into these categories already and this approach would help guide phrasing for future additions (ie. someone would know exactly `what` goes `where`). It definitely has the potential to add a lot of sub-categories and spreading out content but it's just a thought. 
+
+I'm definitely open to any other suggestions in terms of sub-categorization. A simple reorg, grouping similar questions/phrasing, might also help with discovery.
+",darcyclarke,matachines
+255,2015-02-05 12:58:51,"@appleboy mind confirming this is as-expected?
+",richgilbank,appleboy
+244,2015-01-30 04:17:32,"Hmm, we used to have a mention of this, looks like it was removed with https://github.com/h5bp/Front-end-Developer-Interview-Questions/commit/e9082f27e7252aacdfc8410b4301e32100d27bc1. @darcyclarke do you recall what the opposition was to this? 
+",richgilbank,darcyclarke
+241,2015-01-29 09:28:03,"@phanan Good question. Waiting for @richgilbank @darcyclarke opinion.
+",appleboy,richgilbank
+241,2015-01-29 09:28:03,"@phanan Good question. Waiting for @richgilbank @darcyclarke opinion.
+",appleboy,darcyclarke
+241,2015-01-29 15:57:08,"I'd actually be inclined to go the other direction with this (`addEventListener`) for the reasons @darcyclarke mentioned in https://github.com/h5bp/Front-end-Developer-Interview-Questions/issues/230. How would you feel about changing it to something along the lines of:
+_What is the difference between the window's `load` event and `DOMContentLoaded`?_
+",richgilbank,darcyclarke
+238,2015-01-29 00:53:58,"""As a potential employer I whant my coders to know how to quickly find out if a certain Browser/Version combination supports a certain web technique.""
+
+Rebase to https://github.com/h5bp/Front-end-Developer-Interview-Questions/pull/193
+cc: @doertedev @darcyclarke 
+",richgilbank,darcyclarke
+238,2015-01-29 00:53:58,"""As a potential employer I whant my coders to know how to quickly find out if a certain Browser/Version combination supports a certain web technique.""
+
+Rebase to https://github.com/h5bp/Front-end-Developer-Interview-Questions/pull/193
+cc: @doertedev @darcyclarke 
+",richgilbank,doertedev
+234,2015-01-25 01:59:14,"Thanks @appleboy :)
+",richgilbank,appleboy
+220,2015-01-23 18:39:03,"Thanks for the contribution, but I'm with @andycole on this one. @darcyclarke and I have discussed this a few times and the outcome has typically been that adding questions specific to  MV\* frameworks would rapidly grow beyond the scope of this project (which frameworks are worthwhile?). They also aren't fundamental skills, and different companies will have different tools and workflows, so having a solid understanding of the basics is the only thing we can really expect. 
+",richgilbank,darcyclarke
+212,2014-12-26 13:17:41,"body {
+width: 100% !important; min-width: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; margin: 0; padding: 0;
+}
+.ExternalClass {
+width: 100%;
+}
+.ExternalClass {
+line-height: 100%;
+}
+#backgroundTable {
+margin: 0; padding: 0; width: 100% !important; line-height: 100% !important;
+}
+img {
+outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; width: auto; max-width: 100%; float: left; clear: both; display: block;
+}
+body {
+color: #222222; font-family: ""Helvetica"", ""Arial"", sans-serif; font-weight: normal; padding: 0; margin: 0; text-align: left; line-height: 1.3;
+}
+body {
+font-size: 14px; line-height: 19px;
+}
+a:hover {
+color: #2795b6 !important;
+}
+a:active {
+color: #2795b6 !important;
+}
+a:visited {
+color: #2ba6cb !important;
+}
+h1 a:active {
+color: #2ba6cb !important;
+}
+h2 a:active {
+color: #2ba6cb !important;
+}
+h3 a:active {
+color: #2ba6cb !important;
+}
+h4 a:active {
+color: #2ba6cb !important;
+}
+h5 a:active {
+color: #2ba6cb !important;
+}
+h6 a:active {
+color: #2ba6cb !important;
+}
+h1 a:visited {
+color: #2ba6cb !important;
+}
+h2 a:visited {
+color: #2ba6cb !important;
+}
+h3 a:visited {
+color: #2ba6cb !important;
+}
+h4 a:visited {
+color: #2ba6cb !important;
+}
+h5 a:visited {
+color: #2ba6cb !important;
+}
+h6 a:visited {
+color: #2ba6cb !important;
+}
+table.button:hover td {
+background: #2795b6 !important;
+}
+table.button:visited td {
+background: #2795b6 !important;
+}
+table.button:active td {
+background: #2795b6 !important;
+}
+table.button:hover td a {
+color: #fff !important;
+}
+table.button:visited td a {
+color: #fff !important;
+}
+table.button:active td a {
+color: #fff !important;
+}
+table.button:hover td {
+background: #2795b6 !important;
+}
+table.tiny-button:hover td {
+background: #2795b6 !important;
+}
+table.small-button:hover td {
+background: #2795b6 !important;
+}
+table.medium-button:hover td {
+background: #2795b6 !important;
+}
+table.large-button:hover td {
+background: #2795b6 !important;
+}
+table.button:hover td a {
+color: #ffffff !important;
+}
+table.button:active td a {
+color: #ffffff !important;
+}
+table.button td a:visited {
+color: #ffffff !important;
+}
+table.tiny-button:hover td a {
+color: #ffffff !important;
+}
+table.tiny-button:active td a {
+color: #ffffff !important;
+}
+table.tiny-button td a:visited {
+color: #ffffff !important;
+}
+table.small-button:hover td a {
+color: #ffffff !important;
+}
+table.small-button:active td a {
+color: #ffffff !important;
+}
+table.small-button td a:visited {
+color: #ffffff !important;
+}
+table.medium-button:hover td a {
+color: #ffffff !important;
+}
+table.medium-button:active td a {
+color: #ffffff !important;
+}
+table.medium-button td a:visited {
+color: #ffffff !important;
+}
+table.large-button:hover td a {
+color: #ffffff !important;
+}
+table.large-button:active td a {
+color: #ffffff !important;
+}
+table.large-button td a:visited {
+color: #ffffff !important;
+}
+table.secondary:hover td {
+background: #d0d0d0 !important; color: #555;
+}
+table.secondary:hover td a {
+color: #555 !important;
+}
+table.secondary td a:visited {
+color: #555 !important;
+}
+table.secondary:active td a {
+color: #555 !important;
+}
+table.success:hover td {
+background: #457a1a !important;
+}
+table.alert:hover td {
+background: #970b0e !important;
+}
+body.outlook p {
+display: inline !important;
+}
+body {
+color: #222222; font-family: ""Verdana"", ""Helvetica"", ""Arial"", sans-serif;
+}
+.rating a:active {
+text-decoration: underline; color: #ffffff !important;
+}
+.rating a:visited {
+text-decoration: underline; color: #ffffff !important;
+}
+.rating a:hover {
+color: #000000 !important;
+}
+@media only screen and (max-width: 600px) {
+  table[class=""body""] img {
+    width: auto !important; height: auto !important;
+  }
+  table[class=""body""] center {
+    min-width: 0 !important;
+  }
+  table[class=""body""] .container {
+    width: 95% !important;
+  }
+  table[class=""body""] .row {
+    width: 100% !important; display: block !important;
+  }
+  table[class=""body""] .wrapper {
+    display: block !important; padding-right: 0 !important;
+  }
+  table[class=""body""] .columns {
+    table-layout: fixed !important; float: none !important; width: 100% !important; padding-right: 0px !important; padding-left: 0px !important; display: block !important;
+  }
+  table[class=""body""] .column {
+    table-layout: fixed !important; float: none !important; width: 100% !important; padding-right: 0px !important; padding-left: 0px !important; display: block !important;
+  }
+  table[class=""body""] .wrapper.first .columns {
+    display: table !important;
+  }
+  table[class=""body""] .wrapper.first .column {
+    display: table !important;
+  }
+  table[class=""body""] table.columns td {
+    width: 100% !important;
+  }
+  table[class=""body""] table.column td {
+    width: 100% !important;
+  }
+  table[class=""body""] .columns td.one {
+    width: 8.333333% !important;
+  }
+  table[class=""body""] .column td.one {
+    width: 8.333333% !important;
+  }
+  table[class=""body""] .columns td.two {
+    width: 16.666666% !important;
+  }
+  table[class=""body""] .column td.two {
+    width: 16.666666% !important;
+  }
+  table[class=""body""] .columns td.three {
+    width: 25% !important;
+  }
+  table[class=""body""] .column td.three {
+    width: 25% !important;
+  }
+  table[class=""body""] .columns td.four {
+    width: 33.333333% !important;
+  }
+  table[class=""body""] .column td.four {
+    width: 33.333333% !important;
+  }
+  table[class=""body""] .columns td.five {
+    width: 41.666666% !important;
+  }
+  table[class=""body""] .column td.five {
+    width: 41.666666% !important;
+  }
+  table[class=""body""] .columns td.six {
+    width: 50% !important;
+  }
+  table[class=""body""] .column td.six {
+    width: 50% !important;
+  }
+  table[class=""body""] .columns td.seven {
+    width: 58.333333% !important;
+  }
+  table[class=""body""] .column td.seven {
+    width: 58.333333% !important;
+  }
+  table[class=""body""] .columns td.eight {
+    width: 66.666666% !important;
+  }
+  table[class=""body""] .column td.eight {
+    width: 66.666666% !important;
+  }
+  table[class=""body""] .columns td.nine {
+    width: 75% !important;
+  }
+  table[class=""body""] .column td.nine {
+    width: 75% !important;
+  }
+  table[class=""body""] .columns td.ten {
+    width: 83.333333% !important;
+  }
+  table[class=""body""] .column td.ten {
+    width: 83.333333% !important;
+  }
+  table[class=""body""] .columns td.eleven {
+    width: 91.666666% !important;
+  }
+  table[class=""body""] .column td.eleven {
+    width: 91.666666% !important;
+  }
+  table[class=""body""] .columns td.twelve {
+    width: 100% !important;
+  }
+  table[class=""body""] .column td.twelve {
+    width: 100% !important;
+  }
+  table[class=""body""] td.offset-by-one {
+    padding-left: 0 !important;
+  }
+  table[class=""body""] td.offset-by-two {
+    padding-left: 0 !important;
+  }
+  table[class=""body""] td.offset-by-three {
+    padding-left: 0 !important;
+  }
+  table[class=""body""] td.offset-by-four {
+    padding-left: 0 !important;
+  }
+  table[class=""body""] td.offset-by-five {
+    padding-left: 0 !important;
+  }
+  table[class=""body""] td.offset-by-six {
+    padding-left: 0 !important;
+  }
+  table[class=""body""] td.offset-by-seven {
+    padding-left: 0 !important;
+  }
+  table[class=""body""] td.offset-by-eight {
+    padding-left: 0 !important;
+  }
+  table[class=""body""] td.offset-by-nine {
+    padding-left: 0 !important;
+  }
+  table[class=""body""] td.offset-by-ten {
+    padding-left: 0 !important;
+  }
+  table[class=""body""] td.offset-by-eleven {
+    padding-left: 0 !important;
+  }
+  table[class=""body""] table.columns td.expander {
+    width: 1px !important;
+  }
+  table[class=""body""] .right-text-pad {
+    padding-left: 10px !important;
+  }
+  table[class=""body""] .text-pad-right {
+    padding-left: 10px !important;
+  }
+  table[class=""body""] .left-text-pad {
+    padding-right: 10px !important;
+  }
+  table[class=""body""] .text-pad-left {
+    padding-right: 10px !important;
+  }
+  table[class=""body""] .hide-for-small {
+    display: none !important;
+  }
+  table[class=""body""] .show-for-desktop {
+    display: none !important;
+  }
+  table[class=""body""] .show-for-small {
+    display: inherit !important;
+  }
+  table[class=""body""] .hide-for-desktop {
+    display: inherit !important;
+  }
+}
+@media screen {
+  @font-face {
+    font-family: 'Roboto Slab'; font-style: normal; font-weight: 700; src: local('Roboto Slab Bold'), local('RobotoSlab-Bold'), url(http://themes.googleusercontent.com/static/fonts/robotoslab/v3/dazS1PrQQuCxC3iOAJFEJRbnBKKEOwRKgsHDreGcocg.woff) format('woff');
+  }
+}
+
+
+",tiffanny78562,media
+212,2014-12-26 13:17:41,"body {
+width: 100% !important; min-width: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; margin: 0; padding: 0;
+}
+.ExternalClass {
+width: 100%;
+}
+.ExternalClass {
+line-height: 100%;
+}
+#backgroundTable {
+margin: 0; padding: 0; width: 100% !important; line-height: 100% !important;
+}
+img {
+outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; width: auto; max-width: 100%; float: left; clear: both; display: block;
+}
+body {
+color: #222222; font-family: ""Helvetica"", ""Arial"", sans-serif; font-weight: normal; padding: 0; margin: 0; text-align: left; line-height: 1.3;
+}
+body {
+font-size: 14px; line-height: 19px;
+}
+a:hover {
+color: #2795b6 !important;
+}
+a:active {
+color: #2795b6 !important;
+}
+a:visited {
+color: #2ba6cb !important;
+}
+h1 a:active {
+color: #2ba6cb !important;
+}
+h2 a:active {
+color: #2ba6cb !important;
+}
+h3 a:active {
+color: #2ba6cb !important;
+}
+h4 a:active {
+color: #2ba6cb !important;
+}
+h5 a:active {
+color: #2ba6cb !important;
+}
+h6 a:active {
+color: #2ba6cb !important;
+}
+h1 a:visited {
+color: #2ba6cb !important;
+}
+h2 a:visited {
+color: #2ba6cb !important;
+}
+h3 a:visited {
+color: #2ba6cb !important;
+}
+h4 a:visited {
+color: #2ba6cb !important;
+}
+h5 a:visited {
+color: #2ba6cb !important;
+}
+h6 a:visited {
+color: #2ba6cb !important;
+}
+table.button:hover td {
+background: #2795b6 !important;
+}
+table.button:visited td {
+background: #2795b6 !important;
+}
+table.button:active td {
+background: #2795b6 !important;
+}
+table.button:hover td a {
+color: #fff !important;
+}
+table.button:visited td a {
+color: #fff !important;
+}
+table.button:active td a {
+color: #fff !important;
+}
+table.button:hover td {
+background: #2795b6 !important;
+}
+table.tiny-button:hover td {
+background: #2795b6 !important;
+}
+table.small-button:hover td {
+background: #2795b6 !important;
+}
+table.medium-button:hover td {
+background: #2795b6 !important;
+}
+table.large-button:hover td {
+background: #2795b6 !important;
+}
+table.button:hover td a {
+color: #ffffff !important;
+}
+table.button:active td a {
+color: #ffffff !important;
+}
+table.button td a:visited {
+color: #ffffff !important;
+}
+table.tiny-button:hover td a {
+color: #ffffff !important;
+}
+table.tiny-button:active td a {
+color: #ffffff !important;
+}
+table.tiny-button td a:visited {
+color: #ffffff !important;
+}
+table.small-button:hover td a {
+color: #ffffff !important;
+}
+table.small-button:active td a {
+color: #ffffff !important;
+}
+table.small-button td a:visited {
+color: #ffffff !important;
+}
+table.medium-button:hover td a {
+color: #ffffff !important;
+}
+table.medium-button:active td a {
+color: #ffffff !important;
+}
+table.medium-button td a:visited {
+color: #ffffff !important;
+}
+table.large-button:hover td a {
+color: #ffffff !important;
+}
+table.large-button:active td a {
+color: #ffffff !important;
+}
+table.large-button td a:visited {
+color: #ffffff !important;
+}
+table.secondary:hover td {
+background: #d0d0d0 !important; color: #555;
+}
+table.secondary:hover td a {
+color: #555 !important;
+}
+table.secondary td a:visited {
+color: #555 !important;
+}
+table.secondary:active td a {
+color: #555 !important;
+}
+table.success:hover td {
+background: #457a1a !important;
+}
+table.alert:hover td {
+background: #970b0e !important;
+}
+body.outlook p {
+display: inline !important;
+}
+body {
+color: #222222; font-family: ""Verdana"", ""Helvetica"", ""Arial"", sans-serif;
+}
+.rating a:active {
+text-decoration: underline; color: #ffffff !important;
+}
+.rating a:visited {
+text-decoration: underline; color: #ffffff !important;
+}
+.rating a:hover {
+color: #000000 !important;
+}
+@media only screen and (max-width: 600px) {
+  table[class=""body""] img {
+    width: auto !important; height: auto !important;
+  }
+  table[class=""body""] center {
+    min-width: 0 !important;
+  }
+  table[class=""body""] .container {
+    width: 95% !important;
+  }
+  table[class=""body""] .row {
+    width: 100% !important; display: block !important;
+  }
+  table[class=""body""] .wrapper {
+    display: block !important; padding-right: 0 !important;
+  }
+  table[class=""body""] .columns {
+    table-layout: fixed !important; float: none !important; width: 100% !important; padding-right: 0px !important; padding-left: 0px !important; display: block !important;
+  }
+  table[class=""body""] .column {
+    table-layout: fixed !important; float: none !important; width: 100% !important; padding-right: 0px !important; padding-left: 0px !important; display: block !important;
+  }
+  table[class=""body""] .wrapper.first .columns {
+    display: table !important;
+  }
+  table[class=""body""] .wrapper.first .column {
+    display: table !important;
+  }
+  table[class=""body""] table.columns td {
+    width: 100% !important;
+  }
+  table[class=""body""] table.column td {
+    width: 100% !important;
+  }
+  table[class=""body""] .columns td.one {
+    width: 8.333333% !important;
+  }
+  table[class=""body""] .column td.one {
+    width: 8.333333% !important;
+  }
+  table[class=""body""] .columns td.two {
+    width: 16.666666% !important;
+  }
+  table[class=""body""] .column td.two {
+    width: 16.666666% !important;
+  }
+  table[class=""body""] .columns td.three {
+    width: 25% !important;
+  }
+  table[class=""body""] .column td.three {
+    width: 25% !important;
+  }
+  table[class=""body""] .columns td.four {
+    width: 33.333333% !important;
+  }
+  table[class=""body""] .column td.four {
+    width: 33.333333% !important;
+  }
+  table[class=""body""] .columns td.five {
+    width: 41.666666% !important;
+  }
+  table[class=""body""] .column td.five {
+    width: 41.666666% !important;
+  }
+  table[class=""body""] .columns td.six {
+    width: 50% !important;
+  }
+  table[class=""body""] .column td.six {
+    width: 50% !important;
+  }
+  table[class=""body""] .columns td.seven {
+    width: 58.333333% !important;
+  }
+  table[class=""body""] .column td.seven {
+    width: 58.333333% !important;
+  }
+  table[class=""body""] .columns td.eight {
+    width: 66.666666% !important;
+  }
+  table[class=""body""] .column td.eight {
+    width: 66.666666% !important;
+  }
+  table[class=""body""] .columns td.nine {
+    width: 75% !important;
+  }
+  table[class=""body""] .column td.nine {
+    width: 75% !important;
+  }
+  table[class=""body""] .columns td.ten {
+    width: 83.333333% !important;
+  }
+  table[class=""body""] .column td.ten {
+    width: 83.333333% !important;
+  }
+  table[class=""body""] .columns td.eleven {
+    width: 91.666666% !important;
+  }
+  table[class=""body""] .column td.eleven {
+    width: 91.666666% !important;
+  }
+  table[class=""body""] .columns td.twelve {
+    width: 100% !important;
+  }
+  table[class=""body""] .column td.twelve {
+    width: 100% !important;
+  }
+  table[class=""body""] td.offset-by-one {
+    padding-left: 0 !important;
+  }
+  table[class=""body""] td.offset-by-two {
+    padding-left: 0 !important;
+  }
+  table[class=""body""] td.offset-by-three {
+    padding-left: 0 !important;
+  }
+  table[class=""body""] td.offset-by-four {
+    padding-left: 0 !important;
+  }
+  table[class=""body""] td.offset-by-five {
+    padding-left: 0 !important;
+  }
+  table[class=""body""] td.offset-by-six {
+    padding-left: 0 !important;
+  }
+  table[class=""body""] td.offset-by-seven {
+    padding-left: 0 !important;
+  }
+  table[class=""body""] td.offset-by-eight {
+    padding-left: 0 !important;
+  }
+  table[class=""body""] td.offset-by-nine {
+    padding-left: 0 !important;
+  }
+  table[class=""body""] td.offset-by-ten {
+    padding-left: 0 !important;
+  }
+  table[class=""body""] td.offset-by-eleven {
+    padding-left: 0 !important;
+  }
+  table[class=""body""] table.columns td.expander {
+    width: 1px !important;
+  }
+  table[class=""body""] .right-text-pad {
+    padding-left: 10px !important;
+  }
+  table[class=""body""] .text-pad-right {
+    padding-left: 10px !important;
+  }
+  table[class=""body""] .left-text-pad {
+    padding-right: 10px !important;
+  }
+  table[class=""body""] .text-pad-left {
+    padding-right: 10px !important;
+  }
+  table[class=""body""] .hide-for-small {
+    display: none !important;
+  }
+  table[class=""body""] .show-for-desktop {
+    display: none !important;
+  }
+  table[class=""body""] .show-for-small {
+    display: inherit !important;
+  }
+  table[class=""body""] .hide-for-desktop {
+    display: inherit !important;
+  }
+}
+@media screen {
+  @font-face {
+    font-family: 'Roboto Slab'; font-style: normal; font-weight: 700; src: local('Roboto Slab Bold'), local('RobotoSlab-Bold'), url(http://themes.googleusercontent.com/static/fonts/robotoslab/v3/dazS1PrQQuCxC3iOAJFEJRbnBKKEOwRKgsHDreGcocg.woff) format('woff');
+  }
+}
+
+
+",tiffanny78562,font-face
+210,2014-12-25 16:11:17,"body {
+width: 100% !important; min-width: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; margin: 0; padding: 0;
+}
+.ExternalClass {
+width: 100%;
+}
+.ExternalClass {
+line-height: 100%;
+}
+#backgroundTable {
+margin: 0; padding: 0; width: 100% !important; line-height: 100% !important;
+}
+img {
+outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; width: auto; max-width: 100%; float: left; clear: both; display: block;
+}
+body {
+color: #222222; font-family: ""Helvetica"", ""Arial"", sans-serif; font-weight: normal; padding: 0; margin: 0; text-align: left; line-height: 1.3;
+}
+body {
+font-size: 14px; line-height: 19px;
+}
+a:hover {
+color: #2795b6 !important;
+}
+a:active {
+color: #2795b6 !important;
+}
+a:visited {
+color: #2ba6cb !important;
+}
+h1 a:active {
+color: #2ba6cb !important;
+}
+h2 a:active {
+color: #2ba6cb !important;
+}
+h3 a:active {
+color: #2ba6cb !important;
+}
+h4 a:active {
+color: #2ba6cb !important;
+}
+h5 a:active {
+color: #2ba6cb !important;
+}
+h6 a:active {
+color: #2ba6cb !important;
+}
+h1 a:visited {
+color: #2ba6cb !important;
+}
+h2 a:visited {
+color: #2ba6cb !important;
+}
+h3 a:visited {
+color: #2ba6cb !important;
+}
+h4 a:visited {
+color: #2ba6cb !important;
+}
+h5 a:visited {
+color: #2ba6cb !important;
+}
+h6 a:visited {
+color: #2ba6cb !important;
+}
+table.button:hover td {
+background: #2795b6 !important;
+}
+table.button:visited td {
+background: #2795b6 !important;
+}
+table.button:active td {
+background: #2795b6 !important;
+}
+table.button:hover td a {
+color: #fff !important;
+}
+table.button:visited td a {
+color: #fff !important;
+}
+table.button:active td a {
+color: #fff !important;
+}
+table.button:hover td {
+background: #2795b6 !important;
+}
+table.tiny-button:hover td {
+background: #2795b6 !important;
+}
+table.small-button:hover td {
+background: #2795b6 !important;
+}
+table.medium-button:hover td {
+background: #2795b6 !important;
+}
+table.large-button:hover td {
+background: #2795b6 !important;
+}
+table.button:hover td a {
+color: #ffffff !important;
+}
+table.button:active td a {
+color: #ffffff !important;
+}
+table.button td a:visited {
+color: #ffffff !important;
+}
+table.tiny-button:hover td a {
+color: #ffffff !important;
+}
+table.tiny-button:active td a {
+color: #ffffff !important;
+}
+table.tiny-button td a:visited {
+color: #ffffff !important;
+}
+table.small-button:hover td a {
+color: #ffffff !important;
+}
+table.small-button:active td a {
+color: #ffffff !important;
+}
+table.small-button td a:visited {
+color: #ffffff !important;
+}
+table.medium-button:hover td a {
+color: #ffffff !important;
+}
+table.medium-button:active td a {
+color: #ffffff !important;
+}
+table.medium-button td a:visited {
+color: #ffffff !important;
+}
+table.large-button:hover td a {
+color: #ffffff !important;
+}
+table.large-button:active td a {
+color: #ffffff !important;
+}
+table.large-button td a:visited {
+color: #ffffff !important;
+}
+table.secondary:hover td {
+background: #d0d0d0 !important; color: #555;
+}
+table.secondary:hover td a {
+color: #555 !important;
+}
+table.secondary td a:visited {
+color: #555 !important;
+}
+table.secondary:active td a {
+color: #555 !important;
+}
+table.success:hover td {
+background: #457a1a !important;
+}
+table.alert:hover td {
+background: #970b0e !important;
+}
+body.outlook p {
+display: inline !important;
+}
+body {
+color: #222222; font-family: ""Verdana"", ""Helvetica"", ""Arial"", sans-serif;
+}
+.rating a:active {
+text-decoration: underline; color: #ffffff !important;
+}
+.rating a:visited {
+text-decoration: underline; color: #ffffff !important;
+}
+.rating a:hover {
+color: #000000 !important;
+}
+@media only screen and (max-width: 600px) {
+  table[class=""body""] img {
+    width: auto !important; height: auto !important;
+  }
+  table[class=""body""] center {
+    min-width: 0 !important;
+  }
+  table[class=""body""] .container {
+    width: 95% !important;
+  }
+  table[class=""body""] .row {
+    width: 100% !important; display: block !important;
+  }
+  table[class=""body""] .wrapper {
+    display: block !important; padding-right: 0 !important;
+  }
+  table[class=""body""] .columns {
+    table-layout: fixed !important; float: none !important; width: 100% !important; padding-right: 0px !important; padding-left: 0px !important; display: block !important;
+  }
+  table[class=""body""] .column {
+    table-layout: fixed !important; float: none !important; width: 100% !important; padding-right: 0px !important; padding-left: 0px !important; display: block !important;
+  }
+  table[class=""body""] .wrapper.first .columns {
+    display: table !important;
+  }
+  table[class=""body""] .wrapper.first .column {
+    display: table !important;
+  }
+  table[class=""body""] table.columns td {
+    width: 100% !important;
+  }
+  table[class=""body""] table.column td {
+    width: 100% !important;
+  }
+  table[class=""body""] .columns td.one {
+    width: 8.333333% !important;
+  }
+  table[class=""body""] .column td.one {
+    width: 8.333333% !important;
+  }
+  table[class=""body""] .columns td.two {
+    width: 16.666666% !important;
+  }
+  table[class=""body""] .column td.two {
+    width: 16.666666% !important;
+  }
+  table[class=""body""] .columns td.three {
+    width: 25% !important;
+  }
+  table[class=""body""] .column td.three {
+    width: 25% !important;
+  }
+  table[class=""body""] .columns td.four {
+    width: 33.333333% !important;
+  }
+  table[class=""body""] .column td.four {
+    width: 33.333333% !important;
+  }
+  table[class=""body""] .columns td.five {
+    width: 41.666666% !important;
+  }
+  table[class=""body""] .column td.five {
+    width: 41.666666% !important;
+  }
+  table[class=""body""] .columns td.six {
+    width: 50% !important;
+  }
+  table[class=""body""] .column td.six {
+    width: 50% !important;
+  }
+  table[class=""body""] .columns td.seven {
+    width: 58.333333% !important;
+  }
+  table[class=""body""] .column td.seven {
+    width: 58.333333% !important;
+  }
+  table[class=""body""] .columns td.eight {
+    width: 66.666666% !important;
+  }
+  table[class=""body""] .column td.eight {
+    width: 66.666666% !important;
+  }
+  table[class=""body""] .columns td.nine {
+    width: 75% !important;
+  }
+  table[class=""body""] .column td.nine {
+    width: 75% !important;
+  }
+  table[class=""body""] .columns td.ten {
+    width: 83.333333% !important;
+  }
+  table[class=""body""] .column td.ten {
+    width: 83.333333% !important;
+  }
+  table[class=""body""] .columns td.eleven {
+    width: 91.666666% !important;
+  }
+  table[class=""body""] .column td.eleven {
+    width: 91.666666% !important;
+  }
+  table[class=""body""] .columns td.twelve {
+    width: 100% !important;
+  }
+  table[class=""body""] .column td.twelve {
+    width: 100% !important;
+  }
+  table[class=""body""] td.offset-by-one {
+    padding-left: 0 !important;
+  }
+  table[class=""body""] td.offset-by-two {
+    padding-left: 0 !important;
+  }
+  table[class=""body""] td.offset-by-three {
+    padding-left: 0 !important;
+  }
+  table[class=""body""] td.offset-by-four {
+    padding-left: 0 !important;
+  }
+  table[class=""body""] td.offset-by-five {
+    padding-left: 0 !important;
+  }
+  table[class=""body""] td.offset-by-six {
+    padding-left: 0 !important;
+  }
+  table[class=""body""] td.offset-by-seven {
+    padding-left: 0 !important;
+  }
+  table[class=""body""] td.offset-by-eight {
+    padding-left: 0 !important;
+  }
+  table[class=""body""] td.offset-by-nine {
+    padding-left: 0 !important;
+  }
+  table[class=""body""] td.offset-by-ten {
+    padding-left: 0 !important;
+  }
+  table[class=""body""] td.offset-by-eleven {
+    padding-left: 0 !important;
+  }
+  table[class=""body""] table.columns td.expander {
+    width: 1px !important;
+  }
+  table[class=""body""] .right-text-pad {
+    padding-left: 10px !important;
+  }
+  table[class=""body""] .text-pad-right {
+    padding-left: 10px !important;
+  }
+  table[class=""body""] .left-text-pad {
+    padding-right: 10px !important;
+  }
+  table[class=""body""] .text-pad-left {
+    padding-right: 10px !important;
+  }
+  table[class=""body""] .hide-for-small {
+    display: none !important;
+  }
+  table[class=""body""] .show-for-desktop {
+    display: none !important;
+  }
+  table[class=""body""] .show-for-small {
+    display: inherit !important;
+  }
+  table[class=""body""] .hide-for-desktop {
+    display: inherit !important;
+  }
+}
+@media screen {
+  @font-face {
+    font-family: 'Roboto Slab'; font-style: normal; font-weight: 700; src: local('Roboto Slab Bold'), local('RobotoSlab-Bold'), url(http://themes.googleusercontent.com/static/fonts/robotoslab/v3/dazS1PrQQuCxC3iOAJFEJRbnBKKEOwRKgsHDreGcocg.woff) format('woff');
+  }
+}
+
+
+",pedestrian82,media
+210,2014-12-25 16:11:17,"body {
+width: 100% !important; min-width: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; margin: 0; padding: 0;
+}
+.ExternalClass {
+width: 100%;
+}
+.ExternalClass {
+line-height: 100%;
+}
+#backgroundTable {
+margin: 0; padding: 0; width: 100% !important; line-height: 100% !important;
+}
+img {
+outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; width: auto; max-width: 100%; float: left; clear: both; display: block;
+}
+body {
+color: #222222; font-family: ""Helvetica"", ""Arial"", sans-serif; font-weight: normal; padding: 0; margin: 0; text-align: left; line-height: 1.3;
+}
+body {
+font-size: 14px; line-height: 19px;
+}
+a:hover {
+color: #2795b6 !important;
+}
+a:active {
+color: #2795b6 !important;
+}
+a:visited {
+color: #2ba6cb !important;
+}
+h1 a:active {
+color: #2ba6cb !important;
+}
+h2 a:active {
+color: #2ba6cb !important;
+}
+h3 a:active {
+color: #2ba6cb !important;
+}
+h4 a:active {
+color: #2ba6cb !important;
+}
+h5 a:active {
+color: #2ba6cb !important;
+}
+h6 a:active {
+color: #2ba6cb !important;
+}
+h1 a:visited {
+color: #2ba6cb !important;
+}
+h2 a:visited {
+color: #2ba6cb !important;
+}
+h3 a:visited {
+color: #2ba6cb !important;
+}
+h4 a:visited {
+color: #2ba6cb !important;
+}
+h5 a:visited {
+color: #2ba6cb !important;
+}
+h6 a:visited {
+color: #2ba6cb !important;
+}
+table.button:hover td {
+background: #2795b6 !important;
+}
+table.button:visited td {
+background: #2795b6 !important;
+}
+table.button:active td {
+background: #2795b6 !important;
+}
+table.button:hover td a {
+color: #fff !important;
+}
+table.button:visited td a {
+color: #fff !important;
+}
+table.button:active td a {
+color: #fff !important;
+}
+table.button:hover td {
+background: #2795b6 !important;
+}
+table.tiny-button:hover td {
+background: #2795b6 !important;
+}
+table.small-button:hover td {
+background: #2795b6 !important;
+}
+table.medium-button:hover td {
+background: #2795b6 !important;
+}
+table.large-button:hover td {
+background: #2795b6 !important;
+}
+table.button:hover td a {
+color: #ffffff !important;
+}
+table.button:active td a {
+color: #ffffff !important;
+}
+table.button td a:visited {
+color: #ffffff !important;
+}
+table.tiny-button:hover td a {
+color: #ffffff !important;
+}
+table.tiny-button:active td a {
+color: #ffffff !important;
+}
+table.tiny-button td a:visited {
+color: #ffffff !important;
+}
+table.small-button:hover td a {
+color: #ffffff !important;
+}
+table.small-button:active td a {
+color: #ffffff !important;
+}
+table.small-button td a:visited {
+color: #ffffff !important;
+}
+table.medium-button:hover td a {
+color: #ffffff !important;
+}
+table.medium-button:active td a {
+color: #ffffff !important;
+}
+table.medium-button td a:visited {
+color: #ffffff !important;
+}
+table.large-button:hover td a {
+color: #ffffff !important;
+}
+table.large-button:active td a {
+color: #ffffff !important;
+}
+table.large-button td a:visited {
+color: #ffffff !important;
+}
+table.secondary:hover td {
+background: #d0d0d0 !important; color: #555;
+}
+table.secondary:hover td a {
+color: #555 !important;
+}
+table.secondary td a:visited {
+color: #555 !important;
+}
+table.secondary:active td a {
+color: #555 !important;
+}
+table.success:hover td {
+background: #457a1a !important;
+}
+table.alert:hover td {
+background: #970b0e !important;
+}
+body.outlook p {
+display: inline !important;
+}
+body {
+color: #222222; font-family: ""Verdana"", ""Helvetica"", ""Arial"", sans-serif;
+}
+.rating a:active {
+text-decoration: underline; color: #ffffff !important;
+}
+.rating a:visited {
+text-decoration: underline; color: #ffffff !important;
+}
+.rating a:hover {
+color: #000000 !important;
+}
+@media only screen and (max-width: 600px) {
+  table[class=""body""] img {
+    width: auto !important; height: auto !important;
+  }
+  table[class=""body""] center {
+    min-width: 0 !important;
+  }
+  table[class=""body""] .container {
+    width: 95% !important;
+  }
+  table[class=""body""] .row {
+    width: 100% !important; display: block !important;
+  }
+  table[class=""body""] .wrapper {
+    display: block !important; padding-right: 0 !important;
+  }
+  table[class=""body""] .columns {
+    table-layout: fixed !important; float: none !important; width: 100% !important; padding-right: 0px !important; padding-left: 0px !important; display: block !important;
+  }
+  table[class=""body""] .column {
+    table-layout: fixed !important; float: none !important; width: 100% !important; padding-right: 0px !important; padding-left: 0px !important; display: block !important;
+  }
+  table[class=""body""] .wrapper.first .columns {
+    display: table !important;
+  }
+  table[class=""body""] .wrapper.first .column {
+    display: table !important;
+  }
+  table[class=""body""] table.columns td {
+    width: 100% !important;
+  }
+  table[class=""body""] table.column td {
+    width: 100% !important;
+  }
+  table[class=""body""] .columns td.one {
+    width: 8.333333% !important;
+  }
+  table[class=""body""] .column td.one {
+    width: 8.333333% !important;
+  }
+  table[class=""body""] .columns td.two {
+    width: 16.666666% !important;
+  }
+  table[class=""body""] .column td.two {
+    width: 16.666666% !important;
+  }
+  table[class=""body""] .columns td.three {
+    width: 25% !important;
+  }
+  table[class=""body""] .column td.three {
+    width: 25% !important;
+  }
+  table[class=""body""] .columns td.four {
+    width: 33.333333% !important;
+  }
+  table[class=""body""] .column td.four {
+    width: 33.333333% !important;
+  }
+  table[class=""body""] .columns td.five {
+    width: 41.666666% !important;
+  }
+  table[class=""body""] .column td.five {
+    width: 41.666666% !important;
+  }
+  table[class=""body""] .columns td.six {
+    width: 50% !important;
+  }
+  table[class=""body""] .column td.six {
+    width: 50% !important;
+  }
+  table[class=""body""] .columns td.seven {
+    width: 58.333333% !important;
+  }
+  table[class=""body""] .column td.seven {
+    width: 58.333333% !important;
+  }
+  table[class=""body""] .columns td.eight {
+    width: 66.666666% !important;
+  }
+  table[class=""body""] .column td.eight {
+    width: 66.666666% !important;
+  }
+  table[class=""body""] .columns td.nine {
+    width: 75% !important;
+  }
+  table[class=""body""] .column td.nine {
+    width: 75% !important;
+  }
+  table[class=""body""] .columns td.ten {
+    width: 83.333333% !important;
+  }
+  table[class=""body""] .column td.ten {
+    width: 83.333333% !important;
+  }
+  table[class=""body""] .columns td.eleven {
+    width: 91.666666% !important;
+  }
+  table[class=""body""] .column td.eleven {
+    width: 91.666666% !important;
+  }
+  table[class=""body""] .columns td.twelve {
+    width: 100% !important;
+  }
+  table[class=""body""] .column td.twelve {
+    width: 100% !important;
+  }
+  table[class=""body""] td.offset-by-one {
+    padding-left: 0 !important;
+  }
+  table[class=""body""] td.offset-by-two {
+    padding-left: 0 !important;
+  }
+  table[class=""body""] td.offset-by-three {
+    padding-left: 0 !important;
+  }
+  table[class=""body""] td.offset-by-four {
+    padding-left: 0 !important;
+  }
+  table[class=""body""] td.offset-by-five {
+    padding-left: 0 !important;
+  }
+  table[class=""body""] td.offset-by-six {
+    padding-left: 0 !important;
+  }
+  table[class=""body""] td.offset-by-seven {
+    padding-left: 0 !important;
+  }
+  table[class=""body""] td.offset-by-eight {
+    padding-left: 0 !important;
+  }
+  table[class=""body""] td.offset-by-nine {
+    padding-left: 0 !important;
+  }
+  table[class=""body""] td.offset-by-ten {
+    padding-left: 0 !important;
+  }
+  table[class=""body""] td.offset-by-eleven {
+    padding-left: 0 !important;
+  }
+  table[class=""body""] table.columns td.expander {
+    width: 1px !important;
+  }
+  table[class=""body""] .right-text-pad {
+    padding-left: 10px !important;
+  }
+  table[class=""body""] .text-pad-right {
+    padding-left: 10px !important;
+  }
+  table[class=""body""] .left-text-pad {
+    padding-right: 10px !important;
+  }
+  table[class=""body""] .text-pad-left {
+    padding-right: 10px !important;
+  }
+  table[class=""body""] .hide-for-small {
+    display: none !important;
+  }
+  table[class=""body""] .show-for-desktop {
+    display: none !important;
+  }
+  table[class=""body""] .show-for-small {
+    display: inherit !important;
+  }
+  table[class=""body""] .hide-for-desktop {
+    display: inherit !important;
+  }
+}
+@media screen {
+  @font-face {
+    font-family: 'Roboto Slab'; font-style: normal; font-weight: 700; src: local('Roboto Slab Bold'), local('RobotoSlab-Bold'), url(http://themes.googleusercontent.com/static/fonts/robotoslab/v3/dazS1PrQQuCxC3iOAJFEJRbnBKKEOwRKgsHDreGcocg.woff) format('woff');
+  }
+}
+
+
+",pedestrian82,font-face
+208,2015-01-09 05:46:23,"@erikmontes Feel free to add it as a Pull Request. Make sure to squash your commits and leave out any answers.
+",darcyclarke,erikmontes
+195,2014-12-23 15:37:33,"Agree with @evanportwood here - many companies don't even have the concept of senior vs junior devs. I'll leave this open for a bit in case others want to chime in.
+",richgilbank,evanportwood
+184,2014-12-04 07:39:17,"cc @darcyclarke 
+",appleboy,darcyclarke
+179,2014-10-22 23:13:10,"@darcyclarke Any objections? 
+
+Closes https://github.com/darcyclarke/Front-end-Developer-Interview-Questions/issues/178
+cc: @ericnjanga @olipo186
+",richgilbank,ericnjanga
+179,2014-10-22 23:13:10,"@darcyclarke Any objections? 
+
+Closes https://github.com/darcyclarke/Front-end-Developer-Interview-Questions/issues/178
+cc: @ericnjanga @olipo186
+",richgilbank,olipo186
+179,2014-10-22 23:13:10,"@darcyclarke Any objections? 
+
+Closes https://github.com/darcyclarke/Front-end-Developer-Interview-Questions/issues/178
+cc: @ericnjanga @olipo186
+",richgilbank,darcyclarke
+165,2014-08-13 21:23:23,"@darcy @nestor783 my Spanish isn't great, but some of these look wrong.
+![](http://cl.ly/image/270i2Z3Z1J3C/Screen%20Shot%202014-08-13%20at%205.22.19%20PM.png)
+![](http://cl.ly/image/3F2R1O3N1j07/Screen%20Shot%202014-08-13%20at%205.22.52%20PM.png)
+",richgilbank,darcy
+157,2014-08-10 05:06:38,"cc @darcyclarke 
+",appleboy,darcyclarke
+156,2014-08-02 03:12:55,"cc @darcyclarke 
+",appleboy,darcyclarke
+156,2014-08-10 04:52:55,"@darcyclarke Thanks.
+",appleboy,darcyclarke
+79,2013-09-26 10:26:51,"Based on the feedback from @darcyclarke, these are the updates to my original suggestions in [pull request #68](https://github.com/darcyclarke/Front-end-Developer-Interview-Questions/pull/68) (which seems to have gone cold).
+",demoive,darcyclarke
+54,2013-04-18 15:33:32,"Hey @microtroll, I still see 7 commits
+",darcyclarke,microtroll
+46,2013-03-22 21:06:58,"Oh man.. didn't see that PR. @schuer did a better job. Closing this issue. 
+",PascalPrecht,schuer
+23,2012-09-28 06:42:07,"Would it be useful to make a uber cool site out of these questions? 
+[We might select the best answer as well ;) ]
+
+@darcyclarke Do you have any plans of creating a website with these? If not I'm very eager to help! 
+",hemanth,darcyclarke
+18,2012-07-31 02:34:35,"If I'm not mistaken Flash of Unstyled Content is more of a CSS issue having to do with @import and inline styles.
+
+Googling FOUC + javascript I see things about techniques for hiding the content until the load event fires. If this is what the question was meant to refer to then I would not consider that a best practice, and not something I would consider to be essential knowledge.
+",danab,import
+17,2012-07-20 17:23:20,"by @sixdegrees and I
+",Victa,sixdegrees

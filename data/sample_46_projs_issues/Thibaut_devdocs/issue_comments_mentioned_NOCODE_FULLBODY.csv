@@ -1,0 +1,1690 @@
+issue_num,datetime,body,login,mention_login
+602,2017-03-26 22:05:11,"Thanks for an outstanding PR @freayd (and @japborst for the original PR).
+
+> I've tried to include all packages and it's working fine for me, I don't experience any slow down. They are 217 types and 46 084 entries in 4 733 files occupying 153 MB.
+
+I'm not too worried about the speed of the search. Even with 100k entries it seems to be holding up pretty well (I did a lot of optimization a while back).
+
+However, I'm worried about search results becoming noisy / less useful due to the 46k entries, and increasing the chance that users will hit the IndexedDB quota and lose their offline data (until browsers implement the [Storage Standard](https://storage.spec.whatwg.org/), all website data is unfortunately non-persistent and subject to deletion when e.g. the device is low on disk space).
+
+Since I expect this doc will be used by a large number of users, we should optimize/polish it as much as we can. A good number to shoot for would be ~20k entries (IIRC the biggest doc we have today is Drupal 8, with 12k entries).
+
+Is AWT still actively used? Packages like `java.rmi` and `javax.management` can probably be left out / not useful to most people. Packages like `javax.xml` and `javax.swing` could be extracted in separate doc versions (see docs like Haxe and Tensorflow), but let's first try to get the number down as much as we can.
+
+> I have reused the logos from the request #560, but I think they might be copyrighted and I'm not sure they can be used in Devdocs. I don't see this logo on the OpenJDK and IcedTea websites. And the logo used in the Java Wikipedia article seems to be subject to fair use.
+
+I don't think we should use the Java logo, since we're adding OpenJDK. Please remove the logo and I'll figure something out. Also, please rename the doc/scraper ""OpenJDK"".",Thibaut,freayd
+602,2017-03-26 22:05:11,"Thanks for an outstanding PR @freayd (and @japborst for the original PR).
+
+> I've tried to include all packages and it's working fine for me, I don't experience any slow down. They are 217 types and 46 084 entries in 4 733 files occupying 153 MB.
+
+I'm not too worried about the speed of the search. Even with 100k entries it seems to be holding up pretty well (I did a lot of optimization a while back).
+
+However, I'm worried about search results becoming noisy / less useful due to the 46k entries, and increasing the chance that users will hit the IndexedDB quota and lose their offline data (until browsers implement the [Storage Standard](https://storage.spec.whatwg.org/), all website data is unfortunately non-persistent and subject to deletion when e.g. the device is low on disk space).
+
+Since I expect this doc will be used by a large number of users, we should optimize/polish it as much as we can. A good number to shoot for would be ~20k entries (IIRC the biggest doc we have today is Drupal 8, with 12k entries).
+
+Is AWT still actively used? Packages like `java.rmi` and `javax.management` can probably be left out / not useful to most people. Packages like `javax.xml` and `javax.swing` could be extracted in separate doc versions (see docs like Haxe and Tensorflow), but let's first try to get the number down as much as we can.
+
+> I have reused the logos from the request #560, but I think they might be copyrighted and I'm not sure they can be used in Devdocs. I don't see this logo on the OpenJDK and IcedTea websites. And the logo used in the Java Wikipedia article seems to be subject to fair use.
+
+I don't think we should use the Java logo, since we're adding OpenJDK. Please remove the logo and I'll figure something out. Also, please rename the doc/scraper ""OpenJDK"".",Thibaut,japborst
+602,2017-03-27 08:34:51,"@Thibaut maybe should we split java packages into differents documentation, so Java AWT could be apart from ""Java Core"" (and some additionnal splits that we should think all together).
+
+What do you think about it ?
+",Kaijiro,Thibaut
+593,2017-03-04 18:01:59,"Great to see people working on this! @Thibaut I have looked into OpenJDK, but the fact that there was no publicly accessible version of the docs online and some time constraints, meant I did not write a scraper for OpenJDK.
+
+I also found this one btw: http://packages.ubuntu.com/xenial/openjdk-8-doc
+
+@freayd feel free to fork / use my branch in any way. Personally I have no experience with OpenJDK, so I have no idea how much similarities with the Oracle docs are.",japborst,Thibaut
+593,2017-03-04 18:01:59,"Great to see people working on this! @Thibaut I have looked into OpenJDK, but the fact that there was no publicly accessible version of the docs online and some time constraints, meant I did not write a scraper for OpenJDK.
+
+I also found this one btw: http://packages.ubuntu.com/xenial/openjdk-8-doc
+
+@freayd feel free to fork / use my branch in any way. Personally I have no experience with OpenJDK, so I have no idea how much similarities with the Oracle docs are.",japborst,freayd
+593,2017-03-05 10:17:27,"As far as I understand, there is nothing else than sources provided by the OpenJDK project. So one option would be to download the sources and compile them which will generate the documentation.
+
+Each Linux distribution provides packages, which are built by themselves from the sources. It is interesting to note that Linux distributions sometimes patch the original sources for various reasons, like adapting it to their platform or fixing bugs. Debian, Ubuntu, Arch Linux and the CERN all provide an OpenJDK documentation package containing a set of HTML files.
+
+IMHO, I recommend starting from the Debian (the most reliable distribution, 23 years old now…) package. A package is a .deb file which is basically an archive. The Debian package is ""built using the [IcedTea](https://en.wikipedia.org/wiki/IcedTea) build support and patches"". My main concern still is the license, as the Debian, IcedTea and a few other building tools license is now coming up. @Thibaut can you please have a look at the [copyright file](https://gist.github.com/freayd/0d6333f9fd100cd0c416f46a1624f873) of the current Debian package and let me know if you think it is compatible with DevDocs? Thanks.",freayd,Thibaut
+593,2017-03-05 14:43:12,"I've downloaded all four packages, and the documentation in each says:
+
+> This document is the API specification for the Java™ Platform, Standard Edition.
+
+and seems identical to http://docs.oracle.com/javase/8/docs/api/.
+
+@freayd I'm not worried about the license of building tools like IcedTea. OpenJDK is licensed under GPLv2, so any derivative work has to also be licensed under GPLv2.
+
+What I'm more worried about is whether those packages actually contain documentation built from the OpenJDK source code, and whether the GPL license applies or not. The packaging/UI of those docs indicate otherwise. Could you maybe ask for clarification on the OpenJDK mailing list?
+
+",Thibaut,freayd
+593,2017-03-07 14:00:14,"I just installed the openjdk documentation through `sudo apt install openjdk-8-doc`, which results in the same documentation as the Oracle docs in `/usr/share/doc/openjdk-8-doc/api/`. Also it shows the Oracle copyright at the bottom of the files:
+> Copyright © 1993, 2017, Oracle and/or its affiliates. All rights reserved. Use is subject to license terms. Also see the documentation redistribution policy.
+
+The [doc redistribution policy](http://www.oracle.com/technetwork/java/redist-137594.html) states:
+> **Documentation**  The Java SE API Specification is not redistributable. One exception is granted, where permission is given to publish 10 or fewer unaltered screen shots of our documentation, whose intended purpose is to show examples of our work. Unaltered screen shots include web pages, our Java applets, our demo applets and applications, and listings of their source code.
+> **API specifications** can be redistributed internally without special permission. They cannot be made available on the Internet.
+
+So to answer your question, @Thibaut, the docs are _not_ generated from the OpenJDK source. ",japborst,Thibaut
+593,2017-03-12 18:41:27,"@freayd Thanks a lot for looking into this. 
+
+I believe you're correct and the documentation is licensed under the terms/licenses described in the [copyright file](https://bazaar.launchpad.net/%7Eopenjdk/openjdk/openjdk8/view/head:/debian/copyright). I've looked at the source code of the OpenJDK package distributed on Debian and confirmed that the documentation is embedded in the source. This means the terms of GPLv2 license should apply to it, and any derivative work, including the API docs package, should also be licensed under GPLv2, regardless of Oracle's documentation redistribution policy (as long as the package was built from OpenJDK sources).
+
+Additionally, if Oracle's documentation redistribution policy did apply to those packages, then Debian/Ubuntu/etc. would be violating it, as they are in fact redistributing the docs on their websites.
+
+So I think we're good to redistribute the OpenJDK docs (downloaded from the Debian or Ubuntu repository) on DevDocs. I'll try to tackle this in the coming weeks, using [@japborst's PR](https://github.com/Thibaut/devdocs/pull/560) as a starting point.
+ ",Thibaut,freayd
+593,2017-03-12 18:41:27,"@freayd Thanks a lot for looking into this. 
+
+I believe you're correct and the documentation is licensed under the terms/licenses described in the [copyright file](https://bazaar.launchpad.net/%7Eopenjdk/openjdk/openjdk8/view/head:/debian/copyright). I've looked at the source code of the OpenJDK package distributed on Debian and confirmed that the documentation is embedded in the source. This means the terms of GPLv2 license should apply to it, and any derivative work, including the API docs package, should also be licensed under GPLv2, regardless of Oracle's documentation redistribution policy (as long as the package was built from OpenJDK sources).
+
+Additionally, if Oracle's documentation redistribution policy did apply to those packages, then Debian/Ubuntu/etc. would be violating it, as they are in fact redistributing the docs on their websites.
+
+So I think we're good to redistribute the OpenJDK docs (downloaded from the Debian or Ubuntu repository) on DevDocs. I'll try to tackle this in the coming weeks, using [@japborst's PR](https://github.com/Thibaut/devdocs/pull/560) as a starting point.
+ ",Thibaut,japborst
+593,2017-03-13 06:57:42,"Great news and thanks for helping.
+
+I was going to start writing the necessary code, just waiting to be sure about the license compatibility. If you don't mind @Thibaut I can work on it in the next few days and send a new PR based on the previous one from japborst.",freayd,Thibaut
+593,2017-03-13 11:23:45,@freayd 👍 ,Thibaut,freayd
+592,2017-03-04 14:55:16,"@Thibaut Thank you for responding.
+I found the resizer default style is `display: none`, and I tried to delete the style, the sidebar can be resized finally.
+![devdocs-bug-3](https://cloud.githubusercontent.com/assets/17352828/23579688/54c6d296-012d-11e7-99ae-4365ef5bb37a.png)
+",beiweiqiang,Thibaut
+587,2017-03-02 12:44:43,"@blittle that's because you've checked ""Disable cache"". Uncheck that, reload once with connectivity, and it should work.",Thibaut,blittle
+587,2017-03-04 14:40:44,"@blittle did the issue ever occur with the dev tools not opened?
+
+@amirc could you confirm if your issue was also caused by having the dev tools opened with ""Disable cache"" turned on in the Network tab?",Thibaut,amirc
+587,2017-03-04 14:40:44,"@blittle did the issue ever occur with the dev tools not opened?
+
+@amirc could you confirm if your issue was also caused by having the dev tools opened with ""Disable cache"" turned on in the Network tab?",Thibaut,blittle
+587,2017-03-04 19:16:43,"@Thibaut I did app.reset(), and things solved out. now everything is working. Thanks.",amirc,Thibaut
+584,2017-03-06 00:11:33,@edouard-lopez @xgears could you reload/update DevDocs and post a screenshot of the offline page please? The error page should now say what actual error occurred when trying to open the database.,Thibaut,edouard-lopez
+584,2017-03-06 00:11:33,@edouard-lopez @xgears could you reload/update DevDocs and post a screenshot of the offline page please? The error page should now say what actual error occurred when trying to open the database.,Thibaut,xgears
+584,2017-03-10 04:57:12,"@Thibaut 
+![screen shot 2017-03-09 at 23 53 50-fullpage](https://cloud.githubusercontent.com/assets/17086794/23782636/d2ad8a02-0523-11e7-888a-54a77a6a9723.png)
+
+Console errors:
+IDB error DOMError { name: ""UnknownError"", message: ""The operation failed for reasons un…"" }
+
+IDBOpenDBRequest { onblocked: null, onupgradeneeded: null, source: null, transaction: null, readyState: ""pending"", onsuccess: null, onerror: null }
+
+I can also see enabled entries in ""Local Storage"" but nothing under ""Indexed DB""",xgears,Thibaut
+584,2017-03-12 21:45:52,@xgears Thanks for the info. Do you have multiple versions of Firefox installed on your system?,Thibaut,xgears
+584,2017-03-13 00:54:59,"@Thibaut Not until recently; I've been using Firefox Developer Edition few weeks now which seems to work fine, the issue however still persist on the default Firefox.
+Been using devdocs from somewhere around FF30+, the issue started, if i remember correctly between FF48-FF49",xgears,Thibaut
+583,2017-02-17 00:25:23,"Hey, @malozaibi 
+
+First of all: [Contributing to DevDocs: Requesting New Features](https://github.com/Thibaut/devdocs/blob/master/CONTRIBUTING.md#requesting-new-featuresl)
+
+As it states, search first, someone else might have already requested this same thing.
+
+Also, if you actually acted on @Kaijiro 's comment, you would have checked out the [Trello Board](https://trello.com/b/6BmTulfx/devdocs-documentation), searched for your request, realized it's been voted up about ~287 times, noticed you're not the only one who want's this mariaDB devdoc, and finally saved yourself time and other people's efforts in responding to a second comment. 
+
+This whole feature request you opened was unproductive and distracting.
+
+Sorry for sounding harsh, but I hope a lesson was learned.
+
+Edit: Labelled a link",jadius5,Kaijiro
+583,2017-02-17 00:25:23,"Hey, @malozaibi 
+
+First of all: [Contributing to DevDocs: Requesting New Features](https://github.com/Thibaut/devdocs/blob/master/CONTRIBUTING.md#requesting-new-featuresl)
+
+As it states, search first, someone else might have already requested this same thing.
+
+Also, if you actually acted on @Kaijiro 's comment, you would have checked out the [Trello Board](https://trello.com/b/6BmTulfx/devdocs-documentation), searched for your request, realized it's been voted up about ~287 times, noticed you're not the only one who want's this mariaDB devdoc, and finally saved yourself time and other people's efforts in responding to a second comment. 
+
+This whole feature request you opened was unproductive and distracting.
+
+Sorry for sounding harsh, but I hope a lesson was learned.
+
+Edit: Labelled a link",jadius5,malozaibi
+583,2017-02-19 08:03:45,"Hello, @jadius5 
+
+Thank you for the statement, I have leaned my lesson and weren't harsh. You wanted to help me of course :)
+
+For the trello link, I couldn't open I immediately because trello needs VPN in my country. I checked it later and saw the MariaDB votes. Sorry for the distraction and inconvenience :)
+
+Thank you @Thibaut For the PostgreSQL advise :)
+",malozaibi,Thibaut
+583,2017-02-19 08:03:45,"Hello, @jadius5 
+
+Thank you for the statement, I have leaned my lesson and weren't harsh. You wanted to help me of course :)
+
+For the trello link, I couldn't open I immediately because trello needs VPN in my country. I checked it later and saw the MariaDB votes. Sorry for the distraction and inconvenience :)
+
+Thank you @Thibaut For the PostgreSQL advise :)
+",malozaibi,jadius5
+570,2017-02-05 21:45:36,@kaos ping,Thibaut,kaos
+570,2017-02-06 09:07:30,"Thanks for the ping @Thibaut . This fell between my mental cracks.
+
+My ruby is a bit.. unexperienced. Feedback appreciated if I could've done it better in any way.",kaos,Thibaut
+570,2017-02-22 00:34:11,"I'm on vacation for another 10 days or so.. please feel free to make your
+suggested modifications.
+tis 21 feb. 2017 kl. 12:40 skrev Thibaut Courouble <notifications@github.com
+>:
+
+> *@Thibaut* commented on this pull request.
+>
+> Thanks for updating, and sorry for the delay. I'll merge this this
+> week-end.
+> ------------------------------
+>
+> In lib/docs/core/doc.rb
+> <https://github.com/Thibaut/devdocs/pull/570#discussion_r102207215>:
+>
+> > @@ -48,7 +48,10 @@ def name
+>        end
+>
+>        def slug
+> -        slug = @slug || name.try(:downcase)
+> +        slug = @slug || (
+> +          raise ""Slug must be set explicitly when name (#{name}) consists of anything else than [\\w\\.%]"" if /[^\w\.%]/ =~ name
+> +          name.try(:downcase)
+> +        )
+>
+> I think we can make this a bit simpler, like this:
+>
+> def slug
+>   slug = @slug || default_slug
+>   version? ? ""#{slug}~#{version_slug}"" : slugend
+>
+> then on L120 (after the private)
+>
+> def default_slug
+>   if name =~ /[^A-Za-z0-9_]/
+>     raise ""slug must be set explicitly when name (#{name}) contains non-alphanumeric characters""
+>   end
+>   name.downcaseend
+>
+> —
+> You are receiving this because you were mentioned.
+> Reply to this email directly, view it on GitHub
+> <https://github.com/Thibaut/devdocs/pull/570#pullrequestreview-22955475>,
+> or mute the thread
+> <https://github.com/notifications/unsubscribe-auth/AAEdBfPMi6G5lUVQbJuNe93rZ8hIhyBgks5reuiRgaJpZM4Lmzqi>
+> .
+>
+",kaos,Thibaut
+570,2017-02-22 00:39:11,"Hi, I'm on vacation for another 10 days or so, please feel free to make
+your suggested modifications.
+
+tis 21 feb. 2017 kl. 12:40 skrev Thibaut Courouble <notifications@github.com
+>:
+
+> *@Thibaut* commented on this pull request.
+>
+> Thanks for updating, and sorry for the delay. I'll merge this this
+> week-end.
+> ------------------------------
+>
+> In lib/docs/core/doc.rb
+> <https://github.com/Thibaut/devdocs/pull/570#discussion_r102207215>:
+>
+> > @@ -48,7 +48,10 @@ def name
+>        end
+>
+>        def slug
+> -        slug = @slug || name.try(:downcase)
+> +        slug = @slug || (
+> +          raise ""Slug must be set explicitly when name (#{name}) consists of anything else than [\\w\\.%]"" if /[^\w\.%]/ =~ name
+> +          name.try(:downcase)
+> +        )
+>
+> I think we can make this a bit simpler, like this:
+>
+> def slug
+>   slug = @slug || default_slug
+>   version? ? ""#{slug}~#{version_slug}"" : slugend
+>
+> then on L120 (after the private)
+>
+> def default_slug
+>   if name =~ /[^A-Za-z0-9_]/
+>     raise ""slug must be set explicitly when name (#{name}) contains non-alphanumeric characters""
+>   end
+>   name.downcaseend
+>
+> —
+> You are receiving this because you were mentioned.
+> Reply to this email directly, view it on GitHub
+> <https://github.com/Thibaut/devdocs/pull/570#pullrequestreview-22955475>,
+> or mute the thread
+> <https://github.com/notifications/unsubscribe-auth/AAEdBfPMi6G5lUVQbJuNe93rZ8hIhyBgks5reuiRgaJpZM4Lmzqi>
+> .
+>
+",kaos,Thibaut
+560,2017-02-22 13:21:11,"@zhongqf either they have an agreement with Oracle to redistribute their docs, or they're violating Oracle's copyright. ",Thibaut,zhongqf
+560,2017-02-23 05:14:59,"@japborst I tried your fork to enable java support. but It can not download the java document with this error:
+`(89/194) Java FAILED (OpenURI::HTTPError: 404 Not Found)`
+
+It seems that it try to download ""http://dl.devdocs.io/java.tar.gz"" file which obviously not exist.",zhongqf,japborst
+560,2017-02-25 13:13:12,"@zhongqf sorry for a later reply, as I couldn't look into it earlier. Not sure if you still have the issue, as I see some additional commits on your fork. I just updated mine to the latest of upstream, so you can rebase yours to update too. I don't have any errors, but I see that you include loads more pages being scraped in your case.
+
+A simple `/*.tar.gz/` addition in your `options[:skip_patterns]` should suffice. @Thibaut shouldn't such files be filtered in any case when scraping?",japborst,Thibaut
+560,2017-02-25 13:13:12,"@zhongqf sorry for a later reply, as I couldn't look into it earlier. Not sure if you still have the issue, as I see some additional commits on your fork. I just updated mine to the latest of upstream, so you can rebase yours to update too. I don't have any errors, but I see that you include loads more pages being scraped in your case.
+
+A simple `/*.tar.gz/` addition in your `options[:skip_patterns]` should suffice. @Thibaut shouldn't such files be filtered in any case when scraping?",japborst,zhongqf
+560,2017-02-25 13:40:15,@japborst the problem was that @zhongqf ran `thor docs:download` instead of `thor docs:generate`. The former downloads pre-generated docs from DevDocs's server.,Thibaut,zhongqf
+560,2017-02-25 13:40:15,@japborst the problem was that @zhongqf ran `thor docs:download` instead of `thor docs:generate`. The former downloads pre-generated docs from DevDocs's server.,Thibaut,japborst
+539,2016-12-05 06:21:22,"Thanks @Thibaut for the notes, I will use them for the next scraper. Next documentation will be [Composer](https://github.com/composer/composer) with more than 3k start.",edno,Thibaut
+526,2016-11-07 13:42:40,"Hi - AppCache is still fully functional in Chrome. The deprecation notice is just that, a notice, and as far as I know the Chrome team has no plans to remove AppCache in the near future (they started collecting data early this year and there has been no activity on [the bug](https://bugs.chromium.org/p/chromium/issues/detail?id=588931) since).
+
+As @JesseTG said you can use DevDocs over HTTPS. The reason HTTPS isn't the default is because there are a number of docs that still have insecure images, which trigger mixed content warnings (or would fail to load if HTTPS was enforced).
+",Thibaut,JesseTG
+518,2016-10-28 02:21:29,"@FelixRilling `IndexDB`, amazing! But when I clear storage, It seems my data will be clear. I have to enabled each library again. So I want to sync my data in cloud.
+",mrdulin,FelixRilling
+513,2016-10-23 21:16:04,"@Thibaut Hi!
+I will squash the commits ASAP.
+
+What do you mean by you end up finish the scrapper? did you wrote scrapper for immutable?
+",yosiat,Thibaut
+513,2016-10-23 21:20:43,"@Thibaut oh! ok!
+
+Squashed the commits! If you have any questions/changes to be made, I am available 👍 
+",yosiat,Thibaut
+513,2016-11-05 09:48:08,"@Thibaut  any status? have you looked at code already? is everything ok?
+",yosiat,Thibaut
+510,2016-10-14 21:08:20,"@danse you do know that the URL to the original docs is at the bottom, right? Not very sure what the difference is compared to your use case
+",japborst,danse
+508,2016-12-21 15:35:57,I'm having the same issue. May I know how did you fix it? @krampstudio ,sunng87,krampstudio
+508,2016-12-21 15:43:26,@sunng87 I've created a clean profile,krampstudio,sunng87
+505,2016-10-16 17:35:25,"@Thibaut Why not just the `man` pages?
+",JesseTG,Thibaut
+505,2016-10-16 21:41:49,"@JesseTG if only it was that simple :P There are 100,000s of man pages. Adding all of them to DevDocs would make the search unusable. There are also different man pages for different OSs. But the biggest hurdle is that DevDocs currently only supports scraping HTML, and I'm not aware of any man pages documentation that can be downloaded in HTML format and freely redistributed.
+",Thibaut,JesseTG
+505,2016-10-23 21:45:14,"@Thibaut So get choosy.  Maybe stick with [whatever GNU provides](https://www.gnu.org/software/software.html); I get the feeling that requests for ""command line docs"" are really requests for ""GNU software"" (since a large part of the Unix ecosystem is shaped by them).  I think these packages alone could satisfy a lot of people:
+- [`bash`](https://www.gnu.org/software/bash/)
+- [`coreutils`](https://www.gnu.org/software/coreutils/coreutils.html) (this is a big one)
+- [`gettext`](https://www.gnu.org/software/gettext/)
+- [`gnupg`](https://www.gnu.org/software/gnupg/)
+- [`autoconf`](https://www.gnu.org/software/autoconf/autoconf.html) (and the rest of the `autotools` suite)
+- [`bc`](https://www.gnu.org/software/bc/)
+- [`binutils`](https://www.gnu.org/software/binutils/)
+- [`bison`](https://www.gnu.org/software/bison/)
+- [`findutils`](https://www.gnu.org/software/findutils/)
+- [`emacs`](https://www.gnu.org/software/emacs/)
+- [`diffutils`](https://www.gnu.org/software/diffutils/)
+- [`gawk`](https://www.gnu.org/software/gawk/), the most popular flavor of `awk`
+- [`grep`](https://www.gnu.org/software/grep/)
+- [`less`](https://www.gnu.org/software/less/)
+- [`inetutils`](https://www.gnu.org/software/inetutils/)
+- [`make`](https://www.gnu.org/software/make/), another big one
+- [`ncurses`](https://www.gnu.org/software/ncurses/)
+- [`nano`](https://www.nano-editor.org/)
+- [`sed`](https://www.gnu.org/software/sed/), another big one
+
+Not a trivial undertaking, but far short of 100,000 `man` pages; this covers the most common command-line ground anyway.  I believe they even all use the same documentation and HTML generation tools, so you'd only really need to write one scraper.
+",JesseTG,Thibaut
+505,2016-10-30 22:22:36,"@JesseTG that's more work than I can handle right now. Contributions welcome.
+",Thibaut,JesseTG
+495,2016-10-05 06:48:30,"Yes! Thanks @Thibaut 
+",MartinMuzatko,Thibaut
+489,2016-09-19 05:28:20,"Thanks for the quick merge @Thibaut :)
+",japborst,Thibaut
+482,2016-09-11 16:44:44,"@Thibaut ,
+I had gotten approval from the developers of CraftCMS before working on this.
+Please see the correspondence in https://support.pixelandtonic.com/index.php?pg=request.check&id=29529ulzwgg
+
+I screenshot the approval from Brad / CraftCMS below.
+![selection_014](https://cloud.githubusercontent.com/assets/2252313/18418896/92d1bbda-7881-11e6-89ba-427a76f56d87.png)
+
+I also found that you can do a merge squash commit to master, if you don't mind.
+It is found https://help.github.com/articles/about-pull-request-merges/
+
+Hope this work out for all of us. :smile: 
+",compleatguru,Thibaut
+477,2016-10-02 22:29:04,"@beyang ping
+",Thibaut,beyang
+477,2016-10-04 04:48:20,"Hey @Thibaut, really sorry about the delay. We made some changes on the backend that changed some URL structures. We should have new versions up in the next couple of days. I'll close the PR until then and update it when it's ready.
+",beyang,Thibaut
+473,2016-10-02 22:23:24,"@th-we no worries. `$.isTouchScreen()` could probably be improved to detect touch devices that also have a keyboard.
+",Thibaut,th-we
+414,2016-05-27 11:57:56,"Hi @SalathielGenese 
+
+@Thibaut already took a look to the MongoDB documentation, but its license doesn't allow to integrate it inside DevDocs.
+
+You can also look at [this Trello board](https://trello.com/b/6BmTulfx/devdocs-documentation) where there is every langage done, planned to do and incompatible.
+",Kaijiro,SalathielGenese
+410,2016-05-23 00:01:43,"Hey @sigmonsays 
+
+I don't know if RFC's really fits DevDocs philosophy.
+
+Actually, I think there is no scrapper for RFCs and I think @Thibaut will not see any problem if you make your own fork of DevDocs to create a srapper for RFCs.
+
+The ""problem"" I can see, is that there is REALLY a lot of RFCs and you'll have to find a way to sort them (As you can see, every part of the application is splitted into development langage / application).
+
+Furthermore RFCs are not so easy / pleasant to read. 
+
+But I like the idea and I wish you good luck if you want to try :)
+",Kaijiro,sigmonsays
+403,2016-05-18 12:12:00,"@eugenr2 your issue was caused by a change I introduced a couple weeks ago and fixed by https://github.com/Thibaut/devdocs/commit/719460f3b4610351fb5a64af489e08f3d3d4320b (just deployed). Sorry about that, and thanks for the bug report.
+
+@richardtomkins your issue is different and unfortunately I'm unable to replicate. Could you open the dev tools and take a screenshot of this view please:
+
+![devdocs api documentation 2016-05-18 08-10-15](https://cloud.githubusercontent.com/assets/17579/15357970/08ddaaea-1cd0-11e6-8c97-99950f5d3560.png)
+",Thibaut,richardtomkins
+403,2016-05-18 12:12:00,"@eugenr2 your issue was caused by a change I introduced a couple weeks ago and fixed by https://github.com/Thibaut/devdocs/commit/719460f3b4610351fb5a64af489e08f3d3d4320b (just deployed). Sorry about that, and thanks for the bug report.
+
+@richardtomkins your issue is different and unfortunately I'm unable to replicate. Could you open the dev tools and take a screenshot of this view please:
+
+![devdocs api documentation 2016-05-18 08-10-15](https://cloud.githubusercontent.com/assets/17579/15357970/08ddaaea-1cd0-11e6-8c97-99950f5d3560.png)
+",Thibaut,eugenr2
+403,2016-05-18 15:22:08,"OK, here is the information.
+
+I will restate, 64 bit Firefox, I clear all the history.
+I open DevDocs and add the various documents I use.
+I click on Offline and get the error attributed to Chrome.
+I add Apache.
+I remove Apache.
+I access Offline again and it works.
+
+On 18/05/2016 8:12 AM, Thibaut Courouble wrote:
+
+> @eugenr2 https://github.com/eugenr2 your issue was caused by a 
+> change I introduced a couple weeks ago and fixed by 719460f 
+> https://github.com/Thibaut/devdocs/commit/719460f3b4610351fb5a64af489e08f3d3d4320b 
+> (just deployed). Sorry about that, and thanks for the bug report.
+> 
+> @richardtomkins https://github.com/richardtomkins your issue is 
+> different and unfortunately I'm unable to replicate. Could you open 
+> the dev tools and take a screenshot of this view please:
+> 
+> devdocs api documentation 2016-05-18 08-10-15 
+> https://cloud.githubusercontent.com/assets/17579/15357970/08ddaaea-1cd0-11e6-8c97-99950f5d3560.png
+> 
+> —
+> You are receiving this because you were mentioned.
+> Reply to this email directly or view it on GitHub 
+> https://github.com/Thibaut/devdocs/issues/403#issuecomment-220007653
+",richardtomkins,richardtomkins
+403,2016-05-18 15:22:08,"OK, here is the information.
+
+I will restate, 64 bit Firefox, I clear all the history.
+I open DevDocs and add the various documents I use.
+I click on Offline and get the error attributed to Chrome.
+I add Apache.
+I remove Apache.
+I access Offline again and it works.
+
+On 18/05/2016 8:12 AM, Thibaut Courouble wrote:
+
+> @eugenr2 https://github.com/eugenr2 your issue was caused by a 
+> change I introduced a couple weeks ago and fixed by 719460f 
+> https://github.com/Thibaut/devdocs/commit/719460f3b4610351fb5a64af489e08f3d3d4320b 
+> (just deployed). Sorry about that, and thanks for the bug report.
+> 
+> @richardtomkins https://github.com/richardtomkins your issue is 
+> different and unfortunately I'm unable to replicate. Could you open 
+> the dev tools and take a screenshot of this view please:
+> 
+> devdocs api documentation 2016-05-18 08-10-15 
+> https://cloud.githubusercontent.com/assets/17579/15357970/08ddaaea-1cd0-11e6-8c97-99950f5d3560.png
+> 
+> —
+> You are receiving this because you were mentioned.
+> Reply to this email directly or view it on GitHub 
+> https://github.com/Thibaut/devdocs/issues/403#issuecomment-220007653
+",richardtomkins,eugenr2
+403,2016-08-13 16:33:24,"@ZashIn Thanks a lot for the screenshots. It seems you're missing the`schema` cookie. Without it, the app will try to open the IDB database with a version number that doesn't match the one in IDB. 
+
+Could you run `Cookies.get('schema')` in the console. If you get nothing, try running `Cookies.set('schema', '10', path: '/', expires: 1e8)`, and see if you get an error.
+",Thibaut,ZashIn
+403,2016-08-14 13:57:38,"@Thibaut Thank you, the cookie was the problem, indeed:
+`Cookies.get('schema')` returned nothing = no cookie.
+With `Cookies.set('schema', '10', {path: '/', expires: 1e8})` (you missed the braces for the third argument) the offline feature works again.
+So this problem probably comes down to my cookie settings: I forgot the exception from the session cookies ;)
+",ZashIn,Thibaut
+403,2016-08-14 16:50:53,"@ZashIn it's still weird that the app managed to save other cookies, but not the `schema` one. They all use the same options. What do you mean by:
+
+>  I forgot the exception from the session cookies
+",Thibaut,ZashIn
+395,2016-11-07 13:47:27,"@igauravsehrawat I've been considering switching to Patreon. They're also recurring-only (so they need to store your credit card info somewhere), but using [Stripe](https://patreon.zendesk.com/hc/en-us/articles/203913779-Do-you-store-my-credit-card-information-). Would that work for you?
+",Thibaut,igauravsehrawat
+388,2016-05-09 08:11:35,"Maybe you could give us the app name with the editor name so we could mass report it.
+(btw @Thibaut I think you can remove the ""bug"" label :p )
+",Kaijiro,Thibaut
+388,2016-05-09 11:36:07,"This is the app: https://play.google.com/store/apps/details?id=com.funtitudeapps.devdocapp&hl=en 
+
+@Kaijiro it's still technically a bug, just one I'm probably not going to try to fix. I might add an in-app warning for users of that app. Then I'll close the issue.
+",Thibaut,Kaijiro
+388,2016-05-26 00:49:43,"@Thibaut yes, the message does appear. (Android 6.0.1, Nexus 6P)
+
+![screenshot_20160526-104653](https://cloud.githubusercontent.com/assets/6226952/15560503/7ebe6564-232f-11e6-85e5-0b45e0dca001.png)
+",robkb,Thibaut
+363,2016-03-03 12:20:58,"@PombaM I think the scope for devdocs is to provide information about code. What can be better for understanding code than quickly trying to code?
+I understand that it isn't simple to implement, and there are troubles with versioning, dependencies, repl integration, and probably more. But I think it can be long-term improvement that will make devdocs closer to the single and complete source of data about popular libraries.
+",iofjuupasli,PombaM
+363,2016-03-04 03:21:29,"@iofjuupasli  jsfiddle.net, jsbin.com, babeljs.io/repl might be handy! :neutral_face: 
+",PombaM,iofjuupasli
+363,2016-03-04 10:01:45,"@PombaM docs.angularjs.org facebook.github.io/react/docs lodash.com/docs ramdajs.com/docs
+",iofjuupasli,PombaM
+356,2016-03-07 23:47:41,"@JesseTG not sure what you mean by ""willing"". I'm perfectly willing to add Java. The main reason it hasn't happened yet is that no one has open a PR for it, and getting it done would take hours (I do all this on my spare time).
+",Thibaut,JesseTG
+353,2016-02-26 15:33:49,"@Thibaut Thanks for the feedback!
+
+> I'd prefer we wait until 1.0 is released to keep track of multiple versions, so just change it to 0.7.0.
+
+Okay. :+1: 
+
+> Would you mind also including the C++ docs? (change the base URL to https://www.tensorflow.org/versions/master/api_docs/)
+
+I would really prefer to keep them separate so C++ users don't get results for the python api and vice versa. That's why I included the `-py` identifier for the language in the release string, so the C++ api documentation can be e.g. `0.7.0-cc` or `0.7.0-cpp`. That way users will be able to pick exactly what they need, but the different languages would still be grouped together under the general _TensorFlow_ item in the list of available apis.
+
+I haven't included the C++ api yet because I don't use it myself, so it wouldn't get a lot of testing from my own side. But it should not be hard to try out.
+
+What do you think about doing something like the this?:
+
+
+",Styrke,Thibaut
+348,2016-02-02 17:45:54,"@Thibaut  you are suggesting to do something like this:
+- InfluxData
+  - InfluxDB
+  - Kapacitor
+
+If this is what you want, I don't agree with this because those are different products, you might use only InfluxDB + Telegraf and want to disable Kapacitor.
+",yosiat,Thibaut
+348,2016-02-10 19:29:05,"@Thibaut  do you wanted something like this: https://github.com/Thibaut/devdocs/commit/65f940534ebac4dee0575e0f28a83429e0e4ca9e
+
+If so, I will fix the scrapper to handle all documentations (chrono, kapacitor, telegraf and influxdb).
+
+But it will be nice to have some ""type hierarchy"" like this:
+- InfluxData 
+  - InfluxDB
+    - Getting Started
+    - Installing
+  - Kapacitor
+    - ...
+      If this is possible, I will be happy to research that out and submit pull request.
+",yosiat,Thibaut
+348,2016-02-24 19:02:06,"@Thibaut  what is the status of this pull request? are you waiting for me to implement something? 
+",yosiat,Thibaut
+348,2016-02-25 13:15:54,"@yosiat The process for getting this out isn't as simple as clicking the merge button. I'm working my way through https://github.com/Thibaut/devdocs/pulls and will look into yours as soon as I can. In the meantime please squash your commits.
+",Thibaut,yosiat
+341,2016-06-19 22:13:32,"@ccorcoveanu helped implement this feature. You can try it out by double-clicking the border of the sidebar. 
+
+@skibz @stephanIOA any tweaks you'd like us to make?
+",Thibaut,skibz
+341,2016-06-19 22:13:32,"@ccorcoveanu helped implement this feature. You can try it out by double-clicking the border of the sidebar. 
+
+@skibz @stephanIOA any tweaks you'd like us to make?
+",Thibaut,stephanIOA
+341,2016-06-20 08:10:23,"@ccorcoveanu @Thibaut thank you for adding this feature! it's purrrfect 🐱 
+",skibz,Thibaut
+331,2016-10-02 23:32:14,"IMO MathJax is too big/slow for DevDocs. @japborst added a CSS fallback in https://github.com/Thibaut/devdocs/pull/496 which I think is enough to close this issue.
+",Thibaut,japborst
+330,2016-02-06 13:42:43,"No problem @Thibaut, does this need some kind of change in the code? If so, I could create a PR though I'm not sure where the code is located that handles this.
+",Siilwyn,Thibaut
+330,2016-02-08 08:06:58,"With this update the `type` of a CSS document is 'gone'. In the sense that you can't see if something is a property, value, selector or function. The current `type` looks to have categories rather than what kind of thing it is. Would be nice to be able to browse them by type too, or atleast include the `type` as meta data.
+
+Don't get me wrong @Thibaut I use DevDocs almost every day and I really appreciate your work. (Don't want to sound too negative.)
+",Siilwyn,Thibaut
+330,2016-02-08 13:07:14,"@Siilwyn This was suggested in #302. If you can think of a better way to organize the CSS docs, please reply there. The app/UI doesn't support multiple types per document, so we can't have it both ways. This could change in the future but is not on my short-term roadmap.
+
+IMO the new categories are a bit more useful, since it's usually pretty easy to infer whether it's a property, value, function, etc. from the name (functions have `()`, data types have `<>`, pseudo elements have `:`, etc.).
+
+> I use DevDocs almost every day and I really appreciate your work.
+
+:+1: :heart: 
+",Thibaut,Siilwyn
+328,2016-06-27 11:13:14,"@sbrl It's out. Just reload the page :)
+",Thibaut,sbrl
+328,2016-06-28 05:33:38,"Yep, that works.
+Thanks!
+On Mon, 2016-06-27 at 04:13 -0700, Thibaut Courouble wrote:
+
+> @sbrl It's out. Just reload the page :)
+> —
+> You are receiving this because you were mentioned.
+> Reply to this email directly, view it on GitHub, or mute the thread.
+",sbrl,sbrl
+328,2016-10-30 22:23:42,"@jablan I have plans to add a settings panel in the next couple months. Until then there's no good way to add user settings.
+",Thibaut,jablan
+325,2016-01-11 15:41:03,"@Thibaut You're correct. I must've gotten my samples mixed up.
+
+I'll open a fix in angular. Thank you.
+",thisgeek,Thibaut
+322,2016-01-24 21:55:27,"@bzark Unfortunately IndexedDB doesn't work on iOS. It's turned off in WebViews (what Chrome uses) and broken in Safari. 
+",Thibaut,bzark
+322,2016-03-26 15:07:13,"@llagerlof could you try running `app.db.reset()` in the console & reload the app.
+",Thibaut,llagerlof
+322,2016-03-26 18:08:34,"@Thibaut Thanks. I will try later. I am using Firefox now. This problem only happens in Chrome.
+",llagerlof,Thibaut
+322,2016-07-06 07:34:36,"hi, I have  chrome running on OS X & faced this issue even though i don't use safari.
+
+But, confirming what @brutalcrozt  said above. 
+A reset() in console & reloading the page gets the offline version working. 
+",DhavalW,brutalcrozt
+321,2017-02-24 06:00:40,@khrome83 there is this now https://github.com/benhjt/vscode-devdocs,mikaoelitiana,khrome83
+318,2015-12-29 08:41:26,"@superstarrajini ping
+",Thibaut,superstarrajini
+316,2015-12-21 09:01:14,"As @binaryannie said (thanks), you can do the same in DevDocs by typing a documentation name (or an abbreviation) + <kbd>Tab</kbd>.
+For example: <kbd>ror</kbd> + <kbd>Tab</kbd>.
+",Thibaut,binaryannie
+315,2015-12-21 08:59:10,"Thanks @calebkleveter! 
+
+AFAICT all of this is proprietary: 
+https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/
+
+> Copyright © 2015 Apple Inc. All rights reserved. 
+
+And cannot be redistributed:
+
+> Terms of Use: http://www.apple.com/legal/internet-services/terms/site.html
+
+This may be open source: http://swiftdoc.org/ + the ""Swift Programming Language"", but it's only available in EPUB format at the moment: (doesn't work with DevDocs)
+https://swift.org/documentation/#the-swift-programming-language
+
+Please correct if I'm wrong or if any of this is outdated. Happy to add Swift once the complete docs are open source and available in HTML format.
+",Thibaut,calebkleveter
+309,2016-01-09 00:29:26,"Hi @scherepn thanks for adding this documentation.  I've checked out this PR locally and get this error when trying to install...
+
+
+
+did something move?
+",run-time,scherepn
+309,2016-01-09 15:13:30,"@run-time the doc will only be available via `thor docs:download` once this PR is merged and I upload the files to DevDocs's server. In the meantime you can try out the scraper using `thor docs:generate`, but that'll require downloading the source doc locally and changing the `dir` [here](https://github.com/scherepn/devdocs/blob/1d154dffabf1e3c697d45d31164ec4a8b8b070fd/lib/docs/scrapers/cakephp.rb#L6).
+",Thibaut,run-time
+306,2015-12-07 13:20:20,"@ericmj Thanks! DevDocs's scrapers are pretty reliable and easy to write at this point (been at it for >2 years), especially for docs that have good markup and structured URLs. The output format is a combination of stripped down HTML files (with all the links changed) and metadata (extracted from the markup). It'd actually be more work to write a custom parser. Supporting multiple versions of ex_doc isn't a problem; only small changes to the scrapers should be required to keep things working.
+
+I'll look into using the zipped docs in the next update, but usually unless the doc is very big it's easier to scrape the website (nothing to download; just run the command).
+
+Closing this as it's not really an issue.
+",Thibaut,ericmj
+306,2015-12-07 14:38:53,"@ericmj thanks :+1: 
+",Thibaut,ericmj
+305,2016-01-23 18:52:33,"@Thibaut is there a particular reason there is a meta tag which disables scaling? Didn't want to just remove it as I presumed it was put there to solve a particular problem.
+
+`<meta name=""viewport"" content=""width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,shrink-to-fit=no"">`
+",ShaneQful,Thibaut
+296,2016-07-17 23:19:16,"@Thibaut @povrazor would you mind if I try to tackle this? 😄 
+",jaikamat,povrazor
+296,2016-07-19 23:05:38,"@jaikamat not at all 👍 
+",Thibaut,jaikamat
+296,2016-07-20 15:55:04,"@Thibaut Thanks a ton! Will work on it once the workweek is over and submit a PR
+",jaikamat,Thibaut
+295,2016-02-25 09:34:00,"@Thibaut this sounds like a great feature.  
+
+We've been playing around with devdocs at my workplace as a way of aggregating all of our documentation across all our different git repositories.  It feels like there could be some kind of command line tool that builds out markdown into HTML that could then be consumed by devdocs?
+",bapti,Thibaut
+295,2016-03-06 15:05:01,"@yaruson what would you be using it for? Formalizing DevDocs's format is actually a big endeavor (need to consider long-term & backward compatibility), so I'd need to consider the cost/benefit vs. other features before working on it.
+",Thibaut,yaruson
+295,2016-03-07 09:22:53,"@Thibaut I'm thinking about generating class reference documentation from object metadata (sources), and it might be better to produce ready-to-use index/db.json.
+",yaruson,Thibaut
+286,2015-12-07 10:28:11,"@Thibaut thanks for the reminder! Yes, I am still interested in working on this. Will update this PR soon :)
+",awalgarg,Thibaut
+286,2015-12-09 11:32:47,"I fixed everything but 1... help needed :((
+
+> please make sure each entry has a type (in EntriesFilter). this will make browsing the docs via the sidebar easier.
+
+@Thibaut I am not sure how to achieve this. For example: http://bluebirdjs.com/docs/api/catch.html doesn't specify what section it belongs to. It is visible only on the http://bluebirdjs.com/docs/api-reference.html page. Is there a feasible way I can carry forward that information from the reference page? (As in, technically ofcourse I can create a new state object and stuff, but does the scraper class provide any thing for that?)
+",awalgarg,Thibaut
+282,2015-12-06 17:15:13,"@doertedev ping: https://github.com/Thibaut/devdocs/pull/282#issuecomment-157032285
+",Thibaut,doertedev
+282,2016-02-15 08:34:13,"@Thibaut / @doertedev  Can I volunteer to do the cleanup here so that this can get merged ?
+",RC1140,Thibaut
+282,2016-02-15 08:34:13,"@Thibaut / @doertedev  Can I volunteer to do the cleanup here so that this can get merged ?
+",RC1140,doertedev
+282,2016-02-15 21:39:52,"Done: http://devdocs.io/chef/
+0948b5882ed140968d2545db63941ea16c6bf4a8 1fa82430b0caadb787301f02a1e2e47f3e26377e 
+Thanks for the help @RC1140 
+",Thibaut,RC1140
+269,2015-10-11 21:42:43,"@cdvillard Your issue is different. Sounds related to https://github.com/Thibaut/devdocs/issues/264.
+",Thibaut,cdvillard
+265,2015-12-06 17:13:58,"This bug is quite insane. The same code runs [`onDrag`](https://github.com/Thibaut/devdocs/blob/ddf87bb0b8749fd5366ce850009880d85b7749d1/assets/javascripts/views/layout/resizer.coffee#L41) and [`onDragEnd`](https://github.com/Thibaut/devdocs/blob/ddf87bb0b8749fd5366ce850009880d85b7749d1/assets/javascripts/views/layout/resizer.coffee#L49). Both read the cursor position from `event.pageX` but somehow `onDragEnd` ends up writing a different value, when it should always be the same as the last `onDrag` value (which is what I get on all the browsers I've tested). I even added a check that the `dragend` value is within 5px of the last `drag` value a [couple weeks ago](https://github.com/Thibaut/devdocs/commit/c2a20ef5863081aca00003bde4d50deca1a139a8).
+
+@Pastafarianist could you check that there is ""lastDragValue"" in the script running DevDocs? (file like `/assets/application-[hash].js`) Maybe the cache didn't update or something.
+
+Is your browser window aligned with the top left corner of your screen? full screen?
+",Thibaut,Pastafarianist
+264,2015-09-15 15:59:12,"@zg somehow `sudo lsof -i :80` outputs nothing for me. I then did `ps aux | grep cisco` and got the following:
+
+
+
+Killing those processes isn't straightforward and hacking with the spotlight lead me to an uninstall script located in this path `/opt/cisco/anyconnect/bin/anyconnect_uninstall.sh`
+
+I executed it and got fixed the issue I reported [here](https://groups.google.com/d/topic/devdocs/4ZVgzXRNoGs/discussion). Thanks @Thibaut 
+
+p.s. Execute `/opt/cisco/anyconnect/bin/dart_uninstall.sh` to clean the remaining garbage. Then move to trash `/opt/cisco` all together.
+",n370,Thibaut
+264,2015-09-15 15:59:12,"@zg somehow `sudo lsof -i :80` outputs nothing for me. I then did `ps aux | grep cisco` and got the following:
+
+
+
+Killing those processes isn't straightforward and hacking with the spotlight lead me to an uninstall script located in this path `/opt/cisco/anyconnect/bin/anyconnect_uninstall.sh`
+
+I executed it and got fixed the issue I reported [here](https://groups.google.com/d/topic/devdocs/4ZVgzXRNoGs/discussion). Thanks @Thibaut 
+
+p.s. Execute `/opt/cisco/anyconnect/bin/dart_uninstall.sh` to clean the remaining garbage. Then move to trash `/opt/cisco` all together.
+",n370,zg
+264,2015-09-15 16:06:35,"Cisco AnyConnect is not a trojan, it's a product for connecting to a VPN.
+
+On Tuesday, September 15, 2015, Dylson Valente Neto <
+notifications@github.com> wrote:
+
+> @zg https://github.com/zg somehow sudo lsof -i :80 outputs nothing for
+> me. I then did ps aux | grep cisco and got the following:
+> 
+> dylson           1060   0.9  0.0  2441988    688 s000  S+   10:59AM   0:00.00 grep cisco
+> root              337   0.0  0.0   711408   6860   ??  S    10:24AM   0:00.90 /opt/cisco/anyconnect/bin/acwebsecagent -console
+> root               52   0.0  0.0   706672   7300   ??  Ss   10:24AM   0:00.97 /opt/cisco/anyconnect/bin/vpnagentd -execv_instance
+> 
+> Killing those processes isn't straightforward and hacking with the
+> spotlight lead me to an uninstall script located in this path
+> /opt/cisco/anyconnect/bin/anyconnect_uninstall.sh
+> 
+> I executed it and got fixed the issue I reported here
+> https://groups.google.com/d/topic/devdocs/4ZVgzXRNoGs/discussion.
+> Thanks @Thibaut https://github.com/Thibaut
+> 
+> —
+> Reply to this email directly or view it on GitHub
+> https://github.com/Thibaut/devdocs/issues/264#issuecomment-140442141.
+
+## 
+
+Sent from my mobile device
+",zg,Thibaut
+264,2015-09-15 16:06:35,"Cisco AnyConnect is not a trojan, it's a product for connecting to a VPN.
+
+On Tuesday, September 15, 2015, Dylson Valente Neto <
+notifications@github.com> wrote:
+
+> @zg https://github.com/zg somehow sudo lsof -i :80 outputs nothing for
+> me. I then did ps aux | grep cisco and got the following:
+> 
+> dylson           1060   0.9  0.0  2441988    688 s000  S+   10:59AM   0:00.00 grep cisco
+> root              337   0.0  0.0   711408   6860   ??  S    10:24AM   0:00.90 /opt/cisco/anyconnect/bin/acwebsecagent -console
+> root               52   0.0  0.0   706672   7300   ??  Ss   10:24AM   0:00.97 /opt/cisco/anyconnect/bin/vpnagentd -execv_instance
+> 
+> Killing those processes isn't straightforward and hacking with the
+> spotlight lead me to an uninstall script located in this path
+> /opt/cisco/anyconnect/bin/anyconnect_uninstall.sh
+> 
+> I executed it and got fixed the issue I reported here
+> https://groups.google.com/d/topic/devdocs/4ZVgzXRNoGs/discussion.
+> Thanks @Thibaut https://github.com/Thibaut
+> 
+> —
+> Reply to this email directly or view it on GitHub
+> https://github.com/Thibaut/devdocs/issues/264#issuecomment-140442141.
+
+## 
+
+Sent from my mobile device
+",zg,zg
+264,2015-09-15 16:56:32,"@zg I don't wan't this discussion to go too far but could you then explain me why it has to be such a persistent and obscure process that I can't stop easily with the standard tools available. And why it hooks to my browser tcp connections without giving me a clue about that. Forgive me my ignorance if that's what VPN connection solutions are supposed to do.
+",n370,zg
+264,2015-09-15 16:58:08,"That's what VPN software is supposed to do. :) It's supposed to sort of
+""mask"" your connection to the Internet so that you can browse without
+people knowing your real location.
+
+On Tuesday, September 15, 2015, Dylson Valente Neto <
+notifications@github.com> wrote:
+
+> @zg https://github.com/zg I don't wan't this discussion to go too far
+> but could you then explain me why it has to be such a persistent and
+> obscure process that I can't stop easily with the standard tools available.
+> And why it hooks to my browser tcp connections without giving me a clue
+> about that. Forgive me my ignorance if that's what VPN connection solutions
+> are supposed to do.
+> 
+> —
+> Reply to this email directly or view it on GitHub
+> https://github.com/Thibaut/devdocs/issues/264#issuecomment-140461977.
+
+## 
+
+Sent from my mobile device
+",zg,zg
+264,2015-09-15 17:19:13,"@zg  LOL it's weird that it does it for Firefox only. You should've seen my `lsof` output. Well, whatever. Issue solved for me. I can't complain too much because in the end I'm still working on a proprietary, closed source system. I'll get back to you when I start typing on a GNU/Linux box.
+",n370,zg
+264,2015-12-07 17:25:18,"Now that alleviates my angry @acca. Great addition to this thread.
+",n370,acca
+238,2015-08-04 17:52:37,"@busches
+IndexDB in mobile browser with https://devdocs.io/  page works fine. (Firefox for Android)
+
+But i installed ""native"" app from play store, and i would like to use offline mode.
+Native app wrote error IndexedDB not support in my browser.
+Can i do anything?
+",extdevelopment,busches
+238,2016-05-26 23:02:42,"@Thibaut, thanks for suggestion! I agree with on avoiding outdated frameworks, dropped specs, etc.
+
+I just tested on Android 4.0.4 noticed crashes https://github.com/Thibaut/devdocs/issues/411.
+",laukstein,Thibaut
+234,2017-01-02 22:23:56,"@JesseTG that would be quite complex and difficult to maintain. I agree fixing/improving this would be great, but if it comes at the cost of increased maintenance burden (I'm already maxed out) and dependencies between docs/scrapers, then I don't think it's a good trade-off.",Thibaut,JesseTG
+232,2016-01-23 05:41:02,"I have to agree with @Thibaut. Safari's market share isn't that interesting for Apple to push quick bug fixes while DevDocs, which I assume is a hobby project, has much more tighter priorities than Apple's slack !
+",bassu,Thibaut
+229,2015-07-15 11:08:39,"Hi @elegantcoder. Sorry for not replying sooner and thanks for your contribution! I plan to get this merged either this week-end or the next. 
+",Thibaut,elegantcoder
+224,2015-07-12 13:20:39,"@tsuna that's perfect, thanks!
+
+I'll try to get this out in the next week or two.
+",Thibaut,tsuna
+222,2015-07-25 21:44:35,"@ofalvai It's the opposite for me. Most of the time I want to quickly navigate the sidebar / search results. I then use `space / shift + space` to scroll.
+
+@niksrc I'll make `shift + up/down` scroll like `alt + up/down` tomorrow.
+",Thibaut,niksrc
+222,2015-07-25 21:44:35,"@ofalvai It's the opposite for me. Most of the time I want to quickly navigate the sidebar / search results. I then use `space / shift + space` to scroll.
+
+@niksrc I'll make `shift + up/down` scroll like `alt + up/down` tomorrow.
+",Thibaut,ofalvai
+220,2015-06-26 09:12:23,"No response :/
+
+@yosiat would you mind shooting them an email? You might get more luck than me.
+
+PS: I'm on vacation at the moment; will look at your other PRs within the next two weeks or so.
+",Thibaut,yosiat
+220,2015-07-11 15:20:11,"Hi @Thibaut ,
+Have they contacted you? what is the mail you sent to?
+",yosiat,Thibaut
+220,2015-07-11 15:21:21,"@yosiat I emailed info@elastic.co but they haven't replied…
+",Thibaut,yosiat
+220,2015-07-13 23:24:40,"@kimchy Thanks for the reply. If that changes in the future, feel free to get in touch and I'll be happy to add ES's docs to DevDocs. 
+",Thibaut,kimchy
+205,2015-05-19 20:45:50,"Hi @Thibaut, thanks for reviewing, I'll also look at this on weekend.. hard week of work :(
+",sarhugo,Thibaut
+189,2016-05-09 11:32:45,"@Kaijun or you can just click ""Select documentation"" and uncheck any docs you don't want 
+",Thibaut,Kaijun
+177,2015-03-19 02:28:40,"@komplexb The change is live on [devdocs.io](http://devdocs.io) yes.
+",Thibaut,komplexb
+173,2015-03-04 13:41:04,"@Thibaut Yes! It's works well without problems.
+",CzBiX,Thibaut
+170,2015-03-01 22:40:03,"@Thibaut Thanks :)
+
+I think I've already made the box go at the top. 
+
+
+
+https://github.com/TrangPham/devdocs/blob/master/lib/docs/filters/core/official_url.rb#L4
+I'm appending the rest of the html to the html of the `official_url_html`. 
+
+Should I rename `official_url` file to `home_url` too?
+",TrangPham,Thibaut
+170,2015-03-03 21:52:42,"@Thibaut I think this is ready for review - are there other places which I should add more tests to?
+",TrangPham,Thibaut
+170,2015-03-04 15:00:48,"@Thibaut Changes made.
+
+And thanks so much for helping me with this PR! I thought it would be easier than it was. I still don't completely understand the mechanics of how devdocs works. 
+",TrangPham,Thibaut
+166,2015-02-18 13:21:36,"@gpgekko Thanks! The error hasn't happened in 4 days so I'm gonna close this and hope for the best ^^
+",Thibaut,gpgekko
+157,2015-02-16 06:50:08,"Thank you @Thibaut !
+",maciejtarnowski,Thibaut
+155,2015-01-30 07:57:37,"@nhoizey Use Firefox Developer Edition. I have it installed and am currently on Aurora channel (37.0a2) and it works quite well (though I'm using OSX Yosemite). 
+",bassu,nhoizey
+155,2015-01-30 08:55:18,"(sorry, closed it by error)
+
+@bassu stable Firefox supports app cache, I don't want to change my browsing habits just because one service doesn't support it… ;-)
+",nhoizey,bassu
+155,2015-01-30 09:06:58,"@nhoizey I don't think stable Firefox is good enough for developers at this time. There have been several bug reports with DOM and HTML5 specifically in Firefox while it tries to keep up with Chrome. I am sure there's some bug somewhere which is rendering appcache useless in stable Firefox.
+
+Browser is a fast moving target and Firefox has some history of coming late to party (although they are trying to change it with Dev Edition).
+",bassu,nhoizey
+155,2015-01-30 09:30:15,"@bassu OMG, do you really mean all this? This is clear FUD.
+",nhoizey,bassu
+155,2015-01-30 13:24:45,"@nhoizey sorry I don't know what's going on here. I use Firefox and AppCache works fine.
+
+Can you check that `browser.cache.offline.enable` is set to `true` (double-click to toggle value) in `about:config`?
+",Thibaut,nhoizey
+155,2015-01-30 13:40:40,"@Thibaut it is set to `true`
+",nhoizey,Thibaut
+155,2015-01-30 14:01:31,"@nhoizey try:
+- Preferences -> Advanced -> Network -> Offline Web Content and User Data
+  - Click ""Clear Now""
+  - Remove ""devdocs.io"" from the list if you see it
+  - Make sure DevDocs isn't in the list of ""Exceptions…""
+- Clear Recent History -> Everything -> Only check ""Site Preferences""
+
+and then restart Firefox, go to devdocs.io, wait a few seconds, reload, and check the offline page.
+",Thibaut,nhoizey
+155,2015-01-30 14:14:04,"@BenoitZugmeyer it says `true`
+",nhoizey,BenoitZugmeyer
+155,2015-01-30 14:40:11,"@Thibaut it worked, thanks!
+",nhoizey,Thibaut
+155,2015-01-30 14:54:59,"@nhoizey Great!
+
+Closing… unfortunately there's nothing I can do on DevDocs's side to prevent Firefox from getting into this state.
+",Thibaut,nhoizey
+155,2015-01-30 16:21:40,"@nhoizey any extension that could change this? Can you try with a clean profile?
+",julienw,nhoizey
+155,2015-01-30 16:29:12,"@julienw :-D
+",nhoizey,julienw
+155,2015-02-05 13:07:44,"@julienw I have no idea what's causing this, sorry. On desktop I managed to lock AppCache by playing with the settings and clearing the cache, but I can't replicate that now…
+",Thibaut,julienw
+149,2015-01-12 03:33:30,"@dandv This would require too many changes and add too much complexity to the code just for one set of docs. I'm not saying never, but at least for now I have other priorities, sorry.
+",Thibaut,dandv
+144,2014-12-26 22:12:59,"@brutalcrozt you can see all the available docs on [devdocs.io](http://devdocs.io), `devdocs.io/css/` -> `dl.devdocs.io/css.tar.gz`). Run `thor docs:manifest` after you've downloaded them to make them appear in the app.
+",Thibaut,brutalcrozt
+135,2014-11-30 17:31:38,"@marr Feel to re-open this issue if you're working on a scraper for React. Otherwise you can vote for it here: https://trello.com/c/Zl8mIbXt/90-react
+",Thibaut,marr
+133,2015-02-18 13:07:42,"@jbrooksuk No. This is a major undertaking which most DevDocs users probably don't need, so I'd rather focus on other things for now. However, if a software / IDE vendor is interested in integrating with DevDocs and needs this, I'm happy to chat about it. 
+",Thibaut,jbrooksuk
+133,2015-02-18 13:10:14,"Thanks for your reply @Thibaut - do you know of any service which does provide an API?
+",jbrooksuk,Thibaut
+133,2015-02-18 13:17:40,"@jbrooksuk I don't, sorry. But it shouldn't be too hard to implement this on top of DevDocs's metadata and generated files:
+http://maxcdn-docs.devdocs.io/html/index.json
+http://maxcdn-docs.devdocs.io/html/db.json
+The problem for me is more about maintaining a search API (more servers, support, maintenance, etc.) than implementing it (which is pretty straightforward).
+",Thibaut,jbrooksuk
+133,2015-02-24 13:50:02,"Hi @trollixx 
+
+Glad to hear you're looking to make DevDocs's documentation available in Zeal.
+
+>  Is it fine to download `index.json` and `db.json` from maxcdn-docs.devdocs.io in Zeal?
+
+Yes, but:
+- I never purge the cache on that CDN, so something like `maxcdn-docs.devdocs.io/css/index.json` is not guaranteed to be up-to-date. To get the correct version you need to append the `mtime` of that particular doc (defined in `docs.json`) as a query param (e.g. `maxcdn-docs.devdocs.io/css/index.json?1420139789`).
+- I can't guarantee that I won't make breaking changes to the data format of the these files, or their location. When I do, I'll try to remember to let you know about it.
+- Please attribute each document to `devdocs.io` in a way that your users will notice. It takes a lot of work to maintain these docs / metadata.
+
+> Where is the proper place to obtain a list of all DevDocs documentation?
+
+Currently the `docs.json` file doesn't have a unique URL (it gets deployed with a different filename every time it changes, like the other assets). I'll make `devdocs.io/docs.json` redirect to the most recent version for you this week-end. However, please make sure Zeal doesn't request that file too often (on boot is ok), since it goes through my server — not the CDN.
+",Thibaut,trollixx
+133,2015-02-24 18:16:51,"@Thibaut, thanks for the answer.
+
+No any hurry at this point, such change would not happen quickly. I just wanted to confirm your acceptance of a third-party app providing access to DevDocs documentation. I still need to do a lot work to make Zeal more friendly to different formats and documentation sources.
+
+I'll let you know, when I start working on such feature.
+",trollixx,Thibaut
+133,2015-05-20 11:52:24,"@Thibaut thanks a lot !
+",gregberger,Thibaut
+133,2016-11-27 19:30:30,"@datitisev DevDocs doesn't have an API. Individual pages are accessible via this type of URL: http://docs.devdocs.io/javascript/index.html?1475425795 (`docs.devdocs.io` + doc slug + entry path + `.html` + doc mtime), but I make no guarantee that this won't change in the future.",Thibaut,datitisev
+133,2016-11-27 19:32:29,"@Thibaut Oh, that's what I think I meant. I didn't know how I would get any of the data in the `index.json`.
+Thanks for the url! And thanks, once again, for the great service. 👍 ",datitisev,Thibaut
+128,2014-10-21 21:57:27,"@Thibaut I see your point regarding the extra work involved. The only reason I raised the issue is because it seemed to me to be a UI regression. As long as I'd been using the app (which I love, by the way, don't get me wrong), it had always just expanded to the width of my browser. That set my expectation for how the app should be displayed. Then, seeing the fixed width recently, my first reaction was that it was a new issue.
+
+I'm happy to concede that it might be more readable with the narrower width. Perhaps something like what @BenoitZugmeyer showed is a nice middle ground?
+",mwjeffcott,Thibaut
+128,2014-10-21 21:57:27,"@Thibaut I see your point regarding the extra work involved. The only reason I raised the issue is because it seemed to me to be a UI regression. As long as I'd been using the app (which I love, by the way, don't get me wrong), it had always just expanded to the width of my browser. That set my expectation for how the app should be displayed. Then, seeing the fixed width recently, my first reaction was that it was a new issue.
+
+I'm happy to concede that it might be more readable with the narrower width. Perhaps something like what @BenoitZugmeyer showed is a nice middle ground?
+",mwjeffcott,BenoitZugmeyer
+128,2014-10-22 15:10:06,"Hi @Thibaut - this is a fantastic project for which I'm constantly grateful! However, I'm also finding that the switch to fixed width has some undesirable consequences. Any way you could make this optional?
+",rflow,Thibaut
+128,2014-10-27 00:48:55,"I am happy with the reversion for now. I hope in the future redesign there will just be an option to set a preferred width for the content side (with a regular default). Some content being presented needs some fixing to be more responsive. I also think the entire app should be centred if it is to have a max-width. 
+
+@BenoitZugmeyer I think your interface variant would be much harder to use.
+
+My main point in #126 is that some documentation does not fit in the original fixed with and horizontal scroll bars are very undesirable for text-based content (especially the DOM events table of contents page).
+",Tatsh,BenoitZugmeyer
+128,2014-10-28 12:37:42,"@symmetriq I like that idea. I'll try to incorporate this in the new design.
+",Thibaut,symmetriq
+128,2015-07-28 19:00:02,":+1: for @symmetriq's idea to toggle widths on the content :)
+",JaKXz,symmetriq
+128,2015-08-04 16:41:36,"@Thibaut Thanks for adding the width toggle. Works great!
+",symmetriq,Thibaut
+128,2015-08-04 23:08:58,"Hmm… It seems the comment I posted here yesterday somehow got lost. I was saying: 
+
+> Sorry guys, I had forgotten about this. Look what showed up today :)
+
+With a screenshot of the new width icon :P
+
+Anyway… glad you like it @symmetriq!
+",Thibaut,symmetriq
+128,2015-08-04 23:36:42,"@Thibaut Cheers! The work you put into DevDocs is greatly appreciated. It's been my leftmost pinned site (so I can access it with ⌘1) in Chrome for a long time now.
+",symmetriq,Thibaut
+128,2015-08-04 23:39:08,"@symmetriq :heart: 
+",Thibaut,symmetriq
+128,2015-08-05 00:06:36,"@Thibaut Same here. I use DevDocs on a daily basis and love it. I really appreciate your efforts in making it as good as it is.
+",mwjeffcott,Thibaut
+128,2015-08-05 03:08:21,"@mwjeffcott :green_heart: :)
+",Thibaut,mwjeffcott
+126,2014-10-27 01:23:21,"@symmetriq I agree with you but since I mostly use DevDocs on a 1280x800 display I rarely get that problem, and too many people were complaining about the fixed width. In the redesign I'll try to implement a customizable width. Glad you at least got it fixed for you using a custom style.
+",Thibaut,symmetriq
+126,2014-10-27 01:59:42,"@Thibaut No problem. [Here's a suggestion](https://github.com/Thibaut/devdocs/issues/128#issuecomment-60542623) for a simple toggle that lets people view DevDocs the way they want.
+",symmetriq,Thibaut
+123,2014-10-04 20:21:27,"@hollingberry Sorry for the late reply. Yes I think that'd be useful. For the logo we could use the japanese character: 鋸. I can take care of that if you want to add the doc.
+By the way it looks like they recently redesigned their website / docs: http://www.nokogiri.org/
+",Thibaut,hollingberry
+123,2014-10-04 20:48:11,"@Thibaut Sounds good. How do you feel about if I generate the RDoc for Nokogiri locally to make sure everything works, but commit the scraper with a directory for your machine, like (https://github.com/Thibaut/devdocs/blob/master/lib/docs/scrapers/rdoc/ruby.rb#L24)? So then `'/Users/Thibaut/DevDocs/Docs/RDoc/Nokogiri'`..
+",hollingberry,Thibaut
+123,2014-10-04 20:49:43,"@Thibaut and I like using 鋸 as the logo :)
+",hollingberry,Thibaut
+122,2015-05-05 12:29:00,"@stephen-hill You might get ""mixed-content"" errors in docs with images. I haven't looked into fixing those yet (there should be very few). Other than that if you notice anything is broken please let me know.
+",Thibaut,stephen-hill
+122,2015-05-05 12:38:14,"@stephen-hill thanks. Of the <1% of docs that have images, even less don't support HTTPS, so I don't think this is a big enough problem that warrant setting up and maintaining a proxy. It's just that I might need to update some scrapers (I don't know which ones yet) to replace hard-coded `http://` image URLs with protocol-relative URLs. 
+",Thibaut,stephen-hill
+119,2014-10-01 20:36:17,"@Thibaut You should check out virtualbox -- it's free and lets you run Linux/Windows\* virtual machines :)
+- Windows only works if you have an ISO e.g. http://www.w7forums.com/threads/official-windows-7-sp1-iso-image-downloads.12325/
+",sarciszewski,Thibaut
+119,2014-10-04 20:33:56,"@sarciszewski Thanks. I don't really have time to test DevDocs on a different platforms and would rather focus on other, more useful features (like getting it to work offline with no setup). PRs that add setup instructions or contributions on the wiki are more than welcome.
+",Thibaut,sarciszewski
+117,2015-03-29 20:51:20,"@Thibaut Any update on the Bookshelf / Knex documentation?
+",joepie91,Thibaut
+117,2015-03-29 21:46:27,"@joepie91 I'm still waiting for https://github.com/tgriesser/knex/issues/449 and for the projects to grow in popularity (to justify jumping the list at https://trello.com/b/6BmTulfx/devdocs-documentation).
+",Thibaut,joepie91
+115,2014-12-20 17:04:09,"@smmoosavi Customizable shortcuts is a complex feature (the shortcuts are [hardcoded](https://github.com/Thibaut/devdocs/blob/master/assets/javascripts/app/shortcuts.coffee)). It isn't my priority at the moment, sorry.
+",Thibaut,smmoosavi
+103,2015-02-21 00:32:42,"@pron Are the JDK docs available online? If not, how do I generate them?
+",Thibaut,pron
+99,2014-05-28 18:22:06,"Thank you @romeovs!
+",hollingberry,romeovs
+99,2014-05-30 12:06:29,"@romeovs Could you remove your last commit please? (""merge branch master"")
+
+
+",Thibaut,romeovs
+99,2014-05-30 12:07:38,"done!
+
+On Fri, May 30, 2014 at 2:06 PM, Thibaut Courouble <notifications@github.com
+
+> wrote:
+> 
+> @romeovs https://github.com/romeovs Could you remove your last commit
+> please? (""merge branch master"")
+> 
+> git reset --hard HEAD~
+> git push -f origin master
+> 
+> —
+> Reply to this email directly or view it on GitHub
+> https://github.com/Thibaut/devdocs/pull/99#issuecomment-44643634.
+",romeovs,romeovs
+99,2015-12-12 21:28:12,"@romeovs @Thibaut 
+
+All of the [Prelude](http://hackage.haskell.org/package/base-4.8.1.0/docs/Prelude.html) functions seems to be missing in [devdocs](http://devdocs.io/). E.g. [fromIntegral](https://hackage.haskell.org/package/base-4.8.1.0/docs/Prelude.html#v:fromIntegral) is not in [devdocs](http://devdocs.io/).
+
+> The Prelude: a standard module. The Prelude is imported by default into all Haskell modules unless either there is an explicit import statement for it, or the NoImplicitPrelude extension is enabled.
+",dotnetCarpenter,romeovs
+99,2015-12-12 21:28:12,"@romeovs @Thibaut 
+
+All of the [Prelude](http://hackage.haskell.org/package/base-4.8.1.0/docs/Prelude.html) functions seems to be missing in [devdocs](http://devdocs.io/). E.g. [fromIntegral](https://hackage.haskell.org/package/base-4.8.1.0/docs/Prelude.html#v:fromIntegral) is not in [devdocs](http://devdocs.io/).
+
+> The Prelude: a standard module. The Prelude is imported by default into all Haskell modules unless either there is an explicit import statement for it, or the NoImplicitPrelude extension is enabled.
+",dotnetCarpenter,Thibaut
+99,2015-12-13 21:06:33,"@dotnetCarpenter fixed/updated
+",Thibaut,dotnetCarpenter
+99,2015-12-13 21:40:18,"@Thibaut  :rocket: great!
+",dotnetCarpenter,Thibaut
+81,2015-03-29 18:13:53,"@adius because the scroll track can't have a transparent background (on Chrome). The design ends up looking much worse IMO.
+",Thibaut,adius
+78,2014-09-13 22:13:39,"@benjamin-thomas Weird. There is no shortcut mapped to `Alt+Space`, only `Space` and `Shift+Space`.
+",Thibaut,benjamin-thomas
+78,2014-09-14 18:42:14,"@benjamin-thomas This means none of the `ctrlKey`, `metaKey`, `altKey` and `shiftKey` modifiers are `true` when the `AltGr+Space` keydown event comes in, so it's handled as a normal `Space` event. 
+
+Unfortunately I don't think there's anything I can do to fix this at the application level, and I don't want to introduce user settings to DevDocs just to get around this — sorry (you could however, fork DevDocs, disable that shortcut, and run it locally).
+",Thibaut,benjamin-thomas
+77,2014-04-13 23:00:08,"@Thibaut `alt-tab` is ubiquitously reserved by window managers for switching between windows - perhaps `alt+rarr` instead?
+",alexzorin,Thibaut
+73,2014-03-16 21:58:10,"@Martin1887 You can use a browser extension like [Stylish](http://userstyles.org/help/stylish) to override DevDocs's CSS.
+
+I agree this would be a great thing to have but the current design can't be easily converted to a dark scheme (with all the shadows, icons, etc.). I might do this as part of a redesign but this is longer term.
+
+In the meantime if one of you wants to create a custom stylesheet / userstyle I'd be happy to promote it in the app.
+",Thibaut,Martin1887
+73,2015-02-04 09:34:25,"@dav- Would be nice if you could share that.
+",oktayacikalin,dav-
+73,2015-02-05 06:46:46,"@dav- Thanks! Will have a look into it as soon as I can :). Screenshot is looking nice. I really like the base16-eighties dark theme. So this is very close...
+You should try to implement it properly and discuss a PR with @Thibaut...
+",oktayacikalin,dav-
+73,2015-02-05 06:46:46,"@dav- Thanks! Will have a look into it as soon as I can :). Screenshot is looking nice. I really like the base16-eighties dark theme. So this is very close...
+You should try to implement it properly and discuss a PR with @Thibaut...
+",oktayacikalin,Thibaut
+73,2015-02-06 07:03:25,"@Thibaut Great hearing that! What would speak against pushing your work out and mark the theme as alpha. Then @dav- and others could support you in getting it done.
+",oktayacikalin,dav-
+73,2015-02-06 07:03:25,"@Thibaut Great hearing that! What would speak against pushing your work out and mark the theme as alpha. Then @dav- and others could support you in getting it done.
+",oktayacikalin,Thibaut
+73,2015-02-10 07:13:05,"@Thibaut Yeah, the others are looking nice :). Do you mind fixing that, too?
+",oktayacikalin,Thibaut
+72,2014-03-16 07:17:03,"@pavelbinar if you're adding Laravel documentation my scraper works correctly, what i want to do now is to create separate pages for the subtopics. If you want you may get a look to my fork.
+",vjandrea,pavelbinar
+72,2014-03-16 10:40:12,"Hi, I am trying to add http://assemble.io/ documentation. I just wanted to give @Thibaut feedback about scrapers documentation:
+
+> Unfortunately the examples in other scrapers/filters are poorly documented/commented so it's not easy for me
+",pavelbinar,Thibaut
+72,2014-03-16 14:25:25,"Sorry guys, between the wiki and dozens of included scrapers I feel there is enough documentation. DevDocs is a hobby and writing documentation isn't something I particularly enjoy.
+
+[This page](https://github.com/Thibaut/devdocs/wiki/Filter-Reference) includes two examples that should help you understand how filters work. To extract the data I use Nokogiri, which is documented [here](http://nokogiri.org/). Unfortunately I don't have time to write tutorials about Ruby and Nokogiri.
+
+@vjandrea To divide the pages into categories you need to implement the `get_type` method in your `EntriesFilter`.
+
+@pavelbinar If you upload your files on GitHub I can take a quick look.
+",Thibaut,vjandrea
+72,2014-03-16 14:25:25,"Sorry guys, between the wiki and dozens of included scrapers I feel there is enough documentation. DevDocs is a hobby and writing documentation isn't something I particularly enjoy.
+
+[This page](https://github.com/Thibaut/devdocs/wiki/Filter-Reference) includes two examples that should help you understand how filters work. To extract the data I use Nokogiri, which is documented [here](http://nokogiri.org/). Unfortunately I don't have time to write tutorials about Ruby and Nokogiri.
+
+@vjandrea To divide the pages into categories you need to implement the `get_type` method in your `EntriesFilter`.
+
+@pavelbinar If you upload your files on GitHub I can take a quick look.
+",Thibaut,pavelbinar
+72,2014-03-16 14:36:19,"@Thibaut Thanks, for help offer. I am working on generating final output files instead of scraping them.
+
+Assemble allow us to generate final files including json data very effectively so we will have total control on how is the documentation structured and how will be displayed - no scraper necessary.
+
+I will than give you just final docs + docs generator (if you would like to update by yourself). We will probably push updates when we release the new docs.
+",pavelbinar,Thibaut
+72,2014-05-26 02:30:07,"@vjandrea I just added the Laravel docs: 060052beb7e15381997604b4c0492b131c97ada7
+Thanks for working on this. If you can spread the word that'd be great :)
+",Thibaut,vjandrea
+70,2014-02-27 04:57:11,"@wong2 Your initiative is quite commendable, sir.
+",Ibrahim-Islam,wong2
+68,2014-09-19 15:44:33,"@Thibaut not sure if this got dropped or if there hasn't been a lodash documentation update since Feb, but I'll +1 this issue either way as it's really confusing when the search returns nothing for a lodash method you know exists. 
+",MannyC,Thibaut
+68,2014-09-19 17:29:37,"@MannyC I haven't updated the docs since Lo-Dash's latest release in December 2013. I'll fix this once v3.0.0 is released and they update lodash.com.
+",Thibaut,MannyC
+68,2014-09-22 00:12:26,"@Thibaut caveat: I'm a Ruby rube.  I'm also aware that you might not want to update the docs until 3.0.0 anyway.  
+",MannyC,Thibaut
+66,2014-02-18 23:15:37,"Thanks @vjandrea.
+
+@ilinkuo let me know if you meant to say that you started working on a scraper for Dojo and I'll reopen this issue.
+",Thibaut,ilinkuo
+66,2014-02-18 23:15:37,"Thanks @vjandrea.
+
+@ilinkuo let me know if you meant to say that you started working on a scraper for Dojo and I'll reopen this issue.
+",Thibaut,vjandrea
+65,2015-03-24 16:06:18,"@k4ml That means Fogger doesn't support IndexedDB (the app uses feature detection, not browser sniffing). There's nothing I can do in DevDocs to fix that — sorry.
+",Thibaut,k4ml
+65,2015-07-22 12:28:05,"@k4ml @k4ml Why not using chrome's app shortcut? 
+1. Install Devdocs web apps in chrome store.
+2. Right click the Devdocs, select ""Open as window"", and ""Create shortcuts"".
+3. Now you can use Devdocs like a native app in Ubuntu. Looks awesome!
+
+![image](https://cloud.githubusercontent.com/assets/4658703/8825242/2193e714-30b0-11e5-8933-0a96535fdfac.png)
+",archerzhaocs,k4ml
+63,2016-10-02 22:28:40,"@nahuel DevDocs's offline data is stored in IndexedDB, which doesn't support full-text search. JS-based full-text indexer like lunr.js require all the data to be kept in memory. Doing this in DevDocs would make the app slow and prone to crashes.
+",Thibaut,nahuel
+59,2015-12-07 13:08:04,"@pablobm Thanks for the feedback! I added an ""enable"" link to disabled doc search results :)
+
+![devdocs api documentation 2015-12-07 08-05-02](https://cloud.githubusercontent.com/assets/17579/11627575/7ff506e2-9cb9-11e5-90fd-a6b302abea82.png)
+",Thibaut,pablobm
+52,2014-01-25 00:43:28,"I just tested it on Chrome and everything works just fine over there and I can't figure out why?
+
+If it was being caused by a plugin, it should've worked under safe mode?
+
+@Thibaut - You use Firefox?
+",dufferzafar,Thibaut
+45,2014-01-24 02:38:50,"Thanks for the bug report. I'll look into this over the week-end.
+
+@commonquail The ""type"" pages such as [SPL/Exceptions](http://devdocs.io/php-spl-exceptions/) aren't part of the search index (the doc also needs to be enabled for results to appear). Thanks for investigating the issue, though; this is very useful.
+",Thibaut,commonquail
+45,2014-01-25 03:10:42,"@commonquail I've opened [a new issue](https://github.com/Thibaut/devdocs/issues/55) for adding the _type_ pages to the search index. I understand the use case but this isn't straightforward to implement.
+
+You can already use a space the scope your search: http://devdocs.io/#q=css%20color
+",Thibaut,commonquail
+41,2017-01-02 22:19:13,"It seems that it was possible to fix it, as currently the page mentioned by @Strate now has working links to devdocs.io instead of php.net.",Hipska,Strate
+41,2017-01-02 22:26:17,@Hipska yes I found a way to fix this a year ago (https://github.com/Thibaut/devdocs/commit/44e1f216c43f4adc734eea5f89e6769a4bccd4be).,Thibaut,Hipska
+39,2014-01-22 05:01:14,"@robinbastien If you have Firefox Aurora/Nightly, please check out devdocs on the marketplace @ https://marketplace.firefox.com/app/devdocs
+
+I find it provides a really nice desktop functionality cross-platform
+
+I've looked at node-webkit and it seems pretty nice for this kind of thing with more potential for rich desktop integration
+",qq99,robinbastien
+39,2015-01-22 15:25:41,"@robinbastien @Thibaut  hi! whats the status on this? anyone pick this idea up?
+",mcoquet,Thibaut
+39,2015-01-22 15:25:41,"@robinbastien @Thibaut  hi! whats the status on this? anyone pick this idea up?
+",mcoquet,robinbastien
+39,2015-01-22 15:50:03,"@mcoquet This feature is pretty low on my todo list, especially now that DevDocs works offline in the browser. Contributions are welcome though. 
+",Thibaut,mcoquet
+39,2015-01-22 17:54:27,"@Thibaut thx for the quick reply! Yeah, I figured as much. It sounds like something that would make more sense to live as a separate project anyway ? What do you think?
+",mcoquet,Thibaut
+39,2015-01-23 15:32:22,"@mcoquet yes this would likely live in a separate repo. 
+",Thibaut,mcoquet
+35,2014-01-10 13:14:13,"@Thibaut Indeed, that solves it!
+
+Obviously I didn't read the instructions carefully enough! ... and didn't see the button in the left bottom corener at first.
+
+Maybe it is a little unexpected though that you can click on ""python"" and the URL changes, but the search won't work ... though I don't know how one could make it more obvious.
+
+Maybe make the bottom left button more visible? ... or make the ""greyed out"" items not clickeable (since that is what caused the confusion) ?
+
+... or something else :)
+",samuell,Thibaut
+33,2014-01-16 05:51:45,"Thanks @Thibaut I'm looking forward to it, lemme know how the submission process goes / is
+",qq99,Thibaut
+25,2014-01-05 13:25:57,"@nfm Supporting multiple minor versions (e.g. 3.1, 3.2, etc.) and being able to pick one inside the app is a major undertaking. Given the limited number of documentations that supports versioning, I don't think it's worth the effort.
+
+However I'm open to the idea of creating multiple documentation sets for major versions (e.g. Rails 3 & 4, Python 2 & 3). You could help with this by adding a scraper for Rails 3.
+",Thibaut,nfm
+25,2014-03-19 06:27:49,"Hi @Thibaut, I've just been having a look at this now. It seems like the Rails 3 scraper is straightforward, pretty much exactly the same as the Rails 4 one. I just made a Rails3 class, updated the name, slug, and version, and checked out the tag v3.2.17 before running rdoc in the same way as you did for Rails 4 to generate the docs.
+
+I've done this locally and have been playing around with the front-end for it. So far the necessary changes are pretty minimal, like ensuring slugs and URLs are unique or include the version number, adding a matching CSS class for each version so they all get the correct icon, ensuring you can tab-complete different versions, those kinds of things.
+
+Is this something you're interested in pursuing further?
+",nfm,Thibaut
+25,2014-03-20 01:41:02,"Hi @nfm! Thanks for working on this. My main concern is having to maintain another scraper / documentation that wouldn't be used by many people.
+
+However, feel free to open a pull request with your scraper and I'll take a look. If the index isn't too messed up I'd definitely be interested in adding Rails 3.
+",Thibaut,nfm
+25,2014-10-22 12:46:59,"@netheril96 This isn't on my short-term todo list, sorry.
+",Thibaut,netheril96
+25,2014-11-12 03:46:28,"@grantmcconnaughey I hear you but I have limited time and have to prioritize features. Multi-version support is likely something I'll try to tackle in 2015.
+",Thibaut,grantmcconnaughey
+25,2014-11-12 07:21:23,"@Thibaut Could you shed some light on how difficult implementing this feature is? I would think that just treating Python 2.7 and Python 3 as two separate languages would be enough, at least temporarily.
+",netheril96,Thibaut
+25,2014-11-12 13:39:20,"@netheril96 I may make an exception for Python (in the coming weeks), but ideally what I'd like is a dropdown next to each documentation to select a version (if the doc supports it). This is the complex/difficult bit.
+
+Keep in mind that it's also a lot more work to maintain multiple versions — after fine-tuning the scraper, I have to run a few commands, make sure everything still works, sometime update the code, and finally upload the files to S3/MaxCDN, for every update of every doc available on DevDocs. I do all this for free :)
+
+In 2015 I'd like to take a shot at standardizing the doc format DevDocs uses, which is going to require updating all docs. I'd rather tackle multi-version support after that.
+",Thibaut,netheril96
+25,2014-11-12 15:42:35,"@Thibaut I hope to see that soon. Python 2 and 3 are so different that the documentation for one is all but useless to those working with the other, whereas the lack of fine grained versioning of docs is tolerable and not well supported in other softwares anyway.
+",netheril96,Thibaut
+25,2015-08-30 22:29:52,"@ryanmark Thanks for the feedback. As I said, I wish I had time to do everything, but this is a major undertaking which I have to balance with other things, including my personal life. I maintain and develop DevDocs exclusively on my spare time. What would be worse for everybody is for me to burn out.
+",Thibaut,ryanmark
+25,2015-10-27 16:10:35,"Sorry for bugging you about this!
+
+Is there a nice way for _others_ (i.e. not you!!) to work on this and to submit pull requests for particular libraries? Is there a template that can be used for others to build on, such as the way you're handling python 3 vs 2 and yii 1 vs 2?
+
+I notice that @nfm mentioned he had made an attempt to make it work; not sure if he submitted a pull request for that.
+
+[There's a BountySource open for this, if anyone _really_ wanted this feature they should contribute code or dollars to support its development.](https://www.bountysource.com/issues/5442208-support-multiple-versions-of-a-piece-of-software) Maybe including a link and a warning about this issue in the README or on the devdocs site might stop so many people from commenting on it and requesting it and reduce the feeling of stress/burn out.
+",omouse,nfm
+25,2015-10-28 03:37:40,"@omouse I never ended up opening a PR for this, but I've just had a super quick look now and it seems like it would be pretty straightforward, especially now that there are examples for how to do this in the repo (eg. Python 2 and 3).
+
+I think the process would be the same as adding a whole new language - you'd submit a PR like #281 for the alternate major version of the software you wanted to add. You could probably reuse much of the existing Filter and Scraper, unless the documentation format or location changed between major versions.
+",nfm,omouse
+25,2015-10-31 17:29:02,"@omouse thanks for offering to help. As @nfm said, major versions of prominent languages/frameworks can be submitted as separate scrapers. More finer grained versioning will require changes to the scraping framework and UI. At the moment I'm still too busy to tackle this, but it is at the top of my list for when I have more free time on my hands (along with the Bootstrap doc).
+
+PS: it's 100% OK for people to comment/+1 here. It helps me prioritize which features to work on next.
+",Thibaut,nfm
+25,2015-10-31 17:29:02,"@omouse thanks for offering to help. As @nfm said, major versions of prominent languages/frameworks can be submitted as separate scrapers. More finer grained versioning will require changes to the scraping framework and UI. At the moment I'm still too busy to tackle this, but it is at the top of my list for when I have more free time on my hands (along with the Bootstrap doc).
+
+PS: it's 100% OK for people to comment/+1 here. It helps me prioritize which features to work on next.
+",Thibaut,omouse
+25,2016-01-25 00:09:17,"@Thibaut deserves many :beers: beers and :cake: cake. Seriously, amazing! I'm really happy, now there's even more examples for others to work with to see how to implement multi-version for their favourite APIs :-D
+",omouse,Thibaut
+25,2016-01-25 02:19:22,"@Thibaut  :heart: This is awesome!
+",nfm,Thibaut
+24,2013-12-13 08:39:28,"If not w3.org which else @Thibaut :cactus: hmm, we need to ask them?
+",hemanth,Thibaut
+23,2013-12-12 16:30:46,"@santagada I wish it was as simple as ""grabbing the data from the angular repo"". Currently the code can only generate docs by scraping them, and Angular makes that difficult by not providing static HTML files.
+
+@Kapeli Thanks for the offer. I would rather the solution be open source and allow DevDocs to scrape the original content.
+
+@natchiketa Sorry to bother you. Any chance you could update your script to work with Angular 1.2?
+",Thibaut,Kapeli
+23,2013-12-12 16:30:46,"@santagada I wish it was as simple as ""grabbing the data from the angular repo"". Currently the code can only generate docs by scraping them, and Angular makes that difficult by not providing static HTML files.
+
+@Kapeli Thanks for the offer. I would rather the solution be open source and allow DevDocs to scrape the original content.
+
+@natchiketa Sorry to bother you. Any chance you could update your script to work with Angular 1.2?
+",Thibaut,santagada
+23,2014-01-14 19:14:24,"@Thibaut I guess updating Scraper to use PhantomJS to generate static doc before analyzing HTML would be too much work?
+",TheRusskiy,Thibaut
+23,2014-01-15 02:00:05,"@TheRusskiy If you can generate a static version of Angular's doc then I'm happy to work on the scraper.
+",Thibaut,TheRusskiy
+23,2014-01-22 09:51:37,"@Thibaut, @TheRusskiy You can find static versions of the AngularJS doc by following the url intended for the Google bot. For example here is the static page for the ngHref directive: http://docs.angularjs.org/?_escaped_fragment_=/api/ng.directive:ngHref
+
+The docs follow this spec proposed by Google for indexing dynamic content: https://developers.google.com/webmasters/ajax-crawling/docs/specification
+
+The examples don't seem to render, but the current version on DevDocs doesn't seem to have the examples either.
+",afram,Thibaut
+23,2014-01-22 09:51:37,"@Thibaut, @TheRusskiy You can find static versions of the AngularJS doc by following the url intended for the Google bot. For example here is the static page for the ngHref directive: http://docs.angularjs.org/?_escaped_fragment_=/api/ng.directive:ngHref
+
+The docs follow this spec proposed by Google for indexing dynamic content: https://developers.google.com/webmasters/ajax-crawling/docs/specification
+
+The examples don't seem to render, but the current version on DevDocs doesn't seem to have the examples either.
+",afram,TheRusskiy
+23,2014-01-23 01:47:04,"@afram I would need an index page (with links to all the other pages) to use as a starting point.
+",Thibaut,afram
+23,2014-01-23 09:34:01,"@Thibaut ahh, that's a bit trickier - The Google bot version of their index page is here: http://docs.angularjs.org/?_escaped_fragment_=/api/index
+
+An example of top level guide page (Directives) here: http://docs.angularjs.org/?_escaped_fragment_=/guide/directive
+
+I'll see what I can do this weekend, I'll look to collate and contribute (or find) an index page.
+",afram,Thibaut
+19,2015-02-12 12:38:08,"@Thibaut Do you think this should be added similar to how `attribution` is added to each root page?
+",TrangPham,Thibaut
+19,2015-02-12 13:10:26,"@TrangPham Yes, except the attribution is added to all pages. This I would probably only add to the root page, and put it at the top instead of the bottom.
+",Thibaut,TrangPham
+19,2015-02-12 13:12:03,"@Thibaut Thanks. I will try to tackle this.
+",TrangPham,Thibaut
+12,2015-02-05 13:12:27,"@peteruithoven I like that idea, especially now that we have offline mode, but probably won't get to it in the near future.
+",Thibaut,peteruithoven
+10,2013-11-01 21:04:50,"Thank you both for the additional info.
+
+If the problem can be fixed by installing `nodejs` then I agree with @forivall that we should just tell users. `therubyracer` looks like a quite a big dependency.
+
+I'll close this pull request when I update the README with the new instructions.
+",Thibaut,forivall
+9,2013-10-29 10:06:16,"@Thibaut This is very much confined to each browser, if FF is the target, we can pick it up from [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/ECMAScript_6_support_in_Mozilla).
+",hemanth,Thibaut
+6,2015-03-20 01:58:34,"@abdelouahabb Both versions are the same.
+",Thibaut,abdelouahabb
+6,2015-03-20 02:49:27,"![opensuse](https://cloud.githubusercontent.com/assets/2527234/6745223/9d80fde8-ceb4-11e4-829e-13706d421bd6.png)
+@Thibaut I followed the exact steps, and i dont get the side navigation menu (Chromium and firefox, same result, opensuse)
+",abdelouahabb,Thibaut
+6,2015-03-20 02:53:44,"@abdelouahabb can you post a screenshot please
+",Thibaut,abdelouahabb
+6,2015-03-20 02:56:38,"@Thibaut  I updated the comment with screenshot
+",abdelouahabb,Thibaut
+6,2015-03-22 13:30:17,"@abdelouahabb and on the same computer / browser, if you load `devdocs.io` you see the sidebar?
+",Thibaut,abdelouahabb
+6,2015-03-22 14:14:32,"@Thibaut that's the same, since it is just the dns?
+![opensuse](https://cloud.githubusercontent.com/assets/2527234/6769690/1cf69248-d0a6-11e4-85f9-b6043267fd37.png)
+",abdelouahabb,Thibaut
+6,2015-03-22 14:51:17,"@Thibaut i get:
+
+`screen.width: 1366`
+`screen.height: 664`
+",abdelouahabb,Thibaut
+6,2015-03-22 14:56:32,"@Thibaut I confirm that it is th `css media`, i tried to access from windows (because i ran it from virtual machine, on opensuse) and now i get the TOC, thank you ^_^
+![sans titre](https://cloud.githubusercontent.com/assets/2527234/6769859/fc6f5d06-d0ab-11e4-8c07-97673ba46e1a.jpg)
+",abdelouahabb,Thibaut
+6,2015-03-22 19:27:20,"@Thibaut 
+Hi, and sorry for the delay, here is the result:
+
+`window.matchMedia('(max-device-height: 767px)').matches : true`
+`window.matchMedia('(max-device-height: 767px) and (max-device-width: 1024px)').matches: false`
+",abdelouahabb,Thibaut
+6,2016-12-12 13:07:33,"@borekb this hasn't been implemented. I felt it's not needed because the sidebar already provides a ToC. On most pages, hitting `Alt+R` will reveal the current entry in the sidebar surrounded by related entries for that page, which acts as a ToC.
+
+I see how an extra ToC could be useful, though, having added many docs with lots of headings that aren't entries in the sidebar. So I'll reopen this.",Thibaut,borekb
+4,2014-06-25 08:17:20,"@scottwarren You can already do that using the `tab` key: http://devdocs.io/help
+",Thibaut,scottwarren
+4,2014-06-25 09:20:19,"@scottwarren no problem ;)
+",Thibaut,scottwarren
+2,2013-12-02 06:58:03,"@Thibaut Would https://github.com/tantaman/LargeLocalStorage be able to help solve the storage capacity limit for devdocs.io offline app? 
+p.s. Thanks for devdocs.io
+",gdumitrescu,Thibaut
+2,2013-12-02 11:33:23,"@gdumitrescu Looks like it could. However I think the challenging bit will be to reliably download the thousands of files that make up the documentations.
+",Thibaut,gdumitrescu
+2,2014-07-04 15:42:56,"I think @steverandy has the best solution here, to use node-webkit or similar to wrap the project into a desktop app. I don't think there is a reliable solution for holding 100's of MB's within the browser
+",petecoop,steverandy
+2,2015-01-14 07:02:23,"@Thibaut thanks for offline support!
+",bbodenmiller,Thibaut
+602,2017-03-25 17:56:08,"As discussed in the issue #593, here comes the pull request regarding the OpenJDK documentation. This work is base on the previous #560, thanks @japborst.
+
+The documentation is sourced from [openjdk-8-doc_8u121-b13-4_all.deb](https://packages.debian.org/sid/openjdk-8-doc). Only the subdirectoy `usr/share/doc/openjdk-8-jre-headless/api` was extracted.
+
+I've tried to include all packages and it's working fine for me, I don't experience any slow down. They are 217 types and 46 084 entries in 4 733 files occupying 153 MB. I think many other packages than the ones proposed in #560 are useful, like `javax.xml`. What do you think @Thibaut?
+
+The highlighting issue is solved. Unfortunately Prism remove all `<a>` links inside `<pre>` tags but I haven't looked much into it. I don't think it's a big problem thought.
+
+The Java documentation contains a lot of duplicated information, typically a summary of all methods and further down detail explanations for these methods. I tried to remove all these duplicates so the resulting documentation is lighter and easier to read.
+
+I have reused the logos from the request #560, but I think they might be copyrighted and I'm not sure they can be used in Devdocs. I don't see this logo on the [OpenJDK](http://openjdk.java.net/) and [IcedTea](http://icedtea.classpath.org/wiki/Main_Page) websites. And the logo used in the [Java Wikipedia article](https://en.wikipedia.org/wiki/Java_(programming_language)) seems to be subject to fair use.",freayd,Thibaut
+602,2017-03-25 17:56:08,"As discussed in the issue #593, here comes the pull request regarding the OpenJDK documentation. This work is base on the previous #560, thanks @japborst.
+
+The documentation is sourced from [openjdk-8-doc_8u121-b13-4_all.deb](https://packages.debian.org/sid/openjdk-8-doc). Only the subdirectoy `usr/share/doc/openjdk-8-jre-headless/api` was extracted.
+
+I've tried to include all packages and it's working fine for me, I don't experience any slow down. They are 217 types and 46 084 entries in 4 733 files occupying 153 MB. I think many other packages than the ones proposed in #560 are useful, like `javax.xml`. What do you think @Thibaut?
+
+The highlighting issue is solved. Unfortunately Prism remove all `<a>` links inside `<pre>` tags but I haven't looked much into it. I don't think it's a big problem thought.
+
+The Java documentation contains a lot of duplicated information, typically a summary of all methods and further down detail explanations for these methods. I tried to remove all these duplicates so the resulting documentation is lighter and easier to read.
+
+I have reused the logos from the request #560, but I think they might be copyrighted and I'm not sure they can be used in Devdocs. I don't see this logo on the [OpenJDK](http://openjdk.java.net/) and [IcedTea](http://icedtea.classpath.org/wiki/Main_Page) websites. And the logo used in the [Java Wikipedia article](https://en.wikipedia.org/wiki/Java_(programming_language)) seems to be subject to fair use.",freayd,japborst
+593,2017-03-04 15:43:56,"/cc @japborst, did you end up looking into OpenJDK?",Thibaut,japborst
+590,2017-03-03 13:09:56,"@Thibaut I checked quickly and it seems that the examples are rendered in iframes and somehow, this particular iframe seems to have its ""src"" attribute broken. Dunno why ...",Kaijiro,Thibaut
+583,2017-02-16 09:14:48,"Hey,
+
+First of all : https://github.com/Thibaut/devdocs/blob/master/CONTRIBUTING.md#requesting-new-documentations
+
+Please, as it is asked don't post a new issue to ask a new documentation.
+
+Then, you'll see in the Trello board that the MySQL license is incompatible with DevDocs because of their redistribution policy (@Thibaut even asked to Oracle's lawyers).
+
+So, I'm sorry to announce you that the addition of the MySQL documentations is impossible.
+",Kaijiro,Thibaut
+570,2017-02-22 00:34:11,"I'm on vacation for another 10 days or so.. please feel free to make your
+suggested modifications.
+tis 21 feb. 2017 kl. 12:40 skrev Thibaut Courouble <notifications@github.com
+>:
+
+> *@Thibaut* commented on this pull request.
+>
+> Thanks for updating, and sorry for the delay. I'll merge this this
+> week-end.
+> ------------------------------
+>
+> In lib/docs/core/doc.rb
+> <https://github.com/Thibaut/devdocs/pull/570#discussion_r102207215>:
+>
+> > @@ -48,7 +48,10 @@ def name
+>        end
+>
+>        def slug
+> -        slug = @slug || name.try(:downcase)
+> +        slug = @slug || (
+> +          raise ""Slug must be set explicitly when name (#{name}) consists of anything else than [\\w\\.%]"" if /[^\w\.%]/ =~ name
+> +          name.try(:downcase)
+> +        )
+>
+> I think we can make this a bit simpler, like this:
+>
+> def slug
+>   slug = @slug || default_slug
+>   version? ? ""#{slug}~#{version_slug}"" : slugend
+>
+> then on L120 (after the private)
+>
+> def default_slug
+>   if name =~ /[^A-Za-z0-9_]/
+>     raise ""slug must be set explicitly when name (#{name}) contains non-alphanumeric characters""
+>   end
+>   name.downcaseend
+>
+> —
+> You are receiving this because you were mentioned.
+> Reply to this email directly, view it on GitHub
+> <https://github.com/Thibaut/devdocs/pull/570#pullrequestreview-22955475>,
+> or mute the thread
+> <https://github.com/notifications/unsubscribe-auth/AAEdBfPMi6G5lUVQbJuNe93rZ8hIhyBgks5reuiRgaJpZM4Lmzqi>
+> .
+>
+",kaos,slug
+570,2017-02-22 00:39:11,"Hi, I'm on vacation for another 10 days or so, please feel free to make
+your suggested modifications.
+
+tis 21 feb. 2017 kl. 12:40 skrev Thibaut Courouble <notifications@github.com
+>:
+
+> *@Thibaut* commented on this pull request.
+>
+> Thanks for updating, and sorry for the delay. I'll merge this this
+> week-end.
+> ------------------------------
+>
+> In lib/docs/core/doc.rb
+> <https://github.com/Thibaut/devdocs/pull/570#discussion_r102207215>:
+>
+> > @@ -48,7 +48,10 @@ def name
+>        end
+>
+>        def slug
+> -        slug = @slug || name.try(:downcase)
+> +        slug = @slug || (
+> +          raise ""Slug must be set explicitly when name (#{name}) consists of anything else than [\\w\\.%]"" if /[^\w\.%]/ =~ name
+> +          name.try(:downcase)
+> +        )
+>
+> I think we can make this a bit simpler, like this:
+>
+> def slug
+>   slug = @slug || default_slug
+>   version? ? ""#{slug}~#{version_slug}"" : slugend
+>
+> then on L120 (after the private)
+>
+> def default_slug
+>   if name =~ /[^A-Za-z0-9_]/
+>     raise ""slug must be set explicitly when name (#{name}) contains non-alphanumeric characters""
+>   end
+>   name.downcaseend
+>
+> —
+> You are receiving this because you were mentioned.
+> Reply to this email directly, view it on GitHub
+> <https://github.com/Thibaut/devdocs/pull/570#pullrequestreview-22955475>,
+> or mute the thread
+> <https://github.com/notifications/unsubscribe-auth/AAEdBfPMi6G5lUVQbJuNe93rZ8hIhyBgks5reuiRgaJpZM4Lmzqi>
+> .
+>
+",kaos,slug
+490,2016-09-19 18:23:40,"@Thibaut Thanks!  
+
+BTW, before the commit was made, I tried to hack it using DevTools to add the aliases by 
+
+
+
+But it had no effect.  
+",orionlee,Thibaut
+423,2016-06-22 00:39:59,"@Thibaut FYI
+",dirk-thomas,Thibaut
+414,2016-05-27 11:57:56,"Hi @SalathielGenese 
+
+@Thibaut already took a look to the MongoDB documentation, but its license doesn't allow to integrate it inside DevDocs.
+
+You can also look at [this Trello board](https://trello.com/b/6BmTulfx/devdocs-documentation) where there is every langage done, planned to do and incompatible.
+",Kaijiro,Thibaut
+410,2016-05-23 00:01:43,"Hey @sigmonsays 
+
+I don't know if RFC's really fits DevDocs philosophy.
+
+Actually, I think there is no scrapper for RFCs and I think @Thibaut will not see any problem if you make your own fork of DevDocs to create a srapper for RFCs.
+
+The ""problem"" I can see, is that there is REALLY a lot of RFCs and you'll have to find a way to sort them (As you can see, every part of the application is splitted into development langage / application).
+
+Furthermore RFCs are not so easy / pleasant to read. 
+
+But I like the idea and I wish you good luck if you want to try :)
+",Kaijiro,Thibaut
+398,2016-05-29 12:43:00,"I pushed another commit removing the hide/show methods. I didn't add another boolean inside the `toggleSidebar` method but it came with the cost of having this extra check:
+`forceShow = (!hasHiddenClass || !@hasSidebar()) && !saveLayout`
+Also, for the remaining part, of moving the logic of hiding/showing of the sidebar from `app.views.Search` to `app.views.Sidebar` I will wait for your input :)
+",ccorcoveanu,hasSidebar
+388,2016-05-26 13:43:45,"@robert-bosweb  thanks. I'll close this issue then.
+",Thibaut,robert-bosweb
+363,2016-03-03 11:07:06,"I think what you are requesting is beyond the scope that was intended by @Thibaut but then, i am speaking for myself not the author.
+",PombaM,Thibaut
+348,2016-02-01 21:11:31,"Hi,
+
+I have added documentation to influxdb, I have some open questions/ideas:
+1. I have scraped the documentation using UrlScrapper - but the documentation is open source - https://github.com/influxdata/docs.influxdata.com, I didn't know what is the preferred way for this url scrapping or file scrapping?
+2. I removed the contribution guideline from everypage, which is something like this:
+   `
+   This documentation is open source. See a typo? Please, open an issue.
+   `
+   I think it will be nice to add to the attribution, what do you think?
+3. It will be really easy to make this scrapper generic and support all InfluxData docs (for example Kapacitor, which I am interested in) - do you want me to do this?
+4. The styling for h2 headers and etc, aren't applied, after I header ""_influx"" to _base.scss it's fixed, but I saw that the ""new documentation guideline"" and the commit log suggests that only @Thibaut only edits it..
+
+That's it :)
+
+BTW - I REALLY LOVE DEVDOCS, IT MAKES MY LIFE EASIER :+1: 
+",yosiat,Thibaut
+341,2016-06-19 22:13:32,"@ccorcoveanu helped implement this feature. You can try it out by double-clicking the border of the sidebar. 
+
+@skibz @stephanIOA any tweaks you'd like us to make?
+",Thibaut,ccorcoveanu
+341,2016-06-20 08:10:23,"@ccorcoveanu @Thibaut thank you for adding this feature! it's purrrfect 🐱 
+",skibz,ccorcoveanu
+335,2016-01-20 09:05:56,"https://github.com/Thibaut/devdocs/blob/master/CONTRIBUTING.md#requesting-new-documentations
+
+Please don't open issues to request new documentations.
+Use the [Trello board](https://trello.com/b/6BmTulfx/devdocs-documentation) where everyone can vote and contributors can get a feel for what is most wished for.
+
+Furthermore, you can see that docs versionning is [already in discussion](https://github.com/Thibaut/devdocs/issues/25) and @Thibaut seems to have worked on it.
+",Kaijiro,Thibaut
+315,2015-12-14 19:34:18,"If you have suggestions, ask on the [Trello](https://trello.com/c/PVnfdeaN/26-suggest-new-docs-here) board. But here is what it says about what you want:
+
+> MySQL, ElasticSearch, MongoDB, anything by Apple (Objective-C, Cocoa…), Microsoft (.NET, MS SQL…) or Adobe (ActionScript, Flex…) are all released under restrictive licenses (no redistribution) incompatible with DevDocs — please do not suggest them.
+
+I asked about Swift:
+
+> @tibc , awhile ago I mentioned swift being open source. I found an Apple Blog post on it. https://developer.apple.com/swift/blog/?id=29
+
+And here was the reply:
+
+> @calebkleveter the Swift source code is open source. The docs unfortunately are not (AFAIK).
+
+As for contributing, there is some great documentation on how to do that [here](https://github.com/Thibaut/devdocs/wiki/Adding-documentations-to-DevDocs)! Just make sure you work on ones that are in the Trello todo!
+",calebkleveter,calebkleveter
+315,2015-12-14 19:34:18,"If you have suggestions, ask on the [Trello](https://trello.com/c/PVnfdeaN/26-suggest-new-docs-here) board. But here is what it says about what you want:
+
+> MySQL, ElasticSearch, MongoDB, anything by Apple (Objective-C, Cocoa…), Microsoft (.NET, MS SQL…) or Adobe (ActionScript, Flex…) are all released under restrictive licenses (no redistribution) incompatible with DevDocs — please do not suggest them.
+
+I asked about Swift:
+
+> @tibc , awhile ago I mentioned swift being open source. I found an Apple Blog post on it. https://developer.apple.com/swift/blog/?id=29
+
+And here was the reply:
+
+> @calebkleveter the Swift source code is open source. The docs unfortunately are not (AFAIK).
+
+As for contributing, there is some great documentation on how to do that [here](https://github.com/Thibaut/devdocs/wiki/Adding-documentations-to-DevDocs)! Just make sure you work on ones that are in the Trello todo!
+",calebkleveter,tibc
+312,2015-12-09 23:55:23,"If you have suggestions, ask on the [Trello](https://trello.com/c/PVnfdeaN/26-suggest-new-docs-here) board. But here is what it says about what you want:
+
+> MySQL, ElasticSearch, MongoDB, anything by Apple (Objective-C, Cocoa…), Microsoft (.NET, MS SQL…) or Adobe (ActionScript, Flex…) are all released under restrictive licenses (no redistribution) incompatible with DevDocs — please do not suggest them.
+
+I asked about Swift:
+
+> @tibc , awhile ago I mentioned swift being open source. I found an Apple Blog post on it. https://developer.apple.com/swift/blog/?id=29
+
+And here was the reply:
+
+> @calebkleveter the Swift source code is open source. The docs unfortunately are not (AFAIK).
+",calebkleveter,calebkleveter
+312,2015-12-09 23:55:23,"If you have suggestions, ask on the [Trello](https://trello.com/c/PVnfdeaN/26-suggest-new-docs-here) board. But here is what it says about what you want:
+
+> MySQL, ElasticSearch, MongoDB, anything by Apple (Objective-C, Cocoa…), Microsoft (.NET, MS SQL…) or Adobe (ActionScript, Flex…) are all released under restrictive licenses (no redistribution) incompatible with DevDocs — please do not suggest them.
+
+I asked about Swift:
+
+> @tibc , awhile ago I mentioned swift being open source. I found an Apple Blog post on it. https://developer.apple.com/swift/blog/?id=29
+
+And here was the reply:
+
+> @calebkleveter the Swift source code is open source. The docs unfortunately are not (AFAIK).
+",calebkleveter,tibc
+296,2016-07-17 23:19:16,"@Thibaut @povrazor would you mind if I try to tackle this? 😄 
+",jaikamat,Thibaut
+286,2015-11-03 20:30:47,"Heyo! This includes all of the API reference documented at http://bluebirdjs.com/docs/api-reference.html. I left out all the guides in there which are incomplete for now. They can easily be enabled later when bluebird catches up, by removing their entries from the `:skip` array.
+
+/cc @petkaantanov @benjamingr
+",awalgarg,benjamingr
+286,2015-11-03 20:30:47,"Heyo! This includes all of the API reference documented at http://bluebirdjs.com/docs/api-reference.html. I left out all the guides in there which are incomplete for now. They can easily be enabled later when bluebird catches up, by removing their entries from the `:skip` array.
+
+/cc @petkaantanov @benjamingr
+",awalgarg,petkaantanov
+286,2015-12-06 17:16:05,"@awalGarg are you still working on this?
+",Thibaut,awalGarg
+286,2015-12-13 16:58:28,"@awalGarg I don't see another way to achieve this. What you described sounds like the best solution.
+
+You should be able to carry data across pages using the `context[:additional_options]` object (it's a hash so you can store anything on it, and it persists across pages, unlike the `context` object itself).
+
+It'll be a bit of a hack but if it works I can clean up later (e.g. make it a proper `context[:env]` object).
+",Thibaut,awalGarg
+276,2015-10-09 13:47:20,"The Offline docs state:
+
+> Note that loading any page other than [devdocs.io](http://devdocs.io) directly won't work (due to limitations in AppCache).
+
+You could have the following in your appcache manifest:
+
+
+
+Then, when the user tries to navigate to a URI such as http://devdocs.io/css/@charset by typing directly into the URI bar or the browser being launched by an external program, the fallback would be used and devdocs could have code in the normal index page to load the correct data. I assume that devdocs.org is just sending the user the normal page anyway.
+
+The possible gotchas here should just be that if devdocs is trying to load data through AJAX the AJAX request might get the fallback page rather than the requested data—if the user is offline and the AJAX request should have failed anyway.
+
+Supporting launching directly to a particular documentation page when in offline mode would make the offline experience even more seemless than it already is.
+
+Another though, if AJAX-fetched resources are only at certain namespaces anyway, would be to do the following:
+
+
+
+If I’m understanding how appcache works correctly, this would make most users launching to a particular URI fetch it directly from appcache rather than trying to load it directly from the website first. When the browser is not able to access the Internet, this would eliminate a timeout in trying to fetch the documentation URI from the browser. When the browser is able to access the internet, this will prevent the browser from making a (small) number of superfluous requests to the server.
+
+Thoughts?
+",binki,charset
+276,2015-10-11 22:12:37,"Thanks for investigating this.
+
+I can't enable app cache beyond the root page because (1) each page would end up in the cache, leading to an ever increasing cache (app cache constraint), and (2) the app runs in different modes when loading from the root vs. another page (so that external links to docs that the user hasn't yet enabled still work).
+
+You can, however, load and search any page when offline like this:
+http://devdocs.io/#/css/@charset
+http://devdocs.io/#q=test
+",Thibaut,charset
+276,2015-10-12 14:23:12,"> (1) each page would end up in the cache, leading to an ever increasing cache (app cache constraint)
+
+As long as the document you use for the fallback entry doesn’t have a `manifest` attribute, and it doesn’t now, then the cache shouldn’t arbitrarily increase in size.
+
+> (2) the app runs in different modes when loading from the root vs. another page (so that external links to docs that the user hasn't yet enabled still work).
+
+If you look at the [appcache fetch algorithm](http://www.w3.org/TR/html5/browsers.html#changesToNetworkingModel), you’ll see that putting a URI namespace in the fallback section attempts to access the internet before loading the fallback entry. If `/` is listed as a namespace which should get the fallback document when the internet is inaccessible, that should not prevent attempts to load resources from online-only docsets. It just provides a way to serve to the user your special directly-linked mode page without the user having to be connected to the internet.
+
+> You can, however, load and search any page when offline like this:
+> http://devdocs.io/#/css/@charset
+> http://devdocs.io/#q=test
+
+Then why redirect the user to non-hash URIs? If the user browsed the whole site through hash URIs in the first place, this whole issue would be skirted ;-). The user should not need to manually edit bookmark URIs, for example, or have to edit the URIs of about restored tabs.
+
+My point is that appcache has the capability to enable direct navigation while the user is offline even with your current URI scheme. Why not take advantage of it?
+",binki,charset
+276,2015-10-12 15:57:41,"> If you look at the appcache fetch algorithm, you’ll see that putting a URI namespace in the fallback section attempts to access the internet before loading the fallback entry. If / is listed as a namespace which should get the fallback document when the internet is inaccessible, that should not prevent attempts to load resources from online-only docsets.
+
+TIL, thanks. a0ea89ff45a0ff73e5eab980de119982d1ae2b21
+
+> Then why redirect the user to non-hash URIs?
+
+Because http://devdocs.io/css/@charset is guaranteed to show you the doc even if you haven't enabled it (e.g. you clicked a link on StackOverflow). This works by comparing the request path with the ""docs"" cookie on the server, and returning a different page (single doc vs. full app) depending on if the doc is enabled or not.
+
+http://devdocs.io/#/css/@charset, on the other hand, will fail if the doc is disabled, since the `#hash` part of the URL isn't sent to the server, and the root path will only load docs that you've enabled (for performance reasons — DevDocs has 100k entries, the app would be much slower if it loaded all of them all the time).
+",Thibaut,charset
+276,2015-10-12 17:23:57,"> TIL, thanks. a0ea89f
+
+Thanks, that appears to work!
+
+> http://devdocs.io/#/css/@charset, on the other hand, will fail if the doc is disabled
+
+Ah, so right now it will not try to dynamically load the CSS docset when it sees `css` in the hash.
+",binki,charset
+265,2016-01-21 15:27:24,"@chule143 You might have just found the root cause. I am working on dual/triple setups so long that I didn't realize that it could be the issue.
+",mishak87,chule143
+265,2016-01-22 10:29:13,"I managed to reproduce this bug with your datas @chule143 :
+- Opened DevDocs on the first screen, resize sidebar.
+- Change DevDocs screen, try to resize sidebar => impossible.
+- Move DevDocs on the first screen again, and then, I can change sidebar size.
+",Kaijiro,chule143
+260,2015-09-13 19:55:39,"@martine Thanks for offering to help. The fix is basically just to re-run the scraper, since it looks like MDN has started creating these pages since the last time I ran it:
+https://developer.mozilla.org/en-US/docs/Web/API/history/pushState
+(but not https://developer.mozilla.org/en-US/docs/Web/API/history/replaceState)
+It takes a bit of time to scrape MDN and update the files. I'll do it in the next week or two.
+",Thibaut,martine
+229,2015-07-15 06:38:36,"Hi, @Thibaut . I’m wondering how do you think about this PR, and waiting for your review.
+To be honest I only have a slight understanding of what it going on here, so feel free to tell me about the code.
+
+BTW - I love this awesome project!
+",elegantcoder,Thibaut
+190,2015-07-06 02:47:20,"Understood. Thanks. FYI @mikeerickson
+",kentcdodds,mikeerickson
+185,2015-03-25 22:32:23,"@ab5124 if you ran `thor docs:download ruby` that only fetches the 2.2.0 version I personally scraped and uploaded to DevDocs's server. To generate the docs you need to run `thor docs:generate`.
+",Thibaut,ab5124
+170,2015-02-27 21:24:48,"Closes #19 
+
+This is my first attempt at this. To be honest I only have a slight understanding of what it going on here. Also the styles may need to be changed. @Thibaut Feel free to pick this apart.
+",TrangPham,Thibaut
+165,2015-02-17 00:07:29,"@Thibaut requested changes applied, see what you think
+",dhenson02,Thibaut
+133,2015-05-20 11:39:27,"@naabys Oops, I broke `devdocs.io/docs.json` when I made the CDN urls protocol-relative. It's fixed now.
+",Thibaut,naabys
+128,2014-10-21 12:51:09,"> Why can't it just have a dynamic width?
+
+Because then I have to implement drag & drop, user settings, etc. This would add a huge amount of complexity to the app and take time which I'd rather spend on other features.
+
+Do you really find the content readable with such a large width?
+
+I'll probably revert the fixed width this week-end but am a bit surprised you guys are that annoyed by it.
+
+cc @Darkwater @symmetriq
+",Thibaut,Darkwater
+128,2014-10-21 12:51:09,"> Why can't it just have a dynamic width?
+
+Because then I have to implement drag & drop, user settings, etc. This would add a huge amount of complexity to the app and take time which I'd rather spend on other features.
+
+Do you really find the content readable with such a large width?
+
+I'll probably revert the fixed width this week-end but am a bit surprised you guys are that annoyed by it.
+
+cc @Darkwater @symmetriq
+",Thibaut,symmetriq
+123,2014-09-27 19:41:23,"I don’t mind doing it, but I’m not sure what to use for a logo. @Thibaut do you think adding documentation for this would be appropriate, considering it’s just a library (although very popular)?
+",hollingberry,Thibaut
+73,2015-02-05 01:40:10,"@theblacklion Here is my fork: https://github.com/dav-/devdocs
+Just follow the instructions in the README to run it locally. 
+
+Screenshot:
+![screenshot](http://puu.sh/fucTb/d9ffcc0d53.png)
+",dav-,theblacklion
+73,2015-02-09 13:17:09,"@theblacklion PHP is the only documentation that uses the same syntax highlighting as on the original documents. The other docs should have better colors. 
+",Thibaut,theblacklion
+67,2014-03-09 22:24:18,"The scraper seems to be working fine. Thanks, @hanski07. I'll clean up the styling and merge this by the end of the month.
+",Thibaut,hanski07
+65,2016-08-02 11:01:14,"Wow I didn't know about that, thank you @SkyHub! :smile: 
+",Siilwyn,SkyHub
+63,2016-09-19 22:49:37,"@thibaut: What about using an already made full-text indexer like http://lunrjs.com/ - https://github.com/olivernn/lunr.js ? Google search is better but if you are offline then devdocs is your only resource. (also for #272 )
+",nahuel,thibaut
+23,2013-12-11 14:41:25,"@Thibaut, I had to make the AngularJS docs work as static pages for Dash and I'd be ok if you'd want to use them for devdocs. I do ask that in return you would provide a link to Dash at the footer of each AngularJS page.
+
+You can download the AngularJS docs Dash uses from http://kapeli.com/feeds/AngularJS.tar.bz2. Hopefully they'll be of some use to you.
+",Kapeli,Thibaut
+23,2013-12-12 16:30:46,"@santagada I wish it was as simple as ""grabbing the data from the angular repo"". Currently the code can only generate docs by scraping them, and Angular makes that difficult by not providing static HTML files.
+
+@Kapeli Thanks for the offer. I would rather the solution be open source and allow DevDocs to scrape the original content.
+
+@natchiketa Sorry to bother you. Any chance you could update your script to work with Angular 1.2?
+",Thibaut,natchiketa

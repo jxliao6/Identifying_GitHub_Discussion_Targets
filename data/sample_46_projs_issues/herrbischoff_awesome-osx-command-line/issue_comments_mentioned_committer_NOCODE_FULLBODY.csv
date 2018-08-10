@@ -1,0 +1,109 @@
+issue_num,datetime,body,login,mention_login
+160,2017-03-10 20:02:40,"Chapeau to your gut feeling @herrbischoff 
+
+And good to see you around again @sorin-ionescu ",dritter,herrbischoff
+156,2017-03-16 13:29:11,@herrbischoff Title has been capitalized.,caillou,herrbischoff
+142,2017-02-18 06:07:04,@herrbischoff Can I ask why you're against Electron-based apps? ,sifex,herrbischoff
+117,2016-10-28 02:57:28,"@herrbischoff it's released;)
+",napcae,herrbischoff
+114,2016-06-27 19:50:26,"@herrbischoff Seems good now.
+",kutsan,herrbischoff
+110,2016-11-20 01:37:57,"@herrbischoff, are there any other changes you'd like me to make?
+",unixorn,herrbischoff
+97,2016-02-29 19:27:50,"@herrbischoff how about now? I made changes (squashed).
+",alundiak,herrbischoff
+83,2015-12-04 01:14:49,"@herrbischoff NP about the late reply. I added a few more Finder control functions in #87. Let me know if you want any changes in the TOC format I used.
+",unixorn,herrbischoff
+79,2015-11-04 17:58:08,"Fixed the capitalization and moved the snippet to alpha order, @herrbischoff 
+",unixorn,herrbischoff
+58,2015-10-29 15:12:35,"@rprimus: Indeed. Missed that.
+
+@maximveksler: Please fix. Also, double-check what I've asked in my [previous comment](https://github.com/herrbischoff/awesome-osx-command-line/pull/58#issuecomment-152082229).
+",herrbischoff,rprimus
+58,2015-10-29 15:12:35,"@rprimus: Indeed. Missed that.
+
+@maximveksler: Please fix. Also, double-check what I've asked in my [previous comment](https://github.com/herrbischoff/awesome-osx-command-line/pull/58#issuecomment-152082229).
+",herrbischoff,maximveksler
+58,2015-10-29 17:33:20,"Thanks for the catch @rprimus.
+
+@herrbischoff - yes, zsh is installed with brew. El Capitan won't let you edit /bin so my homebrew is set to /usr/local/bin which is not enabled by default Apple /etc/shells setup.
+",maximveksler,herrbischoff
+58,2015-10-29 17:33:20,"Thanks for the catch @rprimus.
+
+@herrbischoff - yes, zsh is installed with brew. El Capitan won't let you edit /bin so my homebrew is set to /usr/local/bin which is not enabled by default Apple /etc/shells setup.
+",maximveksler,rprimus
+58,2015-11-03 23:19:46,"@unixorn: That's exactly been my experience on every OS X version including El Capitan. The only time I had to add something to `/etc/shells` was when using a newer Bash version, which is kind of logical given that OS X ships with a default version installed.
+
+I'd like to hear other voices about their experience before merging this change. I'm still not convinced that having to add it manually is expected behavior.
+",herrbischoff,unixorn
+58,2015-11-04 00:16:42,"@herrbischoff Thinking back, I may have set my shell to brew's zsh using System Preferences instead of `chsh`, so that isn't necessarily a useful data point.
+",unixorn,herrbischoff
+58,2015-11-04 10:07:09,"@unixorn: Thanks for your input.
+",herrbischoff,unixorn
+44,2015-10-24 21:25:02,"@vinkla: Nice work. I'm wondering though why the badge still shows that the build is failing although it is passing.
+
+Apart from that little hiccup, I think we should test both at least `setup.sh`, `brew.sh` and the sourcing of the `aliases` and `function` files. If all of them go smoothly, this would account for the most basic code glitches like missing colons, quotes and the like. It would also make sure that all Homebrew formulas are available and installing correctly.
+
+I suppose you removed the pre-sudo check because Travis would otherwise complain, correct?
+
+This automation is going to be a treat when finally set up. ;)
+",herrbischoff,vinkla
+44,2015-10-24 21:32:01,"@herrbischoff The reason it show failing is because I pointed it against the `master` branch. 
+",vinkla,herrbischoff
+43,2015-10-25 07:05:23,"@herrbischoff what about pull request validation? For correct style and script? I can write some code for style check btw.
+",G07cha,herrbischoff
+43,2015-10-25 18:36:37,"@G07cha: That would indeed be nice. You can send a PR to the `travis` branch so @vinkla, you and I can take a look. Thanks!
+",herrbischoff,G07cha
+39,2016-03-30 15:44:01,"@herrbischoff please re-open, adding .plist didn't work for me either. @ryanshuck solutions works though
+",mindfulmonk,herrbischoff
+35,2015-10-23 07:49:52,"@vinkla: Interesting idea. Travis does support Mac OS as a testing target. However, writing effective tests for simple configuration changes could prove to be challenging, as there is usually no output. Also, Hardware-related tests will probably be impossible.
+",herrbischoff,vinkla
+35,2015-10-24 18:26:05,"Alright, @vinkla: as of now you have push access to the repository. Use it wisely! ;)
+
+I have set up a new branch `setup-files` for us to work with. I believe the structure should be self-explanatory. I use Vim as my main code editor so the files are tailored to this environment. To spare yourself and others the pain of having to adjust editor settings manually, there is also an `.editorconfig` file. Which should (given the correct plugin for your code editor is installed) adjust the code formatting automatically.
+
+I believe the files should ultimately be in a separate folder which contains its own `README.md` with basic information about their intent and instructions on how to use them.
+
+Let's see what we can create! I'm especially looking forward to how the Travis tests will run. They are set to run only when a `.travis.yml` file is present. So as soon as you add one, it's go time.
+",herrbischoff,vinkla
+27,2015-10-21 00:49:46,"@herrbischoff good call, updated the title :)
+",rileyjshaw,herrbischoff
+22,2015-10-21 08:14:48,"@boneskull, good question, my opinion is to set link with short description, like:
+`[.plist file](https://gist.github.com/your-gist)`
+But @herrbischoff may have different opinion so let's wait for him.
+",G07cha,herrbischoff
+22,2015-12-04 05:23:30,"@herrbischoff not necessary. thanks!
+",boneskull,herrbischoff
+21,2015-10-21 06:47:39,"@herrbischoff, it's ok becouse you already unloaded service, if you will load service back and try unload again, it will unload without any message, if you unload second time it will give you same message as you accrued.
+Btw, I'm think that redirect to `/dev/null` is unnecessary too
+",G07cha,herrbischoff
+21,2015-10-21 13:56:21,"@G07cha: Thanks, I thought as much. I should really get more sleep. ;)
+
+@vinkla: Thanks. Merging.
+",herrbischoff,G07cha
+21,2015-10-21 13:56:21,"@G07cha: Thanks, I thought as much. I should really get more sleep. ;)
+
+@vinkla: Thanks. Merging.
+",herrbischoff,vinkla
+10,2015-10-18 15:23:37,"@vinkla: Thanks for the pointer. I will close this then.
+",herrbischoff,vinkla
+3,2015-10-16 12:49:01,"There you go! 
+
+Thanks for creating this list @herrbischoff 
+",willywos,herrbischoff
+97,2016-01-21 23:44:09,"Tested on my Mac OS since Yosemite till now (10.11.3).
+
+<img width=""948"" alt=""screenshot 2016-02-29 20 29 03"" src=""https://cloud.githubusercontent.com/assets/2131633/13406311/0c1df15a-df23-11e5-842f-49425ccb5e05.png"">
+
+@herrbischoff please review.
+",alundiak,herrbischoff
+96,2016-01-21 20:45:56,"@herrbischoff please review, and merge if such suggestion make sense for this repo.
+",alundiak,herrbischoff
+92,2016-02-29 11:54:31,"This was just added by @vinkla in PR #102. Thanks for letting me know.
+",herrbischoff,vinkla
+44,2015-10-24 19:46:15,"@herrbischoff I don't know which setup we want to use but in this PR we test the `setup.sh` script and see how well it performs on OS X 10.9, 10.10 and 10.11. Let me know what you think about this.
+",vinkla,herrbischoff
+43,2015-10-25 18:36:37,"@G07cha: That would indeed be nice. You can send a PR to the `travis` branch so @vinkla, you and I can take a look. Thanks!
+",herrbischoff,vinkla
+19,2015-10-20 15:47:26,"That might be better, what do you think @herrbischoff?
+",vinkla,herrbischoff

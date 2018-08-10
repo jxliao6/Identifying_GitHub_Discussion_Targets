@@ -1,0 +1,589 @@
+issue_num,datetime,body,login,mention_login
+688,2017-03-27 14:59:24,@GreLI any chance you could cut a release for us now that this has been merged? ,pklingem,GreLI
+686,2017-03-23 15:43:42,"@caub Totally width/height are not typically necessary. In my case, it allowed for just updating assets instead of deploying a new version of the app I'm working on.  Had I not been time / deployment constrained, I would have used removeDimensions and set the dimensions in CSS ;-)",nym,caub
+679,2017-03-14 16:28:25,"@GreLI but it does, not directly but via CSSO.
+@ianchadwick By default minifyStyles should remove unused styles based on usage data. There are few exceptions:
+- SVG contains `<script>` element
+- some elements have an `on*` attribute (event handler)
+
+If something from the list is found in SVG, minifyStyles decides that style removal is unsafe. You can force removal by setting `usage.force` option to `true` (see [example](https://raw.githubusercontent.com/svg/svgo/master/test/plugins/minifyStyles.09.svg)).
+I admit a problem with minifyStyles. Let me know if you found cause of the problem.",lahmatiy,GreLI
+679,2017-03-16 08:34:38,"I understood the problem. Unused styles removal feature were introduced in PR #640. But it's not released yet.
+@GreLI When are you planning publish a new version?",lahmatiy,GreLI
+679,2017-03-16 09:00:10,"@lahmatiy thanks for the extra info.
+
+Neithier of those exceptions are true for the SVG i'm attempting to minify. 
+
+Here's what I've tried:
+
+`svgo 1.svg 1.min.svg --pretty --enable=minifyStyles --config '{""plugins"":[{""minifyStyles"":{""usage"":{""force"":true}}}]}'`
+
+Here are the before and after shots.
+
+Before: [Fat file](http://pastebin.com/raw/6Znrpmp0)
+After: [Minified(ish)](http://pastebin.com/raw/F1p6q2we)
+
+The SVG only needs 9/10 of the first classes the rest are not used.
+
+@GreLI If by performance you mean speed of conversion this is a complete non issue for me. I'd much rather spend 1 minute making a file 90% smaller than extra ms & bandwidth on every single request :)
+
+Thanks!",ianchadwick,GreLI
+679,2017-03-16 09:00:10,"@lahmatiy thanks for the extra info.
+
+Neithier of those exceptions are true for the SVG i'm attempting to minify. 
+
+Here's what I've tried:
+
+`svgo 1.svg 1.min.svg --pretty --enable=minifyStyles --config '{""plugins"":[{""minifyStyles"":{""usage"":{""force"":true}}}]}'`
+
+Here are the before and after shots.
+
+Before: [Fat file](http://pastebin.com/raw/6Znrpmp0)
+After: [Minified(ish)](http://pastebin.com/raw/F1p6q2we)
+
+The SVG only needs 9/10 of the first classes the rest are not used.
+
+@GreLI If by performance you mean speed of conversion this is a complete non issue for me. I'd much rather spend 1 minute making a file 90% smaller than extra ms & bandwidth on every single request :)
+
+Thanks!",ianchadwick,lahmatiy
+679,2017-03-16 09:12:24,"@ianchadwick Do you use version from npm or github master? Version on npm hasn't unused style removal feature. Wait for upcoming release or try version from master.
+
+> If by performance you mean speed of conversion this is a complete non issue for me.
+
+I guess @GreLI misunderstood you, because mentioned issued #592 doesn't relate to your problem.",lahmatiy,GreLI
+679,2017-03-16 09:26:38,@lahmatiy npm... just tried from master and it's working as expected. Thank you!!!,ianchadwick,lahmatiy
+659,2017-02-13 16:04:48,Thanks @AprilArcus @GreLI ,Matt-Butler,GreLI
+659,2017-02-13 16:04:48,Thanks @AprilArcus @GreLI ,Matt-Butler,AprilArcus
+657,2017-01-31 23:58:23,"@GreLI The ""hackish""ness is what gets introduced by [surprise] Adobe! Both tests pass though.
+
+If you specify a `.class` (i.e. a layer name beginning with a `.` or an `#id` [layer name beginning with a `#`]), then once that SVG is exported from Illustrator, for some reason these become `_x2E_` instead of `.`, and `_x23_` in place of `#`…
+
+The idea here is that it's useful to be able to specify which attribute you are targeting (with CSS say) just by naming the layers accordingly.
+
+I suppose you could take the view as with #648, and say that this possibly falls outside of the scope of SVGO if it is focussed _purely_ on optimisation, but it is useful to be able to add plugins that solve problems like this into the build step, so I guess this is another argument for #564… along with other ideas for useful plugins such as adding an `<?xml-stylesheet` instead of inline `<style>`s, and/or adding `xlink`s to SVGs.",danielbayley,GreLI
+655,2017-02-25 20:44:27,"@GreLI by putting hasStyleOrScript in the config, it allows to make sure a new one is there when running a new instance of SVGO. Without this change, the flag is really global even with a new instance of SVGO
+
+https://github.com/svg/svgo/pull/655/commits/bcd908691f41b9e300e499d25967d3bb3e2a453f#diff-2b80c20a2dbfb8e48fe3a26d26111ddaR13
+
+it could be possible to make this plugin in full mode like cleanIDs, instead of per element, but I think that's fine like that",caub,GreLI
+655,2017-03-12 00:24:22,"I think @caub is right that the usage of global variables may be problematic elsewhere as well. For example, in the ""removeUselessDefs"" plugin, a global 'defs' variable is reassigned various times throughout the plugin's execution. When the plugin exits, the variable will continue to hold a reference to its current value. In this case, I don't think there will be any behavior changes... however, it does seem like at the very least there will be a temporary memory leak (i.e. the referenced element won't be garbage collected until the next time SVGO is run).
+
+Link: https://github.com/svg/svgo/blob/master/plugins/removeUselessDefs.js#L10",alexjlockwood,caub
+648,2017-01-30 01:31:11,"Thanks for taking a look @GreLI 
+
+## Motivation
+The purpose of submitting this PR is to clean up id attributes in SVG files by converting those id attributes to class attributes. If you include an SVG file with an id attribute more than once into an HTML file, that file has become invalidated because an id attribute needs to be unique. 
+
+## Application
+Design tools like [Sketch](https://www.sketchapp.com/) and [Adobe Illustrator](https://www.adobe.com/illustrator) automatically generate SVG files when exporting the designs. When a designer exports these SVG files, the design layers in the application append an id attribute of that layer name to the SVG. Therefore, the idea is to use `svgo` to clean up or optimize SVG files automatically generated by design tools for use in web applications. #494 is an example of this.
+
+## Future Work
+Let me know if this is something you are interested in pursuing. I understand if it does not align with the goals of `svgo` and we can close the PR.
+
+## Gratitude
+Thank you for your work on `svgo`! We are using this fork at my company, and it was easy to get started with `svgo` thanks to the good documentation. My only advice is that it would be nice to be able to write a command line plugin without needing to fork the repo as described in #564",baldwmic,GreLI
+641,2017-01-12 15:26:53,"Nicely done, @elrumordelaluz! This would also address #598 :)",waldyrious,elrumordelaluz
+640,2017-01-12 12:01:54,"@GreLI 
+- Plugins are merged
+- Enabled by default
+- Doesn't remove unused styles when document has a <script> element or on* attribute. `usage.force` option to force removal
+- Now it's ok. Feel free to make up a code style and related after merge ;)",lahmatiy,GreLI
+638,2017-01-09 11:25:19,"@caub the fact that there is a `<path>` with attribute `fill` and the value `none` doesn't means is useless, since `fill=none` is useful to show the `stroke` and so on.
+I think because of this, the author (@deepsweet) checks if there is an attribute `fill` but with value different than `none` [here](https://github.com/svg/svgo/blob/master/plugins/removeUselessStrokeAndFill.js#L38)",elrumordelaluz,caub
+637,2016-12-29 12:14:24,"@AlimovSV thanks, waiting for SVGO new version to be released",ganlanyuan,AlimovSV
+636,2017-01-12 14:00:20,"Thanks a lot @elrumordelaluz ! This might not be the prettiest of CLI-interactions, but it does exactly what I was looking for!
+
+I'm gonna close this issue. If others could find it useful to see this improved, I think a new issue should be opened for that.",jkelstrup,elrumordelaluz
+608,2016-10-04 12:40:58,"@GreLI: didn't looked into the pull requests first. We needed it, so I wrote it and thought I should wrap things up and make a PR here. 
+
+So if you don't need the plugin, should I create a separate PR for the docs update only?
+",JonathanStoye,GreLI
+604,2016-09-27 09:49:30,"@GreLI this works only for built-in plugins - how do I load/add my custom one with a predefined name like `callbackOnDefinedFill`?
+",joscha,GreLI
+604,2016-09-27 12:44:09,"@GreLI Yes, sure, but your code:
+
+
+
+does not pass the plugin in anywhere - apart from the `plugins` array not even taking a named key like that. If I assume you meant:
+
+
+
+which would be allowed by SVGO, it still would just be a plain JSON object with a key named `callbackOnDefinedFill`, but the plugin has not been loaded.
+",joscha,GreLI
+604,2016-09-27 13:04:22,"OK, I will just use `Object.assign` for now then, thank you @GreLI!
+",joscha,GreLI
+602,2016-09-21 16:06:23,"@GreLI Some of us are not afforded the opportunity to use .12+. A build server I am required to use is locked in at .10 for instance. A change from .10 for a lot of people is just not feasible whereas bumping this package by a major release so that we can be stuck in our archaic ways would not require much effort.
+",pmwisdom,GreLI
+602,2016-09-22 15:02:48,"@GreLI so let's use semver? every breaking change is a major bump (positive integers are still free), every new feature is a minor and every fix is a patch. well, 4 years ago this was not so popular :) v1.0.0 FTW.
+",deepsweet,GreLI
+602,2016-09-22 18:02:54,"@deepsweet, was thinking about it too. I think yeah, it's mature enough. Most bugs fixed, but what disturbs me is that SVGO still doesn't understand CSS.
+",GreLI,deepsweet
+602,2016-09-22 18:17:22,"@GreLI supporting CSS in its basic form could be v1.1 or whatever minor version bump if it doesn't break backward compatibility or something. so imo it's time for 1.0 for sure.
+",deepsweet,GreLI
+602,2016-09-22 18:19:47,"@deepsweet right.
+",GreLI,deepsweet
+602,2016-09-26 18:19:10,"greenkeeper has been working hard :) builds are so green now.
+
+@GreLI could you please revert a part of commits prior to Node.js version dropping, then publish `0.7.1` (this will fix builds), then apply ""breaking changes"" again and publish it as `1.0.0`? it seems like we still have to do something regardless the semver discussion.
+",deepsweet,GreLI
+602,2016-09-26 19:13:52,"@deepsweet, yep, will do.
+",GreLI,deepsweet
+598,2016-09-27 09:28:28,"@waldyrious, you can pass config in a form of JSON in cli:
+
+
+
+but yeah, I agree it's clumsy. Suggestions are welcome!
+",GreLI,waldyrious
+592,2016-10-06 14:34:02,"Ah okay, thanks for the quick response @strarsis :)
+",zakness,strarsis
+592,2016-10-10 17:16:23,"@strarsis there is one caveat with the PR to juice. Since version 3 it requires Node.js >= 4, while svgo works on 0.10 and higher (and there were complains recently when it was bumped to 0.12, so I've reverted changes). If you update dependency on juice you will not able to use the plugin on lower Node.js versions.
+",GreLI,strarsis
+592,2016-12-12 19:45:05,"@alexjlockwood: The recent css-select has to be [released to npm](https://github.com/fb55/css-select/issues/72).
+Also @GreLI has to review and possibly remark/fix things.
+My own guess is that this is merged quite soon after css-select has been released.",strarsis,GreLI
+592,2017-01-18 18:22:45,"@laurentvd: You can already use it by installing svgo from this PR branch (see instructions further above).
+Currently not the latest [css-select](https://github.com/fb55/css-select/issues/72) release is used but a newer commit because of features/API 
+that are required for its usage in svgo.
+
+@GreLI: This PR can't/shouldn't be merged into svgo with a [github commit](https://github.com/strarsis/svgo/blob/inlineStyles/package.json#L53) as package dependency, right?",strarsis,GreLI
+592,2017-01-19 10:42:26,"@strarsis thanks and yes I read those instructions (which work fine). The thing is - however - that I'm using a package which uses a package which uses `svgo` ;-) You probably see my problem there. I'll wait for it to be merged, was just curious on the timeline for this.",laurentvd,strarsis
+592,2017-02-05 16:58:30,"@GreLI : Now this could be merged, any changes required?",strarsis,GreLI
+592,2017-02-06 00:08:21,@GreLI: I can separate the code for _css selection_ and for the _inline styles plugin_ in two PRs if necessary?,strarsis,GreLI
+592,2017-03-20 22:17:07,@GreLI All tests are passing.,strarsis,GreLI
+592,2017-03-21 17:38:52,"@lahmatiy: I am not sure whether this is really worth the performance improvements, but one could try to pass the css-tree parsed selector tokens directly to css-select instead first translating it to a string and letting css-select parse it back to its own tokens (https://github.com/fb55/css-select/blob/e109d4b3668354542c806a6b652410f135d679ae/lib/compile.js#L33 and https://www.npmjs.com/package/css-what).",strarsis,lahmatiy
+592,2017-03-21 18:12:04,@strarsis It's not clear to me what you're asking for. Question about the performance gain? I don't think it's a bottleneck. And converting to `css-what` format is overengineering.,lahmatiy,strarsis
+589,2016-09-02 15:01:23,"Thanks for clarifying, @GreLI. Turns out that my issue was actually the `cleanupIDs` plugin running before the `removeElementsByAttr`—which I had configured to remove an element by ID but by that time the ID had already been removed.
+
+Easy fix was to explicitly declare the `cleanupIDs` plugin in my config _after_ the `removeElementsByAttr` plugin.
+
+I wonder if it's worth giving `removeElementsByAttr` a little more priority in the order of execution... Seems like there could definitely be conflicts with `cleanupAttrs` and `cleanupIDs`.
+",elidupuis,GreLI
+570,2016-07-27 20:19:16,"great @GreLI, thanks for the reply. 
+Is there any _doc_ about  `--multipass` (didn't foud in README) or at least how to use in node (no CLI)?
+
+thanks again,
+",elrumordelaluz,GreLI
+570,2016-07-27 20:42:55,"@elrumordelaluz Check [the `svgo` executable](https://github.com/svg/svgo/blob/9f545d2/lib/svgo/coa.js#L215-L219), although that's not docs.
+",derhuerst,elrumordelaluz
+565,2016-07-07 22:58:13,"@GreLI Any suggestions on a configuration format for allowing more flexible element selectors? Are there other plugins that use a CSS-like selector format?
+",elidupuis,GreLI
+564,2016-08-22 11:15:02,"@GreLI would you be happy for a contribution adding this ability?
+",gampleman,GreLI
+563,2016-11-11 19:52:34,"Consider this example @GreLI.
+
+This defs/mask/use structure is typical of some graphics programs output like Illustrator or Sketch.
+
+With IDs:
+
+
+
+Optimized by inlining referenced element:
+
+
+",themadcreator,GreLI
+557,2016-06-29 09:33:46,"@GreLI @kevinSuttle Because the `:` is used by this script as an element search it conflicts with attributes that have `:` in them. So for example I want to remove the attribute: `xmlns:xlink` from the `svg` element but because it sees that `:` it tries to remove `xlink` from the `xmls` element which doesn't exist. That make sense?
+",iamdriz,GreLI
+557,2016-07-05 10:00:04,"@GreLI That causes it to try and remove an `xlink` attribute from an `<xmlns>` element (which doesn't exist!). The problem is that the `:` colon is used as a prefix to choose which element to apply the search and in this case the attribute itself contains the prefix so confuses SVGO.
+",iamdriz,GreLI
+555,2016-09-20 16:01:04,"@ben-eb Thanks!
+
+Let's close this in favor of #436 because that issue fits better.
+",derhuerst,ben-eb
+535,2016-11-20 10:28:50,"@GreLI 
+
+An example:
+
+
+
+A parameter that accepts a string or a text file to append as header would fit my needs.
+",nt1m,GreLI
+535,2016-11-20 10:35:07,"@GreLI I'd be fine with having to regenerate the header every time SVGs are cleaned. The exclamation point is a good idea though.
+",nt1m,GreLI
+521,2016-03-21 18:48:48,"@scurker Seems like it would, thank you! Hope this gets merged in.
+",doot0,scurker
+521,2016-03-21 19:24:30,"@GreLI Correct, it'll convert both allowing you to convert colors for everything within css:
+
+
+
+However, I could see potentially wanting more granular control over paths vs strokes. Are there any other examples of plugins that allow you to pass in an array of options?
+",scurker,GreLI
+505,2016-04-14 11:39:56,"@GreLI got the same issue with [gulp-svgmin](https://github.com/ben-eb/gulp-svgmin). My config looks like:
+
+
+",bm2u,GreLI
+504,2016-02-23 15:04:26,"Hey,
+
+Thanks for the response.
+
+Essentially, instead of dynamically building a string which points to an unknown-until-runtime location in the `plugins` folder, all plugins which could potentially be needed should be required upfront and then only worked upon if needed.
+
+I might be able to provide a PR at some point, but need to do some reading to make sure it works as expected. I'll end up doing that on my own fork hopefully sometime this week.
+
+Talking to @guybedford about the issue he said:
+
+> @MeoMix dynamic CommonJS requires are not supported because they are sync and the browser is async. Typically for these plugin patterns you want to ensure the module is already loaded by creating an async layer around it. Eg how we handle Babel plugin loading in the system-babel plugin, by first System.import'ing the plugins ourselves, then running Babel.
+
+You can see that file here: https://github.com/systemjs/plugin-babel/blob/master/plugin-babel.js
+",MeoMix,MeoMix
+450,2016-02-29 01:30:49,"@GreLI #242 is about changing the hardcoded indentation value (to 2 spaces from 4), not making indentation configurable as with this issue/suggestion.
+
+Ultimately I would like to see configurable `--pretty` indentation via a CLI argument, defaulting to `.editorconfig` and finally falling back to 2 spaces. See https://github.com/svg/svgo/issues/507.
+",jaydenseric,GreLI
+442,2016-09-08 17:50:42,"@GreLI AFAIK a namespace prefix is only valid if the svg has a xmlns binding that prefix to a unique DTD. So if svgo removes the xmlns, it should also remove the corresponding prefix from the elements/attributes, otherwise the svg file is invalid (I'm not 100% sure on this, but that's my understanding).
+
+In any case, according to the [inkscape wiki](http://wiki.inkscape.org/wiki/index.php/Inkscape_SVG_vs._plain_SVG), sodipodi-prefixed attributes and elements are metadata, rather than graphical information needed to render the image, so svgo should remove not just the prefix, but the whole attribute/element as well.
+",waldyrious,GreLI
+436,2015-10-23 13:55:06,"@GreLI Any thoughts?
+",TrySound,GreLI
+436,2015-10-23 15:37:18,"@GreLI You can firstly just make svgo-cli which will be dependent on svgo. Dependencies will be deduped.
+",TrySound,GreLI
+436,2015-10-24 11:08:58,"@GreLI For you it's not a big issue. For us yes. Web should be small in every ways.
+",TrySound,GreLI
+417,2015-11-08 17:54:02,"@GreLI Thanks!
+",TrySound,GreLI
+411,2015-08-03 22:29:04,"@waldyrious Yes this looks like what I was thinking off ...  
+",Quentie,waldyrious
+411,2016-09-14 11:20:18,"@GreLI a single curve is 3 times larger than a single line, but to get even an approximation to such a curve, one would need multiple lines, not 1. So for similar geometry, whether it's represented as curves or lines, actually the lines version occupies much more space.
+
+Of course, simplifying curves (which can at least make a reasonable attempt at preserving the shape of the curve while using less nodes) will generally produce more visually appealing results than simplifying the equivalent sequence of lines into a sequence with less nodes. The ideal approach would be to simplify sequences of lines into _curves_, which can then try to trace the original path by clever usage of the curve parameters.
+",waldyrious,GreLI
+404,2015-08-04 17:55:28,"@GreLI we (@snorripall and myself) did that and our iconmoon fonts work — it's because all the content of svg fonts is in `<defs>`. 
+",ThisIsMissEm,GreLI
+399,2015-10-07 13:08:38,"I also have a use case where I need to copy the contents of CSS classes in `<style>` blocks outputted by Illustrator/Photoshop into attributes to make them work with SVG Symbol sprite sheets.
+
+The plugin @GreLI mentions (convertStyleToAttrs #427) makes it a lot easier, but there is still a manual step of copying the classes in the `<style>` blocks into style attributes.
+
+Would it make sense if there was a separate plugin for this or for it to be rolled into convertStyleToAttrs or as part of the proposed 'remove `<style>`' plugin?
+",ianmcgregor,GreLI
+399,2015-10-14 08:37:25,"@GreLI Thank you for your answer. 
+
+Do you also have some infos about the unnecessary `<g id=""foo"">` wrapper?
+",m5o,GreLI
+396,2015-07-07 01:07:10,"Thanks @GreLI - I noticed the build has broken on this change - I was intending to fix that error this morning. Is that something you can fix easily?
+",bradbarrow,GreLI
+396,2015-08-06 01:39:58,"Hey @GreLI what's the plan looking like for this change?
+",bradbarrow,GreLI
+390,2015-07-05 06:27:56,"So, @GreLI, what's your decision?
+",Kreozot,GreLI
+390,2015-08-18 07:42:57,"Hello!  @GreLI! Anybody!
+",Kreozot,GreLI
+383,2015-06-12 14:48:00,"Hello, I confirm that @GreLI 's commit solves the fix, but doesn't seem to be released yet. when do you think it will be ? thanks
+",swisstofu,GreLI
+369,2015-05-24 22:46:58,"Sounds good. Thanks for the information @GreLI :D
+",stevemao,GreLI
+368,2016-11-16 20:16:57,"@GreLI @dnewcome I'd be interested in seeing this functionality supported, if not in the `convertShapeToPath` plugin then some other plugin.  (It seems to make sense in this plugin however, based on the name.)  Any chance we could resurrect this somewhere?
+",src-code,GreLI
+368,2017-03-12 21:52:02,"@GreLI as someone starting to write a program with both ""svg"" and ""optimize"" in the name and considering attempting to implement it as a svgo plugin, I want to comment here that ""file size"" is not the only thing that might be optimized. ""more bytes which is opposite to purpose of optimization"" is a very narrow interpretation.",sparr,GreLI
+364,2015-06-05 16:51:13,"For @waldyrious:
+
+
+",a-x-,waldyrious
+344,2015-04-16 20:32:36,"@GreLI - Here's one of the more simplistic examples of what I'm trying to achieve. If there's already a pre-existing plugin combination that will produce this, please let me know!
+
+## Original
+
+
+
+## Flattened (no `transform` on `concept_badge_complete` group)
+
+
+",booleanbetrayal,GreLI
+338,2015-04-06 11:57:04,"@GreLI please release a new version when you feel like it's ready :) 
+I'll retest immediately.
+",iliakan,GreLI
+316,2017-03-14 12:46:36,"I get the same error when using @betsydupuis' code, but it works when you add the width and height attributes like this:
+",TadWohlrapp,betsydupuis
+316,2017-03-14 15:48:10,"@GreLI, you're right. I confused it with https://jakearchibald.github.io/svgomg/ where the error currently occurres. Sorry for the mixup, I might have had too many tabs open at once.",TadWohlrapp,GreLI
+306,2015-02-02 03:00:23,"@GreLI I don’t really understand your comment; could you please explain?
+
+I was saying that svgo changes the MIME types for SVGs on my machine with the `svgo` command. I don’t understand how this is an OS issue.
+",dangodev,GreLI
+300,2015-01-19 11:32:42,"@GreLI, ok, thank you.
+",isqua,GreLI
+293,2015-03-19 22:46:06,"@littlefyr I do like your point of ""maximum significant digits"", but as @GreLI pointed out, a GCD is very infrequent in most realistic applications.
+
+I'm having some difficulty understanding the relevance of your comments as it pertains to this particular feature request. While I understand and agree that modifying values is a delicate procedure, and that extra care must be taken to ensure that all values are scaled equally, neither of your examples appear to demonstrate the optimal markup using the suggested transformation, which would be:
+
+
+
+This is 5.5% smaller than the example using the tenths place and 10.7% smaller than the example using the ten thousandths place. When gzipped, thats 1.3% and 4.2% smaller, respectively.
+
+Of course, there are further optimizations that could be applied to the given example, but I'm hoping the simplicity of your examples will further illustrate the point.
+
+I think you may be confusing some other optimization (rounding?) with the optimization I am suggesting; perhaps my use of the word ""precision"" in the title is the source of the confusion.
+",joeyhoer,GreLI
+293,2015-03-20 16:49:18,"@joeyhoer I'm piggy backing on your issue because what I am suggesting is effectively the same. 
+
+While its true, as @GreLI says, that you would need to have a viewBox in order to do that, the viewBox only defines the coordinate of the viewport. If no viewBox is defined, you can use `viewbox=""0 0 width height""`.
+
+One way to do this is to divide by a sufficient power of 10 that makes all the values between 0 and 1 (ok +1 and -1) round the value, to say 6 decimal places, and multiply by 10^6 (in this case).
+
+The biggest problems are (and I'm not sure its not a problem) may be with some path constructs like Arcs. I've never used them, but when I tried building one of my examples, i naively tried multiplying all the values by 10, but the arcs broke. 
+
+Also using different units like mm or cm would be challenging. 
+",littlefyr,GreLI
+289,2014-12-16 16:12:40,"@MariusRumpf that was indeed the issue for me as well - good find. I had the gulp-imagemin wrapped in a gulp-cache which is what was throwing me off.
+
+@GreLI feel free to close this issue as a problem with ""idiot user"" :)
+",xsegrity,GreLI
+285,2014-12-09 15:09:36,"@GreLI pretty sure http://www.youtube.com/watch?v=BTUbrcVd10U
+to repreat (OS X):
+
+
+",H1D,GreLI
+284,2014-12-12 13:39:12,"@GreLI I've improved `--multipass` in #263, but there's no released version with it yet
+",dfilatov,GreLI
+284,2014-12-12 16:02:14,"@dfilatov #263 didn't solve this issue
+",H1D,dfilatov
+283,2015-10-05 14:37:12,"@GreLI Thank you, it's okay :)
+",LeG3nDz,GreLI
+278,2015-02-11 15:34:58,"@GreLI @deepsweet Any reason why this hasn't been accepted yet?
+",sebdeckers,deepsweet
+274,2015-03-31 15:26:58,"just verified! thanks @GreLI !
+",booleanbetrayal,GreLI
+272,2014-11-14 01:16:19,"Hi @GreLI - the sample file is not enough information? You cannot reproduce?
+",keithkml,GreLI
+266,2014-11-10 08:31:42,"Thanks for your input @GreLI.
+
+In my case, I have to clean those attributes whatsoever, but it's a good thing to remember !
+",raphdg,GreLI
+263,2014-12-24 09:04:15,"@GreLI What stops you from release a minor version with this fix?
+",dfilatov,GreLI
+263,2015-02-18 20:00:46,"@GreLI how about (help wanted) Label in issues ?
+",Yeti-or,GreLI
+258,2014-11-04 11:48:20,"@GreLI Could you release a version with this option?
+",dfilatov,GreLI
+220,2014-08-02 11:25:49,"Yeah, I guess @roadhump is right — there is no need in additional plugin.
+",GreLI,roadhump
+202,2016-09-23 22:20:57,"@DanielMazurkiewicz @GreLI 
+
+How to specify prefix using bash console?
+",NeXTs,DanielMazurkiewicz
+197,2014-11-19 08:47:37,"@GreLI Is it possible to use custom plugins that are not in svgo included?
+
+I need to run very specific plugins and wonder how I can accomplish this.
+",stravid,GreLI
+196,2015-03-23 18:36:29,"@bennyschudel Nice, thanks. But I think there needs to be a check so that nested svgs do not lose their dimension attributes.
+
+E.g.
+
+
+
+Nested svg is well-provided for in the spec and sometimes essential:
+
+http://www.w3.org/TR/SVG/coords.html#EstablishingANewViewport
+
+@GreLI how to check that an `<svg>` is rootmost within the syntax tree?
+
+Lastly, I think we should consider renaming this to something like ""responsive"", to make it clear that we are not removing all dimensions. I would :heart: to see this land.
+",albell,GreLI
+196,2015-03-23 18:36:29,"@bennyschudel Nice, thanks. But I think there needs to be a check so that nested svgs do not lose their dimension attributes.
+
+E.g.
+
+
+
+Nested svg is well-provided for in the spec and sometimes essential:
+
+http://www.w3.org/TR/SVG/coords.html#EstablishingANewViewport
+
+@GreLI how to check that an `<svg>` is rootmost within the syntax tree?
+
+Lastly, I think we should consider renaming this to something like ""responsive"", to make it clear that we are not removing all dimensions. I would :heart: to see this land.
+",albell,bennyschudel
+196,2015-03-24 11:42:56,"> @GreLI how to check that an <svg> is rootmost within the syntax tree?
+
+For now it'd be something like `item.parentNode.elem == '#document'`. May be it would be better to add a method to API.
+",GreLI,GreLI
+183,2014-08-02 14:21:42,"Hi, @GreLI. I updated [the comment](https://github.com/svg/svgo/pull/183#issue-27220049) to explain this PR in detail.
+",shinnn,GreLI
+177,2016-10-28 04:15:32,"Hi @GreLI 
+I'm also struggling with large SVG files. Previously I used 0.5.0 which was able to handle my large SVG files (30-40MB) in 30-50 seconds. However, later versions (since 0.5.1) it would be just stuck there. It took too long to wait so I didn't see any error. On the other hand, the release notes of 0.5.1 is missing. Would you please point out what have been changed since 0.5.0?
+",huantingchen,GreLI
+177,2016-10-28 15:13:29,"@GreLI Thanks for pointing it out. Just tried and it worked well.
+",huantingchen,GreLI
+174,2014-10-17 20:34:19,"@GreLI 
+Mind showing me what this command looks like?
+",grayghostvisuals,GreLI
+174,2014-10-17 20:44:11,"@GreLI You get all the beers good sir! :beers:
+",grayghostvisuals,GreLI
+174,2014-10-18 09:47:29,"@GreLI Yes.. but it used to work without specifying the output folder.. as it works with a single file and it overrides if you don't specify the output..
+",lipis,GreLI
+171,2014-11-05 23:23:45,"@GreLI Thanks so much for the quick response! After taking a look at the docs, things made much more sense and I was able to get everything working correctly. 
+
+To your point that several plugins use this option, my issue was actually with the convertPathData plugin, so good call on keeping an eye out for that.
+",BlakePetersen,GreLI
+171,2016-07-27 08:52:16,"Thanks @GreLI, you saved my time. List of all related plugins in my config here:
+
+
+",hayatbiralem,GreLI
+168,2014-01-08 19:57:33,"@deepsweet That's great news! (The above test case is on the latest v0.4.3.)
+",espadrine,deepsweet
+168,2014-01-08 20:04:21,"@deepsweet yep, didn't see this issue
+@staabm added in  #165 
+",silentroach,deepsweet
+162,2014-11-02 21:57:39,"@GreLI The original repo was deleted but the actual flags are in one of my repos now.. I updated the links
+",lipis,GreLI
+153,2014-01-13 18:19:18,"@GreLI Thanks for the answer I found out myself so I deleted my comment. In case anybody is wondering it was ""Is it correct to assume circles to get converted to paths?""
+",Enome,GreLI
+153,2014-01-13 18:38:50,"@GreLI argh, I meant ""don't get converted to paths"". My svg knowledge is a bit limited but I thought at first this plugin would convert my complex icons into one path. After checking the source code of the plugin I now understand that it's converting each shape into a path to create a smaller svg file. Sorry for the confusion.
+
+The reason why I wanted one path is is because the MVC framework I am using makes it cumbersome to insert multiple shapes and paths.
+",Enome,GreLI
+151,2015-07-18 17:00:31,"i am, i'll open another ticket and provide detailed information and reference this issue. thanks @GreLI 
+",pruett,GreLI
+87,2016-09-09 08:25:31,"bingo. @GreLI , 
+",atwood-cai,GreLI
+71,2012-12-12 11:09:58,"@deepsweet  Tbh reading the text is easy. It's just that quickly replacing a path mess is a PITA, at least in Inkscape it is. Tedious deluxe.
+
+@johan sorry that diff looked like the text was split. Looking on the Webpage, it looks fine:
+
+
+",kaihendry,deepsweet
+67,2015-01-19 21:12:50,"> But probably in future it will crop path elements outside viewport.
+
+Hi,
+
+That, along with removing elements that are invisible/hidden behing opaque elements, would be heaven indeed!
+
+Thanks for all your great work, @GreLI!
+
+Regards
+Mateusz
+",paperboyo,GreLI
+60,2015-01-19 16:59:49,"@GreLI that plugin was done by [my request](https://github.com/svg/svgo/blob/master/plugins/transformsWithOnePath.js#L4) and is not as flexible, as suggested in this ticket. Snapsvg also is not related to this ticket anyhow.
+
+Anyway, there is [svgpath](https://github.com/fontello/svgpath) to do this job.
+",puzrin,GreLI
+19,2012-10-23 19:31:58,"@deepsweet, please handle `viewBox` carefuly and remove it only when its values are equal to `width` and `height` ones. But you're probably aware of this.
+
+@GreLI, could you please provide test cases with viewBox and scaling relations?
+",pepelsbey,GreLI
+19,2012-10-23 19:31:58,"@deepsweet, please handle `viewBox` carefuly and remove it only when its values are equal to `width` and `height` ones. But you're probably aware of this.
+
+@GreLI, could you please provide test cases with viewBox and scaling relations?
+",pepelsbey,deepsweet
+687,2017-03-23 13:24:43,"@caub thanks for catching it
+@GreLI Why tests were green? ",Yeti-or,GreLI
+687,2017-03-23 13:24:43,"@caub thanks for catching it
+@GreLI Why tests were green? ",Yeti-or,caub
+685,2017-03-23 13:16:28,@caub could you explain where is the typo ?,Yeti-or,caub
+659,2017-02-11 14:36:18,"Yep, multipass literally runs SVGO several times with all its plugins. Probably, it worth consider for class duplication checking before applying. /cc @AprilArcus.",GreLI,AprilArcus
+650,2017-01-20 21:10:50,"cc @GreLI @steveoriol similar but different to #373
+found in [v0.6.6](https://github.com/svg/svgo/releases/tag/v0.6.6)
+
+I'm building a loading icon that animates endlessly by starting at 0 and continue when the last animation is complete. However the optimization seems to 
+
+-  ignore the second value in the begin 
+-  doesn't consider the id as being used
+-  the id is dropped from the last animation
+
+Example:
+
+
+Output (minified with new lines for easier reading):
+
+
+Expected:
+",swilliamset,GreLI
+638,2017-01-09 11:25:19,"@caub the fact that there is a `<path>` with attribute `fill` and the value `none` doesn't means is useless, since `fill=none` is useful to show the `stroke` and so on.
+I think because of this, the author (@deepsweet) checks if there is an attribute `fill` but with value different than `none` [here](https://github.com/svg/svgo/blob/master/plugins/removeUselessStrokeAndFill.js#L38)",elrumordelaluz,deepsweet
+614,2016-10-14 18:23:53,"This fixes #504. There are definitely pros and cons to doing this, and am interested to hear your thoughts on what is best for the svgo project. My opinion, of course, is that this the pros outweigh the cons, but I can see the other side too.
+
+**Pros:**
+1. This makes svgo compatible with JSPM. Up until now, anybody who uses jspm and depends on svgo (directly or indirectly) has to create a configuration file in the jspm registry for _each version of svgo_. @MeoMix did this for svgo@0.6.1, and now I [have a pull request to do so for 0.7.1](https://github.com/jspm/registry/pull/987). Merging this svgo pull request will make it so that there will be no need anymore to create a configuration file in the jspm registry for each version of svgo.
+2. This will make upgrading svgo to es6 modules (instead of commonjs) easier. I don't know if there are plans to do that or not, but once you switch to `import`, `System.import()`, or `import()`, you can no longer synchronously load dynamic plugin code like you can with `require`. Instead, you can either import all of the plugins upfront (similar to what I've done in this pull request) or you can change the [preparePluginsArray](https://github.com/svg/svgo/compare/master...joeldenning:issue-504?expand=1#diff-8f58d3f133adabc0050efa4a28cc5457R104) function to be an asynchronous function that returns a System.import() promise.
+
+**Cons:**
+1. The `pluginMap` is sort of an annoying manifesty thing that introduces one more step to the process of writing a new svgo plugin.
+",joeldenning,MeoMix
+612,2016-11-04 00:52:10,"@GreLI is there anything I can do to get this merged?
+",joscha,GreLI
+608,2016-10-06 16:22:54,"@strarsis are you still working on #592?
+",katspaugh,strarsis
+574,2016-11-24 11:01:27,"@adamdicarlo 
+
+It might be caused by .yarnclean file.
+This file include `.*.yml`, when you yarn install, match files will be ignore.",blade254353074,adamdicarlo
+445,2015-11-18 13:14:44,"@GreLI Is there something wrong with this pull request? Any opinion?
+",phihag,GreLI
+436,2015-10-23 21:45:38,"After reading @sindresorhus' reasoning on this (https://github.com/sindresorhus/ama/issues/17#issuecomment-117860283) I thought it was a good practice to have a separate CLI. It makes sense for those wrapper modules that will not make use of the command line, and therefore don't need the dependencies. This way the package is leaner overall. :smile:
+
+The why is simple; extra calls to npm & more to download means slower build times. Less is more.
+",ben-eb,sindresorhus
+424,2015-11-26 11:06:44,"@GreLI What's your stance on that one? Would it make sense if not by default, being able to pass an argument for it?
+",lipis,GreLI
+417,2015-09-06 22:15:07,"/cc @GreLI
+",TrySound,GreLI
+405,2015-07-18 17:11:23,"In reference to #151 I seem to be experiencing similar issues when optimizing an .svg exported with Sketch. Below are the details of the output. One note, I have enabled a compact svg export from Sketch with the following setting:
+
+
+
+Initial (pre-svgo optimized) export from Sketch provides the following:
+
+
+
+The resulting image:
+
+![screen shot 2015-07-18 at 1 06 21 pm](https://cloud.githubusercontent.com/assets/794809/8762667/d7386fa6-2d4d-11e5-9343-a55a48b5eb8b.png)
+
+After svgo optimization:
+
+
+
+And resulting image:
+
+![screen shot 2015-07-18 at 1 08 53 pm](https://cloud.githubusercontent.com/assets/794809/8762680/35d16d10-2d4e-11e5-9dce-699640c97244.png)
+
+**Note**: I changed `id=FileExtension fill=""#000""` in the last line to show the text is in fact there
+
+Any help is greatly appreciated! Thanks.
+
+Ping @GreLI 
+",pruett,GreLI
+311,2015-03-30 17:22:22,"This would help with SVGOMG, where I keep a clone to avoid having to reparse the SVG per settings change. I'm currently doing really hacky things & the `parentNode` change [broke the hack](https://github.com/jakearchibald/svgomg/blob/master/src/js/svgo-worker/main.js#L66).
+
+I'm happy to create `JsAPI.prototype.clone` for this - any objections @GreLI?
+",jakearchibald,GreLI
+284,2014-12-12 13:34:55,"/cc @dfilatov 
+",GreLI,dfilatov
+279,2014-12-03 15:44:23,"I think this need to be fixed by excluding `foreignObject` while traversing svg tree not in plugins. @GreLI what do u think?
+",Yeti-or,GreLI
+278,2014-11-26 20:21:32,"@deepsweet Looks like Simplify.js is not supported on Node 0.8. Any chance of dropping that old version?
+",sebdeckers,deepsweet
+278,2014-11-27 03:14:18,"yeah, I think that we can drop v0.8.
+
+@GreLI if you'll decide to merge this plugin please drop 0.8 [here](https://github.com/svg/svgo/blob/master/package.json#L56) and [here](https://github.com/svg/svgo/blob/master/.travis.yml#L4).
+",deepsweet,GreLI
+278,2015-02-11 15:34:58,"@GreLI @deepsweet Any reason why this hasn't been accepted yet?
+",sebdeckers,GreLI
+271,2014-11-13 05:44:14,"@GreLI  We don't need `enable-background` if we have no <filter>'s
+what do you think?
+",Yeti-or,GreLI
+202,2016-09-23 22:20:57,"@DanielMazurkiewicz @GreLI 
+
+How to specify prefix using bash console?
+",NeXTs,GreLI
+180,2014-05-21 16:32:12,"@deepsweet could you push a new version of svgo on npm that integrates these changes?
+",pgherveou,deepsweet
+180,2014-06-25 14:57:46,"@deepsweet Bump. I would appreciate this getting on npm greatly too :) 
+",rasmusfl0e,deepsweet
+179,2014-03-26 15:28:03,"hey @deepsweet 
+
+is it possible to merge that into the next release?
+otherwise the removeTitle plugin is not working properly
+",bennyschudel,deepsweet
+168,2014-01-08 19:54:06,"@silentroach, is this was fixed in #165/#166 as well? if so, it will be available in the next patch version.
+",deepsweet,silentroach
+96,2014-05-19 05:01:14,"@deepsweet is this actually fixed? running through the default 0.4.4 config,
+
+input:
+
+
+
+output:
+
+
+
+or is svg unable to rewrite + merge the second path?
+",bcherny,deepsweet

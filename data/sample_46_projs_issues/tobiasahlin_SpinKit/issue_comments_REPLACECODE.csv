@@ -1,0 +1,1153 @@
+issue_num,datetime,body,login,close_date
+131,2017-02-17 00:49:22,"Is it possible to add a text message below the spinner?
+Naive approach didn't work.",Vanuan,2017-02-17 06:41:13
+131,2017-02-17 06:28:00,"what do you mean exactly?
+
+you have every option html and css offers you. there is no ""native"" option given by SpinKit.
+Here are two examples adding text below: https://jsfiddle.net/v02f6to7/
+if you want the text also to be spinning or attached to the animation you first have to look at the animation css itself and decide if you add extra html / text in the spinner element itself or if pseudo elements are an option.
+
+hope i could help you.
+this isn't an issue, more an faq request. should be closed.",ATBO,2017-02-17 06:41:13
+131,2017-02-17 06:41:13,Thanks.,Vanuan,2017-02-17 06:41:13
+130,2017-01-18 06:23:27,"<img width=""74"" alt=""screen shot 2017-01-15 at 10 27 16 pm"" src=""https://cloud.githubusercontent.com/assets/306293/22053072/37683ca6-dd03-11e6-8329-21c005b905c3.png"">
+
+I have been wrestling with this for a while. Using a CSS diff tool and I can't find the difference between the sample code (using scss) and my project. Can anyone point me as to what might cause the sk-wave to squish like this?
+
+I am using this in a ReactJS application. Interestingly, as soon as I put it in the react application jsx, I get this issue. Works fine when I have it in the app's container html. See below (html above, jsx below)
+
+<img width=""129"" alt=""screen shot 2017-01-17 at 11 03 32 pm"" src=""https://cloud.githubusercontent.com/assets/306293/22054216/438639ba-dd09-11e6-91cf-4da4515b4262.png"">
+",nsainaney,2017-02-03 20:58:01
+130,2017-01-31 18:35:13,"@nsainaney  u may use https://github.com/bentatum/better-react-spinkit for ur usecase.
+according to the docs you can change gutter width and more easily. (http://better-react-spinkit.benjamintatum.com/#!/Wave)",ATBO,2017-02-03 20:58:01
+130,2017-02-03 20:58:01,Thanks!,nsainaney,2017-02-03 20:58:01
+129,2017-01-06 09:03:39,"hey tobias, just wanted to share that fix. there also might be a possible ""future"" problem with gulp-autoprefixer because of the changes currently made in postcss/autoprefixer.
+thanks for ur spinners 👍 ",ATBO,
+128,2017-01-06 08:57:00,iOS issue with animation-delay. see @ http://i.xomf.com/nhqkq.gif,ATBO,
+127,2016-12-09 12:47:53,"Is this possible? I've been mucking around with jQuery and CSS for the last hour or two trying to figure this out, probably something really simple, lol.",simpleidiot,
+127,2017-01-06 16:59:46,"which spinner do you mean?
+just define a background to the element the spinner depends on.
+for example: 'rotating-plane' https://jsfiddle.net/y7yqusgr/
+if you want to use the spinner as alpha mask, for example on the ""cubemove"" one, you could create svg masks and animate them with javascript.
+there are some libs such as https://greensock.com/gsap to accomplish that.
+i haven't found a way to animate svg mask using css only yet. don't even know if this is possible.",ATBO,
+126,2016-10-10 12:29:26,"Also changed:
+- Bumped version
+- Added more precision to animation seconds (2.0s instead of 2s).
+",veldman,
+125,2016-10-02 19:48:24,"#96
+",GreenishBlue,2016-10-02 19:58:19
+125,2016-10-02 19:54:20,"Kind of duplicates my #123 :)
+",voxpelli,2016-10-02 19:58:19
+125,2016-10-02 19:58:19,"Ah nevermind 
+",GreenishBlue,2016-10-02 19:58:19
+124,2016-10-01 11:38:49,"Added a new hexagon spinner animation.
+
+![hexa_no-rotation](https://cloud.githubusercontent.com/assets/1512067/19013820/7f970a42-87dc-11e6-88dc-a9d217c3d2b8.gif)
+",wolfika,
+123,2016-09-30 07:40:50,"Enables importing them easily through the use of eg. https://www.npmjs.com/package/sass-module-importer
+
+With that module one would simply do `@import ""spinkit"";` and get all of the files or do `@import ""spinkit/scss/spinners/1-rotating-plane"";` to import a specific spinner, all without having to know exactly where npm put the module, which if Spinkit is a sub-dependency of another package will be hard due to npm 3:s flattening of the dependency tree.
+",voxpelli,
+122,2016-09-21 06:03:40,"https://github.com/tobiasahlin/SpinKit/blob/master/scss/spinners/4-wandering-cubes.scss#L22-L23
+",niftylettuce,
+121,2016-08-10 22:35:19,"https://github.com/tobiasahlin/SpinKit/issues/120
+",soumak77,
+120,2016-08-06 22:53:13,"I'm looking to integrate this library into [angular-base-apps](https://github.com/base-apps/angular-base-apps) to provide a set of angular directives for loading symbols.  I want to allow the user to easily change the size and color of the loading symbols as desired.
+
+I noticed PR https://github.com/tobiasahlin/SpinKit/pull/113 attempts to add the ability to configure the size of the loading symbol, however, it still hardcodes the values and produces a ton more CSS that most people will need.
+
+I was wondering whether there were any plans to add SCSS mixins for the spinners?  This would make it possible for the spinner to work with any size configuration as you will simply need to define the math using the argument instead of hard coding the values.
+",soumak77,
+120,2016-08-10 22:38:25,"@tobiasahlin I converted the first spinner to use mixins.  Let me know if you like this approach and I'll continue with the rest of them.
+",soumak77,
+120,2016-08-11 07:15:49,"I added mixins for all the spinners.  It was fairly straight forward since the scss logic was already broken down to use variables.  I also added the ability to disable css exporting, so that the library can be used only for the mixins without exporting spinkit specific css classes.
+",soumak77,
+120,2016-08-20 04:41:00,"@tobiasahlin fyi this will be part of [Angular Base Apps 2.0](https://base-apps.github.io/angular-base-apps/latest/#!/loader) if you're wondering how these changes will be utilized
+",soumak77,
+119,2016-07-22 14:52:12,"- Added a simple JS and JQuery plugin that allows the creation and
+  removal of a spinner to a DOM element.
+- Added Minified Spinkit CSS
+- Included Example fields for JS and JQuery usage
+",cr1x56,
+118,2016-07-16 08:04:02,"I tried to increase the width and height but that's not help me to increase the spinner.
+",rajasimon,
+118,2016-07-17 16:52:55,"@rajasimon Try this PR https://github.com/tobiasahlin/SpinKit/pull/113
+",jmagnusson,
+118,2016-08-11 07:18:01,"@rajasimon I added scss mixins with PR #121, so you can customize the size to anything you want
+",soumak77,
+117,2016-05-14 15:41:22,"failed to resolve compile 'com.github.ybq:Android-SpinKit:1.0.4'
+",Swapnil-Garg16,2016-12-09 08:57:27
+117,2016-06-24 04:00:12,"my problem too
+",bagi-code,2016-12-09 08:57:27
+117,2016-08-22 17:54:00,"my problem three
+",Leekao,2016-12-09 08:57:27
+117,2016-12-09 04:34:01,Yeah i am also having same issue,Nikhil-z,2016-12-09 08:57:27
+117,2016-12-09 08:57:27,That's an issue with https://github.com/ybq/Android-SpinKit - please report it there! 😃 ,tobiasahlin,2016-12-09 08:57:27
+116,2016-04-15 09:12:49,"hi,
+i don't now finish loading page. help me.
+please show code demo loadpage about 1s or 2s. 
+Thank you!
+",tuan-ph,
+116,2016-05-10 18:08:13,"I don't know if I know what's on your mind but if You need to for example fade out preloader after page is loaded just use:
+
+in html ( first spinner example )
+`<div class=""spinner""></div>`
+
+and in js ( jQuery )
+`$(window).on('load',function(){
+   $('.spinner').fadeOut();
+});`
+",aleksanderem,
+115,2016-03-26 23:49:19,"Hello,
+
+this is my very first trial on Sass and one of the first for front-end stuff, so, any feedback would be helpful.
+
+From what I see, the implemented animation is not as rapidly evolved as the rest of the existing ones, but I thought of having an overall feedback, as a first step.
+
+TB
+",toubou91,
+114,2016-03-21 09:47:44,,toubou91,2016-10-03 12:10:11
+113,2016-02-25 15:39:00,"Examples:
+
+<S_CODE_TOKEN>
+
+There are some breaking changes that allow us to decrease code duplication:
+- The class “sk” has to be added to each spinner
+- No margin is added to the spinner by default. The classes `sk-auto-hmargin` and `sk-md-vmargin` can be added to revert to the margins used before this PR.
+- Renamed `sk-spinner-pulse` to `sk-pulse` to follow naming convention.
+- Default to `display: inline-block` and `vertical-align: middle` for a more useful default
+
+All spinners work great to resize except for `4-wandering-cubes`. This is because an absolute size is declared in its keyframe. It would be awesome if anyone could help me come up with a solution to this issue 😀
+",jmagnusson,
+113,2016-07-20 11:54:53,"how do I change the opacity? its not very bright at all, so far I have tried adding th !important to the css but no luck, its not overriding
+
+@-webkit-keyframes sk-circleFadeDelay {
+  0%, 70%, 100% { opacity: 0; }
+  40% { opacity: 1; }
+}
+
+@keyframes sk-circleFadeDelay {
+  0%, 70%, 100% { opacity: 0; }
+  71% { opacity: 1; } 
+}
+
+to ....
+
+@-webkit-keyframes sk-circleFadeDelay {
+  0%, 70%, 100% { opacity: 0 !important; }
+  40% { opacity: 1 !important; }
+}
+
+@keyframes sk-circleFadeDelay {
+  0%, 70%, 100% { opacity: 0 !important; }
+  71% { opacity: 1 !important; } 
+}
+",sb-lc,
+112,2016-02-03 23:48:01,"Use currentColor as background-color to inherit current font color
+Use relative sizes to inherit current font size
+",hontas,
+111,2016-02-01 15:45:44,,benson09,2016-02-04 19:07:37
+110,2016-01-25 01:48:11,"[http://tobiasahlin.com/spinkit/](http://tobiasahlin.com/spinkit/);
+
+this site is very beautiful ,do you tell me the use the frame's name?
+",jiuyuehe,
+110,2016-01-31 11:52:00,"@jiuyuehe Thank you! 
+
+> do you tell me the use the frame's name?
+
+Could you rephrase this? What frame? And what do you want to know? :smile: 
+",tobiasahlin,
+110,2016-02-18 11:36:01,"I don't know if that's the original meaning of the issue...
+
+But indeed, when I look at the demo and see a nice animation, I would like to know which one to include.
+For example, I see the fourth animation. First, I have to count the dots to have the number. It could be displayed somewhere. Second, I don't see the animation name. If I view the source, I see `sk-cubemove` inside it, but this name is nowhere to be found in the `scss/spinners` directory (looks like the demo is a bit out to date?).
+
+So, in short, it would be nice to display ""4-wandering-cubes"" (in this example) somewhere on the page when selecting a demo.
+
+Thanks.
+",PhiLhoSoft,
+109,2015-11-23 14:17:39,"http://codepen.io/anon/pen/epaNzg
+
+Put your spinner into table and see this artefacts.
+",maliyshock,2015-11-23 15:02:18
+109,2015-11-23 15:02:18,"@maliyshock Thanks for reporting :pray: Not really sure what's going on here. This is 1) Not an issue in Safari (only Chrome), 2) much less prominent outside of codepen for me, and 3) something I was unable to fix by changing the `display` property for the container, or by playing around with adding transforms (e.g. `transform: translateY(0)`) to any of the elements involved.
+
+As far as I can tell, however, this is not an issue with SpinKit, but with how Chrome handles animations within tables, and how the spinner is being used. Closing for now.
+",tobiasahlin,2015-11-23 15:02:18
+109,2015-11-24 13:34:38,"http://codepen.io/anon/pen/epaNzgThis is working 23.11.2015, 18:02, ""Tobias Ahlin"" notifications@github.com:@maliyshock Thanks for reporting  Not really sure what's going on here. This is 1) Not an issue in Safari (only Chrome), 2) much less prominent outside of codepen for me, and 3) something I was unable to fix by changing the display property for the container, or by playing around with adding transforms (e.g. transform: translateY(0) to any of the elements involved.As far as I can tell, however, this is not an issue with SpinKit, but with how Chrome handles animations within tables, and how the spinner is being used. Closing for now.—Reply to this email directly or view it on GitHub.   _______________________________С уважением, Малышок Денис.Тел.: 8(953)342-89-65http://vkontakte.ru/id260319 
+",maliyshock,2015-11-23 15:02:18
+108,2015-11-23 13:35:21,"cc @jmagnusson 
+",tobiasahlin,2015-11-23 13:35:53
+107,2015-11-23 13:24:46,"cc @chris--jones @jmagnusson 
+",tobiasahlin,2015-11-23 13:27:24
+106,2015-11-18 10:44:08,"Separate pull request as requested, will resubmit new animation for review if and once this is merged :+1: 
+",chris--jones,2015-11-23 13:20:14
+106,2015-11-23 13:20:12,"@chris--jones :pray: :heart: thank you!
+",tobiasahlin,2015-11-23 13:20:14
+105,2015-11-18 09:15:59,,tobiasahlin,2015-11-18 09:19:41
+105,2015-11-18 09:19:29,"cc @jmagnusson 
+",tobiasahlin,2015-11-18 09:19:41
+104,2015-11-02 03:26:12,"Hello,
+on retina displays, this becomes important when the spinner is bigger than ~40px.
+
+Cheers!
+",jarnoux,2015-11-03 10:08:54
+104,2015-11-02 07:41:00,"Looks fine to me. What do you say, @tobiasahlin?
+",jmagnusson,2015-11-03 10:08:54
+104,2015-11-03 10:08:42,":heart::shipit: 
+",tobiasahlin,2015-11-03 10:08:54
+104,2015-11-15 07:06:19,"@tobiasahlin can you please push this to http://www.jsdelivr.com/? Do you need a new package version? 
+",jarnoux,2015-11-03 10:08:54
+104,2015-11-18 07:20:33,"@jarnoux Will do! Sorry for the delay :bow:
+",tobiasahlin,2015-11-03 10:08:54
+104,2015-11-18 09:23:24,"@jarnoux 1.2.3 is now published with this change included, jsdelivr should detect it Real Soon™ :pray: 
+",tobiasahlin,2015-11-03 10:08:54
+104,2015-11-26 09:00:19,"@tobiasahlin awesome, thanks!
+",jarnoux,2015-11-03 10:08:54
+103,2015-10-24 03:00:23,"Added a new animation (sort of a variant of 7, but bouncing upward rather than growing/shrinking).
+The gulpfile regex was not working as period (.) was not matching whitespace, so I have fixed this as well.
+",chris--jones,2015-11-06 14:54:30
+103,2015-11-02 07:55:23,"Hmm I wonder why the regex stopped working. Perhaps it's some change in Node v4. Thanks for finding it @chris--jones, do you think you could submit that as a separate PR?
+
+As for the animation I think @tobiasahlin will have to give his vote, considering he's the author, and CSS guru :smile: 
+",jmagnusson,2015-11-06 14:54:30
+103,2015-11-04 13:58:27,"@chris--jones Thanks for this! I'm :+1: on what @jmagnusson said here, could you separate these two changes in to two separate PRs? Regex fix is an instant merge, but will need to look closer on the animation :sparkles::pray:
+",tobiasahlin,2015-11-06 14:54:30
+103,2015-11-06 14:54:25,"Sure thing, but I've just recently left the country, so it'll be another week or so before I'm back at a computer. 
+",chris--jones,2015-11-06 14:54:30
+103,2015-11-09 12:52:17,"@chris--jones Thanks.
+",jmagnusson,2015-11-06 14:54:30
+103,2015-11-13 11:57:26,"@chris--jones Thank you! Happy travels! :raised_hands:
+",tobiasahlin,2015-11-06 14:54:30
+102,2015-10-14 00:26:58,"The MIT license requires including the copyright notice and license with the software, yet I don't see that included in the actual files.  Do you expect others to add it when they use your software? (or maybe you might want to add it, so it is always included :)
+
+Thanks.
+",jlovejoy,2015-10-15 13:47:14
+102,2015-10-15 13:47:14,"Hi @jlovejoy! The license file itself should be included, as it's part of the software. I noticed that the copyright year was outdated though, so took the time to update that. Thank you! :boom:
+",tobiasahlin,2015-10-15 13:47:14
+101,2015-10-10 03:08:03,"Added a new spinner and added ""spinners/11-folding-cube"" to spinkit.scss.
+",evgenyo,
+101,2015-10-11 16:40:05,"@evgenyo :bow: thanks for this! There's a lot of diffs here that are just indentation changes, could you look at cleaning that up? :heart:
+",tobiasahlin,
+101,2015-10-11 18:58:47,"@tobiasahlin I believe  https://github.com/tobiasahlin/SpinKit/commit/d45b25cf9f63c8c5fe7c1115ab2f921bc924319b commit never applied the ""easier to copy"" fix to the HTML/CSS examples, so it's not indentations but removed stars. And since 11-folding-cube was never added to spingkit.scss before, it's added in spinkit.css in this fork as well.
+",evgenyo,
+101,2015-11-23 13:38:50,"@evgenyo Sorry about that :bow: my fault! Would you mind updating from `master` now? Fixed this, so your PR should be all clean and tidy once you merge in :sparkles::ok_hand: 
+",tobiasahlin,
+101,2015-12-07 23:22:09,"@tobiasahlin No worries! Should be all fixed up :)
+",evgenyo,
+101,2015-12-08 17:28:45,"@evgenyo Thanks! :pray: This is looking smooth… wondering though if it can become even smoother. The blinking (fading in/out) is throwing me off a bit, maybe it'd look better if all the circles were hidden/shown through moving and/or scaling? Thinking out loud here, sorry if I'm not making any sense, but I feel like the dots are behaving in two very different ways. Would be great to make their animation patterns more consistent :) relying only on translation and scale could be a way to achieve that.
+",tobiasahlin,
+101,2015-12-09 21:33:54,"@tobiasahlin Hello hello! I actually messed around with scale vs opacity, and personally preferred the blinking effect over shrinking because it gave me a loading vibe rather than just a pretty animation. Having said that, it's your project so you tell me what works with your vision best. I also changed the left/top/right/bottom movements to transform:translate as well. Let me know if there's anything else : )
+",evgenyo,
+100,2015-09-05 23:06:34,"removed *’s from usage comments for easier copy and pasting of
+animations
+",coffee-cup,2015-09-07 08:32:43
+100,2015-09-07 08:31:42,"@coffee-cup :clap::clap: Clever!
+",tobiasahlin,2015-09-07 08:32:43
+99,2015-08-31 16:04:59,,tobiasahlin,2015-08-31 16:05:16
+98,2015-08-17 14:01:37,"Fixes #97
+
+cc @jmagnusson @JobaDiniz
+",tobiasahlin,2015-08-31 16:00:18
+97,2015-08-17 13:30:10,"Currently, size is [hardcoded](https://github.com/tobiasahlin/SpinKit/blob/master/scss/spinners/10-fading-circle.scss#L27-L28):
+
+<S_CODE_TOKEN>
+",JobaDiniz,2015-08-31 16:00:18
+97,2015-08-17 13:54:03,"@JobaDiniz Thank you for reporting! :bow: Totally agree, will fix.
+",tobiasahlin,2015-08-31 16:00:18
+96,2015-08-13 15:35:49,"The current `main` is the gulpfile. However, there are dependencies specified as devDependencies, which breaks Browserify's bundle function because it can't find modules that are required.
+
+I believe the solution should be to remove `gulpfile.js` as the main file in package.json, because users aren't going to use the gulpfile from this project outside of developing.
+",strom,
+96,2015-08-14 07:50:42,"@strom Thanks for reporting! :bow::heart:
+
+> I believe the solution should be to remove `gulpfile.js` as the main file in package.json, because users aren't going to use the gulpfile from this project outside of developing.
+
+Sounds fair. @jmagnusson thoughts?
+",tobiasahlin,
+95,2015-08-06 12:57:40,"cc @jmagnusson
+",tobiasahlin,2015-08-06 14:00:43
+95,2015-08-06 14:00:37,"Why not. Merging!
+",jmagnusson,2015-08-06 14:00:43
+95,2015-08-06 19:17:46,":sparkles::ok_hand:
+",tobiasahlin,2015-08-06 14:00:43
+94,2015-07-26 12:12:22,"Fixes #93
+
+cc @jmagnusson 
+",tobiasahlin,2015-07-26 12:13:29
+93,2015-07-25 08:01:32,"With Android fixes, and new default margins.
+- [x] Update Readme
+- [x] Release!
+",tobiasahlin,2015-07-26 12:13:29
+92,2015-07-24 18:38:01,"Fixes #30
+
+Another blind fix, by explicitly setting the delay to 0 for the third spinner, and correctly ordering the shorthand attributes.
+",tobiasahlin,2015-07-24 18:49:05
+91,2015-07-24 18:27:07,"Fixes #31
+
+This is a blind fix. Haven’t been able to test this, but this implements the fix suggested (and briefly tested) by @GregOriol. Crossing my fingers :tada:
+",tobiasahlin,2015-07-24 18:48:50
+90,2015-07-20 20:10:44,,tobiasahlin,2015-07-20 20:11:24
+89,2015-07-20 20:06:32,"Can’t be uppercase
+",tobiasahlin,2015-07-20 20:06:59
+88,2015-07-20 19:43:59,,tobiasahlin,2015-07-20 19:46:45
+88,2015-07-20 19:54:36,"Fuck yeah! :facepunch: 
+",jmagnusson,2015-07-20 19:46:45
+87,2015-07-17 20:42:16,"New folding cube spinner 🎉 behold, a gif preview! (it looks better in your browser though, promise)
+
+![occhf](https://cloud.githubusercontent.com/assets/211284/8756821/5614b858-2cd5-11e5-9db4-8cd7592b2455.gif)
+",tobiasahlin,2015-07-20 19:52:38
+87,2015-07-20 15:28:04,"Going to tag a new release before merging :sparkles:
+",tobiasahlin,2015-07-20 19:52:38
+87,2015-07-20 15:31:49,"Dude, that's a great looking spinner. Merge plz :wink: 
+",jmagnusson,2015-07-20 19:52:38
+87,2015-07-20 19:53:16,"![giphy-1 copy 4](https://cloud.githubusercontent.com/assets/211284/8785670/b5bebf8c-2f29-11e5-9fca-67b37d2dac73.gif)
+",tobiasahlin,2015-07-20 19:52:38
+86,2015-07-14 12:57:52,"Some general SCSS polish, including better usage of variables to make it easier to customize the spinners. Also making the spinners consistent with those on the demo page (changes might occur there as well).
+
+Fixes #78 
+",tobiasahlin,2015-07-16 19:56:42
+85,2015-07-13 20:36:16,"Nothing should really change because of this, purely implementation details.
+
+cc @jmagnusson :eyes: 
+",tobiasahlin,2015-07-14 08:47:11
+85,2015-07-13 20:41:24,"I think your CSS/HTML skills severly out-whey mine. So do it :wink:
+",jmagnusson,2015-07-14 08:47:11
+85,2015-07-13 20:43:45,"@jmagnusson 
+
+![1398](https://cloud.githubusercontent.com/assets/211284/8660317/8f547be4-29b0-11e5-97be-4b7ad52eaa9e.gif)
+",tobiasahlin,2015-07-14 08:47:11
+85,2015-07-13 21:44:17,"@jmagnusson Feeling done, mind trying this out before I merge? :eyes: :heart:
+",tobiasahlin,2015-07-14 08:47:11
+85,2015-07-14 08:47:04,"Had to update the dev dependencies to be able to run gulp. But everything seems just fine :+1: 
+",jmagnusson,2015-07-14 08:47:11
+85,2015-07-14 12:43:38,"![11689967_905705716169431_1887352137_n](https://cloud.githubusercontent.com/assets/211284/8673433/b3e565c8-2a36-11e5-9c80-e05a34297444.gif)
+",tobiasahlin,2015-07-14 08:47:11
+84,2015-07-13 20:11:07,"It didn't really ever measure up with the other spinners. Let's make room for some new ones :boom: 
+
+cc @jmagnusson :eyes:
+",tobiasahlin,2015-07-13 20:44:16
+84,2015-07-13 20:41:33,":+1: 
+",jmagnusson,2015-07-13 20:44:16
+83,2015-07-01 12:15:44,"Hi,
+I just stumbled upon a conflict using Animate CSS “plugin"" (https://daneden.github.io/animate.css/), looks like they have keyframes called as well ""bounce"".
+Maybe it would be better if spinKit keyframes have a specfic prefix like ""spinKitBounce"", it would avoid such conflicts as ""bounce"" is pretty common for CSS animation name...
+Thank you anyway for this great work :+1: 
+",dfabreguette-ap,2015-07-13 13:12:07
+83,2015-07-11 22:07:37,"+1
+",bluedaniel,2015-07-13 13:12:07
+83,2015-07-13 09:17:00,"What version are you using and where did you get it from?
+Every css and `@keyframes` rule has been prefixed with `sk-` for quite some time now.
+",jmagnusson,2015-07-13 13:12:07
+83,2015-07-13 09:20:07,"![image](https://cloud.githubusercontent.com/assets/7055931/8646547/0d5704ea-2951-11e5-9179-91f633bd9fd2.png)
+I took source code from http://tobiasahlin.com/spinkit/ . Don't know about the version though.
+",dfabreguette-ap,2015-07-13 13:12:07
+83,2015-07-13 13:03:21,"![omg](https://cloud.githubusercontent.com/assets/211284/8650071/4a8ff1f4-2970-11e5-8838-0879d00b3cc1.gif)
+
+@dfabreguette-ap Have to manually update the showcase, I'm on it, thanks!
+",tobiasahlin,2015-07-13 13:12:07
+83,2015-07-13 14:08:49,"@tobiasahlin To avoid this kind of problem in the future we could perhaps integrate the demo site within this repo. Feels a bit unnecessary to have both the `examples` folder with html examples, and your separate demo page.
+",jmagnusson,2015-07-13 13:12:07
+83,2015-07-13 14:49:55,"No problemo :)
+",dfabreguette-ap,2015-07-13 13:12:07
+83,2015-07-13 15:09:39,"@dfabreguette-ap For now if you want the latest code [you can download the code from the Releases section](https://github.com/tobiasahlin/SpinKit/releases), or in a more automated way through [Bower](http://bower.io/).
+",jmagnusson,2015-07-13 13:12:07
+83,2015-07-13 19:18:31,"@jmagnusson Agree, shouldn't really be any conflicts between these two. Will see if I can just pull this repo into the demo page. 
+
+(If we should remove anything though, we should kill the examples in this repo, since the demo page is driving a lot of traffic to the repo (if you look under https://github.com/tobiasahlin/SpinKit/graphs/traffic) - I'm all for doing that!)
+",tobiasahlin,2015-07-13 13:12:07
+83,2015-07-13 20:43:49,"That would be awesome :facepunch: 
+Demo page over examples folder any day!
+",jmagnusson,2015-07-13 13:12:07
+82,2015-06-10 22:34:44,"Per bower/bower.json-spec@a325da3
+",kkirsche,2015-06-10 23:07:26
+82,2015-07-13 20:47:23,":heart:
+",tobiasahlin,2015-06-10 23:07:26
+81,2015-05-05 09:08:14,"Would be nice to be able to `npm install -D spinkit` like with Bower. I could publish it myself, but perhaps it would look better if we had an official npm account for SpinKit?
+",jmagnusson,2015-07-20 20:15:05
+81,2015-05-05 12:53:07,"What's your thoughts @tobiasahlin?
+",jmagnusson,2015-07-20 20:15:05
+81,2015-07-13 09:13:50,"Ping @tobiasahlin :wink:
+",jmagnusson,2015-07-20 20:15:05
+81,2015-07-13 19:23:16,"@jmagnusson On it! :heart:
+",tobiasahlin,2015-07-20 20:15:05
+81,2015-07-13 20:40:31,"Sweet! :smiley: 
+",jmagnusson,2015-07-20 20:15:05
+81,2015-07-20 20:15:05,"https://www.npmjs.com/package/spinkit :tada: 
+",tobiasahlin,2015-07-20 20:15:05
+81,2015-07-20 20:55:06,":dancer: :confetti_ball:
+",jmagnusson,2015-07-20 20:15:05
+80,2015-02-26 18:06:15,,meecrobe,2015-07-21 08:03:11
+80,2015-07-14 06:46:14,"@meecrobe Sorry for the belated reply! Will look through this, but just a heads up that you need to merge in master before I can potentially merge this :point_up: :sparkles:
+",tobiasahlin,2015-07-21 08:03:11
+80,2015-07-21 08:03:11,"(Closing until fixed.)
+",tobiasahlin,2015-07-21 08:03:11
+79,2015-02-13 17:46:13,"test
+",KunalGautam,2015-02-13 17:46:21
+78,2015-02-04 22:53:45,"Why are the spinners on the demo site vastly different than the examples. In particular the circle spinner on the demo has fewer dots in the spinner and the source is very different than the code in the examples/8-circle.html.  And the css for the circle spinner on the demo page is not spinkit.css file.  Can the example files be updated to include the exact spinners on the demo page? 
+
+Thanks.
+",KatelynL,2015-07-16 19:56:42
+78,2015-05-26 07:34:02,"Just came across this difference as well. 
+",alexg313,2015-07-16 19:56:42
+78,2015-05-26 09:53:40,"Will have a look, thanks @KatelynL and @alexg313!
+
+(Possibly something that happened in the move to sass @jmagnusson?)
+",tobiasahlin,2015-07-16 19:56:42
+78,2015-05-26 13:57:07,"Thanks for the report you guys.
+
+I'm super busy these days though... do you think you can take a look at it @tobiasahlin?
+",jmagnusson,2015-07-16 19:56:42
+78,2015-05-31 09:44:40,"@jmagnusson Will do! :heart::boom:
+",tobiasahlin,2015-07-16 19:56:42
+78,2016-11-21 12:24:55,"Still different for the `rectangle-bounce` example. Different class names, sizes, missing margins, ...",DanielRuf,2015-07-16 19:56:42
+77,2015-02-02 20:30:19,"Fixing bower warning:
+
+<S_CODE_TOKEN>
+
+<S_CODE_TOKEN>
+",pkuczynski,2015-02-03 07:16:56
+77,2015-02-03 07:18:51,"Dziękuję, @pkuczynski!
+",jmagnusson,2015-02-03 07:16:56
+77,2015-02-03 12:56:16,"You welcome :)
+",pkuczynski,2015-02-03 07:16:56
+77,2015-02-04 20:40:52,":heart:
+",tobiasahlin,2015-02-03 07:16:56
+76,2015-01-09 13:34:13,,chris-rock,2015-01-12 08:07:44
+76,2015-01-12 08:50:23,"Thanks for the heads up! :blush:
+",jmagnusson,2015-01-12 08:07:44
+76,2015-01-12 09:04:26,"thank you very much for the quick merge ;-)
+",chris-rock,2015-01-12 08:07:44
+73,2014-11-27 05:44:30,"I'm not quite sure how the CSS files have `-webkit-animation` prefixes, but looking at the code the SCSS variant doesn't.
+
+I'm importing SpinKit into my SASS project via `@import 'spinkit';` however nothing is animating in webkit because of the missing prefix :cry: 
+",jordanpotter,2014-11-27 08:10:28
+73,2014-11-27 08:10:28,"You need to use [autoprefixer](https://github.com/postcss/autoprefixer) in your project. If you're compiling your SCSS with gulp you can use [gulp-autoprefixer](https://github.com/sindresorhus/gulp-autoprefixer) or if you use grunt then [grunt-autoprefixer](https://github.com/nDmitry/grunt-autoprefixer). I'll document this in a while.
+",jmagnusson,2014-11-27 08:10:28
+73,2014-11-27 12:27:20,"There https://github.com/tobiasahlin/SpinKit/commit/7dfb3cc31cbc6095db184aaba2bd71e22cf7557a
+",jmagnusson,2014-11-27 08:10:28
+72,2014-11-19 06:00:36,"Isn't it better if there is a **Contribution** part in README.md, which redirects users to CONTRIBUTING.md?
+",mehrdadrafiee,2014-11-19 08:46:44
+72,2014-11-19 08:46:44,"Fixed in https://github.com/tobiasahlin/SpinKit/commit/5b563e0a1e7b9defb9c429a2c6023cecc85f8542
+",jmagnusson,2014-11-19 08:46:44
+71,2014-11-18 21:15:55,,chrissaad,2014-11-18 21:18:18
+71,2014-11-18 21:18:18,"See #69
+",jmagnusson,2014-11-18 21:18:18
+70,2014-11-18 20:36:18,,jmagnusson,2014-11-18 20:37:05
+69,2014-11-18 19:21:31,"Website doesn't work!
+
+> Site temporarily disabled
+> 
+> This page has been temporarily disabled due to a misconfigured custom domain.
+> 
+> Are you the site owner? Follow the instructions for setting up a custom domain with GitHub pages to update your site's DNS records to point to the proper IP address.
+> 
+> You can find more information in our GitHub Pages legacy IP deprecation blog post. If you have any questions, please contact support.
+",beldar,2014-11-26 11:05:38
+69,2014-11-18 19:52:37,"I think this might be a GitHub-wide problem. My website is down, but I have no idea why.
+",rlqualls,2014-11-26 11:05:38
+69,2014-11-18 20:02:31,"This isn't a GitHub-wide ""problem"". See https://github.com/blog/1925-github-pages-legacy-ip-brownout
+",cmfcmf,2014-11-26 11:05:38
+69,2014-11-18 20:19:34,"How long is it gonna take? :/
+",mehrdadrafiee,2014-11-26 11:05:38
+69,2014-11-18 20:43:28,"@tobiasahlin Will you take a look at this?
+",jmagnusson,2014-11-26 11:05:38
+69,2014-11-19 05:42:26,"update domain parse :  update ip to 192.30.252.153 can work.
+https://help.github.com/articles/tips-for-configuring-an-a-record-with-your-dns-provider/
+",microheart,2014-11-26 11:05:38
+69,2014-11-26 11:05:38,"@cmfcmf @microheart Thanks! This was indeed the issue :heart:
+
+Fixed this shortly after the issue appeared, but forgot to close.
+",tobiasahlin,2014-11-26 11:05:38
+68,2014-11-18 08:32:58,"Added the **12-chasing-circles.css** file.
+",mehrdadrafiee,2014-11-18 20:53:40
+68,2014-11-18 10:14:53,"Please don't open up new pull requests for the same feature. Make your fixes to #67 and close this one or vice versa.
+",jmagnusson,2014-11-18 20:53:40
+68,2014-11-18 19:14:59,"closed #68 
+",mehrdadrafiee,2014-11-18 20:53:40
+68,2014-11-18 19:47:46,"You want to close this one?
+",jmagnusson,2014-11-18 20:53:40
+68,2014-11-18 20:48:11,"Yes.
+",mehrdadrafiee,2014-11-18 20:53:40
+68,2014-11-18 20:51:56,"Okay there's a `Close pull request`-button just below the `Leave a comment` section :blush:.
+",jmagnusson,2014-11-18 20:53:40
+67,2014-11-15 19:49:16,"Added a new loading spinner.
+",mehrdadrafiee,2015-07-18 13:13:30
+67,2014-11-16 13:31:23,"Could you update this to use the new format? I just merged in #50 (and #61 and #62) which uses scss that you should compile with gulp.
+",jmagnusson,2015-07-18 13:13:30
+67,2014-11-18 20:46:40,"I've added a [CONTRIBUTING.md file](https://github.com/tobiasahlin/SpinKit/blob/master/CONTRIBUTING.md) to the project that describes how you go about with this new format.
+",jmagnusson,2015-07-18 13:13:30
+67,2014-11-18 20:47:40,"@jmagnusson I saw that. Perfect. Thanks.
+",mehrdadrafiee,2015-07-18 13:13:30
+67,2015-07-18 13:13:30,"@mehrdadrafiee The diff is pretty big right now, closing this PR until it's in a ready state to potentially merge (I can't really preview the changes at this stage). Sorry, hope the contributions guide can be of help! (If not, let us know and we'll update it :heart:)
+",tobiasahlin,2015-07-18 13:13:30
+66,2014-11-13 06:21:22,"Added a new animation and updated another to use pseudoelemements (supported in all browser that support CSS animations).
+",rubencodes,2014-11-19 09:30:06
+66,2014-11-16 13:32:20,"Could you update this to use the new format? I just merged in #50 (and #61 and #62) which uses scss that you should compile with gulp.
+",jmagnusson,2014-11-19 09:30:06
+66,2014-11-18 21:25:15,"Hello,
+
+I believe everything is in order now.
+
+-Ruben
+",rubencodes,2014-11-19 09:30:06
+66,2014-11-18 22:32:00,"You need to [pull data from the upstream master](https://help.github.com/articles/syncing-a-fork/) (i.e. `tobiasahlin/SpinKit`) so that we don't get any merge conflicts.
+
+(My recommendation is to always create a new branch when you want to submit a new PR. Github even gives you a notification on your page about sending a PR if you do it this way.)
+",jmagnusson,2014-11-19 09:30:06
+66,2014-11-18 23:16:32,"Hmm, I did pull data from upstream just this afternoon! That's what the second commit, `5c781a5`, does (should have been more clear, my bad). Should I try pulling again?
+
+Apologies for the issues, this is one of my first contributions.
+",rubencodes,2014-11-19 09:30:06
+66,2014-11-19 06:05:19,"@rubencodes Hi dude,
+I'm having problems with updating my project to use the newer format. Would you please help me by explaining the steps which you took to update yours?
+",mehrdadrafiee,2014-11-19 09:30:06
+66,2014-11-19 08:53:35,"@rubencodes No worries. What you need to do is a rebase. GitHub has an [excellent article](https://github.com/edx/edx-platform/wiki/How-to-Rebase-a-Pull-Request) on this.
+",jmagnusson,2014-11-19 09:30:06
+66,2014-11-19 09:30:06,"Actually in this case I think the best thing to do would be to just create a new branch and checkout the scss-files like below. I've made the assumption that you called the `tobiasahlin/SpinKit` upstream `upstream`.
+
+<S_CODE_TOKEN>
+
+Some notes:
+- I didn't include your changes to `9-wordpress.scss` as this should be in a separate PR.
+- Use `$spinkit-spinner-margin` and `$spinkit-spinner-color` variables (see the other spinners for where to add)
+- Remove all browser prefixes (`-webkit-` etc) as this is now [handled by autoprefixer](https://github.com/tobiasahlin/SpinKit/blob/master/CONTRIBUTING.md)
+- Follow style guide in `CONTRIBUTING.md`
+
+Other than that I really like this contribution! Could see myself using this spinner :blush:
+",jmagnusson,2014-11-19 09:30:06
+65,2014-11-12 10:51:49,"Just go the next slide (circle) and go back to previous one (square).
+
+You'll see that the square is not animating anymore. But if you inspect the item you'll see that the div is ""rotating"" but not repainting.
+
+A bug?
+
+Tested on Chrome 38.0.2125.122 (Build 290379) m 64bit
+",julianxhokaxhiu,2015-07-16 19:58:37
+65,2014-11-16 13:12:45,"Confirmed. @tobiasahlin Do you have any idea what to do about this?
+",jmagnusson,2015-07-16 19:58:37
+65,2015-02-07 12:57:28,"Looks like visibility property for '#spinners li' connected with this issue. It works fine after removing this property from code. I know that switching between visibility's values cause repaint, but I can't explain why it's so important only for the first slide only. And I see that it's not connected with type of animation. We can put any of them to the first slide and it won't work too.
+",Invulner,2015-07-16 19:58:37
+65,2015-02-20 12:23:09,"@Invulner Thanks for investigating! Would you mind opening a PR? :heart:
+",tobiasahlin,2015-07-16 19:58:37
+65,2015-07-16 19:58:37,"Fixed with the fix that @Invulner suggested (thanks! :heart:)
+",tobiasahlin,2015-07-16 19:58:37
+64,2014-09-13 08:39:24,":fire:
+",tobiasahlin,2014-09-13 08:40:20
+63,2014-09-12 08:22:09,"How can i pull less version of SpinKit to your repository?
+
+https://github.com/amazingSurge/SpinKit.less
+
+I clean some markup for the spinner. Using autoprefixer for browser compatibility. And it also has standalone version for each spinners (e.g.  https://github.com/amazingSurge/SpinKit.less/blob/master/css/standalone/double-bounce.css).
+",amazingSurge,2014-09-13 19:59:28
+63,2014-09-13 19:59:15,"@amazingSurge Thanks for working on this! It wouldn't add much value to have both SASS and Less, and SASS is just about to get merged [here](https://github.com/tobiasahlin/SpinKit/pull/62), so let's keep the development focused on that :boom::sparkles:
+",tobiasahlin,2014-09-13 19:59:28
+63,2014-09-15 06:32:22,"@tobiasahlin  ok.
+",amazingSurge,2014-09-13 19:59:28
+62,2014-09-12 07:03:30,"Fixes #60
+",jmagnusson,2014-11-16 13:10:34
+62,2014-09-12 07:05:45,"Should note that I haven't registered the package yet. Not my thing to pull the trigger ;-)
+
+Run `bower register SpinKit git://github.com/tobiasahlin/SpinKit.git` and it should work.
+",jmagnusson,2014-11-16 13:10:34
+62,2014-09-12 21:43:42,":boom::sparkles: 
+
+Since this PR includes all fixes from other PRs, let's keep the code review here.
+",tobiasahlin,2014-11-16 13:10:34
+62,2014-09-13 19:57:25,"(The merge conflict here should just be me moving the animation fill mode into the animation short hand, rather than declaring that separately.)
+",tobiasahlin,2014-11-16 13:10:34
+62,2014-09-14 07:15:31,"I've inlined all the CSS now as per your request. I also moved the generated html into `examples/` to make it more clear what they're used for.
+",jmagnusson,2014-11-16 13:10:34
+62,2014-09-14 09:03:38,":heart: This looks awesome. As soon as those conflicts get fixed, I think we can merge this :boom:
+",tobiasahlin,2014-11-16 13:10:34
+62,2014-09-14 09:48:34,"There!
+",jmagnusson,2014-11-16 13:10:34
+62,2014-09-27 10:35:39,"Any news here Tobias?
+",jmagnusson,2014-11-16 13:10:34
+62,2014-11-16 13:10:21,"Okay I'm gonna go ahead and merge this. We need to get this project going again! :grin:
+",jmagnusson,2014-11-16 13:10:34
+61,2014-09-12 06:45:56,"Fixes #57
+",jmagnusson,2014-11-16 13:10:35
+60,2014-09-11 20:40:40,"This is totally up for grabs for anyone who wants to help :zap:
+",tobiasahlin,2014-11-16 13:10:34
+60,2014-09-11 20:41:26,"Related: #36 (it's essentially useless until this lands)
+
+cc @jmagnusson if you're interested
+",tobiasahlin,2014-11-16 13:10:34
+60,2014-09-11 20:42:40,"You've spammed my inbox with about 20 emails. :D Never done it before but why not? How hard can it be. Famous last words.
+",rweas,2014-11-16 13:10:34
+60,2014-09-14 07:16:36,"#62 fixes this
+",jmagnusson,2014-11-16 13:10:34
+60,2014-11-16 13:13:03,"what happened ?
+",z923113762,2014-11-16 13:10:34
+60,2014-11-16 13:14:40,"@z923113762 What do you mean what happened?
+",jmagnusson,2014-11-16 13:10:34
+59,2014-09-11 20:33:56,"Let's make it easier to drop a sk-spinner into your project. You shouldn't have to implement this yourself.
+",tobiasahlin,2015-07-13 19:31:56
+59,2014-11-18 22:55:46,"Hmm I have my doubts about this. CSS animations are becoming more feasible by the day, with [88.04% coverage according to caniuse.com](http://caniuse.com/#feat=css-animation) I'm thinking that maybe this will just introduce complexity into the project. Being CSS only is a big part of what makes me love this project :heart:
+",jmagnusson,2015-07-13 19:31:56
+59,2014-12-09 14:03:44,"I'm with @jmagnusson. We need to think ahead. Developers can implement e.g. Modernizr and do it themselves. No point in bloating this code. 
+",rkorebrits,2015-07-13 19:31:56
+59,2015-03-05 16:32:20,"Hey guys. Thank you for this lovely CSS kit. I have a question though. About the fallback for older browsers you mention in the readme file at the bottom. Are you sure checking just for the 'animation' property is enough for the checkup to be reliable? Please, see [this thread](https://github.com/joaopereirawd/fakeLoader.js/issues/5) to find out why I am asking that. Thanks.
+",AlexRebula,2015-07-13 19:31:56
+59,2015-07-13 19:31:54,"@jmagnusson @rkorebrits Good point, killing this for now :fire:
+
+@AlexRebula afaik that should be enough, hope you got it to work eventually!
+",tobiasahlin,2015-07-13 19:31:56
+58,2014-09-11 20:32:12,"After #36 lands, lets move all `.html` files to a demo folder, to get them out of the way. The primary way to preview the spinners should live at http://tobiasahlin.com/spinkit/, so we can optimize this project for using in your projects.
+",tobiasahlin,2014-11-18 22:46:25
+58,2014-09-14 07:16:20,"Fixed in #62
+",jmagnusson,2014-11-18 22:46:25
+58,2014-11-18 22:46:25,"PR just landed. Closing.
+",jmagnusson,2014-11-18 22:46:25
+57,2014-09-11 20:18:56,"So you can drop SpinKit components into your projects without overriding or messing with your general styles.
+
+Fixes #47
+
+@nmccready This is going to require some more work for #36 to get merged, but it should be fairly straight forward. Let me know if you need any help :sparkles:
+
+cc @joni2back
+",tobiasahlin,2014-09-14 09:01:05
+57,2014-09-11 20:47:04,"I would suggest pulling in gulp or possibly a shell script if you ever plan on changing your project namespace again. I had to deal with this recently on angular-google-maps going from ngmaps to ui-gmaps.
+
+Anyways for me this was easy as most of it was JS and my object names were declared via strings with a prototype to append 'ui-gmap'. That way I only had to change the code in one spot. 
+
+You could easily do this with https://github.com/lazd/gulp-replace . 
+
+The project could use gulp to compile the scss down to css in a dist folder as well.
+",nmccready,2014-09-14 09:01:05
+57,2014-09-13 20:25:47,"@nmccready Thanks for the advice :heart: @jmagnusson is actually adding gulp in the rewrite, so that's all :sparkles:
+
+Closing this PR since the issue is being fixed in the SASS port :point_up:
+",tobiasahlin,2014-09-14 09:01:05
+57,2014-09-15 12:18:42,":+1: 
+",nmccready,2014-09-14 09:01:05
+56,2014-09-11 19:56:35,":point_up: :zap:
+",tobiasahlin,2014-09-13 20:23:06
+55,2014-09-11 19:51:26,"Moves `-webkit-transform` so it's declared before `transform`.
+",tobiasahlin,2014-09-12 21:53:51
+55,2014-09-12 21:53:51,"Taken care of in the sass-rewrite.
+",tobiasahlin,2014-09-12 21:53:51
+54,2014-09-11 19:37:50,"Fixes #51
+",tobiasahlin,2014-09-11 19:38:06
+53,2014-09-04 10:15:45,"Hey, I added a new animation with lozenge shapes. :smiley: 
+",niklasravnsborg,2015-07-14 06:43:55
+53,2014-09-11 20:21:38,"@niklasravnsborg Nice! I think we can make this even more polished, what do you think about making all these elements a bit smaller (to match the other spinners), and maybe shorten the delay between them, so the expand motion feels more fluid?
+",tobiasahlin,2015-07-14 06:43:55
+53,2014-09-12 16:16:34,"Hey, thanks for your feedback. I will take a look at this...
+",niklasravnsborg,2015-07-14 06:43:55
+53,2014-09-12 20:20:34,"@tobiasahlin Yeah. I updated the animation and the element sizes. I think now it looks better than before. Thanks! :blush:
+
+**Now it looks like this:**
+![Animated GIF](https://cloud.githubusercontent.com/assets/6717303/4256553/6a2be956-3ab9-11e4-88b1-8c73c303678f.gif)
+",niklasravnsborg,2015-07-14 06:43:55
+53,2014-11-18 22:43:40,"Just a heads up that we've made some changes to how we add new spinners to the project. See here for info: https://github.com/tobiasahlin/SpinKit/blob/master/CONTRIBUTING.md
+",jmagnusson,2015-07-14 06:43:55
+53,2015-07-14 06:43:55,"@niklasravnsborg Closing this for now, since it's outdated, but feel free to update to match new way of contributing :heart:
+",tobiasahlin,2015-07-14 06:43:55
+52,2014-08-26 21:06:20,"Every browser that supports CSS animations also supports :before and :after pseudo-elements. So to avoid unnecessary markup we can remove the inner divs and use these elements instead. Pull request follows. Tested in 5 different browsers and it is working fine.
+",Fidelix,2014-09-11 22:54:34
+52,2014-09-11 19:43:05,":heart: Clever clever. Which browsers did you test on? Mostly worried about IE, I think I've seen animations on generated content fail, but can't remember for sure.
+",tobiasahlin,2014-09-11 22:54:34
+52,2014-09-11 22:47:35,"IE8 fails miserably, as expected.
+IE9 simply shows a standard square, as expected.
+IE10 and IE11 work flawlessly.
+",Fidelix,2014-09-11 22:54:34
+52,2014-09-11 22:54:12,":heart::boom: Awesome, thanks for the thorough check-up! 
+",tobiasahlin,2014-09-11 22:54:34
+51,2014-08-14 14:25:45,"Hello, 
+
+Good job here, thanks for all animations.
+
+Like explain in the title this animation doesn't work for me on IE11 and Safari.
+
+For IE11 :
+The keyframes isn't the same from the -webkit- one.
+Opacity must be set to 1 
+@keyframes fadedelay {
+      0%, 39%, 100% { opacity: 0 } 
+      40% { opacity: 1 } // 0 currently
+    }
+For Safari I have no idea.
+",endorria,2014-09-11 19:38:06
+51,2014-09-11 19:39:10,"@endorria :heart: Thanks for catching this!
+",tobiasahlin,2014-09-11 19:38:06
+50,2014-08-05 10:19:19,"Use gulpfile to generate HTML examples and CSS
+",jmagnusson,2014-11-16 13:10:34
+50,2014-08-05 10:21:16,"Somewhat more complete version compared to #36
+",jmagnusson,2014-11-16 13:10:34
+50,2014-09-11 20:28:16,"@jmagnusson Let's make this happen in the other PR :heart:
+",tobiasahlin,2014-11-16 13:10:34
+50,2014-09-11 23:01:02,"@jmagnusson Judging by your comment I totally prematurely closed this PR. Sorry about that :heart: Code review incoming.
+",tobiasahlin,2014-11-16 13:10:34
+49,2014-07-11 09:46:44,"Fixed missing animation-delay for non webkit browsers
+",Fylax,2014-07-11 12:57:45
+49,2014-07-11 12:57:40,":heart:
+",tobiasahlin,2014-07-11 12:57:45
+48,2014-07-07 13:50:38,"I love your style so I'm thinking of a little commission.
+
+The three bounce is perfect for route transitions, but there are moments in certain views where a component is only fully constructed on demand. Suppose it takes a few seconds, up to six in my case, to build the component; I would like to overlay a spinner that conveys the work of ""unboxing"" (which the user prefers over ""construction"" in data entry apps).
+
+The animation would begin with a plain square that unfolds from the centre into a diamond, which then unfolds from the centre into a square. If possible the shape would continuously shrink, and the shape would always be the same size, but if that's too difficult then the larger diamond could scale down before unfolding, and the larger square could scale down before the animation repeated. A simpler version of all this is to simply rotate the diamond back to the square and repeat, but I think the full version is more compelling.
+
+This (or something like it) would make a nice addition to the SpinKit collection :D
+
+![unboxing](https://cloud.githubusercontent.com/assets/889388/3495941/57c6e4e8-05dd-11e4-85b5-09cfbcbcd3d6.png)
+",macu,2015-07-21 08:02:31
+48,2014-09-11 20:02:56,"@macu Love the commission and the detailed description :heart: thank you. Let's make it happen, I'm on it!
+",tobiasahlin,2015-07-21 08:02:31
+48,2014-11-18 22:53:12,"Did you get anywhere with the implementation of this @tobiasahlin?
+",jmagnusson,2015-07-21 08:02:31
+48,2015-07-13 19:25:36,"Aiming to have this done by Tuesday (just updated the 2.0 milestone), will send you a preview when I have one ready :bow:
+",tobiasahlin,2015-07-21 08:02:31
+48,2015-07-21 08:02:30,"@macu So, I ended up with this: https://github.com/tobiasahlin/SpinKit/pull/87 - it's quite far from your original proposal, but this is where inspiration took me :smiley: Might have another go at this sometime, but closing the issue for now :heart: thanks for the detailed post, and the inspiration!
+",tobiasahlin,2015-07-21 08:02:31
+48,2015-07-21 20:06:16,"Very nice! 
+",macu,2015-07-21 08:02:31
+47,2014-06-19 16:59:44,"There are problems with the name of those animations when we are using other libraries.
+I was involved in this with https://github.com/daneden/animate.css where ""bounce"" name is used too.
+
+I guess the best solution here will be using custom animation names, such as ""spinkit-bounce""
+",joni2back,2014-11-18 22:36:17
+47,2014-09-11 19:40:23,"@joni2back True, let's prefix everything with `sk-` :boom: Thanks!
+",tobiasahlin,2014-11-18 22:36:17
+47,2014-09-12 13:08:48,"coooool :+1: 
+",joni2back,2014-11-18 22:36:17
+47,2014-11-18 22:36:17,"Fixed in #61.
+",jmagnusson,2014-11-18 22:36:17
+46,2014-06-03 19:58:05,"Great job ! Can you please elaborate :
+
+ Note that a hidden spinner (opacity: 0, or visibility: hidden) will still animate. After hiding a spinner, it's recommended to remove it from the DOM, set display: none or pause the animation by setting animation-play-state: paused.
+
+After adding the js and including html and css how to proceed ?
+",Amit-Kolambikar,2014-09-11 20:24:40
+46,2014-09-11 20:24:40,"@Amit-Kolambikar This is purely about hiding the spinner after you're done showing it, so if you inject it to load something, just make sure you remove it again, either by removing it from the DOM, or adding a class that sets it to `display: none`, for example :heart:
+",tobiasahlin,2014-09-11 20:24:40
+45,2014-05-26 09:52:38,":boat: Possibly related to #42 
+",tobiasahlin,2014-05-26 09:52:50
+44,2014-05-25 22:39:58,"Started out as polish, but couldn't quite get it to feel right, so ended up going in a slightly new direction :gem:
+",tobiasahlin,2014-05-25 23:14:13
+44,2014-05-25 22:40:45,"cc @zhanglun
+",tobiasahlin,2014-05-25 23:14:13
+43,2014-05-25 18:16:51,"Since #25 stagnated.
+",tobiasahlin,2014-05-25 18:31:14
+43,2014-05-25 18:31:12,":ship: 
+",tobiasahlin,2014-05-25 18:31:14
+42,2014-05-25 18:04:46,"Hi!  Nice work here!  :+1:  +  :sparkling_heart:
+
+When trying the Circle Spinner in Safari 5.1.7 or Chrome 24 on Win, I cannot see any animation  :cry:
+On Firefox 29 it works well.
+
+Any thoughts :question:
+
+Fritz
+",FritzTheBlitz,2014-11-18 22:48:10
+42,2014-05-25 18:25:42,"@FritzTheBlitz This works for me on Windows and Mac. Are you using the very latest version? (Just updated a few mins ago.) Is this in your own project, or is [https://github.com/tobiasahlin/SpinKit/blob/master/8-circle.html](8-circle) from `master` broken?
+",tobiasahlin,2014-11-18 22:48:10
+42,2014-05-26 07:45:08,"@tobiasahlin
+No, not my own project.   http://jsbin.com/rolepero/1/edit
+No Animation on Chrome, Safari and Opera 12, works on Opera 21 and FF 29
+(I'm still on Win XP ...)
+:beers: Fritz
+",FritzTheBlitz,2014-11-18 22:48:10
+42,2014-05-26 09:54:08,"@FritzTheBlitz Thanks! I made a small change, but not convinced that will fix it. Can you try that version, and drop a screenshot of what you're seeing? :zap:
+",tobiasahlin,2014-11-18 22:48:10
+42,2014-05-26 10:19:49,"I've already tried to move non-prefixed rules as fallback to the last. - No result.
+
+New bin at http://jsbin.com/fikami/1/edit 
+<b>Safari 5.1.7</b>
+![spinkit-safari](https://cloud.githubusercontent.com/assets/7449636/3081378/595dbf9c-e4be-11e3-8e79-d037c9e5049b.gif)
+
+<b>Chrome 24</b>
+![spinkit-chrome](https://cloud.githubusercontent.com/assets/7449636/3081408/f3c1a6de-e4be-11e3-93e6-7b9af5e22945.gif)
+",FritzTheBlitz,2014-11-18 22:48:10
+42,2014-09-11 19:42:04,"@FritzTheBlitz Sorry for dropping the ball on this. Just updated the keyframes for this animation, there was a bug in there, and they may have used `@keyframes` instead of `-webkit-keyframes`. Would you mind checking again? :heart:
+",tobiasahlin,2014-11-18 22:48:10
+42,2014-11-18 22:48:10,"I'm gonna go ahead and close this since we never got any reply from @FritzTheBlitz. If anyone is still experience this we'll reopen the issue.
+",jmagnusson,2014-11-18 22:48:10
+41,2014-05-25 16:45:04,"- Easier to read
+- More compact
+- :fire: some divs
+",tobiasahlin,2014-05-25 16:45:27
+40,2014-05-25 11:43:43,":boom:
+",tobiasahlin,2014-05-25 11:45:24
+39,2014-05-21 23:18:43,"This pull request has been automatically generated by prose.io.
+",YoussefKababe,2014-05-22 10:16:21
+39,2014-05-22 10:19:32,"![a6ffb5l](https://cloud.githubusercontent.com/assets/211284/3052420/4bca6d2a-e19a-11e3-8a5e-ec811cc4a342.gif)
+",tobiasahlin,2014-05-22 10:16:21
+39,2014-05-25 20:10:11,"Sorry for that :laughing: I was playing around with prose and didn't do this on purpose! 
+",YoussefKababe,2014-05-22 10:16:21
+39,2014-05-25 21:37:12,"@YoussefKababe Np, I assumed it was prose being weird :sheep: 
+",tobiasahlin,2014-05-22 10:16:21
+38,2014-05-21 08:54:05,"Hello,
+
+I am a big fan of WordPress and I like their new loader they use, but only if it wasn't in GIF format. So, I've created this loader/spinner to mimic the WordPress loader.
+
+I'd like to add this to your wonderful SpinKit.
+
+Thanks.
+",ahmadhania,2014-05-31 20:10:36
+38,2014-05-21 23:14:59,"@ahmadhania Thanks! Love the spinner. Had some technical comments. Might need some more contrast for the dot as well (make it completely white?)
+",tobiasahlin,2014-05-31 20:10:36
+38,2014-05-24 08:15:21,"@tobiasahlin updates have made and your comments are taken into account, hope it's good now?
+",ahmadhania,2014-05-31 20:10:36
+38,2014-05-25 13:45:10,"@ahmadhania Love the updates :zap: :heart:
+
+I found some more things! Once that's in, I'd love to get this merged :shipit: 
+",tobiasahlin,2014-05-31 20:10:36
+38,2014-05-31 10:37:58,"@tobiasahlin Changes requested has been made :)
+",ahmadhania,2014-05-31 20:10:36
+38,2014-05-31 20:10:28,"@ahmadhania Awesome, great work on this! Thanks! :zap:
+
+![tumblr_mnygoxox801qhonq7o1_400](https://cloud.githubusercontent.com/assets/211284/3140014/19d74574-e8ff-11e3-9034-729a2911fb3a.gif)
+",tobiasahlin,2014-05-31 20:10:36
+38,2014-05-31 20:46:56,"WOW, thank you @tobiasahlin for accepting my loader to your SpinKit. I see that the demo page isn't updated with the latest additions to the kit.
+",ahmadhania,2014-05-31 20:10:36
+38,2014-06-02 12:39:50,"@ahmadhania That's true, I'm working on bringing those over asap!
+",tobiasahlin,2014-05-31 20:10:36
+37,2014-05-10 11:59:10,"This spinner kit is awesome! I pull a request about a week ago, but not pass. 
+
+Is this project alive?
+",zhanglun,2014-05-10 17:49:10
+37,2014-05-10 17:49:10,"@zhanglun It is! And thanks! I'll get to it :)
+",tobiasahlin,2014-05-10 17:49:10
+36,2014-05-02 12:29:27,"First of all this spinner kit is awesome and I want to thank you very much.
+
+This is a subset of spinners that I have combined into a single scss file which has been tested and is in full use at my company. This is intended as a starting file to work towards so that the css can be compiled down to a dist/spin-kit.css as the end goal.
+
+Therefore, this is not meant to be a finished peace but is intended as a starting point as a discussion on how you want to proceed. I am fully open to adding a build framework to compile this scss down for you so it can be in separate encapsulated files like wave.scss, and three-bounce.scss. Personally I would favor npm/Grunt or Rails but it is up to you.
+
+I'd love to help contribute.
+",nmccready,2014-09-13 20:28:07
+36,2014-05-25 17:08:01,"@nmccready Thanks for starting this discussion :honeybee: I'm a bit torn. I see SpinKit more as a sandbox from which you can grab some CSS and customize it for your site, not a framework. I'm not sure how well this aligns with that, and if the added complexity here adds enough value. What are your thoughts?
+",tobiasahlin,2014-09-13 20:28:07
+36,2014-05-25 17:12:56,"Cool, I am not really trying to force a framework here. I am just trying to make it easily importable CSS or SASS.
+",nmccready,2014-09-13 20:28:07
+36,2014-05-25 17:13:45,"Ideally this would be nice if you could import the css via some framework like bower but for css :smile: 
+",nmccready,2014-09-13 20:28:07
+36,2014-08-04 21:41:57,"I love this idea. Would be nice if some of the properties could be changed with SCSS-variables.
+",jmagnusson,2014-09-13 20:28:07
+36,2014-08-05 09:08:24,"I think it'd be great to drop in via SASS/SCSS. 
+
+@tobiasahlin I know what you mean with reference to a Sandbox. But I think people love this a bit too much now :) Maybe having a separate project to the 'sandbox' version?
+",paulrose,2014-09-13 20:28:07
+36,2014-09-11 19:27:00,"> Would be nice if some of the properties could be changed with SCSS-variables.
+
+This is true. All :sparkles: for this part. 
+
+@paulrose @nmccready Let's make it happen.
+
+@jmagnusson ~~In that PR :point_up:, I'm against deleting all the examples. Even though it's more code to maintain, I want to keep it easy to just copy paste, and previewing the animations. You mentioned that it's more complete than this PR though—is it anything you can help to fix here? Or give any pointers?~~ ←- Ignore all that, I was full of bullshit when I wrote it. Sorry :bow: 
+",tobiasahlin,2014-09-13 20:28:07
+36,2014-09-11 20:48:30,"@tobiasahlin if you look at my code you'll see that I've added:
+1. Variables
+2. Separated each spinner into it's own SCSS file. This enables you to easily include just the styles you want, without touching the source code at all.
+3. Removed all browser prefixes and let autoprefixer take care of this to decrease the risk of typos (and potentially reduce the file size of the generated CSS as browsers start to drop prefixes)
+4. The gulp tasks auto-generate the example HTML whenever the code changes
+
+Sure we can go with this PR instead, but like it says it's a starting point whilst #50 is basically good to merge and put in production.
+",jmagnusson,2014-09-13 20:28:07
+36,2014-09-11 20:48:43,"As suggested in #57 this may be a candidate for a gulp project. So simply compile templates down to css and scss.
+",nmccready,2014-09-13 20:28:07
+36,2014-09-11 20:50:18,"@tobiasahlin  Let me know how you want to proceed .
+",nmccready,2014-09-13 20:28:07
+36,2014-09-13 12:42:34,"Any thought on less. I can contribute the code also.
+",amazingSurge,2014-09-13 20:28:07
+36,2014-09-13 20:28:05,"@nmccready Closing this since @jmagnusson had already come really far with his PR (I totally missed that before), adding gulp as well (#62). As soon as that lands we can start polishing that implementation :sparkles:
+",tobiasahlin,2014-09-13 20:28:07
+35,2014-05-02 03:09:51,"I am very interested in this project, and this is my first attempt at trying to make one.
+
+A block sliding in a box, maybe it looks ugly, but I like it !
+
+Thanks for the project, great resource!
+",zhanglun,2014-05-24 20:05:09
+35,2014-05-10 18:10:09,"@zhanglun Thanks for contributing!
+
+I think this is an interesting direction that could become awesome with some polish. Right now, it's a bit chunky. Maybe make it significantly thinner? Like 4-6px height in total? And somewhat shorter?
+",tobiasahlin,2014-05-24 20:05:09
+35,2014-05-11 00:47:12,"Thanks for your advice. Maybe you are right, I'll try to improve it
+",zhanglun,2014-05-24 20:05:09
+35,2014-05-12 03:31:38,"@tobiasahlin I have deleted the old file,and add  new  effects, please check it out. 
+Thanks for your patience, and  sorry for my poor english.
+",zhanglun,2014-05-24 20:05:09
+35,2014-05-12 12:32:27,"@zhanglun Wow! Love this new direction. If you fix the styling comment above for all animations (should make the file noticeable shorter, and easier to read), I'm happy to merge :boom:
+",tobiasahlin,2014-05-24 20:05:09
+35,2014-05-22 11:46:29,"Please!!!!!
+",zhanglun,2014-05-24 20:05:09
+35,2014-05-24 20:05:07,"@zhanglun That's awesome! Thanks! :sparkles:
+",tobiasahlin,2014-05-24 20:05:09
+34,2014-03-12 03:50:52,"if you shrink the circle-spinner to 15px by 15px and the dots to anything less than 6px you start to see visual artifiacts. any ideas on why? i'm trying to fit it into a small button
+",scamden,2014-05-25 17:57:43
+34,2014-03-12 03:53:26,"actually you don't even need to shrink the container, if you shrink the dots alone you will see the artifiacts
+",scamden,2014-05-25 17:57:43
+34,2014-04-01 12:50:38,"@scamden The default size (6px) is the minimum recommended size. Border-radius stops to look even decent at smaller sizes. I'll investigate if we can fix this by making the elements vector circles instead of squares with border radius.
+",tobiasahlin,2014-05-25 17:57:43
+34,2014-04-01 17:32:46,"alright thanks :) just thought i'd flag it for you
+
+On 1 April 2014 05:50, Tobias Ahlin notifications@github.com wrote:
+
+> @scamden https://github.com/scamden The default size (6px) is the
+> minimum recommended size. Border-radius stops to look even decent at
+> smaller sizes. I'll investigate if we can fix this by making the elements
+> vector circles instead of squares with border radius.
+> 
+> ## 
+> 
+> Reply to this email directly or view it on GitHubhttps://github.com/tobiasahlin/SpinKit/issues/34#issuecomment-39200998
+> .
+",scamden,2014-05-25 17:57:43
+33,2014-03-06 16:13:20,"hey there,
+
+to push this project forward i added a buildsystem for it and rewrote everything to LESS. makin it way easier for developers to extend the library or include in parts of it its own projects.
+
+to build everything to spinkit.css (and got a ruby with bundler installed ;-) ) you just need to:
+
+<S_CODE_TOKEN>
+
+...inside /Assetfile you'll see an commented line which could output a compressed version of the css :-)
+
+cheers,
+alex
+",mralexandernickel,2014-05-25 17:11:56
+33,2014-03-06 16:15:33,"<S_CODE_TOKEN>
+
+has to be executed just once, of course ;-)
+",mralexandernickel,2014-05-25 17:11:56
+33,2014-05-25 17:11:56,"Hey @mralexandernickel, thanks for the work on this :heart: As I mentioned in #36, SpinKit is more of a sandbox from which you can grab some CSS and customize it for your site, not a framework. This only makes it harder to use it in that way, so I'm closing this.
+",tobiasahlin,2014-05-25 17:11:56
+32,2014-03-05 18:42:38,"Tries to mimic the average human heartbeat(70 beats per second)
+",shash7,2014-04-01 13:46:57
+32,2014-04-01 13:46:57,"@shash7 Thanks for the inspiration! It's a bit rough, but I like the concept. I'll see if I can do a variation of it.
+",tobiasahlin,2014-04-01 13:46:57
+32,2014-04-01 14:32:29,"Ok.
+I also wanted to add a heart shape shown [here](http://stackoverflow.com/questions/17386168/how-to-create-css-heart-why-is-this-css-creating-a-heart-shape)
+",shash7,2014-04-01 13:46:57
+31,2014-02-09 17:15:47,"It looks like the spinner 4-wandering-cubes is not following the designed pattern on Android Browser with Android 4.1 (maybe some others too) : instead of having the 2 cubes at opposite angles of a square share, they look like being at 2 consecutive angles. Do you have any idea on what might be going on ?
+",GregOriol,2015-07-24 18:48:50
+31,2014-02-14 21:58:12,"A fix for this is to set the animation delay of the first cube (which has no delay currently set) :
+.cube1 {
+    -webkit-animation-delay: -1.8s;
+    animation-delay: -1.8s;
+}
+",GregOriol,2015-07-24 18:48:50
+31,2014-11-18 22:49:48,"@GregOriol would you be willing to create a PR for this? I don't have access to any Android device unfortunately.
+",jmagnusson,2015-07-24 18:48:50
+31,2014-11-20 11:30:46,"@jmagnusson you could try with GenyMotion: they have free and very accurate Android emulators.
+
+I didn't have enough time to test the fix when I worked with the code, so I'm not 100% sure about the edge cases of such a change.
+",GregOriol,2015-07-24 18:48:50
+31,2015-03-18 11:30:27,"Browser is supposedly just like IE. IE does not work very well with code, its really buggy.
+",seanfrasure,2015-07-24 18:48:50
+30,2014-02-09 17:12:54,"It looks like the spinner 7-three-bounce is inverted on Android Browser with Android 4.1 (maybe some others too) : instead of bouncing circles 1 2 3, it bounces circles 3 2 1. Do you have any idea on what might be going on ?
+",GregOriol,2015-07-24 18:49:05
+30,2014-11-18 22:51:59,"I don't have access to any Android device so I can't check unfortunately. Did you find out anything more about this behavior?
+",jmagnusson,2015-07-24 18:49:05
+30,2014-11-20 11:31:39,"Nope, so far I left it as it is
+",GregOriol,2015-07-24 18:49:05
+29,2014-02-04 06:51:37,,gdi2290,2014-02-04 07:12:42
+29,2014-02-04 07:12:40,":sparkles:
+",tobiasahlin,2014-02-04 07:12:42
+28,2014-01-11 17:01:28,"here's a example that I made:
+
+http://dabblet.com/gist/8373488
+",bernarddeluna,2014-01-11 17:13:30
+28,2014-01-11 17:13:30,"@bernarddeluna Impressive, love the idea. Thanks for the example! Animating the background-size performs much worse than  using `transform` though. I neither like a bunch of nested divs, but the end user experience is more important than cleaner code, so closing this. 
+",tobiasahlin,2014-01-11 17:13:30
+27,2014-01-10 01:54:11,"Made a simple Pacman bouncy guy. Let me know if you have any suggestions.
+",lance0,2014-01-30 08:58:32
+27,2014-01-30 08:58:32,"@blitchiz Haha! :heart: this. It doesn't really fit the style of the rest of the spinners though. Closing, but feel free to submit more :sparkles:
+",tobiasahlin,2014-01-30 08:58:32
+27,2014-01-30 21:51:38,"@tobiasahlin thanks! it was a fun little project messing with it, didn't expect a merge but hey a guy can try :P 
+",lance0,2014-01-30 08:58:32
+26,2014-01-07 19:27:45,,denniselmenace,2014-01-30 09:07:00
+26,2014-01-30 09:07:00,"Duplicate of #19 
+",tobiasahlin,2014-01-30 09:07:00
+25,2014-01-06 03:22:36,"<img src=""https://f.cloud.github.com/assets/19409/1848249/65bfbc46-7681-11e3-9655-2cb4f50bc57f.png"" width=""32"">
+
+Adds a traditional cog wheel spinner.  Generated from [this](https://gist.github.com/devongovett/5996869) Jade and Stylus which is a bit easier to read/more configurable due to Stylus's math, variable and looping abilities, and lack of prefixes. Happy to include that too if desired.
+
+Thanks for the project, great resource!
+",devongovett,2014-09-11 19:59:10
+25,2014-01-30 09:10:30,"@devongovett Love this one, let's merge this after some clean-up :sparkles:
+",tobiasahlin,2014-09-11 19:59:10
+25,2014-02-01 18:01:55,"Ok, switched to translateZ. Let me know if there is anything else you'd like to change.
+",devongovett,2014-09-11 19:59:10
+25,2014-04-01 13:55:55,"@devongovett Better late than never, sorry. The spinner flickers (especially at bigger sizes) because it's being rotated. To make it perfect, we'll have to make the elements stand still and only animate the opacity. Would you mind fixing that? :sparkles:
+",tobiasahlin,2014-09-11 19:59:10
+24,2014-01-04 06:10:07,"Added very simple scaled version of ticking clock.  
+
+I always knew you could do css animations but this is my first time doing it.  
+
+It was fun!
+",codingtwinky,2014-05-25 17:56:42
+24,2014-01-04 10:25:10,"This one looks weird in Firefox 26, however in Chrome it looks ok. I made a jsbin for you to test: http://jsbin.com/OWAfoRUj
+",cmfcmf,2014-05-25 17:56:42
+24,2014-01-04 17:55:39,"Forgot to add transform for firefox...  
+
+Fixed...
+",codingtwinky,2014-05-25 17:56:42
+24,2014-01-10 06:27:51,"I really like this great work :+1: 
+",lance0,2014-05-25 17:56:42
+24,2014-01-30 09:01:28,"@codingtwinky I like this one, but I'm not sure if it's obvious that it's a spinner. What do you think? Can it be tweaked somehow? Would it help if the movement of the minute handle was continuous?
+",tobiasahlin,2014-05-25 17:56:42
+24,2014-01-31 02:50:02,"@tobiasahlin Hmm, I'm not sure what is the exact definition of spinner.  Does it mean continuous movement?
+
+And I have updated to have a smooth minute hand progression.
+
+Thanks!
+",codingtwinky,2014-05-25 17:56:42
+24,2014-05-25 17:56:42,"@codingtwinky I love the work that went into this :heart: thanks! It's polished, but I don't think it fits the style of the rest of the spinners, so I'll close this.
+",tobiasahlin,2014-05-25 17:56:42
+23,2013-12-30 11:22:05,"A simple color wheel; good for dark backgrounds (colors could be adjusted to work better on light backgrounds).
+
+Demo: http://brigand.github.io/SpinKit/9-color-spinner.html
+",brigand,2014-01-03 12:47:45
+23,2014-01-03 12:47:44,"@brigand :boom: Really like the random complexity of this, but it doesn't fit very well with the rest of SpinKit. Every spinner in SpinKit uses a single color (and opacity), so the spinner is easy to customize for whatever color scheme you want to use it with. 
+",tobiasahlin,2014-01-03 12:47:45
+23,2014-01-10 12:55:15,"like it
+",Riverajakob11,2014-01-03 12:47:45
+22,2013-12-29 20:44:08,"Fixes #21 
+",tobiasahlin,2013-12-29 21:12:52
+22,2013-12-29 21:13:49,":+1: Thank you!
+",cmfcmf,2013-12-29 21:12:52
+21,2013-12-29 10:34:39,"BTW: Awesome spinners!
+",cmfcmf,2013-12-29 21:12:52
+21,2013-12-29 21:14:44,"@cmfcmf Thanks for the suggestion! :sparkles:
+",tobiasahlin,2013-12-29 21:12:52
+20,2013-12-27 06:42:53,"Use native objc code.
+",kejinlu,2013-12-27 16:48:36
+20,2013-12-27 14:45:26,"@kejinlu I'm already half-way done! :sparkles: If you'd like to help me review the code before I make the repo public, send me a mail at tobias at github.com :heart:
+",tobiasahlin,2013-12-27 16:48:36
+20,2013-12-27 14:47:34,"That is awesome! :+1: I'm gonna be using SpinKit in a new project I'm working on web and mobile ;)
+",pipozoft,2013-12-27 16:48:36
+20,2013-12-27 16:40:55,"mail sent! 
+",kejinlu,2013-12-27 16:48:36
+20,2014-02-18 15:58:01,"How far along are you with the iOS implementation?
+",hallas,2013-12-27 16:48:36
+19,2013-12-26 16:40:09,"simple bouncing ball loading indicator.
+",denniselmenace,2014-05-25 17:12:38
+19,2014-01-05 23:16:46,"I would be down to try and make a few, I think this is a really cool project!
+",lance0,2014-05-25 17:12:38
+19,2014-01-07 09:09:31,"pretty nice
+",zzz6519003,2014-05-25 17:12:38
+19,2014-01-07 18:56:42,"Hi blitchiz, yes you should definitely give it a try, this was my first attempt at trying to make one, I thought they were really cool. What makes it a circle is the -webkit-border-radius:100%; if that is removed it turns into a square. Here is a link for future reference when creating your own spinners http://www.css3shapes.com/, he describes a lot of shapes and how to make them, Good luck! Thanks zzz6519003 hopefully I can come up with something more creative now that I am getting used to web kits :+1: 
+",denniselmenace,2014-05-25 17:12:38
+19,2014-01-10 01:20:44,"@edenn awesome thank you!
+",lance0,2014-05-25 17:12:38
+19,2014-01-30 09:05:30,"@edenn Interesting. One issue here is that it doesn't actually bounce—it's more like it's being thrown back and forth. If it was bouncing, it would deform _when it hit the ground_, but now it starts deforming as soon as it's on its way down.
+
+Would you mind fixing that? (Can't promise a merge even with the fix, though :sparkles:)
+",tobiasahlin,2014-05-25 17:12:38
+19,2014-05-25 17:13:12,"Closing for spring cleaning, because of inactivity. Please feel free to open this again if you want to fix the issues above :zap:
+",tobiasahlin,2014-05-25 17:12:38
+18,2013-12-26 07:59:20,"Add a link to an AngularJS directives i wrote to your awesome spinners!
+",Urigo,2014-01-30 09:20:51
+18,2014-01-30 09:20:51,"@Urigo Love that you did this, but I don't think it is as important as the rest of the readme content at the moment. Will keep it in mind when changing it, though!
+",tobiasahlin,2014-01-30 09:20:51
+17,2013-12-24 12:01:47,"Hi Tobias.. great tool!!
+Is there a chance you can add a code for a simple SVG animation to show how more complex graphics can be treated?
+
+Thanks.
+",arsenbenda,2013-12-30 11:29:46
+17,2013-12-30 11:29:46,"@arsenbenda Thanks! Although I'm aiming for very simple spinners with SpinKit, I'll consider using SVGs if I come up with a spinner that needs SVGs to work. If that happens, I'll let you know!
+",tobiasahlin,2013-12-30 11:29:46
+16,2013-12-23 16:04:45,,ghost,2013-12-23 19:34:17
+16,2013-12-23 19:34:17,"@viveksiva :wave:
+
+Thanks for the contribution! Although technically very interesting, animating the border-width triggers a redraw every single frame (turn on paint rectangles in Chrome and you'll constantly see the red frame):
+
+![screen shot 2013-12-23 at 20 26 43](https://f.cloud.github.com/assets/211284/1802716/929c3cf4-6c08-11e3-9d22-a58e902d1542.png)
+
+Which makes it not as smooth as the other spinners. All the current spinners are limited to animating the `opacity` as well as the `transform` properties. This spinner is also quite geometrically complex compared to other spinners—I'd like to keep it simple, so I'll close this for now :sparkles:
+",tobiasahlin,2013-12-23 19:34:17
+15,2013-12-20 23:36:00,":warning:  This fixes a quite critical bug.
+
+I've heard of spinners not animating for some in Chrome. They've been working fine for me, and it doesn't seem to be dependent on your setup/Chrome version. I haven't been able to figure out why this is happening, but I've figured out how to fix it.
+
+The problem seems to be that Chrome supports `@keyframes` definitions without the `-webkit` prefix. Chrome doesn't, however, support `transform` without the `-webkit-` prefix. So even though `@-webkit-keyframes` is defined, `@keyframes` takes precedence, and nothing animates. This PR adds `-webkit-` to all transformations inside all `@keyframes` blocks.
+
+(What makes no sense is that if this really is the case, it should never have worked in Chrome.)
+",tobiasahlin,2013-12-20 23:39:58
+14,2013-12-20 18:18:07,"Fixes #13
+",tobiasahlin,2013-12-20 18:18:21
+14,2013-12-20 18:29:26,"Thanks. :+1:
+",zdroid,2013-12-20 18:18:21
+13,2013-12-20 13:12:36,"If you try to open files in console, e.g. `1 - Rotating Plane.html`, you'll get an error, because of  raw spaces aren't ok in shell, just escaped spaces are allowed. Also, `-` is used ase replacement for spaces (` `).
+
+Please rename files to something like `1-rotating-plane.html` (without spaces and lowercased.
+
+Thanks.
+",zdroid,2013-12-20 18:18:21
+13,2013-12-20 13:14:57,"@ZDroid  Great point, will fix. Thanks!
+",tobiasahlin,2013-12-20 18:18:21
+13,2013-12-20 13:24:05,":smile:
+",zdroid,2013-12-20 18:18:21
+12,2013-12-20 11:14:03,,Kiupel,2013-12-20 23:53:26
+12,2013-12-20 23:53:26,"See my comment in #11 
+",tobiasahlin,2013-12-20 23:53:26
+11,2013-12-20 11:13:51,,Kiupel,2013-12-20 23:53:06
+11,2013-12-20 23:53:06,"@Kiupel Thanks for the effort! :sparkles: Unfortunately, I don't think the animations hold up to the standard of the already existing animations, so I'll close these PRs.
+
+If you put in more time polishing them, reworking the animations and the formatting, then feel free to open a new PR.
+",tobiasahlin,2013-12-20 23:53:06
+10,2013-12-20 11:11:36,"Fixes #9
+",tobiasahlin,2013-12-20 11:11:48
+10,2013-12-20 11:11:43,":shipit: 
+",tobiasahlin,2013-12-20 11:11:48
+9,2013-12-19 23:12:57,"Hey,
+
+Nice collection of loaders! Just a suggestion if you add:
+
+<S_CODE_TOKEN>
+
+To your circles it will stop them jumping from there default value to scale(0) and starting the animation.
+
+Thanks,
+
+Fitz
+",fitz0019,2013-12-20 11:11:48
+9,2013-12-20 01:31:30,"It's only a tiny issue and you can call me picky if you like!
+
+I've created this code pen - http://codepen.io/fitz0019/pen/cEbGw to show the issue. 
+
+I've increased the delay to make it more obvious. See how the circles go from default and jump to 0% keyframe styles? If you uncomment animation fill mode and refresh it should start with the styles applied from 0% keyframe.
+",fitz0019,2013-12-20 11:11:48
+9,2013-12-20 01:34:43,"@fitz0019 Thanks! :sparkles: Totally see it now, will apply the fix.
+",tobiasahlin,2013-12-20 11:11:48
+9,2013-12-20 01:36:10,"@tobiasahlin Happy to help!
+",fitz0019,2013-12-20 11:11:48
+8,2013-12-19 17:54:06,"Expand dat readme
+",tobiasahlin,2013-12-19 18:03:54
+7,2013-12-18 09:39:17,,MHM5000,2013-12-19 17:56:11
+7,2013-12-19 17:56:11,"@MHM5000 Thanks! :sparkles: I cherry-picked this and expanded on it in #8 
+",tobiasahlin,2013-12-19 17:56:11
+6,2013-12-18 04:27:25,,nits,2013-12-18 07:52:48
+6,2013-12-18 05:44:33,"That is not _SpinKit_'s fault. IE9 does not support animations. You will need IE10+.
+",sahat,2013-12-18 07:52:48
+6,2013-12-18 07:52:48,"@nits What @sahat is saying is true. SpinKit's goal isn't to offer a solution that works in every browser, but to use CSS animations in browsers that supports them to create smooth and easily customizable animations.
+
+If you want to use this for a project where you have users running IE9 and below, you'll want to check for unsupported browsers with JS and replace the spinner with a gif (or something similar.)
+",tobiasahlin,2013-12-18 07:52:48
+6,2013-12-18 08:48:44,"@tobiasahlin  okay...  Thanks for the suggestion...
+",nits,2013-12-18 07:52:48
+5,2013-12-17 15:29:52,"Hi there,
+
+thanks for this nice collection, thinking about integrating it for our Paymill site. 
+
+Best!
+",d0mme,2013-12-17 22:50:35
+5,2013-12-17 22:50:35,":boom: :horse: Glad you like it! Let me know how the integration goes.
+",tobiasahlin,2013-12-17 22:50:35
+4,2013-12-17 08:36:48,":boom: They've both dropped their prefixes for animation, transform and transition.
+",tobiasahlin,2013-12-17 08:37:36
+4,2013-12-17 08:36:58,":shipit: 
+",tobiasahlin,2013-12-17 08:37:36
+3,2013-12-16 20:57:27,"Fixes #2
+",tobiasahlin,2013-12-16 20:57:55
+2,2013-12-16 20:48:39,,soffes,2013-12-16 20:57:55
+2,2013-12-16 20:58:18,"@soffes Thanks! :sparkles:
+",tobiasahlin,2013-12-16 20:57:55
+1,2013-12-16 20:42:06,,tobiasahlin,2013-12-16 20:43:18
+1,2013-12-16 20:42:17,":ship:
+",tobiasahlin,2013-12-16 20:43:18

@@ -1,0 +1,173 @@
+issue_num,datetime,body,login,mention_login
+236,2017-03-05 18:09:14,Thanks @cedarz!,prakhar1989,cedarz
+232,2017-02-20 18:11:21,Thanks @joelowj 👍 ,prakhar1989,joelowj
+231,2017-02-02 06:06:11,"Thanks for contributing @ababen. Can you please add the requisite icons and add links to assignments so that it's easier for others to understand what this course has to offer?
+",prakhar1989,ababen
+228,2017-01-15 13:35:05,"Thanks Kunal! 👍 
+
+@awelch83 - Hmm, I try to but I don't enforce this strongly in PRs.",prakhar1989,awelch83
+192,2016-07-20 17:01:35,"Sorry for Typo. Thanks @awelch83 
+",yogeshdarji99,awelch83
+190,2017-03-19 22:45:53,"@zuik - the formatting in your README is totally off! I'd suggest you close this PR, pull from this repo, make the change and re-submit the PR.",prakhar1989,zuik
+166,2016-02-23 06:40:22,"Thanks @mrdrozdov! Looks like a useful course.
+",prakhar1989,mrdrozdov
+151,2016-01-14 19:51:44,"A course created by students?! Awesome! Looks great @n3xtInc. Thanks for the PR!
+",prakhar1989,n3xtInc
+151,2016-01-14 20:01:43,"Sure @n3xtInc! Happy learning! :grinning: 
+",prakhar1989,n3xtInc
+149,2016-01-13 01:17:51,"@prakhar1989 Sorry, I didn't check that. No, really. :) 
+
+I just happened to see your repo and checked the build failures on travis so thought it would be nice to have a build status button. :)
+
+Let me know if you need help maintaining it. 
+",bhalothia,prakhar1989
+149,2016-01-13 01:19:07,"@bhalothia No problem at all man! I do this all the time! Thanks for offering to help - I will reach out soon enough :+1: 
+",prakhar1989,bhalothia
+146,2015-12-18 18:29:00,"@prakhar1989 still workin on it, will let you know when ready :smile: 
+",awesome-bot,prakhar1989
+146,2015-12-18 18:43:28,"@prakhar1989 
+Looks like there are now some real issues
+
+The following links are no longer valid
+
+> Links 
+> 1. 404 http://patricklam.ca/p4p/notes/
+> 2. 404 http://verifiablerobotics.com/courses/mae6740.html
+> 3. 404 https://www.classes.cs.uchicago.edu/current/22300-1/Home.html
+> 4. 404 https://www.classes.cs.uchicago.edu/current/22300-1/Schedule.html
+> 5. 404 https://pl.barzilay.org/homeworks.html
+> 6. 404 http://cs61a.org/resources.html
+> 7. 404 http://cs61a.org/by_topic.html
+> 8. 404 http://cs61a.org/problems/
+> 9. 404 http://cs61a.org/by_type.html
+> 10. 404 http://www.csce.uark.edu/~jgauch/2014/S14/handouts/syllabus.html
+> 11. 404 http://www.csce.uark.edu/~jgauch/2014/S14/index.html
+> 12. 404 http://research.microsoft.com/en-us/people/mickens/
+> 13. http://am207.org/ getaddrinfo: Temporary failure in name resolution
+
+Should they be removed?
+
+And there are a bunch that are duplicated.. we can either
+1. white list each of them
+2. allow duplicates..
+
+Let me know if you'd like me to help correct or if you want to do it yourself
+",awesome-bot,prakhar1989
+146,2015-12-19 07:20:40,"Hi @awesome-bot, you are bot??
+",NamPNQ,awesome-bot
+146,2016-02-14 00:59:56,"@awesome-bot, you're awesome and I love you 
+",robbyoconnor,awesome-bot
+146,2016-02-14 06:13:50,"Anybody here picturing @awesome-bot as Bender right now? 
+",robbyoconnor,awesome-bot
+145,2015-12-18 18:08:08,"@prakhar1989 remember to connect the repo to https://travis-ci.org/
+Let me know if you need any help
+",awesome-bot,prakhar1989
+141,2015-11-05 17:29:35,"Thanks @ngzhian for the PR! This is a cool course, but I'm afraid its very similar to the [compilers](https://www.coursera.org/course/compilers) course on Coursera. Can you point out a few differences between the two? If both are similar, I'd prefer not to add this course to the list (for reasons, read [here](https://github.com/prakhar1989/awesome-courses/blob/master/CONTRIBUTING.md)).  
+",prakhar1989,ngzhian
+132,2015-09-20 13:04:52,"Hi @CruiseDevice 
+
+Thanks for the PR! Two quick things - 
+1. Please add links to programming assignments, lecture notes etc in the correct format. You can checkout how it is done with other courses.
+2. Squash all your commits into one so that the git history looks clean.
+
+Let me know if you have any queries.
+",prakhar1989,CruiseDevice
+130,2016-04-12 14:18:55,"@mingloo did you already work through the assignments? Want to form a study group?
+",liquidmetal,mingloo
+130,2016-07-21 15:18:26,"Closing this now. Thanks @awelch83!
+",prakhar1989,awelch83
+122,2015-07-08 19:34:23,"@solveris Updated the link. Thanks! :+1: 
+",prakhar1989,solveris
+119,2015-06-19 12:15:02,"@praveenvvstgy An older installment of this course (2011) is already there by the name of 15-781. I have updated the old course by the new one myself. Thanks for the PR, though :+1: 
+",prakhar1989,praveenvvstgy
+119,2015-06-19 13:27:46,"@prakhar1989 there is a difference between 15-781 (also called 10-701) and 10-601, I think we should retain both the courses. Here is a [quora answer](https://www.quora.com/Which-is-better-at-CMU-10-601-or-10-701) which briefly states the difference between the two courses.
+",praveenvvstgy,prakhar1989
+109,2015-05-08 09:54:32,"@robbyoconnor: Hey Robby, MIT 6.001 is a popular course which is based on the same book - SICP. The version on OCW even has videos by authors themselves - http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-001-structure-and-interpretation-of-computer-programs-spring-2005/video-lectures/. I feel the OCW course is more comprehensive than this one.  Let me know what you think.
+",prakhar1989,robbyoconnor
+105,2015-03-23 09:06:33,"Hi @dorafmon, since there are already a couple of FP / Ocaml courses with more content than this course, I'll be closing this PR for now.
+
+Thanks!
+",prakhar1989,dorafmon
+94,2015-02-11 12:43:04,"@awelch83  .DS_Store ""(short for Desktop Services Store)[1] is a hidden file with a proprietary format created by OS X to store custom attributes of a folder such as the position of icons or the choice of a background image""  [Wikipedia](https://en.wikipedia.org/wiki/.DS_Store)
+
+Bottomline, they will keep coming back because they are generated automatically by the OS. To avoid that, you should use  `gitignore` files. This [link](http://git-scm.com/docs/gitignore) will help you overcome this issue.
+",ahmadassaf,awelch83
+94,2015-02-11 15:38:53,"Thanks @ahmadassaf. I'm going to read about gitignore later today.
+",awelch83,ahmadassaf
+84,2015-01-30 14:23:44,"@robbyoconnor Check out [this link](http://bit.ly/1qW0nJ7)
+",awelch83,robbyoconnor
+84,2015-02-02 01:00:00,"@awelch83, thank you <3 
+@prakhar1989  Fixed :) 
+",robbyoconnor,prakhar1989
+84,2015-02-02 01:00:00,"@awelch83, thank you <3 
+@prakhar1989  Fixed :) 
+",robbyoconnor,awelch83
+57,2015-01-10 03:17:33,"@prakhar1989 that looks cool I'll have to give it a look. Still, with all of these great classes I'd love to find a way to build some structures around them. I'm just afraid I'm not the guy to know the hierarchy for these. Maybe someone else will.
+",dansackett,prakhar1989
+49,2015-01-06 18:18:48,"Thanks for the clarification @MicBrain :+1: 
+",prakhar1989,MicBrain
+48,2015-01-14 03:40:06,"@samarjeet You need to resolve the merge conflict before I can merge. Also, please add links to assignments and emojis (refer exisiting courses). Lastly, @awelch83 spent a lot of effort in ordering courses under each section, so please make sure you add CS162 at the right place i.e. before CS 186.
+
+Thanks!
+",prakhar1989,samarjeet
+29,2014-12-29 17:41:57,"@prakhar1989 weird. I've had a lot of success using the github / markdown's `:+1:` syntax. I just [changed](https://github.com/banderson623/banderson623.github.com/commit/dc57916e1aa4d6610bd04fa5e340053498b00a84) this [readme](https://github.com/banderson623/banderson623.github.com/blob/master/README.markdown) and it looks to work.
+
+the ""movie camera"" emoji is `:cinema:`
+",banderson623,prakhar1989
+29,2014-12-29 17:45:03,"@banderson623 I tried the same. As soon as I paste the content of this readme, all emoji's turn to raw text. 
+
+![img](http://api.drp.io/files/54a1932e75cbb.png)
+",prakhar1989,banderson623
+29,2015-01-08 15:03:22,"As per @raymondware's suggestion, I've added emojis under the systems section in the [emoji](https://github.com/prakhar1989/awesome-courses/tree/emoji#systems) branch (alongwith a [legend](https://github.com/prakhar1989/awesome-courses/tree/emoji#legend)). 
+
+It would be great if you all could  have a look and suggest improvements (if any). If this looks good, I'll go ahead and do the needful for other sections as well. Thanks! :grinning: 
+",prakhar1989,raymondware
+26,2014-12-29 10:32:16,"@abdelhadikhiati: [Class-central](https://www.class-central.com/) is a great MOOC aggregator. 
+As @samarjeet rightly said, this repo is for relatively unpopular university courses that make their content available online for free.
+",prakhar1989,samarjeet
+232,2017-02-19 15:08:22,"Hi @prakhar1989  This issue has been resolve, I suggest this issue to be closed.
+Thanks a lot.",joelowj,prakhar1989
+228,2017-01-12 20:26:24,@prakhar1989 Are we still trying to keep these in alphabetical order?,awelch83,prakhar1989
+212,2016-10-07 18:59:53,"Sure! Thanks for taking this up! For the 404 checking, you can refer to [Awesome Bot](https://github.com/dkhamsing/awesome_bot). I'd also suggest taking a look at this [PR](https://github.com/prakhar1989/awesome-courses/pull/146) in order to understand the issue we had when we tried to implement it for this repo. I'm sure @awesome-bot would love to chip in.
+",prakhar1989,awesome-bot
+194,2016-07-21 15:24:00,"@prakhar1989 
+
+
+
+
+",awelch83,prakhar1989
+173,2016-04-12 08:23:51,"@prakhar1989 Is there anything I need to change/add in this PR so it can get merged upstream? Please let me know.
+",ivmarkp,prakhar1989
+149,2016-01-13 01:12:17,"Haha! I'm not sure if this is a joke but my last [commit](https://github.com/prakhar1989/awesome-courses/commit/5bf33c3324733df24b12e52b65e030c337f1902d) on this repo was deleting the .travis.yml. Please follow the discussion with @awesome-bot in the commit above to see why I'm postponing this change. Thanks anyways =)
+",prakhar1989,awesome-bot
+94,2015-02-10 15:29:11,"@prakhar1989 To answer your concerns from #93, I agree that courses which offer assignments and lectures, in addition to readings, are more useful. I still think, however, that CS 6650 serves a purpose, because this subject matter isn't currently addressed by any other course listed in the readme. In the future, if someone finds a course on this subject that does have assignments to go with it, they will hopefully delete my entry and replace it with their own. Aside from that, I also got rid of the extra bullet point that I somehow created at line 615, in pr #93.
+
+@robbyoconnor I deleted .DS_Store, as you mentioned. I'm not sure why, or how, that file somehow finds its way into my commits from time to time.
+",awelch83,prakhar1989
+94,2015-02-10 15:29:11,"@prakhar1989 To answer your concerns from #93, I agree that courses which offer assignments and lectures, in addition to readings, are more useful. I still think, however, that CS 6650 serves a purpose, because this subject matter isn't currently addressed by any other course listed in the readme. In the future, if someone finds a course on this subject that does have assignments to go with it, they will hopefully delete my entry and replace it with their own. Aside from that, I also got rid of the extra bullet point that I somehow created at line 615, in pr #93.
+
+@robbyoconnor I deleted .DS_Store, as you mentioned. I'm not sure why, or how, that file somehow finds its way into my commits from time to time.
+",awelch83,robbyoconnor
+94,2015-02-11 15:38:11,"@prakhar1989 Problem fixed. There was no duplicate of CSCI 104, but I did find a duplicated of CS 4820, which I removed.
+",awelch83,prakhar1989
+93,2015-02-10 15:30:24,"@prakhar1989 and @robbyoconnor - I created a new pull request, addressing these issues.
+",awelch83,prakhar1989
+93,2015-02-10 15:30:24,"@prakhar1989 and @robbyoconnor - I created a new pull request, addressing these issues.
+",awelch83,robbyoconnor
+67,2015-01-13 16:04:34,"Hi @HaseebR thanks for the PR. Unfortunately, I can't merge this as this course is identical to Prof Andrew Ng's [course](https://www.coursera.org/course/ml) on Coursera. You can refer to this [section](https://github.com/prakhar1989/awesome-courses#contributing) for the contribution guidelines.
+",prakhar1989,HaseebR
+66,2015-01-12 07:44:13,"@awelch83 thanks, it is updated now.
+",zhongweiy,awelch83
+48,2015-01-14 03:40:06,"@samarjeet You need to resolve the merge conflict before I can merge. Also, please add links to assignments and emojis (refer exisiting courses). Lastly, @awelch83 spent a lot of effort in ordering courses under each section, so please make sure you add CS162 at the right place i.e. before CS 186.
+
+Thanks!
+",prakhar1989,awelch83
+29,2014-12-29 16:32:17,":+1:
+
+Adding the label :cinema: could be a quick win.  I would be happy to help with a PR.
+
+_edited_ after an exchange with @ahmetalpbalkan on twitter.
+",banderson623,ahmetalpbalkan
+26,2014-12-29 10:32:16,"@abdelhadikhiati: [Class-central](https://www.class-central.com/) is a great MOOC aggregator. 
+As @samarjeet rightly said, this repo is for relatively unpopular university courses that make their content available online for free.
+",prakhar1989,abdelhadikhiati

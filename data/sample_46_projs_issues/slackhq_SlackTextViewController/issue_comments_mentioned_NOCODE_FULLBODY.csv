@@ -1,0 +1,1165 @@
+issue_num,datetime,body,login,mention_login
+586,2017-03-20 23:37:20,Thanks for that @aaronbrethorst 🙇. I just merged https://github.com/slackhq/SlackTextViewController/pull/585 fixing the same.,dzenbot,aaronbrethorst
+586,2017-03-20 23:38:17,"@dzenbot yeah, I just noticed that another PR was opened with the same changes :) ",aaronbrethorst,dzenbot
+580,2017-03-13 11:41:14,"hi @yarodevuci,
+
+is this when the keyboard first pops up, or are you unable to scroll the message for it to appear fully in view?",adamsrosco,yarodevuci
+580,2017-03-13 14:46:54,@adamsrosco That's when keyboard is up and I press send button. That's how new message appears,yarodevuci,adamsrosco
+578,2017-03-07 07:44:14,@vbraun Hi. What did you use to create gap between left and right message?,yarodevuci,vbraun
+578,2017-03-07 08:00:27,"@yarodevuci not sure I understand your question, but this is the demo app that is in the https://github.com/EddyVerbruggen/cordova-plugin-native-keyboard repository.",vbraun,yarodevuci
+576,2017-03-04 02:53:39,"@dzenbot Could not find anything related to that. Could you please point more specifically? 
+scrollView == autoCompletionView this?
+
+Perfect! Thank you sir!!! Your super fast response is greatly appreciated! Cheers!",yarodevuci,dzenbot
+573,2017-02-24 11:06:45,"@bingjiang @dzenbot Yes I can confirm that deinit is not called. Any solution to this??
+Why thread is closed??",yarodevuci,bingjiang
+573,2017-02-24 11:06:45,"@bingjiang @dzenbot Yes I can confirm that deinit is not called. Any solution to this??
+Why thread is closed??",yarodevuci,dzenbot
+573,2017-03-01 06:44:50,@dzenbot Found the issue. Thank you,yarodevuci,dzenbot
+572,2017-03-01 06:43:51,@dzenbot  But it is possible to modify private file to change it ?,yarodevuci,dzenbot
+572,2017-03-01 06:54:41,"It's ok, I can modify the API.
+`        _autoCompletionHairline.tintColor = [UIColor redColor];
+`did not helped
+@dzenbot  
+
+        _autoCompletionHairline.backgroundColor = [UIColor redColor];
+did the trick!! Thanks!",yarodevuci,dzenbot
+571,2017-02-17 08:09:19,"@dzenbot thanks, I never used this type of keyboard..lol",jaskiratSeraphic,dzenbot
+569,2017-02-17 14:08:03,I couldb't have said it better. Thanks @alexbredy !,dzenbot,alexbredy
+567,2017-03-01 06:59:53,"Closing this for now, since @NinoScript found a workaround 💪 ",dzenbot,NinoScript
+558,2017-03-01 06:42:36,"Very interesting observation! I was able to reproduce this, by adding that code snippet either in `viewDidLoad` and `viewDidAppear`. @hipwelljo did you end up finding the issue?
+
+I would have though the `edgesForExtendedLayout` wasn't `all`. That would have explained it, but it's `all` by default and playing around with it doesn't help much. 
+`extendedLayoutIncludesOpaqueBars` is set to `YES` internally in `SLKTextViewController` but this flag doesn't influence the translucency of the navigation bar.
+
+I have sincerely no idea why this could be happening.",dzenbot,hipwelljo
+554,2017-03-01 06:54:00,What version of the library are you using @gulzatique? Those bugs seem old.,dzenbot,gulzatique
+553,2016-11-23 19:24:30,"Hey @danipralea! This library wasn't designed to be that flexible, but instead, provide basic outlets that fit most needs. For a much more custom layout I would strongly encourage you to fork the project, and add these new controls in SLKTextViewController. Particularly, look at `slk_setupViewConstraints` and `slk_updateViewConstraints`. All controls are using auto-layout.",dzenbot,danipralea
+553,2016-12-01 13:29:01,"Thanks for the response @dzenbot but if I add any other view via constraints, the constraints are somehow not activated. I have a custom title view for example, that I'm adding it and pinning it with layout constraints (same with a gradient view that comes below it):
+
+The views (in the storyboard both have 384 width):
+![screenshot 2016-12-01 15 19 51](https://cloud.githubusercontent.com/assets/768893/20795410/b0184096-b7d9-11e6-8d95-da219c263eb5.png)
+
+The code:
+
+
+
+But on an iPhone 7 Plus (which is bigger - 414 pixels), they don't resize up to the `self.view`'s width (same goes as for a join view as well):
+
+![simulator screen shot 1 dec 2016 15 32 00](https://cloud.githubusercontent.com/assets/768893/20795734/54490e74-b7db-11e6-8ced-1d12ab9f61a7.png)
+
+",danipralea,dzenbot
+553,2016-12-14 00:27:28,any ideas @dzenbot ?,danipralea,dzenbot
+551,2017-03-07 07:47:53,"@novinfard I have similar issue, my message bubble is partially hidden behind keyboard after sending message",yarodevuci,novinfard
+536,2017-03-07 07:48:55,@dzenbot @enstulen @je7db Same thing happens with UI Label text ... No ideas so far? ,yarodevuci,enstulen
+536,2017-03-07 07:48:55,@dzenbot @enstulen @je7db Same thing happens with UI Label text ... No ideas so far? ,yarodevuci,je7db
+536,2017-03-07 07:48:55,@dzenbot @enstulen @je7db Same thing happens with UI Label text ... No ideas so far? ,yarodevuci,dzenbot
+531,2017-03-10 19:29:14,"@yarodevuci it probably won't, unless someone explains why setting `AutomaticallyAdjustsScrollViewInsets` to `NO` works. I myself have no idea.",NinoScript,yarodevuci
+531,2017-03-10 19:51:29,I second that @NinoScript ,dzenbot,NinoScript
+530,2016-10-29 00:15:55,"That's good to know. Thanks for the headups @zhubofei !
+",dzenbot,zhubofei
+527,2016-10-18 17:17:36,"@dzenbot: Yes, I agree. I think a subclass of SLKTextView should be able to do the work.
+@arvindhsukumar:  So a prototype work that I did required some customization of the input text view. I was able to achieve what you wanted to do by subclassing SLKTextView and swap with custom NSTextStorage/LayoutManager without any issue. 
+",jackywu07,arvindhsukumar
+527,2016-10-18 17:17:36,"@dzenbot: Yes, I agree. I think a subclass of SLKTextView should be able to do the work.
+@arvindhsukumar:  So a prototype work that I did required some customization of the input text view. I was able to achieve what you wanted to do by subclassing SLKTextView and swap with custom NSTextStorage/LayoutManager without any issue. 
+",jackywu07,dzenbot
+527,2016-10-19 11:36:09,"Alright, thanks @jackywu07 @dzenbot 
+",arvindhsukumar,jackywu07
+527,2016-10-19 11:36:09,"Alright, thanks @jackywu07 @dzenbot 
+",arvindhsukumar,dzenbot
+525,2016-10-07 17:30:49,"@headkit Do you by any chance override the method `func target(forAction action: Selector, 
+ withSender sender: Any?) -> Any?` of SLKTextView? I modified the method to prevent ""select/copy/paste menu"" and screwed something up, when I removed the override it worked again. Spent my entire afternoon figuring it out...
+",jpodcedensek,headkit
+525,2016-10-07 20:39:12,"@jpodcedensek hey, thanx for your thoughts on that - unfortunately I don't overwrite any SLKTextView methods at all. I am still diggin'...
+",headkit,jpodcedensek
+522,2016-10-03 23:30:01,"👍  Looks great. Thanks for doing this @cyhsutw!
+",dzenbot,cyhsutw
+522,2016-10-03 23:34:43,"Thanks @dzenbot!
+",cyhsutw,dzenbot
+520,2017-01-17 12:39:31,@dzenbot we switched to latest iOS SDK/XCode. issue gone.,rajdev,dzenbot
+517,2016-09-23 23:51:54,"@RamdhaSOi Please submit a new issue, following the issue guidelines with more context about the error you are facing.
+",dzenbot,RamdhaSOi
+515,2016-10-17 05:10:05,"@jderes @dzenbot 
+
+I solved added the next lines on your viewWilAppear
+
+ [self setAutomaticallyAdjustsScrollViewInsets:NO];
+ [[self tableView] setContentInset:UIEdgeInsetsZero];
+",cbedoy,jderes
+515,2016-10-17 05:10:05,"@jderes @dzenbot 
+
+I solved added the next lines on your viewWilAppear
+
+ [self setAutomaticallyAdjustsScrollViewInsets:NO];
+ [[self tableView] setContentInset:UIEdgeInsetsZero];
+",cbedoy,dzenbot
+515,2016-10-18 18:22:53,"@cbedoy 
+Thanks for your solution! Just setting `automaticallyAdjustsScrollViewInsets = false` in `viewWillAppear` in my SLKTextViewController subclass fixed this for me. I didn't need to reset the content inset as well.
+",soleares,cbedoy
+515,2016-10-18 20:28:54,"Thanks @cbedoy! Will have a look very soon.
+",dzenbot,cbedoy
+507,2017-01-24 19:00:49,@dzenbot Do we have an ETA on this bug fix?,arjunkrsna,dzenbot
+507,2017-01-25 16:21:24,@dzenbot I just did a quick test and also wasn't able to reproduce this anymore using iOS 10. Thanks,RonnyFenrich,dzenbot
+505,2016-08-26 14:16:03,"Thanks @jedmund.
+Please complete the checklist and sign the CLA.
+",dzenbot,jedmund
+505,2016-08-27 04:04:58,"Done and done @dzenbot. Is the Travis CI build something I should worry about?
+
+Thanks!
+",jedmund,dzenbot
+505,2016-08-27 23:32:11,"Looks good!
+Nice catch @TosinAF
+
+@jedmund: The Travis CI is borken. I need to fix that thing (once more).
+",dzenbot,jedmund
+499,2016-10-04 01:18:13,"@cbedoy were you able to fix this by moving it to the main queue?
+",dzenbot,cbedoy
+498,2016-08-02 17:09:57,"Thanks for the detailed issue @michelalbers!
+You are right about the fact that other touch input are ignored because of the `singleTapGesture`, that is why this object is public so you can decide either to allow it to be recognised from the  `UIGestureRecognizerDelegate` methods.
+That is how we do it at Slack fwiw.
+
+(Lovely kitty btw! 😂 )
+",dzenbot,michelalbers
+495,2016-11-29 15:32:26,@bradya @dzenbot What's the status of this behavior for iOS 9/10? Did you guys just give up on this or is something else in the works?,firedrake93,bradya
+495,2016-11-29 15:32:26,@bradya @dzenbot What's the status of this behavior for iOS 9/10? Did you guys just give up on this or is something else in the works?,firedrake93,dzenbot
+493,2016-07-18 19:31:40,"This is great @giginet, although we need you to complete the [Contributor License Agreement (CLA)](https://docs.google.com/a/slack-corp.com/forms/d/1q_w8rlJG_x_xJOoSUMNl7R35rkpA7N6pUkKhfHHMD9c/viewform) before I can merge this PR.
+",dzenbot,giginet
+491,2016-07-06 22:22:22,"Hey @HarishHary. This library handles most of the UI outlets you would need to create a messaging interface, except its content (cells). This is totally up to you.
+Have a look at the sample project. It will help you better understand the implementation, power and limitations of the framework.
+",dzenbot,HarishHary
+488,2016-07-18 19:12:24,"@dzenbot it is battle tested with your super awesome QA :)
+",yury,dzenbot
+488,2016-07-19 21:05:09,"@yury: This PR looks good. Before merging, could you please complete the [Contributor License Agreement (CLA)](https://docs.google.com/a/slack-corp.com/forms/d/1q_w8rlJG_x_xJOoSUMNl7R35rkpA7N6pUkKhfHHMD9c/viewform)?
+",dzenbot,yury
+488,2016-07-20 13:12:02,"@dzenbot done
+",yury,dzenbot
+487,2016-07-05 19:16:25,"@madelman Thanks for taking the time to fully describe the issue. Could you please take a few more minutes and see if it's reproducible in the sample project too?
+",dzenbot,madelman
+487,2016-07-06 09:57:59,"@dzenbot Yes, I can confirm that it also happens in the sample project (in the Messenger-Swift). I added a new empty viewcontroller and the same code I sent in the Issue and I get the same result, Did Hide is not called.
+",madelman,dzenbot
+487,2016-07-07 01:11:04,"@madelman: this tweaks fixes the keyboard status issues.
+https://github.com/slackhq/SlackTextViewController/compare/keyboard-status-fix?expand=1
+
+I still need to do a bit more testing, specially so it doesn't break other expected behaviors. Please give it a try and let me know what you think.
+",dzenbot,madelman
+486,2016-11-08 21:09:28,"@hipwelljo I was able to fix this by calling
+
+
+
+at the end of viewDidLoad method in your sample project.
+
+Looks like the issue may be unrelated to SlackTextViewController. Take a look here:
+http://stackoverflow.com/questions/27787552/ios-8-auto-height-cell-not-correct-height-at-first-load
+",algrid,hipwelljo
+484,2017-03-03 14:21:49,@dzenbot What library is that?,yarodevuci,dzenbot
+471,2016-06-01 15:32:52,"@dzenbot exactly. This works just fine in a regular UITableViewController, but for some reason doesn't in SLKTextViewController. As I mentioned in the last comment, I was able to work around it by just adding the longpress to the cell, but it was a point of confusion. It's totally possible that I might have overlooked some concept that I was not aware of here though, so the question whether that is a legitimate bug is up for debate.
+",keyboardsamurai,dzenbot
+470,2016-06-09 03:47:26,"Looks good! Thanks @mtackes 
+",dzenbot,mtackes
+468,2016-05-30 03:16:27,"Hi @dzenbot Thanks for the reply. Attached the really simple sample project.
+
+[SlackTextViewControllerTest.zip](https://github.com/slackhq/SlackTextViewController/files/288759/SlackTextViewControllerTest.zip)
+",powerqian,dzenbot
+460,2016-09-20 12:45:01,"@dzenbot , @Axort  : Huge thanks guys  👍 
+",pmapma1,Axort
+460,2016-09-20 12:45:01,"@dzenbot , @Axort  : Huge thanks guys  👍 
+",pmapma1,dzenbot
+456,2016-06-10 23:53:04,"Great @davbeck. Will give it a try soon.
+On the meantime, can you check for https://github.com/slackhq/SlackTextViewController/pull/448 and see if it fixes it for you?
+",dzenbot,davbeck
+448,2016-07-20 18:56:19,"Thanks @devmario for your contribution but I've merged https://github.com/slackhq/SlackTextViewController/pull/488 which fixes this.
+",dzenbot,devmario
+447,2016-07-30 22:17:30,"@jarodl  Try to use this:
+
+
+",dkabyshev,jarodl
+445,2016-04-27 11:51:05,"hey @dzenbot ,so is #438 released yet? If not when will it be released?
+",allenx,dzenbot
+438,2016-04-17 13:54:25,"@dzenbot it occurs if you _don't_ call `registerPrefixesForAutoCompletion` at all though, so it's a problem.
+",sjrmanning,dzenbot
+437,2016-04-14 16:23:54,"This fixes it for me–thanks @dzenbot 
+",joshfreemanIO,dzenbot
+426,2016-07-19 19:41:02,"@dzenbot Hello, Is there any good news from Android team? We highly appreciate your help on this.
+Thanks.
+",Joisar,dzenbot
+416,2016-03-23 09:41:06,"@dzenbot Thank you! :smile: 
+",cyhsutw,dzenbot
+415,2016-03-22 21:34:39,"@elmateo487 Make sure you're not using some sort of a keyboard manager like IQKeyboardManager.
+If you are disable it for your class instance.
+",mbalex99,elmateo487
+415,2016-04-13 16:53:01,"@elmateo487: ok, but Carthage is working again, right?
+",dzenbot,elmateo487
+415,2016-04-16 06:20:48,"@dzenbot I finally got it to build, and congrats! The issue is gone for me! The gif above was very reproducible, and I cannot reproduce it now.
+
+THANKS!
+",elmateo487,dzenbot
+415,2016-04-16 06:22:43,"@elmateo487 thank you for the heads up!
+@mbalex99 can you confirm this as well?
+",dzenbot,mbalex99
+415,2016-04-16 06:22:43,"@elmateo487 thank you for the heads up!
+@mbalex99 can you confirm this as well?
+",dzenbot,elmateo487
+415,2016-04-20 05:12:56,"@dzenbot confirmed looks good for me!
+",mbalex99,dzenbot
+387,2016-02-11 15:25:01,"@dzenbot good catch :smile: 
+",ReadmeCritic,dzenbot
+384,2016-02-09 18:38:50,"@dzenbot Cool! I have an issue currently with auto complete where the auto complete is partially hidden by the text box because of the current handling of this issue. When will this change be merged and released?
+
+Note that the reason for my issue is because the image is actually within the section header, so the current autocomplete is only in the table view below.
+
+![img_4265](https://cloud.githubusercontent.com/assets/4510849/12926607/1969a918-cf19-11e5-9bb4-c71910d7eebb.PNG)
+",abc2mit,dzenbot
+384,2016-02-09 18:53:10,"@dzenbot I take that back, it looks like it has nothing to do with the header section, but having to do with the anchor position of the auto complete table, which seems to be tied to the bottom of the view (which is at the top of the keyboard) and not to the text box. Your demo video seems to show that your fix addresses this issue.
+
+![img_4266](https://cloud.githubusercontent.com/assets/4510849/12927120/4c76e742-cf1b-11e5-952e-db9e6815098c.PNG)
+",abc2mit,dzenbot
+381,2016-02-06 13:53:51,"@dzenbot yes exactly
+",novinfard,dzenbot
+364,2016-01-23 22:38:56,"@dzenbot 
+when I call 
+
+override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.searchResult.count
+    }
+
+that causes it to crash with the error 
+
+fatal error: unexpectedly found nil while unwrapping an Optional value
+(lldb) 
+",myflokk,dzenbot
+364,2016-01-28 17:14:08,"@dzenbot hey is there anyone that you know could help with this issue for Swift or any update on what could be causing this. I know you're busy and I don't mean to bug you but I REALLY need to find this solution and I've not been able to solve it myself.
+",myflokk,dzenbot
+362,2016-01-18 19:14:13,"@davbeck would you mind posting a screenshot to show how the layout is broken?
+",dzenbot,davbeck
+361,2016-01-18 17:38:00,"@cbowns agree, we should have done that at least. We will be more careful from now on. Thank you for your feedback 👊
+",dzenbot,cbowns
+361,2016-12-12 10:26:02,@dzenbot Can we go back to `UIScrollViewKeyboardDismissMode` at this point? I think the jarring animation only appears in the simulator right? I've never seen the gaps on my phone. (And we clearly can't find any better solution for iOS10 at least),zhubofei,dzenbot
+360,2017-02-15 19:33:57,"Not currently @BBurzec, sorry.",dzenbot,BBurzec
+358,2016-01-13 22:03:29,"Good catch @sibljon (or the Analyzer) 😅
+",dzenbot,sibljon
+355,2016-01-15 00:30:18,"@dzenbot how do you think the other people (FB, Insta etc.) do it?
+",rounak,dzenbot
+355,2016-01-20 17:05:15,"@iosdeveloper please see https://github.com/slackhq/SlackTextViewController/issues/361#issuecomment-171938265
+",dzenbot,iosdeveloper
+355,2016-03-16 16:57:08,"@dzenbot Not quite sure what the issue is. I'm currently using this technique in production with no issues on iOS9. I just tested and verified (iOS 9.2.1) that `willMoveToSuperview` get's called and sets the observer, and as I'm pulling the keyboard down `observeValueForKeyPath` is called.
+
+the one thing I noticed is that only `center` is called, and not `frame`
+
+
+",aryaxt,dzenbot
+355,2016-03-16 17:22:30,"@dzenbot :+1: 
+FYI: my input bar is not set as an accessoryView, it's added as a view of the controller. The accessoryView is `TextInputAccessoryView` which is just a hidden view is only used for tracking the movement of the keyboard
+",aryaxt,dzenbot
+355,2016-04-13 17:45:27,"@dzenbot Man I feel your pain here haha.  
+
+Did you every try using the accessoryView and overriding addConstraint: to capture and modify the height constraint? If so any issues?
+
+I'm using the auto-created height constraint to update the height of the accessoryView to allow for the interactive dismiss to still work. Since that internal constraint is not animatable, I animate the content to the new height before setting the internal constraint.
+
+Check out my project here https://github.com/ashare80/ASTextInputAccessoryView
+",ashare80,dzenbot
+355,2016-04-27 16:56:00,"@dzenbot thanks for this solution!
+Will it be merged in nearest release?
+When should we expect this fix in master?
+
+Thanks!
+",AYastrebov,dzenbot
+349,2016-01-11 08:31:14,"Sorry about this. It was caused when introducing the new text view delegate of type `<SLKTextViewDelegate,UITextViewDelegate>`. Strangely enough, `textView: shouldChangeTextInRange:replacementText:` still worked but not the other callbacks.
+
+Instead of overriding the delegate setter like @cyhsutw did in his comment, it's simpler to use `@dynamic` for the `delegate` property, so we let super implement it for us. Works like a charm now.
+
+Please have a look at #350
+Would appreciate your confirmation of the fix.
+",dzenbot,cyhsutw
+349,2016-01-12 01:33:05,"Thank you very much @dzenbot :+1: 
+
+It works great after changing `@synthesize delegate = _delegate;` to `@dynamic delegate;`!
+",cyhsutw,dzenbot
+343,2016-02-17 00:07:45,"@gdroel Is it possible to provide a more comprehensive example of a working refresh control with this library? I've been looking everywhere and I can't find anything but references that it's possible.
+",jacortinas,gdroel
+343,2016-02-17 07:01:39,"Sorry @jacortinas, this is the only way i've been able to implement it. Definitely would love to see a library for this. 
+",gdroel,jacortinas
+340,2016-01-02 05:14:34,"@LHIOUI please share a screenshot of this issue to better understand your view hierarchy. It should be working fine.
+",dzenbot,LHIOUI
+340,2016-01-05 18:31:58,"@LHIOUI try out that commit and let me know if it's fixed for your too.
+",dzenbot,LHIOUI
+340,2016-01-05 21:26:54,"@dzenbot Yes, I can confirm it Works now. Thank you.
+",LHIOUI,dzenbot
+340,2016-02-19 07:57:08,"@dzenbot It's not support `hidesBottomBarWhenPushed`, many apps hide bottom bar on chat pages or comments. Now, it's impossible.
+",azhdari,dzenbot
+333,2015-12-22 18:09:13,"Yes, this isn't really a bug, but more of a missing support. This works out of the box when `inverted` is set ON because the tableView/collectionView is flipped, and auto-layout pushes the view up from the top, which doesn't modify the content offset, giving the impression that the scroll cursor moves along the text view when growing. Makes sense?
+On the other hand, when not `inverted`, the tableView/collectionView moves from the bottom, without re-adjusting the content offset accordantly.
+
+I agree this should be tweaked. I tried many times to add support for this case without getting into a great result. Will leave this one open as a reminder. Feel free to give it a try @adina-abduraman :v: 
+",dzenbot,adina-abduraman
+325,2015-12-19 14:42:51,"@novinfard are you really installing 1.8?
+",dzenbot,novinfard
+323,2015-12-10 01:58:15,"@dzenbot The send button was being misaligned because of this for some reason when I touch and hold the left button. This fix fixes that
+",rounak,dzenbot
+321,2015-12-22 19:29:40,"Hey @tylerjames I wasn't able to repro. Which version are you using, and can you repro on iOS 9 and 8 consistently?
+Would you mind sharing a screencast to show how better reproduce this issue? That could be helpful to diagnose this.
+",dzenbot,tylerjames
+321,2015-12-23 17:47:30,"Hi @dzenbot, 
+
+I probably won't get a chance to look at this again until the new year. It's entirely possible, however, that there are some other libraries and/or views that are causing conflicts with the SlackTextViewController. I find setting the tableViewHeader property and adding a UIRefreshControl can cause some strange behaviour in tables. 
+
+If I get a chance I'll try to reproduce with more info.
+",tylerjames,dzenbot
+316,2015-11-30 22:14:16,"@dzenbot Thanks for linking me to that repo! He made it work but it's not exactly first-class support, since you have to `override var tableView: UITableView { return scrollView as! UITableView }` and if we add any more table view integration in the future, this solution will miss out on that. 
+",Adlai-Holler,dzenbot
+314,2015-12-02 10:49:11,"What version were you using @tibo ?
+",dzenbot,tibo
+314,2015-12-02 11:25:31,"@dzenbot 1.7.2, looks like I'm up to date according to the podspec
+",tibo,dzenbot
+312,2016-01-19 15:05:22,"@Luccifer would you be able to help with the swift example? I have an issue with the autocompleteView
+",myflokk,Luccifer
+311,2015-11-25 06:25:42,"@dzenbot that's what I had to begin with. no joy. 
+",markst,dzenbot
+311,2015-11-25 06:33:37,"@dzenbot can't I'm afraid. But could have something to do with backing my table view with a `NSFetchedResultsController`
+",markst,dzenbot
+311,2015-11-25 06:37:47,"@dzenbot ah; this seems to be to do with using a custom navigation controller transition animator. `<UIViewControllerAnimatedTransitioning>`
+",markst,dzenbot
+310,2015-11-25 06:12:33,"@dzenbot yeah it means I have 64pt's more space at the top of the scroll. 
+",markst,dzenbot
+294,2015-11-02 02:09:20,"@dzenbot any chance you can also create a new tagged release? Carthage takes the latest one and so far it's `Checking out SlackTextViewController at ""v1.7.1""`, not pulling in my changes unless I explicitly specify the commit hash 
+",AndrewSB,dzenbot
+293,2015-10-22 20:53:34,"I would, @dzenbot, but there is no crash, meaning no backtrace
+",danipralea,dzenbot
+286,2015-10-14 22:28:21,"@Gman9855 I got everything to work again, so hopefully this helps.
+
+For some reason, my targets User Header Search Paths were empty.
+
+I had to paste the following inside to get it to work: $(BUILT_PRODUCTS_DIR)
+",AdamBCo,Gman9855
+286,2015-10-21 08:51:28,"@A1iAshoor I'm getting `Use of unresolved identifier 'SLKMessageViewLayout'` and `Use of unresolved identifier 'SLKMessageViewCell'` when using the swift version in a current project. Are you seeing anything similar, or know how I could troubleshoot these errors?
+",blangslet,A1iAshoor
+286,2015-10-21 19:48:57,"@blangslet `SLKMessageViewLayout` isn't part of the library. It's a class from the sample project.
+Are you trying to reuse that class?
+",dzenbot,blangslet
+286,2015-10-21 20:00:16,"@dzenbot Yep, I ended up just bringing over the objective-c classes from the sample project and was able to import them in the bridge-header. Thanks for your work on this, pretty awesome project! :)
+",blangslet,dzenbot
+286,2015-10-21 20:05:16,"@dzenbot definitely will do! Going to use this in a night/weekend project, hopefully integrating media sharing won't be too difficult. I'm also considering trying to implement conversation threading, but that's a whole different ballgame. I'll send in PRs for any fun things that come out of the experimentation. 💁
+",blangslet,dzenbot
+283,2015-11-30 00:43:25,"@dzenbot is text caching optional? 
+for now I'm overriding `- (void)slk_cacheTextToDisk:(NSString *)text` to do nothing. 
+We use `SlackTextViewController` for multiple screens & don't wish to use this feature.
+",markst,dzenbot
+281,2015-10-13 20:09:02,"I also faced this bug with Cocoapods and SackTextViewController. Going to use @knutigro  fork for now:)
+",zigdanis,knutigro
+281,2015-10-15 07:02:04,"@dzenbot Yeap, i recently updated to 0.39 and with over 20 pods in my project, only SlackTextViewController had missing headers. So, i guess that cocoapods installation is fine, but you may have to fix something :)
+
+BTW I updated to 0.39 from the previous stable version (0.38.something) if that matters. I never try betas.
+",magnett,dzenbot
+281,2015-10-16 07:36:41,"@dzenbot  Yes, thanks. That solves it for me :-)
+",knutigro,dzenbot
+265,2015-10-23 19:00:22,"@danipralea did you try the latest releases?
+",dzenbot,danipralea
+265,2015-10-23 19:12:04,"Yes, sir.
+
+> On 23 Oct 2015, at 22:00, Ignacio Romero Zurbuchen notifications@github.com wrote:
+> 
+> @danipralea did you try the latest releases?
+> 
+> —
+> Reply to this email directly or view it on GitHub.
+",danipralea,danipralea
+259,2015-10-13 20:40:00,"@pgherveou are you still experiencing this?
+",dzenbot,pgherveou
+254,2015-10-07 21:20:00,"Gotcha. Thanks for the info @heyalexchoi.
+I'm happy to accept any PR that would make this experience a bit better. If not, I'll have a look at it soon.
+",dzenbot,heyalexchoi
+254,2015-10-07 22:00:39,"@timshadel so does this mean that including simulator slices shouldn't cause complications for users using the prebuilt framework without carthage?
+",heyalexchoi,timshadel
+253,2015-09-08 20:42:07,"Sorry about that @aaronscherbing. Some stuff changed in `UIScrollView+SLKAdditions.h`, specifically in `slk_isAtTop` and `slk_isAtBottom`, breaking the typing indicator check in `-canShowTypingIndicator`.
+
+While I take care of this, simply override `-canShowTypingIndicator` in your  `SLKTextViewController` subclass, and return `YES` for the conditions that best applies for you.
+",dzenbot,aaronscherbing
+250,2015-09-02 13:09:21,"@dzenbot thanks for your response. I have subclassed the SLKTextViewController. But then the viewcontroller does not display what I have in the storyboard. I guess the best practice for me is just to write code to configure my viewcontroller? Thanks!
+",hongseung92,dzenbot
+250,2015-09-02 14:24:33,"@dzenbot is the sample project available in Swift?
+",hongseung92,dzenbot
+250,2015-09-02 14:26:16,"@dzenbot  the storyboard sample is only in Objective-C. :'(
+",hongseung92,dzenbot
+245,2015-09-02 14:58:55,"@brianhu Hey Brian, Are you using Swift? if you are how are you displaying your storyboard? Can you advise on this? Thanks!
+",hongseung92,brianhu
+244,2015-08-29 14:44:35,"i think that wuold be a good improvement, btw i really like your libraries on github @dzenbot , thanks for sharing!
+",dreampowder,dzenbot
+244,2015-11-16 19:56:07,"Did you try using `automaticallyAdjustsScrollViewInsets` @eddwinpaz ?
+",dzenbot,eddwinpaz
+244,2015-11-16 22:20:51,"@dzenbot I've use it on my swift file that holds the tableview and nothing happens. :( 
+",eddwinpaz,dzenbot
+243,2015-08-25 16:31:11,"I've been recently working on a new feature, related to the empty `inputAccessoryView` for panning gesture enhancements.
+
+Would you please [install this branch](https://github.com/slackhq/SlackTextViewController/pull/241) @fluidsonic and let me know if it's still an issue for you?
+I haven't been able to repro 😕
+",dzenbot,fluidsonic
+243,2015-08-25 17:08:02,"@dzenbot that branch works fine - the input bar is visible again :)
+
+Keyboard panning also works, although it's a bit buggy when you scroll the keyboard all the way down and then up again without lifting your finger. When the keyboard is all the way up again then finally lift the finger. Keyboard won't stay but be dismissed instead. Works fine in Messages app.
+",fluidsonic,dzenbot
+243,2015-08-27 13:57:13,"@fluidsonic you might be interested in https://github.com/slackhq/SlackTextViewController/issues/247 's quick solution for now
+",dzenbot,fluidsonic
+239,2015-09-26 05:22:17,"Hi @dzenbot , is there any particular reason you used font.familyName instead of font.fontName? Now I can not set set bold or italic font in the textview as it only picks family name.
+",Ataman11,dzenbot
+238,2015-10-28 11:19:33,"Is there any update on this, @dzenbot?
+",casperstorm,dzenbot
+238,2015-11-22 21:23:09,"@krzd I've tried [that same snippet](https://github.com/slackhq/SlackTextViewController/issues/238#issuecomment-138894809) in the Programatic example, using the latest version, and I can no longer reproduce.
+Please re-open if it's still an issue for you.
+",dzenbot,krzd
+238,2016-05-25 08:26:15,"@dzenbot, I still have this problem. I have reproduced it the same way @krzd mentioned:
+
+`UITabBarController *controller = [[UITabBarController alloc] init];
+controller.viewControllers = @[[[UINavigationController alloc] initWithRootViewController:[MessageViewController new]]];
+self.window.rootViewController = controller;`
+
+I am using the newest release `1.9.3`.
+I have packed a [sample project](https://dl.dropboxusercontent.com/u/1027303/SlackTextViewController_offset_bug.zip) and a [small movie](https://dl.dropboxusercontent.com/u/1027303/slack_textfield_gab_problem.mov) showing the problem, recorded in the simulator however I have the problem on the device as well.
+",casperstorm,krzd
+238,2016-05-25 08:26:15,"@dzenbot, I still have this problem. I have reproduced it the same way @krzd mentioned:
+
+`UITabBarController *controller = [[UITabBarController alloc] init];
+controller.viewControllers = @[[[UINavigationController alloc] initWithRootViewController:[MessageViewController new]]];
+self.window.rootViewController = controller;`
+
+I am using the newest release `1.9.3`.
+I have packed a [sample project](https://dl.dropboxusercontent.com/u/1027303/SlackTextViewController_offset_bug.zip) and a [small movie](https://dl.dropboxusercontent.com/u/1027303/slack_textfield_gab_problem.mov) showing the problem, recorded in the simulator however I have the problem on the device as well.
+",casperstorm,dzenbot
+235,2015-08-21 07:11:11,"@dzenbot  Sorry,my bad, IQKeyboardManager is the evil
+@joshbernfeld  Thanks!! I would fix that ..I am new to the old project.
+",peiweichen,joshbernfeld
+235,2015-08-21 07:11:11,"@dzenbot  Sorry,my bad, IQKeyboardManager is the evil
+@joshbernfeld  Thanks!! I would fix that ..I am new to the old project.
+",peiweichen,dzenbot
+233,2015-09-08 17:50:31,"@nekonari did `0.8` fix it?
+",dzenbot,nekonari
+232,2015-08-13 13:15:13,"@dzenbot It is coming when in-call status bar is on at the time of launching the app.I am using the latest library.Other then this scenario it is working fine.
+",vandanakanwar,dzenbot
+230,2015-08-12 05:33:02,"@dzenbot Thanks for the quick response, I made a comment and already pulled the changes. Would you like me to update that line of code in my branch?
+",aryaxt,dzenbot
+230,2015-08-13 00:24:26,"@dzenbot This branch is broken, the bar disappears as soon as textfield becomes first response.
+",aryaxt,dzenbot
+230,2015-08-21 22:03:59,"So far, this branch behaves great. I haven't found any apparent bugs. The one about auto-rotation seems fixed now.
+
+@aryaxt Since the issue you're experiencing isn't related to this branch, let's open it in a new issue. I haven't been able to repro so far tho.
+",dzenbot,aryaxt
+225,2016-05-20 15:21:55,"@kylehorn @dzenbot  were there any PRs or commits made for this enhancement?
+",gooso,dzenbot
+225,2016-05-20 15:21:55,"@kylehorn @dzenbot  were there any PRs or commits made for this enhancement?
+",gooso,kylehorn
+214,2015-07-26 18:15:22,"Does that solve the issue you were experiencing @hirad ?
+",dzenbot,hirad
+211,2015-08-02 00:03:45,"@dzenbot - is there a way to see the emojis in action in the demo? I'm running Messenger-Storyboard as the demo app but do not know how to run the autocomplete for emoji system...
+",udaysinghcode,dzenbot
+207,2015-07-02 17:45:30,"Thanks for all your input @sveinhal ! 🙌
+",dzenbot,sveinhal
+202,2015-06-24 08:54:26,"@dzenbot Do you have time for a look at this?
+",sveinhal,dzenbot
+201,2015-06-12 16:45:20,"Thanks @sveinhal for bringing this up. I've been wanting to decouple the `typingIndicatorView` to allow further customization too.
+
+`registerClassForTypingIndicatorView:` sounds like a good starts, following the same pattern than `registerClassForTextView:`, and this way, opt-in for a custom view.
+
+I don't think it would be necessary to subclass `SLKTypingIndicatorView` to allow this, since `SLKTextViewController` isn't so coupled to that class. Instead, we could create a generic protocol wrapper:
+
+
+
+These would be the required accessors to conform to `SLKTypingIndicatorProtocol`:
+
+
+
+I think this should make the changes pretty straightforward, and also, deliver a simple to use API to any user that would like to extend the built-in typing indicator by creating its own approach.
+
+What do you think?
+",dzenbot,sveinhal
+199,2015-06-09 18:08:21,"@dzenbot It's very random, doesn't happen all the time. I updated to 1.5.1 yesterday. I'll do some testing and see if I can reproduce.
+
+Thanks
+",aryaxt,dzenbot
+199,2015-08-11 20:39:35,"I commented about this one being fixed in 5 beta, crashes are going down slowly, will close this after the number is close to 0 :)
+
+@dzenbot Do you guys accept PRs? I need to be able to hide the textInputBar in certain cases, and I see that there is an issue open for it.
+
+![screen shot 2015-08-11 at 1 36 37 pm](https://cloud.githubusercontent.com/assets/3460069/9209947/3ce29104-402e-11e5-9cf4-5d92b2e8a23e.png)
+",aryaxt,dzenbot
+199,2015-08-11 21:01:45,"We do accept PRs @aryaxt. Simply have a look at [here](https://github.com/slackhq/SlackTextViewController/pulls?q=is%3Apr+is%3Aclosed).
+
+I once attempt to implement that feature, without a great result. Looking forward to your solution.
+",dzenbot,aryaxt
+198,2015-06-06 16:06:06,"hi @nazywamsiepawel , did you find a solution for this issue ??
+",koptan,nazywamsiepawel
+195,2016-02-04 08:58:02,"I use v1.9 as an embedded controller (because I need to place an additional view at the top of the screen) and I get some unwanted top content inset. Hotfixed it in the following way (thanks @jkyin!):
+
+
+
+I don't know whether it's the same issue as discussed above, but it has the same visual effect.
+",werediver,jkyin
+186,2015-08-07 17:39:19,"Sorry for taking so much time to merge this.
+Works great and is backwards compatible. Thanks @jmreyes! 🙌 
+",dzenbot,jmreyes
+182,2015-05-20 17:37:37,"Thanks for this @hankbao :+1: 
+",dzenbot,hankbao
+176,2015-05-04 20:36:08,"@blakeperdue @tomaskraina did you find a way to get rid of it?
+",dzenbot,blakeperdue
+176,2015-05-04 20:40:41,"@dzenbot Sadly no. I ended up commenting out the two methods (`scrollViewDidScroll` and `scrollViewShouldScrollToTop`) to remove the warnings. This is obviously not a good solution but only thing that temporarily worked for me.
+",blakeperdue,dzenbot
+173,2015-04-29 21:22:31,"@tomaskraina What was the outcome of this? I'm seeing the same thing with XCode 6.3.1, Swift 1.2, and Base SDK 8.3.
+
+Were you able to get rid of those warnings? Thanks.
+",blakeperdue,tomaskraina
+167,2015-04-18 19:35:20,"Thanks @neonichu!
+",dzenbot,neonichu
+159,2015-06-10 13:56:52,"Sorry about that @sveinhal. Your approach was actually accurate, a much simpler.
+The initial calculations used to be simple, but as the lib evolved, new edge cases were discovered and those 2 funky methods start to get really complex by patching instead of refactoring them to be more efficient.
+
+I just realized your commit is very similar to https://github.com/slackhq/SlackTextViewController/commit/db1dbd7a58e5ae4ff93410e368ce72ef817ce198
+
+So thanks!
+",dzenbot,sveinhal
+159,2015-11-29 13:56:39,"@dzenbot, thank you so much for the quick feedback, sorry the misplaced post. 
+I'll ask a more specific question in a new issue.
+",luizv,dzenbot
+155,2015-07-04 07:32:25,"Thanks @hackiftekhar 
+It's very useful. I've get used to disabling it for some specific UIViewController in AppDelegate. Hope other developers could get used to it quickly.
+",WenchaoD,hackiftekhar
+145,2015-03-18 04:46:02,"@dzenbot , any updates on this?
+",hagile,dzenbot
+142,2015-03-17 13:20:37,"@dzenbot , please check this gist to get an idea on what I'm doing wrong? https://gist.github.com/hagile/87f77b2344165e4904a2
+",hagile,dzenbot
+142,2015-03-17 13:28:02,"@dzenbot , hey sorry, that was a bad typo. I don't want to show what exactly the file name is, thought I've changed its name too. 
+",hagile,dzenbot
+142,2015-03-17 14:10:17,"@dzenbot , I've tested it in a test project as well, there's no issue with your classes, I think something wrong in my code only! Any idea? I've tried with a plain (newly added) view controller as well, but there's still no luck. :( hope to have an answer from you.
+
+P.S. I'm working in XCode 6.1. and target is iOS 8.1. And running on a simulator iPhone5s.
+",hagile,dzenbot
+138,2015-03-16 13:38:38,"@dzenbot , Hi, thanks for the reply. I've already implemented it by my self. =)
+",hagile,dzenbot
+137,2015-09-08 17:52:53,"@rzehan could you please see if this has been fixed in [v1.7](https://github.com/slackhq/SlackTextViewController/releases/tag/untagged-795eb65f8fd29d8e2aa2)
+",dzenbot,rzehan
+137,2015-10-21 20:45:17,"Just chiming in on this, I have the same problem as @rzehan, and 1.7 did not fix this for me.
+I have a custom navigation bar with dynamic heights and SLKTextViewController gets on top of it, and even changing the frame on viewDidLayoutSubviews I still have a few flicks that only changing the constraint to something like: ""[self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@""V:|-70-[scrollView(0@750)][autoCompletionView(0@750)][typingIndicatorView(0)]-0@999-[textInputbar(>=0)]|"" options:0 metrics:nil views:views]];"" fixes it.
+",gmogames,rzehan
+137,2016-04-06 11:44:49,"Thanks @askeland , it worked great for me!
+",popei69,askeland
+128,2015-02-26 22:19:36,"Ah, that works perfectly. Thanks, @dzenbot! Got SlackTextViewController all wired up. It's awesome.
+",jeffbowen,dzenbot
+124,2015-03-03 18:30:27,"Hey @nguyenhuy, `AsyncMessagesViewController` looks amazing! You combined the best of both libraries, to build an even better one. Impressive work; very inspiring.
+",dzenbot,nguyenhuy
+124,2015-03-03 19:08:06,"Thank you, @dzenbot :dancer:. There are still many things need to be improved. Please feel free to give feedbacks. 
+",nguyenhuy,dzenbot
+124,2015-03-04 02:32:48,"Nice job, @nguyenhuy! Love what you've done with AsyncDisplayKit + SLKTextViewController! Very cools stuff - I' glad you're tackling it!
+",eanagel,nguyenhuy
+124,2015-03-04 07:44:53,"Thanks @eanagel, it wouldn't be possible without your pull request though :+1: 
+",nguyenhuy,eanagel
+118,2015-07-14 16:25:55,"@morizotter: Can you try out with latest from master?
+",dzenbot,morizotter
+118,2015-07-15 17:13:03,"@dzenbot I tried Messenger-Storyboard Example and it worked well! I have to check my code. 
+
+Thanks!
+
+<img width=""480"" alt=""slack"" src=""https://cloud.githubusercontent.com/assets/536954/8704761/24c12c8a-2b60-11e5-9432-91726eab10b1.png"">
+",morizotter,dzenbot
+99,2015-03-04 18:37:33,"@ikesyo can you please checkout the latest in master, and tell me if that fixes your issue?
+",dzenbot,ikesyo
+99,2015-03-06 06:11:48,"@dzenbot @sprynmr I confirmed the behavior with its latest release (v1.5), but it is still broken for our use case.
+
+1st image: Keyboard is hidden, and the area inside the red square is a container view controller.
+
+![keyboard_is_hidden](https://cloud.githubusercontent.com/assets/909674/6520953/54c46c18-c412-11e4-875f-e76736d8738e.png)
+
+2nd image: Keyboard is shown, but text input bar is under the keyboard.
+
+![keyboard_is_shown](https://cloud.githubusercontent.com/assets/909674/6520954/54cf1fdc-c412-11e4-83ff-1d8c22cfdc53.png)
+",ikesyo,sprynmr
+99,2015-03-06 06:11:48,"@dzenbot @sprynmr I confirmed the behavior with its latest release (v1.5), but it is still broken for our use case.
+
+1st image: Keyboard is hidden, and the area inside the red square is a container view controller.
+
+![keyboard_is_hidden](https://cloud.githubusercontent.com/assets/909674/6520953/54c46c18-c412-11e4-875f-e76736d8738e.png)
+
+2nd image: Keyboard is shown, but text input bar is under the keyboard.
+
+![keyboard_is_shown](https://cloud.githubusercontent.com/assets/909674/6520954/54cf1fdc-c412-11e4-83ff-1d8c22cfdc53.png)
+",ikesyo,dzenbot
+97,2015-01-16 18:46:57,"You are most welcome @dzenbot. You guys are awesome. Not only is Slack a stellar app (every damn company I work with use it and love it), this controller is also a gem. Thank you so much!
+",heumn,dzenbot
+92,2015-01-13 08:40:59,"@dzenbot I went to `SlackTextViewController/Examples/Messenger` directory and ran cocoapods with `pod install`. I also didn't make my own example. Is there any step I missed?
+",fullc0de,dzenbot
+92,2015-01-14 12:39:35,"@dzenbot Sorry. I am too late to let you know a result. I tried to edit Podfile according to your advice and ended up making it. Thank you. 
+",fullc0de,dzenbot
+90,2015-05-11 14:22:38,"Hey @chrise86 could you please share some bits regarding how to start playing with such integration? 
+
+I just installed the `SlackTextViewController` using motion-cocoapods, but I just can't figure out how to actually go and load the controller. 
+
+Thanks!
+",dgilperez,chrise86
+90,2015-05-13 07:03:44,"@dgilperez I pretty much just took the example here and converted to RubyMotion syntax
+",chrise86,dgilperez
+90,2015-05-14 18:33:12,"@chrise86 thanks! I happen to have some problem compiling / linking the library with Xcode 5.1.1, but 6.0 seems to be OK.
+",dgilperez,chrise86
+89,2015-01-09 18:53:25,"@dzenbot Unfortunately that didn't work.
+",Steven4294,dzenbot
+89,2015-01-14 18:38:54,"@dzenbot  No I was never able to figure it out. I tried the edgesForExtendedLayout, but that did not work
+",Steven4294,dzenbot
+87,2015-01-23 00:14:20,"@dzenbot Thanks, that did the trick! 
+",newyorkpizza,dzenbot
+85,2015-01-06 15:28:12,"Heads up @srikanthraju, it appears that link is no longer valid. 
+",mcgraw,srikanthraju
+85,2015-01-08 15:51:56,"Thanks David for responding. I found an alternate for that.
+
+On Tue, Jan 6, 2015 at 8:58 PM, David McGraw notifications@github.com
+wrote:
+
+> Heads up @srikanthraju https://github.com/srikanthraju, it appears that
+> link is no longer valid.
+> 
+> —
+> Reply to this email directly or view it on GitHub
+> https://github.com/slackhq/SlackTextViewController/issues/85#issuecomment-68879510
+> .
+
+## 
+
+Regards,
+Srikanth.P
++91-9990895944
+",srikanthraju,srikanthraju
+75,2015-09-13 18:49:10,"Hi @dzenbot and @hretarekar,
+
+I'm so excited to use this pod but I'm afraid I am still experiencing this same crash as hretarekar, even on the latest release. It's the same log trace except a few of the line numbers have changed slightly. 
+
+I cannot reproduce the problem in the sample project. Perhaps you can shed some insight based on my circumstance:
+- I am programmatically instantiating my viewcontroller with a xib file.
+- I have an IBOutlet from the tableview in my xib to my viewcontroller. 
+
+I have experimented with including and tweaking the following methods but could not get anywhere:
+`+ (UITableViewStyle)tableViewStyleForCoder:(NSCoder *)decoder`
+`- (id)initWithCoder:(NSCoder *)aDecoder`
+`- (void)commonInit`
+
+Any advice?
+",cassidyclawson,hretarekar
+75,2015-09-13 18:49:10,"Hi @dzenbot and @hretarekar,
+
+I'm so excited to use this pod but I'm afraid I am still experiencing this same crash as hretarekar, even on the latest release. It's the same log trace except a few of the line numbers have changed slightly. 
+
+I cannot reproduce the problem in the sample project. Perhaps you can shed some insight based on my circumstance:
+- I am programmatically instantiating my viewcontroller with a xib file.
+- I have an IBOutlet from the tableview in my xib to my viewcontroller. 
+
+I have experimented with including and tweaking the following methods but could not get anywhere:
+`+ (UITableViewStyle)tableViewStyleForCoder:(NSCoder *)decoder`
+`- (id)initWithCoder:(NSCoder *)aDecoder`
+`- (void)commonInit`
+
+Any advice?
+",cassidyclawson,dzenbot
+75,2015-10-28 21:28:57,"@cassidyclawson you are not supposed to have a tablview in your xib nor liking it with an IBOutlet.
+Are you doing the same @Fanghao 
+
+The current Interface Builder is actually a trick: you can't layout outlets on it since all the subviews are created programatically.
+",dzenbot,Fanghao
+75,2015-10-28 21:28:57,"@cassidyclawson you are not supposed to have a tablview in your xib nor liking it with an IBOutlet.
+Are you doing the same @Fanghao 
+
+The current Interface Builder is actually a trick: you can't layout outlets on it since all the subviews are created programatically.
+",dzenbot,cassidyclawson
+70,2014-12-10 14:52:54,"Is this still happening for you, @danielebogo ?
+",dzenbot,danielebogo
+70,2014-12-10 14:54:31,"Sorry @dzenbot. I've tried that commit and it works! Great work! 
+",danielebogo,dzenbot
+65,2014-11-05 17:39:14,"@lazerwalker you said
+
+> that isn't capable of handling circular dependencies
+
+But the truth is, it's simply disallowed now, as it always should've been :)
+",segiddins,lazerwalker
+64,2014-11-05 15:34:07,"@dzenbot I tried with the latest version ""1.3"". After you suggested, I tried it backwards to the ""1.2"" version and it still happened.
+
+Since I'm using a pre-release of Cocoapods, that may be it. I've also reported it to Cocoapods, and the issue reference is above.
+",fjcaetano,dzenbot
+64,2014-11-05 15:38:13,"@fjcaetano Great minds think alike.
+
+I just submitted a [pull request](https://github.com/slackhq/SlackTextViewController/pull/65) that should fix it. If you want to try it out, feel free point your Podfile at my repo or a fork of your own:
+
+
+",lazerwalker,fjcaetano
+64,2014-11-05 15:41:19,"@lazerwalker it fixed it! Thanks! :smile: 
+",fjcaetano,lazerwalker
+52,2014-10-16 23:09:22,"Looks like calling `loadView` without calling super, and setting the main view programatically, solves the problem:
+
+
+
+Creating the main view programatically seems like a legit fix, since the views are not created with Interface Builder. 
+Any thoughts on that @kevinrenskers @mcgraw ?
+",dzenbot,kevinrenskers
+52,2014-10-16 23:09:22,"Looks like calling `loadView` without calling super, and setting the main view programatically, solves the problem:
+
+
+
+Creating the main view programatically seems like a legit fix, since the views are not created with Interface Builder. 
+Any thoughts on that @kevinrenskers @mcgraw ?
+",dzenbot,mcgraw
+52,2014-10-20 17:21:07,"You mean it's solved @mcgraw?
+",dzenbot,mcgraw
+40,2014-10-14 05:19:45,"Well said @mcgraw!
+Closing this for now.
+",dzenbot,mcgraw
+16,2014-10-09 21:04:15,"This is now close with 10b0b457b9e296732199a1ac2b05532198e1af9c
+
+@andrebraga Please take a look at the latest changes, and let me know if you still facing issues with view constraints.
+
+Now, the `initWithCoder:` isn't configuring constraints any views, just initialising the appropriate one (either a `UITableView` or `UICollectionView` instance). In `loadView`, the views are added to the view hierarchy and view constraints are configured.
+
+Seems a bit simpler than the approach you're suggesting.
+",dzenbot,andrebraga
+10,2014-09-25 14:52:12,"hi @dzenbot  
+I have tried on iPhone 5s with a bluetooth keyboard, this bug appeared too. The iOS version of my iPhone is iOS 8.
+",zengyun-programmer,dzenbot
+10,2014-09-30 14:30:54,"Is this still happening for you @zengyun-programmer?
+",dzenbot,zengyun-programmer
+10,2014-10-10 14:11:56,"Will something like that solve the issue @valeriomazzeo?
+Thanks @khan-lau 
+",dzenbot,valeriomazzeo
+10,2014-10-10 14:11:56,"Will something like that solve the issue @valeriomazzeo?
+Thanks @khan-lau 
+",dzenbot,khan-lau
+10,2014-10-14 15:14:58,"Thanks for reporting @valeriomazzeo. This is now fixed in https://github.com/slackhq/SlackTextViewController/issues/49
+Next time, please submit these things in a new issue ;)
+",dzenbot,valeriomazzeo
+8,2014-09-24 23:04:11,":+1: @dzenbot I've noticed this in many places with Xcode 6 and the simulator. I really hope it's a bug but it's on Apple's table, really annoying change from Xcode 5 sim.
+",acrookston,dzenbot
+580,2017-03-07 07:45:17,"Most of the time if the message has new lines it ends up partially hidden behind the keyboard. Any ideas how to fix that? 
+@dzenbot 
+![img_0576](https://cloud.githubusercontent.com/assets/13408859/23646721/fcb3363a-02c6-11e7-9415-145d7fd81651.PNG)
+",yarodevuci,dzenbot
+577,2017-03-05 23:32:15,"Hi all, and @dzenbot 
+Can someone explain what is pipWindow for and how and for what purpose it can be used?
+",yarodevuci,dzenbot
+576,2017-03-04 02:49:08,"Hello @dzenbot 
+I am using below method to dismiss keyboard; However, if I am unable to use autocompletion because when I try to scroll on autocompletion view it triggers scrollViewWillBeginDragging func
+
+Any solution to this? Thank you!
+
+
+
+
+",yarodevuci,dzenbot
+572,2017-02-20 12:05:42,Hello @dzenbot I would like to know if it possible to change top line of autoCompletion view?,yarodevuci,dzenbot
+567,2017-01-25 19:46:59,"As discussed with @dzenbot via slack, the `tableView`, `collectionView` and `scrollView` properties are just used to hold a strong reference and nothing more, so I can use `- (instancetype)initWithScrollView:(UIScrollView *)scrollView` and keep my own reference to the collectionView or override the getter for `collectionView` to return the one stored in `scrollView`.
+
+It's kind of a hacky solution, but it is **a solution**.
+
+> SlackTextController :heart: IGListKit",NinoScript,dzenbot
+547,2016-11-05 00:36:24,"@dzenbot Thanks for the quick-reply. Sorry for the snafu, fixed with the last two commits!
+",ClementPadovani,dzenbot
+531,2017-03-07 07:56:49,"@dzenbot is this ever gonna be accepted?
+",yarodevuci,dzenbot
+527,2016-10-12 07:32:19,"Like you said, this is a pretty edge-case scenario. You could just create a SLKTextView subclass, which internally is created with your custom text storage and/or text manager. A user will unlikely swap text storages.
+What do you think of this @jackywu07 ?
+",dzenbot,jackywu07
+523,2016-09-29 06:11:33,"@dzenbot No problem! It's all good 😄 
+",cyhsutw,dzenbot
+517,2016-09-17 16:43:37,"@Thanks for the great library. 
+I have issue on input box [Textview]. When reached maxNumberOfLines, scrolling not happening. I'm not set any custom font for textview. 
+Hope you got my issue. @dzenbot 
+",RamdhaSOi,Thanks
+517,2016-09-17 16:43:37,"@Thanks for the great library. 
+I have issue on input box [Textview]. When reached maxNumberOfLines, scrolling not happening. I'm not set any custom font for textview. 
+Hope you got my issue. @dzenbot 
+",RamdhaSOi,dzenbot
+505,2016-08-27 22:50:57,"Thanks @TosinAF! I knew something looked off. Added it back just now.
+",jedmund,TosinAF
+505,2016-08-27 23:32:11,"Looks good!
+Nice catch @TosinAF
+
+@jedmund: The Travis CI is borken. I need to fix that thing (once more).
+",dzenbot,TosinAF
+492,2016-07-07 12:14:26,"- [x] I've read and understood the [Contributing guidelines](https://github.com/slackhq/SlackTextViewController/blob/master/.github/CONTRIBUTING.md) and have done my best effort to follow them.
+- [x] I've read and agree to the [Code of Conduct](https://github.com/slackhq/SlackTextViewController/blob/master/.github/CODE_OF_CONDUCT.md).
+- [x] I've searched for any related issues and avoided creating a duplicate issue.
+#### Description
+
+This bug happens when we try to prefill the textview with an ""@"" prefix and try to edit it or add more prefixes to it. When we go to add another ""@"" prefix and then select a suggestion, the selected suggestion text attaches itself to the start of the textview. 
+#### Reproducible in:
+- [x] This is reproducible in the sample project.
+
+SlackTextViewController version:
+iOS version(s): 9.3
+Device(s): Simulator
+#### Steps to reproduce:
+1. Open workspace to edit the Messenger-Swift project.
+2. Add textViewDidBeginEditing method.
+3. Add textView.text = ""@Someone "" to the method.
+4. Run the project. 
+5. Find the cursor stuck on the ""@"" 
+6. Try to add another prefix ""@"", select any auto complete suggestion. 
+### Expected result:
+
+Search suggestion when tapped should attach next to the cursor.
+### Actual result:
+
+You'll find the selected suggestion text attach itself all the way at the start of the textview.
+",eshwartm,Someone
+473,2016-06-05 07:01:22,"@dzenbot the keyboard-panning-v2 branch is really great, but there is one issue I've found.
+
+If you're using a SlackTextViewController inside a UITabBarController, the keyboard appears _over_ the tab bar when the SlackTextView becomes first responder. Normally when the SlackTextView resigns first responder, the keyboard slides back down _over_ the tab bar, but when the SlackTextView resigns first responder via the swipe gesture, the tab bar suddenly appears on top of the keyboard and the keyboard slides down _under_ the tab bar, which looks really yucky.
+",firedrake93,dzenbot
+400,2016-02-19 20:33:15,"@dzenbot Recently you fixed a bug which make it impossible to hide bottom bar on push.
+
+The original issue which is fixed now:
+[https://github.com/slackhq/SlackTextViewController/issues/340](https://github.com/slackhq/SlackTextViewController/issues/340)
+",azhdari,dzenbot
+391,2016-03-21 08:12:41,"This PR now includes a complete Swift sample thanks to @weijentu 👏
+Closes #417
+",dzenbot,weijentu
+391,2016-03-21 08:13:19,"@TosinAF: This is ready for review. We can add the Swift template later.
+",dzenbot,TosinAF
+387,2016-02-10 21:37:38,"This pull requests corrects the spelling of **CocoaPods** 🤓
+https://github.com/CocoaPods/shared_resources/tree/master/media
+
+<blockquote class=""twitter-tweet"" data-lang=""en""><p lang=""en"" dir=""ltr"">One day I’ll make a bot that looks through the READMEs of all Pods, looks to see if it uses “Cocoapods” and PRs “CocoaPods” :D</p>&mdash; Ørta (@orta) <a href=""https://twitter.com/orta/status/697374357975388160"">February 10, 2016</a></blockquote>
+
+<script async src=""//platform.twitter.com/widgets.js"" charset=""utf-8""></script>
+",ReadmeCritic,orta
+349,2016-01-11 08:31:14,"Sorry about this. It was caused when introducing the new text view delegate of type `<SLKTextViewDelegate,UITextViewDelegate>`. Strangely enough, `textView: shouldChangeTextInRange:replacementText:` still worked but not the other callbacks.
+
+Instead of overriding the delegate setter like @cyhsutw did in his comment, it's simpler to use `@dynamic` for the `delegate` property, so we let super implement it for us. Works like a charm now.
+
+Please have a look at #350
+Would appreciate your confirmation of the fix.
+",dzenbot,dynamic
+349,2016-01-12 01:33:05,"Thank you very much @dzenbot :+1: 
+
+It works great after changing `@synthesize delegate = _delegate;` to `@dynamic delegate;`!
+",cyhsutw,synthesize
+349,2016-01-12 01:33:05,"Thank you very much @dzenbot :+1: 
+
+It works great after changing `@synthesize delegate = _delegate;` to `@dynamic delegate;`!
+",cyhsutw,dynamic
+306,2015-11-22 15:52:49,"Hi, here is what i'm trying to do. In my app i don't have short names like ""@someone"", only full names like ""@someone last name"" and i need tag people like Facebook does.
+I already modified the lib to return string like ""<:id><:name>"" then i can get name and id with regex and show in textfield.
+but the problem is when i have name with spaces, after press spacebar, the autocompletion view hide itself. 
+What can i do? 
+Thanks and sorry for my english
+",reeichert,someone
+287,2015-10-16 05:53:28,"Thanks for this @WenchaoIOS !
+",dzenbot,WenchaoIOS
+280,2015-10-07 13:16:01,"No, I meant to add an option to not cancel auto-completion when typing a space bar while typing the mention. (Ex.:  @samuel tremblay) Will help for last name query and HTTP search with multiple words.
+",stremblayiOS,samuel
+247,2015-08-26 18:42:02,"@dzenbot Finally found out why my input bar gets hidden. Changing the background color causes this issue. This issue only happens on 1.6
+
+
+",aryaxt,dzenbot
+239,2015-08-22 20:53:35,"cc @udaysinghcode
+",dzenbot,udaysinghcode
+235,2015-08-19 08:36:18,"@dzenbot 
+",peiweichen,dzenbot
+235,2015-08-20 10:10:05,"My controller subclass SLKTextViewController using custom navigationController
+
+@implementation CutstomNavigationController
+- (void)viewDidLoad {
+  [super viewDidLoad];
+  [self setNeedsStatusBarAppearanceUpdate];
+  __weak typeof (self) weakSelf = self;
+  if ([self respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
+      self.interactivePopGestureRecognizer.delegate = weakSelf;
+      self.delegate = self;
+  }
+  [self setCommonNavigationStyle];
+  }
+- (void)setCommonNavigationStyle {
+  [self.navigationBar setBarTintColor:kBlueColor];
+  [self.navigationBar setTintColor:[UIColor whiteColor]];
+  [self.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName, nil]];
+  }
+
+-(UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
+",peiweichen,selector
+235,2015-08-20 10:10:05,"My controller subclass SLKTextViewController using custom navigationController
+
+@implementation CutstomNavigationController
+- (void)viewDidLoad {
+  [super viewDidLoad];
+  [self setNeedsStatusBarAppearanceUpdate];
+  __weak typeof (self) weakSelf = self;
+  if ([self respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
+      self.interactivePopGestureRecognizer.delegate = weakSelf;
+      self.delegate = self;
+  }
+  [self setCommonNavigationStyle];
+  }
+- (void)setCommonNavigationStyle {
+  [self.navigationBar setBarTintColor:kBlueColor];
+  [self.navigationBar setTintColor:[UIColor whiteColor]];
+  [self.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName, nil]];
+  }
+
+-(UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
+",peiweichen,implementation
+232,2015-08-13 07:15:17,"Hi 
+@dzenbot  I am facing an issue when in call staus bar is ON.My view is getting truncated.Anyone have any idea why  my SLKTextViewController view is not getting fit inside window irrespective of In-call status bar toggle ON/OFF.It would be great if you help me out for this issue.
+Thanks in advance.
+![screen shot 2015-08-13 at 12 42 55 pm](https://cloud.githubusercontent.com/assets/12642338/9244470/1cc9bcbc-41b9-11e5-9682-cc8104e71eba.png)
+",vandanakanwar,dzenbot
+230,2015-08-12 04:33:04,"@aryaxt: I've made some improvements and refactorings to your original PR in #229:
+- Renamed `hideInputBar:animated:` to `setTextInputbarHidden:animated:`
+- Dismissed the keyboard and the auto-completion view right after hiding the textInputBar
+- Fixed cases where hiding the textInputBar wouldn't be possible when the keyboard was up
+- Avoided hiding the textInputBar with alpha, instead fixed some auto-layout constraints so the textView would follow the dismissal animation
+
+Known bugs:
+- when rotating the device, the scrollView's wouldn't extend to the bottom of the screen when the textInputBar is hidden.
+
+Please try pulling this branch. Thanks for this great improvement!
+",dzenbot,aryaxt
+221,2015-07-31 14:48:44,"Hello,
+
+I would like integrate the iAd banner in SLKTextViewController. I have imported the iAd framework and I have wrote this code in viewDidLoad
+
+if([self respondsToSelector:@selector(setCanDisplayBannerAds:)]){
+        self.canDisplayBannerAds = YES;
+    }
+
+Then I see the iAd Banner but when  I tap in textInput appears a black view between the textInput and keyboard. Anyone else can help me?
+
+Thanks!
+",josete89,selector
+215,2015-07-24 18:54:52,"Removes KVO from the inputAccesoryView and implements a custom keyboardDimsissMode using the panGesture on the ScrollViewProxy to achieve a smooth transition.
+
+For you Cotito Ignacio @dzenbot 
+",camovrbz,dzenbot
+215,2015-07-24 22:16:10,"Panning the keyboard was always feeling kind of jarring.
+It's extremely smooth and accurate now 💪😎👊
+
+Thanks cotito @camitox for this great contribution!
+",dzenbot,camitox
+207,2015-06-28 23:02:43,"_Inspired from @sveinhal's implementation in #202._
+
+It now uses KVO internally, observing the `visible` propery's changes to properly update the view constraints constants and animately present the typing indicator view.
+By simply conforming to `SLKTypingIndicatorProtocol` required methods, it should be very easy to add any sort of custom typing indicator view.
+
+I have added a custom typing indicator view to the sample project:
+![image](https://cloud.githubusercontent.com/assets/590579/8398714/af0f39b0-1dd0-11e5-9602-456ffc5f77d0.png)
+
+PS: Thanks @sveinhal for taking the initiative to do this! I felt the need to refactor your implementation for a more friendly approach. Observing the `hidden` property wasn't enough, since it would force the view to hide when dismissing the typing indicator. I have also taken the time to refactor and improve other related to logic to the default typing indicator view.
+**This update should be backwards compatible, but might still need some testing before merging.**
+",dzenbot,sveinhal
+207,2015-07-02 04:33:22,"@sveinhal I've made some fixes, considering all your feedback. Mind having a look once more?
+",dzenbot,sveinhal
+206,2015-06-25 01:05:10,"My code :
+I used in non-inverted pattern.
+
+[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didChangeTextViewContentSize:) name:SLKTextViewContentSizeDidChangeNotification object:nil];
+- (void)didChangeTextViewContentSize:(NSNotification *)notification
+  {  
+  CGFloat inputbarHeight = self.textInputbar.appropriateHeight;
+  ....
+  }
+
+the inputbarHeight did not calculate correct， the reason was that sometimes the numberOfLines calculated  a line of less，i found the numberOfLines of textview was  three, but it returned two，and the text was Chinese，the English was OK.
+",xiaolanlianhua,selector
+201,2015-06-11 11:45:35,"Hi, @dzenbot 
+
+I created an issue before creating a pull request, because I want to discuss solutions before submitting anything. I am willing to produce the code necessary to close this issue, once consensus has been reached.
+
+I want to customize the typing indicators to show small avatars instead of the user name list as the current design encourages. The `SLKTextViewController` currently instantiates and hold a reference to a `SLKTypingIndicatorView`. However, except for an `isVisible` and an `canResignByTouch` property the view controller couldn't really care much what kind of `UIView` subclass this view is (and long as it knows when to show/hide the view).
+
+I'm thinking that we could extend the view controller to also have a method called `registerClassForTypingIndicatorView:` similar to `registerClassForTextView:`. But I'm not sure it's necessary to have it be a subclass of `SLKTypingIndicatorView`? I think that the view controller can observe changes to the `hidden` property instead of relying on the custom notifications. This also uses hidden rather than visible, which is more cocoa-y. And for the `canResignByTouch` property, we can either have the custom class implement a protocol, or move the logic to be a property of the view controller instead.
+
+Alternatively, we could require that the custom class must be a subclass, but personally, I'm not really using any of its features.
+
+What do you think?
+",sveinhal,dzenbot
+200,2015-06-09 19:53:16,"Fixes the keyboard panning gesture, broke on the latest commit.
+Also simplifies the keyboard height calculation nonsense. Thanks @devladinci 😉
+",dzenbot,devladinci
+199,2015-08-08 00:02:17,"Don't get me wrong @urbanappetite, we've already started working on some iOS9 enhancements, but not yet on UIKit bug fixes, since most will get fixed by Apple on the GM version.
+
+Still, if you guys are interested, I just pushed a branch I've been slowly working on: [ios9-fixes-and-improvements](https://github.com/slackhq/SlackTextViewController/tree/ios9-fixes-and-improvements). So far, it just adds support for the new external keyboard shortcut hud from iOS9, and some auto-rotation issues.
+
+Feel free to collaborate on this one! 💪😎
+",dzenbot,urbanappetite
+189,2015-05-21 06:15:21,"@dzenbot Any support for this?
+",ajsharp,dzenbot
+176,2015-04-29 21:08:36,"@tomaskraina reported this too in https://github.com/slackhq/SlackTextViewController/issues/173
+I haven't been able to see it myself tho.
+",dzenbot,tomaskraina
+176,2015-05-04 20:36:08,"@blakeperdue @tomaskraina did you find a way to get rid of it?
+",dzenbot,tomaskraina
+175,2015-04-28 09:52:04,"Hi @dzenbot,
+
+What would be the less hacky way to change/remove the animation applied on autoCompletionViewCell .
+It's seems to be default UITableViewRowAnimationLeft and triggered by : 
+
+
+
+in SLKTextViewController.m
+
+should i hardcode this instead :  
+
+
+
+I'd like to keep the cool bouncing effect when the autoCompleteView shows off so I don't want to use 
+
+
+
+An override solution in my subclass would be really appreciated... Can you help me on this ?
+
+Thanks,
+François
+",rosatof,dzenbot
+168,2015-04-18 19:40:51,"Thanks for the feedback @orta!
+",dzenbot,orta
+163,2015-04-13 17:19:01,"_This was initially implemented by @pfleiner and PRed by @cameronehrlich. Thanks!_
+
+Instead of only allowing collection view controllers, the new implementation is more flexible, accepting table view controllers too. It could accept any view controller in the future, if they respond to selectors `tableView`, `collectionView` or `scrollView`, but this seems fine for now. 
+A new target has also been added to the sample project, to be able to test it.
+
+One thing to understand is that the child view controller's subviews aren't added to the view hierarchy, except for the scrollViewProxy. This is meant to decouple the implementation of the view controller's from `SlackTextViewController`.
+
+[Snapshot tests will be added soon, in this branch](https://github.com/slackhq/SlackTextViewController/tree/snapshot-tests).
+",dzenbot,cameronehrlich
+163,2015-04-13 17:19:01,"_This was initially implemented by @pfleiner and PRed by @cameronehrlich. Thanks!_
+
+Instead of only allowing collection view controllers, the new implementation is more flexible, accepting table view controllers too. It could accept any view controller in the future, if they respond to selectors `tableView`, `collectionView` or `scrollView`, but this seems fine for now. 
+A new target has also been added to the sample project, to be able to test it.
+
+One thing to understand is that the child view controller's subviews aren't added to the view hierarchy, except for the scrollViewProxy. This is meant to decouple the implementation of the view controller's from `SlackTextViewController`.
+
+[Snapshot tests will be added soon, in this branch](https://github.com/slackhq/SlackTextViewController/tree/snapshot-tests).
+",dzenbot,pfleiner
+161,2015-04-15 20:37:45,"This (objective-c) project is completely independent from the Slack API.
+You should submit your feature request in [slack-api-docs](https://github.com/slackhq/slack-api-docs)  or [@SlackAPI](https://twitter.com/slackapi)
+",dzenbot,SlackAPI
+159,2015-11-29 09:57:29,"Next time, @luizv please open a new issue as it's unrelated to this one.
+Unfortunately, there's not much I can help you with. Even if `SLKTextViewController` should be working fine within a view controller containment, adding it as a subview of a cell is not something it was built for. You will need to fork the project and make the arrangements to fix that on your own, sorry.
+",dzenbot,luizv
+145,2015-03-17 17:34:39,"No, not yet.
+
+I commented this notification 
+[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(slk_didChangeTextViewContentSize:) name:SLKTextViewContentSizeDidChangeNotification object:nil];
+
+in SlackTextViewController.m class.
+
+And everything works bad! :-1:  but at least my app is running now. Looking for some elegant soln.
+",hagile,selector
+140,2015-03-16 18:30:56,"I am having an issue with the text input bar. It is being hidden when, with the keyboard hidden, it becomes first responder and it has a ""mention text"" on it (such as '@f').
+
+I've been taking a look at the SLKTextView class, and I am pretty sure that it is a thing related to the moment when `[self refreshFirstResponder]` is called. 
+
+I managed to avoid that in two ways, but I really don't like any of them:
+- Disabling the  prediction by code on the SLKTextView.
+- Always showing the prediction on it.
+
+Here you have a gif of the problem I am having:
+
+![](https://s3.amazonaws.com/f.cl.ly/items/143I390K1p432k1u3f3d/bloggif_55071f0f69591.gif)
+",poolqf,f
+132,2015-03-18 16:43:48,"@dzenbot have you had time to look at this?
+",johannth,dzenbot
+127,2015-02-24 04:23:07,"Default `inverted` property of `SLKTextViewController` to `NO` as with an out-of-the-box install, everything will be mirrored and flipped unless you set `inverted` to `NO` or add the `cell.transform = self.tableView.transform` line to your `tableView:cellForRowAtIndexPath:` method.
+
+Attached an image of what I was seeing. All I'd done was subclass `SLKTextViewController` and add the `[super initWithTableViewStyle:UITableViewStylePlain]` method. Thought something was severely messed up (was why I thought my typo pull request was wrong https://github.com/slackhq/SlackTextViewController/pull/125#issuecomment-75695055).
+
+@dapenggao's comment in #114 also helped me fix the dark shadow by setting `self.window.backgroundColor = [UIColor whiteColor]` in AppDelegate.
+",jeffbowen,dapenggao
+123,2015-03-04 18:37:49,"@adly-holler can you please checkout the latest in master, and tell me if that fixes your issue?
+",dzenbot,adly-holler
+112,2015-01-23 02:24:12,"Hi @dzenbot
+    I found that when I dynamicly change the placeholder for SLKTextView, the size for the placeholderLabel remain still. For example, I set ""匿名评论"" as the placeholder in viewDidLoad, but when I click a table cell, the placeholder would be changed to ""回复威震天"". Then the textLabel would not be large enough to contain the five characters, since there are only four at first. 
+![image](https://cloud.githubusercontent.com/assets/5186464/5868968/9196dc26-a2ec-11e4-92e7-1ab00578a908.png)
+
+This code can fix it:
+![image](https://cloud.githubusercontent.com/assets/5186464/5868807/d814a8d4-a2e9-11e4-8643-8ecde503e890.png)
+
+So do you think it is necessary to resize the label in both setPlaceholder and setFont which could both cause this kind of issue? 
+",WenchaoD,dzenbot
+110,2015-01-22 17:17:10,"The documentation states that `acceptAutoCompletionWithString:` 
+
+> ""...replaces the detected key and word with a new string.""
+
+I'm not seeing this behavior, and when I call this method, my prefix key remains. For instance, when I type ""**@kev**"", and select _Kevin_ in the `autoCompletionView`, the result in my text view is: ""**@Kevin**. I would expect to see just **""Kevin""**.
+
+Interestingly, if I look at the `acceptAuto...` [implementation](https://github.com/slackhq/SlackTextViewController/blob/master/Source/Classes/SLKTextViewController.m#L1456), `range` is deliberately calculated one index after the location of `self.foundPrefixRange`:
+
+
+
+I can adjust this range to get the behavior described in the docs thusly:
+
+
+
+However, I suspect I shouldn't need to do that. Am I missing something? Thanks in advance.
+",KevinVitale,kev
+110,2015-01-22 17:17:10,"The documentation states that `acceptAutoCompletionWithString:` 
+
+> ""...replaces the detected key and word with a new string.""
+
+I'm not seeing this behavior, and when I call this method, my prefix key remains. For instance, when I type ""**@kev**"", and select _Kevin_ in the `autoCompletionView`, the result in my text view is: ""**@Kevin**. I would expect to see just **""Kevin""**.
+
+Interestingly, if I look at the `acceptAuto...` [implementation](https://github.com/slackhq/SlackTextViewController/blob/master/Source/Classes/SLKTextViewController.m#L1456), `range` is deliberately calculated one index after the location of `self.foundPrefixRange`:
+
+
+
+I can adjust this range to get the behavior described in the docs thusly:
+
+
+
+However, I suspect I shouldn't need to do that. Am I missing something? Thanks in advance.
+",KevinVitale,Kevin
+87,2015-01-12 04:25:52,"@dzenbot Do you have any thoughts on what might be causing the abrupt movement of the content?
+",newyorkpizza,dzenbot
+83,2014-12-24 07:08:21,"@dzenbot  
+",0oneo,dzenbot
+82,2014-12-21 04:28:55,"### slackhq/SlackTextViewController now has a Chat Room on Gitter
+
+@dzenbot has just created a chat room. You can visit it here: [https://gitter.im/slackhq/SlackTextViewController](https://gitter.im/slackhq/SlackTextViewController?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&content=body_link).
+
+This pull-request adds this badge to your README.md:
+
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/slackhq/SlackTextViewController?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=body_badge)
+
+Happy chatting.
+
+PS: [Click here](https://gitter.im/settings/badger/opt-out) if you would prefer not to receive automatic pull-requests from Gitter in future.
+",gitter-badger,dzenbot
+43,2014-10-13 04:01:42,"Many small fixes suggested by @efremidze (thanks!), related to keyboard panning offset, so the dragging gesture starts at the top of the text input bar.
+",dzenbot,efremidze
+40,2014-10-13 19:23:02,"@hit1983 I think what you're asking is how to connect a tableview you've already added to your storyboard via an IBOutlet? 
+
+Right now you'll want to let the SlackTextViewController create that for you so it can create it & properly set up the constraints. In order to tell slack what you want you'll use the default table view style. You can override this if needed.
+
+
+
+From there you'll just override the delegate methods in your custom controller or set the delegate & dataSource to another class. Check out the example project.
+
+You might be asking, 'well how do I have other things in the view beside the table view?' I believe the current intent behind this implementation is to have the entire view own the tableview or collectionview in order to properly handle scrolling & moving the text field. 
+",mcgraw,hit1983
+39,2014-10-10 16:45:12,"@hit1983: I just tried to reproduce that issue, with no success.
+If you replace the sample project's app delegate implementation with this:
+
+
+
+It works like it's supposed to.
+",dzenbot,hit1983
+38,2014-10-10 15:52:58,"Give it a try @hit1983 and let me know if it's fixed for you too.
+",dzenbot,hit1983
+10,2014-10-06 14:57:53,"What worked for me is if you change the return value of keyPathForKeyboardingHandling in SCKInputAccessoryView's method to just NSStringFromSelector(@selector(centre)). This corrects the textview's top. ""SCKInputAccessoryViewKeyboardFrameDidChangeNotification"" gets called a second time in iOS 7 when the keyboard appears, so scrollViewHC in SLKTextViewController gets recalculated again.
+",mikechan1234,selector
+6,2014-09-24 11:26:57,"Because auto-correction in iOS8 will override any auto-completed text while typing something like `@allan`, we must disable auto-correction. Either hide the QuickType bar, or disable auto-correction momentarily.
+",dzenbot,allan
+5,2014-09-25 03:52:14,"From a viewController push to `SlackTextViewController`(subclass), and pop back.
+It will crash at `[self removeObserver:self.leftButton.imageView forKeyPath:NSStringFromSelector(@selector(image))];` in `dealloc` of `SLKTextInputbar`
+",VincentSit,selector
+5,2014-09-25 04:11:30,"I'm sorry!  it is a mistake. Should be :
+`[self.leftButton.imageView removeObserver:self forKeyPath:NSStringFromSelector(@selector(image))];`
+",VincentSit,selector
+5,2014-09-25 04:28:35,"`[_leftButton.imageView removeObserver:self forKeyPath:NSStringFromSelector(@selector(image))];` will be better.
+
+Do you need me to patch this?
+",VincentSit,selector
+2,2014-09-25 10:54:54,"@EvoRobin Unable to reproduce this issue, and I tested many times. Can you explain  in detail how to reproduce it? 
+",VincentSit,EvoRobin

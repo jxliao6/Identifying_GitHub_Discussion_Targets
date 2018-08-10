@@ -1,0 +1,1101 @@
+issue_num,datetime,body,login,mention_login
+422,2017-01-21 01:40:39,"@souporserious `onEnter` in react-motion-ui-pack is a callback when animation starts, in the same moment as willEnter.
+
+`didLeave` was added in last release, would be logical to add `didEnter` as well",klimashkin,souporserious
+420,2017-03-01 16:54:50,@chenglou Done!,alleycat-at-git,chenglou
+399,2016-12-06 18:36:52,"> didLeave seems to be a more appropriate name than onRest. To me at least, onRest implies that the TransitionMotion component as a whole is no longer in motion. While, on the other hand, didLeave implies that a single child has finished transitioning out of the TransitionMotion component, yet other children may still be in motion.
+
+@DetweilerRyan, that was also what I thought when naming it 'didLeave' :-)
+`onRest` would be misleading compared with `<Motion onRest />`.
+Next, I would suggest/PR for a `didEnter`, and those two combined would allow for a proper onRest implementation.
+
+@chenglou do you see `react-motion` as abandonware? I still believe it's one of the best packages for doing spring animations in React. The spring logic is solid, but there is always room for further development for the API :-)",hkjorgensen,chenglou
+399,2016-12-07 17:49:50,Yes to a new release please 🙏  thanks for this @hkjorgensen!,souporserious,hkjorgensen
+399,2016-12-12 19:35:28,"@chenglou Thanks for the explanation - I still look forward to that new open source project :-)
+
+> Thanks a lot for this PR. I'll be merging this. Do we want to make a new release?
+
+Yes, please cut a new version. This expands the API and doesn't break anything :-)
+",hkjorgensen,chenglou
+394,2016-11-23 08:11:09,"@nkbt  Thanks for your advise. Actually I just want to animate color while animating offset, but React-Motion doesn't support it. So I have to use ""percentage"" to interpolate color. It would be great if React-Motion supports animating color.",lzl124631x,nkbt
+390,2016-11-09 02:01:05,"@nkbt Wow! Thanks! It works as long as I wrap `requestAnimationFrame` around updating state.
+
+[Demo on CodePen](http://codepen.io/lzl124631x/pen/yVYYVa)
+",lzl124631x,nkbt
+390,2016-11-10 01:47:37,"@nkbt Can you kindly tell me why delaying updating state with setTimeout/requestAnimationFrame do the trick?
+",lzl124631x,nkbt
+390,2016-11-10 07:03:51,"Not really, maybe something to do with batch updates optimisations, but I
+don't know for sure
+On Thu., 10 Nov. 2016 at 12:52, 7z7 notifications@github.com wrote:
+
+> @nkbt https://github.com/nkbt Can you kindly tell me why delaying
+> updating state with setTimeout/requestAnimationFrame do the trick?
+> 
+> —
+> You are receiving this because you were mentioned.
+> 
+> Reply to this email directly, view it on GitHub
+> https://github.com/chenglou/react-motion/issues/390#issuecomment-259580118,
+> or mute the thread
+> https://github.com/notifications/unsubscribe-auth/AAKsoA0Q5MDkoqnlS2kOcY689h6QANIBks5q8ne6gaJpZM4KqOdn
+> .
+",nkbt,nkbt
+371,2016-09-25 07:20:52,"@AgentME Merged, thanks! Can you check master still works?
+",chenglou,AgentME
+371,2016-09-25 07:43:15,"@chenglou Fix is in https://github.com/chenglou/react-motion/pull/373. I think the issue had to do with #371 containing #361's commit, but because they were both done in rebase mode git didn't recognize they were the same commit and it created conflicts. #373 fixes it.
+",AgentME,chenglou
+371,2016-09-25 20:37:40,"@chenglou can we get a new build? Would love to pull in this change, thanks @AgentME!
+",twobit,chenglou
+371,2016-09-25 20:37:40,"@chenglou can we get a new build? Would love to pull in this change, thanks @AgentME!
+",twobit,AgentME
+361,2016-08-23 03:22:00,"@bgeihsgt seems like it's breaking Eslint. maybe use `ReactElement<*>` instead?
+",zhigang1992,bgeihsgt
+361,2016-09-21 21:18:20,"Cool, thanks @AgentME!
+",bgeihsgt,AgentME
+361,2016-09-25 06:08:53,"@AgentME to be clear: if I merge this PR then merge #371, things will be fine?
+",chenglou,AgentME
+361,2016-09-25 07:14:03,"@chenglou Yes, that will work. (#371 actually contains the exact commit of this pull request; accepting both would be fine.)
+",AgentME,chenglou
+361,2016-09-25 07:18:02,"Let's try it then! Thanks @bgeihsgt and sorry for the wait!
+",chenglou,bgeihsgt
+357,2016-08-12 12:01:37,"@nkbt hi there, I'm trying to implement smooth scroll using this technique, but I can't quite understand how do you trigger scrolling component's onScroll and put scrollTop to state without experiencing default scrolling behaviour?
+
+e.g I have following code
+
+
+
+And Area looks like this
+
+
+
+Don't mind debouncing, it doesn't quite fit here, throttling would work better I guess.
+What I experience, with or without debouncing or throttling, is that native scroll behaviour triggers first  thus messing up area's scrollTop.  Any help would be greatly appreciated
+
+And thanks for this library, I love it!
+",berrtech,nkbt
+357,2016-08-13 00:28:24,"@nkbt This may be simplified a bit if the X and Y handling is unified.
+
+
+
+But the scroll handling is complex because the browser reports both user scrolling and API scrolling with the same ""scroll"" event -- these have to be distinguished.
+",sompylasar,nkbt
+357,2016-08-13 12:47:00,"@sompylasar it looks really complicated and fragile, I managed to tweak this to use with div container rather than window, however it skipped animation sometimes, needs more tweaking I guess.
+
+@nkbt but how do you handle scrolling container by user? While this works when you control scrollTop from the outside, Motion doesn't know when it's animateTo value is changed by user, so, when you animate to, say, 300px, and then user scrolls down to 600px, Motion has no idea than next animation should be from 600px, it just snaps to 300px and then animates because that was previous known value.
+",berrtech,nkbt
+357,2016-11-02 08:24:22,"@nkbt Just to add to @berrtech 's question.  Do you have a preferred strategy for dealing with cases where the UI state gets out of sync with <Motion> between renders?  It would be nice to be able to set the starting value of the animation on any desired render after a component is mounted. 
+
+ Is the defaultStyle prop intended to handle cases like this?  Because in my case where new scroll events are triggered by user input - setting defaultStyle to the current scroll position of the element doesn't help because Motion ignores it as mentioned in the docs.
+
+My current non-ideal work-around is to force an extra render of Motion before the animation to ensure Motion's starting point is in sync with the UI.
+
+
+
+So - it sees that an auto-scroll event has been triggered - and calls setState to set the value of motionStyle to the current scrollTop value of the element.  No animation happens because it's not using a spring.
+
+But now that Motion has the new starting point - we still need to trigger the animation somehow.  But I've used up the props change caused by the user  click - so there is nothing to trigger the next render.  So the only thing I've been able to come up with is to use the following:
+
+
+
+So - after the render to sync the UI with Motion - calling setState in componentDidUpdate with the desired spring triggers another render which does the animation.  Using the prevRenderType flag prevents an infinite regress.
+
+This works - but setting state in componentDidUpdate is generally frowned upon.  Plus it uses up an extra render.
+
+Would be keen to hear if anyone has come up with another solution.
+",danhaggard,nkbt
+357,2016-11-03 02:36:43,"I am afraid I am using similar technique in react-collapse, so no better
+solution from me
+
+On Wed., 2 Nov. 2016 at 19:24, Dan Haggard notifications@github.com wrote:
+
+> @nkbt https://github.com/nkbt Just to add to @berrtech
+> https://github.com/berrtech 's question. Do you have a preferred
+> strategy for dealing with cases where the UI state gets out of sync with
+> between renders? It would be nice to be able to set the starting value of
+> the animation on any desired render after a component is mounted.
+> 
+> Is the defaultStyle prop intended to handle cases like this? Because in my
+> case where new scroll events are triggered by user input - setting
+> defaultStyle to the current scroll position of the element doesn't help
+> because Motion ignores it as mentioned in the docs.
+> 
+> My current non-ideal work-around is to force an extra render of Motion
+> before the animation to ensure Motion's starting point is in sync with the
+> UI.
+> 
+> componentWillReceiveProps(nextProps) {
+>   if (this.props.toggleScroll !== nextProps.toggleScroll) {
+>     this.setState({
+>       motionStyle: {y: this.elem.scrollTop},
+>       prevRenderType: 'uiSync',
+>     });
+>   }
+> }
+> 
+> So - it sees that an auto-scroll event has been triggered - and calls
+> setState to set the value of motionStyle to the current scrollTop value of
+> the element. No animation happens because it's not using a spring.
+> 
+> But now that Motion has the new starting point - we still need to trigger
+> the animation somehow. But I've used up the props change caused by the user
+> click - so there is nothing to trigger the next render. So the only thing
+> I've been able to come up with is to use the following:
+> 
+> componentDidUpdate() {
+>   if (this.state.prevRenderType === 'uiSync') {
+>     this.setState({
+>       motionStyle: {y: spring(this.props.offsetTop, this.state.springConfig)},
+>       prevRenderType: 'autoScroll',
+>     });
+>   }
+> }
+> 
+> So - after the render to sync the UI with Motion - calling setState in
+> componentDidUpdate with the desired spring triggers another render which
+> does the animation. Using the prevRenderType flag prevents an infinite
+> regress.
+> 
+> This works - but setting state in componentDidUpdate is generally frowned
+> upon. Plus it uses up an extra render.
+> 
+> Would be keen to hear if anyone has come up with another solution.
+> 
+> —
+> You are receiving this because you were mentioned.
+> Reply to this email directly, view it on GitHub
+> https://github.com/chenglou/react-motion/issues/357#issuecomment-257800543,
+> or mute the thread
+> https://github.com/notifications/unsubscribe-auth/AAKsoFxKaOilHMPRgDMg9ITN_M_xygSXks5q6Ei3gaJpZM4JcCql
+> .
+",nkbt,nkbt
+354,2016-07-30 22:14:33,"@dozoisch exactly, I actually meant using pure css. We never use `CSSTransitionGroup`
+",nkbt,dozoisch
+324,2016-08-31 20:50:03,"@nkbt any resources you can share of that talk? Couldn't find anything on React Sydney's websites. Thanks :)
+",p4bloch,nkbt
+324,2016-09-01 01:47:43,"@nkbt thanks a lot!!
+",p4bloch,nkbt
+322,2016-04-28 06:42:41,"Yeah.  I've noticed this too, but haven't looked too closely into a fix yet.
+
+@chenglou, you think adding a call to `startAnimationIfNecessary` immediately after [`onRest`](https://github.com/chenglou/react-motion/blob/master/src/Motion.js#L101) would fix it?  Looks like the whole body is wrapped in `defaultRaf`, so that should put you on the next frame and kick off an animation if something changed (presuming `startAnimationIfNecessary` does what it says on the tin 😉).
+",appsforartists,chenglou
+322,2016-04-28 15:22:18,"@appsforartists Yep, I tried to check thresholds to trigger followup animations while there was still some momentum, but unfortunately it wasn't precise enough: some animations were too fast relative to others, it caused issues with bouncing (since the threshold could be triggered multiple times), curves were messed, etc. In the end, we went with Animated, which gave us a better control over sequenced animations.
+",arcanis,appsforartists
+322,2016-06-08 08:29:38,"@nkbt yep.. delaying setState works...   But if its possible to make it work without it I think it would be helpful, because you get kind of undefined behavior otherwise..  and it takes time to find out why..
+",jardakotesovec,nkbt
+320,2016-04-16 07:03:17,"Thanks @martijnrusschen, that will do the trick =)
+",nkbt,martijnrusschen
+320,2016-04-16 07:05:58,"@nkbt We should put a note to merge to the development branch. Cherry picking (?) will be hard.
+",chenglou,nkbt
+320,2016-04-18 10:17:17,"@nkbt @chenglou will this be released? Ta!
+",troch,nkbt
+320,2016-04-18 10:17:17,"@nkbt @chenglou will this be released? Ta!
+",troch,chenglou
+320,2016-04-18 12:52:44,"I don't think I have access to publish, so waiting for @chenglou :)
+On Mon, 18 Apr 2016 at 20:17, Thomas Roch notifications@github.com wrote:
+
+> @nkbt https://github.com/nkbt @chenglou https://github.com/chenglou
+> will this be released? Ta!
+> 
+> —
+> You are receiving this because you were mentioned.
+> Reply to this email directly or view it on GitHub
+> https://github.com/chenglou/react-motion/pull/320#issuecomment-211313785
+",nkbt,nkbt
+320,2016-04-18 12:52:44,"I don't think I have access to publish, so waiting for @chenglou :)
+On Mon, 18 Apr 2016 at 20:17, Thomas Roch notifications@github.com wrote:
+
+> @nkbt https://github.com/nkbt @chenglou https://github.com/chenglou
+> will this be released? Ta!
+> 
+> —
+> You are receiving this because you were mentioned.
+> Reply to this email directly or view it on GitHub
+> https://github.com/chenglou/react-motion/pull/320#issuecomment-211313785
+",nkbt,chenglou
+320,2016-04-18 18:49:42,"@nkbt now you do! But gimme a sec. I wanna check if I can close a few issues first.
+",chenglou,nkbt
+318,2016-04-20 10:59:04,"@chenglou, Thanks for your answer, it looks like all animations in RM are pure JS. I was looking for a way to offload those JS animation using the React Native Animated api. 
+I've managed to use the willLeave, willEnter etc.. logic using `ReactTransitionGroup` and therefore Animated api 😉 
+",ahanriat,chenglou
+318,2016-04-20 16:02:32,"@chenglou Thank you for answering. I was refering to these lines in your [article](https://medium.com/@chenglou/react-motion-and-animated-4b3edf671cba#.s16hya1r4)
+
+> That being said, Animated is really good at interpolating stuff. There’s no reason for RM to keep its interpolation logic if we can defer to using Animated under the hood.
+",danwebdev,chenglou
+317,2016-04-06 01:23:40,"@nkbt Thanks! For now I have to delay the upgrade to React 15.0 on my project because a lot of modules haven't updated their dependencies yet, so it would be nice if you have such opportunity with `react-motion` earlier.
+",sompylasar,nkbt
+317,2016-04-06 01:32:47,"@nkbt I see, well, I tend to avoid the warnings, they are there for a reason, even if they can be tolerated and everything looks fine at first sight.
+
+I'll give it some time to settle, and get back to it, probably there will be RC3 at that moment, or even a release version -- who knows. `react-redux`, for example, has strictly specified `15.0.0-rc.1`, so I can't use the `15.0.0-rc.2` without the warning, although the latter has several major bugs fixed.
+",sompylasar,nkbt
+312,2016-04-20 23:52:13,"@chenglou Any plans on adding the debug/demo slowdown functionality back? E.g. Chrome DevTools have got CSS animation slowdown control. Probably we could have some API for slowdown in react-motion? Following the animation loop architecture, this should be a deal of one 0..1 parameter.
+",sompylasar,chenglou
+311,2016-05-09 11:16:07,"Cannot wait for this @chenglou! I've used react-motion in a project I'm working on here: http://sa.603.nu. I'm trying to fade images on load. Everything is mostly working apart from an issue where images rendered on both the mosaic and artists page flicker before the rest of the images fade in when changing pages. I believe this is because the image has already loaded on the previous page. It can be replicated by navigating to the mosaic page and then going to the artists page. Anyone have any ideas how to beat this?
+",jch254,chenglou
+300,2016-04-08 07:05:19,"@nkbt my PR merged. Now we can use defitnitions, just call tsd
+
+
+
+I think, this issue should be closed
+",stepancar,nkbt
+293,2016-03-10 00:12:59,"@nkbt it seems like onRest is only available on Motion and not TransitionMotion. Do you have any idea how that would be doable in that case? Or is it missing a pr to add the same functionality to TransitionMotion :)?
+",dozoisch,nkbt
+290,2016-04-20 06:44:04,"@cdebotton your PR is now in v0.4.3. I'm assuming these flow problems are all fixed now? @irvinebroque what about yours?
+",chenglou,cdebotton
+279,2016-02-06 14:00:52,"@chenglou Are we good to merge? Let me know if we have anything else to address here?
+",samarpanda,chenglou
+276,2016-02-06 14:39:10,"Thanks @threepointone & @chenglou for the explanation.
+
+![img_20160206_194336](https://cloud.githubusercontent.com/assets/802163/12867161/30ba6288-cd0c-11e5-8c7f-c86e44e7a110.jpg)
+Trying to prepare an infinite scroll of images. Loading n images at a time. Thought of having 3 states for images. So, i don't need to scroll all images at a time, rather i can animate two images. One to slideIn other to slideOut. Hope this might help, not hit the performance budget.
+",samarpanda,threepointone
+276,2016-02-06 14:39:10,"Thanks @threepointone & @chenglou for the explanation.
+
+![img_20160206_194336](https://cloud.githubusercontent.com/assets/802163/12867161/30ba6288-cd0c-11e5-8c7f-c86e44e7a110.jpg)
+Trying to prepare an infinite scroll of images. Loading n images at a time. Thought of having 3 states for images. So, i don't need to scroll all images at a time, rather i can animate two images. One to slideIn other to slideOut. Hope this might help, not hit the performance budget.
+",samarpanda,chenglou
+274,2016-01-30 16:42:10,"I also like `onRest`. I second @appsforartists reasoning and conclusion.
+",kottkrig,appsforartists
+274,2016-02-04 21:45:06,"@chenglou great to see this being added. But, before this callback mechanism makes it into the API, is there any recommendation about how to unmount a component when a transition ends, like for a page transition. Right now I'm checking for a terminal value like zero to detect when the new page has animated into place, and then not render the previous page.
+",chakuo,chenglou
+273,2016-02-28 07:14:51,"@appsforartists @chenglou Can this be used for `<Motion />`, `<StaggeredMotion />`, and `<TransitionMotion />`?
+",leopoldjoy,appsforartists
+273,2016-02-28 07:14:51,"@appsforartists @chenglou Can this be used for `<Motion />`, `<StaggeredMotion />`, and `<TransitionMotion />`?
+",leopoldjoy,chenglou
+273,2016-02-28 07:35:55,"@chenglou Ok, sounds good! Thanks for your work!
+",leopoldjoy,chenglou
+273,2016-04-08 09:59:27,"@chenglou @appsforartists Great work guys! would be awesome to have that in master at least for `<Motion>` :)
+",haraldox,appsforartists
+273,2016-04-08 09:59:27,"@chenglou @appsforartists Great work guys! would be awesome to have that in master at least for `<Motion>` :)
+",haraldox,chenglou
+271,2016-11-29 04:02:22,@souporserious  :) I used to make a mistake and now I have used **`scale`** instead of changing **`width`** and **`height`** ~ ,devlee,souporserious
+263,2016-01-26 13:54:22,"@threepointone that is the point. It is not drag and drop.
+
+I have a list of offers sorted by price, so I dispatch an action to sort this offers by shipping days so my store receive the new sorted array then I need to animate the old list to reflect the new order
+",lucasfeliciano,threepointone
+263,2016-01-29 10:58:02,"That's a nice snippet.
+
+But I still have to tackle one problem, since react-native do not have a zIndex parameter, the layers depend on the render order.
+
+So when I'm sorting my list, the itens which are going to the top must be in front of the others. ( am i clear ? )
+
+Lets suppose: I have this array
+
+`[2,3,4,5,1]`
+
+and then I sorted it, so in my animation the component `1` must go to the top in front of the other ones instead of behind it.
+
+The solution that @threepointone suggested is working but I just need to find a hack for the zIndex thing.
+",lucasfeliciano,threepointone
+259,2016-03-21 19:10:53,"thanks @threepointone your suggestion fixed my issue.
+",alansouzati,threepointone
+254,2016-03-29 00:03:32,"@bishopZ can you give an example of how to do it in tandem with react-transition-group please?
+",noushka86,bishopZ
+248,2016-04-25 17:07:45,"@ccoffey @chenglou Now that `onRest` has been published, do you think it could help this PR moving forward?
+",arcanis,chenglou
+248,2016-11-22 11:50:12,Looking forward to sequencing in React-Motion. Are @chenglou @appsforartists still maintaining this project? Haven't seen any update for a period of time.,lzl124631x,chenglou
+248,2016-11-24 03:26:59,"I talked to @chenglou yesterday about this PR, (and please, Cheng-Lou, let me know if I have anything wrong here I don't mean to speak for you, just want to provide some clarification for people waiting)
+
+He mentioned that this type of sequencing might interfere with spring. Personally, in watching some of his talks, it does seem a little counter-intuitive to his wishes for the direction of the library in terms of true interruptible motion. 
+
+There is another project that he pointed me to, however, that is structurally similar, but allows for sequencing: https://github.com/clari/react-tween
+
+If you're interested in more detailed sequencing with extensive tooling, both GreenSock (here is a piece of an article I wrote showing how to use it in React: https://css-tricks.com/comparison-animation-technologies/#article-header-id-16 or Mo.js, (though this tool is still in beta) https://css-tricks.com/introduction-mo-js/
+
+Anyways, I hope that info is helpful for people waiting",sdras,chenglou
+247,2015-12-03 20:21:35,"Hey @bishopZ thanks for the response, I'll try your solution out and give some more feedback :)
+",tnrich,bishopZ
+246,2015-11-30 09:34:26,"@chenglou fortunately I can't recreate it again. I think it might have been a bug with the hot reloading. I would keep my eye one it, and will let you know if it happens again. Sorry for the false alarm.
+",timuric,chenglou
+244,2016-02-02 19:38:56,"I just had an interesting conversation with @bsansouci:
+
+We could create a `SimpleMotion` extension that handles the common case; something like this:
+
+
+
+If all you are changing its x, y, rotation, and scale, it would give you a simple way to do that without having to think about child functions or external renders - it just looks like any other React component and optimizes `shouldComponentUpdate` to avoid thrashing `render`.  `Motion` et. al. would continue to exist for advanced cases.
+
+It doesn't even have to live in react-motion; could be its own repo.
+
+Thoughts?
+",appsforartists,bsansouci
+244,2016-02-03 08:55:37,"@appsforartists @avi Looking more at `react-static-container` it seems like it's very close to what you're saying. Specifically looking at slide number 16/49 [here](https://speakerdeck.com/vjeux/react-rally-animated-react-performance-toolbox), we can imagine the `Motion` passing down `externalRender` to the `shouldUpdate` prop instead of, in this example, `this.state.isAnimating`.
+",bsansouci,appsforartists
+244,2016-02-03 16:52:40,"@bsansouci Good find.  Looks like the same thing as `MotionBoundary` in the original PR, though you'd need to track `shouldUpdate` in userland without the other half of this PR that exposes it in `render`.  However, [now that we have `onRest`](https://github.com/chenglou/react-motion/pull/273), it is doable.
+
+I'm still curious about making `isAnimating` a context variable so you can have something like `SimpleMotion` to do the fast thing by default.
+",appsforartists,bsansouci
+241,2015-11-17 15:06:26,"Yep, it's just a normal function that you pass as a child. Thanks @salzhrani!
+",chenglou,salzhrani
+235,2015-11-03 01:41:29,"@chenglou @nkbt The #219 velocities are a better way to go than a single `isFinished` flag. There could be a helper to which you pass the object with velocities so it calculates whether all / any / some of them have reached certain threshold.
+",sompylasar,nkbt
+235,2015-11-03 01:41:29,"@chenglou @nkbt The #219 velocities are a better way to go than a single `isFinished` flag. There could be a helper to which you pass the object with velocities so it calculates whether all / any / some of them have reached certain threshold.
+",sompylasar,chenglou
+235,2015-11-03 09:01:02,"@nkbt, yes, I saw this. Just missed the ""alongside"" thing, sorry.
+",sompylasar,nkbt
+235,2015-11-12 19:23:23,"@chenglou I don't think anyone's working on it as of right now. PRs are very welcome though :D
+",bsansouci,chenglou
+235,2016-01-07 17:42:47,"@chenglou you asked for an example of when somebody might want to use this.  Take a look at [this API proposal](https://gist.github.com/appsforartists/b199c6d79044f8e8abaf).
+
+There are many times that I find myself wanting to have an object spring to a user's touch, but then track it perfectly once it gets there.  In a world without an `onRest` callback, this is much more cumbersome than it should be.
+",appsforartists,chenglou
+235,2016-01-26 07:10:19,"@threepointone, @chenglou, and I just chatted about this for a bit.
+
+While we see the potential usefulness of a per-value onRest (e.g. in springParams), the simple/common case is per Motion instance (you want to know when the child is completely done moving).  Perhaps Motion (and StaggeredMotion) should gain an onRest attribute for now, and we can worry about per-value onRest in the future if it becomes an acute need.  For now, you can fake it by composing Motions together.
+
+Per-value onRest seems like a more advanced usage that would suit a timeline-based API better than what Motion currently provides.
+",appsforartists,chenglou
+235,2016-04-20 07:03:53,"Alright so end callback is in for `Motion` (react-motion v0.4.3). If there's request for such cb for `StaggeredMotion` and `TransitionMotion` we should reopen this issue or create a new one.
+
+Sorry for the wait everyone! And thank you again @appsforartists for actually implementing it =].
+",chenglou,appsforartists
+235,2016-09-12 19:40:56,"@chenglou any news on when/if this will be implemented in `TransitionMotion`? I think that would keep consistency in the API and allow to have an easy, clean way to use that functionality (all I tried to use this with current implementation feels hacky).
+
+> If there's request for such cb for StaggeredMotion and TransitionMotion we should reopen this issue or create a new one.
+
+Not sure if this is the proper way to make a formal request, but I think this could be pushed forward. Any thoughts?
+
+Thanks!
+",p4bloch,chenglou
+233,2015-11-03 09:18:24,"@chenglou Fuck the DOM (React DOM?) for returning `string` as the `value` of `input type=""range""` :see_no_evil: 
+",sompylasar,chenglou
+231,2015-10-30 19:26:50,"@chenglou  can add italics and unbold if you want, keep it minimal.
+",dey-dey,chenglou
+229,2015-10-30 19:48:36,"@chenglou sorry not trying to be difficult. I don't know what `opaque configuration` means. As opposed to `translucent configuration`? Which is what?
+
+Could just be `returns a configuration object`.
+",dey-dey,chenglou
+224,2015-10-24 12:16:39,"@nkbt hmmm good point, will have a go at making a simple wrapper component (still quite new to react) to achieve this and post my results :+1: 
+
+Although there's no way to detect whether an animation has completed unless you just check the values being passed in right?
+",VasilyShelkov,nkbt
+221,2015-10-19 03:00:46,"@nkbt  I know it's just a patch and I hope it'll work cause I'm a bit time constrained right now. :) I'm wondering what the root cause might be and is it really something on my side. Truth is I should probably use raf to fire update events and not mousemoved event directly but the bug happens after the dragging has ended and it's only React Motion that modifies anything when `addMessage' is called (and that's an extremely simple operation).
+",koko236,nkbt
+221,2015-10-19 03:06:46,"@koko236 I'm just trying to help you to get an idea where the actual problem is. This issue has definitely nothing to do with react-motion itself, it is more about the way your code was structured, RM probably revealed that issue by constantly re-rendering things. If you are happy with a temp hack and it is a considered choice - that is totally all right.
+
+If you wish to drill further - ping me on Discord (`@nkbt` there). And just in case add console.log into your `render` method so you can see it is actually rendered bazillion of times =)
+",nkbt,nkbt
+220,2015-10-23 00:11:19,"I am having the same use case, ii want to animate the `left` and `opacity` style properties on every item in a list on mount in a staggered effect. Kind of struggling wrapping my head around it. Same as @webyak i thought using `<StaggeredMotion>` and willEnter would work but willEnter does not fire on initial mount, only when something is entering the list. Your solution looks smart @webyak but is there any way to implement this use case in the API @chenglou or am i missing something ? 
+",iandoe,chenglou
+194,2015-10-07 00:32:03,"@chenglou there are some conceptual issues implementing it on reporter level. Author is working on that and I will help him as much I can. So potentially if it is working well, I'll file another PR, but meanwhile current solution works pretty well.
+",nkbt,chenglou
+189,2015-11-16 14:50:35,"For what it's worth, @nkbt solution works perfectly for my needs and has the added bonus of not adding any bloat to the library. It's beautifully simple.
+",crossman,nkbt
+189,2016-08-24 19:18:39,"@nkbt  really brillant idea. But one question: how do u handle transit consistence? Like from one array to another one rather than from 0 to anther ? 
+",kuanslove,nkbt
+189,2016-08-24 21:50:15,"@nkbt  One example is to build a component which contains a `<path d="""" />`, this component has prop called `data` which accept a data array(which can be converted to path data), and when I switch to another data array, this component can interpolate between two arrays and draw the line with transition animation effect, could you show me a example of what I described?
+",kuanslove,nkbt
+179,2015-10-01 22:35:01,"Thanks for the quick response, @chenglou. Forgive me if I'm wrong, but based on your response, I think there's a chance you've misunderstood. In the example, we're attempting to skip straight to `1`; thus the omission of `spring()`.
+
+If this truly is the desired behavior, would you agree that the docs are misleading when they say: 
+""If a plain number is provided rather than a spring config, instead of giving an interpolated value in the children function param below, we'll jump straight to that number value.""
+
+Thanks for your work on this library!
+",BrennanRoberts,chenglou
+172,2015-11-25 08:29:23,"Good enough! We can gradually do the rest. Thanks again for the push @ludovicofischer! =)
+",chenglou,ludovicofischer
+153,2017-03-07 19:25:19,@tannerlinsley that looks amazing! @chenglou is that something you would accept as a start to a PR? This seems extremely powerful. I'm willing to help where I can 😁 ,souporserious,chenglou
+153,2017-03-14 08:33:51,"@chenglou, honestly it would be so nice to have access to the percentage from the last issued float to the destination float.  The wrapper above works pretty well for the simple `<Motion />` component, but quickly becomes unwieldy if the same concept is applied to `<TransitionMotion />`. There is so much duplicate tracking of values that it seems like a fair ask to include in the core.  Really, anything that would expose more flexibility. Thoughts?",tannerlinsley,chenglou
+153,2017-03-23 05:16:42,"I got really stuck working on adding interpolation to the TransitionMotion component via the wrapper before I had to dig deeper into the source. The architecture I needed to achieve this flexible interpolation took me on a journey that ended up porting as much of the animation cycle and physics stepper over to a new repo called [react-move](https://github.com/tannerlinsley/react-move).  Anyone interested can take a look at the source there.  It supports interpolating anything that d3 can handle, duration/easing motion, and staggering.  It does not yet support chain staggering (eg. the chat heads example) yet.  It also does not yet account fo velocity reversal for numbers, but should soon. @chenglou, we should chat very soon.",tannerlinsley,chenglou
+150,2015-11-25 08:38:07,"hey @chenglou thanks for replying :)
+I have moved to other things indeed, but I'll be interested in learning to use react-motion anyway, so I'll have a look! Thanks!
+",olance,chenglou
+148,2015-09-04 05:21:39,"Thanks! We had already fixed this but we might've overwritten that change. I think we can merge @chenglou. 
+",bsansouci,chenglou
+148,2015-09-06 23:18:56,"Did we ever add it for TS? A quick search though history says no. Anyway, @bsansouci can you add a test against this? I'll let you merge this before/after.
+",chenglou,bsansouci
+148,2015-09-12 17:46:53,"Alright, merging this. @bsansouci I'll try to fix all the tests today so that you can test again this. Thanks @wilfreddenton!
+",chenglou,bsansouci
+148,2015-09-12 17:46:53,"Alright, merging this. @bsansouci I'll try to fix all the tests today so that you can test again this. Thanks @wilfreddenton!
+",chenglou,wilfreddenton
+148,2015-09-12 20:31:51,"@chenglou no problem! Thanks for all the work you've put in on this project. It's really awesome.
+",wilfreddenton,chenglou
+140,2016-02-25 22:37:04,"@AgentME you can do this:
+
+We use a requestAnimation polyfill for testing [raf](https://github.com/chrisdickinson/raf)
+Raf uses set `timeout` in place of `window.requestAnimationFrame`
+
+(Alternatively you could just replace `window.requestAnimationFrame` with `setTimeout`)
+
+When testing you can use [sinon](https://github.com/sinonjs/sinon) to hyjack the window timers (see `sinon.useFakeTimers`). This will allow you to 'flush' the animation queue.
+
+Example:
+
+
+",alexreardon,AgentME
+139,2015-09-18 20:13:03,"@chenglou is willLeave available on a Spring? -- I couldn't see it in the source. Like you mentioned, it would be great to have a bool / callback to simplify this down.
+",alexcurtis,chenglou
+138,2015-08-31 15:58:32,"@souporserious with this commit should demo3 now animate in the todo items when the page loads/component mounts? I cloned the repo and ran it locally to see how to get the functionality in my project, but it's not animating for me.
+",wilfreddenton,souporserious
+138,2015-09-01 19:24:13,"Right, it handles the unmounting of the individual list items. I was wondering if it could handle the unmounting of the containing unordered list but I see now that it's a better idea to just remove the items instead of the whole view when I want the list to disappear. This way the mounting/unmounting is all handled by react-motion. Thanks @chenglou and @souporserious so much for taking the time to help me!
+",wilfreddenton,souporserious
+138,2015-09-01 19:24:13,"Right, it handles the unmounting of the individual list items. I was wondering if it could handle the unmounting of the containing unordered list but I see now that it's a better idea to just remove the items instead of the whole view when I want the list to disappear. This way the mounting/unmounting is all handled by react-motion. Thanks @chenglou and @souporserious so much for taking the time to help me!
+",wilfreddenton,chenglou
+135,2015-08-25 21:24:28,"Thanks, @chenglou -- I think all I needed to do was to change
+
+`{items =>`
+
+to 
+
+`{(items) =>`
+
+I still don't have it working exactly like the demo, but now the page renders and it seems I can reorder things.
+
+Thanks!
+",marclar,chenglou
+130,2015-08-14 06:13:09,"@chenglou Thanks for pointing me in the right direction
+@maisano Thanks for your clarification - that works okay-ish but is a good starting point for further inquiry.
+
+Followup questions:
+- On initial load of the app, the component shown first is not transitioned in. How can i achieve that?
+- The `RouteTransition` only transitions the immediate child - what if i'd like to transition multiple child elements in varying dom hierarchy depths differently - such as fading the body whilst transitioning `margin-top` on the header, `margin-bottom` on the footer and staggering transitions on the menu inside the header?
+",codepunkt,chenglou
+130,2015-10-19 21:40:09,"Would the implementation change dramatically if @chenglou's example was modified to make the transition be a horizontal sliding animation instead of a fading one?
+",rclai,chenglou
+130,2016-01-14 14:02:14,"@cdebotton it's hard to tell what's wrong from this–what's the usage look like?
+",maisano,cdebotton
+130,2016-02-12 17:46:48,"@andrewgleave - thanks for this! I started doing something like this (except I used a slide transition) and it worked. After maisano released his wrapper I ended up changing to that because it is nicely abstracted
+
+@maisano- Great wrapper!!! I only ran into one issue/improvement which I posted in your repo
+
+Fade in/out:
+
+Unfortunately this is one effect that doesn't look right. I have tried different stiffness/damping settings but when you transition it either moves so quick you don't notice the fade or one page starts to show through the other since it's opacity hasn't set zero yet. Ideally we would want the current route to fade out and once that is complete the new route fade in. I suspect you would need an animation end event to do this (which I believe isn't available yet)? Maybe there is another way to achieve this?
+
+@chenglou - Obviously _incredible_ library but thanks for helping lead us to solutions on how to integrate with major third party components! Your demos are very cool but being able to use react-motion with react-router for example is a big deal. Developers finally have a well designed library to integrate advanced animations in real world apps :)
+
+Expanding upon this concept further doing the following with react-motion would be awesome! 
+
+https://www.google.com/design/spec/animation/meaningful-transitions.html
+
+Although maybe this belongs in react-motion-ui-pack :)
+",abelovic,chenglou
+129,2015-08-14 00:50:53,"@chenglou What about controlling the precision on something that isn't pixel-based? For example, an opacity-based animation currently has that fall-off problem where react-motion takes forever to reach 0. The element is basically invisible, but it keeps animating anyway.
+
+FWIW, awesome work though!!! This one tiny edge has been the only rough spot for me.
+",jdeal,chenglou
+128,2015-08-11 03:47:50,"@chenglou oh, again? ;)
+",nkbt,chenglou
+128,2015-10-07 12:36:31,"Ha ;)
+@chenglou, when do you expect this to go in?
+",borisyankov,chenglou
+120,2016-12-03 22:35:14,"@threepointone I know this is super old, but I found someone that made a utility to help with this so I think this can be closed if you want https://github.com/germtb/color-interpolator",souporserious,threepointone
+114,2015-08-03 16:11:47,"Hey @balanceiskey! Looking at the [specs](http://www.ecma-international.org/ecma-262/6.0/index.html#sec-ordinary-object-internal-methods-and-internal-slots-ownpropertykeys) `integer` props are in ascending order but `String` props are in creation order. You can just append a letter at the front of your number and it works.
+",bsansouci,balanceiskey
+107,2015-07-29 09:24:02,"@chenglou You can have separate export for React Native and turn components into factories. For example https://github.com/gaearon/react-redux/blob/master/src/native.js.
+",gaearon,chenglou
+100,2015-10-25 11:04:33,"@appsforartists it should be really easy to add ability to specify precision if you replace `Math.round(dict[key])`. For many cases even for height, 0.1 precision is desirable. Sometimes 0.01. Depending on the kind of animation.
+
+Wrapper solution is pretty straightforward indeed, but it would be much nicer to have it as part of spring() config.
+",nkbt,appsforartists
+100,2015-10-25 23:39:54,"Now published to npm:
+
+ [`var memoizeRounded = require(""gravel"").helpers.memoizeRounded;`](https://github.com/appsforartists/gravel/blob/master/src/helpers/memoizeRounded.js)
+
+@nkbt I added a precision argument.
+",appsforartists,nkbt
+91,2015-07-28 18:10:48,"Talked on slack, will let @threepointone work on this in a fork since this isn't high pri
+",chenglou,threepointone
+89,2015-07-23 04:21:16,"@threepointone That's what I'm thinking. I don't really need radium for that. Thanks. You're quick with it!
+",yanivtal,threepointone
+88,2016-01-26 06:08:30,"Well this sure took a long time to close...
+We've put a hook in `componentWillUpdate` to sync stable changes. The strategy can change but the tests are now there to guard against it. @bsansouci feel free to check that it meets your expectations.
+",chenglou,bsansouci
+84,2015-07-19 18:24:56,"@bsansouci  This is using the built react-motion.js, included with standard script tags. i.e. All client side, no build step other than having jsx transformer.
+",iandanforth,bsansouci
+84,2015-07-19 18:37:23,"@bsansouci The TypeError happens when clicking on the first div
+",iandanforth,bsansouci
+83,2015-07-19 22:34:14,"@bsansouci  While I can’t repro the issue, both your scenarios for point 2 sound plausible. The animation loop can indeed run multiple steps in one frame which could cause what you are describing.
+
+I don’t think the animation loop should be involved at all if it is not for coordinating the physics simulation.
+",iclanzan,bsansouci
+71,2015-07-16 07:16:51,"@nkbt Yep, I realized that. Just confusing that the demo explicitly said that the argument is supposed to be null.
+
+@chenglou I agree on the initialValue prop, that would probably be easier to understand.
+",peterssonjesper,nkbt
+71,2015-07-16 07:16:51,"@nkbt Yep, I realized that. Just confusing that the demo explicitly said that the argument is supposed to be null.
+
+@chenglou I agree on the initialValue prop, that would probably be easier to understand.
+",peterssonjesper,chenglou
+68,2015-07-17 16:56:02,"@threepointone That looks pretty close but I rely on the object interpolation that Spring is doing
+",twobit,threepointone
+68,2015-07-29 05:41:57,"Alright, some carefully chosen constants are now exposed under `constants` [here](https://github.com/chenglou/react-motion/blob/372446fc8679dcdbf4de2e983d53709ab40ce88c/src/constants.js) and will go in the next release (the one after 0.2.2). This, along with that demo I linked above, should ease the usage of spring constants enough for me to deem this issue solved.
+
+As for traditional tweens, @threepointone or I might port the stuff over in the future (I also remember hitting a roadblock with using tween with this API format but that might be wrong). Somewhat low-pri right now because I've got some cooler stuff to show =).
+",chenglou,threepointone
+62,2015-08-07 10:25:42,"@nkbt easy. http://jsfiddle.net/constb/xur4pf6m/2/ my point is - if you need to know content height - render it into a wrapper with `height: 0; overflow: hidden;` and then animate wrapper's height. don't animate content height.
+",constb,nkbt
+62,2015-08-07 10:48:46,"@nkbt sorry, my bad. )
+",constb,nkbt
+62,2015-08-11 01:45:05,"Awesome! Thanks @nkbt 
+",derekr,nkbt
+62,2015-10-05 22:33:03,"@chenglou no can't see any flicker.
+",kristian-puccio,chenglou
+62,2015-10-16 15:14:51,"thanks @nkbt this is exactly what i was looking for ;)
+",arush,nkbt
+62,2015-10-19 12:25:08,"Ok so i spent some time using both velocity-react and react-motion + react-collapse, and I have to say, I agree with @chenglou that animation to/from height:auto out-the-box is something I'd like to see in RM core. Honestly im finding myself wanting to use velocity-react for these situations just because the API is simpler. 
+
+Height animation is one of the most important features for most TransitionMotion use cases - if you ever want something to enter/leave without the container-div to do that awful snap after the node is removed - the height will need to be animated to/from auto. This is a very common use case for menus, accordions, dropdowns, popovers/tooltips. Whether this is something that RM should deal with or simply pass off to Velocity.js (someday) idk, but the API should be simple for the developer.
+",arush,chenglou
+62,2015-10-22 12:26:10,"@chenglou in my experience, velocity-react does have a flicker problem, and doesn't deal with this situation easily either... here's the issue with some gifs: https://github.com/twitter-fabric/velocity-react/issues/36
+
+in the end, velocity-react doesn't cater for auto height children elegantly without opacity and display hacks.
+
+@nkbt Gonna look into react-collapse again.
+",arush,nkbt
+62,2015-10-22 12:26:10,"@chenglou in my experience, velocity-react does have a flicker problem, and doesn't deal with this situation easily either... here's the issue with some gifs: https://github.com/twitter-fabric/velocity-react/issues/36
+
+in the end, velocity-react doesn't cater for auto height children elegantly without opacity and display hacks.
+
+@nkbt Gonna look into react-collapse again.
+",arush,chenglou
+61,2015-07-13 21:40:07,"@chenglou oh, sounds pretty awesome! can't wait to see it :+1: 
+",yamalight,chenglou
+61,2015-07-29 15:47:23,"@chenglou looks great, thank you!
+",yamalight,chenglou
+57,2015-07-16 11:08:54,"@chenglou so far I do not have any major concerns. I want to give it a try on my current project to see how it works in real app. I will comment in the next hour or two.
+",nkbt,chenglou
+57,2015-07-16 12:47:48,"@nkbt I am totally open for refactoring and am all for pure functions but I fail to see what I could simplify. Can you give me some pointers? 
+",iclanzan,nkbt
+57,2015-07-16 12:55:20,"@iclanzan well it is kind of full-refactoring of the code, removing `this` references, moving things to functions without side effects and so on. No concrete examples though for now. It is my own opinion and I'd better wait for @chenglou word on the case.
+
+If we decide to go functional, then you will need to rebase against the latest master first and then we  can work on the code itself.
+",nkbt,chenglou
+57,2015-07-16 12:55:20,"@iclanzan well it is kind of full-refactoring of the code, removing `this` references, moving things to functions without side effects and so on. No concrete examples though for now. It is my own opinion and I'd better wait for @chenglou word on the case.
+
+If we decide to go functional, then you will need to rebase against the latest master first and then we  can work on the code itself.
+",nkbt,iclanzan
+57,2015-07-16 18:17:58,"@chenglou They happen without switching tabs. You do have to wait a bit for more of the elements to start animating since they all start in the top left corner. Just move your mouse around the screen and you should see it get unstable. I can always reproduce it.
+",iclanzan,chenglou
+57,2015-07-16 18:24:35,"@chenglou pretty sure it happens on master too, but it's hard to be sure because the poor performance means it's jumping around a lot
+",AndrewIngram,chenglou
+57,2015-07-16 22:44:36,"Super cool stuff @iclanzan, great read!
+",bsansouci,iclanzan
+57,2015-07-17 16:51:27,"@chenglou I guess you can merge it and we will keep improving it.
+",iclanzan,chenglou
+56,2015-07-12 19:44:40,"@chenglou 
+Safari complains that
+
+> Viewport argument key ""scale"" not recognized and ignored.
+
+and Chrome says:
+
+> The key ""scale"" is not recognized and ignored.
+
+The possible values for viewport are documented at MDN:
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
+",cody,chenglou
+55,2015-07-12 13:01:56,"@nkbt
+
+> This works well with https://github.com/in-flux/in-flux
+
+Cool. I'll have to parouse the code later. Sadly any router that requires being able to have access to the components when defining the router won't ever work for me, since my production needs requirements mean the component data never exists until someone requires the page (webpack require.ensure style universal app). The routers end up being very simplistic and custom built for the job.
+
+> timeline you are talking about seems like a cross-component state. When you want to share some state between components the answer is simple - use Flux.
+
+Uh. Maybe my way of doing things is just non-standard:
+- all applications state of all components that exist (including placeholders for ones that dont yet) is stored in a baobab tree (and I do mean everything, form errors, form data, field data, page, page data, keys, user data, etc etc)
+- anything that needs to do anything subscribes to that baobab tree (usually though baobab-react but I do explicit cursors too when I need to force certain patterns)
+- if something in the application needs to happen you just have a function called (mainly call them actions, but dont really care honestly) that perform any data retrival if they wish to, and send changes to the application baobab tree; everything else just responds on it's own correctly since it's subscribed to the tree
+
+I looked over flux, the patterns involved in it seems too unnecessarily verbose for my purposes. My way may not be the best but it's stupid simple, so easier to figure out when something goes wrong.
+
+> That means you can create a timeline store to keep track state of animation and then apply it when needed to ReactMotion elements (or their animated targets directly).
+
+I don't really understand this, but it may be just be that I'm missing something. I only found react-motion recently. I'll have to experiment some more.
+
+> PS: hack keys are gone for the moment. will be added back later
+
+:+1: 
+",srcspider,nkbt
+55,2015-07-12 13:19:23,"off-topic but @nkbt in your in-flux/in-flux#52 example you still clearly have access to the Chart object. I'm sure it's dynamically loaded in some sense specific to in-flux but I don't see how it's dynamic in the sense I meant. When I say dynamic I mean the application has NO code for Chart and browser went and made a network call to get code that describes how to make a Chart page, injected that code into its current context along with all dependencies specific to getting Chart page to work and displayed the page. 
+
+Anyway talking about routers will get complicated real fast, since as soon as you combine dynamic with universal apps you need to talk about entry points to enable the user to load only code specific to a page when they ask for a page; so it's probably best not to derail further.
+",srcspider,nkbt
+48,2015-07-12 04:04:59,"@johnamiahford hasn't rebased his branch
+",nkbt,johnamiahford
+48,2015-07-12 04:56:37,"Heh I thought that still wouldnt pass github's merge check. @johnamiahford can you rebase and add just the npm and bower badges please? Also, the existing slack badge should directly go to the channel already
+",chenglou,johnamiahford
+45,2015-07-12 21:49:14,"Haha I know @chenglou :) the reason for this thread was to raise that question. `meldGoldIntoMold` is just hilarious :P
+",dariocravero,chenglou
+44,2015-07-11 08:11:16,"@salzhrani yes, all props passed to Spring are applied to rendered div.
+
+
+",nkbt,salzhrani
+43,2015-07-11 04:54:42,"@chenglou you can use something like 
+
+
+
+This does not break React reconciliation and works fine. 
+",nkbt,chenglou
+41,2015-07-11 11:16:56,"@chenglou @nkbt [would love to hear your thoughts on this](https://github.com/dariocravero/react-motion/blob/extract-animation-from-spring/src/spring/animate.js).
+",dariocravero,nkbt
+40,2015-07-12 00:48:39,"@chenglou done #46 #47 
+",nkbt,chenglou
+40,2015-07-12 13:37:41,"@chenglou sorry about the size of the PR, I thought about chunk-sizing it too but it was too much trouble as one thing was depending on the other; mainly splitting Spring.jsx into multiple files and putting a better build process that outputs all the files to `lib`. I guess the question is: are you ok with the way this refactor was going? Or are you planning in keeping everything as it is?
+",dariocravero,chenglou
+39,2015-07-11 08:32:23,"Related: #31 which is causes by the weird time delta we get from browser slowing down rAF
+Merging this. @iclanzan I'd love to decouple stepper from the rendering, gladly accepting PR =)
+",chenglou,iclanzan
+33,2015-07-11 23:35:30,"@chenglou Maybe add a gitter link for anything that might require irc-like live chat (help with anything for example). It's easy to use and unlike irc people easily see what people were chatting about before they arrived and can also answer someone even after they leave and the person will just receive an email about it. It's also visible to guests, and you just need github to access it. Here's webpack's as an example: https://gitter.im/webpack/webpack/
+
+Maybe this is just a setting, but Slack presented me with a big ""sign up to do anything"", and didn't feel like doing that since they presented to me a ""hidden steps form"" for sign up, but I assume it does something similar to gitter but is more of a private thing for core contributors only? 
+",srcspider,chenglou
+33,2015-07-12 11:31:31,"@nkbt didn't know about the irc integration, awesum
+",srcspider,nkbt
+31,2015-07-11 19:29:46,"@nkbt We don’t know the duration of animations ahead of time so as to “align” it or set the last value. Each step is computed from the values of the previous one. Best we can do is try to compute multiple steps to catch up the lost time. If the time lost is too great and would take too many steps to catch up then we have two options: **pause** or **end** the animation.
+
+If down the road we want to support physics models other then just springs we might not even know the end value. Think of something like momentum scrolling where you don’t know beforehand what the end position is. As such I would suggest we go with pausing.
+
+I am working on decoupling the stepping function from rendering and it will among other things solve this problem.
+",iclanzan,nkbt
+31,2015-07-11 19:43:04,"> If down the road we want to support physics models other then just springs we might not even know the end value. Think of something like momentum scrolling where you don’t know beforehand what the end position is. As such I would suggest we go with pausing.
+
+@iclanzan I want the Decay component actually, so yes, that makes sense. Pausing it is.
+(Also, looking forward to decoupling the stepping function!)
+",chenglou,iclanzan
+29,2015-07-21 19:33:43,"@chenglou is there any way to use the spring interpolation outside of a react component, or at least outside of the render method? In my tests I am getting much better animation performance calling `myRef.setNativeProps({})` rather than modifying component styles. 
+
+I realize this violates the basic declarative principles of the library but something like:
+
+
+
+ Thoughts?
+
+With my current implementation I am getting unpredicable spring action, often indeterminate oscilating. I assume this is because the react-native timer is less reliable. I will try it out with your latest updates and see if that helps.
+",rt2zz,chenglou
+29,2015-12-21 12:33:28,"@chenglou Is there a comparison, performance-wise, between Motion and Animated?
+
+(I am sure there is, I am just a bit lazy to look for any atm :)
+",phaistonian,chenglou
+29,2015-12-21 14:21:00,"@bsansouci Funny thing, the RN team actually suggested RM (when asked about animation in a recent AMA on Reddit) and not Animated.
+
+Then again, @chenglou is an FBoy as well ;)
+",phaistonian,bsansouci
+29,2015-12-21 14:21:00,"@bsansouci Funny thing, the RN team actually suggested RM (when asked about animation in a recent AMA on Reddit) and not Animated.
+
+Then again, @chenglou is an FBoy as well ;)
+",phaistonian,chenglou
+29,2015-12-28 23:42:43,"@chenglou @bishopZ To elaborate, I may have misstated it as ""not working"". (I was extremely frustrated to RN when I was commenting so it could be a bit excessive) I did not try to port every demo though, it absolutely works after those changes! (`div` to `View`, `button` to `TouchableHighlight`, etc.) And they are very pleasant to use, compared to Animated. 
+
+However, I have seen some native app folks (who are not really familiar with web techs or React for web) get interested by React Native and get confused by these rather 'trivial' differences after using a few React libs. I thought 'just working' examples can help those kind of people.
+",sairion,bishopZ
+29,2015-12-28 23:42:43,"@chenglou @bishopZ To elaborate, I may have misstated it as ""not working"". (I was extremely frustrated to RN when I was commenting so it could be a bit excessive) I did not try to port every demo though, it absolutely works after those changes! (`div` to `View`, `button` to `TouchableHighlight`, etc.) And they are very pleasant to use, compared to Animated. 
+
+However, I have seen some native app folks (who are not really familiar with web techs or React for web) get interested by React Native and get confused by these rather 'trivial' differences after using a few React libs. I thought 'just working' examples can help those kind of people.
+",sairion,chenglou
+24,2015-07-09 00:31:33,"@chenglou delegate it =)
+I'm happy to do that asap. Assign to me if you are ok
+",nkbt,chenglou
+24,2015-07-10 08:23:00,"@chenglou could you please create a `gh-pages` branch so it is possible to make PR there?
+",nkbt,chenglou
+21,2015-07-07 19:10:51,"@chenglou What about `npm install ⚛✨` then?
+",kittens,chenglou
+21,2015-07-07 19:15:14,"@chenglou did you try to contact react-animation package owner? It seems that package is abandoned and it is likely they can transfer package name to you.
+",andreypopp,chenglou
+21,2015-07-07 20:01:34,"@chenglou 
+while `react-motion` is pretty good, `react-animation` somehow sounds better. Try contacting npm.
+",boopathi,chenglou
+21,2015-07-07 21:23:43,"@gaearon I like the idea of avoiding the baggage of what $.animate entails :+1:
+",bsansouci,gaearon
+21,2015-07-07 23:57:39,"react-motion seems popular so I registered that with a placeholder just in case some jerk tries to take it :P https://www.npmjs.com/package/react-motion - if you decide to go with that I will transfer it over for you @chenglou 
+",brentvatne,chenglou
+21,2015-07-08 05:14:10,"@chenglou - transfer complete :smile: all yours
+",brentvatne,chenglou
+19,2015-07-12 03:19:38,"@nkbt can you keep karma and coverage out for now?
+",chenglou,nkbt
+19,2015-07-12 03:57:01,"@chenglou sure, no karma. That was just a rebase commit.
+",nkbt,chenglou
+19,2015-07-12 03:59:13,"@chenglou why not coverage? It works pretty well. The only thing I needed to do is to rename Spring.jsx to Spring.js, so it appears in coverage report (spent decent amount of time trying to find workaround to get report for js and jsx, messing with isparta and istanbul, but found the best solution is just to rename it to js)
+",nkbt,chenglou
+17,2015-07-09 04:25:51,"@chenglou it actually catches pretty much all most common mistakes. It is large because it has all rules in there with descriptions. It may be unnecessary when you work alone but as we found in our company it works pretty well if you have distributed team. Additional comments are also very helpful to figure out why something is failing without going to the webz
+
+It is up to you of course. Feel free to close. I just highly recommend to have a code style in place to avoid mistakes made by other contributors. And yourself as well =)
+",nkbt,chenglou
+17,2015-07-11 21:16:14,"I agreed with @chenglou, this is way too much and didn't see too much benefit from it. something like use `const` instead var because the value never changed is also opinionated and slow down the development in this early stage.
+",huang47,chenglou
+17,2015-07-11 22:24:32,"I really think we need this even at this stage. It will save us a lot of headaches down the road. Adopting AirBnB’s rules as @gaearon suggested I think is a very good idea.
+",iclanzan,gaearon
+17,2015-07-11 22:46:20,"@nkbt would you mind doing that? What @gaearon said
+",chenglou,nkbt
+17,2015-07-11 22:46:20,"@nkbt would you mind doing that? What @gaearon said
+",chenglou,gaearon
+17,2015-07-11 23:28:00,"@chenglou for sure, np
+",nkbt,chenglou
+17,2015-07-12 00:49:20,"@chenglou done, see updated code.
+",nkbt,chenglou
+14,2015-07-06 19:40:53,"@chenglou A lot of the time I can see people just using the non-function style `endValue` syntax for things like `left` or `opacity`, like in /demo0 , but I can absolutely see the value of the `update` syntax in a multiple-element, multiple-property scenario. As soon as I recognized how the 'children as a function' syntax worked, it all became very clear. 
+",kenwheeler,chenglou
+14,2015-07-06 19:54:45,"I think it becomes useful in the 1TransitionSpring 1which @chenglou said would be discussed in another issue. But basically when you're unmounting, the `TransitionSpring` will keep your data until you decide it can be removed, then it's removed. Looking at demo3, when you delete something from the list you're removing it from your state. If you don't give it to the `TransitionSpring` to keep, you won't have the text of that todo to display.
+",bsansouci,chenglou
+14,2015-07-06 20:24:30,"> @chenglou A lot of the time I can see people just using the non-function style endValue syntax for things like left or opacity, like in /demo0
+
+Random comment: the current situation is, if you pass an object instead of a callback, I assume you want to animate everything, so I wrap your object with `() => update(object, defaultConfig)` before sending it off. This is handy for scalars too: `<Spring destinationValue={5}>...` which turns into `Spring destinationValue={() => update(5)}>...` With the planned change to use vanilla object, you can no longer use the shorthand: say you have `<Spring destinationValue={{a: {top: {value: 1}, left: 10}}}`. I can't assume you wanted `left` animated too by wrapping the whole thing in another wrapper.
+
+It's slightly more verbose but that's fine?
+
+> That said, in what scenario would you feed non tweenable data, like importantData in the demo, through the update function?
+
+Not sure what you mean here. If you mean that the user should only ever pass tweenable data to `destinationValue`, I feel it's too restrictive and asks too much of you to massage your data before passing it to me. If you mean that someone does `update(nonTweenableData, cancelTweeningConfig)`, that's because the upper level might wrap the whole structure in a config, and for this `nonTweenableData` sub collection you want to ""un-wrap"" by setting a special `cancelTweeningConfig`. This is for convenience over the alternative of granularly selecting all the subtrees.
+
+But you touch a good point: right now we assume `update({a: {b: 1}, c: 2}, config)` cascades deeply and updates `1` and `2`. if `update` didn't cascade, you wouldn't need a second API/special config to disable an `update` from the higher level. I made things cascade because again, it seemed tedious to wrap every single value you want to tween with a non-cascading version of `update`. But maybe that's the way to go? This decision will also affect the second vanilla API.
+",chenglou,chenglou
+14,2015-07-06 20:30:27,"@chenglou on the first part, agreed, slightly more verbose, but consistent and explicit.
+
+on the second part, I definitely see the value in the cascade in regards to keeping things terse. 
+",kenwheeler,chenglou
+11,2015-07-06 04:57:59,"@chenglou I was doing recently a lot of packaging work on https://github.com/ericelliott/prod-module-boilerplate https://github.com/ericelliott/universal-react-boilerplate and my personal bunch of react-\*  modules (even made one https://github.com/nkbt/react-component-template to keep it lean and clear) . It all works really well, so I can tackle this one if you don't mind. You can assign it to me.
+
+Should not take much time and will be done today (I'm in Sydney)
+",nkbt,chenglou
+11,2015-07-06 08:12:09,"@chenglou oh sorry, was on a train and did not catch up with your comment. I've already done all things. Minimal code changes, though. Only infrastructure. Feel free to check it out and try new build/test process.
+",nkbt,chenglou
+11,2015-07-06 08:16:22,"@chenglou oh and it does not matter if you are going to change API soon, you still can publish 0.0.1 for now. And go 1.0.0 when API is fairly stable.
+",nkbt,chenglou
+436,2017-02-28 23:06:55,"@chenglou Thanks for making this very awesome library. I have an issue where when I draw a series of rects on a svg, the first rect is animating from the wrong position. It only happens with the first element and only when I adjust the height. I don't understand why this is occurring so any feedback or guidance would be appreciated. Thanks!
+
+Relevant code for the rect class:
+
+
+
+![screencast-2017-02-28-17-57-24](https://cloud.githubusercontent.com/assets/10728027/23438624/aec9a07a-fde0-11e6-8916-8e33fab5de4e.gif)
+
+",LPayyapilli,chenglou
+422,2017-01-19 23:29:27,Although it's not baked in you can achieve this with something similar to what the UI pack does [here](https://github.com/souporserious/react-motion-ui-pack/blob/master/src/Transition.jsx#L89) then just check once your current value reaches its destination. I know that @chenglou wanted to keep the API small and light so not sure if this feature is on the roadmap.,souporserious,chenglou
+409,2016-12-15 00:25:50,"@chenglou looks like `didLeave` wasn't shipped in `0.4.6` can you look at this and ship a new version, please?",renatoagds,chenglou
+399,2016-12-06 01:27:32,@nkbt @chenglou do one of you have time to take a look?,hkjorgensen,nkbt
+399,2016-12-06 01:27:32,@nkbt @chenglou do one of you have time to take a look?,hkjorgensen,chenglou
+375,2016-10-02 05:11:43,"@AgentME do you know what's going on here?
+",chenglou,AgentME
+365,2016-09-05 15:36:56,"@nkbt any chances you can shed me some light here? Thanks :)
+",p4bloch,nkbt
+334,2016-06-06 07:29:01,"@chenglou correct me if I'm wrong but this is now totally separated from `react-dom`, so you can Just Use It™ :D
+",bsansouci,chenglou
+322,2016-04-28 05:06:17,"Ehhh, @appsforartists 
+",chenglou,appsforartists
+317,2016-04-16 07:04:37,"Reopen until new version published
+
+@chenglou can you please release new `patch` version (since it is `0.x.x` now)?
+",nkbt,chenglou
+316,2016-04-06 01:36:12,"That is and issue with Modal component. It unmounts element without waiting until animation is finished (or killing animation). Quite common issue I often run into myself.
+
+Since even I run into that often, I could only imagine how common this issue is... Maybe it is worth adding some safeguard in ReactMotion itself. Though It is not really a fixing of root cause of the issue, but rather patching over unsafe implementations.
+
+@chenglou any thoughts on this?
+",nkbt,chenglou
+312,2016-03-31 16:19:07,"What's been in the talk is the slowdown of the animation internal timer, not the change in the spring parameters. I don't see this option in the existing API. @chenglou might have an answer.
+",sompylasar,chenglou
+304,2016-03-22 08:17:55,"@chenglou, the author, might have another opinion.
+",sompylasar,chenglou
+273,2016-01-28 03:51:23,"I don't intend for this to land until after I've used it and made sure we're solving the right problem, but I'm opening this now so @chenglou can play with it (and maybe add Flow if there are places I've missed).
+
+See also #235.
+",appsforartists,chenglou
+261,2016-01-19 03:18:40,"Ping @chenglou ok?
+",nkbt,chenglou
+260,2016-01-16 04:51:41,"cc @nkbt 
+Not really important but if you have `[a, a]` where a is a reference, it'll mistakenly label the second as `[*RECURSION*]`, since we check the cache but never check whether that reference is embedded inside itself.
+We can use a json serializer that supports recursion. I've seen at least one.
+Filing this as really low-pri, also to remind us to  check if we can use a pre-made reporter now. I refuse to believe there isn't a pre-made reporter that fits our simple needs so far =).
+",chenglou,nkbt
+258,2016-01-14 18:20:47,"![](http://g.recordit.co/AMpIjygYZd.gif)
+
+Hi @chenglou I found a possible issue with React Native. I am going to describe what the issue looks like but I don't have good insight about _why_ yet.
+
+The setup is simple enough. Below is a render body that will create _three_ switches, each with slightly differing structure.
+1. The first case where `<Touchable>` _contains_ `<Motion>`, which I thought should work (that ~exact code works on Web) did not!
+2. The second case where `<Motion>` _contains_ `<Touchable>` **_does work**_!
+3. The third case is what I had before I introducing animation so of course it works ...because it isn't using `<Motion>`.
+
+The question/bug is **_why isn't the first case working**_?
+
+
+",jasonkuhrt,chenglou
+249,2015-12-31 03:32:20,"https://twitter.com/soprano/status/682402356147826688
+
+Woohoo!
+
+@nkbt @bsansouci 
+",chenglou,nkbt
+249,2015-12-31 03:32:20,"https://twitter.com/soprano/status/682402356147826688
+
+Woohoo!
+
+@nkbt @bsansouci 
+",chenglou,bsansouci
+248,2016-11-22 11:50:12,Looking forward to sequencing in React-Motion. Are @chenglou @appsforartists still maintaining this project? Haven't seen any update for a period of time.,lzl124631x,appsforartists
+246,2015-11-30 03:20:23,"Really? cc @bsansouci 
+",chenglou,bsansouci
+240,2015-11-14 04:47:01,"Yep, acko.net has been a great reference! We already do implement a few perf/visual optimizations such as separating the real-life clock with ideal clock. As for smoothing out arbitrary interpolations, [tween-state](https://github.com/chenglou/react-tween-state) solves this (it's the additive animation that one of the articles is talking about, and one that's implemented in iOS 7) but I'd rather just use springs because it makes other things easier too.
+
+@hitsthings: [Here](https://medium.com/@chenglou/react-motion-and-animated-4b3edf671cba)'s the answer to your question. Hopefully we'll reach that stage where we can defer to web animation (or whatever engine it is) under the hood. In the mean time, the next goal would be to defer to actual DOM manipulation. I've been caught up with a few other features (and other stuff in general) recently so this hasn't been done yet. Also, the ""coordination"" that I'm talking about in my article, the one in RM (dependent/stagger spring, unmounting), needs a bit of API tweaking in order to work with DOM manipulations/web animation, like you said.
+
+So: it's being discussed, not as much as some other API priorities right now but still. I'm trying to make the API as good as possible, while considering that animation perf is one of the areas where we still have to sacrifice API for speed. If you're interested in making the API totally compatible with an arbitrary implementation under the hood, check out #133 (it's slightly messy and deviates from the current implementation; again, if you're interested, give me a signal and I'll revamp it soon).
+
+I'm leaving this open temporarily, in case you have other thoughts on this. Feel free to close it afterward because there are other issues tracking this =)
+",chenglou,chenglou
+235,2016-01-26 07:10:19,"@threepointone, @chenglou, and I just chatted about this for a bit.
+
+While we see the potential usefulness of a per-value onRest (e.g. in springParams), the simple/common case is per Motion instance (you want to know when the child is completely done moving).  Perhaps Motion (and StaggeredMotion) should gain an onRest attribute for now, and we can worry about per-value onRest in the future if it becomes an acute need.  For now, you can fake it by composing Motions together.
+
+Per-value onRest seems like a more advanced usage that would suit a timeline-based API better than what Motion currently provides.
+",appsforartists,threepointone
+233,2015-11-03 03:35:15,"That's... a bug? @bsansouci 
+",chenglou,bsansouci
+223,2015-10-24 11:47:20,"I've just implemented one for [react-component-template](https://github.com/nkbt/react-component-template) (with @ButenkoT help)
+
+Look at https://github.com/nkbt/react-component-template/pull/9 for some nice automation (basically installing and running everything with `npm run test:e2e` + prepush hook)
+
+@chenglou do you want to have this sort of testing here?
+
+PS: for each component I publish, I have example, and dev-server. So I can run it and then click through example to make sure it is not broken (at least smoketest). Then I can add more tests to make sure it actually behaves correctly. Testing is done in Chrome, so it is very close to real life.
+",nkbt,chenglou
+209,2015-10-09 12:35:18,":+1: LGTM, @chenglou there are some noticeable text changes, do they capture everything right?
+",nkbt,chenglou
+203,2015-11-25 08:49:02,"cc @bsansouci too if you're ever bored and want to add this
+",chenglou,bsansouci
+199,2015-10-07 22:08:46,"We'll need to allow sources to be published one day, right? Since we're adding flow and flow users probably wanna require the source version.
+
+(@threepointone will be happy too)
+",chenglou,threepointone
+197,2015-10-06 20:59:07,"After  #195 webpack build is not working correctly since it puts `all.js` into `demoX` folder.
+Also all links in the README are going to be broken.
+
+Ping @stevoland, @chenglou 
+",nkbt,stevoland
+197,2015-10-06 20:59:07,"After  #195 webpack build is not working correctly since it puts `all.js` into `demoX` folder.
+Also all links in the README are going to be broken.
+
+Ping @stevoland, @chenglou 
+",nkbt,chenglou
+197,2015-10-07 00:35:04,"Manually type in new folders in config and use proper placeholders in output. I could give it a shot today, unless @stevoland wants to fix it by himself.
+",nkbt,stevoland
+187,2015-10-04 14:16:17,"As @chenglou suggested in #180 , here’s a pull request with flow checks added to just a subset of the project files. I am only checking files where Flow recognizes all language constructs. Since Flow already merged the fixes related to `const` destructuring and `export default`, it seems pointless to change the project coding style, only to go back when the next Flow version releases.
+
+Among the project dependencies, I ignored some files because we hit https://github.com/facebook/fbjs/issues/44 with React 0.14.0-rc1; I also ignored a dummy `package.json` file used to test npmconf because flow mistakes it for the real deal.
+",ludovicofischer,chenglou
+187,2015-10-09 13:38:12,"I have fixed the indentation issue that @nkbt highlighted and created a Style type. Now that Flow 0.17 is out we can try to check the rest of the code base. Do you want to merge this one right now or do you prefer if I try to annotate more files first?
+",ludovicofischer,nkbt
+180,2015-10-02 13:55:54,"Damn it, we need a type system...
+@ludovicofischer if you want, feel free to submit small flow PRs gradually!
+",chenglou,ludovicofischer
+179,2015-10-01 23:14:37,"Ah, that's a bug then. @bsansouci 
+",chenglou,bsansouci
+170,2015-09-30 14:41:36,"cc @nkbt @gaearon who probably knows something about this?
+",chenglou,nkbt
+170,2015-09-30 14:41:36,"cc @nkbt @gaearon who probably knows something about this?
+",chenglou,gaearon
+157,2015-09-14 15:14:19,"Repro: chat heads, don't move mouse. See that the heads don't animate to `250, 300` even though `defaultStyles` and `styles` are set.
+
+Probably has something to do with the stop check (again...).
+
+@bsansouci 
+",chenglou,bsansouci
+155,2015-09-13 21:43:54,"@nkbt 
+Comparing a collection with another one is a bit tedious and looks like this currently:
+![screenshot 2015-09-13 17 42 55](https://cloud.githubusercontent.com/assets/1909539/9839155/e0d2d402-5a3e-11e5-8ef8-9b812684dd36.png)
+Ideally we'd have a visual diff of the collection. But I kinda don't want to lose the nyan cat (yeah really) lol, is there something we could do here?
+",chenglou,nkbt
+153,2015-09-12 17:59:38,"cc @threepointone who's interested in this.
+",chenglou,threepointone
+148,2015-09-04 04:56:24,"@bsansouci 
+",chenglou,bsansouci
+142,2015-09-01 07:22:29,"I'm still against hard-coded duration, and RM likely won't expose a spring where the user specifies one of `{stiffness, damping}`, and the spring gives the other, given a determined duration. The moment we do that, interruptible animation becomes unsolved again.
+
+For the people who wanted to have a feel of how long a spring lasts, I've directed to https://cdn.rawgit.com/chenglou/react-motion/e8f42dcd9678a8cea8648a3cf4f994583a99e7f7/demos/demo5/index.html
+There might be a potential counter-argument (though so far I haven't heard of it; but just in case...) that this is ""imprecise"". Except the duration is also most of the time very arbitrary and based on a ""feel"". At least here, it respects the laws of physics.
+
+That being said, I might consider exposing a dev-time only util which accomplishes what I said in the first paragraph, or more (e.g. ""what's a faster spring that looks like this one?). A typical workflow would be to `console.log` the output of these... or integrate this into the new React devtools.
+
+@threepointone 
+",chenglou,threepointone
+140,2015-08-31 02:24:34,"Sequence it is then?
+
+So there are two types of sequences here. One is pre-prop, where your prop goes to the next destination value when the current one finishes. The other is per-""set of props"", where you want all the props (each of which might have a different end time) to finish all before starting another set. Which one do you need?
+
+@threepointone 
+",chenglou,threepointone
+130,2016-02-05 22:47:09,"@threepointone we should have one, authoritative answer on how to make RR work with RM. I myself haven't used RR so I can't answer. But this is a recurring question.
+
+@abelovic the migration guide is [here](https://github.com/chenglou/react-motion/wiki). Maybe [this](https://github.com/chenglou/react-motion/wiki/v0.4.0-examples/_compare/b23bda218bfc5414d2bb70c954c7ed5250e16fa2...6b4990a7adb5a28a633797f2cebc29ff3a21e363) will help
+",chenglou,threepointone
+127,2015-08-07 21:26:27,"@bsansouci 
+",chenglou,bsansouci
+104,2015-07-27 04:54:08,"@bsansouci 
+",chenglou,bsansouci
+97,2015-07-23 23:05:16,"@bsansouci 
+",chenglou,bsansouci
+95,2015-07-23 08:17:55,"cc @iclanzan because I not sure whether that's a flaw in the current implementation of animation loop of the problem of the (which would be a bigger problem).
+
+Edit: no, I think it's just a flaw in the current implementation.
+",chenglou,iclanzan
+83,2015-07-19 21:02:17,"Point 2: are you sure this is the issue? This is important. It's because of the new animation loop. @iclanzan
+
+(Assuming it _is_ because of the new animation loop) this is actually somewhat of a relief. I was afraid of cramming more stuff into TransitionSpring for the sake of playing nice with CSS transitions, which really doesn't need an animation loop. Maybe we'll simply pull out the logic into a CSSSpring (or not). I think doing this will also allows #77 to have simpler solutions?
+",chenglou,iclanzan
+80,2015-07-18 22:57:50,"cc @threepointone who first mentioned generators for avoiding allocating intermediate stuff. Transducerjs can probably do the same.
+
+Generators might give bad perf (constant overhead) though IIRC. But maybe the Regenerator transform that babel uses avoids that? Have to test the real numbers.
+",chenglou,threepointone
+78,2015-07-18 19:12:45,"As @chenglou pointed out, `filterRight` was `O(n^2)` because of that call to `splice`, so the regular old `Array.prototype.filter` is in fact faster.
+
+The performance gains I was seeing when I switched from `filter` to `filterRight` were caused by not inlining the predicate.
+
+Since not inlining the predicate is a requirement, I can’t think of a way to use the built in filter and pass the alpha to the predicate. I could pass it as `this` to the predicate but that has the overhead of wrapping the number in a `Number` object drastically affecting performance.
+
+This is the best thing I could come up with. Implement a `filter` function that passes the third argument as the first argument to the predicate. As a bonus it is faster than `Array.prototype.filter`.
+
+I am happy not to have to mutate the array anymore.
+",iclanzan,chenglou
+77,2015-07-18 11:45:02,"@iclanzan 
+",chenglou,iclanzan
+77,2015-07-18 16:24:05,"I'll have to think about the implication of this difference for TransitionSpring. I _think_ this is fine. @bsansouci
+",chenglou,bsansouci
+68,2015-07-15 18:53:05,"@iclanzan your PR fixes this right?
+
+And yeah, we can port tween-state onto this. Good thing we've chosen a curve-agnostic library name.
+",chenglou,iclanzan
+68,2015-07-15 19:04:12,"@iclanzan 's PR should resolve almost all issues regarding stability even given the frame-rate changes during resizing. @twobit Can you try out #57?
+
+rebound-js has converters from Origami (where `k` and `b` are represented as `tension` and `friction`) and Pop (`bounciness` and `speed`): http://facebook.github.io/rebound-js/docs/rebound.html#section-61
+",razh,iclanzan
+62,2015-07-14 02:38:20,"subscribing. :+1: 
+
+@chenglou  ideas?
+",chirag04,chenglou
+62,2015-07-14 02:38:51,"Hey! <s>I think this isn't a problem specific to react-motion.</s> EDIT: definitely specific to react-motion because endValue will be called even on the first render. @chenglou maybe we should render once before calling endValue.
+
+If you need the element's height before rending but you can only get it after at least one render, then you're going to have to set some default height. Then you can hook up an event handler that calls `this.setState({height: ...})` every time the event you need fires (here I'm guessing scroll?).
+If you need to access a DOM element renderer by react you should look into using [refs](https://facebook.github.io/react/docs/more-about-refs.html).
+
+In any case, only the first render will need some default value.
+",bsansouci,chenglou
+61,2015-07-29 05:51:09,"Alright! @souporserious is experimenting with some simple wrappers [here](https://github.com/souporserious/react-motion-ui-pack). I personally haven't used them yet but they look neat.
+
+As for the simple wrappers, https://github.com/chenglou/react-motion/commit/372446fc8679dcdbf4de2e983d53709ab40ce88c exposes some commonly used spring constants. With these, I think something like:
+
+
+
+is short enough not to warrant actual wrapper components in core lib. Might change in the future if I spot some more complex use-cases (e.g. advanced `TransitionSpring`). But for now I'll close the issue =).
+",chenglou,souporserious
+60,2015-07-13 20:00:34,"Yup coming up! @chenglou's fixing some important thingy inside the API so we're waiting on those before adding features. 
+It'll probably a prop like `currVelocity={currVelocity => ...}`
+",bsansouci,chenglou
+59,2015-07-13 17:29:24,"I'm not explaining this very well lol. @nkbt probably knows this better than I do.
+",chenglou,nkbt
+57,2015-07-15 23:30:37,"@nkbt what do you think? It solves https://github.com/chenglou/react-motion/issues/68#issuecomment-121707570 so right off the bat that's pretty good. I'll give this a better read tonight/tomorrow
+",chenglou,nkbt
+57,2015-07-16 18:14:38,"Yeah I didn't want to comment on the OOP-ness because it's the idea that's important here. But I did mind a bit that it's OO. Regarding state, this library should enable time-travel and such (@gaearon) and I really don't want any state that lives in some place that's gonna be hard to reach. Closures are fine and being inside components is totally fine.
+
+Also is it just me or do the instabilities not happen unless I switch away browser tab? 1k chat heads on master.
+
+@AndrewIngram just to make sure: the touch delay issue happens on this PR in particular and not on master?
+",chenglou,gaearon
+55,2015-07-12 12:40:25,"Hm. With the multiple-page example I didn't mean that this would be a system that would be handling page change animation but that timelines recording should be able to go though routing systems. Sorry I guess I put too much emphasis on the pages changing. If you have a single page and are doing a lot of actions then it should be able to record that.
+
+> Not sure how all this related to react-motion itself.
+
+The system that does the animation should be the one that manages the timeline; or at least that's what I think, may be wrong approach. 
+
+I started this as a theorycrafting to see if people have thought about the harder problems and have any insight or answers they could share. Ideas can always help in implementing other similar things even if something like the ideal solution described in the first post never comes to fruition. I know @chenglou implemented a very simple timeline system that he showed for his demos (off-topic: what's the keys for slowmo in demos anyway?) so figured he might have thought about some of the more adv. versions of that.
+
+You may be right in that this may be better created as a seperate thing just to keep react-motion not bloated though.
+",srcspider,chenglou
+55,2015-07-12 17:51:45,"I really really want to build some cool demos with Redux DevTools + React Motion.
+You can track Redux DevTools here: https://github.com/gaearon/redux/pull/234
+
+They already allow time travel and hot reloading like I demoed in [my ReactEurope talk](youtube.com/watch?v=xsSnOQynTHs).
+
+The nice thing about DevTools is it's easy to create your own. For example, instead of the sidebar with a list of actions (what I have right now) you can reuse time travel code but build your own UI on top of it. (For example, you can draw past and future states of the animation instead, similar to what @chenglou showed in his talk.)
+
+If you'd like to give Redux a try and use its time travel implementation together with React Motion, hit me up here or on Reactiflux Slack channel and I can help you get it running.
+",gaearon,chenglou
+54,2015-07-12 17:44:12,"I really would love to see things built on top of react-motion, but I'm not sure this would have its place in this repo. @chenglou's the master though :p
+
+Related to this, @kureev wanted some wrapper for looped animations and @souporserious started a repo for small UI components like those [here](https://github.com/souporserious/react-motion-ui-pack)
+",bsansouci,souporserious
+54,2015-07-12 17:44:12,"I really would love to see things built on top of react-motion, but I'm not sure this would have its place in this repo. @chenglou's the master though :p
+
+Related to this, @kureev wanted some wrapper for looped animations and @souporserious started a repo for small UI components like those [here](https://github.com/souporserious/react-motion-ui-pack)
+",bsansouci,chenglou
+50,2015-07-12 05:33:29,"^ heads up to @dariocravero and @iclanzan who's decoupling the stepper function. Sorry for moving things around so fast. You folks got on the bandwagon early =)
+",chenglou,iclanzan
+45,2015-07-11 10:59:43,"Hi @chenglou, could you shed more light on the `currV` and `currVals`? Have you thought about renaming them to something more meaningful? Thanks :)
+",dariocravero,chenglou
+45,2015-07-11 13:11:46,"I can explain the little bit that I know. Internally,  `currVals` has the same shape as `destVals` and is the thing evolving towards `destVals`. `currV` is the current velocity, which also has the same shape.
+
+If you have:
+
+
+
+Then internally `currVals` and `currV` will look like:
+
+
+
+This allows us to have our `Spring` work on any kind of data structure. It also allows us to have `TransitionSpring` use the exact same algorithm with an extra diffing algorithm which assumes the top level of your values are unique keys:
+
+
+
+More on `TransitionSpring` [here](https://github.com/chenglou/react-motion/issues/26) (thanks @chenglou for really detailed explanations of why/how)
+
+They both are actually one tick old when we pass them to any user defined function, which would make them more like `intermediateValuesAtLastTick` and `valueVelocitiesAtLastTick`. I think they were intended to be the actual current value of the `Spring` @chenglou?
+
+I think `Spring` was written that way (one tick ""late"") because it allowed us to not keep the `endValue` in the state of the `Spring` (we always receive it from the props). If we did `endValue(newCurrVals)` at the end of the `raf`  we'd need to keep the return of that call somewhere for the next `raf`. 
+
+This maybe wouldn't such a bad thing in retrospect, for the sake of giving the most up-to-date value to the user? @chenglou @iclanzan what do you guys think?
+",bsansouci,chenglou
+45,2015-07-11 13:11:46,"I can explain the little bit that I know. Internally,  `currVals` has the same shape as `destVals` and is the thing evolving towards `destVals`. `currV` is the current velocity, which also has the same shape.
+
+If you have:
+
+
+
+Then internally `currVals` and `currV` will look like:
+
+
+
+This allows us to have our `Spring` work on any kind of data structure. It also allows us to have `TransitionSpring` use the exact same algorithm with an extra diffing algorithm which assumes the top level of your values are unique keys:
+
+
+
+More on `TransitionSpring` [here](https://github.com/chenglou/react-motion/issues/26) (thanks @chenglou for really detailed explanations of why/how)
+
+They both are actually one tick old when we pass them to any user defined function, which would make them more like `intermediateValuesAtLastTick` and `valueVelocitiesAtLastTick`. I think they were intended to be the actual current value of the `Spring` @chenglou?
+
+I think `Spring` was written that way (one tick ""late"") because it allowed us to not keep the `endValue` in the state of the `Spring` (we always receive it from the props). If we did `endValue(newCurrVals)` at the end of the `raf`  we'd need to keep the return of that call somewhere for the next `raf`. 
+
+This maybe wouldn't such a bad thing in retrospect, for the sake of giving the most up-to-date value to the user? @chenglou @iclanzan what do you guys think?
+",bsansouci,iclanzan
+41,2015-07-11 11:16:56,"@chenglou @nkbt [would love to hear your thoughts on this](https://github.com/dariocravero/react-motion/blob/extract-animation-from-spring/src/spring/animate.js).
+",dariocravero,chenglou
+41,2015-07-11 19:01:02,"Yeah definitely in the future, but not now at least. Issues like https://github.com/chenglou/react-motion/pull/39#issuecomment-120520787 (which I friggin love, thanks @iclanzan @razh!) are exactly why I'm postponing early-refactoring. By the time you're done with the modularization we'd have come up with e.g. a better way of rendering without passing `FRAME_RATE`.
+
+And no, you're not using this the wrong way. Beside `setState` and the component declaration there aren't many React-specific things here (this is intended). But it's been like three days since the official release and we really need to work on the bigger issues (I got gestures coming, maybe =)).
+
+I'm closing this for now because the issues are starting to pile up. Don't worry though, I do have this in mind!
+",chenglou,razh
+41,2015-07-11 19:01:02,"Yeah definitely in the future, but not now at least. Issues like https://github.com/chenglou/react-motion/pull/39#issuecomment-120520787 (which I friggin love, thanks @iclanzan @razh!) are exactly why I'm postponing early-refactoring. By the time you're done with the modularization we'd have come up with e.g. a better way of rendering without passing `FRAME_RATE`.
+
+And no, you're not using this the wrong way. Beside `setState` and the component declaration there aren't many React-specific things here (this is intended). But it's been like three days since the official release and we really need to work on the bigger issues (I got gestures coming, maybe =)).
+
+I'm closing this for now because the issues are starting to pile up. Don't worry though, I do have this in mind!
+",chenglou,iclanzan
+40,2015-07-10 23:48:16,"In short:
+- Extracted Spring and TransitionSpring into their own components.
+- Introduced a Motion component that shares logic amongst them.
+- Brought in redux scripts and build process.
+- Moved utils into utils folder and into separate files. Commented out
+  the ones that aren't being used.
+- Tried to comply to as many eslint rules as possible :)
+- Moved to using classes in components.
+- Added empty tests.
+
+I can update the PR with the recent changes if you are happy with the direction this is taking @chenglou!
+
+This should set the base for a more modular approach :), thoughts?
+",dariocravero,chenglou
+29,2015-07-17 18:38:19,"I think it's literally just a try catch of require?
+
+@threepointone your spring worked on react-native without changes right
+",chenglou,threepointone
+23,2015-07-08 16:48:35,"@chenglou Since I saw your talk at React Europe(I was there) and I wanted to use Spring asap, this pull request is aimed to remove the hack, because I basically don't want my user slow down animations on fat keydowns :D
+",mirkodrummer,chenglou

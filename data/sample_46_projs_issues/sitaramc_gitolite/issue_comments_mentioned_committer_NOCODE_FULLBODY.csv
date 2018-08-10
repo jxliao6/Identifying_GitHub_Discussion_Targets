@@ -1,0 +1,40 @@
+issue_num,datetime,body,login,mention_login
+54,2012-10-17 15:28:50,"@milki, the patch is not system dependent. The only correct shebang line for portable scripts is to use /bin/sh or /usr/bin env.  That you need to use a ""simple"" find/grep/sed is itself a bug. This isn't specific to FreeBSD either: this is for any system that doesn't install bash in /bin.
+@sitaramc's system is 'weird' in the sense of it happens to place bash in /bin unlike other systems. In addition gitolite won't work correctly if a OSX user opted to install a newer version of bash in /opt/local/bin and modified PATH to teach applications to use that instead.
+
+Relying on bash being in /bin is as buggy on anyother non-portable system dependent construct.
+
+In any case gitolite's maintainer already said that he has no interest in this patch, so I've dropped it.
+",grimreaper,milki
+54,2012-10-17 15:28:50,"@milki, the patch is not system dependent. The only correct shebang line for portable scripts is to use /bin/sh or /usr/bin env.  That you need to use a ""simple"" find/grep/sed is itself a bug. This isn't specific to FreeBSD either: this is for any system that doesn't install bash in /bin.
+@sitaramc's system is 'weird' in the sense of it happens to place bash in /bin unlike other systems. In addition gitolite won't work correctly if a OSX user opted to install a newer version of bash in /opt/local/bin and modified PATH to teach applications to use that instead.
+
+Relying on bash being in /bin is as buggy on anyother non-portable system dependent construct.
+
+In any case gitolite's maintainer already said that he has no interest in this patch, so I've dropped it.
+",grimreaper,sitaramc
+54,2012-10-17 15:41:26,"(1) Please don't keep harping on bash -- you know the fix for that: I
+will accept changing it to /bin/sh after removing bashisms.
+
+(2) So fedora and debian are ""weird"".  That's a bit better than
+""broken"", so thanks, I guess!
+
+[top posting because the lines in the original message didn't wrap
+like they usually do, for some reason, and so quoting is messed up.]
+
+On Wed, Oct 17, 2012 at 8:58 PM, grimreaper notifications@github.com wrote:
+
+> milki, the patch is not system dependent. The only correct shebang line for portable scripts is to use /bin/sh or /usr/bin env. That you need to use a ""simple"" find/grep/sed is itself a bug. This isn't specific to FreeBSD either: this is for any system that doesn't install bash in /bin.
+> @sitaramc's system is 'weird' in the sense of it happens to place bash in /bin unlike other systems. In addition gitolite won't work correctly if a OSX user opted to install a newer version of bash in /opt/local/bin and modified PATH to teach applications to use that instead.
+> 
+> Relying on bash being in /bin is as buggy on anyother non-portable system dependent construct.
+> 
+> In any case gitolite's maintainer already said that he has no interest in this patch, so I've dropped it.
+> 
+> —
+> Reply to this email directly or view it on GitHub.
+
+## 
+
+Sitaram
+",sitaramc,sitaramc

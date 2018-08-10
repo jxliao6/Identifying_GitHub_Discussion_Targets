@@ -1,0 +1,27 @@
+issue_num,datetime,body,login,mention_login
+47,2016-08-23 15:02:46,"Hi @jwagner, I apologize, I did mean to file this on smartcrop-node and instead filed it here. Oops!
+",tolmasky,jwagner
+41,2016-06-28 09:42:53,"OH. Thank you @jwagner 
+",trannamit95,jwagner
+33,2016-02-21 11:11:39,"@jwagner To integrate face detection in smartcrop.js, you can refer to this js lib:https://trackingjs.com/ ,maybe it can help you
+",shinebay,jwagner
+33,2016-05-03 13:55:07,"@jwagner thanks! I'll check it out.
+",ajbogh,jwagner
+16,2015-10-20 17:28:12,"@IonicaBizau thanks for the fix. :)
+",jwagner,IonicaBizau
+16,2015-10-20 17:58:25,"@jwagner You're welcome! Nice project!
+",IonicaBizau,jwagner
+10,2015-10-15 12:02:27,"Thank you @jwagner for the fast reply.
+
+Thanks for the explanations also.
+",harikt,jwagner
+9,2015-10-16 13:52:07,"@jwagner does that explanation still hold even though I disabled `edgeDetect` and `saturationDetect` for that first image?
+",mynameisfiber,jwagner
+10,2015-10-15 05:19:55,"Hi @jwagner , 
+
+Good work. I was trying on the test bed an image and it seems the cat is not detected.
+
+Attaching image for reference. What I was trying was reducing the width and height also, the cat's face was not detected.
+
+![cat](https://cloud.githubusercontent.com/assets/120454/10505379/5ed2cdd6-732a-11e5-8b7a-c0150d4421a0.jpeg)
+",harikt,jwagner

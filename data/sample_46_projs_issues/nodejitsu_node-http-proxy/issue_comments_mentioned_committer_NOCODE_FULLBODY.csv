@@ -1,0 +1,2693 @@
+issue_num,datetime,body,login,mention_login
+1126,2016-12-30 15:41:22,"Of course I did not -_-
+
+Thanks a lot @jcrugzz. To be honest I'm a bit stupid because some of my socket request pass through http and so inside the req.app.locals.proxy.web. So I naively thought that my app.locals.proxy.ws was okay like this. Don't know if you get what I mean but whatever, thank you :)",mbret,jcrugzz
+1122,2016-12-26 18:37:28,@ivannieto can you rebase your changes off `origin/master`? you are still based on your previous git tree before your changes were merged. That is why there are so many extra commits above,jcrugzz,ivannieto
+1122,2016-12-27 13:43:59,sure @jcrugzz my bad! ,ivannieto,jcrugzz
+1119,2016-12-24 18:27:52,@ivannieto Thanks for adding this!,jcrugzz,ivannieto
+1119,2016-12-24 18:28:18,"@ivannieto i realized i merged to fast, would you mind adding a link to this in the README?",jcrugzz,ivannieto
+1119,2016-12-24 18:29:45,@jcrugzz do you want to say adding the link to this file in the repo? or to the default Covenant?,ivannieto,jcrugzz
+1119,2016-12-24 18:30:52,@ivannieto add a link to the code of conduct file in this repo to our README so people have a direct link. ,jcrugzz,ivannieto
+1118,2016-12-24 16:23:35,"@jcrugzz , thanx for you respond. I think it has to do with `node-http-proxy` because I need to proxy multiple sub-domain calls to multiple servers running each on different ports. Something like this:
+
+https://a.foo.com -> 127.0.0.1:3000
+https://b.foo.com -> 127.0.0.1:3001
+https://c.foo.com -> 127.0.0.1:3002
+
+also I have a certificates for each of this domain.
+
+`SNICallback` will be called each time new connection to any of this sub-domains appears and I don't get how to proxy that connection to appropriate local server.
+Also I'm lucking experience with express and node.js so I may miss something obvious here",SET001,jcrugzz
+1109,2016-12-16 17:28:47,Thanks @lpinca ,jcrugzz,lpinca
+1104,2016-12-06 14:50:59,"@pachirel ill push this out now, submit a follow up PR with any additional changes you wanted to make so we can get this fixed.",jcrugzz,pachirel
+1103,2016-12-06 10:40:34,@jcrugzz you can find more details in a PR opened by @pachirel https://github.com/nodejitsu/node-http-proxy/pull/1104,apalchys,jcrugzz
+1103,2016-12-06 10:55:44,@pachirel  your PR looks good and should fix autoRewrite because it doesn't overwrite header value. thanks.,apalchys,pachirel
+1103,2016-12-07 00:45:57,@apalchys 1.16.2 is available. please update and check your app. thanks to @jcrugzz.,pachirel,jcrugzz
+1103,2016-12-08 14:11:34,@pachirel it works now. thanks a lot!,apalchys,pachirel
+1102,2016-12-06 05:13:08,@kriswill Thanks to fix this issue. and sorry for any inconvenience.,pachirel,kriswill
+1101,2016-12-04 19:01:52,Yes this should be fixed with the changes made by @kriswill. Will reopen if this is still a problem. My apologies for the trouble.,jcrugzz,kriswill
+1100,2016-12-02 14:09:09,@maartenth We are both at fault here as I missed it too ;). Thanks for contributing! Please let me know if the forward proxy is working as expected as im not sure if it was originally written to spec. ,jcrugzz,maartenth
+1091,2016-12-03 01:33:15,"@jcrugzz Pass the headers in where?  In my case, I need to dynamically choose what to send in the way of headers based on the request.  Specifically, I'm supplying a default header value only if the original request does not contain the header.",rick-kilgore,jcrugzz
+1091,2016-12-08 00:19:13,"@jcrugzz - now I see what you mean.  I somehow got the mistaken impression that the function I pass into http.createServer() was being called only once at startup, instead of once for every request.
+
+I think my confusion was partly reinforced by the example for setting headers, though.  You might want to change the example in the README to do it the way you're suggesting, since it won't work for POST requests the way it is.",rick-kilgore,jcrugzz
+1091,2017-03-22 17:03:13,"What if the header to be set is conditional?
+
+For instance, I have a post request that should be ""If this header `foo` is set on the incoming request, then also add header `bar`
+
+@jcrugzz Is this currently supported?",aleclerc,jcrugzz
+1061,2016-09-14 21:12:05,"@briman0094 @No9 would love a harmon test so this type of breakage could be prevented in the future. Thanks for the contribution!
+",jcrugzz,briman0094
+1051,2016-09-13 22:19:47,"@cchamberlain sorry it took so long. Thanks!
+",jcrugzz,cchamberlain
+1051,2016-09-15 13:55:09,"@briman0094 - I considered that solution as well but being unaware of harmon's dependency, went with this one since it seemed lighter weight (setting the fields directly has less of this to worry about) - 
+
+![image](https://cloud.githubusercontent.com/assets/424694/18552319/c06d2eb2-7b10-11e6-9657-f09bdb3c7f6b.png)
+
+I can modify / open a new PR? Should we implement the `headers` parameter to allow upstream headers to be passed through or is this already implemented elsewhere?
+",cchamberlain,briman0094
+1051,2016-09-19 16:00:50,"@cchamberlain I don't think we need to implement `headers` because the previous version of http-proxy that called writeHead didn't implement it. There's another pass in web-outgoing.js that writes the headers from `proxyRes.headers` into the response by calling `res.setHeader(...)`. I had a PR that got merged in a few days ago which fixes the issue and it seems to be working fine.
+",briman0094,cchamberlain
+1051,2016-09-19 18:07:22,"@briman0094 - Awesome, guess my work here is done!
+",cchamberlain,briman0094
+1027,2016-08-11 16:37:39,"Thanks! good looks @matibek 
+",jcrugzz,matibek
+1024,2016-08-11 16:22:01,"@gabrielboucher seems reasonable to me if its in the spec. Thanks for the contribution! Would you mind adding a test for the `201` case just so we are covered? :)
+",jcrugzz,gabrielboucher
+1009,2016-08-10 12:33:48,"@Volune Overall this looks good. I would like to see some more documentation for this option in the README, similar to what you have in this PR in your initial proposal. The only thing that kind of bothers me is having `''` remove all domains. Would it be more intuitive to use an explicit `null` as removal? I'm really not sure what the right answer is but is there something that semantically makes more sense for that implication?
+",jcrugzz,Volune
+1009,2016-08-11 10:11:57,"@jcrugzz The first reason of using `''` is that it would transform `Domain=some.domain` to `Domain=`, which has the meaning of no domain, but (as far as I understand RFC 6265) is not a valid value. So I used it to remove the domain.
+
+Also, it adds some meaning to the type of the option:
+- boolean `false`: disable the option
+- object: advanced configuration
+- string: shorthand for `{ '*': value }` configuration
+
+I'm not against using explicit `null` and/or explicit `undefined` to remove the domain, and document it.
+Let me know what's your opinion, decision.
+",Volune,jcrugzz
+1009,2016-08-11 16:18:57,"@Volune Thats reasonable, i think its ok. Lets just document all the options for this option in the readme, take care of that one nit i have so that we are a bit more performant so we arent creating the regex everytime and we cache it in a variable at the top of `common.js` (with the other one thats there. Then we will get this merged :). Thanks for bearing with me
+",jcrugzz,Volune
+1006,2016-07-13 00:40:47,"@Dillybob92 next time, dig deep and try to find some basic human empathy. Starting a conversation with an inflammatory and insulting title like ""This module is worthless"" only hurts. [Why do that?](https://speakerdeck.com/indexzero/keeping-important-code-alive-seattlejs-march-2015)
+
+I am locking this issue. @jcrugzz we should use this as an opportunity to adopt a code of conduct since this kind of behavior is obviously not welcome. 
+",indexzero,jcrugzz
+988,2016-04-12 22:45:34,"@jcrugzz even as load balancer? a lot of people suggest tools like HAProxy or nginx.. But i'd like to have a full node.js stack.
+",roccomuso,jcrugzz
+988,2016-04-13 14:41:36,"@jcrugzz Thank you for pointing this out. ;) What i need is in fact a dynamic load balancer. Speed is not an essential requirement for my app.
+",roccomuso,jcrugzz
+988,2016-04-14 16:03:44,"@jcrugzz going to mark this issue as resolved since @roccomuso's original question appears to have been answered. 
+
+@tomcanham have you tried other targets besides `localhost`? Like `127.0.0.1`? You are getting a DNS lookup error for `localhost` (that's what `Error: getaddrinfo ENOTFOUND localhost` indicates) so it may be configured in a non-standard way on your development machine.
+
+On standard setups in production you'd be using a DNS target that is known to be valid and/or proxying directly to an IP address depending on how you choose to configure the actors in your proxy-based system. I confirmed that the simple example in the `README`:
+
+
+
+Works just fine on my machine (it also works in Travis and in a few VMs). All of which are running the latest Node LTS version.
+
+
+
+Hope that helps! A PR to our docs outlining what was different about your system so that others can avoid this pitfall in the future would be most welcome. 
+",indexzero,jcrugzz
+967,2016-02-27 16:06:22,"@jbacklund @jcrugzz 
+
+With this change, the `xfwd` behavior for `web` is slightly different from `ws`.
+
+https://github.com/nodejitsu/node-http-proxy/blob/master/lib/http-proxy/passes/web-incoming.js#L65-L83
+https://github.com/nodejitsu/node-http-proxy/blob/master/lib/http-proxy/passes/ws-incoming.js#L54-L69
+
+Would be good to keep the API consistent; By applying the same change to [WebSockets](https://github.com/nodejitsu/node-http-proxy/blob/master/lib/http-proxy/passes/ws-incoming.js#L54-L69) as well, instead of just the [Web](https://github.com/nodejitsu/node-http-proxy/blob/master/lib/http-proxy/passes/web-incoming.js#L65-L83) part.
+",chimurai,jbacklund
+967,2016-02-27 16:06:22,"@jbacklund @jcrugzz 
+
+With this change, the `xfwd` behavior for `web` is slightly different from `ws`.
+
+https://github.com/nodejitsu/node-http-proxy/blob/master/lib/http-proxy/passes/web-incoming.js#L65-L83
+https://github.com/nodejitsu/node-http-proxy/blob/master/lib/http-proxy/passes/ws-incoming.js#L54-L69
+
+Would be good to keep the API consistent; By applying the same change to [WebSockets](https://github.com/nodejitsu/node-http-proxy/blob/master/lib/http-proxy/passes/ws-incoming.js#L54-L69) as well, instead of just the [Web](https://github.com/nodejitsu/node-http-proxy/blob/master/lib/http-proxy/passes/web-incoming.js#L65-L83) part.
+",chimurai,jcrugzz
+966,2016-02-25 00:33:08,"@Deividy thanks for the contribution! I saw you did some investigation on removing the `req.on('error')` listener. The proxyReq error event was still triggered when the client disconnected when removing it still? I can see this can still be an issue when the client request itself timed out but was curious :). Will comment
+",jcrugzz,Deividy
+966,2016-04-08 07:31:02,"@jcrugzz good to go?
+",JSteunou,jcrugzz
+966,2016-06-03 17:39:34,"@Deividy thank you for your work. Will merge this. id like to rebase the branch that removes teh `req.on('error')` listener and see how it behaves.
+",jcrugzz,Deividy
+964,2016-02-22 15:54:58,"@fjakobs what strings are causing this to throw? Could you log the headers that are being set here? Would love a test case for this
+",jcrugzz,fjakobs
+964,2016-02-22 16:58:41,"@jcrugzz I found this in the wild:
+
+`content-type: ""�?@""`
+
+Not sure why someone would do this but is certainly should not crash the app.
+",fjakobs,jcrugzz
+964,2016-02-22 22:23:25,"@fjakobs hmm yea thats kind of unfortunate that we are receiving invalid headers. I'd almost rather do this check ourselves to prevent the need for a `try..catch`. Ill look at this later but would definitely take a PR that fixed this.
+",jcrugzz,fjakobs
+964,2016-02-22 22:34:42,"@fjakobs how do you feel about the behavior of ignoring bad headers? I guess we could make it an option to receive it as an error but I dont think the proxy server should have to care if its receiving bad headers from a client, it just doesnt pass them along since they are not spec compliant. 
+
+What im thinking about is using that internal check they added to node core and using that as a signal to ignore the header.
+",jcrugzz,fjakobs
+964,2016-06-14 15:41:18,"@fjakobs @jcrugzz 
+
+I am using latest Meteor and hitting something with the same signature.  I am trying to figure out a workaround and you guys seem to have the best handle on this.
+
+Here is the stack dump:
+
+
+
+A couple questions, this looks like an inbound request which crashes the server?
+
+I wanted to simply comment the throw but it appears that the respective code gets compiled into the node elf executable?
+
+Thanks in advance!
+",ppotoplyak,jcrugzz
+964,2016-06-14 15:41:18,"@fjakobs @jcrugzz 
+
+I am using latest Meteor and hitting something with the same signature.  I am trying to figure out a workaround and you guys seem to have the best handle on this.
+
+Here is the stack dump:
+
+
+
+A couple questions, this looks like an inbound request which crashes the server?
+
+I wanted to simply comment the throw but it appears that the respective code gets compiled into the node elf executable?
+
+Thanks in advance!
+",ppotoplyak,fjakobs
+964,2016-06-15 02:57:37,"@jcrugzz sure, if you are okay waiting until next week
+
+There is a worse problem on the incoming side.  A similarly crafted request brings the node/Meteor process down.
+
+This is my workaround to prevent the process from terminating:
+
+
+
+The malformed request will take an ""Error: socket hang up"" but the server will stay up.
+",ppotoplyak,jcrugzz
+964,2016-11-10 11:26:05,"@jcrugzz @fjakobs, is there any estimate on when you are thinking of releasing a fix? This issue is affecting us in production. Is there any easy workaround we can apply other than monkey patching the code?
+",dlaha21,fjakobs
+964,2016-11-10 11:26:05,"@jcrugzz @fjakobs, is there any estimate on when you are thinking of releasing a fix? This issue is affecting us in production. Is there any easy workaround we can apply other than monkey patching the code?
+",dlaha21,jcrugzz
+960,2016-02-13 23:32:52,"@Turbo87 looks like this was lost in translation when the rewrite happened. I'd love PR for this :+1:. Definitely a good first contributor issue :)
+",jcrugzz,Turbo87
+950,2016-02-15 15:36:28,"Thanks @caioquirino 
+",jcrugzz,caioquirino
+947,2016-01-28 19:02:35,"@coderaiser could you add a test for the case you pointed out in #946 
+",jcrugzz,coderaiser
+947,2016-01-29 07:49:25,"@jcrugzz done
+",coderaiser,jcrugzz
+946,2016-01-28 15:36:44,"@coderaiser its meant to handle cases where `http://whatever.com` turns into `http:/whatever.com`. This is a naive urlJoin since it fails on this case, it should be more specific to the post `http`. I would love a PR to fix this if you can turn this into a test case :)
+",jcrugzz,coderaiser
+946,2016-01-28 17:49:33,"@coderaiser Yes I understand. I was mentioning thats why it exists, Im not saying its correct. The code here needs to be smarter to handle the case you are mentioning.
+",jcrugzz,coderaiser
+938,2016-01-21 22:31:48,"@merpnderp i do find this very strange that this is happening but i would take a PR that adds that safety `if` clause
+",jcrugzz,merpnderp
+929,2016-01-05 18:03:40,"I just ran @kar1m example and I am seeing the same issue here.  Requests per second drop by a factor of 10-20x when using the proxy.  @indexzero I tested on versions v0.10.36 and v5.2.0.
+",pyper,indexzero
+929,2016-01-05 18:39:41,"Thanks @indexzero, that made a huge difference.  @kar1m You need to create an agent with keepAlive set to true and pass it the agent option when you create the server.  You might need to play with some of the other agent options too.
+",pyper,indexzero
+929,2016-01-05 18:52:09,"Thanks @indexzero and @pyper, It made a huge difference (10x previous performance), although it's still much slower than HAProxy. I'll try playing with the agent options and let you know if I can get a better performance.
+",kar1m,indexzero
+929,2016-03-02 15:58:05,"@indexzero, what do you mean by shared Agent?
+
+Can you link to some resources?
+",ronaldocpontes,indexzero
+922,2015-12-07 20:58:19,"Awesome thank you @aaronmaturen 
+",jcrugzz,aaronmaturen
+921,2015-12-07 01:33:38,"@aaronmaturen: Thanks for that.
+
+I was able to figure out what the issue is. node-http-proxy is timing out the response after 2 minutes of inactivity.
+
+If you change the connection handler on line 57 of the sse example to the code below then you should be able to recreate it:
+
+
+
+On the proxy (8003), it times out after about 2 minutes (Chrome 46), with `net::ERR_INCOMPLETE_CHUNKED_ENCODING` and the second message is **not** received.
+
+On the raw SSE server (9003), it doesn't time out and the second message **is** received.
+
+Is there a way to get the proxy to respect the timeout characteristics of the SSE server
+",davej,aaronmaturen
+920,2015-12-02 17:57:56,"@indexzero @m1stegmann i had an exchange with @indutny that it just requires passing an agent from his `spdy` module which supports `http2` for this to work
+",jcrugzz,indexzero
+919,2015-12-08 17:58:49,"@indexzero @aaronmaturen the reason I'm hesitant on this is due to the conversation I had with @indutny where `http2` based on his implementation in [`node-spdy`](https://github.com/indutny/node-spdy) only requires the proper `agent` to be passed in to enable proxying via `http2`. So this really has to do with what we want to support. 
+
+Personally, I'm not a fan of of actually spinning up a server as part of `http-proxy` since that makes us biased on implementation in this case. But in terms of the actual bit that is proxying, I like @indutny's approach because it leverages the `agent` rather than requiring a separate `http` like library in order to make the request.
+",jcrugzz,indexzero
+919,2015-12-08 17:58:49,"@indexzero @aaronmaturen the reason I'm hesitant on this is due to the conversation I had with @indutny where `http2` based on his implementation in [`node-spdy`](https://github.com/indutny/node-spdy) only requires the proper `agent` to be passed in to enable proxying via `http2`. So this really has to do with what we want to support. 
+
+Personally, I'm not a fan of of actually spinning up a server as part of `http-proxy` since that makes us biased on implementation in this case. But in terms of the actual bit that is proxying, I like @indutny's approach because it leverages the `agent` rather than requiring a separate `http` like library in order to make the request.
+",jcrugzz,aaronmaturen
+919,2015-12-09 06:16:18,"@indexzero ah, calling @dmai doesn't work on public git
+
+Hm, I don't think it would be that bad if we supported the `http2` library since the docs for that library saids that `http2` has an api very similar to that of `https` and we support passing in options to `https`
+
+I can see @jcrugzz 's point about not using a particular userland `http2` module though, and those who have read up on HTTP2 already would most likely know how to use our provided interface to spin up a `http2` web server w/o createProxyServer().listen() using the mentioned userland library or `spdy`
+",donasaur,indexzero
+919,2015-12-09 06:16:18,"@indexzero ah, calling @dmai doesn't work on public git
+
+Hm, I don't think it would be that bad if we supported the `http2` library since the docs for that library saids that `http2` has an api very similar to that of `https` and we support passing in options to `https`
+
+I can see @jcrugzz 's point about not using a particular userland `http2` module though, and those who have read up on HTTP2 already would most likely know how to use our provided interface to spin up a `http2` web server w/o createProxyServer().listen() using the mentioned userland library or `spdy`
+",donasaur,jcrugzz
+919,2016-03-25 23:00:54,"Hi Friends, 
+
+@jcrugzz suggested that the node-spdy module by @indutny is a better way to spin up a new HTTP2 server. It made sense to me at the time, and it's fairly easy to get setup if you actually have an SSL cert to get past the browser security... 
+
+Here is a small example for HTTP2 -> HTTP proxying without any changes to http-proxy.
+
+
+
+![screenshot 2016-03-25 18 23 24](https://cloud.githubusercontent.com/assets/507070/14055864/bd5f27c6-f2bb-11e5-9027-b2052855aeb0.png)
+",aaronmaturen,jcrugzz
+919,2016-09-18 08:35:06,"@aaronmaturen I am new to http2 so please indulge me. How would your example code work if the target server is also HTTP2, and what about things like push streams, would they also work? In other words, would be able to get all of the http2 features without loosing any? 
+",manast,aaronmaturen
+915,2015-12-10 21:49:46,"@jcrugzz So your last name is Cruger and you want me to stab something? :)
+
+I will give it a shot hopefully soon, cheers.
+",pyper,jcrugzz
+912,2015-11-23 18:12:33,"This is great. Thanks @donasaur!
+",indexzero,donasaur
+910,2015-11-21 01:48:22,"@donasaur could you add some code samples as well? I think that will help a lot of users better understand what they are getting from `proxy-rules`.
+
+_Related:_ we should do a pass at updating the `README.md` sometime in the next few cycles. For starters: a Table of Contents that highlights this feature more prevalently would help a lot of users as well.
+",indexzero,donasaur
+910,2015-11-22 04:22:47,"@donasaur yeah that sounds good. 
+",indexzero,donasaur
+910,2015-11-22 17:42:38,"@indexzero Kk, I updated the README with a link to the relevant portion of the test, and made that portion readable with comments and a little name refactoring. See [here](https://github.com/donasaur/http-proxy-rules/commit/16d60201a929d6a3a8ffa3a5ef9f856490b7a272)
+",donasaur,indexzero
+908,2015-11-16 23:57:45,"@jcrugzz Happens in node `4.2.1`. Will see about stubbing out a reproducible test case for it for sure.
+",cdl,jcrugzz
+908,2015-11-17 17:18:41,"@jcrugzz Just tested in `node@4.2.2`, issue still persists. Will write up a gist demonstrating the issue shortly.
+",cdl,jcrugzz
+908,2015-11-21 22:14:28,"@jcrugzz I've just made a scrubbed gist of the `app.js` and `package.json` that I'm using. It's a simple proxy that serves to layer JWT and caching on top of a RESTful API.
+I too did a compare of the tag to master and didn't see anything that stood out, so it makes me think that one of the `http-proxy` dependencies that got updated is triggering it. I'm on `node@4.2.2` as well.
+
+https://gist.github.com/stickystyle/a35fa8bc7461018aad83
+",stickystyle,jcrugzz
+906,2015-11-13 17:48:02,"Ah okay now everything makes sense.
+I have to add the following lines inside the upgrade function
+
+
+
+Thanks @jcrugzz 
+",Wikunia,jcrugzz
+898,2015-10-29 20:09:25,"I'm seeing this too.  @jdmaurer why do you say this is a weird use-case?  I have the same use-case, seems like the ""meat and potatoes"" of what a proxy would do?
+
+@jcrugzz is this likely to be fixed soon?  Thanks!
+",philcockfield,jcrugzz
+898,2016-08-05 12:49:42,"@jcrugzz this original issue (when client interrupts a request, eg by refreshing the page) is not reproducible on latest http-proxy - I think you can close this one! :)
+
+PS I'm receiving {[Error: socket hang up] code: 'ECONNRESET' } when request times out - different story. Easy to reproduce by setting low proxyTimeout value. Dunno, is it by design? I would prefer some different error message for that, but that's not a big deal :)
+",bubenshchykov,jcrugzz
+897,2015-10-22 14:29:54,"@lbrucher Looks good, will get it in a release later today :+1: 
+",jcrugzz,lbrucher
+892,2015-10-18 14:45:30,"@donasaur yea a its been on my list to make a module to replicate some of the features that were lost in the `1.0.0` simplication so if you decide to write one, definitely send a PR to add it to the README. :+1:.
+
+Thanks for the reference here!
+",jcrugzz,donasaur
+887,2015-12-03 07:03:44,"Thanks @chimurai You are right
+",borNfreee,chimurai
+887,2016-01-22 09:03:03,"I have the same problem, but I can't use the @chimurai's solution because I don't use the middleware. I use the [webpack dev server](https://webpack.github.io/docs/webpack-dev-server.html).
+
+Would this be possible with just `node-http-proxy` options? Or do I need to request the feature from webpack guys?
+",mik01aj,chimurai
+883,2015-11-05 06:44:51,"@donasaur it's actually not about the Websocket handshake itself. It is mirroring similar `proxyRes` functionality which I am fine with. See https://github.com/nodejitsu/node-http-proxy/blob/master/lib/http-proxy/passes/web-incoming.js#L147
+
+@jcrugzz thoughts? 
+",indexzero,donasaur
+883,2015-11-05 09:37:14,"ah ok @indexzero , actually it looks like jarrett already merged in a similar PR already:
+https://github.com/nodejitsu/node-http-proxy/pull/897/files
+
+can you double check?
+",donasaur,indexzero
+883,2015-11-05 09:42:51,"@donasaur excellent. Then this is a duplicate of #897. Closing :100: 
+",indexzero,donasaur
+881,2015-10-28 18:14:10,"Thanks @indexzero @jcrugzz - we're working on putting together a reproducible test case for you right now. Stay tuned.
+",glortho,indexzero
+881,2015-10-28 18:14:10,"Thanks @indexzero @jcrugzz - we're working on putting together a reproducible test case for you right now. Stay tuned.
+",glortho,jcrugzz
+881,2015-10-28 19:22:31,"@jcrugzz I'll see what I can do about a failing test. In the meantime, here is a reproducible set-up: https://github.com/jedverity/http-proxy-test
+",glortho,jcrugzz
+881,2015-10-28 19:40:53,"Think I have a (kludgy) test for you @jcrugzz @indexzero . Coming in 5 mins.
+",glortho,indexzero
+881,2015-10-28 19:40:53,"Think I have a (kludgy) test for you @jcrugzz @indexzero . Coming in 5 mins.
+",glortho,jcrugzz
+881,2015-10-30 14:14:19,"@indexzero @jcrugzz @pepone I've confirmed this is fixed in node v5. See http fixes section here: http://nodejs.org/en/blog/release/v5.0.0/
+",glortho,indexzero
+881,2015-10-30 14:14:19,"@indexzero @jcrugzz @pepone I've confirmed this is fixed in node v5. See http fixes section here: http://nodejs.org/en/blog/release/v5.0.0/
+",glortho,jcrugzz
+881,2015-10-30 17:03:48,"@jcrugzz I did try it in 4.2.1 and no dice. Same results as other 4.x versions. I assumed this was the fix but haven't evaluated closely: https://github.com/nodejs/node/pull/3342
+",glortho,jcrugzz
+881,2015-11-05 18:35:16,"@jcrugzz Confirmed 4.2.2 works
+",glortho,jcrugzz
+876,2015-09-10 18:13:48,"@jcrugzz I'll try, but it's hard to catch. I'll modify my code to catch that, and we'll wait
+",ro31337,jcrugzz
+871,2015-08-30 21:28:54,"@ArGGu cherry-picked :). Thanks!
+",jcrugzz,ArGGu
+840,2015-06-21 18:20:42,"@jcrugzz - I've created a gist to explain what I am trying to achieve. I've been using JSONStream to try to address the performance hit you mentioned:
+
+https://gist.github.com/motymichaely/0b0982522d8b9da1200d
+
+Now what I am missing is the ability to set the headers after I get the required info out of the body.
+
+Any idea?
+",motymichaely,jcrugzz
+836,2015-06-09 05:48:08,"@whatknight I'm with @matthauck, make it an explicit behavior
+",jcrugzz,matthauck
+836,2015-06-09 19:01:39,"@matthauck The issue I take with with your change is that you are viewing this proxy just like `mod-proxy`. The ability to create custom server logic means that there's no longer a 1-1 mapping of frontend-backend. A developer has the flexibility to build the backend target on the fly (as we have done).
+
+I also take issue with the fact that your change A) silently fails and B) is completely undocumented (same with `autoRewrite`, but that's outside this scope).
+
+I think our use case and the issues we are seeing are getting lost in translation.
+
+@whatknight and I are on a team that's developing a single-page application. During development, the app is served on `localhost`. As we need to interact with backend APIs on different domains, we are using this proxy on the server side to proxy XHR calls out to the various APIs. Custom proxy logic allows us to extract the intended endpoint via a parameter and set that as the proxy target.
+
+As `Host` is `localhost` for these requests, we were manually building the correct `redirectHost` and utilizing the `hostRewrite` functionality to ensure things stayed in line.
+
+We can solve this problem by rewriting the `Host` header to the `target` host. This is reasonable enough, except that you are technically supposed to set `X-Forwarded-Host` to the original `Host` value. Frameworks like Rails, however, will default to using `X-Forwarded-Host` as the base for the `Location` header, which leaves us back at square 1.
+",wingrunr21,matthauck
+834,2015-06-01 19:48:49,"Hi @jcrugzz,
+my idea is to execute a chain of middlewares where http-proxy is within them, so I want, once the proxy has make the request and get a response, continue to the next middleware, for example, to change some response headers or body content.
+
+I think I have achieved what I want listening for `finish` on the `res` object, similar to this:
+
+
+
+Do you think is this fine or can have side effect? Thanks in advance.
+",acanimal,jcrugzz
+833,2015-06-13 04:31:59,"@jcrugzz Sorry for taking a while to get back to you. I cannot commit to adding tests for this as it is low priority for me and a non-trivial investment of my time given my lack of familiarity with node and javascript.
+
+If I can, I will look at submitting some tests at a later date, but for now, please consider this PR for merge as is.
+",efokschaner,jcrugzz
+813,2015-12-02 17:28:10,"@jcrugzz I'm afraid I have the necessary solution and motivation but not the time to do it.
+",JSteunou,jcrugzz
+812,2016-04-01 10:29:09,"@jcrugzz sorry for lack of detail, a bit out of my depth with all this. I will give that a go, thanks.
+",beazergood,jcrugzz
+800,2015-04-07 09:29:42,"Really thanks @damonmcminn :star2: !
+
+I understood `http-proxy` module now conceptually. 
+And your API-Proxy application will be a guide for me.
+
+Thank you again for your helps..
+
+**ps:** I got an error as `Must provide a proper URL as target` :sob: however _really it is not important_ now 
+",efkan,damonmcminn
+799,2015-04-02 16:05:01,"@Volune this LGTM. Thanks for the thorough fix :+1: 
+",jcrugzz,Volune
+798,2015-04-01 15:07:30,"@damonmcminn whats the use case of making req.url an empty string out of curiosity? Thanks for the fix!
+",jcrugzz,damonmcminn
+798,2015-04-02 09:06:03,"@jcrugzz No problem! I don't believe there is a use case for an empty string... It was an accidental discovery when I changed a regex that is used to strip the first path from `req.url`:
+https://github.com/damonmcminn/api-proxy/commit/7dda2413535c5d5c1be0f574dde8ee69cd827fa7
+
+The stripped path is used to identify what server to proxy the request to (so I can serve multiple APIs off a single validated domain i.e. api.damonmcminn.com) e.g.:
+`api.damonmcminn.com/nutrition/green-turtle => localhost:50000/green-turtle`
+
+The original regex only matched when a trailing slash was present, so `req.url` would be rewritten thus `'/path/' => '/'` but as I wanted to match regardless of trailing slash, I was erroneously rewriting `'/path' => ''`.
+
+I am no longer rewriting `req.url` to an empty string but provided the fix in case someone else inadvertently does (or wants to).
+",damonmcminn,jcrugzz
+795,2015-03-21 01:57:30,"@jcrugzz  This only happens to some of our sites ,e.g.  set $origin = http://fw.m.pingfan.pw/ , only when set changeOrigin to true and enabled gzip encoding. The gzipped output body has been prepended  three  garbage bytes e.g. ""22f"" and ""\r\n"",total five bytes,that caused decoding error.If I strip these five bytes then it can be decoded correctly but missed the last five bytes,usually are ""html>"" .
+
+PS: I've found `xfwd` option also affects the gzip output. When switch xfwd between true and false,the three garbage bytes varies.
+",Behemouth,jcrugzz
+795,2015-03-21 05:51:21,"@jcrugzz  
+
+My Node.js version has this bug too:
+
+
+",Behemouth,jcrugzz
+789,2015-03-12 01:07:36,"@feross awesome thanks! :)
+",jcrugzz,feross
+782,2015-12-07 20:47:11,"@jcrugzz there are two options for `tls.connect`: `hostname` and `host`. Former one specifies TLS hostname, and the latter one DNS host to connect to. I suppose that `hostname` should be `mydomain.com` and `host` should be that IP address.
+",indutny,jcrugzz
+782,2015-12-07 20:54:13,"Thanks for the quick reply @indutny :), that makes a lot of sense. I'm guessing this check wasn't happening in 0.10 for whatever reason. I know you were optimizing a lot of TLS between then. Does this fix the issue you all are seeing? cc @coolaj86 @russellballestrini 
+",jcrugzz,indutny
+782,2015-12-08 01:20:20,"Thanks @jcrugzz, we'll try that out in the morning and follow up!
+",dhm116,jcrugzz
+782,2015-12-09 14:36:23,"@jcrugzz We were able to confirm that modifying the original request Host header value fixed our issue - changes to the target seemed to have no impact. :+1: Thanks!
+",dhm116,jcrugzz
+782,2016-08-16 23:28:06,"I'm having the same issue with http-proxy 1.14.0 and nodejs 6.3.1. It appears to be checking the hostname of the proxy (localhost) against the certificate of the proxy target (secure.gravatar.com)
+
+
+
+
+
+Any ideas?
+
+@russellballestrini
+@indutny 
+@jcrugzz 
+
+Much appreciated :)
+",aianus,indutny
+782,2016-08-16 23:28:06,"I'm having the same issue with http-proxy 1.14.0 and nodejs 6.3.1. It appears to be checking the hostname of the proxy (localhost) against the certificate of the proxy target (secure.gravatar.com)
+
+
+
+
+
+Any ideas?
+
+@russellballestrini
+@indutny 
+@jcrugzz 
+
+Much appreciated :)
+",aianus,jcrugzz
+775,2015-02-19 14:14:36,"@jcrugzz Imo the the proxy itself shouldn't modify the url, also when it's strange :-) My problem was related to a web app which uses path style parameters e.g.http://example.com/controller/action/param1/value1/param2/value2 if value1 is empty in a special case the produced url was http://example.com/controller/action/param1//param2/value2 which couldn't proxied.
+",luke-,jcrugzz
+768,2015-02-02 14:23:15,"Excellent thank you @jcrugzz .
+",glortho,jcrugzz
+767,2015-01-27 20:00:24,"@jcrugzz could you help with the right place to add the agent? 
+
+From the docs I see that it's used in `http.request` options, but how it could be passed on http create server?
+
+
+",voronianski,jcrugzz
+767,2015-01-27 21:58:47,"@jcrugzz thanks!
+",voronianski,jcrugzz
+767,2015-02-26 04:04:26,"@jcrugzz, I'm trying to wrap my head around why one would want to specify `maxSockets`? It seems that it is not a `maxSockets` value which is making connection to change to 'keep-alive'. It is enough to just have http.Agent instance. I tried to debug core http module, but stuck on what exactly is causing it to pick keepAlive setting even when it is not set to true on the agent instance. Can you please give me a hint? Thanks.
+",szarouski,jcrugzz
+766,2015-01-27 15:28:13,"@jcrugzz Thanks for the response, after further running for 10 hours, the memory usage has stabilized at around 135-150mb. Previously I was doing 
+
+
+
+inside the proxyServer web request, which I think was causing the memory leak. After moving it to the proxyReq event (as seen in my first post) it seems to be fine. (I must have forgot to git pull on the server I was testing on) Thanks for your help!
+",Mewte,jcrugzz
+765,2015-01-27 06:24:22,"@jcrugzz You are right. I'l discuss the first error on `http-stale-cache-proxy`'s  page and the second error has been handled properly.
+Thanks a lot.
+",faridz88,jcrugzz
+764,2015-01-21 03:11:27,"@jcrugzz very strange, when I removed ""server.use(express.limit('5mb'))"" , the proxy worked well.
+",xiaok,jcrugzz
+757,2014-12-30 22:36:14,"@goldfire thanks for the update. It looks like that is the commit we can get revert. I understand what you were going for there @minrk but it seems there are some edge cases where that isn't set yet it is still successfully used for websocket handshakes. Could be a browser related thing I suppose, but anyways this is super weird. Please let us know if you get anymore insight into when this happens, I'd love to understand the why :). 
+",jcrugzz,minrk
+747,2014-11-30 23:08:42,"@Rush can you pinpoint whats being passed in? There should be a test here to prevent these types of failures and I would love to add one.
+",jcrugzz,Rush
+747,2014-12-01 21:23:37,"@Rush hmmm thats weird, could you turn this into a failing test case. That would be amazing <3 
+",jcrugzz,Rush
+747,2014-12-01 22:08:39,"Hmm, not really cause that's how I use `node-http-proxy`, as in I don't
+want to pass a string as a target since I need to parse the url first
+myself.
+
+2014-12-01 22:23 GMT+01:00 Jarrett Cruger notifications@github.com:
+
+> @Rush https://github.com/Rush hmmm thats weird, could you turn this
+> into a failing test case. That would be amazing <3
+> 
+> —
+> Reply to this email directly or view it on GitHub
+> https://github.com/nodejitsu/node-http-proxy/issues/747#issuecomment-65137006
+> .
+",Rush,Rush
+747,2014-12-01 23:03:31,"@Rush Im not saying that you should be passing a string as the `common.setupOutgoing` function accepts `target` as an object. It gets preparsed before this function. What I don't understand is how this object is causing your tests to fail because nothing should be `null` which is why I'd love for you to take this object and any other aspects of your test that are contextually relevant and produce a failing test so we can get to the bottom of this.
+
+It seems to center around [this](https://github.com/nodejitsu/node-http-proxy/blob/master/lib/http-proxy/common.js#L61-L74) logic which to me seems impossible to be `null` but I'd love to be proved wrong :).
+",jcrugzz,Rush
+747,2014-12-08 20:31:11,"@Rush are you still experiencing this? Im looking to make the data input validation a bit more robust but I'd really like to see the full test case here :)
+",jcrugzz,Rush
+747,2015-04-06 14:19:48,"Hey @Rush , 
+
+Did this fixing solve your problem?
+Despite `common.js` file had fixed I get same error.
+
+Is there any one in my case?
+",efkan,Rush
+747,2015-04-06 15:58:58,"Thanks @damonmcminn ,
+
+I've opened a new issue;
+https://github.com/nodejitsu/node-http-proxy/issues/800
+",efkan,damonmcminn
+746,2014-12-01 15:21:46,"@koolc he meant to put this test case in the same PR as your fixes to show that both the test case and the changes made pass. Just makes for cleaner merging but its not a huge deal.
+",jcrugzz,koolc
+744,2014-11-25 16:12:20,"@koolc is there a failing test this is compensating for? To be fair this logic is still not 100% correct but this change doesn't look like the right fix.
+",jcrugzz,koolc
+744,2014-11-26 07:17:28,"@jcrugzz @samccone 
+This is a online url 'http://g.tbcdn.cn/??kissy/k/1.4.0/seed-min.js,kissy/k/1.4.0/base-min.js,kissy/k/1.4.0/json-min.js,kissy/k/1.4.0/dom/base-min.js,kissy/k/1.4.0/event/base-min.js,kissy/k/1.4.0/event/custom-min.js,kissy/k/1.4.0/event/dom/base-min.js,kissy/k/1.4.0/event/dom/focusin-min.js' on the Alibaba CDNs.  You can take it
+for test.
+
+This is a combo url(This is a technical measures that multiple requests will be merged into one in order to reduce the number of requests), and '??' is a combo tag.
+
+I mainly think of this case, so maybe the changed logic is still not 100% correct, hope you can revise it. 
+",koolc,jcrugzz
+744,2014-11-26 12:49:10,"@koolc could you write a test case using this type of URL? I will look closer at the logic
+",jcrugzz,koolc
+744,2014-11-27 03:56:22,"@koolc In terms of a test case, could you add a test case to test of the `common.setupOutgoing` function in [here](https://github.com/nodejitsu/node-http-proxy/blob/master/test/lib-http-proxy-common-test.js)
+",jcrugzz,koolc
+744,2014-12-01 03:28:26,"@koolc sorry for the late reply, once that change you already suggested is done, this should be merged. If you have anymore URL test cases for this function, it would be awesome to get more tests around this.
+",jcrugzz,koolc
+744,2014-12-01 15:18:51,"@koolc test cases are not required, I was just curious if you had anymore crazy URLs that could be sueful for testing ;). Just make the change for `retSegs.push.apply(retSegs, lastSegs);` and I will merge.
+",jcrugzz,koolc
+744,2014-12-02 04:22:07,"@koolc replied
+",jcrugzz,koolc
+743,2014-11-25 16:14:19,"@jleal52 i like this as an idea but it should have a different name. as there is `start` and `end` events for regular http proxying.
+",jcrugzz,jleal52
+743,2014-12-09 03:43:12,"@bruce-one that seems reasonable. Maybe `open` `close` to complete the pairing?
+",jcrugzz,bruce-one
+741,2014-11-21 17:08:56,"@samccone this looks good! Could you add a test for this and update the docs related to this option? Thanks for the contribution!
+",jcrugzz,samccone
+741,2014-11-23 18:31:46,"hey @jcrugzz specs and docs are all added. 
+
+thanks again for your time, and work on this handy lib.
+",samccone,jcrugzz
+741,2014-11-23 22:58:43,"@samccone looks great. I forgot the only one nit here that I will post on the code. Will merge once thats done. Thanks!
+",jcrugzz,samccone
+741,2014-11-24 00:22:29,"all updated @jcrugzz :tanabata_tree: 
+",samccone,jcrugzz
+741,2014-11-25 14:41:31,"Hey @jcrugzz was there anything else you needed from me?
+",samccone,jcrugzz
+741,2014-11-25 22:08:50,"@samccone sorry got caught up with things so I didn't get to it. LGTM. Ill post back here with some style nits that I make for next time :). Thanks!
+
+ Im also curious about the use of a `context` function as i dont see it anywhere in the mocha docs.
+",jcrugzz,samccone
+737,2014-11-17 10:58:38,"@jcrugzz yes, tests are definitely a must. There are a lot of error cases in this scenario that could leak fds I think.
+",indexzero,jcrugzz
+736,2014-11-12 21:46:06,"@richardkazuomiller yea essentially, good find! That should just be linked somewhere. @indexzero just hasn't formalized a [`jscs`](https://github.com/jscs-dev/node-jscs) for it yet. 
+",jcrugzz,richardkazuomiller
+735,2014-11-12 18:05:02,"@jleal52 awesome thank you! :).
+",jcrugzz,jleal52
+734,2014-11-12 18:22:25,"Thanks @jcrugzz, I appreciate the suggestion.  I actually have keep-alive disabled between the proxy and the origin server intentionally due to the current architecture and some issues with the origin server but would like to have keep-alive between clients and the proxy server for efficiency.
+
+My current workaround is to listen for the `proxyRes` event and set `Connection: keep-alive` on the proxy response (so it will be copied to the client response) when possible.  Overwriting the `Connection` header in the client request had caused my checks for client compatibility to fail (since it always appeared that the client was sending `Connection: close`), but after discovering this issue I just set another property on the request with the original value of the `Connection` header which I can test in the `proxyRes` listener.  It seems to work well.
+
+So I'm set, but it may take users with less debugging and HTTP experience a while to figure out what is going on, or to even realize that they are not getting HTTP keep-alive to clients.
+",kevinoid,jcrugzz
+733,2014-11-11 03:29:15,"@richardkazuomiller this is a good start. I think this function still needs some more love to handle the other edge cases but thank you very much! I'll merge and fix the stylings. Just not that we like less `var` statements ;)
+",jcrugzz,richardkazuomiller
+732,2014-11-07 18:03:33,"@indexzero I apologize if I am not describing this properly.
+
+I am really trying to do something simple, I just want to proxy a request to the website ""http://bing.com"" as well as ""https://bing.com"". I can get the ""http://bing.com"" to work, but I cannot get a request to work for ""https://bing.com"".
+
+I don't need the actual nodejs proxy server to be HTTPS, unless that is required.
+
+I am just trying to put together a simple reverse proxy.
+
+If I configure Firefox with the IP and PORTS for the code above, a request to ""https://bing.com"" does not succeed. I don't see the request in the nodejs logs, and Firefox never receives a response.
+",odmarkj,indexzero
+732,2014-11-07 18:39:25,"@indexzero Thank you for your patience with this. I understand why that would be necessary, but I still cannot get it to work. When the website is ""https://bing.com"", my script does not see the request. If I use ""http://bing.com"", it works as expected with the code below.
+
+
+
+I should also note that the request appears to hang indefinitely until I control+c to kill it in the terminal request when I try to visit ""https://bing.com"" with this nodejs proxy configured in Firefox.
+",odmarkj,indexzero
+732,2014-11-07 19:02:05,"@indexzero i think the confusion here is related to HOW a proxy is used by a browser and what changes in those situations. This is why I made the toProxy option because I was able to confirm that by not cutting the path in those cases, it worked. There is definitely some other complexity associated with properly using this as THIS type of proxy and proxying https traffic, especially when the server being created is HTTP.
+",jcrugzz,indexzero
+732,2014-11-07 19:06:23,"@jcrugzz Now we're talking.
+
+Do you have any examples of that?
+
+When I add the toProxy option, it doesn't seem to change anything.
+
+
+",odmarkj,jcrugzz
+732,2014-11-07 19:26:20,"I really just want to forward the request, I don't want to do anything with it. I am just trying to setup a dead simple reverse proxy, but it seems this library was not designed to handle that, or at least, not when a majority of the traffic is to HTTPS websites.
+
+I really wanted to make nodejs work for this, but it looks like I will just have to go back to more robust and well supported software such as Squid.
+
+Thanks for your time. @jcrugzz If you would be interested in helping me fix this, I would be more than willing to pay. I am in a real tight bind. Thanks.
+",odmarkj,jcrugzz
+732,2016-09-26 15:37:44,"Hi @odmarkj,
+
+Were you able to accomplish this eventually?  
+
+@pose your example will work for one proxy, but not in case of a chain as @odmarkj specified.
+",pronskiy,pose
+718,2014-10-21 15:50:53,"@jcrugzz the above code is from web-incoming.js and this is the reason why the error code is ECONNRESET
+",juliendangers,jcrugzz
+718,2014-10-22 12:25:55,"@jcrugzz there is already a test, which ensures that error code is ECONNRESET : 
+
+
+",juliendangers,jcrugzz
+716,2014-11-28 17:02:47,"Thanks @No9 sorry for the wait!
+",jcrugzz,No9
+713,2014-12-01 19:06:35,"@jcrugzz I know the order of events, specifically I've got an issue where a photo upload that was proxied to our API was working before a server migration but not after.  The API returns ""method not allowed"" when sending through the proxy but sending the POST request directly works.  Suspect it's something to do with an added or altered header, so trying to see the final state of the request just before it's proxied and the unmodified response before it's send back.
+
+is the private property ""private"" (meaning OutgoingMessage._headers) or is it a scoped var I'm not going to be able to get access to?
+",runspired,jcrugzz
+713,2014-12-01 20:23:17,"@jcrugzz when I log `proxyReq._headers` I see the `host` is the location of the proxy, not the location being proxied to.  Is this changed later, or is this mistakenly not updated?
+",runspired,jcrugzz
+713,2014-12-01 21:24:09,"@jcrugzz that in fact turned out to be my issue.  The ""host"" header is not updated to match the host of the host the proxy is pointing to.
+",runspired,jcrugzz
+712,2014-10-09 09:56:49,":+1: thank you for your contribution @zhudan. What are your thoughts @jcrugzz? You've been looking this over most recently.
+",indexzero,zhudan
+712,2014-10-09 13:24:40,"@zhudan LGTM. My only question is why the custom re-streamer rather than using `connect-restreamer`. Just curious as it is the same logic.
+",jcrugzz,zhudan
+712,2014-10-09 13:33:18,"@jcrugzz yes, same logic, but just for json body.  his code has bug, https://github.com/dominictarr/connect-restreamer/blob/master/index.js#L15  should be: req.emit('data', req[options.property]).
+when the body is xml, it can not use JSON.stringify(req.body), because it will be escaped, then the content-length (https://github.com/nodejitsu/node-http-proxy/issues/704#issuecomment-56791176)
+
+Forgive my bad English .
+",zhudan,jcrugzz
+712,2014-10-09 13:48:06,"@zhudan gotcha, it looks like you would have to pass it a no-op stringify function for that particular case.
+",jcrugzz,zhudan
+711,2014-10-09 03:02:17,"@jcrugzz thanks for getting back. pls consider an alternative, perhaps, checking with regex /^https:?/.test(protocol). And if the code construct urls from the parts, the url class supports protocol with and without the colon.
+",javadoug,jcrugzz
+709,2014-10-01 11:10:20,"@minrk good looks! Thanks again.
+",jcrugzz,minrk
+708,2014-10-01 00:55:34,"@minrk based on what i understand [here](https://github.com/joyent/node/blob/v0.10.32-release/lib/http.js#L1608-L1621) this looks like the correct behavior. Awesome job!
+",jcrugzz,minrk
+708,2014-10-01 00:58:27,"@minrk my only question is if we should do something about the response as well in the case where it is not an upgrade request.
+",jcrugzz,minrk
+707,2014-09-30 19:27:35,"@minrk whoops, fixed this before i saw the PR. Thanks!
+",jcrugzz,minrk
+706,2014-09-29 20:38:06,"@thlorenz what if we emit the proxySocket in an event on the `httpProxy` instance to be handled separately. It seems like that could work.
+",jcrugzz,thlorenz
+706,2014-09-29 20:48:21,"@jcrugzz that'd be even better cause then I'd know when I can subscribe to its event instead of having to test if its there yet or not.
+
+Do you want me to update the PR to do that? Only question is what's our event emitter? The only one I see inside `ws-incoming.js` is the `server`. That'd also be hacky to emit things on the server I guess.
+
+Any other emitters you see?
+",thlorenz,jcrugzz
+706,2014-09-29 21:28:17,"@thlorenz naming is just terrible here. The `server` object thats passed in is the actual proxy instance.
+",jcrugzz,thlorenz
+706,2014-09-29 21:42:30,"@thlorenz make it `proxySocket` for consistency with other events. Other than that, just document the event in the readme and I'll merge when ready :).
+",jcrugzz,thlorenz
+706,2014-09-30 02:34:11,"@thlorenz thanks!
+",jcrugzz,thlorenz
+706,2014-12-30 14:56:07,"@glasser id be ok with emitting multiple arguments on that event. Submit a PR with an ordering that makes sense.
+",jcrugzz,glasser
+705,2014-09-26 04:01:35,"@Jimbly Thanks!
+",jcrugzz,Jimbly
+704,2014-09-24 07:53:12,"@zhudan those are probably out of date to begin with. We could really use your help updating them :)
+",indexzero,zhudan
+704,2014-09-25 08:53:34,"@indexzero  when i post a xml body, i want modify this body, but the proxy post the xml is escaped ("""""" become ""\""""), so the content-length header is smaller than the length of body. it's can not post all xml.
+
+the code is this line, https://github.com/nodejitsu/node-http-proxy/blob/caronte/lib/http-proxy/passes/web-incoming.js#L117 ; i modified this line to proxyReq.end(req.rawbody), it's work, but it can not work in all environment.
+
+i really want to  know why ? can you tell me? thank you~
+",zhudan,indexzero
+704,2014-10-08 09:07:51,"@indexzero Ok, i will update later.
+",zhudan,indexzero
+703,2014-09-25 13:16:06,"@jcrugzz not sure I'll have time to look into this further. I think the information I set out in the original issue description is enough to reliably reproduce the problem.
+
+I ended up just rolling my own proxying using `mikeal/request`, since it handles client proxying pretty elegantly, and I didn't really need any of the other bells-and-whistles from `http-proxy`.
+",samcday,jcrugzz
+700,2014-09-18 04:02:16,"@jcrugzz Trying to be more specific:
+
+I have the below code working; in that scenario:
+CLIENT --> PROXY --> TARGET (https://somewhere.com)
+But I need that proxy do not connect to target. My proxy has a list of operative proxies and I have to use a different one for each client request so:
+CLIENT --> PROXY --> PROXY2 --> TARGET 
+Here I cannot manage that proxy will forward the client, I think due to the connect (proxies are http but final target is ssl)
+
+This is my code working for the first scenario:
+
+// Create an HTTP tunneling proxy
+var proxy = http.createServer(function (req, res) {
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  res.end('okay');
+});
+
+proxy.on('connect', function(req, cltSocket, head) {
+  // connect to an origin server
+  var srvUrl = url.parse('https://' + req.url);
+  console.log(JSON.stringify(srvUrl) + "";""+srvUrl.port +  'host'+srvUrl.hostname
+);
+  var srvSocket = net.connect({'port': srvUrl.port, 'host':srvUrl.hostname}, function() {
+    cltSocket.write('HTTP/1.1 200\r\n' +'Proxy-agent: Node-Proxy\r\n' + '\r\n');
+    srvSocket.write(head);
+    srvSocket.pipe(cltSocket);
+    cltSocket.pipe(srvSocket);
+  });
+});
+",earroyoron,jcrugzz
+699,2014-09-12 16:57:14,"@STRML Could you add test so @jcrugzz doesn't break it again ;-)?
+",3rd-Eden,STRML
+699,2014-09-12 16:57:59,"Yep - working on that right now, just figured I should get the fix in ASAP.
+
+On Sep 12, 2014, at 12:57 PM, Arnout Kazemier notifications@github.com wrote:
+
+> @STRML Could you add test so @jcrugzz doesn't break it again ;-)?
+> 
+> —
+> Reply to this email directly or view it on GitHub.
+",STRML,STRML
+699,2014-09-12 20:24:31,"@STRML thanks a ton for the fix. I go and try and fix a windows bug and I do something terrible xD. Im very curious of the case that caused the path to be prefixed with `/`. Would you mind sharing?
+",jcrugzz,STRML
+699,2014-09-12 20:56:53,"@jcrugzz It could happen two ways, possibly resulting in `///`. It is suggested, but not documented as a requirement, that there should be no trailing slash in the target or leading slash in the proxied path.
+
+I had been using a target as a deep path, something like `http://localhost:3000/api/`, and my proxied paths were read from `req.url` so they were often something like `/user/login`. While `path.join()` handled this properly, your code would create `http://localhost:3000/api///user/login`.
+
+Understandably there shouldn't be a trailing slash in the target, but it is very common for there to be a leading slash in the proxied path (from req.url), and this commit broke that case as well with a double slash.
+",STRML,jcrugzz
+693,2014-09-08 21:32:02,"@EndangeredMassa One thing I would do though is also support forward requests. Follow the convention we use of `options[forward || 'target']`. Otherwise this is great, thanks for the effort!
+",jcrugzz,EndangeredMassa
+693,2014-09-08 22:23:39,"@EndangeredMassa its passed in as a variable so it does an undefined check relying on the `||` operator to default to `'target'` if its not a forward request. See [here](https://github.com/nodejitsu/node-http-proxy/blob/master/lib/http-proxy/passes/web-incoming.js#L101).
+
+And this looks great, thanks!
+",jcrugzz,EndangeredMassa
+693,2014-09-10 16:57:02,"Im realizing that this shouldnt necessarily be default behavior. This should be configured in some way. @EndangeredMassa naming suggestions? Seems like a boolean option is the best way to deal with this.
+",jcrugzz,EndangeredMassa
+693,2014-09-10 20:23:18,"@EndangeredMassa Yea that's understandable. Im guessing our case at nodejitsu is the special case as it is more specific to how couchdb interprets the request. We currently proxy to couchdb instances with [`smart-private-npm`](https://github.com/nodejitsu/smart-private-npm) by setting the `host` to `registry.nodejitsu.com` for example and the URL is `https://myCouchdb.com/registry`. This change currently breaks the way we have been proxying. Ill think of a good option for this I suppose as that seems like it will be what is necessary.
+",jcrugzz,EndangeredMassa
+693,2014-11-11 21:00:38,"@indexzero in my opinion that is not really the case, because even if not supported before, if you happen to have a path in the target, the new behaviour would break things. It is a bit in the grey zone, but I think the safest bet would have been to have it disabled by default, users wanting to use the new feature would have been forced to enable it manually. For instance, before this feature existed, many people created its own third party code for adding it, this code usually left the target with the complete path since it was not necessary to parse it just to remove it.
+Anyway, it is too late now for anything so pointless discussion other than flagging that since http-proxy is so critical in many deployments, maintaining backwards compatibility should be taking very seriously.
+",manast,indexzero
+691,2014-09-16 18:25:00,"@minrk only problem I have here is that we will probably leak a socket with `keep-alive` true and having agent = false but firefox will be the only case. 
+
+In regards to the regex, I think you might want `.test` to get a proper truthy value and to call it on the regex itself. Could you also add a test for this? Appreciate the contribution! :)
+",jcrugzz,minrk
+691,2014-09-16 19:42:39,"@minrk excellent, thank you!
+",jcrugzz,minrk
+690,2014-08-29 19:21:57,"@minrk this feels like a bug in firefox's websocket implementation as the tests pass with the `ws` library that we use for testing. Browsers are notorious for having broken websocket implementations. @3rd-Eden what does this look like to you? (@3rd-Eden is realtime web expert)
+",jcrugzz,minrk
+690,2014-08-29 19:47:31,"@minrk @jcrugzz Firefox should implement the latest specification of the WebSocket protocol, so I don't see anything obvious that should be wrong here. 
+",3rd-Eden,minrk
+690,2014-08-29 19:47:31,"@minrk @jcrugzz Firefox should implement the latest specification of the WebSocket protocol, so I don't see anything obvious that should be wrong here. 
+",3rd-Eden,jcrugzz
+690,2014-08-29 19:49:03,"@minrk Are you running firefox without any plugins?
+",3rd-Eden,minrk
+686,2014-08-21 23:50:54,"@joeyespo thanks!
+",jcrugzz,joeyespo
+680,2014-08-15 21:17:45,"@jcrugzz, that's what thought; that this is not what  `http-proxy` do...
+
+I'm using `http-proxy` as an OAuth Proxy, So I need to verify from the `req` and sign `res`. If the transformation your suggesting are like [this](https://github.com/nodejitsu/node-http-proxy/pull/660#issuecomment-46013477), I don't think it would be useful as it would not allow me to modify the header (am I right?)
+",banduk,jcrugzz
+680,2014-08-18 14:46:44,"@jcrugzz So I'm sure this solves my problem, yes..
+I'm just starting to code on node and I'm not yet coding fluently. Could you please gimme some hints on how to make it work before this 'after hooks' are implemented into master branch?
+",mbanduk,jcrugzz
+680,2014-08-19 17:24:53,"@jcrugzz , this code allow me to do what I want. Would it be a good alternative?
+
+
+
+and then calling:
+
+
+",banduk,jcrugzz
+679,2014-08-14 17:40:01,"@unilaterus Thanks for the contribution! This looks good, the only thing I see potentially dangerous here is us nulling out the server object before the callback is executed (if one was passed in). I believe there should be a `server.once('close')` event that can be listened to to null the server after its fully closed or we could just wrap the callback and null the server before responding to the original callback that is passed in. 
+",jcrugzz,unilaterus
+679,2014-08-14 20:00:33,"@jcrugzz Nice catch there. I hadn't thought of that. I pushed up a revision to correct that issue. I chose to go with the `wrap the callback` option because I'm not entirely sure if listening for close event will work since I think the callback passed in replaces the standard close event.
+",unilaterus,jcrugzz
+679,2014-08-14 21:12:48,"@unilaterus thanks!
+",jcrugzz,unilaterus
+673,2014-07-20 19:15:46,"@msporny thanks for making the changes! LGTM. Regarding the potential issue #2, this would need to be a transform stream of sorts that automatically modified headers and passed it along to the proxy. I haven't figured out how this would be done generically yet but its something I have in mind.
+",jcrugzz,msporny
+673,2014-07-20 20:02:49,"Thanks for the merge @jcrugzz :).
+
+@dlongley any thoughts on addressing issue #2 generically since we're probably going to need to do this at some point in the near future?
+",msporny,jcrugzz
+673,2014-07-22 16:12:09,"@msporny, well, from a quick glance at the code it seems like there are several options now just after this approach, for addressing number 2:
+1. For producing something like a digest on message bodies that are too long to buffer into memory, you could attach an event listener to `proxyReq` and then attach a `data` event listener to the incoming request that will digest the data and, when finished, call `proxyReq.addTrailers` with the appropriate digest header.
+2. For message bodies that can be buffered, you could do the same -- except set `options.buffer` in the `proxyReq` handler to some stream that also gets populated by listening to events from `req`. There may be a nicer API that could be exposed for this, but it seems like it would work as is if you needed this behavior. But again, that's just from a quick glance, I didn't write any code to test this.
+
+Edit: Actually, it looks like some tweaking would need to happen to allow `options.buffer` to be set in the event handler. Maybe something similar to what @jcrugzz suggested could be added to allow a transform stream to be inserted between `options.buffer` or `req` and the `proxyReq` -- or this stream could always be present and, by default, it performs no transformation.
+",dlongley,msporny
+673,2014-07-22 16:12:09,"@msporny, well, from a quick glance at the code it seems like there are several options now just after this approach, for addressing number 2:
+1. For producing something like a digest on message bodies that are too long to buffer into memory, you could attach an event listener to `proxyReq` and then attach a `data` event listener to the incoming request that will digest the data and, when finished, call `proxyReq.addTrailers` with the appropriate digest header.
+2. For message bodies that can be buffered, you could do the same -- except set `options.buffer` in the `proxyReq` handler to some stream that also gets populated by listening to events from `req`. There may be a nicer API that could be exposed for this, but it seems like it would work as is if you needed this behavior. But again, that's just from a quick glance, I didn't write any code to test this.
+
+Edit: Actually, it looks like some tweaking would need to happen to allow `options.buffer` to be set in the event handler. Maybe something similar to what @jcrugzz suggested could be added to allow a transform stream to be inserted between `options.buffer` or `req` and the `proxyReq` -- or this stream could always be present and, by default, it performs no transformation.
+",dlongley,jcrugzz
+670,2014-07-17 06:15:45,"Hi :)
+
+@jcrugzz but ... is possible set different IP address (range)?
+
+Best
+",soyjavi,jcrugzz
+667,2014-08-16 21:36:53,"@jcrugzz Can you elaborate on how you can use the buffer stream to accomplish the task of grabbing the POST body in the response?
+",seglo,jcrugzz
+667,2014-10-26 16:01:51,"@jcrugzz As you've probably noticed my project relies on this sort of functionality.  Right now it's a bit of a hack, so if you could share an example of how this might work it would be appreciated.  Thanks!
+",seglo,jcrugzz
+667,2016-01-25 12:50:23,"@seglo I tried the `buffer` option suggested by @jcrugzz and it works like a charm. Idea is to retrieve the body by consuming the request stream, and to store the buffered result on a stream that we will pass to the `buffer` property when calling `proxy.web()`.
+
+Example here, first with a middleware to retrieve the body (you will recognize part of your code as I work with connect-prism):
+
+
+
+Then, when calling the proxy, just pass this stream:
+
+
+",mrblackus,jcrugzz
+665,2014-07-08 21:35:12,"@msporny I think this is doable but i think it should be implemented as an event people can hook into rather than an option. Maybe have a `proxyReq` event to accompany `proxyRes`. Thoughts?
+",jcrugzz,msporny
+665,2014-09-01 12:48:44,"@msporny Did you ever fully implement the solution for this? I'm looking to use it for Digest Auth.
+",jenmak,msporny
+662,2014-11-13 14:42:09,"@jcrugzz thanks for the tip, I tackled this problem by writing an express server that makes a POST on behaf of the client, copying the POST body.
+
+
+",97-109-107,jcrugzz
+662,2014-11-13 23:00:44,"@jcrugzz is `changeOrigin` documented? Just doing a quick search on the README I don't see it.
+",nodesocket,jcrugzz
+660,2014-06-13 08:11:51,"@jcrugzz I want to analyze the http traffic goes through the proxy, especially the POST case. Now I add a dump flag into the option, which will not turn on the dump function in normal case.
+",wangzheng422,jcrugzz
+656,2014-06-19 17:25:10,"@Domiii It used to be that you could create a proxy that was not an event emitter when a callback was passed in. Now it is always an event emitter now but this piece obviously has not been changed yet. Our of curiosity, could you post your use case for the callback argument? Personally I've just never used it and purely handle the errors and anything else through the event emitter interface
+",jcrugzz,Domiii
+656,2014-06-19 20:07:19,"@jcrugzz  I simply did not know that error handling without that callback was possible. I started writing my app and was plagued by ""socket hang up"" exceptions, that I finally (thanks to [longjohn](https://github.com/mattinsler/longjohn)) found to be caused by http-proxy. I then must have seen a code snippet that passed the error handler as fifth argument to `web` (but can't quite find it right now). You are saying, errors should simply be handled through the `clientError` event?
+",Domiii,jcrugzz
+656,2014-06-19 20:30:13,"@Domiii listen on the `error` event on the proxy. See [here](https://github.com/nodejitsu/node-http-proxy#listening-for-proxy-events)
+",jcrugzz,Domiii
+645,2014-05-31 19:02:41,"@Domiii I can see this being valid but you need to handle the case where path is not defined. See the failing tests under `0.10.x`.
+",jcrugzz,Domiii
+645,2014-06-03 17:10:03,"@Domiii well it needs to be ignored in the case where the path is `undefined`
+",jcrugzz,Domiii
+645,2014-08-05 22:00:24,"Thanks for the fix, @jcrugzz 
+
+Copy and paste fail on my end :-) I coupled things from the ProxyTable example and my project (which uses express and does a few other things).
+",greaterweb,jcrugzz
+645,2014-09-08 19:50:08,"@EndangeredMassa yes it needs to be able to pass the current tests and there should be tests for the use case that this is a fix for.
+",jcrugzz,EndangeredMassa
+645,2014-09-08 19:51:46,"@Domiii do you plan on fixing up the tests for this? If not, I could take a look.
+",EndangeredMassa,Domiii
+642,2014-05-11 23:01:41,"@bruce-one its really the only way to do it. Also feel free to submit one with some docs around this :).
+",jcrugzz,bruce-one
+640,2014-05-10 02:35:22,"@jayharris mind adding a test case for this? But thanks for the contribution!
+",jcrugzz,jayharris
+640,2014-05-10 02:52:41,"@jcrugzz Done.
+",jayharris,jcrugzz
+640,2014-05-10 03:25:37,"@jayharris awesome thanks! Tests are failing due to SSL things on `0.11.x`.
+",jcrugzz,jayharris
+635,2014-05-11 21:40:04,"@bruce-one id take an updated PR on this :)
+",jcrugzz,bruce-one
+634,2014-05-01 20:35:53,"@jcrugzz I read all the documentation on that page. I just couldn't find any documentation about how to proxy websocket requests using a dynamic target.
+
+Could you please confirm that it's possible to proxy websocket requests dynamically ? And maybe direct me to an example or any other documentation somewhere ?
+",kurteknikk,jcrugzz
+634,2014-05-02 13:51:05,"@jcrugzz first of all thanks for your help, i really think that i'm missing some here.
+
+Could you please confirm that the below code should work ?
+(assuming I have a socket listener setup on that port number of course)
+
+
+",kurteknikk,jcrugzz
+623,2014-04-21 16:04:55,"@jcrugzz Sure. I'll try to post back here by Thurs. next week.
+",bminer,jcrugzz
+623,2014-05-15 23:43:12,"@jcrugzz Understandable :) I couldn't isolate it to `node-http-proxy`. The best I could do was show the problem occurred behind hipache. Without hipache everything was fine. I was using an older version of hipache so I decided to try the latest release and the problem disappeared. But thanks anyway :) 
+",jkingyens,jcrugzz
+619,2014-04-09 18:26:31,"@jcrugzz what if i don't know target? i'm trying to implement simple proxy http server (anonymizer)
+",stpdenis,jcrugzz
+616,2014-04-06 06:41:25,"@hipstern thanks!
+",jcrugzz,hipstern
+614,2014-04-04 19:59:46,"@jcrugzz The issue at the moment is that I'm only seeing it when going to EC2 (though the only other scenario I've tested against is a local server and I'm not sure that is a fair comparison to anything over the internet). I don't _believe_ that it is my internet since the response performance is fine both from my browser as well as node when I'm using http.get calls. To illustrate, when I run code like this:
+
+
+
+The time reported is consistently between 50 and 100ms (same as if I make the request in my browser)
+
+However, as soon as do something like this:
+
+
+
+OR
+
+
+
+The response time is always > 1s.
+
+After further searching, it sounds awfully like [this Stack Overflow post](http://stackoverflow.com/questions/19844594/node-js-pipe-to-a-http-response-results-in-slow-response-time-on-ubuntu).
+",sgerace,jcrugzz
+614,2014-04-07 14:45:45,"@jcrugzz So here is where I'm at after messing with this over the weekend; I've placed the following server code up onto a public EC2 instance so you can test it yourself (to rule out the possibility of internet effects):
+
+
+
+The public ip address of the server is 54.209.167.233
+
+When I request http://54.209.167.233:3000/ in my browser (I'm using the [Advanced REST Client](https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo?hl=en-US) for chrome), I consistently get a response between 60-120ms. 
+
+If I run the following code, both cases respond for me in roughly the same amount of time (about 100ms each):
+
+
+
+However, if I run the following example, and then request the response from localhost, I get times in the 800-2000ms range:
+
+
+
+For good measure, and it illustrate that I don't think the root cause is necessarily _specific_ to http-proxy (though certainly something it is doing is causing the delay over the base http implementation), I provide the following additional example which uses [mikeal/request](https://github.com/mikeal/request) to the same effect:
+
+
+
+This is as simple as I can make the cases and still illustrate the problem. Clearly it has something to do with EC2, but the fact that the http requests come back in a reasonable amount of time makes me think that it also has something to do with the way http-proxy (and [mikeal/request](https://github.com/mikeal/request) for that matter) are handling requests at the Node.js level.
+
+I'm going to go ahead and bring this up in the mikeal/request forum as well, to see if any others might have an idea what might be going on. I'll keep the server up and running as long as necessary to troubleshoot the issue.
+
+Thanks!
+",sgerace,jcrugzz
+612,2014-04-02 10:10:47,"@jcrugzz 
+Thanks for the reply. I have tested some more. If I stay in a complete node environment as you  suggested, v1.0.3 works fine [(here)](https://github.com/olingerc/http-proxy-testcase) . So thats already a good thing, except I need a python backend :-/
+
+As soon as I switch to the python socket.io backend, keeping the frontend the same, v1.0.3 gives the errors. The server switches to polling over socket.io after a few seconds, but the websocket itself is not setup. Reverting to v1.0.2 on the frontend, without changing anything on the backend, makes everything work again with the python backend. I simply use `npm install http-proxy@1.0.3` and `npm install http-proxy@1.0.2` to switch between versions. All other dependencies are fixed.
+
+So I conclude:
+- The frontend setup is ok
+- Since all dependency versions except http-proxy do not change, it sort of has to be http-proxy, sorry
+- The python backend works correctly with http-proxy v1.0.2
+- The python backend can not setup a websocket with v1.0.3, but successfully switches to polling. Maybe incomplete headers somewhere?
+
+I can not exclude an error in the python backend which maybe became apparent due to v1.0.3 being more strict? I'll investigate more and post some minimal python code. FYI, the backend is based on Flask and  [(Flask-SocketIO)](https://github.com/miguelgrinberg/Flask-SocketIO).
+",olingerc,jcrugzz
+612,2014-04-02 10:16:44,"@jcrugzz 
+I can confirm that [this line](https://github.com/nodejitsu/node-http-proxy/blob/master/lib/http-proxy/common.js#L55) is the culprit. Commenting it out makes v1.0.3 work fine.
+",olingerc,jcrugzz
+603,2014-03-26 18:43:54,"@jcrugzz - hey, thanks for responding.
+please refer to https://gist.github.com/KetanSpeaketh/9790240 while i explain the situation. also, to run these snippets, start the node scripts, connect your browser to the internet via proxy (localhost:3010) and navigate to, say, www.amazon.com
+
+gist#1: simple proxy. works as expected.
+gist#2: i first connect to proxy on port 3010, which then routes my request to amazon via another proxy on port 9010. this should work, but doesn't. things work if i make the change suggested in my previous comment.
+",2w1x2elz,jcrugzz
+603,2014-09-11 13:06:59,"Hi @jcrugzz,
+I can't seem to get this right. I want to proxy all request made to `localhost:3000` to an api server `someserver.com:port`and this works fine from home. At my office, we have a corporate proxy which makes everything harder. I figure the toProxy attribute is what I want, but I cannot get it to work. This had happened for the ´mikeal/request`library where the fix was to use
+
+
+
+How would I configure your lib to do the same? The following gists show how this works from outside the corporate proxy and also how routing to local addresses works fine behind the proxy.
+https://gist.github.com/avilaton/3b72861a75eb31fa6dd3
+Any clues?
+",avilaton,jcrugzz
+596,2015-02-18 00:47:53,"@jcrugzz,
+
+Thanks for your example! I was able to get SNI working perfectly.
+",lsvx,jcrugzz
+596,2015-02-18 07:21:44,"@jcrugzz Minor and clever solution!
+",lekojson,jcrugzz
+594,2014-03-01 14:29:05,"@jcrugzz 
+
+Yes, of course... I have a basic node-js install, default locations...
+
+Here is my code, I have the extra libraries 'node-mysql' , 'fs' and 'util' installed for custom actions:
+
+
+
+This works perfectly, for HTTP connections (except status codes always being 200), although I cannot get it working for HTTPS (name based with SNI) - Thats a different problem!
+",djpimp2010,jcrugzz
+594,2014-08-28 19:29:58,"@jcrugzz 
+
+We are running into this same issue. All requests return a 200 status code. 
+
+Included an example below, we can print out the correct status code, however, writeHead doesn't appear to be actually sending the header.
+
+
+",derekschultz,jcrugzz
+594,2016-06-17 19:29:52,"@jcrugzz - On further investigation, it does work as expected for me. The response status was set incorrectly on my server code, the proxy was just returning that incorrect status of 200. Sorry for the false alarm.
+",nikhilbaradwaj,jcrugzz
+592,2014-03-11 21:58:28,"@SkeLLLa thanks for the contribution! 
+",jcrugzz,SkeLLLa
+590,2014-12-17 17:12:07,"@apcj cherry-picked, sorry this took so long
+",jcrugzz,apcj
+586,2014-07-08 16:15:25,"@jcrugzz Just to clarify, the last commit message is ""Change name targetTimeout to proxyTimeout"", so the property is `proxyTimeout` right?
+",samlecuyer,jcrugzz
+579,2014-02-26 05:22:09,"@baer try to apply this fix https://github.com/nodejitsu/node-http-proxy/pull/488
+",whitecolor,baer
+576,2014-02-13 11:50:36,"@jcrugzz thanks for your comment, although I can see that the upgrade event is being sent from the browser. Without the proxy in place, the upgrade event occurs and the protocol switches to websockets:
+
+![websocketssuccess](https://f.cloud.github.com/assets/1098110/2159398/7c02613e-94a4-11e3-8312-da13d24ca05c.PNG)
+
+With the proxy code above, the upgrade request is sent, but there is no response, so after ~5 seconds socket.io falls back to XHR polling:
+
+![image](https://f.cloud.github.com/assets/1098110/2159397/6ec64a08-94a4-11e3-8725-c935c642f333.png)
+
+I have tried forcing socket.io to just use websockets:
+
+
+
+But as you can probably guess, it just hangs on the upgrade request
+",ColinEberhardt,jcrugzz
+576,2014-02-19 04:33:39,"@ColinEberhardt yes what @richardkazuomiller said. I totally missed that previously. You should be using a regular `var server = http.createServer(app); server.listen(8080);` where the `app` is your same express `app` but you now have a proper server to listen for an upgrade request. Everything else should be able to stay the same.
+",jcrugzz,richardkazuomiller
+576,2014-02-19 05:28:22,"@jcrugzz It might be helpful to include something about the upgrade event in the documentation. I, like a lot of people, use Express for my web stuff and Socket.io or SockJS for my websocket stuff so I'm not very used to working directly with the HTTP servers and I had to do a bit of digging to figure it out. I just found that you include that in UPGRADING.md but I missed that because I says in the readme ""Looking to Upgrade from 0.8.x?"" and I was upgrading from 0.1.1 or something like that. People who are using it for the first time are probably going to miss that too.
+",richardkazuomiller,jcrugzz
+576,2014-02-20 10:01:18,"@richardkazuomiller thank you **very** much, that works just perfectly. 
+",ColinEberhardt,richardkazuomiller
+576,2014-02-22 02:55:21,"@richardkazuomiller this sounds like an awesome idea, would definitely take a pull request :)
+",jcrugzz,richardkazuomiller
+574,2014-08-14 15:44:09,"@jcrugzz Thanks for a quick reply! Here: https://github.com/nodejitsu/node-http-proxy/issues/678
+",EskelCz,jcrugzz
+572,2014-02-03 20:39:00,"@jcrugzz Well, allow me to define ""heavy load"".  On OS/X Mavericks, http-proxy will currently stop processing new requests after two minutes if you exceed a sustained 2 requests/second, assuming you haven't bumped up your max file handle count.  :P
+",jwalton,jcrugzz
+571,2014-02-08 09:36:46,"@jcrugzz mmmmm. good opportunity... will try to make one.
+",trusktr,jcrugzz
+568,2014-01-30 23:46:18,"@srossross You should be able to proxy https -> https if there is a need. if this is not exposed or documented well I'll look into clarifying that
+",jcrugzz,srossross
+568,2014-01-31 00:26:33,"@srossross to clarify, please checkout my answer in #563 
+",jcrugzz,srossross
+564,2014-01-28 23:44:06,"Thanks @jcrugzz 
+The post answers my questions perfectly
+:)
+",purepear,jcrugzz
+563,2014-01-31 00:23:37,"@glasser see [here](http://nodejs.org/api/https.html#https_https_request_options_callback) and scroll to the options that are passed in. A request can take the same options as the server but thats assuming the same cert is used for making the request (when as i think about it may be a false assumption but IMO whoever is creating an `https` server and `https` proxy should be doing them separately).
+
+I think the main use case is not using the `options.ssl` in for the listen function (which is not called when you are just using it as a proxy), but exactly where you noticed it in `common.setupOutgoing`. This allows us to correctly make `https` requests using those same options. This also works with self signed certs if we pass in a custom agent. In this case you just need to set maxSockets to a reasonably high number so you aren't blocked by socket pooling 5 sockets as per default. 
+
+I hope this covers everything, let me know if you have any questions!
+",jcrugzz,glasser
+563,2014-01-31 18:27:55,"@glasser agreed, it should clarify that this is used for client proxying as well, IF you define an agent.
+",jcrugzz,glasser
+561,2014-01-23 18:16:07,"@glasser besides my comment, LGTM. Good find!
+",jcrugzz,glasser
+561,2014-01-23 18:39:23,"@glasser Well lets think of what we can do in these failure cases. Correct me if I'm wrong here, but in the case where the `socket` errors, we cannot re-proxy with that same socket. So it would make sense to have a different error function in that case that just returns the request if thats even useful? Cause it seems the connection is just FUBAR if we hit that case and we just need to kill the things and let someone know. So I'm thinking we may even want to destroy the socket when the socket errors as well if my assumption here is correct
+
+thoughts @yawnt?
+",jcrugzz,glasser
+561,2014-01-28 18:52:49,"@glasser I'm going to cherry pick part of this since the other PR was merged. And until I have a better idea of how the errors should be handled from messing around with the fail cases, I think we'll just emit the `error` event without a socket in the case that it errors since it will of course be dead in that case.
+",jcrugzz,glasser
+559,2014-01-22 20:44:10,"@glasser thanks for your thorough report. This definitely seems fixable and I will try and give it a look later today. If you are able to dig deeper into a possible solution please post here :)
+
+cc @yawnt
+",jcrugzz,glasser
+559,2014-01-22 21:49:02,"@jcrugzz @yawnt 
+
+Here's my thought.  There are two ways we could go.  Either http-proxy should itself take care of this, by reacting to 'error' on `socket` by ending `proxySocket`... or http-proxy should give the end user access to `proxySocket` and let it do its own error handling.
+
+I think the former is probably the way to go. First of all, it's more or less necessary to do this error handling, and we shouldn't make it easy for users to accidentally cause a leak.  Secondly, it's already the case that the ws `stream` phase doesn't give much control over the way that `socket` and `proxySocket` are connected (eg, it doesn't let you interpose some sort of transformation).  If we add an API for that later (or the user overrides the `stream` phase entirely) then sure, it would make sense to also give the user control over the error handling semantics. But because http-proxy doesn't offer that control, then it makes sense to do the automatic right thing.
+
+Working on a PR now.  One thing that confuses me: it looks like there's a straight-up bug in the stream pass: it takes its server and head arguments in a different order from how they are passed in!  Is there a test suite that should be catching this?  (Our current production use of http-proxy/caronte is based on an old commit from back when caronte used EventEmitter2 which doesn't have this issue.)
+",glasser,jcrugzz
+547,2014-01-11 18:53:33,"@indexzero running `httpProxy.createServer()` actually just creates a proxy. The only thing that makes it a ""server"" is by calling the `.listen()` method. This is one of the reasons I exposed the ""server"" on the main `module.exports` so you can just do..
+
+
+
+This allowed my OCD to calm down because it is now semantically correct in what you are creating. 
+",jcrugzz,indexzero
+547,2014-01-16 13:58:36,"@jcrugzz Thanks, but still want this.
+
+@yawnt ping?
+",indexzero,jcrugzz
+547,2014-01-16 14:20:27,"@yawnt Sold. Lets do the damn thing :-D
+",indexzero,yawnt
+537,2014-01-08 13:06:55,"@jcrugzz yeah sure I'll take care asap
+",cronopio,jcrugzz
+535,2013-12-27 05:49:44,"@yawnt I use `http-proxy` npm module, version `0.10.3`.
+In my use case:
+
+
+
+run the proxy server, and then visit `localhost:9001` in browser, it will be response `An error has occurred: {}`.
+and you remove the comment of `process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '0';`,
+you can visit the website success.
+",switer,yawnt
+535,2013-12-27 09:28:32,"Ok, thanks @yawnt, but why don't you publish `caronte` to npm ?
+",switer,yawnt
+527,2014-09-30 18:56:20,"@jcrugzz I see, OK I'll start handling that.  Are you saying that with `0.10.x` a proxyError event would be raised, but is internally handled?
+",seglo,jcrugzz
+527,2014-10-01 00:37:16,"@jcrugzz Thanks for the example.  I've made the appropriate updates to my project.
+",seglo,jcrugzz
+527,2014-12-01 05:28:34,"@jcrugzz 
+I'm even getting hangups while loading images and css besides queries and other services.
+
+REQUESTS :
+req >> /images/user.png
+req >> /js/lib/text-angular.min.js
+
+ERROR :
+Error: socket hang up at createHangUpError (http.js:1472:15) at Socket.socketCloseListener (http.js:1522:23) at Socket.EventEmitter.emit (events.js:95:17) at TCP.close (net.js:465:12)
+
+Error handling CODE :
+
+var proxy = httpProxy.createProxyServer({});
+proxy.on('error', function (err, req, res) {
+    maintainErrorLogs(err, req, res);
+});
+process.on('uncaughtException', function (err) {
+    maintainErrorLogs(err);
+});
+function maintainErrorLogs(error, req, resp) {
+    var reqInfo = """";
+    if(req){
+        reqInfo = ""req >> ""+req.url+"">>>host>>>""+req.headers.host;
+    }
+    getCollection(Config.LOGTABLE, Config.LOG_DB, function (err, logCollection) {
+        if (err) {
+            printError(error, err, reqInfo,req, resp);
+        } else {
+            logCollection.insert({""errorTime"": new Date(),reqInfo:reqInfo, error: error.stack || error.message || error}, function (err) {
+                printError(error, err, reqInfo,req, resp);
+            })
+        }
+    })
+}
+function printError(mainError, dbError, reqInfo,req, resp) {
+    if(reqInfo && req){
+        console.error(reqInfo);
+    }
+    if (mainError) {
+        console.error(""Error in ProxyServer : "" + mainError.stack || mainError.message || mainError);
+    }
+    if (dbError) {
+        console.error(""Error in ProxyServer (DB): "" + dbError.stack || dbError.message || dbError);
+    }
+    if(resp){
+        resp.writeHead(500, {
+            'Content-Type': 'text/plain'
+        });
+        resp.end('Something went wrong during redirection. We are reporting an error message.');
+    }
+}
+",ashu-daffodil,jcrugzz
+520,2013-12-18 11:06:22,"@cronopio looks good but i the travis CI build is failing, if you fix that we can merge :)
+",yawnt,cronopio
+520,2013-12-18 14:30:46,"@yawnt Thank you. Seems that there is a trouble running the coveralls script. Can I drop it from the `.travis.yml` and just set the `npm test` script?
+",cronopio,yawnt
+510,2014-02-01 19:08:28,"@jcrugzz something like this https://gist.github.com/pmalek/8756997 although I have tried many more options to pass in there but all the time I get the same issue
+
+
+",pmalek,jcrugzz
+510,2014-02-01 19:42:26,"@jcrugzz I have changed my options to look like this : 
+
+
+
+and my `createServer` to 
+
+
+
+( I have tried to remove the `ws`, `secure` and `xfwd` options) and now I do not get the aforementioned error but the page on `localhost:80` keeps loading as in an infinite loop ( I have my server listening on port `443` and I can see the http-proxy being created on port `80`)
+",pmalek,jcrugzz
+510,2014-02-01 20:32:04,"@jcrugzz Can you provide a `gist` how should I use it as I do not really understand what would be there for me if I throw away `.listen(80);` from it ?
+
+BTW: I already have an https server, that's what I need this proxy to redirect all of the clients to go from `localhost:80` to `localhost:443`.
+",pmalek,jcrugzz
+510,2014-02-01 21:53:48,"@jcrugzz My exact intentions are as follows: 
+
+I have a working sails web server on port `443` using https. I would like to make a proxy (redirect clients coming on port `80`) to force usage of https at port `443`. 
+
+So I thought using a `node-httpp-proxy` which would redirect all traffic from port `80` to `443` is a good idea. 
+
+I have tried your solution and I have the following error : 
+
+
+
+After that I have tried to change `secure: true` to `secure: false` and now it works but! on `http`. So I can access my server on both `http` (port `80`) and `https` (port `443`).
+
+Yet still I would like to redirect clients to `https` while connecting to port `80`.
+
+I have found this connected case https://github.com/mikeal/request/issues/418 and SO question https://stackoverflow.com/questions/14088787/hostname-ip-doesnt-match-certificates-altname which suggest to use 
+
+
+
+or 
+
+
+
+while passing arguments to tls server but those didn't work for me (still the error).
+",pmalek,jcrugzz
+510,2014-02-01 22:19:41,"@jcrugzz I get this ""loop"" (no response/timeout) again on port `80`.
+
+So let's summarize: 
+- with `secure: false` I can access the website both on port `80` (using `http`) and `443` (using `https`),
+- using `secure: true` I get `Error: DEPTH_ZERO_SELF_SIGNED_CERT` on port `80` but can access website through `https` on port `443` without any problems
+- with `agent: new Agent({ maxSockets: Infinity })` and no matter what `secure` is set to I get loop on port `80` and service ok on `443`
+",pmalek,jcrugzz
+510,2014-02-02 00:29:34,"@jcrugzz This still gave me the same result (or `DEPTH_ZERO_SELF_SIGNED_CERT`) and I have decided to use https://npmjs.org/package/express-force-ssl for this purpose but still I would like to  get that running (for different ports etc.)
+
+Maybe some other time.
+",pmalek,jcrugzz
+508,2014-02-11 18:30:40,"@cronopio I'm trying to do something similar (specifically, I want to be able to add CORS headers on the outgoing responses) and I see the passes, but I'm not seeing the proper method to use to add things to the passes?
+
+I'd like to add it after `web-outgoing.writeHeaders` and before `web-outgoing.writeStatusCode`.  Is there any example available somewhere that shows how to do that?
+",cheddar,cronopio
+503,2013-10-21 19:02:50,"I was working on fixing this some hours ago, thank you so much. I did a test case with an error event handler but I miss the callback test, thanks for add it, follow the patter that @yawnt suggest and we'll merge this asap
+",cronopio,yawnt
+503,2013-10-21 20:56:45,"@yawnt @cronopio I have moved the tests into a single file. Let me know if there is anything else you would like to see. Thanks!
+",mmoulton,yawnt
+503,2013-10-21 20:56:45,"@yawnt @cronopio I have moved the tests into a single file. Let me know if there is anything else you would like to see. Thanks!
+",mmoulton,cronopio
+503,2013-10-21 21:54:23,"Got ya. I was assuming that since I was testing from the `createProxyServer` method down and not just the changes I made to web-incoming that you would want them in that file. I can move them if you would like.
+
+On Oct 21, 2013, at 2:48 PM, yawnt notifications@github.com wrote:
+
+> hey @mmoulton, thanks for doing this, although you got the wrong file xD.. i need them to be in https://github.com/nodejitsu/node-http-proxy/blob/caronte/test/lib-http-proxy-passes-web-incoming-test.js since it's where you modified the code :)
+> 
+> —
+> Reply to this email directly or view it on GitHub.
+",mmoulton,mmoulton
+491,2013-09-27 12:47:35,"I keep trying to benchmark `caronte` branch (@indexzero: branch `v1.0.0-dev` does not exist), yet I keep getting:
+
+
+
+Target server stays up all the time, `ulimit` is set to reasonable values. @yawnt any idea?
+",mmalecki,indexzero
+491,2013-09-27 19:08:27,"@mmalecki error handling needs to be refactored as there is no easy way to handle the errors with how they are namespaced. See #462 
+",jcrugzz,mmalecki
+491,2013-10-18 05:06:41,"After some improve from @yawnt I ran again the benchmark and this what I got in my humble laptop.
+
+Node: v0.10.20
+Last commit at caronte branch: 86750c7e594c419dfae957aaf7e44e61e1d480e8
+wrk: wrk 3.0.1 [epoll] Copyright (C) 2012 Will Glozer
+
+
+
+I would love to see what numbers show at @indexzero's laptop because my humble laptop show some improve.
+",cronopio,indexzero
+488,2013-09-24 21:53:06,"hey @glasser,
+i think your solution is a bit too brutal as a workaround to be implemented without significant sacrifices.. we should, imho,  post this on [joyent/node](https://github.com/joyent/node/issues) and see what they say there about it
+
+could you do it since you uncovered this bug and know more about it? if not, i can handle this
+
+thanks for submitting the PR anyway :)
+
+regarding @RushPL 's comment i think he's referring to the performance that `ab` shows when tested against caronte.. there are a couple of things that make `ab` behave weirdly (most noticeably the fact that it's `HTTP1/0` and node allows only `HTTP1/1` requests, thus preventing me from sending a content length which `ab` requires).. using other `HTTP/1.1` perf suites hasn't shown, so far, significant penalties in using agents except the usual slow-down due to pooling
+",yawnt,glasser
+488,2013-09-24 21:56:36,"I am actually referring to a situation where many outgoing connections need
+to be made and a pool (by its nature) is limited. Hence the problem.
+
+2013/9/24 yawnt notifications@github.com
+
+> hey @glasser https://github.com/glasser,
+> i think your solution is a bit too brutal as a workaround to be
+> implemented without significant sacrifices.. we should, imho, post this on
+> joyent/node https://github.com/joyent/node/issues and see what they say
+> there about it
+> 
+> could you do it since you uncovered this bug and know more about it? if
+> not, i can handle this
+> 
+> thanks for submitting the PR anyway :)
+> 
+> regarding @RushPL https://github.com/RushPL 's comment i think he's
+> referring to the performance that ab shows when tested against caronte..
+> there are a couple of things that make ab behave weirdly (most noticeably
+> the fact that it's HTTP1/0 and node allows only HTTP1/1 requests, thus
+> preventing me from sending a content length which ab requires).. using
+> other HTTP/1.1 perf suites hasn't shown, so far, significant penalties in
+> using agents except the usual slow-down due to pooling
+> 
+> —
+> Reply to this email directly or view it on GitHubhttps://github.com/nodejitsu/node-http-proxy/pull/488#issuecomment-25045764
+> .
+",Rush,glasser
+488,2013-12-21 11:42:47,"i also tried completely without specifying an agent and it didn't leak as well.. waiting to hear from @glasser 
+",yawnt,glasser
+488,2014-05-09 23:14:23,"@jayharris id buy that. It seems that in that case it shouldnt leak sockets as it will only be making one request of that nature. I haven't run into this problem personally since we use an agent in our proxy that is handling sockets. I'd accept that patch.
+",jcrugzz,jayharris
+482,2013-09-17 20:28:11,"@yawnt thanks for the review.  I opened this PR as a discussion. I am happy to follow your `CONTRIBUTING.md` guidelines and add tests. 
+
+As for the use case, my goal was to make the options object consistent between the global `caronte.createProxyServer` and the per request `proxyServer.web|ws` calls. What do you think? 
+
+Let me know if you think this it is the right direction and I will modify and add tests. 
+",srossross,yawnt
+482,2013-09-21 00:25:21,"@yawnt let me know what you need to pull this in.
+",srossross,yawnt
+481,2013-09-17 18:45:00,"@jcrugzz thanks for the quick response ;)
+
+I'm assuming `caronte` can proxy to multiple targets right? I'll have to mess around with it. Thanks for the recommendation.
+",muffs,jcrugzz
+479,2013-09-17 17:31:02,"Yea its hard to be _exactly_ clear with this as it is all a matter of perspective. `web-outgoing` does make sense to me as the requests are being modified as they come in from the issuer with `web-incoming` (which is then proxied to the remote server) and when you send the response back to the issuer with `web-outgoing`, completing the reverse proxy. @yawnt maybe have it as `web-reverse` if that would make it more clear? What do you think @RushPL?
+",jcrugzz,yawnt
+475,2013-09-17 00:04:27,"@srossross good looks, thanks!
+",jcrugzz,srossross
+473,2013-09-17 03:08:07,"Hi @glasser thanks for take some time in reading the `caronte` branch.
+
+I just fixed the test suite in the `caronte-tests` according to the new changes, so, if you can propose a test case where we can reflect the behaivor that you said, would be very useful.
+
+More info on https://github.com/nodejitsu/node-http-proxy/pull/476
+
+Thanks!!
+",cronopio,glasser
+473,2013-09-17 08:34:17,"sounds about right.. fixed.. thanks
+also what @cronopio said.. it would be real useful :)
+",yawnt,cronopio
+468,2013-09-16 20:09:55,"@srossross hey, i saw you added to the PR auto-url parsing, so i'm closing this.. feel free to reopen should you have any more doubts :) 
+",yawnt,srossross
+463,2013-09-19 14:51:52,"The following [example](https://gist.github.com/jcrugzz/6624625) results in...
+
+
+
+For one the error should be handled if the `EventEmitter2` wildcards are working properly so I have not yet determined if the client will receive the `end` event (which it should) upon the server being destroyed due to the proxy crashing the process. 
+
+cc @yawnt
+",jcrugzz,yawnt
+463,2013-09-20 23:33:15,"Ok, @jcrugzz by now there are tests for `ws` and `socket.io` and not for `primus`, I'll try to write it
+",cronopio,jcrugzz
+463,2013-09-20 23:54:10,"@cronopio thanks! and make sure the test cases handle when the server closes and the proxy errors. Keep up the good work :)
+",jcrugzz,cronopio
+462,2013-09-21 07:01:24,"The root of the problem is that listening on a wildcard error listener (`ee.on('*:error', function (err) {}`) does not get picked up with this [check](https://github.com/nodejitsu/node-http-proxy/blob/caronte/lib/caronte/passes/web-incoming.js#L111-L113) so we will always throw an error in this use case. We should hae 
+
+@yawnt you think we could simplify the error listener in some manner (maybe to a simple `ee.on('error', function (err) {}`)? I feel like most use cases will only need this.
+",jcrugzz,yawnt
+462,2013-09-23 00:23:38,"As @srossross confirmed, we cannot use a single wildcard to cover multiple delimited sections. So if we are to continue to namespace the error handling in some way, we should choose something simpler. 
+
+So we should think about what distinctions are important when handling errors. The `web:error` and `ws:error` idea seems reasonable as we may want to handle those cases differently for cleaning up connections. @yawnt what are your thoughts?
+",jcrugzz,yawnt
+462,2013-09-27 19:33:57,"@yawnt EE3 works as intended, differences between normal EE and EE3 are explained in the README: https://github.com/3rd-Eden/EventEmitter3 ( also, it doesn't have namespaces ;-), never found them useful enough to implement )
+",3rd-Eden,yawnt
+462,2013-09-27 19:49:34,"@yawnt @3rd-Eden this sounds like a win. \o\
+",jcrugzz,yawnt
+462,2014-02-04 17:30:28,"@srossross yea i have been thinking how these should be separated. `wsError` is the best I've come up with for segmenting the two but still subideal. For now just do a check for `res.statusCode` or something of the sort. Messy I know but I'd love your thoughts on what you think works :)
+",jcrugzz,srossross
+444,2013-08-21 15:42:22,"@indexzero, @yawnt, thanks for the response.  One issue that I noticed is that `node-http-proxy` does not proxy websockets (at all) to tornado servers as of `node>=v0.8`
+
+To test this - Try proxying to an `IPython notebook`
+Use `*nix` OS (works on mac osx) download and install the anaconda Python Distribution http://continuum.io/downloads
+Run:
+
+
+
+Click `create notebook` to get to a page with a web-socket.
+",srossross,indexzero
+444,2013-08-22 13:15:56,"@srossross simpler than that, the `http-proxy` test-case for websocket just does the trick (ie: fails with node 0.10.x) : https://github.com/nodejitsu/node-http-proxy/tree/master/test/ws
+",jokesterfr,srossross
+444,2013-09-09 16:49:32,"@srossross i'm working on another repo that is going to be eventually merged into node-http-proxy
+",yawnt,srossross
+444,2013-09-09 20:13:06,"@yawnt: Is there a way to help? Is it your branch 10.x specifically?
+",Rush,yawnt
+444,2013-09-15 10:19:43,"@RushPL @srossross I believe Yawnt is working on https://github.com/yawnt/caronte.git
+",robertjpayne,srossross
+416,2013-10-30 12:06:05,"@mmalecki Do you want more informations ?
+",MiLk,mmalecki
+416,2013-10-30 15:41:09,"@MiLk We are in the process of a complete rewrite of `node-http-proxy`. Can you try out the `caronte` branch and see if this resolves your problem?
+",indexzero,MiLk
+416,2013-10-30 16:16:53,"@sequoiar: I think the fix originally given by @MiLk suffices, and has the benefit of being slightly simpler.
+",mwilliamson,MiLk
+408,2015-07-09 14:53:53,"@jcrugzz I am unable to get https to work in `node-http-proxy`, here's the code example https://gist.github.com/steelbrain/b24f795fe92ec229ddb9#comment-1489331
+",steelbrain,jcrugzz
+407,2013-04-21 20:25:30,"@GUI If all PRs were this good the world would be a better place. You sir, are a hero.
+",indexzero,GUI
+402,2013-04-10 04:38:35,"thank you @pkarc! just lost 5 hours on this one. works for us.
+
++1 
+",breck7,pkarc
+402,2013-04-10 05:37:14,"@pkarc Thanks for this. Can you confirm the fix is backwards compatible with node@0.8.x? 
+",indexzero,pkarc
+402,2013-04-17 22:30:20,"This also is helping us a bit, but not quite a full fix--still getting weird behavior. Haven't quite dived down into the details as much as @glasser, but I can second that this is not quite a full fix.
+",breck7,glasser
+402,2013-07-20 16:39:44,"Awesome, thanks @indexzero , @cronopio !
+",breck7,indexzero
+395,2015-10-16 16:25:53,"I'm also trying to proxy a youtube video, based on @indexzero 's example, I tried:
+
+
+
+and
+
+
+
+but when I'm connecting to the new server, i'm getting:
+
+
+
+The `.googlevideo.com` link works fine if I load it in the browser thought (it's the direct video link from a random youtube video)
+
+Any hints on how I might get this working?
+",jaruba,indexzero
+395,2015-10-16 22:03:55,"@jcrugzz thanks for answering, my first issue was that I indeed did not read the readme carefully the first time.. I had to proxy an entire website (not just a page), I got it working with:
+
+
+",jaruba,jcrugzz
+395,2015-10-16 22:20:03,"@jcrugzz @indexzero I seem to have a different sort of problem now though, the proxy seems to be created successfully, so these links both work:
+
+
+
+
+
+but when I change the server ip to my LAN ip, it just gives me a blank page (even from the same PC that creates the server, no errors in the console):
+
+
+
+what could cause this?
+",jaruba,indexzero
+395,2015-10-16 22:20:03,"@jcrugzz @indexzero I seem to have a different sort of problem now though, the proxy seems to be created successfully, so these links both work:
+
+
+
+
+
+but when I change the server ip to my LAN ip, it just gives me a blank page (even from the same PC that creates the server, no errors in the console):
+
+
+
+what could cause this?
+",jaruba,jcrugzz
+390,2013-03-23 15:31:46,"@mmalecki  which exact example you mean?
+",sequoiar,mmalecki
+388,2013-03-22 01:16:52,"@samalba Could you add a test case for this?
+",indexzero,samalba
+388,2013-12-12 17:49:19,"Nice! @jcrugzz any ETA for this 1.0 release?
+",samalba,jcrugzz
+388,2013-12-27 07:46:40,"Despite @samalba _never_ submitting a test for this I'm going to roll this into the last `0.10.x` maintenance release because the logic is sound. 
+
+@samalba write moar tests!
+",indexzero,samalba
+387,2013-04-02 15:31:21,"@jcrugzz is the issue reproducible for you? I have found the same problem. 
+",desunit,jcrugzz
+387,2013-04-22 21:01:02,"@indexzero  Can you reopen the issue at least, since the fix is buggy as described in https://github.com/nodejitsu/node-http-proxy/pull/402#issuecomment-16539748  ?  (It sometimes double-sends the first chunk of the post-headers part of the proxied websocket data).  I know that you said you're planning to do a full rewrite of this code for the 0.10 API but it might be worth keeping open the record of the fact that the current code is buggy...
+",glasser,indexzero
+386,2013-10-20 16:20:54,"@yawnt I agree with a separate module.
+People are you using this in production, so provide an alternative for the new release.
+
+Even if you are not going to release it with 'caronte', having a very simple routing table example for 'caronte' will be very helpful!
+",mcollina,yawnt
+384,2014-03-04 21:20:06,"@indexzero @No9 This merge/code has been lost to later merges. This is a very useful information, and should be in the README!
+
+Please re-pull this.
+",gurjeet,No9
+384,2014-03-04 21:59:24,"@jcrugzz Thanks for letting me know! I was planning on using it, but you saved me some head-banging :)
+
+Are there any alternatives packages available?
+",gurjeet,jcrugzz
+384,2014-04-16 22:12:32,"@jcrugzz Thanks for your kind words!  
+
+So i have updated the harmon docs and tests to reflect the 1.x release version of http-proxy and we have upgraded trumpet. Can you let me know if you would accept a pull request on the README again or are you putting it somewhere else now? 
+cc @gurjeet @indexzero  
+",No9,jcrugzz
+384,2014-04-17 00:25:13,"@No9 I would totally accept a PR to put that in the docs :). 
+",jcrugzz,No9
+382,2013-03-14 09:29:24,"@PhilHongKong Harmon is designed to plug into node-http-proxy https://github.com/No9/harmon 
+It uses trumpet and so is stream based to work around the buffering problem that @indexzero mentions. It uses an element and attribute selector to enable manipulation of a response. 
+",No9,indexzero
+382,2013-03-14 10:18:41,"Nice. @No9 could you make a pull-request to README.md about this? We get this question a lot.
+",indexzero,No9
+382,2015-04-11 23:52:42,"Thanks for your reply @No9 
+That example seems to replace the entire head tag including the script tag which outputs the message ""The piece of javascript also inside the head tag wasn't touched :)""
+
+Before:
+`<html><head><script>window.onload = function () {document.getElementById(""message"").innerHTML = ""The piece of javascript also inside the head tag wasn't touched :)"";}</script></head><body><h3>A simple example of injecting some css to rotate an image into a page before it is rendered.</h3><image src=""http://i.imgur.com/fpMGL.png"" /><div id=""message""></div></body></html>`
+
+After:
+`<html><head><style type=""text/css""> img { -webkit-transform: rotate(-90deg); -moz-transform: rotate(-90deg); filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);}</style></head><body><h3>A simple example of injecting some css to rotate an image into a page before it is rendered.</h3><image src=""http://i.imgur.com/fpMGL.png"" /><div id=""message""></div></body></html>`
+",akshayl,No9
+378,2013-03-10 19:32:50,"@indexzero You actually supports header rewriting of the `Host` header. And thats probably all @colmsjo needs.
+
+@colmsjo It should be as simple as setting `changeOrigin: true` in the `options` object.
+
+If you need more advanced header rewriting, it can easily be implemented by a middleware which changes `req.headers`.
+",tellnes,indexzero
+370,2013-03-22 16:09:52,"@jmatthewsr-ms I'm reopening after @3rd-Eden bought it to my attention because because it appears the fix for underlying issue in node core was not resolve. Is this correct?
+",indexzero,jmatthewsr-ms
+370,2013-04-09 07:39:01,"@indexzero @mmalecki 
+
+I'd advise us to accept this pull request. I've been doing a lot of WebSocket proxy tests lately because I was interested in to seeing how our proxy solution compares to other proxies such as `nginx` and `haproxy`.
+
+I've deployed the proxy on a 512mb joyent virtual machine running the latest ubuntu and hit it using [observing/thor](/observing/thor) with: 
+
+
+
+I saw a peak memory of `280mb` before this patch. After applying this patch and re-running the command it saw a maximum of `102mb` which is significant decrease. So even if this is going to be fixed in later version of Node. It makes sense to pull this asap.
+",3rd-Eden,indexzero
+370,2013-04-09 16:36:48,"@jmatthewsr-ms yes, it's being worked on but it would only be made available in node 0.12, which still another stable release away and as we have no idea how long it will take before 0.12 is released, it makes sense to merge this in IMHO (as well as in all other projects).
+",3rd-Eden,jmatthewsr-ms
+356,2013-01-08 13:27:30,"@colinmollenhour Can you add tests for this? 
+",indexzero,colinmollenhour
+356,2013-07-09 08:18:42,"Hi @colinmollenhour, @indexzero 
+
+I'm trying to leverage proxyResponse event to modify response headers that get setted up by the proxied server. 
+This means that the server behind the proxy put some data in an ""x-cust-field"" on the `res` object so and Proxy can read and process it on proxyResponse. Now I dont want this info to be sent to the client, options are: 
+removing the field or just edit it removing sensible data.
+
+
+
+I'm not sure if I should act on `res`  or `response` (the latter has no setHeader methods), this seems possible so what am I missing?
+Thanks
+",Giuliano84,colinmollenhour
+356,2013-07-09 08:18:42,"Hi @colinmollenhour, @indexzero 
+
+I'm trying to leverage proxyResponse event to modify response headers that get setted up by the proxied server. 
+This means that the server behind the proxy put some data in an ""x-cust-field"" on the `res` object so and Proxy can read and process it on proxyResponse. Now I dont want this info to be sent to the client, options are: 
+removing the field or just edit it removing sensible data.
+
+
+
+I'm not sure if I should act on `res`  or `response` (the latter has no setHeader methods), this seems possible so what am I missing?
+Thanks
+",Giuliano84,indexzero
+353,2012-12-26 16:29:55,"@indexzero I followed [this example](https://github.com/nodejitsu/node-http-proxy/blob/master/examples/middleware/url-middleware.js#L40-L43) and it seemed to work after using [proxy-by-url](https://github.com/dominictarr/proxy-by-url). I am trying to understand how proxy-by-url does it differently. Is [setting the headers](https://github.com/dominictarr/proxy-by-url/blob/master/index.js#L49-L53) making it work?
+",jingweno,indexzero
+353,2013-03-09 14:13:14,"@indexzero I tried `0.9.1` with the following:
+
+
+
+curl with the following:
+
+`curl http://127.0.0.1:8001/path` still routes to the home page of pow instead of foo.dev. As I mentioned earlier, I think the problem is due to the url and the host name are not set. With `porxy-by-url`, stuff works (https://github.com/dominictarr/proxy-by-url/blob/master/index.js#L49-L51). 
+
+Is this expected behaviour? Otherwise how can I help?
+
+Cheers,
+Owen 
+",jingweno,indexzero
+353,2014-08-13 11:15:16,"@jcrugzz The api has changed, but I am still not able to proxy to a pow domain. I haven't looked into exactly what is causing the issue, but this seemed like a relevant place to post.
+",mattbeedle,jcrugzz
+352,2012-12-20 03:48:04,"@mrryanjohnston I think I know the problem. Try using 'dev.example.com/test/' in the proxy table.
+
+@indexzero The test prefix makes sense. He's requesting the 'dev.example.com/test' thing, so if he doesn't use the '/test/' prefix, it won't route to that express server, thereby not finding that path. The fact that he got that express error shows that it's connecting to the express server, like he wants. It's just due to the way I wrote the URL replacement code. I think we can fix this by adding a '/' at the end of the origin URL if the user didn't add it, or removing the first '/' in the request URL, and adding it back in if it's not there at the end of that transformation process. I think the latter is a better idea.
+",coderarity,indexzero
+352,2012-12-27 18:29:35,"Sorry about the delay on this one, guys. Holidays and whatnot :)
+
+@coderarity package.json says `""version"": ""0.8.5""`. I did try using dev.example.com/test in the routing table, but to no avail. I'll pop back in irc when I'm back from holiday related festivities. Thank you for your patience, once again.
+
+@indexzero If I change the line to the following, the socket.io script is placed at localhost:8080/socket.io/socket.io.js as expected: `var proxyServer = httpProxy.createServer(9000, 'localhost').listen(8080);`
+",mrryanjohnston,coderarity
+352,2012-12-27 18:29:35,"Sorry about the delay on this one, guys. Holidays and whatnot :)
+
+@coderarity package.json says `""version"": ""0.8.5""`. I did try using dev.example.com/test in the routing table, but to no avail. I'll pop back in irc when I'm back from holiday related festivities. Thank you for your patience, once again.
+
+@indexzero If I change the line to the following, the socket.io script is placed at localhost:8080/socket.io/socket.io.js as expected: `var proxyServer = httpProxy.createServer(9000, 'localhost').listen(8080);`
+",mrryanjohnston,indexzero
+352,2013-01-04 00:46:36,"@coderarity So this does two things:
+1. You can no longer go to dev.example.com/test in a browser window; only dev.example.com/test/ will work.
+2. This produces an error that seems to be on part of socket.io: `GET http://dev.example.com/socket.io/1/?t=1357260316641 404 (Not Found)`. This occurs in socket.io.js on line 1659. Correct me if I'm wrong, but this seems to be an error on part of socket.io.
+",mrryanjohnston,coderarity
+352,2013-01-04 04:14:38,"How are you connecting to socket.io? I think that might be where the
+problem is from here.
+
+About #1, that's part of fixing the proxy table issues.
+
+On Thursday, January 3, 2013, Ryan Johnston wrote:
+
+> @coderarity https://github.com/coderarity So this does two things:
+> 1. You can no longer go to dev.example.com/test in a browser window; only
+> dev.example.com/test/ will work.
+> 2. This produces an error that seems to be on part of socket.io: GET
+> http://dev.example.com/socket.io/1/?t=1357260316641 404 (Not Found). This
+> occurs in socket.io.js on line 1659. Correct me if I'm wrong, but this
+> seems to be an error on part of socket.io.
+> 
+> —
+> Reply to this email directly or view it on GitHubhttps://github.com/nodejitsu/node-http-proxy/issues/352#issuecomment-11867985.
+
+## 
+
+Christian Howe (coderarity)
+",coderarity,coderarity
+352,2013-01-29 00:20:10,"@coderarity Sorry for the delay on this. Haven't had a chance for fun side-projects for a while :)
+
+I'm currently connecting with an absolute link: `var socket = io.connect('http://dev.example.com/test/');`
+
+I understand it's not a super high-priority thing for this project. All the same, thanks for all of your help on this. 
+",mrryanjohnston,coderarity
+347,2012-12-21 01:30:48,"@mmalecki Great news, thanks! Looking forward to v0.8.17!
+",jcheng5,mmalecki
+347,2012-12-22 05:00:57,"Great, thank you @mmalecki, much appreciated!
+",jcheng5,mmalecki
+344,2012-12-22 20:26:23,"@indexzero is correct. Do you have a reproducible example of such behavior?
+",mmalecki,indexzero
+343,2012-11-29 12:50:36,"@indutny It's hard to merge this without some kind of reproducible test.
+",indexzero,indutny
+343,2015-10-12 13:59:13,"@indexzero: SPDY/HTTP2 is becoming more widespread, is it still out of scope for this project? I'd greatly appreciate it if you'd reconsider.
+",JakeHedman,indexzero
+341,2013-01-02 07:22:18,"+1
+I have used x-forwarded-port with nginx; the expected value of the header is the port of the original request before it was proxied.
+
+Say my node server is running on 3000 and is proxied by node-http-proxy on 3001.
+I would like to know when crafting URLs for the original client that the public port is 3001.
+At the moment node-http-proxy would give me something like 62112.
+
+I have tested @blahed's patch and it works for me.
+",hmalphettes,blahed
+339,2012-11-29 11:40:34,"@oost Nice. Will try to get this merged in soon. Thanks for the example!
+",indexzero,oost
+338,2013-02-14 12:53:03,"Actually, now that I think about it, a `DELETE` request can have a body. We happen to use such requests ourselves in production.
+We should check if a `Content-Length` is already defined, I think.
+@indexzero @ian7 opinions?
+",mmalecki,indexzero
+337,2012-11-29 11:51:39,"Good catch @indutny 
+",indexzero,indutny
+334,2013-01-21 16:30:18,"hi @KimSchneider, 
+
+Finally, did you fix the performance problem when the requests are in SSL with node 0.8?
+
+What was the cause of the problem?
+",abarre,KimSchneider
+334,2013-01-22 22:03:20,"Meh. If you're into that sort of masochism go for it. This is an issue related to SSL performance in node that @indutny is working hard on.
+
+In the meantime you can just put [stud](https://github.com/bumptech/stud) in front of node-http-proxy. But I'm pretty sure @KimSchneider is not interested in our advice as he has not provided any demostrable data for us to help debug the problem with besides node versions. 
+",indexzero,KimSchneider
+334,2013-01-23 08:38:58,"@indexzero, do you have the reference to the issue related to the SSL performance in node?
+",abarre,indexzero
+327,2013-03-09 06:04:03,"@jpetazzo This looks good. I'll cherry-pick it. Been looking at hipache the last few days; nice work.
+",indexzero,jpetazzo
+306,2012-11-29 18:07:18,"I was referring to `node-http-proxy@0.8.2`, so yeah, it should be fixed (we'll give it a try asap)
+
+Thanks @indexzero 
+",shatsar,indexzero
+305,2014-05-16 17:47:40,"@jcrugzz thanks for the hints. with wrk the results are the same:
+
+Running 10s test @ http://10.10.10.1:9003/ (direct)
+  1 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    40.56ms    2.25ms  62.01ms   88.99%
+    Req/Sec     2.47k    99.67     2.54k    87.34%
+  24376 requests in 10.00s, 4.95MB read
+Requests/sec:   2437.32
+Transfer/sec:    506.56KB
+
+Running 10s test @ http://10.10.10.1:8003/ (http-proxy)
+  1 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   256.17ms   20.93ms 297.68ms   65.28%
+    Req/Sec   390.72     44.85   500.00     72.22%
+  3900 requests in 10.01s, 0.86MB read
+Requests/sec:    389.60
+Transfer/sec:     88.27KB
+
+passing an agent to http-proxy is the next thing... hold on
+",zlaoz,jcrugzz
+305,2014-05-17 11:11:07,"@jcrugzz i created a gist with all required code-snippets and infos: https://gist.github.com/zlaoz/4a730bfe7f322f6442fd#file-node-http-proxy-slow-performance
+",zlaoz,jcrugzz
+305,2014-07-16 13:47:18,"@jcrugzz sry for the late response! tried it using `0.11.13` i got 50ms (direct) and 200ms (proxied). i tried it locally too and i got 12ms (direct) and 90ms (proxied).
+",zlaoz,jcrugzz
+297,2012-08-17 03:38:41,"@thefosk That's not true, we don't actually pause the `req` in `.buffer` (see: https://github.com/nodejitsu/node-http-proxy/blob/master/lib/node-http-proxy.js#L202-255) So your `req.on('data' ...` statements should work. 
+
+Perhaps the data has already been emitted before you add the listener?
+",indexzero,thefosk
+296,2012-08-10 01:06:51,"@AvianFlu thanks! updating `node` and `npm` helped find the real issue: My network filesystem (VirtualBox's shared folders) doesn't support creating symlinks apparently.
+
+It's not very common for filesystems to not to support symlinks, so I'll let someone else decide if it's worth supporting. I can workaround it by moving to a different filesystem.
+",pixelcort,AvianFlu
+294,2013-03-09 05:52:45,"@gilad61 @mmalecki This is a subtle but good fix; we should be setting header names consistently. `res._renderHeaders()` is still case sensitive even in the latest stable versions of node:
+- `v0.8.22`: https://github.com/joyent/node/blob/v0.8.22/lib/http.js#L713-L727
+- `master`: https://github.com/joyent/node/blob/master/lib/http.js#L740-L754
+",indexzero,mmalecki
+294,2013-03-09 05:52:45,"@gilad61 @mmalecki This is a subtle but good fix; we should be setting header names consistently. `res._renderHeaders()` is still case sensitive even in the latest stable versions of node:
+- `v0.8.22`: https://github.com/joyent/node/blob/v0.8.22/lib/http.js#L713-L727
+- `master`: https://github.com/joyent/node/blob/master/lib/http.js#L740-L754
+",indexzero,gilad61
+266,2012-07-18 19:18:51,"@cronopio sounds great! Thanks. :)
+",jfhbrook,cronopio
+265,2012-11-07 19:12:12,"@indexzero wow, I wish you said that on the homepage. I've been struggling to find that out for hours now.
+",lookfirst,indexzero
+258,2013-03-09 11:39:48,"@indexzero tested and ran with no problems
+This issue is resolved.
+Thanks
+",No9,indexzero
+251,2012-05-22 19:59:38,"@ryanstevens nice catch.
+",indexzero,ryanstevens
+251,2012-06-19 01:08:06,"@rampr Interesting. If you'd like to make another pull request I will gladly accept. :)
+",jfhbrook,rampr
+250,2012-05-22 19:32:11,"@ryanstevens Wanna PR us this change? I'll pull it. :D
+",jfhbrook,ryanstevens
+250,2014-12-17 14:07:20,"@jcrugzz thanks for the response, how can I check/change that on nodejitsu? Command line / packages.json settings?
+
+For now I only have node engine specified. Actually, I think that forcing SSL's should be done by default if one specified SSL certificates in Nodejitsu dashboard (as it's the only reasonable approach to be honest)
+",grabbou,jcrugzz
+247,2012-05-22 09:44:15,"@indexzero I can see your point, although I would argue that supporting a standard method for HTTP stream aggregation, even in most ""transparent"" proxies is worth bending the rules.
+
+Would this be perhaps acceptable as an option?
+Alternatively I might have a go at making this work with the start event, but for some reason I couldn't make it work when I tried it.
+",1stvamp,indexzero
+247,2012-05-31 00:33:41,"Yeah, @indexzero is right, we shouldn't add headers by default. Maybe only set it when the `changeOrigin` option is set, as in nodejitsu/node-http-proxy#247.
+",coderarity,indexzero
+233,2012-04-19 21:00:12,"I'm also stuck on this.  I'm using npm version 1.1.18.  @Marak is there something socket.io 0.6.18 provides that socket.io 0.6.17 does not?
+",gordoncww,Marak
+217,2012-07-22 06:44:25,"Looks like this should be fixed from the PR from @coderarity  
+",indexzero,coderarity
+217,2013-04-02 03:48:18,"@indexzero I'm not quite sure how this was fixed, I still can't get a similar proxy usecase to run:
+
+
+",pulkitsinghal,indexzero
+214,2012-03-28 03:42:20,"@thefosk You should say that in the pull request =D
+",coderarity,thefosk
+203,2012-07-23 20:43:59,"@indexzero thanks, that would be great.
+",niallo,indexzero
+197,2012-07-10 13:18:57,"I have the same question as you and I am keeping trying now. So far as I concerned, I doubt that it does NOT support **standalone https proxy**, which is a quite common use, since there is no reason for not being mentioned in all passages one could reach  in examples or even in Google. The two demos about **https** only work in **reverse** proxy scenario. @coderarity 
+",kainliu,coderarity
+195,2012-03-02 07:01:02,"@indexzero could we get an update on this?
+",AndreasMadsen,indexzero
+195,2012-03-04 07:36:18,"@indexzero @Marak hearing crickets here ...
+",tglines,indexzero
+190,2012-02-12 02:30:54,"@fjakobs We do not use JSLint. We use JSHint with these settings: https://gist.github.com/1263182. We've been a bit lax on enforcing since we were waiting on `laxcomma` to his `jshint:master` which landed a couple weeks ago
+",indexzero,fjakobs
+190,2012-07-25 04:48:03,"@fjakobs Thanks anyway. FYI. The code base it pretty much JSHint compliant now. I did some work on it over the weekend.
+",indexzero,fjakobs
+183,2012-01-30 10:23:47,"Thanks guys for the pointers. I guess what I'm trying to do is ""do this request and then do something to the returned stuff and THEN send it back"" as @jesusabdullah has pointed out. @elfsternberg: thanks for the code pointer. I'm actually using that code as a basis to my proxy server, but I'm having lots of trouble getting all to work. Seeing as this isn't related to issues with this project, I'll just try stackoverflow.com. Thanks guys.
+",hynese,elfsternberg
+180,2012-01-26 21:39:08,"@AvianFlu: Thanks for the buffer pointer, but this ended up being caused by express's body-parsing.
+
+Instead of declaring the API route (for proxying) within express routes, I configured it as middleware and `use`d it _before_ `express.bodyParser()`.
+
+Some coffeescript of the solution:
+
+
+",joeyAghion,AvianFlu
+177,2012-01-24 10:08:34,"@indexzero 
+Do node-http-proxy actually set headers as a client or as a server? I think nginx is sending headers as a client.
+",inspiredjw,indexzero
+174,2012-01-08 07:43:01,"@metahack Seem to be several bad merges in this commit, e.g. https://github.com/metahack/node-http-proxy/commit/1d51b7897f4cc05e8387a12a03b8c5a1f0140b0a#L1R37
+",indexzero,metahack
+171,2012-02-14 18:28:20,"Awesome. Good to know it's not our fault. Thanks for heads up guys! @Marak, you won internets for finding it!
+",mmalecki,Marak
+161,2011-11-26 21:00:14,"Thanks for the heads up @mmalecki, I'll switch over to 0.4.12 to run node-proxy for now, glad I'm not crazy :)
+",wavded,mmalecki
+159,2011-11-23 18:59:48,"@AvianFlu: Would these issues be related to how, under 0.6.2, I've never seen and 'end' or 'close' event from the proxy?  
+",elfsternberg,AvianFlu
+159,2011-11-24 03:14:38,"@AvianFlu: Never mind.  That seems to be an oddity related to Chromium.  I get 'end' events when I use Lynx.  Weird.  Worrisome?
+",elfsternberg,AvianFlu
+150,2011-11-11 14:54:17,"@dominictarr, you rock! Works perfectly now
+",gotwarlost,dominictarr
+141,2011-11-04 11:11:07,"@c4milo is this still an issue?
+",dominictarr,c4milo
+141,2012-03-31 02:11:10,"@c4milo have you tested this yet (see AvianFlu's comment)? is it still an issue?
+",coderarity,c4milo
+141,2012-03-31 02:19:06,"Oh, not really. I ended up using haproxy.
+On Mar 30, 2012 10:11 PM, ""Christian Howe"" <
+reply@reply.github.com>
+wrote:
+
+> @c4milo have you tested this yet? is it still an issue?
+> 
+> ---
+> 
+> Reply to this email directly or view it on GitHub:
+> 
+> https://github.com/nodejitsu/node-http-proxy/issues/141#issuecomment-4854153
+",c4milo,c4milo
+141,2012-06-05 22:30:36,"@c4milo 0.8.1 is out, please test it for reproduce this issue or close it. Thanks!
+",cronopio,c4milo
+133,2011-10-19 07:16:22,"@maxogden well, that was what I thought, but it seems as I never manage to find any port that is not already busy, because it keeps failing :/
+",manast,maxogden
+131,2011-10-18 16:58:23,"What @indexzero says. Trying to listen on port 7 makes no sense anyway. Try to set up a web server on this port. Browsers refuse to connect to it (at least so do FF and Chrome on Linux).
+",mmalecki,indexzero
+129,2011-10-17 14:05:21,"@dominictarr
+
+The reporter is complaining that pizza.com/taco/muffins is proxied to 127.0.0.1:8099/taco instead of to 127.0.0.1:8099/muffins/taco, which according to the documentation are both wrong behaviors, or at least thats my interpretation of what I read. But besides that I think that proxying just to  127.0.0.1:8099 should be the most common use case, i.e., you have several servers and you want to place them under different sub routes (to avoid for instance cross-browser scripting problems, etc). If we keep the subroutes in the proxied request, then we are creating a coupling between the proxy and the servers, both need to be always in sync, which I dont think is a good idea. Every server should be agnostic of where the proxy configurator has placed it...
+Wouldnt it be better to support this kind of routes if we really want to keep subroutes:
+
+
+
+?
+",manast,dominictarr
+129,2011-10-17 20:55:15,"@manast, your description is better. it would probably only be a small change from what @maxogden has done to get that behavior.
+",dominictarr,maxogden
+127,2011-10-11 05:30:18,"The `.hasOwnProperty()` is just to see whether `opts` has those fields since if you set them to falsey values they aren't sent.
+
+@indutny: https://gist.github.com/1275259 and https://github.com/substack/bouncy/tree/master/bench
+",substack,indutny
+125,2011-10-07 17:33:20,"@koichik This does not seem to completely fix issue #59 because the `HTTP/1.1` status line is still returned. Not `HTTP/1.0`
+",indexzero,koichik
+122,2011-10-03 23:55:34,"@temsa Thanks. Cherry-picked in b7adf866b595f0d64a3ef6bde19271276450e723 and published in `node-http-proxy@0.7.3`
+",indexzero,temsa
+116,2012-04-02 14:42:07,"@isaacs with 0.6.0 out would it make sense to look at this again?
+",coderarity,isaacs
+116,2012-07-22 06:38:30,"From what I've heard from @isaacs this doesn't make sense until `node@0.10.0` has a stable domains API
+",indexzero,isaacs
+116,2012-07-31 13:49:04,"How are domains involved here? I'm down with maintaining our code to make it match current API.
+
+Also, looks like `.write()` shouldn't throw anymore. @isaacs, is that correct?
+",mmalecki,isaacs
+116,2013-04-24 08:19:29,"Since 0.10 is released, can we consider this refactoring again?
+
+I see that @mmalecki has prepared a branch https://github.com/nodejitsu/node-http-proxy/tree/refactor with the pipe implementation a few month ago.
+
+The code would be far easier to maintain and also it would simplify a lot the modification of the HTML response going back to the user.
+",abarre,mmalecki
+112,2011-10-11 14:49:11,"@indexzero
+
+any news on this issue? :)
+",manast,indexzero
+104,2012-05-11 12:26:31,"@indexzero I'll see if I can start throwing together a patch today!
+",brianloveswords,indexzero
+104,2012-05-29 11:32:53,"@indexzero @brianloveswords Hey, guys. I don't want to be a party-crasher but this neat bug still isn't fixed yet.If you don't want to or can't fix it could you please point me to the lines of codes, that probably cause the problem? I'd then try to fix it myself and make a pull request.
+
+Thanks!
+",buschtoens,indexzero
+100,2011-09-02 15:16:24,"I'll merge and push this out tonight.
+
++1 to refactoring this with BufferedStream and Stream.pipe. The big changes are in the `v0.7.x` branch which I hope on finishing sometime in the next few weeks. @isaacs I'm porting over your changes as they come in to this branch. 
+",indexzero,isaacs
+98,2011-08-30 22:43:58,"Thanks for all the patches @isaacs! 
+
+I had a feeling we might run into issues like this once we patched those last errors. We'll get someone to review and merge shortly.
+",Marak,isaacs
+97,2011-08-30 19:37:56,"@indexzero I don't know if it's a core bug, I don't know enough of the node-http-proxy module to debug it further. I might have missed something obvious.
+",3rd-Eden,indexzero
+97,2011-09-21 19:27:42,"@mmalecki Thanks for the information, but @3rdeden has confirmed that `socket.io@latest` works on node stand-alone, but not behind node-http-proxy. 
+
+So the binary frames may be a red herring, but I will look into it.
+",indexzero,mmalecki
+97,2011-09-29 23:18:10,"The request gets stuck, as @mmalecki said, and then, since there's no error status, eventually https://github.com/joyent/node/blob/v0.4.12/lib/http.js#L1284-1293 is reached and the ""socket hang up"" message is received.  The real key to fixing this lies in figuring out how to make it past https://github.com/joyent/node/blob/v0.4.12/lib/http.js#L753 to the socket.write() call at the end of that method.
+",AvianFlu,mmalecki
+97,2011-10-01 16:52:08,"@indexzero fix confirmed
+",3rd-Eden,indexzero
+93,2011-08-28 05:51:57,"@isaacs Merged and published as `http-proxy@0.6.3`. Point of question about testability: do you know a good way to reproduce `res.write()` throwing? 
+
+Would like to add this to the test suite.
+",indexzero,isaacs
+93,2011-08-28 22:23:22,"@indexzero I can't figure out how to reproduce it, either.  It shouldn't be possible.
+",isaacs,indexzero
+85,2011-08-03 16:20:10,"@AvianFlu i am implementing a proxy that simulate a ipad request, and iam trying to remove flash element in response body, how can i do that? thanks
+",raphaelcosta,AvianFlu
+84,2011-08-02 18:27:58,"@drjackal @KimSchneider is actually correct here. @dominictarr +1 to merge this
+",indexzero,KimSchneider
+84,2011-08-02 18:27:58,"@drjackal @KimSchneider is actually correct here. @dominictarr +1 to merge this
+",indexzero,dominictarr
+82,2011-07-29 18:30:56,"@AvianFlu, thanks for the reply!
+
+The example you posted shows how to connect to a target server/website that has multiple IPs/domains. So each request is routed to a different address of the target server.
+
+I have a different need. I have a machine with multiple IPs attached to its network interface. I want to use a different IP for each request I do to a website. This will avoid the target server to track the users who make the requests.
+
+I believe this is achievable by programming the net.Socket connection and would like to know if this project already support it in any way.
+
+Thanks
+",barbolo,AvianFlu
+74,2011-07-21 15:45:09,"@dominictarr Can we push forward on all of these refactor issues in a `v0.6.x` branch?
+",indexzero,dominictarr
+70,2011-07-18 09:07:47,"good work.
+
+I can see it work in firefox (note, firebug must be installed - to get console.log) 
+If you request localhost:6666/xhr (bypass proxy) it works correctly.
+If you request localhost:6060/xhr (through proxy) it does not work.
+
+the same behaviour occurs with curl. 
+
+I will tag this as confirmed bug, migrate this test to vows, then fix.
+
+thanks @fjakobs, good hunting! 
+",dominictarr,fjakobs
+68,2011-07-05 16:30:48,"I agree with @indutny.  This will most likely go away if you upgrade npm.  
+",AvianFlu,indutny
+66,2011-07-18 00:06:33,"@dominictarr @bmeck - Read what he is asking. He's not having an issue with basic proxying. 
+
+_But how to set it up so that content is actually served from the proxy server? I want to analyse the traffic before sending it through._
+
+@hynese - Can you be more clear as to what your issue is? Are you trying to do custom proxy logic? Check out the examples folder and this file: https://github.com/nodejitsu/node-http-proxy/blob/master/examples/standalone-proxy.js
+",Marak,bmeck
+66,2011-07-18 00:06:33,"@dominictarr @bmeck - Read what he is asking. He's not having an issue with basic proxying. 
+
+_But how to set it up so that content is actually served from the proxy server? I want to analyse the traffic before sending it through._
+
+@hynese - Can you be more clear as to what your issue is? Are you trying to do custom proxy logic? Check out the examples folder and this file: https://github.com/nodejitsu/node-http-proxy/blob/master/examples/standalone-proxy.js
+",Marak,dominictarr
+66,2011-08-28 06:02:41,"@hynese @marak @dominictarr @bmeck This is now resolve in the latest version of `node-http-proxy`. Check out some of the examples around ""middleware"" in: https://github.com/nodejitsu/node-http-proxy/tree/master/examples
+",indexzero,bmeck
+66,2011-08-28 06:02:41,"@hynese @marak @dominictarr @bmeck This is now resolve in the latest version of `node-http-proxy`. Check out some of the examples around ""middleware"" in: https://github.com/nodejitsu/node-http-proxy/tree/master/examples
+",indexzero,dominictarr
+62,2011-07-25 20:54:49,"@daemon-byte @bpierre  - To my understanding this issue only affects hostNameOnly mode. If you want a more robust proxy, you should be using the lower level APIs we expose ( like @indexzero has suggested ). 
+",Marak,indexzero
+62,2011-07-25 23:05:56,"@indexzero thanks for the details. Don't suppose you know the node.js bug tracker url do you? Interested to know what is going on under the hood with this one!
+",Irrelon,indexzero
+62,2011-07-26 01:29:46,"@daemon-byte @bpierre @coolbloke1324 @indexzero
+
+the feature indexzero refers to in
+
+> In the meantime, a recent feature has been added which may allow you work around this issue if you don't use the x-forwarded-\* headers. You can now pass in enableXForwarded: false in the options to HttpProxy instances and .createServer() and this will bypass the check which is throwing the exception: https://github.com/nodejitsu/node-http-proxy/blob/master/lib/node-http-proxy.js#L385
+> 
+> You will of course not get the x-forwarded-\* headers in your target application, but if that's not a concern for you this do the trick.
+
+is now available on npm in http-proxy@0.6.0
+",dominictarr,indexzero
+61,2011-06-16 04:13:29,"^ hah
+@indexzero - that sounds like an old aesop song, but i haven't heard that one...but he has that quote tattooed on his forearm(s?)
+",dtan,indexzero
+50,2011-05-13 22:36:16,"@indexzero looks good and works for me after getting around the origin mismatch.
+very nice.
+",jfis,indexzero
+41,2011-06-08 18:24:53,"@indexzero is this ticket still relevant? If so, should we get @olauzon to investigate? 
+",Marak,indexzero
+36,2011-05-18 23:22:05,"@johnae in addition to what @indexzero said, could you try with v0.5.3?
+",olauzon,indexzero
+36,2011-05-19 01:14:21,"@johnae Thanks for bearing with us on this! This was actually a nuance in the API that @olauzon picked up on. You are trying to proxy HTTPS to HTTP which before the version we just released, `v0.5.4`, was not possible from the `httpProxy.createServer()` API. 
+
+No changes need to be made to your code, but if you're interested in how to proxy HTTPS to HTTPS (as opposed to HTTPS to HTTP) checkout our examples:
+
+https://github.com/nodejitsu/node-http-proxy/blob/master/examples/proxy-https-to-https.js
+https://github.com/nodejitsu/node-http-proxy/blob/master/examples/proxy-https-to-http.js
+",indexzero,olauzon
+35,2011-07-08 12:53:20,"@eladb What messages are you trying to proxy that are not getting through? We have extensive test coverage for websockets that are all passing
+
+I think the correct approach here would be to make the encoding of the data being sent across the websocket configurable. 
+
+Can you please provide a full code sample that reproduces the issue?
+",indexzero,eladb
+35,2011-07-08 18:56:51,"Yes. I will get a repro.
+
+--Elad.
+
+On Fri, Jul 8, 2011 at 5:53 AM, indexzero
+reply@reply.github.com
+wrote:
+
+> @eladb What messages are you trying to proxy that are not getting through? We have extensive test coverage for websockets that are all passing
+> 
+> I think the correct approach here would be to make the encoding of the data being sent across the websocket configurable.
+> 
+> Can you please provide a full code sample that reproduces the issue?
+> 
+> ## 
+> 
+> Reply to this email directly or view it on GitHub:
+> https://github.com/nodejitsu/node-http-proxy/issues/35#issuecomment-1532178
+
+## 
+
+Elad.
+",eladb,eladb
+35,2011-07-09 15:44:06,"see attached.
+
+1) run ""node test.js"" and open a browser on http://localhost:8000.
+then show the console and you will see echo only from the direct
+connection.
+
+2) run ""node test-patched.js"" and you will be able to see echo from
+both proxied and direct connections.
+
+could be:
+1) socket.io that you are using in your test.
+2) the websocket library you refer under 'vendor'.
+
+let me know if you want me to try and repro via unit test.
+
+thanks
+elad.
+
+On Fri, Jul 8, 2011 at 11:56 AM, Elad Ben-Israel
+elad.benisrael@gmail.com wrote:
+
+> Yes. I will get a repro.
+> 
+> --Elad.
+> 
+> On Fri, Jul 8, 2011 at 5:53 AM, indexzero
+> reply@reply.github.com
+> wrote:
+> 
+> > @eladb What messages are you trying to proxy that are not getting through? We have extensive test coverage for websockets that are all passing
+> > 
+> > I think the correct approach here would be to make the encoding of the data being sent across the websocket configurable.
+> > 
+> > Can you please provide a full code sample that reproduces the issue?
+> > 
+> > ## 
+> > 
+> > Reply to this email directly or view it on GitHub:
+> > https://github.com/nodejitsu/node-http-proxy/issues/35#issuecomment-1532178
+> 
+> ## 
+> 
+> Elad.
+
+## 
+
+Elad.
+",eladb,eladb
+35,2011-07-09 19:36:39,"@eladb I might be missing something but where can I find `test.js` and `test-patched.js`?? Will try later this evening.
+",indexzero,eladb
+35,2011-07-09 20:51:25,"extract the zip file and you will see both files under 'node-proxy-repro'.
+10x,
+elad.
+
+On Sat, Jul 9, 2011 at 12:36 PM, indexzero
+reply@reply.github.com
+wrote:
+
+> @eladb I might be missing something but where can I find `test.js` and `test-patched.js`?? Will try later this evening.
+> 
+> ## 
+> 
+> Reply to this email directly or view it on GitHub:
+> https://github.com/nodejitsu/node-http-proxy/issues/35#issuecomment-1539625
+
+## 
+
+Elad.
+",eladb,eladb
+35,2011-07-09 21:05:30,"@eladb Can you provide a link to the zip file?
+",ironchefpython,eladb
+34,2011-04-22 02:43:29,"@indexzero - I think I'm running into a related issue here without websockets. 
+
+I think the disconnect is in the fact that http-proxy acts as a proxy server by default. This means that the receiving server can tell the request has been proxied. In other words, it's not transparent. The proxy should act in this mode by default, but we should probably expose an API option to enable ""transparent"" proxying. I'm not sure if there is a better name for that.
+
+Here is a more clear illustration of the problem:
+
+
+
+Does that make any sense?
+",Marak,indexzero
+34,2011-05-11 20:34:07,"@Marak definitely, will investigate.
+",olauzon,Marak
+34,2011-05-11 20:36:31,"Thanks @olauzon! Feel free to post your status in this thread.
+",Marak,olauzon
+34,2011-05-13 20:55:11,"@indexzero i don't see how changing the headers and replacing host and origin in the handshake relates to http.Agent but I'll take your word for it. 
+
+I do see the problem with http.Agent in the other thread (#50) though.
+",jfis,indexzero
+34,2011-05-13 21:02:21,"@indexzero :) ok gotcha.
+",jfis,indexzero
+34,2011-05-25 06:56:00,"@olauzon ... Any progress on this issue today? Ping me if you're blocked.
+",indexzero,olauzon
+34,2011-06-08 18:56:41,"Yes. @olauzon do you want to take a look? 
+",indexzero,olauzon
+1120,2016-12-25 10:37:16,"Thanks @jcrugzz ! 👍 😄 
+
+",ivannieto,jcrugzz
+1107,2016-12-15 21:23:34,@pachirel I think you are the author of . Could you take a look at this issue and pull request?,mixxen,pachirel
+1104,2016-12-06 07:23:44,"My change (#1098) has side effect because of the header values of `rawHeaders` are not always same with the values of `headers`. ( #1101, #1102, #1103) 🙇 
+
+This PR includes these changes to solve it:
+
+1. Overwrite only key, not value.
+2. Overwrite key if raw header key is available.
+3. Add `preserveHeaderKeyCase` option (default: false).
+
+@jcrugzz  I'd like to hear your thought. 🍣 
+
+I have to add specs before marge this.
+Sorry for any inconvenience, and thanks to all.",pachirel,jcrugzz
+1103,2016-12-06 10:40:34,@jcrugzz you can find more details in a PR opened by @pachirel https://github.com/nodejitsu/node-http-proxy/pull/1104,apalchys,pachirel
+1101,2016-12-04 17:58:40,"@jcrugzz @tomlagier this should be fixed now, please retest!",kriswill,jcrugzz
+1098,2016-12-02 00:54:20,@jcrugzz Thank you for your quick response 😄  I fixed.,pachirel,jcrugzz
+1074,2017-01-16 00:06:06,"@jcrugzz or anyone else, any reason not to get this merged?",efokschaner,jcrugzz
+1074,2017-02-12 05:01:56,Bump for great justice? @jcrugzz,efokschaner,jcrugzz
+1061,2016-09-14 21:12:05,"@briman0094 @No9 would love a harmon test so this type of breakage could be prevented in the future. Thanks for the contribution!
+",jcrugzz,No9
+1058,2017-01-21 11:11:52,"@adjohnson916 really good job!, I wonder if somebody else has made such a comprehensive benchmark on node just yet? Maybe even the core developers of node do not really know where we are in terms of performance. It seems also that some people, authors of node-http-proxy included, have given up on competing with other servers because they believe V8 is not capable of deliver as efficiently as a C/Asm optimized solution, which is a pity.
+",manast,adjohnson916
+1051,2016-09-09 19:53:35,"@jcrugzz - Any time frame on  when / if this will get merged? Not trying to rush, I just got some prod dependencies going out this week that are reliant on the status reason being passed through so I will have to fork if it does not get accepted soon.
+",cchamberlain,jcrugzz
+1018,2017-01-06 13:25:35,"Hello, I'm closing this as result of doing cleanup of my PRs. I believe this feature was already implemented by @pachirel so this patch is not required anymore.
+
+Thanks",diegonc,pachirel
+1011,2016-05-25 16:12:18,"### nodejitsu/node-http-proxy now has a Chat Room on Gitter
+
+@jcrugzz has just created a chat room. You can visit it here: [https://gitter.im/nodejitsu/node-http-proxy](https://gitter.im/nodejitsu/node-http-proxy?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&content=body_link).
+
+This pull-request adds this badge to your README.md:
+
+[![Gitter](https://badges.gitter.im/nodejitsu/node-http-proxy.svg)](https://gitter.im/nodejitsu/node-http-proxy?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=body_badge)
+
+If my aim is a little off, please [let me know](https://github.com/gitterHQ/readme-badger/issues).
+
+Happy chatting.
+
+PS: [Click here](https://gitter.im/settings/badger/opt-out) if you would prefer not to receive automatic pull-requests from Gitter in future.
+",gitter-badger,jcrugzz
+957,2016-02-10 16:42:27,"So the caveat here is that this is a breaking change, but i think it provides more useful context to the `error` as the `error` should be the actual `proxyReq` and not the `req` itself. In most cases (or at least using the `callback` api, you already have access to `req` and `res` so providing these ends up being useless. We were also previously capturing errors from client requests which I believe was creating false positives for people.
+
+Thoughts @donasaur @indexzero 
+",jcrugzz,indexzero
+957,2016-02-10 16:42:27,"So the caveat here is that this is a breaking change, but i think it provides more useful context to the `error` as the `error` should be the actual `proxyReq` and not the `req` itself. In most cases (or at least using the `callback` api, you already have access to `req` and `res` so providing these ends up being useless. We were also previously capturing errors from client requests which I believe was creating false positives for people.
+
+Thoughts @donasaur @indexzero 
+",jcrugzz,donasaur
+949,2016-02-02 04:58:29,"@niallo great find! Would love a quick fix PR :). 
+",jcrugzz,niallo
+920,2015-12-02 17:51:51,"Using http/2 is not currently possible. Pull-request for this support would be welcome. I believe the SPDY module from @indutny might support http/2 now.
+",indexzero,indutny
+920,2015-12-02 17:57:56,"@indexzero @m1stegmann i had an exchange with @indutny that it just requires passing an agent from his `spdy` module which supports `http2` for this to work
+",jcrugzz,indutny
+919,2015-12-08 05:51:46,"This actually looks pretty interesting. @dmai or @jcrugzz: comments?
+",indexzero,jcrugzz
+919,2015-12-08 17:58:49,"@indexzero @aaronmaturen the reason I'm hesitant on this is due to the conversation I had with @indutny where `http2` based on his implementation in [`node-spdy`](https://github.com/indutny/node-spdy) only requires the proper `agent` to be passed in to enable proxying via `http2`. So this really has to do with what we want to support. 
+
+Personally, I'm not a fan of of actually spinning up a server as part of `http-proxy` since that makes us biased on implementation in this case. But in terms of the actual bit that is proxying, I like @indutny's approach because it leverages the `agent` rather than requiring a separate `http` like library in order to make the request.
+",jcrugzz,indutny
+919,2016-03-25 23:00:54,"Hi Friends, 
+
+@jcrugzz suggested that the node-spdy module by @indutny is a better way to spin up a new HTTP2 server. It made sense to me at the time, and it's fairly easy to get setup if you actually have an SSL cert to get past the browser security... 
+
+Here is a small example for HTTP2 -> HTTP proxying without any changes to http-proxy.
+
+
+
+![screenshot 2016-03-25 18 23 24](https://cloud.githubusercontent.com/assets/507070/14055864/bd5f27c6-f2bb-11e5-9027-b2052855aeb0.png)
+",aaronmaturen,indutny
+883,2015-11-05 04:54:45,"@donasaur @jcrugzz thoughts on this?
+",indexzero,donasaur
+883,2015-11-05 04:54:45,"@donasaur @jcrugzz thoughts on this?
+",indexzero,jcrugzz
+883,2015-11-05 06:44:51,"@donasaur it's actually not about the Websocket handshake itself. It is mirroring similar `proxyRes` functionality which I am fine with. See https://github.com/nodejitsu/node-http-proxy/blob/master/lib/http-proxy/passes/web-incoming.js#L147
+
+@jcrugzz thoughts? 
+",indexzero,jcrugzz
+873,2015-12-25 01:43:27,"I hit the same issue when benchmarking http-proxy. Does anyone know if the same will happen in a real life production environment with a high request volume or if this issue is tied to the fact that the connections are created from the same client?
+I tested with nginx and the npm module 'loadbalancer', no problem there.
+
+@tyrchen @jcrugzz
+",kar1m,jcrugzz
+850,2016-01-20 22:28:42,"@indexzero, @jcrugzz: I can rebase this on the latest master if you guys are open to merging it. 
+",prust,indexzero
+850,2016-01-20 22:28:42,"@indexzero, @jcrugzz: I can rebase this on the latest master if you guys are open to merging it. 
+",prust,jcrugzz
+836,2015-06-02 16:41:00,"@matthauck could you provide clarification for the commit here https://github.com/nodejitsu/node-http-proxy/commit/26029ba7ac948b5dc0befb2091cc9a5862d0641c? I personally don't have a strong opinion either way I just don't want to break it again and would like to find a way for this to work for both your cases
+",jcrugzz,matthauck
+813,2015-12-02 09:48:39,"It works very fine, thank you again @vvo 
+
+@jcrugzz should I let this issue open? Maybe http-proxy should filter those error inside the library, or maybe it's better to let it unopinionated...
+",JSteunou,jcrugzz
+806,2016-01-22 14:21:00,"@jcrugzz @indexzero 
+Any plans to merge this PR?
+",chimurai,indexzero
+806,2016-01-22 14:21:00,"@jcrugzz @indexzero 
+Any plans to merge this PR?
+",chimurai,jcrugzz
+782,2015-12-07 20:42:58,"@indutny any idea what could have caused this? Would love to know if its a bug in `http-proxy` that im not accounting for based on a node core change.
+",jcrugzz,indutny
+757,2014-12-22 17:00:41,"@minrk Since you were doing a bunch of testing here, any ideas? The two commits that were made only seem to properly close sockets in cases where they were bad. I don't see it causing issues.
+
+@goldfire What node version are you running on? I'm curious if an upgrade there had anything to do with it or just the upgrade of the `http-proxy` dep. 
+",jcrugzz,minrk
+748,2014-12-03 00:20:32,"ah sorry for the delay @jcrugzz I was traveling for the last 24 hours but it looks like this was resolved :+1: 
+",samccone,jcrugzz
+744,2014-11-26 07:17:28,"@jcrugzz @samccone 
+This is a online url 'http://g.tbcdn.cn/??kissy/k/1.4.0/seed-min.js,kissy/k/1.4.0/base-min.js,kissy/k/1.4.0/json-min.js,kissy/k/1.4.0/dom/base-min.js,kissy/k/1.4.0/event/base-min.js,kissy/k/1.4.0/event/custom-min.js,kissy/k/1.4.0/event/dom/base-min.js,kissy/k/1.4.0/event/dom/focusin-min.js' on the Alibaba CDNs.  You can take it
+for test.
+
+This is a combo url(This is a technical measures that multiple requests will be merged into one in order to reduce the number of requests), and '??' is a combo tag.
+
+I mainly think of this case, so maybe the changed logic is still not 100% correct, hope you can revise it. 
+",koolc,samccone
+737,2014-11-15 15:20:43,"@erupenkman hmm, this is something I'd consider. You mind adding a test? @indexzero you have any thoughts on this?
+",jcrugzz,indexzero
+736,2014-11-12 21:46:06,"@richardkazuomiller yea essentially, good find! That should just be linked somewhere. @indexzero just hasn't formalized a [`jscs`](https://github.com/jscs-dev/node-jscs) for it yet. 
+",jcrugzz,indexzero
+733,2014-11-10 00:33:25,"Except for minor style things this lgtm @jcrugzz. It even has a new test :+1:
+",indexzero,jcrugzz
+712,2014-10-09 09:56:49,":+1: thank you for your contribution @zhudan. What are your thoughts @jcrugzz? You've been looking this over most recently.
+",indexzero,jcrugzz
+699,2014-09-12 16:57:14,"@STRML Could you add test so @jcrugzz doesn't break it again ;-)?
+",3rd-Eden,jcrugzz
+699,2014-09-12 16:57:59,"Yep - working on that right now, just figured I should get the fix in ASAP.
+
+On Sep 12, 2014, at 12:57 PM, Arnout Kazemier notifications@github.com wrote:
+
+> @STRML Could you add test so @jcrugzz doesn't break it again ;-)?
+> 
+> —
+> Reply to this email directly or view it on GitHub.
+",STRML,jcrugzz
+658,2014-06-10 17:06:35,"@jcrugzz Changed the naming according to your comment.
+",Rush,jcrugzz
+651,2014-06-06 18:35:34,"The weird thing is that I was unable to reproduce the problem locally (adding setTimeout in weird places) but it is consistently failing remotely. Also 0.11.10 is rock solid on production servers (viva forward secrecy) but it is a pain to maintain native dependencies for it. I am praying for our friend @indutny to chime in at some point with a brilliant idea. :-)
+",Rush,indutny
+642,2014-05-11 22:56:36,"Further to the pull request by @Domiii - #635 - this pull request adds the res object to the proxyRes event as well.
+
+Also adding a test for the proxyRes event.
+
+I wasn't about the specifics of updating other people's pull request, so just thought a new one might be a good option...
+Apologies if that's less ideal :-s
+",bruce-one,Domiii
+606,2014-03-25 00:18:43,"@yawnt pretty simple fix here. We lost backwards compatibility hard.
+
+https://github.com/nodejitsu/node-http-proxy/blob/master/lib/http-proxy.js#L11-L16
+",indexzero,yawnt
+571,2014-02-08 05:13:55,"@yawnt Could you add the example from https://blog.nodejitsu.com/node-http-proxy-1dot0/ to the documentation to help users who will miss the ProxyTable API?
+",trusktr,yawnt
+561,2014-01-23 18:39:23,"@glasser Well lets think of what we can do in these failure cases. Correct me if I'm wrong here, but in the case where the `socket` errors, we cannot re-proxy with that same socket. So it would make sense to have a different error function in that case that just returns the request if thats even useful? Cause it seems the connection is just FUBAR if we hit that case and we just need to kill the things and let someone know. So I'm thinking we may even want to destroy the socket when the socket errors as well if my assumption here is correct
+
+thoughts @yawnt?
+",jcrugzz,yawnt
+559,2014-01-22 20:44:10,"@glasser thanks for your thorough report. This definitely seems fixable and I will try and give it a look later today. If you are able to dig deeper into a possible solution please post here :)
+
+cc @yawnt
+",jcrugzz,yawnt
+559,2014-01-22 21:49:02,"@jcrugzz @yawnt 
+
+Here's my thought.  There are two ways we could go.  Either http-proxy should itself take care of this, by reacting to 'error' on `socket` by ending `proxySocket`... or http-proxy should give the end user access to `proxySocket` and let it do its own error handling.
+
+I think the former is probably the way to go. First of all, it's more or less necessary to do this error handling, and we shouldn't make it easy for users to accidentally cause a leak.  Secondly, it's already the case that the ws `stream` phase doesn't give much control over the way that `socket` and `proxySocket` are connected (eg, it doesn't let you interpose some sort of transformation).  If we add an API for that later (or the user overrides the `stream` phase entirely) then sure, it would make sense to also give the user control over the error handling semantics. But because http-proxy doesn't offer that control, then it makes sense to do the automatic right thing.
+
+Working on a PR now.  One thing that confuses me: it looks like there's a straight-up bug in the stream pass: it takes its server and head arguments in a different order from how they are passed in!  Is there a test suite that should be catching this?  (Our current production use of http-proxy/caronte is based on an old commit from back when caronte used EventEmitter2 which doesn't have this issue.)
+",glasser,yawnt
+547,2014-01-11 12:43:43,"@yawnt found a few minor things when I was using this extensively:
+- **EventEmitter3 will not throw on an unhandled `error`:** but without any default handler it's very confusing to debug when your proxy logic is just plain wrong. _We should have a default logger if there are no `error` handlers._ cc/ @3rd-Eden 
+- **We should have a simple(r) `.createProxy()` method:** which is basically just exposing `createRightProxy`. A lot of our users don't even bother with `httpProxy.createServer`, they just use `new httpProxy.RoutingProxy()`. Forcing them to create a server that they will never use feels very awkward. 
+- **Remove all (soon to be old) caronte links:** The README.md and a few other doc links still have hrefs to the `caronte` branch
+",indexzero,yawnt
+547,2014-01-16 13:58:36,"@jcrugzz Thanks, but still want this.
+
+@yawnt ping?
+",indexzero,yawnt
+539,2013-12-29 21:01:57,"@cronopio we could probably use some tests for adding functions before/after any of the passes. 
+
+cc @yawnt
+",jcrugzz,yawnt
+539,2013-12-29 21:01:57,"@cronopio we could probably use some tests for adding functions before/after any of the passes. 
+
+cc @yawnt
+",jcrugzz,cronopio
+537,2013-12-28 17:02:43,"@yawnt there is no way to currently splice in before or after functions currently as there is no general [`this.passes`](https://github.com/nodejitsu/node-http-proxy/blob/caronte/lib/http-proxy/index.js#L120-L139). We have passes for either web or ws which needs to be specified in some manner. 
+
+What do you think is the cleanest way to do so? We could pass a `type` parameter to the `before` and `after` functions as the first argument but that seems suboptimal.
+
+Thoughts?
+",jcrugzz,yawnt
+537,2014-01-08 05:37:31,"fixed in c47adac391ca2f80ac1adad52e4fd652d85ac2a4. @cronopio this could definitely use some tests though!
+",jcrugzz,cronopio
+536,2013-12-28 00:07:20,"@yawnt thoughts? I think it adds a nice semantic when you aren't actually creating the proxy as a server. It also eases elements of my OCD.
+",jcrugzz,yawnt
+529,2013-12-10 13:28:42,"@boutell that was not my implication, I just wanted to make sure you guys were trying the newest code :). Im sure @yawnt will be on it. If you can post a gist of the smallest reproducible case, this will be extremely helpful in developing a test and figuring out a solution!
+",jcrugzz,yawnt
+520,2013-11-19 17:34:25,"I just rewrite the examples, just using as base the old examples, so I updated all this examples according to the new improvements and the new api of node-http-proxy.
+
+Review and merge
+
+CC: @yawnt 
+",cronopio,yawnt
+520,2013-12-09 19:59:59,"Ready for review and merge
+
+cc: @yawnt @indexzero 
+",cronopio,yawnt
+520,2013-12-09 19:59:59,"Ready for review and merge
+
+cc: @yawnt @indexzero 
+",cronopio,indexzero
+516,2013-11-12 22:43:57,"As instructed by @jcrugzz I tried this against the caronte branch. Same code, same result.
+
+Using the proxy as a straight HTTP proxy works fine for most URLs but I find I'm getting 400 Bad Request from one particular server.
+
+This pattern of using the proxy, a standard client proxy, isn't that easy to work out from the examples. I don't want to proxy an internal server, I want to proxy requests going to outbound servers, look at the requests and either log them or potentially change them on the way through. Though I'm not doing any of this in the test stub below.
+
+Is there something I'm doing wrong with the proxy setup? It's strange that it works everywhere else except this one server.
+
+Test stub I'm using:
+
+
+
+Using curl I get a 500 server error:
+
+
+
+Oddly, with Firefox I get a 400 Bad Request error:
+
+
+",shermozle,jcrugzz
+513,2013-11-08 20:16:42,"`node-http-proxy@1.0.0` is has a number of features removed and a (few) breaking changes. It makes the library leaner and more ""node-like"" but we _have to make sure to ensure the same high quality examples and documentation._
+## Examples
+
+We either need a working example file or a reason why we're dropping this example for all of these files:
+- [x] examples/balancer/simple-balancer-with-websockets.js
+- [x] examples/balancer/simple-balancer.js
+- [x] examples/http/basic-proxy.js
+- [x] examples/http/concurrent-proxy.js
+- [x] examples/http/custom-proxy-error.js
+- [x] examples/http/forward-proxy.js
+- [x] examples/http/latent-proxy.js
+- [x] examples/http/proxy-https-to-http.js
+- [x] examples/http/proxy-https-to-https.js
+- [ ] examples/http/proxy-table.js
+- [x] examples/http/standalone-proxy.js
+- [x] examples/middleware/bodyDecoder-middleware.js
+- [x] examples/middleware/gzip-middleware-proxytable.js **_(wont fix)_**
+- [x] examples/middleware/gzip-middleware.js
+- [x] examples/middleware/jsonp-middleware.js **_(wont fix)_**
+- [x] examples/middleware/modifyResponse-middleware.js
+- [x] examples/middleware/url-middleware.js **_(wont fix)_**
+- [x] examples/middleware/url-middleware2.js **_(wont fix)_**
+- [x] examples/websocket/latent-websocket-proxy.js
+- [x] examples/websocket/standalone-websocket-proxy.js
+- [x] examples/websocket/websocket-proxy.js
+## Documentation
+- [x] Setup a basic stand-alone proxy server
+- [x] Setup a stand-alone proxy server with custom server logic
+- [x] Setup a stand-alone proxy server with latency (e.g. IO, etc)
+- [x] Proxy requests within another http server
+- [x] Listening for proxy events
+- [x] Using HTTPS
+- [x] Proxying to HTTP from HTTPS
+- [x] Using two certificates
+- [x] Proxying to HTTPS from HTTPS
+- [x] Proxying WebSockets
+- [x] with custom server logic
+- [x] Configuring your Socket limits
+- [x] POST requests and buffering
+- [x] Double check API & method documentation in code
+#### Dropped
+- Proxy requests using a ProxyTable
+- Proxy requests using a 'Hostname Only' ProxyTable
+- Proxy requests using a 'Pathname Only' ProxyTable
+- Middleware
+## Upgrade Guide
+- [x] No more `ProxyTable`
+- [x] No more middleware
+
+cc/ @cronopio @yawnt
+",indexzero,yawnt
+513,2013-11-08 20:16:42,"`node-http-proxy@1.0.0` is has a number of features removed and a (few) breaking changes. It makes the library leaner and more ""node-like"" but we _have to make sure to ensure the same high quality examples and documentation._
+## Examples
+
+We either need a working example file or a reason why we're dropping this example for all of these files:
+- [x] examples/balancer/simple-balancer-with-websockets.js
+- [x] examples/balancer/simple-balancer.js
+- [x] examples/http/basic-proxy.js
+- [x] examples/http/concurrent-proxy.js
+- [x] examples/http/custom-proxy-error.js
+- [x] examples/http/forward-proxy.js
+- [x] examples/http/latent-proxy.js
+- [x] examples/http/proxy-https-to-http.js
+- [x] examples/http/proxy-https-to-https.js
+- [ ] examples/http/proxy-table.js
+- [x] examples/http/standalone-proxy.js
+- [x] examples/middleware/bodyDecoder-middleware.js
+- [x] examples/middleware/gzip-middleware-proxytable.js **_(wont fix)_**
+- [x] examples/middleware/gzip-middleware.js
+- [x] examples/middleware/jsonp-middleware.js **_(wont fix)_**
+- [x] examples/middleware/modifyResponse-middleware.js
+- [x] examples/middleware/url-middleware.js **_(wont fix)_**
+- [x] examples/middleware/url-middleware2.js **_(wont fix)_**
+- [x] examples/websocket/latent-websocket-proxy.js
+- [x] examples/websocket/standalone-websocket-proxy.js
+- [x] examples/websocket/websocket-proxy.js
+## Documentation
+- [x] Setup a basic stand-alone proxy server
+- [x] Setup a stand-alone proxy server with custom server logic
+- [x] Setup a stand-alone proxy server with latency (e.g. IO, etc)
+- [x] Proxy requests within another http server
+- [x] Listening for proxy events
+- [x] Using HTTPS
+- [x] Proxying to HTTP from HTTPS
+- [x] Using two certificates
+- [x] Proxying to HTTPS from HTTPS
+- [x] Proxying WebSockets
+- [x] with custom server logic
+- [x] Configuring your Socket limits
+- [x] POST requests and buffering
+- [x] Double check API & method documentation in code
+#### Dropped
+- Proxy requests using a ProxyTable
+- Proxy requests using a 'Hostname Only' ProxyTable
+- Proxy requests using a 'Pathname Only' ProxyTable
+- Middleware
+## Upgrade Guide
+- [x] No more `ProxyTable`
+- [x] No more middleware
+
+cc/ @cronopio @yawnt
+",indexzero,cronopio
+513,2014-01-11 12:39:50,"This is done. Good work @yawnt @cronopio 
+",indexzero,yawnt
+513,2014-01-11 12:39:50,"This is done. Good work @yawnt @cronopio 
+",indexzero,cronopio
+511,2013-11-05 21:34:21,"@cronopio Running `npm test` gives me the following failures.. Let me know if Im doing something wrong.
+
+
+",jcrugzz,cronopio
+510,2013-11-05 21:06:09,"All of this options parsing that is found [here](https://github.com/nodejitsu/node-http-proxy/blob/caronte/lib/http-proxy/index.js#L43-L64) is not being utilized. We are extending the global `this.options` but not passing them into any of the `passes`. I will see if the fix is as trivial as it seems otherwise I'll let you handle it @yawnt.
+",jcrugzz,yawnt
+504,2013-10-23 07:00:54,"right now we pass just a single agent... but we actually need two.. one for http and one for https 
+
+@cronopio 
+",yawnt,cronopio
+491,2013-09-26 07:56:56,"@yawnt I added some baseline benchmark scripts that we can use in the `1.0.0-dev` branch (they are also in the `caronte` branch, but that's behind now). **These benchmarks exposed what appear to be (at first glance) serious performance issues in the 1.0.0-dev branch.**
+## node: v0.8.25 | http-proxy: v0.10.3
+
+I am using the [benchmark branch](https://github.com/nodejitsu/node-http-proxy/compare/benchmark). The documentation on how to run these benchmarks is in [benchmark/README.md](https://github.com/nodejitsu/node-http-proxy/tree/benchmark/benchmark). **On average I am seeing just under 3000 request / second.** 
+
+**$ wrk -c 20 -r 2000 -t 4 http://127.0.0.1:8000**
+
+
+
+**$ wrk -c 20 -r 10000 -t 4 http://127.0.0.1:8000**
+
+
+
+The highest I pushed it was _100k total requests across 8 threads with a concurrency of 20 per thread:_
+
+$ wrk -c 20 -r 100k -t 8 http://127.0.0.1:8000
+
+
+## node: v0.10.19 | http-proxy: v1.0.0-dev
+
+I am using the [1.0.0-dev branch](https://github.com/nodejitsu/node-http-proxy/compare/caronte...1.0.0-dev). Again, the documentation on how to run these benchmarks is in [benchmark/README.md](https://github.com/nodejitsu/node-http-proxy/tree/1.0.0-dev/benchmark). There are two main problems here:
+#### 1. **A 50% performance degradation**
+
+This could be a number of things (such as changes to node core itself), but right now I'm seeing _**a 50% performance hit.**_
+
+
+#### 2. **Proxies fall over with ETIMEOUT**
+
+Increasing the number of total requests beyond ~6k _without raising the concurrency or threads of the wrk process_ causes `node benchmark/scripts/proxy.js` to fall over with `ETIMEOUT`.
+
+**$ wrk -c 20 -r 10000 -t 4 http://127.0.0.1:8000**
+
+
+
+This happens consistently and in a reproducible fashion. _**This is a show stopping bug and needs to be fixed:**_
+
+
+",indexzero,yawnt
+491,2013-09-27 12:47:35,"I keep trying to benchmark `caronte` branch (@indexzero: branch `v1.0.0-dev` does not exist), yet I keep getting:
+
+
+
+Target server stays up all the time, `ulimit` is set to reasonable values. @yawnt any idea?
+",mmalecki,yawnt
+491,2013-10-18 05:06:41,"After some improve from @yawnt I ran again the benchmark and this what I got in my humble laptop.
+
+Node: v0.10.20
+Last commit at caronte branch: 86750c7e594c419dfae957aaf7e44e61e1d480e8
+wrk: wrk 3.0.1 [epoll] Copyright (C) 2012 Will Glozer
+
+
+
+I would love to see what numbers show at @indexzero's laptop because my humble laptop show some improve.
+",cronopio,yawnt
+484,2013-09-21 20:24:06,"@yawnt @jcrugzz, the reason that your wildcard error handler `ee.on('*:error', function (err) {}` does not get picked up is because it does not match the event emitted. you could use `ee.on('*:*:*:error', function (err) {}`
+
+I do agree that the number of namespaces does seem a bit much. perhaps `ws:error` and `web:error` would be sufficient. 
+
+Issues #462 #470 
+",srossross,yawnt
+484,2013-09-21 20:24:06,"@yawnt @jcrugzz, the reason that your wildcard error handler `ee.on('*:error', function (err) {}` does not get picked up is because it does not match the event emitted. you could use `ee.on('*:*:*:error', function (err) {}`
+
+I do agree that the number of namespaces does seem a bit much. perhaps `ws:error` and `web:error` would be sufficient. 
+
+Issues #462 #470 
+",srossross,jcrugzz
+483,2013-09-21 00:44:06,"Badges should link to the web service they build on not the direct image file ;). 
+
+cc @yawnt 
+",jcrugzz,yawnt
+481,2013-09-17 17:36:26,"@muffs I would encourage you to look at the `caronte` branch and see if it can be used to meet your needs. It is a complete refactor done by @yawnt and takes a much simpler approach. Let us know what you think!
+",jcrugzz,yawnt
+479,2013-09-17 14:30:52,"mmm, kinda makes sense.. @jcrugzz opinion about this one?
+",yawnt,jcrugzz
+476,2013-09-17 02:56:14,"I fixed all the test suite according to the last refactor.
+
+Accordign to the `cov/coverage.html` file created with `npm run-script test-cov` we got a 92% of the code covered.
+
+Run the test suite and tell me any error/comment/feedback you got
+
+Cheers!
+
+cc: @yawnt 
+",cronopio,yawnt
+475,2013-09-16 23:46:25,"@yawnt, I just found this bug in my code right after you merged #470
+",srossross,yawnt
+471,2013-09-16 15:57:15,"Duplicate of #444, there are known issues with `node-http-proxy` running on `node v0.10.x`. @OmShiv Please test out the `caronte` branch and try to break it :). cc @yawnt 
+",jcrugzz,yawnt
+470,2013-09-16 16:19:13,"@yawnt forgot to tag you
+",srossross,yawnt
+463,2013-09-17 11:50:37,"this should be fixed since error handling is now implemented.. @jcrugzz feel free to reopen if it's not the case
+",yawnt,jcrugzz
+463,2013-09-19 15:31:31,"@cronopio also we should have tests for cases like this for all the various transports as I believe we will hit some edge cases with various disconnects being triggered. 
+",jcrugzz,cronopio
+462,2013-09-23 00:23:38,"As @srossross confirmed, we cannot use a single wildcard to cover multiple delimited sections. So if we are to continue to namespace the error handling in some way, we should choose something simpler. 
+
+So we should think about what distinctions are important when handling errors. The `web:error` and `ws:error` idea seems reasonable as we may want to handle those cases differently for cleaning up connections. @yawnt what are your thoughts?
+",jcrugzz,srossross
+461,2013-09-15 13:45:38,"@cronopio status?
+",yawnt,cronopio
+444,2013-08-21 05:43:10,"@yawnt Is working on the updates for `node@0.10.x`. We are aware of this issue and are working on a solution, but the implementation around `streams2` is non-trivial as `node-http-proxy` is one of the oldest node libraries.
+",indexzero,yawnt
+444,2013-08-21 15:42:22,"@indexzero, @yawnt, thanks for the response.  One issue that I noticed is that `node-http-proxy` does not proxy websockets (at all) to tornado servers as of `node>=v0.8`
+
+To test this - Try proxying to an `IPython notebook`
+Use `*nix` OS (works on mac osx) download and install the anaconda Python Distribution http://continuum.io/downloads
+Run:
+
+
+
+Click `create notebook` to get to a page with a web-socket.
+",srossross,yawnt
+444,2013-09-09 16:39:15,"@yawnt I noticed that you have not committed to the 10.x branch for a month.  I am sorry for being persistent, but this is very important to me.  I am also trying to evaluate whether I should just jump in and start finding my own solution or wait for the 10.x branch to be completed.
+May I ask what your timeline is? What is blocking you from completing it?  Are you waiting on improvements in stream2? 
+
+Sorry and thank you for your patience
+",srossross,yawnt
+402,2013-07-19 18:36:05,"We are working on a complete rewrite for `streams2`. See the work from @cronopio on the [0.10.x](https://github.com/nodejitsu/node-http-proxy/tree/0.10.x) branch.
+",indexzero,cronopio
+402,2013-07-20 16:39:44,"Awesome, thanks @indexzero , @cronopio !
+",breck7,cronopio
+399,2013-04-02 19:44:24,"No idea. Haven't played with `v0.10.x` yet much. @isaacs or @indutny?
+",indexzero,isaacs
+399,2013-04-02 19:44:24,"No idea. Haven't played with `v0.10.x` yet much. @isaacs or @indutny?
+",indexzero,indutny
+396,2013-09-28 09:00:18,"We're almost done with a major rewrite that has been under way for several months. Check it out on the `caronte` branch. We haven't decided what to do with pull-request maintenance before that. 
+
+We will likely publish `0.10.99` with most open pull-requests before publishings `1.0.0`. cc/ @yawnt 
+",indexzero,yawnt
+393,2013-03-29 10:41:05,"@indexzero 
+
+Does anyone have plan to support HTTP to CoAP proxy? 
+
+CoAP is RESTful http-like protocol for Internet of Things.
+
+http://en.wikipedia.org/wiki/Constrained_Application_Protocol
+",sequoiar,indexzero
+384,2013-03-16 12:22:43,"As requested by @indexzero https://github.com/nodejitsu/node-http-proxy/issues/382 
+Not sure exactly where I should put the text but middleware seemed to be the best section to me. 
+",No9,indexzero
+384,2014-03-04 21:20:06,"@indexzero @No9 This merge/code has been lost to later merges. This is a very useful information, and should be in the README!
+
+Please re-pull this.
+",gurjeet,indexzero
+384,2014-04-16 22:12:32,"@jcrugzz Thanks for your kind words!  
+
+So i have updated the harmon docs and tests to reflect the 1.x release version of http-proxy and we have upgraded trumpet. Can you let me know if you would accept a pull request on the README again or are you putting it somewhere else now? 
+cc @gurjeet @indexzero  
+",No9,indexzero
+376,2013-04-07 21:11:16,"@indexzero @dscape Any updates on this ?
+",vojtajina,indexzero
+376,2013-04-07 21:11:16,"@indexzero @dscape Any updates on this ?
+",vojtajina,dscape
+376,2013-05-09 01:13:41,":+1:  @indexzero @nodejitsu Any word on getting this merged in?
+",stickel,indexzero
+370,2013-04-09 07:39:01,"@indexzero @mmalecki 
+
+I'd advise us to accept this pull request. I've been doing a lot of WebSocket proxy tests lately because I was interested in to seeing how our proxy solution compares to other proxies such as `nginx` and `haproxy`.
+
+I've deployed the proxy on a 512mb joyent virtual machine running the latest ubuntu and hit it using [observing/thor](/observing/thor) with: 
+
+
+
+I saw a peak memory of `280mb` before this patch. After applying this patch and re-running the command it saw a maximum of `102mb` which is significant decrease. So even if this is going to be fixed in later version of Node. It makes sense to pull this asap.
+",3rd-Eden,mmalecki
+362,2013-02-17 15:30:48,"Sounds awesome. Thanks for clarifying.
+
+My point was that ssh performance in node is a far more understood topic. @indutny has a repo called tls-snappy that tackles it, but to the best of my knowledge nothing beats putting a tls terminal in front of node yet :(
+
+I think you saw some discussion from @mranney and @mikeal on the topic on a request issue. Not entirely sure how voxer is currently dealing with this though.
+",dscape,indutny
+347,2012-12-19 02:55:17,"Seems reasonable. Wondering what @isaacs thinks about this.
+",indexzero,isaacs
+347,2012-12-19 14:30:35,"@jcheng5 we've seen this in production a few days ago. I'm not really comfortable with admitting that the fix was:
+
+
+
+I think that on 0.9.x this is related to `process.nextTick` refactor which makes next tick happen before I/O, but no idea on the cause in 0.8.x.
+
+@isaacs opinions?
+",mmalecki,isaacs
+337,2012-11-21 08:22:49,"/cc @mmalecki
+",indutny,mmalecki
+334,2013-01-22 22:03:20,"Meh. If you're into that sort of masochism go for it. This is an issue related to SSL performance in node that @indutny is working hard on.
+
+In the meantime you can just put [stud](https://github.com/bumptech/stud) in front of node-http-proxy. But I'm pretty sure @KimSchneider is not interested in our advice as he has not provided any demostrable data for us to help debug the problem with besides node versions. 
+",indexzero,indutny
+327,2013-01-29 22:55:43,"@mmalecki Any plan to merge this one?
+",samalba,mmalecki
+323,2012-10-25 21:41:57,"@mmalecki.
+
+eafdc744 has introduced really unexpected behaviour, please process it as soon as you will get this message :) Otherwise I'll pull it by myself :)
+",indutny,mmalecki
+322,2012-11-04 22:37:11,"@mmalecki any hope of getting this in? As it stands, a 304 response will not emit an end event, unlike all other responses.
+",smh,mmalecki
+320,2012-10-23 19:55:41,"- http-proxy: emit websocket:start
+- routing-proxy: allow listening for websocket:\* event
+
+/cc @mmalecki
+",indutny,mmalecki
+294,2013-03-09 05:57:51,"I spoke with @isaacs, this behavior is not going to change even in 0.10.0, but likely in 0.12.0. So going to pull this in if all the tests pass.
+",indexzero,isaacs
+289,2012-07-30 18:50:58,"@piscisaureus @AvianFlu @mmalecki Thoughts? This is clearly your realm of expertise. 
+",indexzero,AvianFlu
+289,2012-07-30 18:50:58,"@piscisaureus @AvianFlu @mmalecki Thoughts? This is clearly your realm of expertise. 
+",indexzero,piscisaureus
+289,2012-07-30 18:50:58,"@piscisaureus @AvianFlu @mmalecki Thoughts? This is clearly your realm of expertise. 
+",indexzero,mmalecki
+270,2012-06-25 12:28:23,"Nice! Thanks @blakmatrix.
+",mmalecki,blakmatrix
+266,2012-07-18 10:05:48,"Good question. @cronopio Do you feel comfortable coordinating a release of the http-proxy? I see you're on the publisher's list.
+",jfhbrook,cronopio
+228,2012-05-09 20:48:43,"I don't think that applies anymore in node v0.6, that's why this pull request was made. @AvianFlu do you know more about this?
+",coderarity,AvianFlu
+228,2012-05-11 07:54:21,"Maybe I'm wrong. @isaacs is the man to summon here if you want a more detailed explaination. He put in the `try {} catch (ex) {}` blocks after some dilligent production debugging.
+",indexzero,isaacs
+195,2012-03-04 07:36:18,"@indexzero @Marak hearing crickets here ...
+",tglines,Marak
+193,2012-02-12 03:01:36,"@astronouth7303 Have you tried a simple HTTPs server in node.js with the same certs? It could be a node.js core issue. @indutny would know more.
+",indexzero,indutny
+156,2011-11-14 18:02:05,"This looks good to me. @dominictarr can you explain why you're rewriting `outgoing.headers.host` here? https://github.com/nodejitsu/node-http-proxy/commit/65b7872e6ad433deae4de823c63629cb341bd649#commitcomment-719213
+",indexzero,dominictarr
+152,2011-11-10 15:27:05,"@ctide I'm pretty sure websocket support won't work in node@0.6.x until the `http2` branch is merged in. This updates the internal HTTP api that was rewritten by @mikeal. 
+
+@mmalecki could you take a look at merging that in and then push a version of node-http-proxy that works on node >= 0.6.0
+
+_To reiterate: there are breaking and incompatible changes between the 0.4.0 and 0.6.0 internal HTTP APIs that by definition make it impossible for node-http-proxy to work on both._
+",indexzero,mmalecki
+149,2011-11-08 16:08:58,"Yes, you can do this with middlewares. [This awesome article](http://blog.nodejitsu.com/http-proxy-middlewares) by @AvianFlu should explain more.
+
+Also, I added some hand-crafted middleware in `examples/middleware`: https://github.com/nodejitsu/node-http-proxy/blob/master/examples/middleware/modifyResponse-middleware.js
+It's not perfect, in reality it would need some kind of output buffering, etc.
+
+I'm closing this as it's not a real issue, but feel free to ask questions. You can also reach as at #nodejitsu IRC channel on Freenode.
+",mmalecki,AvianFlu
+145,2011-11-17 01:09:43,"If memory serves, that was added in a patch from @isaacs.  He may be able to comment.
+",AvianFlu,isaacs
+145,2011-11-17 02:04:13,"it was @isaacs .
+
+https://github.com/nodejitsu/node-http-proxy/commit/84be9f2c3a244c7dbfe2c6320fa26d85cf80ec31
+",dominictarr,isaacs
+119,2011-09-29 22:44:57,"@indexzero - please review this.
+",indutny,indexzero
+119,2011-09-29 23:15:51,"+1, The testing that @mmalecki and I have been doing confirms that this works.  We tried a similar version of this fix this morning, but it was in Node's `lib/http.js` and we didn't quite get it right.  
+
+The problem lies in an extremely convoluted message-sending bug in Node's `http.Agent`.  Issue #97 Has more info.
+",AvianFlu,mmalecki
+116,2011-09-22 14:49:45,"The problem is really with the optimism of the current pipe implementation:
+
+https://github.com/joyent/node/blob/master/lib/stream.js
+
+There are no guards (i.e. `try/catch`) around calls to `.write()` (which can throw). Also the `source.readable` around `stream.resume()` are apparently not enough:
+https://github.com/joyent/node/blob/master/lib/stream.js#L127
+https://github.com/joyent/node/blob/master/lib/stream.js#L34-38
+
+Recent commits have been added by @isaacs to fix problems regarding calls to those two methods throwing `uncaughtException` events:
+
+https://github.com/nodejitsu/node-http-proxy/commit/7bda25b1c60d082f0f2fd12fc61b45a33b74f13d
+https://github.com/nodejitsu/node-http-proxy/commit/558a8a4f79716496dbdee13759c8641606458c05
+
+If we can solve these problems within the existing `.pipe()` implementation then it is probably fine, but I suspect it won't work because there are a couple of special cases for HTTP streams that we handle in `node-http-proxy`:
+
+https://github.com/nodejitsu/node-http-proxy/blob/master/lib/node-http-proxy/http-proxy.js#L214-218
+
+In short, I think `.pipe()` is awesome and when you have a little information around the HTTP stream you are trying to pipe, it works like a charm. As a generic silver bullet though, it still has a little way to go.
+",indexzero,isaacs
+116,2011-09-22 15:10:19,"When I spoke with @isaacs about finding these throwing cases he said they were very difficult to reproduce which makes sense to me given the brow-beating both Nodejitsu and Joyent put node-http-proxy thru in production. 
+
+I agree with you that the `.pipe()` method in core shouldn't have this many guards for performance reasons, and that misalignment of goals is probably why `.pipe()` isn't appropriate here. Keeping the process alive is paramount to avoid dropped WebSocket connections.
+",indexzero,isaacs
+107,2011-09-12 20:10:28,"@dominictarr Can you create a sample app which attempts to reproduce this issue? 
+",indexzero,dominictarr
+97,2011-09-11 03:42:24,"@3rd-eden @ry 
+
+I spent some time reading the `http-parser` code with help from @bmeck and it seems that this is indeed a problem with the `connection` header parsing not detecting the ""Upgrade"" state because in Firefox 7 it sends
+
+
+
+where as in Chrome 13 and older versions of the spec the header is:
+
+
+
+Based on our first pass it seems like the parser enters the `h_connection_keep_alive` greedily (https://github.com/ry/http-parser/blob/master/http_parser.c#L1367-1377) and does not continue to check the contents of the header. 
+
+Not sure how simple a fix this is, but @bmeck will be putting together a low-level parser repro next week.
+",indexzero,bmeck
+97,2011-09-29 02:11:28,"After some further investigation with @AvianFlu:
+
+Parser doesn't seem to be a problem. It detects upgrades just fine (and fires [this callback](https://github.com/nodejitsu/node-http-proxy/blob/master/lib/node-http-proxy.js#L189)). Proxy receives http requests like:
+
+
+
+But fails to pass them further. [This callback doesn't get executed at all](https://github.com/nodejitsu/node-http-proxy/blob/master/lib/node-http-proxy/http-proxy.js#L591).
+
+[Comparison between direct and proxied request](https://gist.github.com/44c77df7f64cda18e664) - forwarded requests have their headers all in lower case. No forwarded request has an `Upgrade` header.
+
+I'll investigate it further, but it's 4 AM and it's basically a brain dump.
+",mmalecki,AvianFlu
+97,2011-09-30 00:48:54,"I can confirm that the fix from @indutny resolves this issue in his pull request. In both Firefox 7 and Chrome 14. I'm merging this into master.
+",indexzero,indutny
+89,2011-08-28 05:59:22,"@dominictarr Can you help @digialrinaldo with his question?
+",indexzero,dominictarr
+84,2011-08-01 19:04:52,"this is actually is a feature of node.js core.
+
+https://github.com/joyent/node/blob/v0.4.10/lib/http.js#L1139-1147
+
+unless this is something that would be useful? @dominictarr
+",jamesonjlee,dominictarr
+62,2011-07-25 21:54:35,"@dominictarr can shed some light on whether this is pushed in the latest version of `node-http-proxy` on npm
+",indexzero,dominictarr
+62,2011-07-25 21:57:24,"@dominictarr FYI:
+
+
+",indexzero,dominictarr
+58,2011-07-25 04:46:33,"I think @dominictarr is close to getting proper middle-wares enabled. Will be reviewing all this in the upcoming weeks.
+
+Thanks!
+",Marak,dominictarr
+56,2011-05-19 18:13:02,"I'm not sure if this is the best place, but I wanted to get a dialog going regarding the new branch of http-proxy which is intended to use the net module.
+
+I know that @ry and @mikeal both have a lot of thoughts about this, so if either of you guys feel like bike shedding, please post whatever information you can that could help direct @indexzero and @olauzon 
+
+:-)
+",Marak,indexzero
+56,2011-05-19 18:13:02,"I'm not sure if this is the best place, but I wanted to get a dialog going regarding the new branch of http-proxy which is intended to use the net module.
+
+I know that @ry and @mikeal both have a lot of thoughts about this, so if either of you guys feel like bike shedding, please post whatever information you can that could help direct @indexzero and @olauzon 
+
+:-)
+",Marak,olauzon
+54,2011-06-08 18:24:18,"I believe this issue has been resolved? @bluescreen303 can you confirm? If not, let's get @olauzon on it!
+
+:-)
+",Marak,olauzon
+48,2011-05-10 18:08:02,"ECONNREFUSED is a generic node.js error message when a socket cannot make a connection. It usually indicates that the listening server isn't infact listening, or the outgoing request you made to the server could not find its target. 
+
+With that being said, I'm not entirely sure what your issue is. Could it be possible you are already running services on the port http-proxy is trying to use for it's tests? Maybe you could change the port number in the test files?
+
+@indexzero - Do you have any ideas why this could be happening? 
+",Marak,indexzero
+42,2011-05-17 22:34:09,"This was actually not related to node.js core, but a typo in my test code. Thanks to @olauzon for finding this problem and fixing it in 1ee6beff6aa3087e332701fd3cfda70b4e968ce8. Will be pushed out in `v0.5.2`
+",indexzero,olauzon
+41,2011-06-08 18:24:53,"@indexzero is this ticket still relevant? If so, should we get @olauzon to investigate? 
+",Marak,olauzon
+36,2011-05-17 22:32:04,"This was actually not related to node.js core, but a typo in my test code. Thanks to @olauzon for finding this problem and fixing it in 1ee6beff6aa3087e332701fd3cfda70b4e968ce8. Will be pushed out in `v0.5.2`
+",indexzero,olauzon
+34,2011-05-11 20:24:32,"@olauzon can you take a look at this ticket? I'd like to get this resolved this week if possible. 
+",Marak,olauzon

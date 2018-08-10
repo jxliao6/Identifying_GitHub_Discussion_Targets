@@ -1,0 +1,223 @@
+issue_num,datetime,body,login,mention_login
+72,2016-11-16 10:01:20,"@YuChunLOL  **convnetjs**  is an excellent library for in-browser visualizations / interactive demos. However, given numerical performance of V8 (JavaScript) and derivates, it is far from being optimal for production use (read it number crunching and analysis). As @uiteoi suggested you might want to have a look on **TensorFlow** or **Caffe**.
+
+@MariasStory 
+
+> JS is the best solution and everyone should go for it. It is faster then everything else because it is distributed.
+
+It seems you got confused here; a bit.
+",ktamiola,MariasStory
+72,2016-11-16 10:01:20,"@YuChunLOL  **convnetjs**  is an excellent library for in-browser visualizations / interactive demos. However, given numerical performance of V8 (JavaScript) and derivates, it is far from being optimal for production use (read it number crunching and analysis). As @uiteoi suggested you might want to have a look on **TensorFlow** or **Caffe**.
+
+@MariasStory 
+
+> JS is the best solution and everyone should go for it. It is faster then everything else because it is distributed.
+
+It seems you got confused here; a bit.
+",ktamiola,uiteoi
+72,2016-11-16 10:01:20,"@YuChunLOL  **convnetjs**  is an excellent library for in-browser visualizations / interactive demos. However, given numerical performance of V8 (JavaScript) and derivates, it is far from being optimal for production use (read it number crunching and analysis). As @uiteoi suggested you might want to have a look on **TensorFlow** or **Caffe**.
+
+@MariasStory 
+
+> JS is the best solution and everyone should go for it. It is faster then everything else because it is distributed.
+
+It seems you got confused here; a bit.
+",ktamiola,YuChunLOL
+64,2016-06-06 10:37:25,"@wfidditch cut each letter in image to separate image, then determine each separate letter and combine back to word
+",axvm,wfidditch
+64,2016-06-07 07:56:19,"@wfidditch did you have in mind here generating matrix of classes as opposed to a binary vector?
+",ktamiola,wfidditch
+61,2016-01-24 17:23:51,"E[weight] = drop_prob_0 + (1-drop_prob)_w[i] = (1-drop_prob)*w[i], so I agree with @avdmitry
+",jruales,avdmitry
+61,2016-01-24 17:44:18,"@avdmitry 's solution agrees with Figure 2 in the third page of the dropout paper: http://www.cs.toronto.edu/~rsalakhu/papers/srivastava14a.pdf
+
+The Keras library takes a different approach (but still somewhat equivalent): it divides by the retain probability during training time so that during testing the dropout layer is just an identity function
+https://github.com/fchollet/keras/blob/master/keras/layers/core.py#L621
+https://github.com/fchollet/keras/blob/master/keras/backend/theano_backend.py#L555
+",jruales,avdmitry
+54,2015-12-06 22:28:26,"@craigmcmillan01 If you using node.js I guess you should try use readFileSync instead. cause as understand your code working asynchronously, which probably mean that in the moment you call for brain.forward(state); brain is still empty.
+
+I used something like that.
+
+
+",libraua,craigmcmillan01
+54,2015-12-06 22:45:53,"@libraua Thanks! that was exactly the issue. 
+",craigmcmillan01,libraua
+53,2016-01-24 01:40:30,"@salamanders – were you able to solve this issue?
+",nemo,salamanders
+53,2016-01-27 02:55:36,"I'm also experiencing this. @salamanders, @nemo - did you figure this out?
+I note that the comment for ""RegressionLayer"" in convnet.js says that:
+
+
+
+so it seems to me that warning might be out-of-date, as y can either be an Array or a structure (like this) for the regression layer?
+",DrGlennn,nemo
+53,2016-01-27 02:55:36,"I'm also experiencing this. @salamanders, @nemo - did you figure this out?
+I note that the comment for ""RegressionLayer"" in convnet.js says that:
+
+
+
+so it seems to me that warning might be out-of-date, as y can either be an Array or a structure (like this) for the regression layer?
+",DrGlennn,salamanders
+53,2016-01-27 06:50:14,"@karpathy - That didn't work for me. This is because the ""y"" variable in the train function is a structure ({dim: i, val:x}, not an Array, in the case of the deep-q-learning example.
+",DrGlennn,karpathy
+53,2016-01-27 06:50:17,"hey @karpathy – that actually doesn't fix the problem.
+
+You can get rid of the warning by changing this line in `deepqlearn.js#254`:
+
+
+
+to
+
+
+
+Though, I'm not sure if this breaks anything or not.
+",nemo,karpathy
+53,2016-01-27 07:16:28,"@nemo - While that removes the logged error (because you're now sending in an Array), I think the logic in the RegressionLayer ""backward"" function is no longer correct. The this.out_depth variable is 5, but y is a 1-dimensional array - so when you loop i from 0 to 5, the loss function becomes undefined (NAN) for i>0. I didn't see any errors in the output, but (to me at least) I don't think this will actually train correctly.
+
+On reviewing the code, I think the correct solution is, probably, to change the warning so it checks for conditions where y is either (a) an Array, (b) a number of (c) a struct with entries .dim and .val - as these are the three cases that RegressionLayer actually handles. The deepQLearning example seems to be configured as an example of (c).  
+
+That being said, I'm still trying to understand fully how this works, so am not 100% confident about that assessment of the issue.
+",DrGlennn,nemo
+53,2016-01-27 07:27:54,"@DrGlennn – I thought the backward function is the one in the `RegressionLayer` class (which accounts for an arrayed y value.
+
+
+",nemo,DrGlennn
+53,2016-01-27 23:31:18,"@nemo - Yes. The backward function is the one in the `RegressionLayer` and, in general, it will handle an Array (as per the code you included). However, this won't work correctly when the array you are sending in is an array of a single element like: 
+`[{dim: 0, val:2.356]`
+
+If you just convert `{dim:0, val:2.356}` into an array (by putting [] around it) then it will use that code, but will loop from `i=0` to `i=this.out_depth` (here `out.depth=5`). After the first element, this will produce an overall loss of NAN.
+
+Anyway, that's my understanding but I'm not an expert by any means, so happy to receive clarification if you think I've misunderstood what's going on.
+
+@salamanders - I still get the logging error, when running the rldemo.html example. As I see it, the basic issue is that the`deepqlearn.js`code (line 253) is sending in the following structure to the trainer:
+
+
+
+As such the test in the `train` method:
+
+
+
+is correctly (at least as written) logging a warning that `y` is not an Array. However, despite the warning, the Regression method does not seem to require an array as a training output vector. It can also handle this `{dim: ?, val: ?}` structure. 
+
+Happy to hear if I'm misunderstanding what is happening here. I'm still trying to really understand, so happy to be corrected if my understanding is way off base. 
+
+That being said, my guess is that the ""if statement"" just needs to include the condition where y is of the form `{dim: e.action0, val: r}`
+
+Thoughts?
+",DrGlennn,nemo
+53,2016-01-27 23:31:18,"@nemo - Yes. The backward function is the one in the `RegressionLayer` and, in general, it will handle an Array (as per the code you included). However, this won't work correctly when the array you are sending in is an array of a single element like: 
+`[{dim: 0, val:2.356]`
+
+If you just convert `{dim:0, val:2.356}` into an array (by putting [] around it) then it will use that code, but will loop from `i=0` to `i=this.out_depth` (here `out.depth=5`). After the first element, this will produce an overall loss of NAN.
+
+Anyway, that's my understanding but I'm not an expert by any means, so happy to receive clarification if you think I've misunderstood what's going on.
+
+@salamanders - I still get the logging error, when running the rldemo.html example. As I see it, the basic issue is that the`deepqlearn.js`code (line 253) is sending in the following structure to the trainer:
+
+
+
+As such the test in the `train` method:
+
+
+
+is correctly (at least as written) logging a warning that `y` is not an Array. However, despite the warning, the Regression method does not seem to require an array as a training output vector. It can also handle this `{dim: ?, val: ?}` structure. 
+
+Happy to hear if I'm misunderstanding what is happening here. I'm still trying to really understand, so happy to be corrected if my understanding is way off base. 
+
+That being said, my guess is that the ""if statement"" just needs to include the condition where y is of the form `{dim: e.action0, val: r}`
+
+Thoughts?
+",DrGlennn,salamanders
+48,2015-11-02 13:21:32,"@kengz  can `convnetjs` work good in node js?
+",SimplyY,kengz
+48,2015-11-02 16:03:11,"@SimplyY If by that you mean if it can run like an efficient program on Java/C++, then yes. Nodejs is a complete and performant language like Python. I just wanted to get rid of the browser dependency here and use convnet like a programming library.
+",kengz,SimplyY
+46,2015-08-26 23:21:22,"@littledan As far as I know, probably not to the former and yes to the latter.
+
+A bit of background: The convnetjs library works using Vols, which are objects with two properties, `w` and `dw`, which are both three-dimensional arrays, as well as three other properties `sx`, `sy` and `depth`, which hold the sizes of the arrays.
+
+Currently the Vols are objects and the `w` and `dw` properties are one-dimensional arrays, with `set(sx, sy, depth)`, `get(sx, sy, depth)`, `set_grad(sx, sy, depth)` and `get_grad(sx, sy, depth)` methods used to set and get values in the `w` and `dw` properties (see [this file](https://github.com/karpathy/convnetjs/blob/master/src/convnet_vol.js)). This method is awfully slow, and in some places the methods to figure out the offset of a given element (`sx`, `sy`, `depth`) are manually inlined for speed.
+
+This pull request changes this by instead having a [`VolType` constructor](https://github.com/thomasfoster96/convnetjs/blob/master/src/structures/vol.js), from which different `Vol`s of the same dimensions can be created. Using the Firefox Nightly implementation of Typed Objects, it was possible to use the underlying ArrayBuffer of the Vols (and even their individual properties) to create a Float64Array view of the `w` and `dw` arrays and then use the SIMD load/store methods to parallelize calculations (see [this code](https://github.com/thomasfoster96/convnetjs/blob/master/src/layers/convlayer.js#L60)), as well as use nicer, faster array indexing( `myVol.w[0][2][1]` instead of `myVol.get(0, 2, 1)` and have the performance benefits of things being explicitly typed.
+
+Note that I wrote most of this code a few months ago and only cleaned it up a little the other day to open the pull request to see what @karpathy thought of the approach (as per #32 Andrej would like an easy way to create tensors in JS) - I probably wrote this using out of date drafts for SIMD.
+",thomasfoster96,littledan
+33,2015-05-31 11:28:21,"@pavelpep should it be `<image_channels` rather than `<3` [here](https://github.com/karpathy/convnetjs/blob/72b4719f6b7bf1ce460549a9b2c2070a7e653bc6/demo/js/images-demo.js#L24) and [here](https://github.com/karpathy/convnetjs/blob/72b4719f6b7bf1ce460549a9b2c2070a7e653bc6/demo/js/images-demo.js#L60)?
+
+Thanks for the work! 
+(Should I do a pull request if I spot such error?)
+",cbovar,pavelpep
+33,2015-05-31 18:32:33,"@cbovar nice catch! You are correct, it should be `<image_channels` instead of `<3`
+",pavelpep,cbovar
+32,2015-04-17 03:02:05,"@karpathy I've been playing around with Typed Objects and to me it seems to best way to use Typed Objects would be to have a `VolType` class that extends `StructType`. This would allow Vols to be very memory efficient and performant, and allow efficient arrays of Vols. Sounds pretty good to me :smile:.
+
+This is a (broken) implementation of `VolType`:
+
+
+
+The VolType class could be used like this:
+
+
+
+The above would be equivalent to calling:
+
+
+
+Typed Objects allows multidimensional typed arrays, so the `add()`, `set()` and `get()` methods wouldn't be needed, same goes for `addGrad()`, `setGrad()` and `getGrad()`.
+
+`cloneAndZero()` is also not needed, because another instance of a VolType is used instead. `clone()` is replaced as well, as passing a Vol to an instance of VolType would perform a clone.
+
+The only huge downside to this is the Typed Objects are only available in Firefox beta builds, and as they are a part of the ECMAScript 7 standard, they won't be standardised until as late as September 2016. I'm sure Typed Objects could be polyfilled (just as SIMD and Typed Arrays can, just with lesser performance), but one would have to be written from scratch.
+",thomasfoster96,karpathy
+13,2015-01-19 19:26:44,"@bhack I am not related to [fusion.js](https://code.google.com/p/fusionjs/) project.
+
+If you mean [Furious.js](https://github.com/hpcgarage/furious.js), it does not aim at small matrix manipulations.
+",Maratyszcza,bhack
+13,2015-01-19 19:34:16,"@bhack It is intended to be integrated into Furious.js, but it is not there yet. And in any case, it would only help for large matrices/NDArrays
+",Maratyszcza,bhack
+13,2015-11-29 21:51:25,"@karpathy Just wondering if there's been any progress on this, as I haven't been able to find much else about it online. 
+
+I'd like to use your deep q learning code to try and train an agent on Go, as most of the necessary additional code is already available online in javascript, but I'm not sure how slow training would be without the speedup of a gpu.
+",ssampang,karpathy
+13,2015-12-04 08:37:58,"@waylonflinn Definitely. GPU acceleration right from the browser could lead to some very cool and useful demo pages that don't need any extra setup to run - not to mention the wide applicability if you didn't tie it to ConvNetJS specifically.
+",ssampang,waylonflinn
+13,2015-12-04 14:27:45,"@ssampang Glad to hear! I created a repository to track progress. No code there yet, but expect a basic implementation of `gemm` in the next couple of days!
+
+[weblas](https://github.com/waylonflinn/weblas)
+
+I also have an update on the GPU `gemm` code from the Deep Belief SDK. It looks like it doesn't run in Chrome anymore (and possibly has issues in a few other browsers). If anyone is interested in troubleshooting or contributing a fix, you can track that in [issue 57](https://github.com/jetpacapp/DeepBeliefSDK/issues/57) of their repository. In the meantime I'm working from an alternate base implementation.
+",waylonflinn,ssampang
+13,2016-02-17 16:37:22,"Wanted to post a quick update here, for interested parties. I've [fully converted](http://waylonflinn.github.io/DeepBeliefSDK/) the jetpac demo to use weblas, producing close to a 2x speedup. The `GEMM` function, in particular, is about 4x faster.
+
+The key to this speedup was a combination of the factors that @mdda outlines above. Namely: transposing the second matrix, full packing of RGBA elements and using a single GPU instruction (`dot`) to process four elements at a time.
+
+A good next step here might be to convert the work @karpathy links to above to make use of this, and see if more impressive speedups ensue. If no one else steps in to take up the torch, I'll likely start on it in the next few days.
+",waylonflinn,mdda
+13,2016-02-17 16:37:22,"Wanted to post a quick update here, for interested parties. I've [fully converted](http://waylonflinn.github.io/DeepBeliefSDK/) the jetpac demo to use weblas, producing close to a 2x speedup. The `GEMM` function, in particular, is about 4x faster.
+
+The key to this speedup was a combination of the factors that @mdda outlines above. Namely: transposing the second matrix, full packing of RGBA elements and using a single GPU instruction (`dot`) to process four elements at a time.
+
+A good next step here might be to convert the work @karpathy links to above to make use of this, and see if more impressive speedups ensue. If no one else steps in to take up the torch, I'll likely start on it in the next few days.
+",waylonflinn,karpathy
+61,2016-01-24 16:04:51,"Hello, Andrej @karpathy 
+
+I think here should be (1-this.drop_prob). Let's consider probability = 0.1 - we should drop 10% and after that scale weights only slightly onto 0.9.
+
+WBR,
+Dmitriy
+",avdmitry,karpathy
+52,2015-09-30 22:51:43,"@karpathy, I've corrected a typographical error in the documentation of the [convnetjs](https://github.com/karpathy/convnetjs) project. You should be able to merge this pull request automatically. However, if this was intentional or if you enjoy living in linguistic squalor, please let me know and [create an issue](https://github.com/thoppe/orthographic-pedant/issues/new) on my home repository.
+",orthographic-pedant,karpathy
+46,2015-08-26 23:21:22,"@littledan As far as I know, probably not to the former and yes to the latter.
+
+A bit of background: The convnetjs library works using Vols, which are objects with two properties, `w` and `dw`, which are both three-dimensional arrays, as well as three other properties `sx`, `sy` and `depth`, which hold the sizes of the arrays.
+
+Currently the Vols are objects and the `w` and `dw` properties are one-dimensional arrays, with `set(sx, sy, depth)`, `get(sx, sy, depth)`, `set_grad(sx, sy, depth)` and `get_grad(sx, sy, depth)` methods used to set and get values in the `w` and `dw` properties (see [this file](https://github.com/karpathy/convnetjs/blob/master/src/convnet_vol.js)). This method is awfully slow, and in some places the methods to figure out the offset of a given element (`sx`, `sy`, `depth`) are manually inlined for speed.
+
+This pull request changes this by instead having a [`VolType` constructor](https://github.com/thomasfoster96/convnetjs/blob/master/src/structures/vol.js), from which different `Vol`s of the same dimensions can be created. Using the Firefox Nightly implementation of Typed Objects, it was possible to use the underlying ArrayBuffer of the Vols (and even their individual properties) to create a Float64Array view of the `w` and `dw` arrays and then use the SIMD load/store methods to parallelize calculations (see [this code](https://github.com/thomasfoster96/convnetjs/blob/master/src/layers/convlayer.js#L60)), as well as use nicer, faster array indexing( `myVol.w[0][2][1]` instead of `myVol.get(0, 2, 1)` and have the performance benefits of things being explicitly typed.
+
+Note that I wrote most of this code a few months ago and only cleaned it up a little the other day to open the pull request to see what @karpathy thought of the approach (as per #32 Andrej would like an easy way to create tensors in JS) - I probably wrote this using out of date drafts for SIMD.
+",thomasfoster96,karpathy
+13,2015-01-19 19:18:34,"@Maratyszcza do you think that it could take a speedup using fusion.js?
+",bhack,Maratyszcza
