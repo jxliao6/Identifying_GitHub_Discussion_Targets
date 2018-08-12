@@ -18,4 +18,4 @@ All the code is in [code folder](https://github.com/thalia-L/Identifying_GitHub_
 
 ### sDAE-like model
 
-sdae.py is used for sDAE-like model and the generation of specific embedding layer for SpokenP.
+[sdae.py](https://github.com/thalia-L/Identifying_GitHub_Discussion_Targets/blob/master/code/sdae.py) is used for sDAE-like model and the generation of specific embedding layer for SpokenP.
