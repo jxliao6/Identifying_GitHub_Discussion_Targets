@@ -10,7 +10,7 @@ Raw data are avaiable in [data folder](https://github.com/thalia-L/Identifying_G
 
 ## Code
 
-All the code is in [code folder](https://github.com/thalia-L/Identifying_GitHub_Discussion_Targets/tree/master/code). They need Keras and Tensorflow intalled and use Python3.
+All the code is in [code folder](https://github.com/thalia-L/Identifying_GitHub_Discussion_Targets/tree/master/code). They need Keras and Tensorflow installed and use Python3.
 
 ### Language model
 
