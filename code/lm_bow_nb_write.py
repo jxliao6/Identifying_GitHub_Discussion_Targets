@@ -2,13 +2,13 @@ import argparse, hashlib, csv, random
 import numpy as np
 import collections
 
-from format_lm_input import create_committer_data_dict, create_comments_dict, \
-                            train_test_split, get_index_tokenizer, build_data, \
+from format_lm_input_write import create_committer_data_dict, create_comments_dict, \
+                            train_test_split_idxs, get_index_tokenizer, build_data, \
                             trim_pad_sequences, flatten_comments_dict, mention_preprocess,\
                             remove_short_comments, Using_one_project, closed_class_only,\
                             remove_closed_class, remove_non_committer
 
-from format_lm_input import COMMIT_METRICS
+from format_lm_input_write import COMMIT_METRICS
 
 from keras.models import Model, model_from_json, Sequential
 from keras.layers.embeddings import Embedding
@@ -22,9 +22,8 @@ from sklearn.naive_bayes import MultinomialNB
 
 from util import load_cached_data, get_cache_path
 
-MODEL_TYPES = ['speaking', 'spoken_to']
+DATA_TYPES = ['speaking', 'spoken_to']
 VOCAB_SIZE = 15000
-RESULT_FILE = 'nb_result'
 
 if __name__ == '__main__':
     argparser = argparse.ArgumentParser(description='Formats data for LM input')
@@ -40,10 +39,10 @@ if __name__ == '__main__':
                            action='store',
                            help='Comments file name.',
                            default='issue_comments_REPLACECODE.csv')
-    argparser.add_argument('--model_type',
+    argparser.add_argument('--data_type',
                            action='store',
-                           help='Model type.',
-                           choices=MODEL_TYPES,
+                           help='Data type.',
+                           choices=DATA_TYPES,
                            default='speaking')
     argparser.add_argument('--top_perc',
                            action='store',
@@ -57,22 +56,16 @@ if __name__ == '__main__':
                            choices=COMMIT_METRICS,
                            type=str,
                            default='commits')
-    argparser.add_argument('--cross_project',
-                           action='store',
-                           help='Test on this project and train on all others',
-                           type=int,
-                           default=-1)
     argparser.add_argument('--vocab_size',
                            action='store',
                            help='Max vocab size to consider. Default is 15,000',
                            type=int,
                            default=10000)
     argparser.add_argument('--only_committer',
-                           action='store',
+                           action='store_true',
                            help='If only use data from committers.',
-                           type=int,
-                           default=0)
-    argparser.add_argument('--noise_len',
+                           default=False)
+    argparser.add_argument('--min_sequence_len',
                            action='store',
                            help='Post has less than this number of token is \
                            considered noise and will be removed.',
@@ -81,30 +74,30 @@ if __name__ == '__main__':
 
     args = argparser.parse_args()
 
-    print('model type: ' + args.model_type + '\n')
+    print('Model: ' + args.data_type)
+    print('Min Sequence Length: %d' % args.min_sequence_len)
 
     # read in and cache committer and comments data
     committer_dict = create_committer_data_dict(args.base_commit_dir, 
         args.top_perc, args.metric)
     h = hashlib.sha1()
-    h_name = 'language_status.py' + args.base_comment_dir + args.comments_file
+    h_name = 'format_lm_input_write.py' + args.base_comment_dir + args.comments_file
     h.update(h_name.encode('utf-8'))
-    comments_dict = create_comments_dict(args.base_comment_dir, committer_dict,
-        args.comments_file, args.model_type, h)
+    comments_dict = create_comments_dict(args.base_comment_dir, committer_dict, args.comments_file, args.data_type, h)
 
     print('Removing noise')
-    comments_dict = remove_short_comments(comments_dict, args.noise_len)
+    comments_dict = remove_short_comments(comments_dict, args.min_sequence_len)
 
-    print('Removing non-committers')
     if args.only_committer:
-      comments_dict = remove_non_committer(comments_dict, committer_dict, args.model_type)
+      	print('Removing non-committers')
+      	comments_dict = remove_non_committer(comments_dict, committer_dict, args.data_type)
 
     print('Splitting idxs')
-    train_idxs, test_idxs = train_test_split(comments_dict, args.cross_project)
+    train_idxs, test_idxs, project_name = train_test_split_idxs(comments_dict, -1)
     tkr = get_index_tokenizer(comments_dict, train_idxs, args.vocab_size)
 
     print('Building data')
-    X, y, ids = build_data(comments_dict, committer_dict, tkr, args.model_type)
+    X, y, ids = build_data(comments_dict, committer_dict, tkr, "classifier", args.data_type)
 
     print('Converting texts to sequences')
     X = tkr.texts_to_matrix(X, mode='count')
@@ -116,12 +109,10 @@ if __name__ == '__main__':
 
     clf = MultinomialNB()
     clf.fit(X_train, y_train)
-    print("accuracy:")
-    print(clf.score(X_test, y_test))
+    print("Accuracy: %.2f%%" % (clf.score(X_test, y_test)*100))
     y_test_prob = clf.predict_proba(X_test)[:, 1]
     auc = float(roc_auc_score(y_test, y_test_prob))
-    print("auc:")
-    print(auc)
+    print("Auc: %.2f%%" % (auc*100))
 
 
     
