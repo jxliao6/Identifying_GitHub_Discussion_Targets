@@ -11,7 +11,7 @@ COMMIT_METRICS = ['additions', 'deletions', 'total', 'commits']
 
 # Form of committer data dict:
 # d[project][author (login)] = dict of key value pairs for relevant columns e.g.
-#                    total number of commits, total number of additions, etc
+# total number of commits, total number of additions, etc
 def create_committer_data_dict(base_dir, top_perc, metric):
     data_dict = {}
     for root, dirs, files in os.walk(base_dir):
@@ -55,6 +55,7 @@ def create_committer_data_dict(base_dir, top_perc, metric):
 # d[project] = list of dict of key value pairs for each comment
 def create_comments_dict(base_dir, committer_dict, comments_file, data_type, hashh=None):
     comments_dict = None
+    # Specify user id key based on data type(speaking vs. spoken_to)
     login = 'login' if data_type == 'speaking' else 'mention_login'
 
     if hashh:
@@ -77,15 +78,19 @@ def create_comments_dict(base_dir, committer_dict, comments_file, data_type, has
                     continue
 
                 print('Processing %s' % project)
+                # User who have commits
                 developerlist = list(committer_dict[project].keys())
                 rows = []
+                # Build metrics dictionary
                 with open(os.path.join(root, comments_file), 'r') as inf:
                     r = csv.DictReader(inf)
                     for row in r:
                         seq = list(tk.tokenize(row['body']))
-                        # skip bad data
+                        # Skip bad data
                         if data_type == 'spoken_to':
-                            name = '@' + row[login].split('-')[0] # some data are not formatted correctly
+                            # A tiny number of data are not formatted correctly
+                            name = '@' + row[login].split('-')[0]
+                            # Replace user name by <<MENTION>>
                             if name not in seq: 
                                 continue
                             else:
@@ -137,7 +142,8 @@ def remove_short_comments(comments_dict, valid_len):
 
     return clean_dict
 
-def get_ccw_set(wordfile):
+# Get set of words to use.
+def get_set(wordfile):
     s = set()
 
     with open(wordfile, "r") as myfile:
@@ -146,9 +152,10 @@ def get_ccw_set(wordfile):
 
     return s
 
-def closed_class_only(comments_dict,wordfile):
+# Only use a set of words. Replace other words by <<word>>
+def set_of_words_only(comments_dict,wordfile):
     new_dict = defaultdict(dict)
-    ccw = get_ccw_set(wordfile)
+    ccw = get_set(wordfile)
 
     for project in comments_dict:
         comment_list = comments_dict[project]
@@ -158,15 +165,16 @@ def closed_class_only(comments_dict,wordfile):
                 if token in ccw:
                     seq.append(token)
                 else: # use <ocw> to replace open class words
-                    seq.append('<ocw>')
+                    seq.append('<<word>>')
             comment_list[ind]['tk_body'] = ' '.join(seq)
         new_dict[project] = comment_list
 
     return new_dict
 
-def remove_closed_class(comments_dict,wordfile):
+# Remove a set of words. Replace those words by <word>
+def remove_set_of_words(comments_dict,wordfile):
     new_dict = defaultdict(dict)
-    ccw = get_ccw_set(wordfile)
+    ccw = get_set(wordfile)
 
     for project in comments_dict:
         comment_list = comments_dict[project]
@@ -174,7 +182,7 @@ def remove_closed_class(comments_dict,wordfile):
             seq = []
             for token in d['tk_body'].split(' '):
                 if token in ccw:
-                    seq.append('<ccw>')
+                    seq.append('<<word>>')
                 else:
                     seq.append(token)
             comment_list[ind]['tk_body'] = ' '.join(seq)

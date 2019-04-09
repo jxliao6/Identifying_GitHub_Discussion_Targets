@@ -15,7 +15,10 @@ from keras.layers import Dense, Input, LSTM
 from keras.utils import plot_model
 from keras.callbacks import Callback
 from nltk.tokenize.casual import TweetTokenizer
-from util import get_cache_path, load_cached_data 
+from util import get_cache_path, load_cached_data
+from model_sdae import split_train_test, get_index_tokenizer, flatten_tk_comments,\
+                       trim_pad_seq, fill_decoder_target_data, construct_sdae,
+                       fetch_batch
 
 START_TOKEN = '<<START>>'
 END_TOKEN = '<<END>>'
@@ -95,41 +98,6 @@ def pred_and_flat(tkd_data, pred_data):
             posts_flat.append(post)
     return posts_flat
 
-def split_train_test(tkd_comments_flat, train_perc=0.7, seed=1337):
-    idxs = list(range(len(tkd_comments_flat)))
-    random.shuffle(idxs)
-    train_idxs = idxs[ : int(train_perc * len(idxs))]
-    test_idxs = idxs[int(train_perc * len(idxs)) : ]
-
-    return train_idxs, test_idxs
-
-
-def get_index_tokenizer(tkd_comments_flat):
-    tkr = Tokenizer(num_words=None, filters='', lower=False, split=' ')
-    # Need a start and end token, but don't want to construct target seqs
-    # until AFTER we indexify. So, do it here, so the tokenizer has the mapping
-    # for start and end tokens and we don't have to deal with it manually later.
-    tkd_comments_wstartend = []
-    for comment in tkd_comments_flat:
-        tkd_comments_wstartend.append(START_TOKEN + ' ' + comment + ' ' + END_TOKEN)
-    tkr.fit_on_texts(tkd_comments_wstartend)
-
-    return tkr
-
-def flatten_tk_comments(tkd_data):
-    tk_bodies = []
-    mention_ids = []
-
-    # Need to guarantee an ordering
-    projects = sorted(tkd_data.keys())
-    for project in projects:
-        comment_list, mentions = tkd_data[project]
-        for ind, body in enumerate(comment_list):
-            tk_bodies.append(body)
-            mention_ids.append(mentions[ind])
-
-    return tk_bodies, mention_ids
-
 def remove_mentions(tkd_comments_flat, mention_ids_flat, predict_flat, max_seq_len):
     noise_comments = []
     mention_ids = []
@@ -151,27 +119,6 @@ def remove_mentions(tkd_comments_flat, mention_ids_flat, predict_flat, max_seq_l
             predicts.append(predict_flat[ind])
 
     return noise_comments, mention_ids, predicts
-
-
-def trim_pad_sequences(sequences, max_len, pad_idx):
-    newseqs = []
-    for seq in sequences:
-        if len(seq) > max_len:
-            seq = seq[ : max_len]
-        elif len(seq) < max_len:
-            seq = seq + [pad_idx] * (max_len - len(seq))
-        newseqs.append(seq)
-
-    return newseqs
-
-def trim_pad_seq(seq, max_len, pad_idx=0):
-    newseq = seq
-    if len(newseq) > max_len:
-        newseq = newseq[ : max_len]
-    elif len(newseq) < max_len:
-        newseq = newseq + [pad_idx]  * (max_len - len(newseq))
-
-    return newseq
 
 # For some reason, keras doesn't allow for replacing trimmed vocab (specified by Tokenizer nb_words)
 # with 0 when converting text to sequences. So, we have to do it ourselves.
@@ -220,107 +167,43 @@ def convert_texts_to_sequences(tkd_comments_flat, mention_ids_flat, predict_flat
 
     return tkd_comments_indexed, mention_ids_indexed, tkd_predict_flat, len(mention_dictionary)+1, mention_dictionary
 
-
-def fill_decoder_target_data(i, t, tok_idx, decoder_target_data):
-    if t > 0:
-        decoder_target_data[i, t - 1, tok_idx] = 1
-
-
-# For this to work, decoder/encoder input data should be standard for embedding layers,
-# but decoder target data needs to be one-hot encoded
-def construct_input_target_data(tkd_comments_indexed, tkr, max_seq_len, sample_size, vocab_size):
-    if not sample_size:
-        sample_size = len(tkd_comments_indexed)
-
-    input_seqs = [trim_pad_seq(tkd_comments_indexed[i], max_seq_len) for i in range(sample_size)]
-    target_seqs = [[tkr.word_index[START_TOKEN]] + trim_pad_seq(tkd_comments_indexed[i], max_seq_len) + [tkr.word_index[END_TOKEN]] for i in range(sample_size)]
-
-    num_encoder_tokens = vocab_size if vocab_size else len(tkr.word_index)
-    num_decoder_tokens = vocab_size if vocab_size else len(tkr.word_index)
-    max_encoder_seq_len = max([len(seq) for seq in input_seqs])
-    max_decoder_seq_len = max([len(seq) for seq in target_seqs])
-
-    print('Decoder target shape: %s' % ((len(input_seqs), max_decoder_seq_len, num_decoder_tokens), ))
-    print('Allocating decoder_target_data')
-    decoder_target_data = np.zeros(
-        (len(input_seqs), max_decoder_seq_len, num_decoder_tokens),
-        dtype='float32')
-
-    print('Filling decoder_target_data')
-    print('Maximum iteration count: %d' % (len(input_seqs) * max_decoder_seq_len * num_decoder_tokens, ))
-
-    Parallel(n_jobs=NUM_CORES, backend='threading')(delayed(fill_decoder_target_data)(i, t, tok_idx, decoder_target_data) for i, target_seq in enumerate(target_seqs) for t, tok_idx in enumerate(target_seq))
-    # for i, target_seq in enumerate(target_seqs):
-    #     for t, tok_idx in enumerate(target_seq):
-    #         if t > 0:
-    #             decoder_target_data[i, t - 1, tok_idx] = 1
-
-    return num_encoder_tokens, num_decoder_tokens, np.array(input_seqs), np.array(target_seqs), decoder_target_data
-
-def construct_sdae(num_encoder_tokens, num_decoder_tokens, encoding_dim):
-    print('Constructing model')
-    encoder_inputs = Input(shape=(None,))
-    x = Embedding(num_encoder_tokens, encoding_dim)(encoder_inputs)
-    x, state_h, state_c = LSTM(encoding_dim, return_state=True)(x)
-    encoder_states = [state_h, state_c]
-
-    decoder_inputs = Input(shape=(None,))
-    x = Embedding(num_decoder_tokens, encoding_dim)(decoder_inputs)
-    x = LSTM(encoding_dim, return_sequences=True)(x, initial_state=encoder_states)
-    decoder_outputs = Dense(num_decoder_tokens, activation='softmax')(x)
-
-    model = Model([encoder_inputs, decoder_inputs], decoder_outputs)
-    model.compile(optimizer='rmsprop', loss='categorical_crossentropy', metrics=['accuracy'])
-
-    return model
-
-
-def create_sample_partitions(tkd_comments_indexed, train_idxs, test_idxs, sample_size):
-    max_iter = len(train_idxs)
-    partition = {'train': [], 'test': []}
-    for idx in range(sample_size, max_iter, sample_size):
-        partition['train'].append((idx - sample_size, idx))
-    if max_iter % sample_size != 0:
-        partition['train'].append((max_iter - max_iter % sample_size, max_iter - 1))
-    partition['test'].append((0, len(test_idxs)))
-
-    return partition
-
-
-def fetch_batch(tkd_comments_indexed, mention_ids_indexed, tkr, idxs, max_seq_len, vocab_size):
-    input_seqs = [trim_pad_seq(tkd_comments_indexed[i], max_seq_len) for i in idxs]
-    # target_seqs = [[tkr.word_index[START_TOKEN]] + trim_pad_seq(tkd_comments_indexed[i], max_seq_len) + [tkr.word_index[END_TOKEN]] for i in idxs]
-    target_seqs = [[vocab_size] + [mention_ids_indexed[i]] for i in idxs]
-    tmp = [[tkr.word_index[START_TOKEN]] for i in idxs]
-    # mentions = [mention_ids_indexed[i] for i in idxs]
-
-    num_decoder_tokens = vocab_size
-    max_encoder_seq_len = max([len(seq) for seq in input_seqs])
-    max_decoder_seq_len = max([len(seq) for seq in target_seqs])
-
-    decoder_target_data = np.zeros(
-        (len(input_seqs), 1, num_decoder_tokens),
-        dtype='float32')
-
-    Parallel(n_jobs=NUM_CORES, backend='threading')(delayed(fill_decoder_target_data)(i, t, tok_idx, decoder_target_data) for i, target_seq in enumerate(target_seqs) for t, tok_idx in enumerate(target_seq))
-    # Parallel(n_jobs=NUM_CORES, backend='threading')(delayed(fill_decoder_target_data)(i, 1, mentions[i], decoder_target_data) for i, target_seq in enumerate(target_seqs))
-
-    return np.array(input_seqs), np.array(tmp), decoder_target_data
-
-
-def data_generator(tkd_comments_indexed, mention_ids_indexed, tkr, idxs, max_seq_len, vocab_size, batch_size):
-    while 1:
-        max_iter = int(len(idxs) / batch_size)
-        for i in range(max_iter):
-            batch_idxs = idxs[i * batch_size : (i + 1) * batch_size]
-            encoder_input_data, decoder_input_data, decoder_target_data = \
-                fetch_batch(tkd_comments_indexed, mention_ids_indexed, tkr, batch_idxs, max_seq_len, vocab_size)
-
-            yield [encoder_input_data, decoder_input_data], decoder_target_data
+def print_summary(file, encoder_input_data_val, decoder_input_data_val, decoder_target_data_val, predict_flat_test, \
+                  reverse_word_map, mention_dictionary, args):
+    pred = model.predict([encoder_input_data_val, decoder_input_data_val])
+        
+    for i in range(len(encoder_input_data_val)):
+        for token in encoder_input_data_val[i]:
+            if token == 0:
+                file.write('<padding> ')
+            elif token == args.vocab_size-1:
+                file.write('<infrequent> ')
+            else:
+                file.write(reverse_word_map[token])
+                file.write(' ')
+        file.write('\n')
+        token = np.argmax(decoder_target_data_val[i][0])
+        file.write('Actual: ')
+        file.write(mention_dictionary[token])
+        file.write(' ')
+        token2 = np.argmax(pred[i][0])
+        file.write('Predict: ')
+        file.write(mention_dictionary[token2])
+        file.write(' ')
+        sort = np.argsort(pred[i][0])[::-1]
+        rank = np.nonzero(sort == token)[0] + 1
+        file.write('Rank: ')
+        file.write(str(rank[0]))
+        file.write(' ')
+        file.write('\n')
+        file.write('Later in: ')
+        for p in predict_flat_test[i]:
+            file.write(p)
+            file.write(' ')
+        file.write('\n')
 
 if __name__ == '__main__':
     argparser = argparse.ArgumentParser(
-        description='Recommandation system using autoencoder')
+        description='Script for sdae responsive taggee task.')
     argparser.add_argument('--base_comment_dir',
                            action='store',
                            help='Base directory of issue comments',
@@ -367,7 +250,7 @@ if __name__ == '__main__':
     args = argparser.parse_args()
 
     h = hashlib.sha1()
-    h.update(('sdae_responsive_taggee.py' + args.base_comment_dir + args.comments_file)
+    h.update(('model_sdae_responsive_taggee.py' + args.base_comment_dir + args.comments_file)
              .encode('utf-8'))
 
     tkd_data = tokenize_comments(args.base_comment_dir, hashh=h,
@@ -389,21 +272,26 @@ if __name__ == '__main__':
     tkd_comments_flat, mention_ids_flat, predict_flat = \
         remove_mentions(tkd_comments_flat, mention_ids_flat, predict_flat, args.max_seq_len)
 
+    # Data for first training. 
     tkd_comments_flat_train = []
-    tkd_comments_flat_train2 = []
     mention_ids_flat_train = []
-    mention_ids_flat_train2 = []
     predict_flat_train = []
+    # Data for second training. (Responsive)
+    tkd_comments_flat_train2 = []    
+    mention_ids_flat_train2 = []
     predict_flat_train2 = []
+    # Seperate responsive data and non-responsive data.
     for ind, mention_id in enumerate(mention_ids_flat):
         if mention_id[1:] in predict_flat[ind]:       
-        	tkd_comments_flat_train2.append(tkd_comments_flat[ind])
-        	mention_ids_flat_train2.append(mention_id)
-        	predict_flat_train2.append(predict_flat[ind])
+            tkd_comments_flat_train2.append(tkd_comments_flat[ind])
+            mention_ids_flat_train2.append(mention_id)
+            predict_flat_train2.append(predict_flat[ind])
         else:
-        	tkd_comments_flat_train.append(tkd_comments_flat[ind])
-        	mention_ids_flat_train.append(mention_id)
-        	predict_flat_train.append(predict_flat[ind])
+            tkd_comments_flat_train.append(tkd_comments_flat[ind])
+            mention_ids_flat_train.append(mention_id)
+            predict_flat_train.append(predict_flat[ind])
+
+    # Split responsive data into train and test set.
     tkd_comments_flat_test = tkd_comments_flat_train2[ : int(0.2 * len(tkd_comments_flat_train2))]
     tkd_comments_flat_train2 = tkd_comments_flat_train2[int(0.2 * len(tkd_comments_flat_train2)) : ]
     mention_ids_flat_test = mention_ids_flat_train2[ : int(0.2 * len(mention_ids_flat_train2))]
@@ -411,24 +299,22 @@ if __name__ == '__main__':
     predict_flat_test = predict_flat_train2[ : int(0.2 * len(predict_flat_train2))]
     predict_flat_train2 = predict_flat_train2[int(0.2 * len(predict_flat_train2)) : ]
 
+    # Merge data into one matrix.
     tkd_comments_flat = tkd_comments_flat_train + tkd_comments_flat_train2 + tkd_comments_flat_test
     mention_ids_flat = mention_ids_flat_train + mention_ids_flat_train2 + mention_ids_flat_test
     predict_flat = predict_flat_train + predict_flat_train2 + predict_flat_test
-    len1 = len(tkd_comments_flat_train)
-    len2 = len(tkd_comments_flat_train) + len(tkd_comments_flat_train2)
-    len3 = len(tkd_comments_flat_train) + len(tkd_comments_flat_train2) + len(tkd_comments_flat_test)
+    len1 = len(tkd_comments_flat_train) # end of non-responsive data
+    len2 = len(tkd_comments_flat_train) + len(tkd_comments_flat_train2) # end of responsive training data
+    len3 = len(tkd_comments_flat_train) + len(tkd_comments_flat_train2) + len(tkd_comments_flat_test) # end of responsive testing data
     train_idxs1 = list(range(len1))
     train_idxs2 = list(range(len1, len2))
     test_idxs = list(range(len2, len3))
-
-    # test
-    print((len1,len2,len3))
     
     tkr = get_index_tokenizer(tkd_comments_flat)
 
     tkd_comments_indexed, mention_ids_indexed, predict_flat, vocab_size, mention_dictionary = \
         convert_texts_to_sequences(tkd_comments_flat, mention_ids_flat, predict_flat, tkr, 
-        	                       args.vocab_size, args.denoise)
+                                   args.vocab_size, args.denoise)
 
     mention_dictionary = list(mention_dictionary)
 
@@ -448,74 +334,17 @@ if __name__ == '__main__':
         validation_data=([encoder_input_data_val, decoder_input_data_val], decoder_target_data_val),
         batch_size=512, epochs=args.epochs)
 
-    with open('responsive_taggee_predict1', 'w') as file:
-        reverse_word_map = dict(map(reversed, tkr.word_index.items()))
-        pred = model.predict([encoder_input_data_val, decoder_input_data_val])
-        mention_dictionary = list(mention_dictionary)
-  
-        for i in range(len(encoder_input_data_val)):
-            for token in encoder_input_data_val[i]:
-                if token == 0:
-                    file.write('<padding> ')
-                elif token == args.vocab_size-1:
-                    file.write('<infrequent> ')
-                else:
-                    file.write(reverse_word_map[token])
-                    file.write(' ')
-            file.write('\n')
-            token = np.argmax(decoder_target_data_val[i][0])
-            file.write('Actual: ')
-            file.write(mention_dictionary[token])
-            file.write(' ')
-            token2 = np.argmax(pred[i][0])
-            file.write('Predict: ')
-            file.write(mention_dictionary[token2])
-            file.write(' ')
-            sort = np.argsort(pred[i][0])[::-1]
-            rank = np.nonzero(sort == token)[0] + 1
-            file.write('Rank: ')
-            file.write(str(rank[0]))
-            file.write(' ')
-            file.write('\n')
-            file.write('Later in: ')
-            for p in predict_flat_test[i]:
-                file.write(p)
-                file.write(' ')
-            file.write('\n')
+    reverse_word_map = dict(map(reversed, tkr.word_index.items()))
+    mention_dictionary = list(mention_dictionary)
+
+    with open('responsive_taggee_summary1', 'w') as file:
+        print_summary(file, encoder_input_data_val, decoder_input_data_val, decoder_target_data_val, predict_flat_test, \
+                      reverse_word_map, mention_dictionary, args):
 
     model.fit([encoder_input_data2, decoder_input_data2], decoder_target_data2, 
         validation_data=([encoder_input_data_val, decoder_input_data_val], decoder_target_data_val),
         batch_size=512, epochs=args.epochs_2)
 
-    with open('responsive_taggee_predict2', 'w') as file:
-        pred = model.predict([encoder_input_data_val, decoder_input_data_val])
-  
-        for i in range(len(encoder_input_data_val)):
-            for token in encoder_input_data_val[i]:
-                if token == 0:
-                    file.write('<padding> ')
-                elif token == args.vocab_size-1:
-                    file.write('<infrequent> ')
-                else:
-                    file.write(reverse_word_map[token])
-                    file.write(' ')
-            file.write('\n')
-            token = np.argmax(decoder_target_data_val[i][0])
-            file.write('Actual: ')
-            file.write(mention_dictionary[token])
-            file.write(' ')
-            token2 = np.argmax(pred[i][0])
-            file.write('Predict: ')
-            file.write(mention_dictionary[token2])
-            file.write(' ')
-            sort = np.argsort(pred[i][0])[::-1]
-            rank = np.nonzero(sort == token)[0] + 1
-            file.write('Rank: ')
-            file.write(str(rank[0]))
-            file.write(' ')
-            file.write('\n')
-            file.write('Later in: ')
-            for p in predict_flat_test[i]:
-                file.write(p)
-                file.write(' ')
-            file.write('\n')
+    with open('responsive_taggee_summary2', 'w') as file:
+        print_summary(file, encoder_input_data_val, decoder_input_data_val, decoder_target_data_val, predict_flat_test, \
+                      reverse_word_map, mention_dictionary, args):

@@ -1,13 +1,13 @@
 import argparse, hashlib, csv, random, pandas, os
 import numpy as np
 
-from format_lm_input_write import create_committer_data_dict, create_comments_dict, \
+from model_prediction_lib import create_committer_data_dict, create_comments_dict, \
                             train_test_split_idxs, get_index_tokenizer, build_data, \
                             trim_pad_sequences, flatten_comments_dict, mention_preprocess,\
-                            remove_short_comments, Using_one_project, closed_class_only,\
-                            remove_closed_class, randomizing_data, length_sequences,\
+                            remove_short_comments, Using_one_project, set_of_words_only,\
+                            remove_set_of_words, randomizing_data, length_sequences,\
                             remove_non_committer
-from format_lm_input_write import COMMIT_METRICS
+from model_prediction_lib import COMMIT_METRICS
 
 from keras.models import Model, model_from_json, Sequential
 from keras.layers.embeddings import Embedding
@@ -91,8 +91,7 @@ def do_classifier(args, X_train, y_train, X_test, y_test, epochs,tkr):
                         validation_data=(X_test_np, y_test_np),
                         epochs=epochs,
                         batch_size=512,
-                        callbacks=[ComputeAUC(), ComputeConfusionMatrix()]
-                        )
+                        callbacks=[ComputeAUC(), ComputeConfusionMatrix()])
 
     y_score = model.predict(X_test_np, batch_size=512)
     auc = float(roc_auc_score(y_test_np, y_score)) * 100
@@ -167,14 +166,18 @@ if __name__ == '__main__':
                            action='store_true',
                            help='Shuffle tokens of each post.',
                            default=False)
-    argparser.add_argument('--keep_ccw',
+    argparser.add_argument('--keep_ws',
                            action='store_true',
-                           help='Only keep closed class words',
+                           help='Only keep a set of words.',
                            default=False)
-    argparser.add_argument('--remove_ccw',
+    argparser.add_argument('--remove_ws',
                            action='store_true',
-                           help='Remove closed class words',
+                           help='Remove a set of words.',
                            default=False)
+    argparser.add_argument('--ws',
+                           action='store',
+                           help='Specify word set file path.'
+                           default='../data/wordlist/closed_class_words.csv')
     argparser.add_argument('--use_sdae_embedding',
                            action='store_true',
                            help='Use embedding got from sdae-like model. Be careful with encoding dimention and verb size.',
@@ -208,7 +211,7 @@ if __name__ == '__main__':
     # read in and cache committer and comments data
     committer_dict = create_committer_data_dict(args.base_commit_dir, args.top_perc, args.metric)
     h = hashlib.sha1()
-    h_name = 'format_lm_input_write.py' + args.base_comment_dir + args.comments_file
+    h_name = 'model_prediction_dl.py' + args.base_comment_dir + args.comments_file
     h.update(h_name.encode('utf-8'))
     comments_dict = create_comments_dict(args.base_comment_dir, committer_dict, args.comments_file, args.data_type, h)
 
@@ -225,12 +228,12 @@ if __name__ == '__main__':
         print('Removing non-committers')
         comments_dict = remove_non_committer(comments_dict, committer_dict, args.data_type)
 
-    if args.keep_ccw:
-        print('Keeping only closed class words')
-        comments_dict = closed_class_only(comments_dict)
+    if args.keep_ws:
+        print('Keeping a set of words words')
+        comments_dict = set_of_words_only(comments_dict, args.ws)
     elif args.remove_ccw:
-        print('Removing closed class words')
-        comments_dict = remove_closed_class(comments_dict)
+        print('Removing a set of words')
+        comments_dict = remove_set_of_words(comments_dict, args.ws)
 
     print('Splitting idxs')
     train_idxs, test_idxs, project_name = train_test_split_idxs(comments_dict, args.test_project)
@@ -246,7 +249,7 @@ if __name__ == '__main__':
     print('Converting texts to sequences')
     if args.use_sdae_embedding:
         tkrh = hashlib.sha1()
-        tkrh.update(('sdae.py' + args.base_comment_dir + str(VOCAB_SIZE)  + 'tkr').encode('utf-8'))
+        tkrh.update(('model_sdae.py' + args.base_comment_dir + str(VOCAB_SIZE)  + 'tkr').encode('utf-8'))
         tkr = load_cached_data(tkrh)
         tkd_comments_indexed = []
         for ind, comment in enumerate(X):

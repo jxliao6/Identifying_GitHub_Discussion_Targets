@@ -2,13 +2,13 @@ import argparse, hashlib, csv, random
 import numpy as np
 import collections
 
-from format_lm_input_write import create_committer_data_dict, create_comments_dict, \
+from model_prediction_lib import create_committer_data_dict, create_comments_dict, \
                             train_test_split_idxs, get_index_tokenizer, build_data, \
                             trim_pad_sequences, flatten_comments_dict, mention_preprocess,\
-                            remove_short_comments, Using_one_project, closed_class_only,\
-                            remove_closed_class, remove_non_committer
+                            remove_short_comments, Using_one_project, set_of_words_only,\
+                            remove_set_of_words, remove_non_committer
 
-from format_lm_input_write import COMMIT_METRICS
+from model_prediction_lib import COMMIT_METRICS
 
 from keras.models import Model, model_from_json, Sequential
 from keras.layers.embeddings import Embedding
@@ -23,7 +23,6 @@ from sklearn.naive_bayes import MultinomialNB
 from util import load_cached_data, get_cache_path
 
 DATA_TYPES = ['speaking', 'spoken_to']
-VOCAB_SIZE = 15000
 
 if __name__ == '__main__':
     argparser = argparse.ArgumentParser(description='Formats data for LM input')
@@ -58,7 +57,7 @@ if __name__ == '__main__':
                            default='commits')
     argparser.add_argument('--vocab_size',
                            action='store',
-                           help='Max vocab size to consider. Default is 15,000',
+                           help='Max vocab size to consider. Default is 10,000',
                            type=int,
                            default=10000)
     argparser.add_argument('--only_committer',
@@ -81,7 +80,7 @@ if __name__ == '__main__':
     committer_dict = create_committer_data_dict(args.base_commit_dir, 
         args.top_perc, args.metric)
     h = hashlib.sha1()
-    h_name = 'format_lm_input_write.py' + args.base_comment_dir + args.comments_file
+    h_name = 'model_prediction_nb' + args.base_comment_dir + args.comments_file
     h.update(h_name.encode('utf-8'))
     comments_dict = create_comments_dict(args.base_comment_dir, committer_dict, args.comments_file, args.data_type, h)
 
